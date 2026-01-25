@@ -152,3 +152,24 @@ async def import_questions_from_upload(
         supabase.table("repository_questions").insert(repo_questions).execute()
         
     return {"message": f"Successfully imported {len(repo_questions)} questions to untagged repository"}
+
+@router.post("/questions/manual")
+async def create_manual_question(
+    question_data: RepositoryQuestionCreate,
+    current_user: dict = Depends(get_current_user)
+):
+    """Create a question manually (text-based input)"""
+    if current_user.get("role") != "admin":
+        raise HTTPException(status_code=403, detail="Not authorized")
+    
+    question_dict = question_data.model_dump()
+    question_dict["is_tagged"] = False
+    question_dict["source_paper_id"] = None
+    
+    result = supabase.table("repository_questions").insert(question_dict).execute()
+    
+    if not result.data:
+        raise HTTPException(status_code=500, detail="Failed to create question")
+    
+    return {"message": "Question created successfully", "question": result.data[0]}
+

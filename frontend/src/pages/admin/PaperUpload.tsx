@@ -5,8 +5,10 @@ import { uploadService } from '@/services/uploadService';
 import { toast } from 'sonner';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { useNavigate } from 'react-router-dom';
-import { FileUp, CheckCircle2, ArrowRight, Loader2 } from 'lucide-react';
+import { FileUp, CheckCircle2, ArrowRight, Loader2, PenTool } from 'lucide-react';
+import { ManualQuestionCreator } from '@/components/admin/ManualQuestionCreator';
 
 const AdminPaperUpload = () => {
     const navigate = useNavigate();
@@ -71,70 +73,93 @@ const AdminPaperUpload = () => {
         <MainLayout>
             <div className="container max-w-4xl py-8">
                 <div className="mb-8">
-                    <h1 className="text-3xl font-bold mb-2">Dump Test Papers</h1>
+                    <h1 className="text-3xl font-bold mb-2">Add Questions to Repository</h1>
                     <p className="text-muted-foreground">
-                        Upload papers to extract questions into the global untagged repository.
+                        Upload papers to extract questions or create questions manually.
                     </p>
                 </div>
 
-                <div className="grid gap-8">
-                    {uploadStatus !== 'completed' ? (
-                        <Card className="border-2 border-dashed border-border/50">
-                            <CardContent className="pt-6">
-                                <FileUploader
-                                    onFileSelect={handleFileSelect}
-                                    loading={uploadStatus === 'uploading' || uploadStatus === 'processing'}
-                                    progress={uploadProgress}
-                                    status={uploadStatus}
-                                    error={error}
-                                    label="Drop test paper (PDF/JPG) here"
-                                />
-                            </CardContent>
-                        </Card>
-                    ) : (
-                        <Card className="border-2 border-primary/20 bg-primary/5">
-                            <CardHeader>
-                                <div className="h-12 w-12 rounded-full bg-primary/20 flex items-center justify-center mb-4">
-                                    <CheckCircle2 className="h-6 w-6 text-primary" />
-                                </div>
-                                <CardTitle className="text-2xl">Upload Complete!</CardTitle>
-                                <CardDescription>
-                                    Questions have been extracted and added to the untagged repository.
-                                </CardDescription>
-                            </CardHeader>
-                            <CardContent className="flex gap-4">
-                                <Button onClick={() => setUploadStatus('idle')} variant="outline">
-                                    <FileUp className="mr-2 h-4 w-4" />
-                                    Upload Another
-                                </Button>
-                                <Button onClick={() => navigate('/admin/tagging')}>
-                                    Go to Tagging
-                                    <ArrowRight className="ml-2 h-4 w-4" />
-                                </Button>
-                            </CardContent>
-                        </Card>
-                    )}
+                <Tabs defaultValue="upload" className="space-y-6">
+                    <TabsList className="grid w-full max-w-md grid-cols-2">
+                        <TabsTrigger value="upload" className="flex items-center gap-2">
+                            <FileUp className="h-4 w-4" />
+                            Upload Paper
+                        </TabsTrigger>
+                        <TabsTrigger value="manual" className="flex items-center gap-2">
+                            <PenTool className="h-4 w-4" />
+                            Create Manually
+                        </TabsTrigger>
+                    </TabsList>
 
-                    <Card>
-                        <CardHeader>
-                            <CardTitle className="text-lg">What happens next?</CardTitle>
-                        </CardHeader>
-                        <CardContent className="space-y-4 text-sm text-muted-foreground">
-                            <div className="flex gap-3">
-                                <div className="h-6 w-6 rounded-full bg-accent flex items-center justify-center shrink-0">1</div>
-                                <p>System uses AI OCR to extract image/text from the uploaded paper.</p>
-                            </div>
-                            <div className="flex gap-3">
-                                <div className="h-6 w-6 rounded-full bg-accent flex items-center justify-center shrink-0">2</div>
-                                <p>Questions are stored in the <strong>Untagged Repository</strong>.</p>
-                            </div>
-                            <div className="flex gap-3">
-                                <div className="h-6 w-6 rounded-full bg-accent flex items-center justify-center shrink-0">3</div>
-                                <p>You can then go to the <strong>Tagging</strong> section to assign Subject, Chapter, and Topic.</p>
-                            </div>
-                        </CardContent>
-                    </Card>
-                </div>
+                    {/* Upload Tab */}
+                    <TabsContent value="upload" className="space-y-8">
+                        {uploadStatus !== 'completed' ? (
+                            <Card className="border-2 border-dashed border-border/50">
+                                <CardContent className="pt-6">
+                                    <FileUploader
+                                        onFileSelect={handleFileSelect}
+                                        loading={uploadStatus === 'uploading' || uploadStatus === 'processing'}
+                                        progress={uploadProgress}
+                                        status={uploadStatus}
+                                        error={error}
+                                        label="Drop test paper (PDF/JPG) here"
+                                    />
+                                </CardContent>
+                            </Card>
+                        ) : (
+                            <Card className="border-2 border-primary/20 bg-primary/5">
+                                <CardHeader>
+                                    <div className="h-12 w-12 rounded-full bg-primary/20 flex items-center justify-center mb-4">
+                                        <CheckCircle2 className="h-6 w-6 text-primary" />
+                                    </div>
+                                    <CardTitle className="text-2xl">Upload Complete!</CardTitle>
+                                    <CardDescription>
+                                        Questions have been extracted and added to the untagged repository.
+                                    </CardDescription>
+                                </CardHeader>
+                                <CardContent className="flex gap-4">
+                                    <Button onClick={() => setUploadStatus('idle')} variant="outline">
+                                        <FileUp className="mr-2 h-4 w-4" />
+                                        Upload Another
+                                    </Button>
+                                    <Button onClick={() => navigate('/admin/tagging')}>
+                                        Go to Tagging
+                                        <ArrowRight className="ml-2 h-4 w-4" />
+                                    </Button>
+                                </CardContent>
+                            </Card>
+                        )}
+
+                        <Card>
+                            <CardHeader>
+                                <CardTitle className="text-lg">What happens next?</CardTitle>
+                            </CardHeader>
+                            <CardContent className="space-y-4 text-sm text-muted-foreground">
+                                <div className="flex gap-3">
+                                    <div className="h-6 w-6 rounded-full bg-accent flex items-center justify-center shrink-0">1</div>
+                                    <p>System uses AI OCR to extract image/text from the uploaded paper.</p>
+                                </div>
+                                <div className="flex gap-3">
+                                    <div className="h-6 w-6 rounded-full bg-accent flex items-center justify-center shrink-0">2</div>
+                                    <p>Questions are stored in the <strong>Untagged Repository</strong>.</p>
+                                </div>
+                                <div className="flex gap-3">
+                                    <div className="h-6 w-6 rounded-full bg-accent flex items-center justify-center shrink-0">3</div>
+                                    <p>You can then go to the <strong>Tagging</strong> section to assign Subject, Chapter, and Topic.</p>
+                                </div>
+                            </CardContent>
+                        </Card>
+                    </TabsContent>
+
+                    {/* Manual Creation Tab */}
+                    <TabsContent value="manual">
+                        <ManualQuestionCreator
+                            onQuestionCreated={() => {
+                                toast.success("Question saved! Go to tagging to assign Subject, Chapter, and Topic.");
+                            }}
+                        />
+                    </TabsContent>
+                </Tabs>
             </div>
         </MainLayout>
     );

@@ -30,7 +30,7 @@ const STEPS = ['Account', 'Personal Info', 'Academic', 'Goals'];
 
 export default function Onboarding() {
   const navigate = useNavigate();
-  const { signUp, user } = useAuth();
+  const { signUp, user, refreshProfile } = useAuth();
   const [step, setStep] = useState(0);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
@@ -180,6 +180,8 @@ export default function Onboarding() {
 
       // Update user profile (trigger already created it, we just update with onboarding data)
       const profileUpdate = {
+        id: currentUser.id,
+        email: currentUser.email,
         name: data.name,
         phone: data.phone || null,
         grade: data.grade as any,
@@ -189,13 +191,13 @@ export default function Onboarding() {
 
       const { error: profileError } = await (supabase as any)
         .from('users')
-        .update(profileUpdate)
-        .eq('id', currentUser.id);
+        .upsert(profileUpdate);
 
       if (profileError) throw profileError;
 
       // Update user preferences (trigger already created it)
       const preferencesUpdate = {
+        user_id: currentUser.id,
         focus_subjects: data.focusSubjects as any,
         daily_goal: 20,
         difficulty_level: 'adaptive' as any,
@@ -203,11 +205,13 @@ export default function Onboarding() {
 
       const { error: preferencesError } = await (supabase as any)
         .from('user_preferences')
-        .update(preferencesUpdate)
-        .eq('user_id', currentUser.id);
+        .upsert(preferencesUpdate, { onConflict: 'user_id' });
 
       if (preferencesError) throw preferencesError;
 
+      if (preferencesError) throw preferencesError;
+
+      await refreshProfile();
       toast.success('Welcome to Catalyst! Your account is ready.');
       navigate('/dashboard', { replace: true });
     } catch (err: any) {

@@ -2,14 +2,15 @@
 CREATE OR REPLACE FUNCTION public.handle_new_user()
 RETURNS TRIGGER AS $$
 BEGIN
-  INSERT INTO public.users (id, email, name, grade, syllabus, target_exam)
+  INSERT INTO public.users (id, email, name, grade, syllabus, target_exam, role)
   VALUES (
     NEW.id,
     NEW.email,
     COALESCE(NEW.raw_user_meta_data->>'name', 'User'),
     COALESCE(NEW.raw_user_meta_data->>'grade', '10'),
     COALESCE(NEW.raw_user_meta_data->>'syllabus', 'cbse'),
-    COALESCE(NEW.raw_user_meta_data->>'target_exam', 'jee-main')
+    COALESCE(NEW.raw_user_meta_data->>'target_exam', 'jee-main'),
+    'user'  -- Default role for new users
   );
   
   -- Also create default preferences
