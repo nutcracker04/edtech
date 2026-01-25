@@ -1,4 +1,5 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useAuth } from "@/hooks/useAuth";
 import { cn } from "@/lib/utils";
 import {
   Plus,
@@ -10,6 +11,7 @@ import {
   ChevronRight,
   MessageSquare,
   Upload,
+  Shield,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Logo } from "@/components/ui/Logo";
@@ -21,6 +23,10 @@ const navItems = [
   { icon: BookOpen, label: "My Tests", href: "/tests" },
   { icon: Upload, label: "Upload Test", href: "/upload-test", highlight: false },
   { icon: Target, label: "Analysis", href: "/analysis" },
+];
+
+const adminItems = [
+  { icon: Shield, label: "Admin Panel", href: "/admin", highlight: false },
 ];
 
 const bottomItems = [
@@ -35,6 +41,7 @@ interface SidebarProps {
 }
 
 export function Sidebar({ collapsed, onCollapse, mobile = false, onMobileClose }: SidebarProps) {
+  const { profile } = useAuth();
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -107,6 +114,28 @@ export function Sidebar({ collapsed, onCollapse, mobile = false, onMobileClose }
                   ? "bg-sidebar-accent text-sidebar-accent-foreground"
                   : "text-muted-foreground hover:text-sidebar-foreground hover:bg-sidebar-accent/50",
                 item.highlight && !isActive && "text-primary hover:text-primary"
+              )}
+            >
+              <item.icon className="h-4 w-4 sm:h-5 sm:w-5 shrink-0" />
+              {(!collapsed || mobile) && (
+                <span className="text-xs sm:text-sm font-medium truncate">{item.label}</span>
+              )}
+            </Link>
+          );
+        })}
+
+        {profile?.role === 'admin' && adminItems.map((item) => {
+          const isActive = location.pathname.startsWith(item.href);
+          return (
+            <Link
+              key={item.href}
+              to={item.href}
+              onClick={handleLinkClick}
+              className={cn(
+                "flex items-center gap-2 sm:gap-3 px-2 sm:px-3 py-2 sm:py-2.5 rounded-lg transition-all duration-200 min-w-0 border border-primary/20 bg-primary/5 mt-4",
+                isActive
+                  ? "bg-primary text-primary-foreground"
+                  : "text-primary hover:bg-primary/10"
               )}
             >
               <item.icon className="h-4 w-4 sm:h-5 sm:w-5 shrink-0" />

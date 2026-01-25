@@ -18,6 +18,7 @@ export interface Database {
           grade: '9' | '10' | '11' | '12'
           syllabus: 'cbse' | 'icse' | 'state'
           target_exam: string
+          role: 'user' | 'admin'
           created_at: string
           updated_at: string
         }
@@ -29,6 +30,7 @@ export interface Database {
           grade: '9' | '10' | '11' | '12'
           syllabus: 'cbse' | 'icse' | 'state'
           target_exam: string
+          role?: 'user' | 'admin'
           created_at?: string
           updated_at?: string
         }
@@ -40,6 +42,7 @@ export interface Database {
           grade?: '9' | '10' | '11' | '12'
           syllabus?: 'cbse' | 'icse' | 'state'
           target_exam?: string
+          role?: 'user' | 'admin'
           created_at?: string
           updated_at?: string
         }

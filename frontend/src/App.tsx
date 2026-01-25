@@ -15,6 +15,10 @@ import Analysis from "./pages/Analysis";
 import Tests from "./pages/Tests";
 import UploadTest from "./pages/UploadTest";
 import Settings from "./pages/Settings";
+import AdminDashboard from "./pages/admin/AdminDashboard";
+import HierarchyManager from "./pages/admin/HierarchyManager";
+import QuestionTagging from "./pages/admin/QuestionTagging";
+import AdminPaperUpload from "./pages/admin/PaperUpload";
 
 import TestTaking from "./pages/TestTaking";
 import NotFound from "./pages/NotFound";
@@ -78,6 +82,27 @@ const App = () => {
               <Route path="/settings" element={
                 <ProtectedRoute>
                   <Settings />
+                </ProtectedRoute>
+              } />
+
+              <Route path="/admin" element={
+                <ProtectedRoute>
+                  <AdminDashboard />
+                </ProtectedRoute>
+              } />
+              <Route path="/admin/hierarchy" element={
+                <ProtectedRoute>
+                  <HierarchyManager />
+                </ProtectedRoute>
+              } />
+              <Route path="/admin/tagging" element={
+                <ProtectedRoute>
+                  <QuestionTagging />
+                </ProtectedRoute>
+              } />
+              <Route path="/admin/upload" element={
+                <ProtectedRoute>
+                  <AdminPaperUpload />
                 </ProtectedRoute>
               } />
 
