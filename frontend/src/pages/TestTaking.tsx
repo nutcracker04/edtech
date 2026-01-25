@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { MainLayout } from '@/components/layout/MainLayout';
-import { QuestionCard } from '@/components/practice/QuestionCard';
+import { QuestionRenderer } from '@/components/questions/QuestionRenderer';
 import { TestTimer } from '@/components/tests/TestTimer';
 import { TestNavigation } from '@/components/tests/TestNavigation';
 import { Button } from '@/components/ui/button';
@@ -37,10 +37,10 @@ const TestTaking = () => {
   const question = session.questions[currentQuestion];
   const answeredQuestions = new Set(Object.keys(answers).map(k => parseInt(k)));
 
-  const handleAnswer = (answerId: string) => {
+  const handleAnswer = (answer: any) => {
     setAnswers(prev => ({
       ...prev,
-      [currentQuestion]: answerId,
+      [currentQuestion]: answer,
     }));
   };
 
@@ -133,11 +133,11 @@ const TestTaking = () => {
           {/* Score Breakdown */}
           <div className="bg-card border border-border rounded-xl p-6 space-y-4">
             <h2 className="text-lg font-semibold text-foreground">Performance Summary</h2>
-            
+
             <div className="grid grid-cols-3 gap-4">
               <div className="text-center p-4 rounded-lg bg-secondary/30">
                 <div className="text-2xl font-bold text-primary">
-                  {Object.values(answers).filter((ans, idx) => 
+                  {Object.values(answers).filter((ans, idx) =>
                     session.questions[idx]?.correctAnswer === ans
                   ).length}
                 </div>
@@ -145,7 +145,7 @@ const TestTaking = () => {
               </div>
               <div className="text-center p-4 rounded-lg bg-secondary/30">
                 <div className="text-2xl font-bold text-red-400">
-                  {Object.values(answers).filter((ans, idx) => 
+                  {Object.values(answers).filter((ans, idx) =>
                     session.questions[idx]?.correctAnswer !== ans
                   ).length}
                 </div>
@@ -169,7 +169,6 @@ const TestTaking = () => {
                 <ul className="text-sm text-muted-foreground space-y-1 mt-2">
                   <li>• Review your weak areas in the Analysis section</li>
                   <li>• Take focused practice tests on struggling topics</li>
-                  <li>• Check the revision capsules for quick concept reviews</li>
                   <li>• Attempt another test in 2-3 days to track progress</li>
                 </ul>
               </div>
@@ -209,12 +208,13 @@ const TestTaking = () => {
               onTimeUp={handleTimeUp}
             />
 
-            {/* Question Card */}
-            <QuestionCard
+            {/* Question Renderer - Supports all answer types */}
+            <QuestionRenderer
+              question={question}
               questionNumber={currentQuestion + 1}
               totalQuestions={session.questions.length}
-              {...question}
               onAnswer={handleAnswer}
+              currentAnswer={answers[currentQuestion]}
             />
 
             {/* Question Actions */}

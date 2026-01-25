@@ -1,4 +1,4 @@
-import { BarChart3, BookMarked, Target, TrendingUp, Flame, Trophy, Brain } from "lucide-react";
+import { BarChart3, Target, TrendingUp, Flame, Trophy, Brain } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -31,13 +31,6 @@ const actions = [
     color: "text-orange-500",
   },
   {
-    id: "revision",
-    icon: BookMarked,
-    label: "Revision Capsule",
-    prompt: "Create a personalized revision capsule based on my weak topics",
-    color: "text-purple-500",
-  },
-  {
     id: "weaknesses",
     icon: Target,
     label: "Weak Areas",
@@ -57,8 +50,8 @@ export function QuickActions({ onAction, isLoading, variant = "horizontal" }: Qu
   return (
     <div className={cn(
       "flex gap-2 py-2",
-      variant === "horizontal" 
-        ? "overflow-x-auto scrollbar-hide px-1" 
+      variant === "horizontal"
+        ? "overflow-x-auto scrollbar-hide px-1"
         : "flex-wrap justify-center"
     )}>
       {actions.map((action) => (

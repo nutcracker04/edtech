@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import { Mic, Send, BookOpen, Calculator, FlaskConical, Atom, Image, Plus, BarChart3, BookMarked, Target, TrendingUp, Flame, Trophy } from "lucide-react";
+import { Mic, Send, BookOpen, Calculator, FlaskConical, Atom, Image, Plus, BarChart3, Target, TrendingUp, Flame, Trophy } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useChat } from "@/hooks/useChat";
 import { ChatMessage } from "./ChatMessage";
@@ -19,7 +19,6 @@ const suggestedPrompts = [
   "Explain why I keep getting organic reactions wrong",
   "Generate 5 challenging JEE-level problems on thermodynamics",
   "Help me master coordinate geometry step-by-step",
-  "Create a quick revision sheet for electrochemistry",
   "What's the fastest way to solve quadratic equations?",
   "Help me understand resonance structures intuitively",
   "Generate a practice test on my weak topics",
@@ -49,13 +48,6 @@ const chatQuickActions = [
     label: "Streak",
     prompt: "Show my current study streak and consistency calendar",
     color: "text-orange-500",
-  },
-  {
-    id: "revision",
-    icon: BookMarked,
-    label: "Revision",
-    prompt: "Create a personalized revision capsule based on my weak topics in physics",
-    color: "text-purple-500",
   },
   {
     id: "weaknesses",
@@ -109,7 +101,7 @@ export function QuestionInput() {
       if (!isPaused) {
         const currentScroll = container.scrollLeft;
         const maxScroll = container.scrollWidth / 2; // Half because we duplicate items
-        
+
         if (currentScroll >= maxScroll - 1) {
           // Reset to start seamlessly without visible jump
           container.scrollLeft = 0;
@@ -259,7 +251,7 @@ export function QuestionInput() {
               )}
               rows={hasMessages ? 1 : 2}
             />
-            
+
             {/* Bottom Bar */}
             <div className="absolute bottom-0 left-0 right-0 flex items-center justify-between px-5 py-4 border-t border-border/30">
               <div className="flex items-center gap-3">
@@ -270,7 +262,7 @@ export function QuestionInput() {
                 >
                   <Image className="h-4 w-4" />
                 </button>
-                
+
                 {/* Quick Feature Actions in Bottom Bar */}
                 {!hasMessages && (
                   <div className="flex items-center gap-1.5 ml-1 border-l border-border/30 pl-3">
@@ -293,7 +285,7 @@ export function QuestionInput() {
                   </div>
                 )}
               </div>
-              
+
               <div className="flex items-center gap-2.5">
                 <button
                   type="button"
@@ -335,7 +327,7 @@ export function QuestionInput() {
               <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-background to-transparent pointer-events-none z-10" />
               {/* Gradient fade on the left */}
               <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-background to-transparent pointer-events-none z-10" />
-              
+
               <div
                 ref={scrollContainerRef}
                 onMouseEnter={() => setIsPaused(true)}

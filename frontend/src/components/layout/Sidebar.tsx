@@ -8,8 +8,8 @@ import {
   Settings,
   ChevronLeft,
   ChevronRight,
-  Lightbulb,
   MessageSquare,
+  Upload,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Logo } from "@/components/ui/Logo";
@@ -19,8 +19,8 @@ const navItems = [
   { icon: Plus, label: "New Practice", href: "/practice", highlight: true },
   { icon: LayoutDashboard, label: "Dashboard", href: "/dashboard" },
   { icon: BookOpen, label: "My Tests", href: "/tests" },
+  { icon: Upload, label: "Upload Test", href: "/upload-test", highlight: false },
   { icon: Target, label: "Analysis", href: "/analysis" },
-  { icon: Lightbulb, label: "Revision", href: "/revision-capsules" },
 ];
 
 const bottomItems = [

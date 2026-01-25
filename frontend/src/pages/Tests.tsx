@@ -1,14 +1,20 @@
 import { useState } from "react";
 import { MainLayout } from "@/components/layout/MainLayout";
-import { Calendar, Clock, Target, ChevronRight, Filter, Plus } from "lucide-react";
+import { Calendar, Clock, Target, ChevronRight, Filter, Plus, CalendarClock } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { AdaptiveTestConfig } from "@/components/tests/AdaptiveTestConfig";
+import { TestScheduler } from "@/components/tests/TestScheduler";
+import { ScheduledTestCard } from "@/components/tests/ScheduledTestCard";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Label } from "@/components/ui/label";
+import { toast } from "sonner";
+import { useNavigate } from "react-router-dom";
 
 interface Test {
   id: string;
@@ -78,21 +84,76 @@ const tests: Test[] = [
   },
 ];
 
+const scheduledTests = [
+  {
+    id: 's1',
+    title: 'Physics - Thermodynamics',
+    type: 'topic',
+    subject: 'physics',
+    duration: 45,
+    scheduledAt: new Date(Date.now() + 2 * 60 * 60 * 1000), // 2 hours from now
+    status: 'upcoming' as const,
+  },
+  {
+    id: 's2',
+    title: 'JEE Main Mock Test #6',
+    type: 'full',
+    duration: 180,
+    scheduledAt: new Date(Date.now() + 24 * 60 * 60 * 1000), // Tomorrow
+    status: 'upcoming' as const,
+  },
+];
+
 const Tests = () => {
+  const navigate = useNavigate();
   const [showCreateDialog, setShowCreateDialog] = useState(false);
+  const [showScheduleDialog, setShowScheduleDialog] = useState(false);
+  const [scheduleImmediately, setScheduleImmediately] = useState(false);
+  const [currentTestConfig, setCurrentTestConfig] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(false);
+  const [activeTab, setActiveTab] = useState<'all' | 'scheduled'>('all');
 
   const handleCreateAdaptiveTest = async (config: any) => {
-    setIsLoading(true);
-    try {
-      // In a real app, this would call the adaptive algorithm
-      setTimeout(() => {
-        console.log('Creating adaptive test with config:', config);
-        setShowCreateDialog(false);
-      }, 1000);
-    } finally {
-      setIsLoading(false);
+    setCurrentTestConfig({ ...config, type: 'adaptive', title: 'Adaptive Test' });
+
+    if (scheduleImmediately) {
+      setShowCreateDialog(false);
+      setShowScheduleDialog(true);
+    } else {
+      // Create test immediately
+      setIsLoading(true);
+      try {
+        setTimeout(() => {
+          console.log('Creating adaptive test with config:', config);
+          toast.success('Test created successfully!');
+          setShowCreateDialog(false);
+        }, 1000);
+      } finally {
+        setIsLoading(false);
+      }
     }
+  };
+
+  const handleScheduleTest = (scheduledDate: Date) => {
+    console.log('Scheduling test for:', scheduledDate, currentTestConfig);
+    toast.success(`Test scheduled for ${scheduledDate.toLocaleString()}`);
+    setShowScheduleDialog(false);
+    setShowCreateDialog(false);
+    setScheduleImmediately(false);
+    // TODO: Actually create test in database with scheduled_at
+  };
+
+  const handleStartScheduledTest = (testId: string) => {
+    navigate(`/test/${testId}`);
+  };
+
+  const handleEditScheduledTest = (testId: string) => {
+    toast.info('Rescheduling feature coming soon');
+  };
+
+  const handleDeleteScheduledTest = (testId: string) => {
+    toast.success('Test removed from schedule');
+    // TODO: Delete from database
   };
 
   const getStatusBadge = (status: Test["status"]) => {
@@ -130,7 +191,7 @@ const Tests = () => {
               <Filter className="h-4 w-4 sm:mr-2" />
               <span className="hidden sm:inline">Filter</span>
             </Button>
-            <Button 
+            <Button
               size="sm"
               onClick={() => setShowCreateDialog(true)}
               className="flex-1 sm:flex-initial"
@@ -170,77 +231,121 @@ const Tests = () => {
           </Card>
         </div>
 
-        {/* Tests List */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-sm sm:text-base">Recent Tests</CardTitle>
-          </CardHeader>
-          <CardContent className="p-0">
-            <div className="divide-y divide-border">
-              {tests.map((test) => (
-                <div
-                  key={test.id}
-                  className="px-3 sm:px-4 lg:px-6 py-3 sm:py-4 hover:bg-secondary/30 transition-colors cursor-pointer"
-                >
-                  <div className="flex flex-col gap-3">
-                    {/* Title and Badges Row */}
-                    <div className="flex items-start justify-between gap-2">
-                      <h3 className="font-medium text-foreground text-sm sm:text-base flex-1 min-w-0 pr-2">
-                        {test.title}
-                      </h3>
-                      <div className="flex items-center gap-1.5 sm:gap-2 flex-shrink-0">
-                        <Badge variant="outline" className={cn("text-xs whitespace-nowrap", getTypeBadge(test.type))}>
-                          {test.type}
-                        </Badge>
-                        <Badge variant="outline" className={cn("text-xs capitalize whitespace-nowrap", getStatusBadge(test.status))}>
-                          {test.status.replace("_", " ")}
-                        </Badge>
+        {/* Tabs for All Tests vs Scheduled */}
+        <Tabs value={activeTab} onValueChange={(v) => setActiveTab(v as 'all' | 'scheduled')} className="space-y-4">
+          <TabsList>
+            <TabsTrigger value="all">All Tests</TabsTrigger>
+            <TabsTrigger value="scheduled">
+              <CalendarClock className="h-4 w-4 mr-2" />
+              Scheduled ({scheduledTests.length})
+            </TabsTrigger>
+          </TabsList>
+
+          {/* All Tests Tab */}
+          <TabsContent value="all" className="space-y-0">
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-sm sm:text-base">Recent Tests</CardTitle>
+              </CardHeader>
+              <CardContent className="p-0">
+                <div className="divide-y divide-border">
+                  {tests.map((test) => (
+                    <div
+                      key={test.id}
+                      className="px-3 sm:px-4 lg:px-6 py-3 sm:py-4 hover:bg-secondary/30 transition-colors cursor-pointer"
+                    >
+                      <div className="flex flex-col gap-3">
+                        {/* Title and Badges Row */}
+                        <div className="flex items-start justify-between gap-2">
+                          <h3 className="font-medium text-foreground text-sm sm:text-base flex-1 min-w-0 pr-2">
+                            {test.title}
+                          </h3>
+                          <div className="flex items-center gap-1.5 sm:gap-2 flex-shrink-0">
+                            <Badge variant="outline" className={cn("text-xs whitespace-nowrap", getTypeBadge(test.type))}>
+                              {test.type}
+                            </Badge>
+                            <Badge variant="outline" className={cn("text-xs capitalize whitespace-nowrap", getStatusBadge(test.status))}>
+                              {test.status.replace("_", " ")}
+                            </Badge>
+                          </div>
+                        </div>
+
+                        {/* Metadata Row */}
+                        <div className="flex flex-wrap items-center gap-x-3 sm:gap-x-4 gap-y-1 text-xs sm:text-sm text-muted-foreground">
+                          <span className="whitespace-nowrap">{test.subject}</span>
+                          <span className="hidden sm:inline">•</span>
+                          <span className="flex items-center gap-1 whitespace-nowrap">
+                            <Target className="h-3 w-3 sm:h-3.5 sm:w-3.5 shrink-0" />
+                            {test.questions} questions
+                          </span>
+                          <span className="hidden sm:inline">•</span>
+                          <span className="flex items-center gap-1 whitespace-nowrap">
+                            <Clock className="h-3 w-3 sm:h-3.5 sm:w-3.5 shrink-0" />
+                            {test.duration} min
+                          </span>
+                          <span className="hidden sm:inline">•</span>
+                          <span className="flex items-center gap-1 whitespace-nowrap">
+                            <Calendar className="h-3 w-3 sm:h-3.5 sm:w-3.5 shrink-0" />
+                            {test.date}
+                          </span>
+                        </div>
+
+                        {/* Score and Action Row */}
+                        <div className="flex items-center justify-between gap-2 pt-1">
+                          {test.score !== undefined && (
+                            <Badge
+                              variant="outline"
+                              className={cn(
+                                "text-xs sm:text-sm whitespace-nowrap",
+                                test.score >= 80 ? "bg-green-500/20 text-green-400 border-green-500/20" :
+                                  test.score >= 60 ? "bg-primary/20 text-primary border-primary/20" :
+                                    "bg-red-500/20 text-red-400 border-red-500/20"
+                              )}
+                            >
+                              {test.score}%
+                            </Badge>
+                          )}
+                          <ChevronRight className="h-4 w-4 sm:h-5 sm:w-5 text-muted-foreground shrink-0 ml-auto" />
+                        </div>
                       </div>
                     </div>
-
-                    {/* Metadata Row */}
-                    <div className="flex flex-wrap items-center gap-x-3 sm:gap-x-4 gap-y-1 text-xs sm:text-sm text-muted-foreground">
-                      <span className="whitespace-nowrap">{test.subject}</span>
-                      <span className="hidden sm:inline">•</span>
-                      <span className="flex items-center gap-1 whitespace-nowrap">
-                        <Target className="h-3 w-3 sm:h-3.5 sm:w-3.5 shrink-0" />
-                        {test.questions} questions
-                      </span>
-                      <span className="hidden sm:inline">•</span>
-                      <span className="flex items-center gap-1 whitespace-nowrap">
-                        <Clock className="h-3 w-3 sm:h-3.5 sm:w-3.5 shrink-0" />
-                        {test.duration} min
-                      </span>
-                      <span className="hidden sm:inline">•</span>
-                      <span className="flex items-center gap-1 whitespace-nowrap">
-                        <Calendar className="h-3 w-3 sm:h-3.5 sm:w-3.5 shrink-0" />
-                        {test.date}
-                      </span>
-                    </div>
-
-                    {/* Score and Action Row */}
-                    <div className="flex items-center justify-between gap-2 pt-1">
-                      {test.score !== undefined && (
-                        <Badge 
-                          variant="outline"
-                          className={cn(
-                            "text-xs sm:text-sm whitespace-nowrap",
-                            test.score >= 80 ? "bg-green-500/20 text-green-400 border-green-500/20" :
-                            test.score >= 60 ? "bg-primary/20 text-primary border-primary/20" :
-                            "bg-red-500/20 text-red-400 border-red-500/20"
-                          )}
-                        >
-                          {test.score}%
-                        </Badge>
-                      )}
-                      <ChevronRight className="h-4 w-4 sm:h-5 sm:w-5 text-muted-foreground shrink-0 ml-auto" />
-                    </div>
-                  </div>
+                  ))}
                 </div>
-              ))}
-            </div>
-          </CardContent>
-        </Card>
+              </CardContent>
+            </Card>
+          </TabsContent>
+
+          {/* Scheduled Tests Tab */}
+          <TabsContent value="scheduled" className="space-y-4">
+            {scheduledTests.length === 0 ? (
+              <Card>
+                <CardContent className="py-12 text-center">
+                  <CalendarClock className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
+                  <h3 className="text-lg font-medium mb-2">No Scheduled Tests</h3>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    Schedule tests to stay organized and get reminders
+                  </p>
+                  <Button onClick={() => setShowCreateDialog(true)}>
+                    <Plus className="h-4 w-4 mr-2" />
+                    Schedule a Test
+                  </Button>
+                </CardContent>
+              </Card>
+            ) : (
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {scheduledTests.map((test) => (
+                  <ScheduledTestCard
+                    key={test.id}
+                    test={test}
+                    onStart={handleStartScheduledTest}
+                    onEdit={handleEditScheduledTest}
+                    onDelete={handleDeleteScheduledTest}
+                  />
+                ))}
+              </div>
+            )}
+          </TabsContent>
+        </Tabs>
       </div>
 
       {/* Create Test Dialog */}
@@ -265,6 +370,19 @@ const Tests = () => {
                   Create a personalized test based on your performance data. The algorithm will focus on your weak areas while maintaining your strengths.
                 </p>
               </div>
+
+              {/* Schedule Option */}
+              <div className="flex items-center space-x-2 p-3 rounded-lg bg-secondary/30">
+                <Checkbox
+                  id="schedule-later"
+                  checked={scheduleImmediately}
+                  onCheckedChange={(checked) => setScheduleImmediately(checked as boolean)}
+                />
+                <Label htmlFor="schedule-later" className="text-sm cursor-pointer">
+                  Schedule for later instead of starting immediately
+                </Label>
+              </div>
+
               <AdaptiveTestConfig
                 onSubmit={handleCreateAdaptiveTest}
                 isLoading={isLoading}
@@ -334,6 +452,24 @@ const Tests = () => {
               </Button>
             </TabsContent>
           </Tabs>
+        </DialogContent>
+      </Dialog>
+
+      {/* Schedule Test Dialog */}
+      <Dialog open={showScheduleDialog} onOpenChange={setShowScheduleDialog}>
+        <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
+          <DialogHeader>
+            <DialogTitle>Schedule Test</DialogTitle>
+          </DialogHeader>
+          <TestScheduler
+            testTitle={currentTestConfig?.title || 'Test'}
+            testDuration={currentTestConfig?.duration || 60}
+            onSchedule={handleScheduleTest}
+            onCancel={() => {
+              setShowScheduleDialog(false);
+              setScheduleImmediately(false);
+            }}
+          />
         </DialogContent>
       </Dialog>
     </MainLayout>

@@ -294,7 +294,7 @@ export function generateRecommendations(userId: string, subject: Subject): Recom
   if (strongTopics.length > 0) {
     recommendations.push({
       id: 'maintain-strengths',
-      type: 'revision',
+      type: 'practice',
       title: 'Maintain Your Strengths',
       description: `You are strong in ${strongTopics.slice(0, 2).map(t => t.topic).join(', ')}. Keep practicing to maintain your skills.`,
       subject,

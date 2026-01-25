@@ -26,11 +26,19 @@ export interface Option {
   text: string;
 }
 
+export type AnswerType =
+  | 'single_choice'    // Traditional MCQ (one correct answer)
+  | 'multiple_choice'  // Multiple correct answers
+  | 'integer'          // Numeric input
+  | 'match_following'  // Match items from two columns
+  | 'assertion_reason' // Assertion-Reason type
+  | 'comprehension';   // Comprehension passage
+
 export interface Question {
   id: string;
   question: string;
   options: Option[];
-  correctAnswer: string;
+  correctAnswer: string | string[]; // Can be array for multiple_choice
   explanation: string;
   difficulty: Difficulty;
   topic: string;
@@ -38,6 +46,15 @@ export interface Question {
   gradeLevel: Grade[];
   tags?: string[];
   source?: string;
+  answerType?: AnswerType; // Default: 'single_choice'
+  // For integer type
+  integerRange?: { min: number; max: number };
+  // For match_following type
+  leftColumn?: Array<{ id: string; text: string }>;
+  rightColumn?: Array<{ id: string; text: string }>;
+  // For multiple_choice
+  minSelections?: number;
+  maxSelections?: number;
 }
 
 // Test Types
@@ -99,26 +116,6 @@ export interface TopicMastery {
   strength?: 'weak' | 'average' | 'strong';
 }
 
-// Revision Capsule Types
-export interface CapsuleTopic {
-  name: string;
-  priority: 'high' | 'medium' | 'low';
-  concepts: string[];
-  formulas?: string[];
-  commonMistakes?: string[];
-}
-
-export interface RevisionCapsule {
-  id: string;
-  userId: string;
-  subject: Subject;
-  topics: CapsuleTopic[];
-  generatedAt: Date;
-  expiresAt?: Date;
-  focusOnWeak: boolean;
-  includeFormulas: boolean;
-  includeCommonMistakes: boolean;
-}
 
 // Performance Metrics Types
 export interface PerformanceMetrics {
@@ -208,7 +205,7 @@ export interface TestCreationConfig {
 // Recommendation Types
 export interface Recommendation {
   id: string;
-  type: 'practice' | 'revision' | 'focus';
+  type: 'practice' | 'focus';
   title: string;
   description: string;
   subject?: Subject;

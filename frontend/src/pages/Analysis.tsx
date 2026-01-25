@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { MainLayout } from "@/components/layout/MainLayout";
 import { PerformanceRadar } from "@/components/dashboard/PerformanceRadar";
+import { SpiderWeb } from "@/components/analysis/SpiderWeb";
+import { PerformanceGraph } from "@/components/analysis/PerformanceGraph";
 import { usePerformance } from "@/hooks/usePerformance";
 import { TrendingUp, TrendingDown, Target, AlertTriangle, CheckCircle, ChevronDown, ChevronUp, BarChart3 } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -187,6 +189,130 @@ const Analysis = () => {
             </CardContent>
           </Card>
         </div>
+
+        {/* Spider Web Visualization */}
+        <SpiderWeb
+          data={[
+            {
+              name: 'Physics',
+              score: 75,
+              chapters: [
+                {
+                  name: 'Mechanics',
+                  score: 85,
+                  topics: [
+                    { name: 'Kinematics', score: 90 },
+                    { name: 'Dynamics', score: 85 },
+                    { name: 'Circular Motion', score: 80 },
+                    { name: 'Rotational Motion', score: 82 },
+                  ],
+                },
+                {
+                  name: 'Thermodynamics',
+                  score: 68,
+                  topics: [
+                    { name: 'First Law', score: 75 },
+                    { name: 'Second Law', score: 65 },
+                    { name: 'Entropy', score: 60 },
+                    { name: 'Heat Engines', score: 70 },
+                  ],
+                },
+                {
+                  name: 'Electromagnetism',
+                  score: 72,
+                  topics: [
+                    { name: 'Electric Fields', score: 80 },
+                    { name: 'Magnetic Fields', score: 70 },
+                    { name: 'Induction', score: 68 },
+                    { name: 'AC Circuits', score: 70 },
+                  ],
+                },
+              ],
+            },
+            {
+              name: 'Chemistry',
+              score: 71,
+              chapters: [
+                {
+                  name: 'Organic',
+                  score: 80,
+                  topics: [
+                    { name: 'Alkanes', score: 85 },
+                    { name: 'Alkenes', score: 82 },
+                    { name: 'Aromatic', score: 75 },
+                  ],
+                },
+                {
+                  name: 'Inorganic',
+                  score: 65,
+                  topics: [
+                    { name: 'Periodic Table', score: 70 },
+                    { name: 'Coordination', score: 62 },
+                    { name: 'Metals', score: 63 },
+                  ],
+                },
+                {
+                  name: 'Physical',
+                  score: 68,
+                  topics: [
+                    { name: 'Equilibrium', score: 72 },
+                    { name: 'Kinetics', score: 68 },
+                    { name: 'Electrochemistry', score: 64 },
+                  ],
+                },
+              ],
+            },
+            {
+              name: 'Mathematics',
+              score: 83,
+              chapters: [
+                {
+                  name: 'Calculus',
+                  score: 90,
+                  topics: [
+                    { name: 'Limits', score: 92 },
+                    { name: 'Derivatives', score: 90 },
+                    { name: 'Integration', score: 88 },
+                  ],
+                },
+                {
+                  name: 'Algebra',
+                  score: 85,
+                  topics: [
+                    { name: 'Polynomials', score: 88 },
+                    { name: 'Matrices', score: 85 },
+                    { name: 'Determinants', score: 82 },
+                  ],
+                },
+                {
+                  name: 'Geometry',
+                  score: 75,
+                  topics: [
+                    { name: 'Coordinate Geometry', score: 78 },
+                    { name: 'Vectors', score: 75 },
+                    { name: '3D Geometry', score: 72 },
+                  ],
+                },
+              ],
+            },
+          ]}
+        />
+
+        {/* Performance Trends Over Time */}
+        <PerformanceGraph
+          title="Performance Trends"
+          description="Track your progress over time across all subjects"
+          data={[
+            { date: 'Jan 1', physics: 65, chemistry: 60, mathematics: 70, overall: 65 },
+            { date: 'Jan 5', physics: 68, chemistry: 63, mathematics: 72, overall: 68 },
+            { date: 'Jan 10', physics: 72, chemistry: 66, mathematics: 75, overall: 71 },
+            { date: 'Jan 15', physics: 75, chemistry: 70, mathematics: 80, overall: 75 },
+            { date: 'Jan 20', physics: 78, chemistry: 72, mathematics: 83, overall: 78 },
+            { date: 'Jan 24', physics: 75, chemistry: 71, mathematics: 83, overall: 76 },
+          ]}
+          chartType="line"
+          showSubjects={true}
+        />
 
         {/* Topic Breakdown Section - BELOW INSIGHTS */}
         <Tabs defaultValue="all" className="w-full">

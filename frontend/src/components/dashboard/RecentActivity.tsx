@@ -1,4 +1,4 @@
-import { CheckCircle, XCircle, Clock, BookOpen, FileText, Target, BookMarked } from "lucide-react";
+import { CheckCircle, XCircle, Clock, BookOpen, FileText, Target } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -8,7 +8,7 @@ import { Separator } from "@/components/ui/separator";
 
 interface Activity {
   id: string;
-  type: "test" | "practice" | "revision";
+  type: "test" | "practice";
   title: string;
   subject: string;
   score?: number;
@@ -34,14 +34,6 @@ const recentActivities: Activity[] = [
     score: 72,
     time: "Yesterday",
     status: "completed",
-  },
-  {
-    id: "3",
-    type: "revision",
-    title: "Calculus - Integration",
-    subject: "Mathematics",
-    time: "Yesterday",
-    status: "in_progress",
   },
   {
     id: "4",
@@ -72,8 +64,6 @@ export function RecentActivity() {
         return <FileText className="h-4 w-4" />;
       case "practice":
         return <Target className="h-4 w-4" />;
-      case "revision":
-        return <BookMarked className="h-4 w-4" />;
     }
   };
 
@@ -83,8 +73,6 @@ export function RecentActivity() {
         return "bg-blue-500/10 text-blue-500 border-blue-500/20";
       case "practice":
         return "bg-purple-500/10 text-purple-500 border-purple-500/20";
-      case "revision":
-        return "bg-orange-500/10 text-orange-500 border-orange-500/20";
     }
   };
 
@@ -128,15 +116,15 @@ export function RecentActivity() {
                     </div>
                   </div>
                   {activity.score !== undefined && (
-                    <Badge 
+                    <Badge
                       variant="outline"
                       className={cn(
                         "shrink-0 font-semibold",
-                        activity.score >= 70 
+                        activity.score >= 70
                           ? "bg-green-500/20 text-green-400 border-green-500/20"
                           : activity.score >= 50
-                          ? "bg-yellow-500/20 text-yellow-400 border-yellow-500/20"
-                          : "bg-red-500/20 text-red-400 border-red-500/20"
+                            ? "bg-yellow-500/20 text-yellow-400 border-yellow-500/20"
+                            : "bg-red-500/20 text-red-400 border-red-500/20"
                       )}
                     >
                       {activity.score}%

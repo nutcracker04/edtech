@@ -3,14 +3,19 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { AuthProvider } from "./contexts/AuthContext";
+import { ProtectedRoute } from "./components/auth/ProtectedRoute";
+import Login from "./pages/Login";
+import Onboarding from "./pages/Onboarding";
 import Index from "./pages/Index";
 import Dashboard from "./pages/Dashboard";
 import Practice from "./pages/Practice";
 import Analysis from "./pages/Analysis";
 import Tests from "./pages/Tests";
+import UploadTest from "./pages/UploadTest";
 import Settings from "./pages/Settings";
-import RevisionCapsules from "./pages/RevisionCapsules";
+
 import TestTaking from "./pages/TestTaking";
 import NotFound from "./pages/NotFound";
 import { AIAssistant } from "./components/ai/AIAssistant";
@@ -23,28 +28,69 @@ const App = () => {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <TooltipProvider>
-        <Toaster />
-        <Sonner />
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/practice" element={<Practice />} />
-            <Route path="/analysis" element={<Analysis />} />
-            <Route path="/tests" element={<Tests />} />
-            <Route path="/test/:testId" element={<TestTaking />} />
-            <Route path="/revision-capsules" element={<RevisionCapsules />} />
-            <Route path="/settings" element={<Settings />} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </BrowserRouter>
-        
-        {/* AI Assistant */}
-        <AIAssistantButton onClick={() => setIsAIOpen(true)} isOpen={isAIOpen} />
-        <AIAssistant isOpen={isAIOpen} onClose={() => setIsAIOpen(false)} />
-      </TooltipProvider>
+      <AuthProvider>
+        <TooltipProvider>
+          <Toaster />
+          <Sonner />
+          <BrowserRouter>
+            <Routes>
+              {/* Public routes */}
+              <Route path="/login" element={<Login />} />
+              <Route path="/onboarding" element={<Onboarding />} />
+
+              {/* Protected routes */}
+              <Route path="/" element={
+                <ProtectedRoute>
+                  <Index />
+                </ProtectedRoute>
+              } />
+              <Route path="/dashboard" element={
+                <ProtectedRoute>
+                  <Dashboard />
+                </ProtectedRoute>
+              } />
+              <Route path="/practice" element={
+                <ProtectedRoute>
+                  <Practice />
+                </ProtectedRoute>
+              } />
+              <Route path="/analysis" element={
+                <ProtectedRoute>
+                  <Analysis />
+                </ProtectedRoute>
+              } />
+              <Route path="/tests" element={
+                <ProtectedRoute>
+                  <Tests />
+                </ProtectedRoute>
+              } />
+              <Route path="/test/:testId" element={
+                <ProtectedRoute>
+                  <TestTaking />
+                </ProtectedRoute>
+              } />
+              <Route path="/upload-test" element={
+                <ProtectedRoute>
+                  <UploadTest />
+                </ProtectedRoute>
+              } />
+
+              <Route path="/settings" element={
+                <ProtectedRoute>
+                  <Settings />
+                </ProtectedRoute>
+              } />
+
+              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </BrowserRouter>
+
+          {/* AI Assistant */}
+          <AIAssistantButton onClick={() => setIsAIOpen(true)} isOpen={isAIOpen} />
+          <AIAssistant isOpen={isAIOpen} onClose={() => setIsAIOpen(false)} />
+        </TooltipProvider>
+      </AuthProvider>
     </QueryClientProvider>
   );
 };

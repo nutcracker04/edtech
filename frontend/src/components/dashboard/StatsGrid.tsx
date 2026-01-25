@@ -1,5 +1,6 @@
 import { Target, Clock, TrendingUp, Award } from "lucide-react";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { useOverallStats } from "@/hooks/usePerformance";
 
 interface StatItem {
   label: string;
@@ -9,14 +10,49 @@ interface StatItem {
   positive: boolean;
 }
 
-const stats: StatItem[] = [
-  { label: "Questions Solved", value: "1,247", change: "+89 this week", icon: Target, positive: true },
-  { label: "Study Hours", value: "42.5h", change: "+5.2h this week", icon: Clock, positive: true },
-  { label: "Avg. Accuracy", value: "76%", change: "+3% improvement", icon: TrendingUp, positive: true },
-  { label: "Tests Completed", value: "23", change: "Rank #156", icon: Award, positive: true },
-];
-
 export function StatsGrid() {
+  const { data: overallStats } = useOverallStats();
+
+  // Format stats from real data
+  const stats: StatItem[] = [
+    {
+      label: "Questions Solved",
+      value: overallStats?.totalQuestions?.toString() || "0",
+      change: `${overallStats?.totalCorrect || 0} correct`,
+      icon: Target,
+      positive: true,
+    },
+    {
+      label: "Study Hours",
+      value: overallStats?.totalTimeSpent
+        ? `${(overallStats.totalTimeSpent / 3600).toFixed(1)}h`
+        : "0h",
+      change: "Total time spent",
+      icon: Clock,
+      positive: true,
+    },
+    {
+      label: "Avg. Accuracy",
+      value: overallStats?.averageAccuracy
+        ? `${overallStats.averageAccuracy.toFixed(0)}%`
+        : "0%",
+      change: overallStats?.averageAccuracy && overallStats.averageAccuracy > 70
+        ? "Great job!"
+        : "Keep practicing",
+      icon: TrendingUp,
+      positive: true,
+    },
+    {
+      label: "Tests Completed",
+      value: overallStats?.testsCompleted?.toString() || "0",
+      change: overallStats?.averageScore
+        ? `Avg: ${overallStats.averageScore.toFixed(0)}%`
+        : "No tests yet",
+      icon: Award,
+      positive: true,
+    },
+  ];
+
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
       {stats.map((stat) => (
