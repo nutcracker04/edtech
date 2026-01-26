@@ -5,7 +5,7 @@ from datetime import datetime
 from app.utils.auth import get_current_user
 from app.database import supabase
 from app.models.test import Test, TestCreateRequest, TestSubmitRequest
-from app.services.test_service import create_test, generate_adaptive_test, submit_test_attempts
+from app.services.test_service import create_test, generate_adaptive_test, generate_test, submit_test_attempts
 
 router = APIRouter(prefix="/api/tests", tags=["tests"])
 
@@ -70,12 +70,19 @@ async def create_new_test(
     if request.type == "adaptive":
         questions = await generate_adaptive_test(
             user_id=user_id,
-            num_questions=request.number_of_questions
+            num_questions=request.number_of_questions,
+            subject_id=request.subject_id
         )
     else:
-        # For other test types, you would query your question bank
-        # For now, return empty questions list
-        questions = []
+        # Generate standard test with filters
+        questions = await generate_test(
+            user_id=user_id, 
+            num_questions=request.number_of_questions,
+            subject_id=request.subject_id,
+            chapter_ids=request.chapter_ids,
+            topic_ids=request.topic_ids,
+            difficulty=request.difficulty
+        )
     
     # Create the test
     test_id = await create_test(
@@ -84,7 +91,8 @@ async def create_new_test(
         test_type=request.type,
         questions=[q.model_dump() for q in questions],
         duration=request.duration,
-        subject=request.subject
+        subject=request.subject,
+        subject_id=request.subject_id
     )
     
     return {

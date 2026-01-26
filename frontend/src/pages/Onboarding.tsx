@@ -178,40 +178,41 @@ export default function Onboarding() {
         throw new Error('No authenticated user found. Please try signing in manually.');
       }
 
-      // Update user profile (trigger already created it, we just update with onboarding data)
-      const profileUpdate = {
-        id: currentUser.id,
-        email: currentUser.email,
-        name: data.name,
-        phone: data.phone || null,
-        grade: data.grade as any,
-        syllabus: data.syllabus as any,
-        target_exam: data.targetExam,
-      };
-
+      // Update user profile (trigger already created it with defaults, we just update with onboarding data)
       const { error: profileError } = await (supabase as any)
         .from('users')
-        .upsert(profileUpdate);
+        .update({
+          name: data.name,
+          phone: data.phone || null,
+          grade: data.grade,
+          syllabus: data.syllabus,
+          target_exam: data.targetExam,
+        })
+        .eq('id', currentUser.id);
 
-      if (profileError) throw profileError;
+      if (profileError) {
+        console.error('Profile update error:', profileError);
+        throw new Error(`Failed to update profile: ${profileError.message}`);
+      }
 
-      // Update user preferences (trigger already created it)
-      const preferencesUpdate = {
-        user_id: currentUser.id,
-        focus_subjects: data.focusSubjects as any,
-        daily_goal: 20,
-        difficulty_level: 'adaptive' as any,
-      };
-
+      // Update user preferences (trigger already created it with defaults)
       const { error: preferencesError } = await (supabase as any)
         .from('user_preferences')
-        .upsert(preferencesUpdate, { onConflict: 'user_id' });
+        .update({
+          focus_subjects: data.focusSubjects,
+          daily_goal: 20,
+          difficulty_level: 'adaptive',
+        })
+        .eq('user_id', currentUser.id);
 
-      if (preferencesError) throw preferencesError;
+      if (preferencesError) {
+        console.error('Preferences update error:', preferencesError);
+        throw new Error(`Failed to update preferences: ${preferencesError.message}`);
+      }
 
-      if (preferencesError) throw preferencesError;
-
+      // Refresh profile to get the updated data
       await refreshProfile();
+
       toast.success('Welcome to Catalyst! Your account is ready.');
       navigate('/dashboard', { replace: true });
     } catch (err: any) {

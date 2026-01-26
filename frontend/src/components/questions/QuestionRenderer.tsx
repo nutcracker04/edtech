@@ -13,6 +13,7 @@ interface QuestionRendererProps {
   totalQuestions: number;
   onAnswer: (answer: any) => void;
   currentAnswer?: any;
+  showFeedback?: boolean;
 }
 
 export function QuestionRenderer({
@@ -21,6 +22,7 @@ export function QuestionRenderer({
   totalQuestions,
   onAnswer,
   currentAnswer,
+  showFeedback = false,
 }: QuestionRendererProps) {
   const answerType = question.answerType || 'single_choice';
 
@@ -49,6 +51,8 @@ export function QuestionRenderer({
         topic={question.topic}
         subject={question.subject}
         onAnswer={onAnswer}
+        selectedAnswer={currentAnswer}
+        showFeedback={showFeedback}
       />
     );
   }
@@ -60,21 +64,11 @@ export function QuestionRenderer({
       <CardHeader className="border-b">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-4">
-            <span className="text-sm text-muted-foreground">
+            <span className="text-sm font-medium text-muted-foreground">
               Question {questionNumber} of {totalQuestions}
             </span>
-            <Badge variant="outline" className={cn('text-xs', getDifficultyColor())}>
-              {question.difficulty}
-            </Badge>
-            {answerType !== 'single_choice' && (
-              <Badge variant="secondary" className="text-xs">
-                {answerType.replace('_', ' ')}
-              </Badge>
-            )}
-          </div>
-          <div className="flex items-center gap-2 text-sm text-muted-foreground">
-            <Badge variant="outline">{question.subject}</Badge>
-            <Badge variant="outline">{question.topic}</Badge>
+            {/* Metadata badges removed as requested */}
+            {/* Metadata badges removed as requested */}
           </div>
         </div>
       </CardHeader>

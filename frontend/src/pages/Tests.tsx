@@ -1,12 +1,13 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { testApi } from "@/api/test";
 import { MainLayout } from "@/components/layout/MainLayout";
 import { Calendar, Clock, Target, ChevronRight, Filter, Plus, CalendarClock } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { AdaptiveTestConfig } from "@/components/tests/AdaptiveTestConfig";
 import { TestScheduler } from "@/components/tests/TestScheduler";
+import { TestCreationDialog } from "@/components/tests/TestCreationDialog";
 import { ScheduledTestCard } from "@/components/tests/ScheduledTestCard";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -26,83 +27,8 @@ interface Test {
   score?: number;
   date: string;
   status: "completed" | "in_progress" | "upcoming";
+  scheduledAt?: Date | null;
 }
-
-const tests: Test[] = [
-  {
-    id: "1",
-    title: "JEE Main Mock Test #5",
-    subject: "All Subjects",
-    type: "full",
-    questions: 75,
-    duration: 180,
-    score: 245,
-    date: "2026-01-10",
-    status: "completed",
-  },
-  {
-    id: "2",
-    title: "Physics - Mechanics",
-    subject: "Physics",
-    type: "topic",
-    questions: 30,
-    duration: 45,
-    score: 78,
-    date: "2026-01-09",
-    status: "completed",
-  },
-  {
-    id: "3",
-    title: "Organic Chemistry Practice",
-    subject: "Chemistry",
-    type: "practice",
-    questions: 20,
-    duration: 30,
-    date: "2026-01-12",
-    status: "in_progress",
-  },
-  {
-    id: "4",
-    title: "Calculus - Integration",
-    subject: "Mathematics",
-    type: "topic",
-    questions: 25,
-    duration: 40,
-    date: "2026-01-08",
-    status: "completed",
-    score: 88,
-  },
-  {
-    id: "5",
-    title: "JEE Advanced Mock Test #2",
-    subject: "All Subjects",
-    type: "full",
-    questions: 54,
-    duration: 180,
-    date: "2026-01-15",
-    status: "upcoming",
-  },
-];
-
-const scheduledTests = [
-  {
-    id: 's1',
-    title: 'Physics - Thermodynamics',
-    type: 'topic',
-    subject: 'physics',
-    duration: 45,
-    scheduledAt: new Date(Date.now() + 2 * 60 * 60 * 1000), // 2 hours from now
-    status: 'upcoming' as const,
-  },
-  {
-    id: 's2',
-    title: 'JEE Main Mock Test #6',
-    type: 'full',
-    duration: 180,
-    scheduledAt: new Date(Date.now() + 24 * 60 * 60 * 1000), // Tomorrow
-    status: 'upcoming' as const,
-  },
-];
 
 const Tests = () => {
   const navigate = useNavigate();
@@ -110,27 +36,48 @@ const Tests = () => {
   const [showScheduleDialog, setShowScheduleDialog] = useState(false);
   const [scheduleImmediately, setScheduleImmediately] = useState(false);
   const [currentTestConfig, setCurrentTestConfig] = useState<any>(null);
-  const [isLoading, setIsLoading] = useState(false);
+  const [tests, setTests] = useState<Test[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
   const [activeTab, setActiveTab] = useState<'all' | 'scheduled'>('all');
 
-  const handleCreateAdaptiveTest = async (config: any) => {
-    setCurrentTestConfig({ ...config, type: 'adaptive', title: 'Adaptive Test' });
+  useEffect(() => {
+    loadTests();
+  }, []);
 
-    if (scheduleImmediately) {
-      setShowCreateDialog(false);
-      setShowScheduleDialog(true);
-    } else {
-      // Create test immediately
+  const loadTests = async () => {
+    try {
       setIsLoading(true);
-      try {
-        setTimeout(() => {
-          console.log('Creating adaptive test with config:', config);
-          toast.success('Test created successfully!');
-          setShowCreateDialog(false);
-        }, 1000);
-      } finally {
-        setIsLoading(false);
-      }
+      const data = await testApi.getTests();
+      // Map backend data to local Test interface
+      const mappedTests = data.map((t: any) => ({
+        id: t.id,
+        title: t.title,
+        subject: t.subject || "All Subjects",
+        type: t.type,
+        questions: t.questions?.length || 0,
+        duration: t.duration,
+        score: t.max_score > 0 ? Math.round((t.score / t.max_score) * 100) : undefined,
+        date: new Date(t.created_at).toLocaleDateString(),
+        status: t.status,
+        scheduledAt: t.scheduled_at ? new Date(t.scheduled_at) : null
+      }));
+      setTests(mappedTests);
+    } catch (error) {
+      console.error("Failed to load tests", error);
+      toast.error("Failed to load tests");
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const scheduledTests = tests.filter(t => t.status === 'upcoming');
+
+  const handleCreateSuccess = (testId?: string) => {
+    // Refresh test list logic would go here
+    if (testId) {
+      navigate(`/test/${testId}`);
+    } else {
+      navigate(0); // Fallback to refresh if no ID (shouldn't happen with new logic)
     }
   };
 
@@ -252,6 +199,13 @@ const Tests = () => {
                   {tests.map((test) => (
                     <div
                       key={test.id}
+                      onClick={() => {
+                        if (test.status === 'completed') {
+                          toast.info("Detailed results coming soon. Your score is " + test.score + "%");
+                        } else {
+                          navigate(`/test/${test.id}`);
+                        }
+                      }}
                       className="px-3 sm:px-4 lg:px-6 py-3 sm:py-4 hover:bg-secondary/30 transition-colors cursor-pointer"
                     >
                       <div className="flex flex-col gap-3">
@@ -336,7 +290,7 @@ const Tests = () => {
                 {scheduledTests.map((test) => (
                   <ScheduledTestCard
                     key={test.id}
-                    test={test}
+                    test={test as any}
                     onStart={handleStartScheduledTest}
                     onEdit={handleEditScheduledTest}
                     onDelete={handleDeleteScheduledTest}
@@ -349,111 +303,11 @@ const Tests = () => {
       </div>
 
       {/* Create Test Dialog */}
-      <Dialog open={showCreateDialog} onOpenChange={setShowCreateDialog}>
-        <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto w-[95vw] sm:w-full">
-          <DialogHeader>
-            <DialogTitle className="text-lg sm:text-xl">Create New Test</DialogTitle>
-          </DialogHeader>
-
-          <Tabs defaultValue="adaptive" className="w-full">
-            <TabsList className="grid w-full grid-cols-2 sm:grid-cols-4 h-auto">
-              <TabsTrigger value="adaptive" className="text-xs sm:text-sm py-2">Adaptive</TabsTrigger>
-              <TabsTrigger value="full" className="text-xs sm:text-sm py-2">Full Mock</TabsTrigger>
-              <TabsTrigger value="topic" className="text-xs sm:text-sm py-2">Topic</TabsTrigger>
-              <TabsTrigger value="custom" className="text-xs sm:text-sm py-2">Custom</TabsTrigger>
-            </TabsList>
-
-            {/* Adaptive Test */}
-            <TabsContent value="adaptive" className="space-y-4 mt-4">
-              <div>
-                <p className="text-sm text-muted-foreground mb-4">
-                  Create a personalized test based on your performance data. The algorithm will focus on your weak areas while maintaining your strengths.
-                </p>
-              </div>
-
-              {/* Schedule Option */}
-              <div className="flex items-center space-x-2 p-3 rounded-lg bg-secondary/30">
-                <Checkbox
-                  id="schedule-later"
-                  checked={scheduleImmediately}
-                  onCheckedChange={(checked) => setScheduleImmediately(checked as boolean)}
-                />
-                <Label htmlFor="schedule-later" className="text-sm cursor-pointer">
-                  Schedule for later instead of starting immediately
-                </Label>
-              </div>
-
-              <AdaptiveTestConfig
-                onSubmit={handleCreateAdaptiveTest}
-                isLoading={isLoading}
-              />
-            </TabsContent>
-
-            {/* Full Mock Test */}
-            <TabsContent value="full" className="space-y-4 mt-4">
-              <div className="p-4 rounded-lg bg-secondary/30 text-sm text-muted-foreground">
-                <p className="mb-3">
-                  <strong>JEE Main Full Mock Test</strong> - Simulate the actual exam experience with 75 questions across all three subjects.
-                </p>
-                <ul className="space-y-2 ml-4 text-xs">
-                  <li>• Physics: 25 questions</li>
-                  <li>• Chemistry: 25 questions</li>
-                  <li>• Mathematics: 25 questions</li>
-                  <li>• Duration: 180 minutes</li>
-                  <li>• Difficulty: Mixed</li>
-                </ul>
-              </div>
-              <Button size="lg" className="w-full">
-                Start Full Mock Test
-              </Button>
-            </TabsContent>
-
-            {/* Topic Test */}
-            <TabsContent value="topic" className="space-y-4 mt-4">
-              <div className="space-y-4">
-                <div>
-                  <label className="block text-sm font-medium text-foreground mb-2">
-                    Select Subject
-                  </label>
-                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                    {['physics', 'chemistry', 'mathematics'].map(subject => (
-                      <button
-                        key={subject}
-                        className="p-3 rounded-lg border-2 border-border hover:border-primary/50 text-sm text-foreground capitalize"
-                      >
-                        {subject}
-                      </button>
-                    ))}
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-foreground mb-2">
-                    Select Topic
-                  </label>
-                  <div className="p-3 rounded-lg border border-border text-sm text-muted-foreground bg-secondary/30">
-                    Select a subject first
-                  </div>
-                </div>
-
-                <Button size="lg" className="w-full" disabled>
-                  Create Topic Test
-                </Button>
-              </div>
-            </TabsContent>
-
-            {/* Custom Test */}
-            <TabsContent value="custom" className="space-y-4 mt-4">
-              <div className="p-4 rounded-lg bg-secondary/30 text-sm text-muted-foreground">
-                <p>Create a fully customized test by selecting specific subjects, topics, and difficulty levels.</p>
-              </div>
-              <Button size="lg" className="w-full">
-                Build Custom Test
-              </Button>
-            </TabsContent>
-          </Tabs>
-        </DialogContent>
-      </Dialog>
+      <TestCreationDialog
+        open={showCreateDialog}
+        onOpenChange={setShowCreateDialog}
+        onSuccess={handleCreateSuccess}
+      />
 
       {/* Schedule Test Dialog */}
       <Dialog open={showScheduleDialog} onOpenChange={setShowScheduleDialog}>

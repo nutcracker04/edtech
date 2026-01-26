@@ -28,34 +28,78 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   const [loading, setLoading] = useState(true);
 
   const fetchProfile = async (userId: string) => {
+    console.log('🔍 [AuthContext] Starting profile fetch for user:', userId);
     try {
+      // Small delay to ensure auth session is fully established
+      await new Promise(resolve => setTimeout(resolve, 100));
+
+      console.log('🔍 [AuthContext] Querying users table...');
       const { data, error } = await supabase
         .from('users')
         .select('*')
         .eq('id', userId)
         .single();
 
-      if (error) throw error;
-      setProfile(data);
-      
-      // Run migration if needed (only runs once)
-      if (!MigrationService.isMigrationCompleted()) {
-        // Run in background without blocking
-        MigrationService.runWithNotification().catch(err => {
-          console.error('Migration error:', err);
+      if (error) {
+        console.error('❌ [AuthContext] Error fetching profile:', {
+          code: error.code,
+          message: error.message,
+          details: error.details,
+          hint: error.hint
         });
+        // If it's a 401 or PGRST116 (not found), the profile might not exist yet
+        if (error.code === 'PGRST116') {
+          console.warn('⚠️ [AuthContext] Profile not found - user needs to complete onboarding');
+          setProfile(null);
+        } else {
+          // For other errors, retry once after a delay
+          console.log('🔄 [AuthContext] Retrying profile fetch in 500ms...');
+          await new Promise(resolve => setTimeout(resolve, 500));
+          const { data: retryData, error: retryError } = await supabase
+            .from('users')
+            .select('*')
+            .eq('id', userId)
+            .single();
+
+          if (retryError) {
+            console.error('❌ [AuthContext] Retry failed:', {
+              code: retryError.code,
+              message: retryError.message
+            });
+            setProfile(null);
+          } else {
+            setProfile(retryData);
+          }
+        }
+      } else {
+        console.log('✅ [AuthContext] Profile fetched successfully:', data);
+        setProfile(data);
+
+        // Run migration if needed (only runs once)
+        if (!MigrationService.isMigrationCompleted()) {
+          // Run in background without blocking
+          MigrationService.runWithNotification().catch(err => {
+            console.error('Migration error:', err);
+          });
+        }
       }
     } catch (error) {
-      console.error('Error fetching profile:', error);
+      console.error('❌ [AuthContext] Unexpected error fetching profile:', error);
       setProfile(null);
     } finally {
+      console.log('🏁 [AuthContext] Profile fetch complete. Loading = false');
       setLoading(false);
     }
   };
 
   useEffect(() => {
+    let isMounted = true;
+    let fetchTimeout: NodeJS.Timeout | null = null;
+
     // Get initial session
     supabase.auth.getSession().then(({ data: { session } }) => {
+      if (!isMounted) return;
+
       setSession(session);
       setUser(session?.user ?? null);
       if (session?.user) {
@@ -68,18 +112,45 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     // Listen for auth changes
     const {
       data: { subscription },
-    } = supabase.auth.onAuthStateChange((_event, session) => {
+    } = supabase.auth.onAuthStateChange((event, session) => {
+      if (!isMounted) return;
+
+      console.log("Auth state change:", event);
+
+      // Clear any pending fetch timeout
+      if (fetchTimeout) {
+        clearTimeout(fetchTimeout);
+        fetchTimeout = null;
+      }
+
       setSession(session);
       setUser(session?.user ?? null);
+
       if (session?.user) {
-        fetchProfile(session.user.id);
+        // Set loading state for sign-in events
+        if (event === 'SIGNED_IN' || event === 'INITIAL_SESSION') {
+          setLoading(true);
+        }
+
+        // Debounce profile fetches to prevent multiple rapid calls
+        fetchTimeout = setTimeout(() => {
+          if (isMounted) {
+            fetchProfile(session.user.id);
+          }
+        }, 200);
       } else {
         setProfile(null);
         setLoading(false);
       }
     });
 
-    return () => subscription.unsubscribe();
+    return () => {
+      isMounted = false;
+      if (fetchTimeout) {
+        clearTimeout(fetchTimeout);
+      }
+      subscription.unsubscribe();
+    };
   }, []);
 
   const signUp = async (email: string, password: string) => {
@@ -116,9 +187,12 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   const updateProfile = async (data: Partial<UserProfile>) => {
     if (!user) return { error: new Error('No user logged in') };
 
-    const { error } = await supabase
-      .from('users')
-      .update(data)
+    // Sanitize data to prevent updating restricted fields like role
+    const { role: _role, created_at: _created_at, updated_at: _updated_at, id: _id, ...updates } = data;
+
+    // Use 'any' cast on the query builder to bypass inference issue where update() expects 'never'
+    const { error } = await (supabase.from('users') as any)
+      .update(updates)
       .eq('id', user.id);
 
     if (!error && profile) {

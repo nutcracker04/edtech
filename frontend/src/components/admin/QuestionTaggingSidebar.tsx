@@ -6,10 +6,11 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Label } from "@/components/ui/label";
 import { Badge } from "@/components/ui/badge";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { Tag, Loader2, AlertCircle, ArrowLeft, CheckCircle2 } from "lucide-react";
+import { Tag, Loader2, AlertCircle, ArrowLeft, CheckCircle2, Trash2, Pencil } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { Skeleton } from "@/components/ui/skeleton";
+import { QuestionEditDialog } from "@/components/admin/QuestionEditDialog";
 
 interface Question {
     id: string;
@@ -47,6 +48,7 @@ export function QuestionTaggingSidebar({ open, onOpenChange }: QuestionTaggingSi
     const [difficulty, setDifficulty] = useState<string>("medium");
 
     const [isSaving, setIsSaving] = useState(false);
+    const [questionToEdit, setQuestionToEdit] = useState<Question | null>(null);
 
     useEffect(() => {
         if (open) {
@@ -120,6 +122,28 @@ export function QuestionTaggingSidebar({ open, onOpenChange }: QuestionTaggingSi
     const fetchTopics = async (cid: string) => {
         const { data } = await supabase.from("topics").select("*").eq("chapter_id", cid).order("name");
         setTopics(data || []);
+    };
+
+    const handleDeleteQuestion = async (e: React.MouseEvent, id: string) => {
+        e.stopPropagation();
+        if (!confirm("Are you sure you want to delete this question permanently?")) return;
+
+        const { error } = await supabase.from("repository_questions").delete().eq("id", id);
+
+        if (error) {
+            toast.error("Failed to delete question");
+        } else {
+            toast.success("Question deleted");
+            const remaining = questions.filter(q => q.id !== id);
+            setQuestions(remaining);
+            if (currentQuestion?.id === id) {
+                setCurrentQuestion(null);
+            }
+        }
+    };
+
+    const handleEditQuestion = () => {
+        setQuestionToEdit(currentQuestion);
     };
 
     const handleSubjectChange = (val: string) => {
@@ -212,9 +236,20 @@ export function QuestionTaggingSidebar({ open, onOpenChange }: QuestionTaggingSi
                                             className="w-full text-left p-4 hover:bg-accent transition-colors flex flex-col gap-2 group"
                                             onClick={() => setCurrentQuestion(q)}
                                         >
-                                            <p className="text-sm font-medium line-clamp-3 text-foreground group-hover:text-primary transition-colors">
-                                                {q.question_text || "Image only question"}
-                                            </p>
+                                            <div className="flex items-start justify-between gap-2">
+                                                <p className="text-sm font-medium line-clamp-3 text-foreground group-hover:text-primary transition-colors">
+                                                    {q.question_text || "Image only question"}
+                                                </p>
+                                                <Button
+                                                    variant="ghost"
+                                                    size="icon"
+                                                    className="h-6 w-6 shrink-0 opacity-0 group-hover:opacity-100 transition-opacity text-destructive hover:text-destructive hover:bg-destructive/10"
+                                                    onClick={(e) => handleDeleteQuestion(e, q.id)}
+                                                    title="Delete Question"
+                                                >
+                                                    <Trash2 className="h-4 w-4" />
+                                                </Button>
+                                            </div>
                                             {q.image_url && (
                                                 <div className="h-12 w-12 rounded bg-muted flex items-center justify-center overflow-hidden border">
                                                     <img src={q.image_url} alt="Thumbnail" className="h-full w-full object-cover" />
@@ -240,6 +275,12 @@ export function QuestionTaggingSidebar({ open, onOpenChange }: QuestionTaggingSi
                                     <ArrowLeft className="h-4 w-4" />
                                     Back to list
                                 </Button>
+                                <div className="ml-auto">
+                                    <Button variant="outline" size="sm" onClick={handleEditQuestion} className="gap-2 h-8">
+                                        <Pencil className="h-3 w-3" />
+                                        Edit Content
+                                    </Button>
+                                </div>
                             </div>
 
                             <ScrollArea className="flex-1">
@@ -355,6 +396,20 @@ export function QuestionTaggingSidebar({ open, onOpenChange }: QuestionTaggingSi
                         </div>
                     )}
                 </div>
+
+                <QuestionEditDialog
+                    open={!!questionToEdit}
+                    onOpenChange={(open) => !open && setQuestionToEdit(null)}
+                    question={questionToEdit}
+                    onQuestionUpdated={() => {
+                        fetchUntaggedQuestions();
+                        if (currentQuestion && questionToEdit && currentQuestion.id === questionToEdit.id) {
+                            // no-op, fetchUntaggedQuestions handles list update.
+                        }
+                    }}
+                    // Enable tagging in the edit dialog too, why not?
+                    enableTagging={true}
+                />
             </SheetContent>
         </Sheet>
     );

@@ -4,6 +4,7 @@ from datetime import datetime, timedelta
 
 from app.utils.auth import get_current_user
 from app.database import supabase
+from app.utils.normalization import normalize_subject
 
 router = APIRouter(prefix="/api/analysis", tags=["analysis"])
 
@@ -28,7 +29,7 @@ async def get_performance_trend(
         .gte("created_at", start_date.isoformat())
     
     if subject:
-        query = query.eq("tests.subject", subject)
+        query = query.eq("tests.subject", normalize_subject(subject))
     
     result = query.execute()
     
@@ -59,7 +60,49 @@ async def get_performance_trend(
     
     return sorted_data
 
-
+@router.get("/hierarchy")
+async def get_subject_hierarchy():
+    """
+    Get full subject -> chapter -> topic hierarchy for selection.
+    """
+    # Helper to build tree
+    subjects = supabase.table("subjects").select("id, name").execute().data
+    chapters = supabase.table("chapters").select("id, name, subject_id").execute().data
+    topics = supabase.table("topics").select("id, name, chapter_id").execute().data
+    
+    hierarchy = []
+    
+    for sub in subjects:
+        sub_node = {
+            "id": sub["id"],
+            "name": sub["name"],
+            "chapters": []
+        }
+        
+        # Find chapters for this subject
+        sub_chapters = [c for c in chapters if c["subject_id"] == sub["id"]]
+        
+        for chap in sub_chapters:
+            chap_node = {
+                "id": chap["id"],
+                "name": chap["name"],
+                "topics": []
+            }
+            
+            # Find topics for this chapter
+            chap_topics = [t for t in topics if t["chapter_id"] == chap["id"]]
+            
+            for top in chap_topics:
+                chap_node["topics"].append({
+                    "id": top["id"],
+                    "name": top["name"]
+                })
+                
+            sub_node["chapters"].append(chap_node)
+            
+        hierarchy.append(sub_node)
+        
+    return hierarchy
 @router.get("/topic-breakdown")
 async def get_topic_breakdown(
     subject: str,
@@ -71,11 +114,15 @@ async def get_topic_breakdown(
     """
     user_id = current_user["user_id"]
     
-    result = supabase.table("topic_mastery")\
+    query = supabase.table("topic_mastery")\
         .select("*")\
-        .eq("user_id", user_id)\
-        .eq("subject", subject)\
-        .execute()
+        .eq("user_id", user_id)
+    
+    if subject:
+        # Resolve to normalized name
+        query = query.eq("subject", normalize_subject(subject))
+
+    result = query.execute()
     
     # Format for spider web chart
     topics_data = []

@@ -13,11 +13,15 @@ class Question(BaseModel):
     question: str
     options: List[Option]
     correct_answer: str
-    explanation: str
-    difficulty: str  # 'easy', 'medium', 'hard'
-    topic: str
-    subject: str  # 'physics', 'chemistry', 'mathematics'
-    grade_level: List[str]
+    explanation: Optional[str] = None
+    difficulty: Optional[str] = None  # 'easy', 'medium', 'hard'
+    topic: Optional[str] = None
+    topic_id: Optional[str] = None
+    chapter: Optional[str] = None
+    chapter_id: Optional[str] = None
+    subject: Optional[str] = None  # 'physics', 'chemistry', 'mathematics'
+    subject_id: Optional[str] = None
+    grade_level: Optional[List[str]] = None
     tags: Optional[List[str]] = []
     source: Optional[str] = None
     answer_type: str = "single_choice"  # 'single_choice', 'multiple_choice', 'integer', etc.
@@ -60,6 +64,9 @@ class TestCreateRequest(BaseModel):
     duration: int
     number_of_questions: int = 20
     topics: Optional[List[str]] = None
+    topic_ids: Optional[List[str]] = None
+    chapter_ids: Optional[List[str]] = None
+    subject_id: Optional[str] = None
     difficulty: Optional[str] = None
 
 
