@@ -346,6 +346,7 @@ export default function Onboarding() {
                     <SelectValue placeholder="Select your grade" />
                   </SelectTrigger>
                   <SelectContent>
+                    <SelectItem value="8">Grade 8</SelectItem>
                     <SelectItem value="9">Grade 9</SelectItem>
                     <SelectItem value="10">Grade 10</SelectItem>
                     <SelectItem value="11">Grade 11</SelectItem>

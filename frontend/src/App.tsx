@@ -17,7 +17,6 @@ import UploadTest from "./pages/UploadTest";
 import Settings from "./pages/Settings";
 import AdminDashboard from "./pages/admin/AdminDashboard";
 import HierarchyManager from "./pages/admin/HierarchyManager";
-import QuestionTagging from "./pages/admin/QuestionTagging";
 import AdminPaperUpload from "./pages/admin/PaperUpload";
 import AdminRepository from "./pages/admin/AdminRepository";
 
@@ -94,11 +93,6 @@ const App = () => {
               <Route path="/admin/hierarchy" element={
                 <ProtectedRoute>
                   <HierarchyManager />
-                </ProtectedRoute>
-              } />
-              <Route path="/admin/tagging" element={
-                <ProtectedRoute>
-                  <QuestionTagging />
                 </ProtectedRoute>
               } />
               <Route path="/admin/upload" element={

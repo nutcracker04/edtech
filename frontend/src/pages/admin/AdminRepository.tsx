@@ -22,6 +22,7 @@ interface Question {
     difficulty_level: string | null;
     correct_answer?: string;
     created_at: string;
+    image_url?: string | null;
 }
 
 interface Subject { id: string; name: string; }
@@ -257,6 +258,15 @@ const AdminRepository = () => {
                                                             {idx + 1}
                                                         </div>
                                                         <div className="flex-grow space-y-3">
+                                                            {q.image_url && (
+                                                                <div className="border rounded-md overflow-hidden bg-muted/20 w-fit">
+                                                                    <img
+                                                                        src={q.image_url}
+                                                                        alt="Question"
+                                                                        className="max-h-[200px] w-auto object-contain rounded-md"
+                                                                    />
+                                                                </div>
+                                                            )}
                                                             <p className="text-lg leading-relaxed">{q.question_text}</p>
 
                                                             <div className="grid grid-cols-1 md:grid-cols-2 gap-2">

@@ -9,6 +9,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { useNavigate } from 'react-router-dom';
 import { FileUp, CheckCircle2, ArrowRight, Loader2, PenTool } from 'lucide-react';
 import { ManualQuestionCreator } from '@/components/admin/ManualQuestionCreator';
+import { QuestionTaggingSidebar } from '@/components/admin/QuestionTaggingSidebar';
+import { Tag } from 'lucide-react';
 
 const AdminPaperUpload = () => {
     const navigate = useNavigate();
@@ -16,6 +18,7 @@ const AdminPaperUpload = () => {
     const [uploadProgress, setUploadProgress] = useState(0);
     const [error, setError] = useState<string>('');
     const [lastUploadId, setLastUploadId] = useState<string | null>(null);
+    const [isTaggingOpen, setIsTaggingOpen] = useState(false);
 
     const handleFileSelect = async (file: File) => {
         setUploadStatus('uploading');
@@ -74,9 +77,15 @@ const AdminPaperUpload = () => {
             <div className="container max-w-4xl py-8">
                 <div className="mb-8">
                     <h1 className="text-3xl font-bold mb-2">Add Questions to Repository</h1>
-                    <p className="text-muted-foreground">
-                        Upload papers to extract questions or create questions manually.
-                    </p>
+                    <div className="flex items-center justify-between">
+                        <p className="text-muted-foreground">
+                            Upload papers to extract questions or create questions manually.
+                        </p>
+                        <Button variant="outline" onClick={() => setIsTaggingOpen(true)} className="gap-2">
+                            <Tag className="h-4 w-4" />
+                            Tag Questions
+                        </Button>
+                    </div>
                 </div>
 
                 <Tabs defaultValue="upload" className="space-y-6">
@@ -122,8 +131,12 @@ const AdminPaperUpload = () => {
                                         <FileUp className="mr-2 h-4 w-4" />
                                         Upload Another
                                     </Button>
-                                    <Button onClick={() => navigate('/admin/tagging')}>
-                                        Go to Tagging
+                                    <Button onClick={() => setUploadStatus('idle')} variant="outline">
+                                        <FileUp className="mr-2 h-4 w-4" />
+                                        Upload Another
+                                    </Button>
+                                    <Button onClick={() => setIsTaggingOpen(true)}>
+                                        Tag Questions Now
                                         <ArrowRight className="ml-2 h-4 w-4" />
                                     </Button>
                                 </CardContent>
@@ -145,7 +158,7 @@ const AdminPaperUpload = () => {
                                 </div>
                                 <div className="flex gap-3">
                                     <div className="h-6 w-6 rounded-full bg-accent flex items-center justify-center shrink-0">3</div>
-                                    <p>You can then go to the <strong>Tagging</strong> section to assign Subject, Chapter, and Topic.</p>
+                                    <p>Click <strong>Tag Questions</strong> to assign Subject, Chapter, and Topic.</p>
                                 </div>
                             </CardContent>
                         </Card>
@@ -155,11 +168,17 @@ const AdminPaperUpload = () => {
                     <TabsContent value="manual">
                         <ManualQuestionCreator
                             onQuestionCreated={() => {
-                                toast.success("Question saved! Go to tagging to assign Subject, Chapter, and Topic.");
+                                toast.success("Question saved!");
+                                setIsTaggingOpen(true);
                             }}
                         />
                     </TabsContent>
                 </Tabs>
+
+                <QuestionTaggingSidebar
+                    open={isTaggingOpen}
+                    onOpenChange={setIsTaggingOpen}
+                />
             </div>
         </MainLayout>
     );

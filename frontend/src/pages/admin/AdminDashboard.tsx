@@ -17,16 +17,8 @@ const AdminDashboard = () => {
             bgColor: "bg-blue-500/10",
         },
         {
-            title: "Question Tagging",
-            description: "Map extracted questions to Subject, Chapter, and Topic.",
-            icon: Tag,
-            path: "/admin/tagging",
-            color: "text-purple-500",
-            bgColor: "bg-purple-500/10",
-        },
-        {
-            title: "Upload Papers",
-            description: "Dump test papers for question extraction.",
+            title: "Upload & Tag",
+            description: "Upload papers or manually tag extracted questions.",
             icon: FileUp,
             path: "/admin/upload",
             color: "text-emerald-500",

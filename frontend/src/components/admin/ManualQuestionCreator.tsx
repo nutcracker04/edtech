@@ -7,7 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Badge } from "@/components/ui/badge";
 import { Checkbox } from "@/components/ui/checkbox";
-import { Plus, Trash2, Check, X, Info } from "lucide-react";
+import { Plus, Trash2, Check, X, Info, Upload, Image as ImageIcon } from "lucide-react";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
 import { Alert, AlertDescription } from "@/components/ui/alert";
@@ -57,6 +57,11 @@ export const ManualQuestionCreator = ({ onQuestionCreated }: { onQuestionCreated
     const [correctAnswers, setCorrectAnswers] = useState<string[]>([]); // For multi-choice
     const [integerAnswer, setIntegerAnswer] = useState("");
 
+    // For image upload
+    const [selectedImage, setSelectedImage] = useState<File | null>(null);
+    const [imagePreview, setImagePreview] = useState<string | null>(null);
+    const [uploading, setUploading] = useState(false);
+
     const [saving, setSaving] = useState(false);
 
     const handleQuestionTypeChange = (type: QuestionType) => {
@@ -90,6 +95,66 @@ export const ManualQuestionCreator = ({ onQuestionCreated }: { onQuestionCreated
                 ? prev.filter(id => id !== optionId)
                 : [...prev, optionId]
         );
+    };
+
+    const handleImageSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const file = e.target.files?.[0];
+        if (!file) return;
+
+        // Validate file type
+        if (!file.type.startsWith('image/')) {
+            toast.error("Please select a valid image file");
+            return;
+        }
+
+        // Validate file size (max 5MB)
+        if (file.size > 5 * 1024 * 1024) {
+            toast.error("Image size should be less than 5MB");
+            return;
+        }
+
+        setSelectedImage(file);
+
+        // Create preview
+        const reader = new FileReader();
+        reader.onloadend = () => {
+            setImagePreview(reader.result as string);
+        };
+        reader.readAsDataURL(file);
+    };
+
+    const handleRemoveImage = () => {
+        setSelectedImage(null);
+        setImagePreview(null);
+    };
+
+    const uploadImageToStorage = async (): Promise<string | null> => {
+        if (!selectedImage) return null;
+
+        try {
+            setUploading(true);
+            const fileExt = selectedImage.name.split('.').pop();
+            const fileName = `${Date.now()}-${Math.random().toString(36).substring(7)}.${fileExt}`;
+            const filePath = `question-images/${fileName}`;
+
+            const { error: uploadError } = await supabase.storage
+                .from('question-images')
+                .upload(filePath, selectedImage);
+
+            if (uploadError) throw uploadError;
+
+            // Get public URL
+            const { data: { publicUrl } } = supabase.storage
+                .from('question-images')
+                .getPublicUrl(filePath);
+
+            return publicUrl;
+        } catch (error: any) {
+            toast.error("Failed to upload image: " + error.message);
+            return null;
+        } finally {
+            setUploading(false);
+        }
     };
 
     const validateQuestion = (): boolean => {
@@ -142,10 +207,22 @@ export const ManualQuestionCreator = ({ onQuestionCreated }: { onQuestionCreated
 
         setSaving(true);
         try {
+            // Upload image first if selected
+            let imageUrl: string | null = null;
+            if (selectedImage) {
+                imageUrl = await uploadImageToStorage();
+                if (!imageUrl) {
+                    toast.error("Failed to upload image. Please try again.");
+                    setSaving(false);
+                    return;
+                }
+            }
+
             let questionData: any = {
                 question_type: questionType,
                 is_tagged: false,
                 source_paper_id: null,
+                image_url: imageUrl, // Add image URL to question data
             };
 
             if (questionType === "assertion_reasoning") {
@@ -197,6 +274,8 @@ export const ManualQuestionCreator = ({ onQuestionCreated }: { onQuestionCreated
         setCorrectAnswer("");
         setCorrectAnswers([]);
         setIntegerAnswer("");
+        setSelectedImage(null);
+        setImagePreview(null);
     };
 
     return (
@@ -225,6 +304,49 @@ export const ManualQuestionCreator = ({ onQuestionCreated }: { onQuestionCreated
                             <SelectItem value="assertion_reasoning">Assertion & Reasoning</SelectItem>
                         </SelectContent>
                     </Select>
+                </div>
+
+                {/* Image Upload Section */}
+                <div className="space-y-2">
+                    <Label>Question Image (Optional)</Label>
+                    <div className="border-2 border-dashed rounded-lg p-6 flex flex-col items-center justify-center gap-4 hover:bg-accent/50 transition-colors">
+                        {imagePreview ? (
+                            <div className="relative w-full max-w-md">
+                                <img
+                                    src={imagePreview}
+                                    alt="Question preview"
+                                    className="w-full h-auto rounded-md border"
+                                />
+                                <Button
+                                    variant="destructive"
+                                    size="icon"
+                                    className="absolute -top-2 -right-2 h-8 w-8 rounded-full shadow-md"
+                                    onClick={handleRemoveImage}
+                                >
+                                    <X className="h-4 w-4" />
+                                </Button>
+                            </div>
+                        ) : (
+                            <div className="text-center space-y-2">
+                                <div className="mx-auto w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                                    <ImageIcon className="h-6 w-6 text-primary" />
+                                </div>
+                                <div className="text-sm text-muted-foreground">
+                                    <label htmlFor="image-upload" className="font-semibold text-primary hover:underline cursor-pointer">
+                                        Click to upload
+                                    </label> or drag and drop
+                                    <p className="text-xs">PNG, JPG, GIF up to 5MB</p>
+                                </div>
+                                <Input
+                                    id="image-upload"
+                                    type="file"
+                                    accept="image/*"
+                                    className="hidden"
+                                    onChange={handleImageSelect}
+                                />
+                            </div>
+                        )}
+                    </div>
                 </div>
 
                 {/* Type-specific info */}

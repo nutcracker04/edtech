@@ -10,6 +10,11 @@ interface GradeSelectorProps {
 export function GradeSelector({ selectedGrade, onGradeSelect }: GradeSelectorProps) {
   const grades: { value: Grade; label: string; description: string }[] = [
     {
+      value: '8',
+      label: 'Class 8',
+      description: 'Early foundation',
+    },
+    {
       value: '9',
       label: 'Class 9',
       description: 'Foundation basics',

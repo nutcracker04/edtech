@@ -63,6 +63,7 @@ class RepositoryQuestionBase(BaseModel):
     difficulty_level: Optional[str] = None
     source_paper_id: Optional[UUID] = None
     is_tagged: bool = False
+    image_url: Optional[str] = None
 
 class RepositoryQuestionCreate(RepositoryQuestionBase):
     pass

@@ -19,6 +19,7 @@ interface Question {
     chapter_id: string | null;
     topic_id: string | null;
     difficulty_level: string | null;
+    image_url?: string | null;
 }
 
 interface Subject { id: string; name: string; }
@@ -105,7 +106,7 @@ const QuestionTagging = () => {
                 difficulty_level: difficulty,
                 is_tagged: true,
                 updated_at: new Date().toISOString()
-            } as any)
+            } as never)
             .eq("id", currentQuestion.id);
 
         if (error) {
@@ -172,6 +173,15 @@ const QuestionTagging = () => {
                                 {currentQuestion ? (
                                     <ScrollArea className="h-full pr-4">
                                         <div className="space-y-6">
+                                            {currentQuestion.image_url && (
+                                                <div className="border rounded-md overflow-hidden bg-muted/20 flex justify-center p-2">
+                                                    <img
+                                                        src={currentQuestion.image_url}
+                                                        alt="Question"
+                                                        className="max-h-[300px] w-auto object-contain rounded-md"
+                                                    />
+                                                </div>
+                                            )}
                                             <div className="p-4 bg-accent/30 rounded-lg border">
                                                 <p className="text-lg leading-relaxed">{currentQuestion.question_text}</p>
                                             </div>

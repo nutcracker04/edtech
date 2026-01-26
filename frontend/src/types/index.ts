@@ -1,5 +1,5 @@
 // User Profile Types
-export type Grade = '9' | '10' | '11' | '12';
+export type Grade = '8' | '9' | '10' | '11' | '12';
 export type TargetExam = 'jee-main' | 'jee-advanced' | 'both';
 
 export interface UserProfile {
