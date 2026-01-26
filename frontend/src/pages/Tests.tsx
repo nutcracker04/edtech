@@ -199,14 +199,7 @@ const Tests = () => {
                   {tests.map((test) => (
                     <div
                       key={test.id}
-                      onClick={() => {
-                        if (test.status === 'completed') {
-                          toast.info("Detailed results coming soon. Your score is " + test.score + "%");
-                        } else {
-                          navigate(`/test/${test.id}`);
-                        }
-                      }}
-                      className="px-3 sm:px-4 lg:px-6 py-3 sm:py-4 hover:bg-secondary/30 transition-colors cursor-pointer"
+                      className="px-3 sm:px-4 lg:px-6 py-3 sm:py-4 hover:bg-secondary/30 transition-colors"
                     >
                       <div className="flex flex-col gap-3">
                         {/* Title and Badges Row */}
@@ -259,7 +252,26 @@ const Tests = () => {
                               {test.score}%
                             </Badge>
                           )}
-                          <ChevronRight className="h-4 w-4 sm:h-5 sm:w-5 text-muted-foreground shrink-0 ml-auto" />
+                          {test.status === 'completed' ? (
+                            <Button
+                              size="sm"
+                              variant="outline"
+                              onClick={() => navigate(`/tests/${test.id}/results`)}
+                              className="ml-auto"
+                            >
+                              View Results
+                              <ChevronRight className="h-4 w-4 ml-1" />
+                            </Button>
+                          ) : (
+                            <Button
+                              size="sm"
+                              onClick={() => navigate(`/test/${test.id}`)}
+                              className="ml-auto"
+                            >
+                              {test.status === 'in_progress' ? 'Continue' : 'Start'}
+                              <ChevronRight className="h-4 w-4 ml-1" />
+                            </Button>
+                          )}
                         </div>
                       </div>
                     </div>

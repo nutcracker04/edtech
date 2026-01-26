@@ -3,7 +3,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "./contexts/AuthContext";
 import { ProtectedRoute } from "./components/auth/ProtectedRoute";
 import Login from "./pages/Login";
@@ -19,8 +19,8 @@ import AdminDashboard from "./pages/admin/AdminDashboard";
 import HierarchyManager from "./pages/admin/HierarchyManager";
 import AdminPaperUpload from "./pages/admin/PaperUpload";
 import AdminRepository from "./pages/admin/AdminRepository";
-
 import TestTaking from "./pages/TestTaking";
+import TestResults from "./pages/TestResults";
 import NotFound from "./pages/NotFound";
 import { AIAssistant } from "./components/ai/AIAssistant";
 import { AIAssistantButton } from "./components/ai/AIAssistantButton";
@@ -71,6 +71,11 @@ const App = () => {
               <Route path="/test/:testId" element={
                 <ProtectedRoute>
                   <TestTaking />
+                </ProtectedRoute>
+              } />
+              <Route path="/tests/:testId/results" element={
+                <ProtectedRoute>
+                  <TestResults />
                 </ProtectedRoute>
               } />
               <Route path="/upload-test" element={

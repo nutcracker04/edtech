@@ -233,3 +233,123 @@ async def get_test_attempts(
         .execute()
     
     return attempts_result.data
+
+
+@router.get("/{test_id}/results")
+async def get_test_results(
+    test_id: str,
+    current_user: dict = Depends(get_current_user)
+):
+    """
+    Get detailed test results including question-by-question breakdown.
+    """
+    user_id = current_user["user_id"]
+    
+    # Get test details
+    test_result = supabase.table("tests")\
+        .select("*")\
+        .eq("id", test_id)\
+        .eq("user_id", user_id)\
+        .execute()
+    
+    if not test_result.data:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Test not found"
+        )
+    
+    test = test_result.data[0]
+    
+    # Get all attempts for this test
+    attempts_result = supabase.table("test_attempts")\
+        .select("*")\
+        .eq("test_id", test_id)\
+        .execute()
+    
+    attempts = attempts_result.data
+    
+    # Get question details
+    question_ids = [a["question_id"] for a in attempts]
+    questions_result = supabase.table("repository_questions")\
+        .select("*")\
+        .in_("id", question_ids)\
+        .execute()
+    
+    question_map = {q["id"]: q for q in questions_result.data}
+    
+    # Get topic names
+    topic_ids = list(set([q.get("topic_id") for q in questions_result.data if q.get("topic_id")]))
+    topics_result = supabase.table("topics")\
+        .select("id, name")\
+        .in_("id", topic_ids)\
+        .execute()
+    
+    topic_map = {t["id"]: t["name"] for t in topics_result.data}
+    
+    # Get subject names
+    subject_ids = list(set([q.get("subject_id") for q in questions_result.data if q.get("subject_id")]))
+    subjects_result = supabase.table("subjects")\
+        .select("id, name")\
+        .in_("id", subject_ids)\
+        .execute()
+    
+    subject_map = {s["id"]: s["name"] for s in subjects_result.data}
+    
+    # Build detailed attempts list
+    detailed_attempts = []
+    total_time = 0
+    topic_stats = {}
+    
+    for attempt in attempts:
+        question = question_map.get(attempt["question_id"])
+        if not question:
+            continue
+        
+        topic_id = question.get("topic_id")
+        topic_name = topic_map.get(topic_id, "Unknown")
+        subject_name = subject_map.get(question.get("subject_id"), "Unknown")
+        
+        # Track topic stats
+        if topic_name not in topic_stats:
+            topic_stats[topic_name] = {"correct": 0, "total": 0}
+        
+        topic_stats[topic_name]["total"] += 1
+        if attempt["is_correct"]:
+            topic_stats[topic_name]["correct"] += 1
+        
+        total_time += attempt.get("time_spent", 0)
+        
+        detailed_attempts.append({
+            "question_id": attempt["question_id"],
+            "question_text": question["question_text"],
+            "selected_answer": attempt["selected_answer"],
+            "correct_answer": question["correct_answer"],
+            "is_correct": attempt["is_correct"],
+            "time_spent": attempt.get("time_spent", 0),
+            "topic": topic_name,
+            "subject": subject_name
+        })
+    
+    # Build topic breakdown
+    topic_breakdown = [
+        {
+            "topic": topic,
+            "correct": stats["correct"],
+            "total": stats["total"],
+            "accuracy": (stats["correct"] / stats["total"] * 100) if stats["total"] > 0 else 0
+        }
+        for topic, stats in topic_stats.items()
+    ]
+    
+    return {
+        "test_id": test_id,
+        "title": test["title"],
+        "score": test.get("score", 0),
+        "max_score": test.get("max_score", len(attempts) * 4),
+        "total_questions": len(attempts),
+        "correct_answers": sum(1 for a in attempts if a["is_correct"]),
+        "time_taken": total_time,
+        "attempts": detailed_attempts,
+        "topic_breakdown": topic_breakdown
+    }
+

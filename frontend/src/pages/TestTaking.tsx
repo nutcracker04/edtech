@@ -137,7 +137,7 @@ const TestTaking = () => {
         });
 
         toast.success('Test submitted successfully');
-        navigate('/tests');
+        navigate(`/tests/${session.testId}/results`);
       } catch (error) {
         console.error('Submission error:', error);
         toast.error('Failed to submit test');

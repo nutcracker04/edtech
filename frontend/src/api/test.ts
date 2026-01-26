@@ -1,5 +1,7 @@
 import { supabase } from '@/integrations/supabase/client';
 
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000';
+
 export interface TestCreateRequest {
     title: string;
     type: string;
@@ -19,7 +21,7 @@ export const testApi = {
         const token = session?.access_token;
         if (!token) throw new Error('No session');
 
-        const response = await fetch('/api/tests/create', {
+        const response = await fetch(`${API_BASE_URL}/api/tests/create`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -41,7 +43,7 @@ export const testApi = {
         const token = session?.access_token;
         if (!token) throw new Error('No session');
 
-        const response = await fetch('/api/tests/', {
+        const response = await fetch(`${API_BASE_URL}/api/tests/`, {
             headers: { 'Authorization': `Bearer ${token}` }
         });
         if (!response.ok) throw new Error('Failed to fetch tests');
@@ -53,7 +55,7 @@ export const testApi = {
         const token = session?.access_token;
         if (!token) throw new Error('No session');
 
-        const response = await fetch(`/api/tests/${id}`, {
+        const response = await fetch(`${API_BASE_URL}/api/tests/${id}`, {
             headers: { 'Authorization': `Bearer ${token}` }
         });
         if (!response.ok) throw new Error('Failed to fetch test');
@@ -65,7 +67,7 @@ export const testApi = {
         const token = session?.access_token;
         if (!token) throw new Error('No session');
 
-        const response = await fetch('/api/tests/submit', {
+        const response = await fetch(`${API_BASE_URL}/api/tests/submit`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -82,10 +84,22 @@ export const testApi = {
         const token = session?.access_token;
         if (!token) throw new Error('No session');
 
-        const response = await fetch('/api/analysis/hierarchy', {
+        const response = await fetch(`${API_BASE_URL}/api/analysis/hierarchy`, {
             headers: { 'Authorization': `Bearer ${token}` }
         });
         if (!response.ok) throw new Error('Failed to fetch hierarchy');
+        return response.json();
+    },
+
+    getTestResults: async (testId: string) => {
+        const { data: { session } } = await supabase.auth.getSession();
+        const token = session?.access_token;
+        if (!token) throw new Error('No session');
+
+        const response = await fetch(`${API_BASE_URL}/api/tests/${testId}/results`, {
+            headers: { 'Authorization': `Bearer ${token}` }
+        });
+        if (!response.ok) throw new Error('Failed to fetch test results');
         return response.json();
     }
 };

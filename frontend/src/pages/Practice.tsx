@@ -1,67 +1,95 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useSearchParams } from "react-router-dom";
 import { MainLayout } from "@/components/layout/MainLayout";
 import { QuestionCard } from "@/components/practice/QuestionCard";
 import { PracticeModeSelector, PracticeMode } from "@/components/practice/PracticeModeSelector";
 import { SubjectSelector, TopicSelector } from "@/components/practice/TopicSelector";
 import { Progress } from "@/components/ui/progress";
 import { Button } from "@/components/ui/button";
-import { Clock, Target, Brain, ChevronLeft, ChevronRight } from "lucide-react";
+import { Clock, Target, Brain, ChevronLeft, ChevronRight, Loader2 } from "lucide-react";
 import { Subject } from "@/types";
-import { questionBankService } from "@/services/mockData";
-import { usePerformance } from "@/hooks/usePerformance";
+import { toast } from "sonner";
+import { testApi } from "@/api/test";
 
 const Practice = () => {
+  const [searchParams] = useSearchParams();
   const [mode, setMode] = useState<PracticeMode | null>(null);
   const [subject, setSubject] = useState<Subject | null>(null);
   const [topic, setTopic] = useState<string | null>(null);
   const [sessionStarted, setSessionStarted] = useState(false);
+  const [loading, setLoading] = useState(false);
   
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [correctAnswers, setCorrectAnswers] = useState(0);
   const [answeredCount, setAnsweredCount] = useState(0);
   const [sessionQuestions, setSessionQuestions] = useState<any[]>([]);
-  
-  const { recordAttempts } = usePerformance();
+  const [userAnswers, setUserAnswers] = useState<Record<number, string>>({});
+  const [questionStartTime, setQuestionStartTime] = useState<number>(Date.now());
 
-  const startPracticeSession = () => {
-    let questions: any[] = [];
-
-    if (mode === 'adaptive') {
-      // Get random mix of questions
-      questions = questionBankService.getRandomQuestions(15);
-    } else if (mode === 'topic-focus' && subject && topic) {
-      // Get questions from specific topic
-      questions = questionBankService.getQuestionsFiltered({
-        subject,
-        topic,
-        limit: 10,
-      });
-    } else if (mode === 'subject-focus' && subject) {
-      // Get all questions from subject
-      questions = questionBankService.getQuestionsBySubject(subject, 15);
+  // Check for topic parameter from URL
+  useEffect(() => {
+    const topicParam = searchParams.get('topic');
+    if (topicParam) {
+      setTopic(topicParam);
+      setMode('topic-focus');
     }
+  }, [searchParams]);
 
-    if (questions.length === 0) {
-      questions = questionBankService.getRandomQuestions(10);
+  const startPracticeSession = async () => {
+    setLoading(true);
+    try {
+      // Create a practice test to get questions
+      const testData = {
+        title: `Practice Session - ${mode}`,
+        type: 'practice',
+        duration: 30,
+        number_of_questions: mode === 'adaptive' ? 15 : 10,
+        ...(subject && { subject: subject }),
+        ...(topic && { topic_ids: [topic] })
+      };
+
+      const response = await testApi.createTest(testData);
+      const questions = response.questions || [];
+
+      if (questions.length === 0) {
+        toast.error('No questions available. Please add questions to the repository.');
+        setLoading(false);
+        return;
+      }
+
+      setSessionQuestions(questions);
+      setSessionStarted(true);
+      setCurrentQuestion(0);
+      setCorrectAnswers(0);
+      setAnsweredCount(0);
+      setUserAnswers({});
+      setQuestionStartTime(Date.now());
+    } catch (error) {
+      console.error('Failed to start practice session:', error);
+      toast.error('Failed to load questions. Please try again.');
+    } finally {
+      setLoading(false);
     }
-
-    setSessionQuestions(questions);
-    setSessionStarted(true);
-    setCurrentQuestion(0);
-    setCorrectAnswers(0);
-    setAnsweredCount(0);
   };
 
-  const handleAnswer = (answerId: string) => {
+  const handleAnswer = async (answerId: string) => {
+    const question = sessionQuestions[currentQuestion];
+    const isCorrect = answerId === question.correct_answer;
+    
+    setUserAnswers(prev => ({ ...prev, [currentQuestion]: answerId }));
     setAnsweredCount((prev) => prev + 1);
-    if (answerId === sessionQuestions[currentQuestion].correctAnswer) {
+    
+    if (isCorrect) {
       setCorrectAnswers((prev) => prev + 1);
     }
+
+    // TODO: Track answer for later submission
   };
 
   const handleNextQuestion = () => {
     if (currentQuestion < sessionQuestions.length - 1) {
       setCurrentQuestion((prev) => prev + 1);
+      setQuestionStartTime(Date.now());
     }
   };
 
@@ -128,11 +156,18 @@ const Practice = () => {
           <div className="flex gap-3">
             <Button
               onClick={startPracticeSession}
-              disabled={!mode || (mode === 'topic-focus' && (!subject || !topic)) || (mode === 'subject-focus' && !subject)}
+              disabled={loading || !mode || (mode === 'topic-focus' && (!subject || !topic)) || (mode === 'subject-focus' && !subject)}
               size="lg"
               className="flex-1"
             >
-              Start Practice Session
+              {loading ? (
+                <>
+                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                  Loading Questions...
+                </>
+              ) : (
+                'Start Practice Session'
+              )}
             </Button>
           </div>
         </div>
