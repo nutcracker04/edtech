@@ -19,16 +19,32 @@ async def get_user_tests(
     Get all tests for the current user.
     Optionally filter by status.
     """
-    user_id = current_user["user_id"]
-    
-    query = supabase.table("tests").select("*").eq("user_id", user_id)
-    
-    if status_filter:
-        query = query.eq("status", status_filter)
-    
-    result = query.order("created_at", desc=True).execute()
-    
-    return result.data
+    try:
+        user_id = current_user["user_id"]
+        
+        query = supabase.table("tests").select("*").eq("user_id", user_id)
+        
+        if status_filter:
+            query = query.eq("status", status_filter)
+        
+        result = query.order("created_at", desc=True).execute()
+        
+        # Ensure questions field is always a list
+        if result.data:
+            for test in result.data:
+                if test.get("questions") is None:
+                    test["questions"] = []
+        
+        return result.data
+    except Exception as e:
+        print(f"Error in get_user_tests: {str(e)}")
+        print(f"Error type: {type(e)}")
+        import traceback
+        traceback.print_exc()
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"Failed to fetch tests: {str(e)}"
+        )
 
 
 @router.get("/{test_id}", response_model=Test)
