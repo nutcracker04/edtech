@@ -326,6 +326,7 @@ async def get_test_results(
             "correct_answer": question["correct_answer"],
             "is_correct": attempt["is_correct"],
             "time_spent": attempt.get("time_spent", 0),
+            "marked_for_review": attempt.get("marked_for_review", False),
             "topic": topic_name,
             "subject": subject_name
         })

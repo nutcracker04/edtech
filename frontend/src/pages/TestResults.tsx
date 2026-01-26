@@ -14,8 +14,7 @@ import {
   AlertCircle,
   BarChart3,
   Loader2,
-  Brain,
-  Lightbulb
+  Flag
 } from 'lucide-react';
 import { testApi } from '@/api/test';
 import { toast } from 'sonner';
@@ -35,6 +34,7 @@ interface TestResult {
     correct_answer: string;
     is_correct: boolean;
     time_spent: number;
+    marked_for_review?: boolean;
     topic: string;
     subject: string;
   }>;
@@ -51,7 +51,6 @@ const TestResults = () => {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(true);
   const [result, setResult] = useState<TestResult | null>(null);
-  const [recommendations, setRecommendations] = useState<any[]>([]);
 
   useEffect(() => {
     if (!testId) return;
@@ -82,6 +81,8 @@ const TestResults = () => {
 
   const percentage = Math.round((result.score / result.max_score) * 100);
   const accuracy = Math.round((result.correct_answers / result.total_questions) * 100);
+  const avgTimePerQuestion = Math.round(result.time_taken / result.total_questions);
+  const markedCount = result.attempts.filter(a => a.marked_for_review).length;
 
   return (
     <MainLayout>
@@ -93,7 +94,7 @@ const TestResults = () => {
         </div>
 
         {/* Score Overview */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
           <Card>
             <CardContent className="pt-6">
               <div className="text-center space-y-2">
@@ -135,9 +136,20 @@ const TestResults = () => {
             <CardContent className="pt-6">
               <div className="text-center space-y-2">
                 <Clock className="h-8 w-8 mx-auto text-blue-500" />
-                <p className="text-sm text-muted-foreground">Time Taken</p>
-                <p className="text-3xl font-bold">{Math.floor(result.time_taken / 60)}m</p>
-                <p className="text-xs text-muted-foreground">{result.time_taken % 60}s</p>
+                <p className="text-sm text-muted-foreground">Avg Time</p>
+                <p className="text-3xl font-bold">{avgTimePerQuestion}s</p>
+                <p className="text-xs text-muted-foreground">per question</p>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardContent className="pt-6">
+              <div className="text-center space-y-2">
+                <Flag className="h-8 w-8 mx-auto text-yellow-500" />
+                <p className="text-sm text-muted-foreground">Marked</p>
+                <p className="text-3xl font-bold text-yellow-500">{markedCount}</p>
+                <p className="text-xs text-muted-foreground">for review</p>
               </div>
             </CardContent>
           </Card>
@@ -245,8 +257,16 @@ const TestResults = () => {
                       <XCircle className="h-5 w-5 text-red-500 mt-1" />
                     )}
                     <div className="flex-1 space-y-2">
-                      <div className="flex justify-between">
-                        <p className="font-medium">Question {index + 1}</p>
+                      <div className="flex justify-between items-start">
+                        <div className="flex items-center gap-2">
+                          <p className="font-medium">Question {index + 1}</p>
+                          {attempt.marked_for_review && (
+                            <Badge variant="outline" className="text-xs bg-yellow-500/10 border-yellow-500/30 text-yellow-600">
+                              <Flag className="h-3 w-3 mr-1" />
+                              Marked
+                            </Badge>
+                          )}
+                        </div>
                         <Badge variant="outline" className="text-xs">
                           {attempt.topic}
                         </Badge>
@@ -268,9 +288,21 @@ const TestResults = () => {
                         )}
                       </div>
                       
-                      <div className="flex items-center gap-2 text-xs text-muted-foreground">
-                        <Clock className="h-3 w-3" />
-                        <span>{attempt.time_spent}s</span>
+                      <div className="flex items-center gap-4 text-xs text-muted-foreground">
+                        <div className="flex items-center gap-1">
+                          <Clock className="h-3 w-3" />
+                          <span>{attempt.time_spent}s</span>
+                        </div>
+                        {attempt.time_spent > avgTimePerQuestion * 1.5 && (
+                          <Badge variant="outline" className="text-xs bg-orange-500/10 border-orange-500/30">
+                            Took longer
+                          </Badge>
+                        )}
+                        {attempt.time_spent < avgTimePerQuestion * 0.5 && attempt.time_spent > 5 && (
+                          <Badge variant="outline" className="text-xs bg-blue-500/10 border-blue-500/30">
+                            Quick answer
+                          </Badge>
+                        )}
                       </div>
                     </div>
                   </div>

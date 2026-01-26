@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { Clock } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
@@ -11,13 +11,19 @@ interface TestTimerProps {
 export function TestTimer({ duration, onTimeUp, showWarning = true }: TestTimerProps) {
   const [timeLeft, setTimeLeft] = useState(duration * 60); // Convert to seconds
   const [isWarning, setIsWarning] = useState(false);
+  const onTimeUpRef = useRef(onTimeUp);
+
+  // Keep the ref updated with the latest callback
+  useEffect(() => {
+    onTimeUpRef.current = onTimeUp;
+  }, [onTimeUp]);
 
   useEffect(() => {
     const timer = setInterval(() => {
       setTimeLeft(prev => {
         if (prev <= 1) {
           clearInterval(timer);
-          onTimeUp?.();
+          onTimeUpRef.current?.();
           return 0;
         }
 
@@ -30,7 +36,7 @@ export function TestTimer({ duration, onTimeUp, showWarning = true }: TestTimerP
     }, 1000);
 
     return () => clearInterval(timer);
-  }, [onTimeUp, showWarning]);
+  }, [showWarning]);
 
   const minutes = Math.floor(timeLeft / 60);
   const seconds = timeLeft % 60;
