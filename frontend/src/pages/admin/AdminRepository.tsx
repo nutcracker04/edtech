@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { Database, Tag, AlertCircle, CheckCircle2, Filter } from "lucide-react";
+import { Database, Tag, AlertCircle, CheckCircle2, Filter, Check } from "lucide-react";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Label } from "@/components/ui/label";
 import { supabase } from "@/integrations/supabase/client";
@@ -25,6 +25,7 @@ interface Question {
     correct_answer?: string;
     created_at: string;
     image_url?: string | null;
+    status?: string | null;
 }
 
 interface Subject { id: string; name: string; }
@@ -44,6 +45,7 @@ const AdminRepository = () => {
     const [selectedSubject, setSelectedSubject] = useState<string | undefined>(undefined);
     const [selectedChapter, setSelectedChapter] = useState<string | undefined>(undefined);
     const [selectedTopic, setSelectedTopic] = useState<string | undefined>(undefined);
+    const [selectedStatus, setSelectedStatus] = useState<string | undefined>(undefined);
 
     // Metadata lookup
     const [subjectMap, setSubjectMap] = useState<Record<string, string>>({});
@@ -58,7 +60,7 @@ const AdminRepository = () => {
 
     useEffect(() => {
         fetchQuestions();
-    }, [activeTab, selectedSubject, selectedChapter, selectedTopic]);
+    }, [activeTab, selectedSubject, selectedChapter, selectedTopic, selectedStatus]);
 
     useEffect(() => {
         if (selectedSubject) {
@@ -128,6 +130,15 @@ const AdminRepository = () => {
                 if (selectedChapter) query = query.eq("chapter_id", selectedChapter);
                 if (selectedTopic) query = query.eq("topic_id", selectedTopic);
             }
+            
+            // Filter by status for both tagged and untagged
+            if (selectedStatus) {
+                if (selectedStatus === 'no_status') {
+                    query = query.is('status', null);
+                } else {
+                    query = query.eq("status", selectedStatus);
+                }
+            }
 
             const { data, error } = await query;
             if (error) {
@@ -150,6 +161,7 @@ const AdminRepository = () => {
         setSelectedSubject(undefined);
         setSelectedChapter(undefined);
         setSelectedTopic(undefined);
+        setSelectedStatus(undefined);
     };
 
     const handleDeleteQuestion = async (id: string) => {
@@ -161,6 +173,31 @@ const AdminRepository = () => {
         } else {
             toast.success("Question deleted");
             setQuestions(questions.filter(q => q.id !== id));
+        }
+    };
+
+    const handleApproveQuestion = async (question: Question) => {
+        if (!question.subject_id || !question.chapter_id || !question.topic_id) {
+            toast.error("Question must be fully tagged before approval");
+            return;
+        }
+
+        if (!confirm("Approve this question and move it to the tagged repository?")) return;
+
+        const { error } = await supabase
+            .from("repository_questions")
+            // @ts-ignore - Supabase types may not be up to date
+            .update({
+                is_tagged: true,
+                status: null // Clear status when moving to tagged
+            })
+            .eq("id", question.id);
+
+        if (error) {
+            toast.error("Failed to approve question");
+        } else {
+            toast.success("Question approved and moved to tagged repository!");
+            setQuestions(questions.filter(q => q.id !== question.id));
         }
     };
 
@@ -195,7 +232,7 @@ const AdminRepository = () => {
                                     Filter Questions
                                 </CardTitle>
                             </CardHeader>
-                            <CardContent className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <CardContent className="grid grid-cols-1 md:grid-cols-4 gap-4">
                                 <div className="space-y-2">
                                     <Label>Subject</Label>
                                     <Select value={selectedSubject} onValueChange={(val) => setSelectedSubject(val === "all" ? undefined : val)}>
@@ -232,7 +269,54 @@ const AdminRepository = () => {
                                         </SelectContent>
                                     </Select>
                                 </div>
-                                <div className="md:col-span-3 flex justify-end">
+                                <div className="space-y-2">
+                                    <Label>Status</Label>
+                                    <Select value={selectedStatus} onValueChange={(val) => setSelectedStatus(val === "all" ? undefined : val)}>
+                                        <SelectTrigger>
+                                            <SelectValue placeholder="All Status" />
+                                        </SelectTrigger>
+                                        <SelectContent>
+                                            <SelectItem value="all">All Status</SelectItem>
+                                            <SelectItem value="in_review">In Review</SelectItem>
+                                            <SelectItem value="approved">Approved</SelectItem>
+                                            <SelectItem value="rejected">Rejected</SelectItem>
+                                            <SelectItem value="no_status">No Status</SelectItem>
+                                        </SelectContent>
+                                    </Select>
+                                </div>
+                                <div className="md:col-span-4 flex justify-end">
+                                    <Button variant="outline" onClick={clearFilters}>
+                                        Clear Filters
+                                    </Button>
+                                </div>
+                            </CardContent>
+                        </Card>
+                    )}
+
+                    {/* Filters for Untagged Questions */}
+                    {activeTab === "untagged" && (
+                        <Card className="border-2">
+                            <CardHeader>
+                                <CardTitle className="flex items-center gap-2 text-lg">
+                                    <Filter className="h-5 w-5" />
+                                    Filter Questions
+                                </CardTitle>
+                            </CardHeader>
+                            <CardContent className="space-y-4">
+                                <div className="space-y-2">
+                                    <Label>Status</Label>
+                                    <Select value={selectedStatus} onValueChange={(val) => setSelectedStatus(val === "all" ? undefined : val)}>
+                                        <SelectTrigger className="max-w-xs">
+                                            <SelectValue placeholder="All Status" />
+                                        </SelectTrigger>
+                                        <SelectContent>
+                                            <SelectItem value="all">All Status</SelectItem>
+                                            <SelectItem value="in_review">In Review (Fully Tagged)</SelectItem>
+                                            <SelectItem value="no_status">Needs Tagging</SelectItem>
+                                        </SelectContent>
+                                    </Select>
+                                </div>
+                                <div className="flex justify-end">
                                     <Button variant="outline" onClick={clearFilters}>
                                         Clear Filters
                                     </Button>
@@ -288,6 +372,17 @@ const AdminRepository = () => {
                                                                     <p className="text-lg leading-relaxed">{q.question_text}</p>
                                                                 </div>
                                                                 <div className="flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                                                                    {q.status === 'in_review' && (
+                                                                        <Button
+                                                                            variant="ghost"
+                                                                            size="icon"
+                                                                            onClick={() => handleApproveQuestion(q)}
+                                                                            className="h-8 w-8 text-muted-foreground hover:text-green-600"
+                                                                            title="Approve & Move to Tagged"
+                                                                        >
+                                                                            <Check className="h-4 w-4" />
+                                                                        </Button>
+                                                                    )}
                                                                     <Button
                                                                         variant="ghost"
                                                                         size="icon"
@@ -323,6 +418,22 @@ const AdminRepository = () => {
                                                             </div>
 
                                                             <div className="flex flex-wrap gap-2 pt-2">
+                                                                {q.status && (
+                                                                    <Badge 
+                                                                        variant="outline" 
+                                                                        className="bg-yellow-500/10 border-yellow-500/30 text-yellow-700 dark:text-yellow-400"
+                                                                    >
+                                                                        🔍 In Review (Ready to Approve)
+                                                                    </Badge>
+                                                                )}
+                                                                {!q.status && activeTab === "untagged" && (
+                                                                    <Badge 
+                                                                        variant="outline" 
+                                                                        className="bg-gray-500/10 border-gray-500/30"
+                                                                    >
+                                                                        ⚠️ Needs Tagging
+                                                                    </Badge>
+                                                                )}
                                                                 {activeTab === "tagged" && (
                                                                     <>
                                                                         {q.subject_id && (

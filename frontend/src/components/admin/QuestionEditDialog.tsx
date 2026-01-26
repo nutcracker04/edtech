@@ -25,6 +25,8 @@ interface Question {
     chapter_id: string | null;
     topic_id: string | null;
     difficulty_level: string | null;
+    status?: string | null;
+    is_tagged?: boolean;
 }
 
 interface QuestionEditDialogProps {
@@ -173,14 +175,17 @@ export function QuestionEditDialog({
                 updates.topic_id = topicId;
                 updates.difficulty_level = difficulty;
 
-                // If we are setting tags, mark as tagged?
-                // For untagged questions, if user sets tags, it should become tagged.
-                // If user doesn't set all tags, maybe keep untagged? 
-                // Repository logic: is_tagged = true only if all 3 are set? Or just boolean flag?
-                // The main tagging flow sets is_tagged=true.
-                // Let's assume if subject/chapter/topic are present, we set is_tagged=true.
+                // Automatically set status based on tagging completeness
                 if (subjectId && chapterId && topicId) {
-                    updates.is_tagged = true;
+                    // Fully tagged - mark as in_review if currently untagged
+                    if (!question.is_tagged) {
+                        updates.status = 'in_review';
+                    }
+                    updates.is_tagged = false; // Keep in untagged until approved
+                } else {
+                    // Not fully tagged - clear status
+                    updates.status = null;
+                    updates.is_tagged = false;
                 }
             }
 

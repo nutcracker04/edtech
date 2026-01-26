@@ -23,6 +23,9 @@ class Settings(BaseSettings):
     tesseract_cmd: str = "/usr/bin/tesseract"
     tesseract_lang: str = "eng"
     
+    # AI
+    groq_api_key: str = ""
+    
     class Config:
         env_file = ".env"
         case_sensitive = False

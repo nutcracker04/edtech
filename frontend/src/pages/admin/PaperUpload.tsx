@@ -7,9 +7,10 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/com
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { useNavigate } from 'react-router-dom';
-import { FileUp, CheckCircle2, ArrowRight, Loader2, PenTool } from 'lucide-react';
+import { FileUp, CheckCircle2, ArrowRight, Loader2, PenTool, FileText } from 'lucide-react';
 import { ManualQuestionCreator } from '@/components/admin/ManualQuestionCreator';
 import { QuestionTaggingSidebar } from '@/components/admin/QuestionTaggingSidebar';
+import { BulkTextDumper } from '@/components/upload/BulkTextDumper';
 import { Tag } from 'lucide-react';
 
 const AdminPaperUpload = () => {
@@ -89,10 +90,14 @@ const AdminPaperUpload = () => {
                 </div>
 
                 <Tabs defaultValue="upload" className="space-y-6">
-                    <TabsList className="grid w-full max-w-md grid-cols-2">
+                    <TabsList className="grid w-full max-w-2xl grid-cols-3">
                         <TabsTrigger value="upload" className="flex items-center gap-2">
                             <FileUp className="h-4 w-4" />
                             Upload Paper
+                        </TabsTrigger>
+                        <TabsTrigger value="bulk-text" className="flex items-center gap-2">
+                            <FileText className="h-4 w-4" />
+                            Bulk Text
                         </TabsTrigger>
                         <TabsTrigger value="manual" className="flex items-center gap-2">
                             <PenTool className="h-4 w-4" />
@@ -162,6 +167,16 @@ const AdminPaperUpload = () => {
                                 </div>
                             </CardContent>
                         </Card>
+                    </TabsContent>
+
+                    {/* Bulk Text Tab */}
+                    <TabsContent value="bulk-text">
+                        <BulkTextDumper
+                            onComplete={() => {
+                                toast.success("Questions saved to repository!");
+                                setIsTaggingOpen(true);
+                            }}
+                        />
                     </TabsContent>
 
                     {/* Manual Creation Tab */}

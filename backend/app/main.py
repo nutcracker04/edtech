@@ -7,7 +7,8 @@ from app.routers import (
     analysis_router,
     performance_router,
     auth_router,
-    repository_router
+    repository_router,
+    ai_router
 )
 
 # Create FastAPI app
@@ -33,6 +34,7 @@ app.include_router(tests_router)
 app.include_router(analysis_router)
 app.include_router(performance_router)
 app.include_router(repository_router)
+app.include_router(ai_router)
 
 
 @app.get("/")
