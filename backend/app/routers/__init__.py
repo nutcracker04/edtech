@@ -5,3 +5,7 @@ from .performance import router as performance_router
 from .auth import router as auth_router
 from .repository import router as repository_router
 from .ai import router as ai_router
+from .concept_graph import router as concept_graph_router
+from .learning_pathways import router as learning_pathways_router
+from .mastery_tracking import router as mastery_tracking_router
+from .ncert_extraction import router as ncert_extraction_router

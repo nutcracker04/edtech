@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -19,16 +19,41 @@ import AdminDashboard from "./pages/admin/AdminDashboard";
 import HierarchyManager from "./pages/admin/HierarchyManager";
 import AdminPaperUpload from "./pages/admin/PaperUpload";
 import AdminRepository from "./pages/admin/AdminRepository";
+import ConceptGraphManager from "./pages/admin/ConceptGraphManager";
 import TestTaking from "./pages/TestTaking";
 import TestResults from "./pages/TestResults";
 import NotFound from "./pages/NotFound";
 import { AIAssistant } from "./components/ai/AIAssistant";
 import { AIAssistantButton } from "./components/ai/AIAssistantButton";
 
-const queryClient = new QueryClient();
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      refetchOnWindowFocus: false, // Prevent refetch when switching tabs
+      refetchOnMount: false, // Prevent refetch on component mount
+      refetchOnReconnect: false, // Prevent refetch on network reconnect
+      staleTime: 5 * 60 * 1000, // Consider data fresh for 5 minutes
+      retry: 1, // Only retry failed requests once
+    },
+  },
+});
 
 const App = () => {
   const [isAIOpen, setIsAIOpen] = useState(false);
+
+  // Prevent app reset on visibility change
+  useEffect(() => {
+    const handleVisibilityChange = () => {
+      // Log visibility changes but don't reset state
+      console.log('App visibility:', document.hidden ? 'hidden' : 'visible');
+    };
+
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+
+    return () => {
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+    };
+  }, []);
 
   return (
     <QueryClientProvider client={queryClient}>
@@ -98,6 +123,11 @@ const App = () => {
               <Route path="/admin/hierarchy" element={
                 <ProtectedRoute>
                   <HierarchyManager />
+                </ProtectedRoute>
+              } />
+              <Route path="/admin/concept-graph" element={
+                <ProtectedRoute>
+                  <ConceptGraphManager />
                 </ProtectedRoute>
               } />
               <Route path="/admin/upload" element={

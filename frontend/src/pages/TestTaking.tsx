@@ -26,19 +26,60 @@ const TestTaking = () => {
   const { testId } = useParams();
   const navigate = useNavigate();
 
+  const storageKey = `test-session-${testId}`;
+
+  // Load persisted state from sessionStorage
+  const loadPersistedState = () => {
+    try {
+      const saved = sessionStorage.getItem(storageKey);
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        return {
+          answers: parsed.answers || {},
+          markedForReview: new Set<number>(parsed.markedForReview || []),
+          timeSpent: parsed.timeSpent || {},
+          currentQuestion: parsed.currentQuestion || 0,
+        };
+      }
+    } catch (error) {
+      console.error('Failed to load persisted state:', error);
+    }
+    return null;
+  };
+
+  const persistedState = loadPersistedState();
+
   const [loading, setLoading] = useState(true);
   const [submitting, setSubmitting] = useState(false);
   const [session, setSession] = useState<TestSession | null>(null);
 
-  const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [answers, setAnswers] = useState<Record<number, any>>({});
-  const [markedForReview, setMarkedForReview] = useState<Set<number>>(new Set());
+  const [currentQuestion, setCurrentQuestion] = useState(persistedState?.currentQuestion || 0);
+  const [answers, setAnswers] = useState<Record<number, any>>(persistedState?.answers || {});
+  const [markedForReview, setMarkedForReview] = useState<Set<number>>(persistedState?.markedForReview || new Set());
 
   // Time tracking
-  const [timeSpent, setTimeSpent] = useState<Record<number, number>>({});
+  const [timeSpent, setTimeSpent] = useState<Record<number, number>>(persistedState?.timeSpent || {});
   const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const [showSubmitDialog, setShowSubmitDialog] = useState(false);
+
+  // Persist state to sessionStorage whenever it changes
+  useEffect(() => {
+    if (!session) return;
+
+    const stateToSave = {
+      answers,
+      markedForReview: Array.from(markedForReview),
+      timeSpent,
+      currentQuestion,
+    };
+
+    try {
+      sessionStorage.setItem(storageKey, JSON.stringify(stateToSave));
+    } catch (error) {
+      console.error('Failed to persist state:', error);
+    }
+  }, [answers, markedForReview, timeSpent, currentQuestion, session, storageKey]);
 
   /* ---------------------------------- LOAD TEST ---------------------------------- */
 
@@ -55,11 +96,14 @@ const TestTaking = () => {
           duration: data.duration,
         });
 
-        const initialTime: Record<number, number> = {};
-        data.questions.forEach((_: any, idx: number) => {
-          initialTime[idx] = 0;
-        });
-        setTimeSpent(initialTime);
+        // Only initialize time if not already persisted
+        if (!persistedState?.timeSpent || Object.keys(persistedState.timeSpent).length === 0) {
+          const initialTime: Record<number, number> = {};
+          data.questions.forEach((_: any, idx: number) => {
+            initialTime[idx] = 0;
+          });
+          setTimeSpent(initialTime);
+        }
       } catch {
         toast.error('Failed to load test');
         navigate('/tests');
@@ -70,6 +114,23 @@ const TestTaking = () => {
 
     loadTest();
   }, [testId, navigate]);
+
+  // Warn user before closing/refreshing during test
+  useEffect(() => {
+    if (!session) return;
+
+    const handleBeforeUnload = (e: BeforeUnloadEvent) => {
+      e.preventDefault();
+      e.returnValue = 'Your test progress will be saved, but the timer will continue. Are you sure you want to leave?';
+      return e.returnValue;
+    };
+
+    window.addEventListener('beforeunload', handleBeforeUnload);
+
+    return () => {
+      window.removeEventListener('beforeunload', handleBeforeUnload);
+    };
+  }, [session]);
 
   /* -------------------------- TIME PER QUESTION TRACKER -------------------------- */
 
@@ -136,6 +197,13 @@ const TestTaking = () => {
           attempts,
         });
 
+        // Clear persisted state after successful submission
+        try {
+          sessionStorage.removeItem(storageKey);
+        } catch (error) {
+          console.error('Failed to clear persisted state:', error);
+        }
+
         toast.success('Test submitted successfully');
         navigate(`/tests/${session.testId}/results`);
       } catch (error) {
@@ -144,7 +212,7 @@ const TestTaking = () => {
         setSubmitting(false);
       }
     },
-    [answers, timeSpent, markedForReview, session, submitting, navigate]
+    [answers, timeSpent, markedForReview, session, submitting, navigate, storageKey]
   );
 
   const handleSubmitClick = () => {
@@ -184,6 +252,7 @@ const TestTaking = () => {
             <TestTimer
               duration={session.duration}
               onTimeUp={handleTimeUp}
+              testId={session.testId}
             />
 
             <QuestionRenderer

@@ -95,6 +95,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   useEffect(() => {
     let isMounted = true;
     let fetchTimeout: NodeJS.Timeout | null = null;
+    let authSubscription: any = null;
 
     // Get initial session
     supabase.auth.getSession().then(({ data: { session } }) => {
@@ -110,46 +111,71 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     });
 
     // Listen for auth changes
-    const {
-      data: { subscription },
-    } = supabase.auth.onAuthStateChange((event, session) => {
-      if (!isMounted) return;
+    const setupAuthListener = () => {
+      const {
+        data: { subscription },
+      } = supabase.auth.onAuthStateChange((event, session) => {
+        if (!isMounted) return;
 
-      console.log("Auth state change:", event);
+        console.log("Auth state change:", event);
 
-      // Clear any pending fetch timeout
-      if (fetchTimeout) {
-        clearTimeout(fetchTimeout);
-        fetchTimeout = null;
-      }
-
-      setSession(session);
-      setUser(session?.user ?? null);
-
-      if (session?.user) {
-        // Set loading state for sign-in events
-        if (event === 'SIGNED_IN' || event === 'INITIAL_SESSION') {
-          setLoading(true);
+        // Ignore TOKEN_REFRESHED and USER_UPDATED events to prevent unnecessary reloads
+        if (event === 'TOKEN_REFRESHED' || event === 'USER_UPDATED') {
+          // Just update the session without triggering profile refetch
+          setSession(session);
+          return;
         }
 
-        // Debounce profile fetches to prevent multiple rapid calls
-        fetchTimeout = setTimeout(() => {
-          if (isMounted) {
-            fetchProfile(session.user.id);
+        // Clear any pending fetch timeout
+        if (fetchTimeout) {
+          clearTimeout(fetchTimeout);
+          fetchTimeout = null;
+        }
+
+        setSession(session);
+        setUser(session?.user ?? null);
+
+        if (session?.user) {
+          // Set loading state for sign-in events
+          if (event === 'SIGNED_IN' || event === 'INITIAL_SESSION') {
+            setLoading(true);
           }
-        }, 200);
-      } else {
-        setProfile(null);
-        setLoading(false);
-      }
-    });
+
+          // Debounce profile fetches to prevent multiple rapid calls
+          fetchTimeout = setTimeout(() => {
+            if (isMounted) {
+              fetchProfile(session.user.id);
+            }
+          }, 200);
+        } else if (event === 'SIGNED_OUT') {
+          // Only clear profile on explicit sign out
+          setProfile(null);
+          setLoading(false);
+        }
+      });
+
+      authSubscription = subscription;
+    };
+
+    setupAuthListener();
+
+    // Prevent page unload/visibility changes from affecting state
+    const handleVisibilityChange = () => {
+      // Don't do anything on visibility change - keep state intact
+      console.log('Visibility changed:', document.hidden ? 'hidden' : 'visible');
+    };
+
+    document.addEventListener('visibilitychange', handleVisibilityChange);
 
     return () => {
       isMounted = false;
       if (fetchTimeout) {
         clearTimeout(fetchTimeout);
       }
-      subscription.unsubscribe();
+      if (authSubscription) {
+        authSubscription.unsubscribe();
+      }
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
     };
   }, []);
 

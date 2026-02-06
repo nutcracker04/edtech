@@ -17,6 +17,14 @@ const AdminDashboard = () => {
             bgColor: "bg-blue-500/10",
         },
         {
+            title: "Concept Graph",
+            description: "Extract concepts from NCERT textbooks and build knowledge graph.",
+            icon: Database,
+            path: "/admin/concept-graph",
+            color: "text-purple-500",
+            bgColor: "bg-purple-500/10",
+        },
+        {
             title: "Upload & Tag",
             description: "Upload papers or manually tag extracted questions.",
             icon: FileUp,
@@ -42,7 +50,7 @@ const AdminDashboard = () => {
                     <p className="text-muted-foreground">Manage the Question Repository and Content Hierarchy.</p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {adminActions.map((action) => (
                         <Card key={action.title} className="hover:shadow-lg transition-shadow border-2 border-border/50">
                             <CardHeader className="flex flex-row items-center gap-4">

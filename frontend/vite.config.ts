@@ -8,6 +8,13 @@ export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
     port: 8080,
+    hmr: {
+      overlay: false, // Disable error overlay that might cause reloads
+    },
+    watch: {
+      // Reduce file watching to prevent unnecessary reloads
+      ignored: ['**/node_modules/**', '**/.git/**'],
+    },
     proxy: {
       "/api": {
         target: "http://localhost:8000",

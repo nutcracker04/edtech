@@ -13,5 +13,18 @@ export const supabase = createClient<Database>(SUPABASE_URL, SUPABASE_PUBLISHABL
     storage: localStorage,
     persistSession: true,
     autoRefreshToken: true,
-  }
+    detectSessionInUrl: false, // Prevent URL-based session detection that might cause reloads
+    flowType: 'pkce', // Use PKCE flow for better security and stability
+    storageKey: 'supabase.auth.token', // Explicit storage key
+  },
+  global: {
+    headers: {
+      'x-client-info': 'supabase-js-web',
+    },
+  },
+  realtime: {
+    params: {
+      eventsPerSecond: 2, // Throttle realtime events to prevent excessive updates
+    },
+  },
 });

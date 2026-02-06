@@ -6,17 +6,54 @@ interface TestTimerProps {
   duration: number; // in minutes
   onTimeUp?: () => void;
   showWarning?: boolean;
+  testId?: string; // Add testId for unique storage key
 }
 
-export function TestTimer({ duration, onTimeUp, showWarning = true }: TestTimerProps) {
-  const [timeLeft, setTimeLeft] = useState(duration * 60); // Convert to seconds
+export function TestTimer({ duration, onTimeUp, showWarning = true, testId }: TestTimerProps) {
+  const storageKey = `test-timer-${testId}`;
+  
+  // Load persisted time or use full duration
+  const getInitialTime = () => {
+    if (!testId) return duration * 60;
+    
+    try {
+      const saved = sessionStorage.getItem(storageKey);
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        const elapsed = Date.now() - parsed.startTime;
+        const remaining = Math.max(0, parsed.initialTime - Math.floor(elapsed / 1000));
+        return remaining;
+      }
+    } catch (error) {
+      console.error('Failed to load timer state:', error);
+    }
+    return duration * 60;
+  };
+
+  const [timeLeft, setTimeLeft] = useState(getInitialTime);
   const [isWarning, setIsWarning] = useState(false);
   const onTimeUpRef = useRef(onTimeUp);
+  const startTimeRef = useRef(Date.now());
 
   // Keep the ref updated with the latest callback
   useEffect(() => {
     onTimeUpRef.current = onTimeUp;
   }, [onTimeUp]);
+
+  // Persist timer state
+  useEffect(() => {
+    if (!testId) return;
+
+    try {
+      sessionStorage.setItem(storageKey, JSON.stringify({
+        startTime: startTimeRef.current,
+        initialTime: duration * 60,
+        currentTime: timeLeft,
+      }));
+    } catch (error) {
+      console.error('Failed to persist timer state:', error);
+    }
+  }, [timeLeft, testId, storageKey, duration]);
 
   useEffect(() => {
     const timer = setInterval(() => {

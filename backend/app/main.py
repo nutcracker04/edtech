@@ -8,7 +8,11 @@ from app.routers import (
     performance_router,
     auth_router,
     repository_router,
-    ai_router
+    ai_router,
+    concept_graph_router,
+    learning_pathways_router,
+    mastery_tracking_router,
+    ncert_extraction_router
 )
 
 # Create FastAPI app
@@ -35,6 +39,10 @@ app.include_router(analysis_router)
 app.include_router(performance_router)
 app.include_router(repository_router)
 app.include_router(ai_router)
+app.include_router(concept_graph_router)
+app.include_router(learning_pathways_router)
+app.include_router(mastery_tracking_router)
+app.include_router(ncert_extraction_router)
 
 
 @app.get("/")
