@@ -3,7 +3,8 @@ import { useNavigate } from "react-router-dom";
 import { MainLayout } from "@/components/layout/MainLayout";
 import { SpiderWeb } from "@/components/analysis/SpiderWeb";
 import { PerformanceGraph } from "@/components/analysis/PerformanceGraph";
-import { TrendingUp, TrendingDown, Target, AlertTriangle, ChevronDown, ChevronUp, Loader2 } from "lucide-react";
+import { TrendingUp, TrendingDown, Target, AlertTriangle, ChevronDown, ChevronUp, ChevronRight, CheckCircle, Loader2 } from "lucide-react";
+import { cn } from "@/lib/utils";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Progress } from "@/components/ui/progress";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
@@ -394,159 +395,206 @@ const Analysis = () => {
             showSubjects={false} // Disable until backend sends per-subject trend data
           />
 
-          {/* Topic Breakdown List */}
-          <Tabs defaultValue="all" className="w-full">
-            <TabsList className="grid w-full grid-cols-2 sm:grid-cols-4 h-auto">
-              <TabsTrigger value="all" className="text-xs sm:text-sm py-2">All Topics</TabsTrigger>
-              {hierarchy.map(h => (
-                <TabsTrigger key={h.id} value={h.name.toLowerCase()} className="text-xs sm:text-sm py-2 capitalize">
-                  {h.name}
-                </TabsTrigger>
-              ))}
-            </TabsList>
-
-            <TabsContent value="all" className="space-y-4 mt-4 sm:mt-6">
-              <div className="space-y-3">
-                {allTopicsList.map((metric: TopicStats & { subject: string; strength: string }) => (
-                  <Card key={metric.topic} className="overflow-hidden">
-                    <button
-                      onClick={() => setExpandedTopic(expandedTopic === metric.topic ? null : metric.topic)}
-                      className="w-full p-3 sm:p-4 hover:bg-secondary/30 transition-colors flex items-center justify-between gap-2 sm:gap-3"
-                    >
-                      <div className="flex items-center gap-2 sm:gap-3 flex-1 text-left min-w-0">
-                        <div className="w-1 h-6 sm:h-8 rounded-full shrink-0" style={{
-                          backgroundColor: metric.mastery_score >= 85 ? '#22c55e' : metric.mastery_score >= 70 ? '#eab308' : '#ef4444'
-                        }} />
-                        <div className="flex-1 min-w-0">
-                          <div className="font-medium text-foreground text-sm sm:text-base truncate">{metric.topic}</div>
-                          <div className="text-xs text-muted-foreground">{metric.subject}</div>
-                        </div>
-                        <div className="flex items-center gap-2 sm:gap-4 mr-2 sm:mr-4 flex-shrink-0">
-                          <div className="text-right">
-                            <div className="text-base sm:text-lg font-bold text-foreground">{Math.round(metric.mastery_score)}%</div>
-                            <div className="text-[10px] sm:text-xs text-muted-foreground">
-                              {Math.round((metric.questions_correct / metric.questions_attempted) * 100) || 0}% accuracy
-                            </div>
-                          </div>
-                          <div className="flex items-center gap-1">
-                            {metric.trend === 'improving' && <TrendingUp className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-green-400" />}
-                            {metric.trend === 'declining' && <TrendingDown className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-red-400" />}
-                            {metric.trend === 'stable' && <Target className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-yellow-400" />}
-                          </div>
-                        </div>
-                      </div>
-                      {expandedTopic === metric.topic ? (
-                        <ChevronUp className="h-4 w-4 sm:h-5 sm:w-5 text-muted-foreground shrink-0" />
-                      ) : (
-                        <ChevronDown className="h-4 w-4 sm:h-5 sm:w-5 text-muted-foreground shrink-0" />
-                      )}
-                    </button>
-
-                    {/* Expanded Content */}
-                    {expandedTopic === metric.topic && (
-                      <div className="border-t border-border p-3 sm:p-4 space-y-3 sm:space-y-4 bg-secondary/20">
-                        <div>
-                          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 sm:gap-2 mb-2">
-                            <span className="text-xs sm:text-sm font-medium text-foreground">Mastery Progress</span>
-                            <span className="text-[10px] sm:text-xs text-muted-foreground">
-                              {metric.questions_attempted} questions
-                            </span>
-                          </div>
-                          <Progress value={metric.mastery_score} className="h-2" />
-                        </div>
-
-                        <div className="grid grid-cols-2 gap-2 text-xs">
-                          <div>
-                            <span className="text-muted-foreground">Correct: </span>
-                            <span className="font-medium text-green-400">{metric.questions_correct}</span>
-                          </div>
-                          <div>
-                            <span className="text-muted-foreground">Accuracy: </span>
-                            <span className="font-medium">
-                              {Math.round((metric.questions_correct / metric.questions_attempted) * 100) || 0}%
-                            </span>
-                          </div>
-                        </div>
-
-                        <Button
-                          variant="outline"
-                          className="w-full mt-2 sm:mt-3"
-                          size="sm"
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            navigate(`/practice?topic=${encodeURIComponent(metric.topic)}`);
-                          }}
-                        >
-                          Practice {metric.topic}
-                        </Button>
-                      </div>
-                    )}
-                  </Card>
-                ))}
+          {/* Subject Wise Breakdown */}
+          <div className="space-y-6">
+            <div className="flex items-center justify-between">
+              <div>
+                <h2 className="text-xl sm:text-2xl font-bold text-foreground tracking-tight">Subject Wise Breakdown</h2>
+                <p className="text-sm text-muted-foreground mt-1">Topic-level performance across all subjects</p>
               </div>
-            </TabsContent>
+            </div>
 
-            {/* Individual Subject Tabs */}
-            {hierarchy.map(h => {
-              const subjectData = subjectStats.find(s => s.subject === h.name);
-              const topics = subjectData?.topics || [];
+            <Tabs defaultValue="all" className="w-full">
+              <TabsList className="shrink-0 w-fit mb-4">
+                <TabsTrigger value="all">All Topics</TabsTrigger>
+                {hierarchy.map(h => (
+                  <TabsTrigger key={h.id} value={h.name.toLowerCase()} className="capitalize">
+                    {h.name}
+                  </TabsTrigger>
+                ))}
+              </TabsList>
 
-              return (
-                <TabsContent key={h.id} value={h.name.toLowerCase()} className="space-y-4 sm:space-y-6 mt-4 sm:mt-6">
-                  {topics.length === 0 ? (
-                    <Card>
-                      <CardContent className="py-12 text-center">
-                        <p className="text-sm text-muted-foreground">No data available for this subject.</p>
-                        <p className="text-xs text-muted-foreground mt-2">Take tests in {h.name} to see your performance.</p>
-                      </CardContent>
-                    </Card>
-                  ) : (
-                    <div className="space-y-3">
-                      {topics.map((metric: TopicStats) => (
-                        <Card
-                          key={metric.topic}
-                          className="overflow-hidden hover:border-primary/50 transition-colors cursor-pointer"
-                          onClick={() => navigate(`/practice?topic=${encodeURIComponent(metric.topic)}`)}
-                        >
-                          <div className="p-3 sm:p-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-                            <div className="min-w-0 flex-1">
-                              <div className="font-medium text-foreground text-sm sm:text-base truncate">{metric.topic}</div>
-                              <div className="text-xs sm:text-sm text-muted-foreground mt-1">
-                                {metric.questions_attempted} questions • {metric.questions_correct} correct
+              <TabsContent value="all" className="flex-1 min-h-0 mt-4 data-[state=active]:flex flex-col">
+                <ScrollArea className="h-[500px] lg:h-[650px] pr-4">
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pb-4">
+                    {allTopicsList.map((metric: TopicStats & { subject: string; strength: string }) => (
+                      <Card key={metric.topic} className="hover:shadow-md transition-all duration-200 border-border/50 group">
+                        <CardHeader className="pb-3">
+                          <div className="flex items-start justify-between gap-4">
+                            <div className="space-y-1.5 flex-1 min-w-0">
+                              <CardTitle className="text-base font-semibold truncate pr-2 group-hover:text-primary transition-colors">
+                                {metric.topic}
+                              </CardTitle>
+                              <div className="flex flex-col gap-2">
+                                <div className="flex items-center gap-2">
+                                  <div className="h-1.5 w-1.5 rounded-full bg-primary/60" />
+                                  <span className="truncate text-[10px] text-muted-foreground uppercase tracking-widest font-bold">{metric.subject}</span>
+                                </div>
+                                <div className="flex items-center gap-2">
+                                  <Badge
+                                    variant="outline"
+                                    className={cn(
+                                      "text-[10px] capitalize border font-bold",
+                                      metric.mastery_score >= 85 ? "bg-green-500/10 text-green-600 border-green-200" :
+                                        metric.mastery_score >= 70 ? "bg-yellow-500/10 text-yellow-600 border-yellow-200" :
+                                          "bg-red-500/10 text-red-600 border-red-200"
+                                    )}
+                                  >
+                                    {metric.strength}
+                                  </Badge>
+                                </div>
                               </div>
                             </div>
-                            <div className="flex items-center gap-3">
-                              <div className="w-24 h-2 bg-secondary rounded-full overflow-hidden">
+                            <div className="flex flex-col items-end shrink-0">
+                              <div className={cn(
+                                "text-lg font-black",
+                                metric.mastery_score >= 85 ? "text-green-600" :
+                                  metric.mastery_score >= 70 ? "text-yellow-600" :
+                                    "text-red-600"
+                              )}>
+                                {Math.round(metric.mastery_score)}%
+                              </div>
+                              <span className="text-[10px] text-muted-foreground uppercase tracking-wider font-medium">Mastery</span>
+                            </div>
+                          </div>
+                        </CardHeader>
+                        <CardContent className="space-y-4">
+                          <div className="grid grid-cols-2 gap-y-2 text-xs text-muted-foreground">
+                            <div className="flex items-center gap-2">
+                              <Target className="h-3.5 w-3.5 shrink-0 opacity-70" />
+                              <span>{metric.questions_attempted} Attempted</span>
+                            </div>
+                            <div className="flex items-center gap-2">
+                              <CheckCircle className="h-3.5 w-3.5 shrink-0 opacity-70" />
+                              <span>{metric.questions_correct} Correct</span>
+                            </div>
+                            <div className="flex items-center gap-2 col-span-2 pt-2 border-t mt-1">
+                              <div className="flex-1 h-1.5 bg-secondary/50 rounded-full overflow-hidden">
                                 <div
-                                  className="h-full transition-all"
+                                  className="h-full transition-all duration-500"
                                   style={{
-                                    width: `${metric.mastery_score}%`,
-                                    backgroundColor: metric.mastery_score >= 85 ? '#22c55e' : metric.mastery_score >= 70 ? '#eab308' : '#ef4444'
+                                    width: `${Math.round((metric.questions_correct / metric.questions_attempted) * 100) || 0}%`,
+                                    backgroundColor: 'hsl(var(--primary))'
                                   }}
                                 />
                               </div>
-                              <Badge
-                                variant="outline"
-                                className={
-                                  metric.mastery_score >= 85
-                                    ? 'bg-green-500/20 text-green-400 border-green-500/20'
-                                    : metric.mastery_score >= 70
-                                      ? 'bg-yellow-500/20 text-yellow-400 border-yellow-500/20'
-                                      : 'bg-red-500/20 text-red-400 border-red-500/20'
-                                }
-                              >
-                                {Math.round(metric.mastery_score)}%
-                              </Badge>
+                              <span className="text-[10px] font-bold text-foreground">
+                                {Math.round((metric.questions_correct / metric.questions_attempted) * 100) || 0}% Accuracy
+                              </span>
                             </div>
                           </div>
-                        </Card>
-                      ))}
-                    </div>
-                  )}
-                </TabsContent>
-              );
-            })}
-          </Tabs>
+                          <div className="pt-2">
+                            <Button
+                              className="w-full bg-primary hover:bg-primary/90 shadow-sm h-9 text-xs font-bold"
+                              onClick={() => navigate(`/practice?topic=${encodeURIComponent(metric.topic)}`)}
+                            >
+                              Practice Topic
+                              <ChevronRight className="h-3.5 w-3.5 ml-auto opacity-70" />
+                            </Button>
+                          </div>
+                        </CardContent>
+                      </Card>
+                    ))}
+                  </div>
+                </ScrollArea>
+              </TabsContent>
+
+              {/* Individual Subject Tabs */}
+              {hierarchy.map(h => {
+                const subjectData = subjectStats.find(s => s.subject === h.name);
+                const topics = subjectData?.topics || [];
+
+                return (
+                  <TabsContent key={h.id} value={h.name.toLowerCase()} className="mt-0">
+                    {topics.length === 0 ? (
+                      <Card className="border-dashed border-2">
+                        <CardContent className="py-12 text-center">
+                          <AlertTriangle className="h-10 w-10 text-muted-foreground mx-auto mb-4 opacity-50" />
+                          <h3 className="text-lg font-medium text-foreground">No data available</h3>
+                          <p className="text-sm text-muted-foreground mt-2">
+                            Take more tests in {h.name} to see your performance breakdown.
+                          </p>
+                        </CardContent>
+                      </Card>
+                    ) : (
+                      <ScrollArea className="h-[500px] lg:h-[650px] pr-4">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pb-4">
+                          {topics.map((metric: TopicStats) => (
+                            <Card key={metric.topic} className="hover:shadow-md transition-all duration-200 border-border/50 group">
+                              <CardHeader className="pb-3">
+                                <div className="flex items-start justify-between gap-4">
+                                  <div className="space-y-1.5 flex-1 min-w-0">
+                                    <CardTitle className="text-base font-semibold truncate pr-2 group-hover:text-primary transition-colors">
+                                      {metric.topic}
+                                    </CardTitle>
+                                    <div className="flex items-center gap-2">
+                                      <Badge
+                                        variant="outline"
+                                        className={cn(
+                                          "text-[10px] border font-bold",
+                                          metric.mastery_score >= 85 ? "bg-green-500/10 text-green-600 border-green-200" :
+                                            metric.mastery_score >= 70 ? "bg-yellow-500/10 text-yellow-600 border-yellow-200" :
+                                              "bg-red-500/10 text-red-600 border-red-200"
+                                        )}
+                                      >
+                                        {metric.mastery_score >= 85 ? 'Strong' : metric.mastery_score >= 70 ? 'Average' : 'Weak'}
+                                      </Badge>
+                                    </div>
+                                  </div>
+                                  <div className="flex flex-col items-end shrink-0">
+                                    <div className={cn(
+                                      "text-lg font-black",
+                                      metric.mastery_score >= 85 ? "text-green-600" :
+                                        metric.mastery_score >= 70 ? "text-yellow-600" :
+                                          "text-red-600"
+                                    )}>
+                                      {Math.round(metric.mastery_score)}%
+                                    </div>
+                                    <span className="text-[10px] text-muted-foreground uppercase tracking-wider font-medium">Mastery</span>
+                                  </div>
+                                </div>
+                              </CardHeader>
+                              <CardContent className="space-y-4">
+                                <div className="grid grid-cols-2 gap-y-2 text-xs text-muted-foreground">
+                                  <div className="flex items-center gap-2">
+                                    <Target className="h-3.5 w-3.5 shrink-0 opacity-70" />
+                                    <span>{metric.questions_attempted} Qs</span>
+                                  </div>
+                                  <div className="flex items-center gap-2">
+                                    <CheckCircle className="h-3.5 w-3.5 shrink-0 opacity-70" />
+                                    <span>{metric.questions_correct} Correct</span>
+                                  </div>
+                                  <div className="flex-1 h-1 bg-secondary/50 rounded-full overflow-hidden col-span-2 mt-1">
+                                    <div
+                                      className="h-full transition-all duration-500"
+                                      style={{
+                                        width: `${metric.mastery_score}%`,
+                                        backgroundColor: metric.mastery_score >= 85 ? '#22c55e' : metric.mastery_score >= 70 ? '#eab308' : '#ef4444'
+                                      }}
+                                    />
+                                  </div>
+                                </div>
+                                <div className="pt-2">
+                                  <Button
+                                    className="w-full bg-secondary/50 hover:bg-secondary text-foreground hover:text-primary border border-transparent shadow-sm h-9 text-xs font-bold"
+                                    variant="secondary"
+                                    onClick={() => navigate(`/practice?topic=${encodeURIComponent(metric.topic)}`)}
+                                  >
+                                    Practice Topic
+                                    <ChevronRight className="h-3.5 w-3.5 ml-auto opacity-70" />
+                                  </Button>
+                                </div>
+                              </CardContent>
+                            </Card>
+                          ))}
+                        </div>
+                      </ScrollArea>
+                    )}
+                  </TabsContent>
+                );
+              })}
+            </Tabs>
+          </div>
         </div>
       </div>
     </MainLayout>
