@@ -5,6 +5,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "./contexts/AuthContext";
+import { LayoutProvider } from "./contexts/LayoutContext";
 import { ProtectedRoute } from "./components/auth/ProtectedRoute";
 import Login from "./pages/Login";
 import Onboarding from "./pages/Onboarding";
@@ -33,93 +34,95 @@ const App = () => {
   return (
     <QueryClientProvider client={queryClient}>
       <AuthProvider>
-        <TooltipProvider>
-          <Toaster />
-          <Sonner />
-          <BrowserRouter>
-            <Routes>
-              {/* Public routes */}
-              <Route path="/login" element={<Login />} />
-              <Route path="/onboarding" element={<Onboarding />} />
+        <LayoutProvider>
+          <TooltipProvider>
+            <Toaster />
+            <Sonner />
+            <BrowserRouter>
+              <Routes>
+                {/* Public routes */}
+                <Route path="/login" element={<Login />} />
+                <Route path="/onboarding" element={<Onboarding />} />
 
-              {/* Protected routes */}
-              <Route path="/" element={
-                <ProtectedRoute>
-                  <Index />
-                </ProtectedRoute>
-              } />
-              <Route path="/dashboard" element={
-                <ProtectedRoute>
-                  <Dashboard />
-                </ProtectedRoute>
-              } />
-              <Route path="/practice" element={
-                <ProtectedRoute>
-                  <Practice />
-                </ProtectedRoute>
-              } />
-              <Route path="/analysis" element={
-                <ProtectedRoute>
-                  <Analysis />
-                </ProtectedRoute>
-              } />
-              <Route path="/tests" element={
-                <ProtectedRoute>
-                  <Tests />
-                </ProtectedRoute>
-              } />
-              <Route path="/test/:testId" element={
-                <ProtectedRoute>
-                  <TestTaking />
-                </ProtectedRoute>
-              } />
-              <Route path="/tests/:testId/results" element={
-                <ProtectedRoute>
-                  <TestResults />
-                </ProtectedRoute>
-              } />
-              <Route path="/upload-test" element={
-                <ProtectedRoute>
-                  <UploadTest />
-                </ProtectedRoute>
-              } />
+                {/* Protected routes */}
+                <Route path="/" element={
+                  <ProtectedRoute>
+                    <Index />
+                  </ProtectedRoute>
+                } />
+                <Route path="/dashboard" element={
+                  <ProtectedRoute>
+                    <Dashboard />
+                  </ProtectedRoute>
+                } />
+                <Route path="/practice" element={
+                  <ProtectedRoute>
+                    <Practice />
+                  </ProtectedRoute>
+                } />
+                <Route path="/analysis" element={
+                  <ProtectedRoute>
+                    <Analysis />
+                  </ProtectedRoute>
+                } />
+                <Route path="/tests" element={
+                  <ProtectedRoute>
+                    <Tests />
+                  </ProtectedRoute>
+                } />
+                <Route path="/test/:testId" element={
+                  <ProtectedRoute>
+                    <TestTaking />
+                  </ProtectedRoute>
+                } />
+                <Route path="/tests/:testId/results" element={
+                  <ProtectedRoute>
+                    <TestResults />
+                  </ProtectedRoute>
+                } />
+                <Route path="/upload-test" element={
+                  <ProtectedRoute>
+                    <UploadTest />
+                  </ProtectedRoute>
+                } />
 
-              <Route path="/settings" element={
-                <ProtectedRoute>
-                  <Settings />
-                </ProtectedRoute>
-              } />
+                <Route path="/settings" element={
+                  <ProtectedRoute>
+                    <Settings />
+                  </ProtectedRoute>
+                } />
 
-              <Route path="/admin" element={
-                <ProtectedRoute>
-                  <AdminDashboard />
-                </ProtectedRoute>
-              } />
-              <Route path="/admin/hierarchy" element={
-                <ProtectedRoute>
-                  <HierarchyManager />
-                </ProtectedRoute>
-              } />
-              <Route path="/admin/upload" element={
-                <ProtectedRoute>
-                  <AdminPaperUpload />
-                </ProtectedRoute>
-              } />
-              <Route path="/admin/repository" element={
-                <ProtectedRoute>
-                  <AdminRepository />
-                </ProtectedRoute>
-              } />
+                <Route path="/admin" element={
+                  <ProtectedRoute>
+                    <AdminDashboard />
+                  </ProtectedRoute>
+                } />
+                <Route path="/admin/hierarchy" element={
+                  <ProtectedRoute>
+                    <HierarchyManager />
+                  </ProtectedRoute>
+                } />
+                <Route path="/admin/upload" element={
+                  <ProtectedRoute>
+                    <AdminPaperUpload />
+                  </ProtectedRoute>
+                } />
+                <Route path="/admin/repository" element={
+                  <ProtectedRoute>
+                    <AdminRepository />
+                  </ProtectedRoute>
+                } />
 
-              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-              <Route path="*" element={<NotFound />} />
-            </Routes>
-          </BrowserRouter>
+                {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+            </BrowserRouter>
 
-          {/* AI Assistant */}
-          <AIAssistantButton onClick={() => setIsAIOpen(true)} isOpen={isAIOpen} />
-          <AIAssistant isOpen={isAIOpen} onClose={() => setIsAIOpen(false)} />
-        </TooltipProvider>
+            {/* AI Assistant */}
+            <AIAssistantButton onClick={() => setIsAIOpen(true)} isOpen={isAIOpen} />
+            <AIAssistant isOpen={isAIOpen} onClose={() => setIsAIOpen(false)} />
+          </TooltipProvider>
+        </LayoutProvider>
       </AuthProvider>
     </QueryClientProvider>
   );

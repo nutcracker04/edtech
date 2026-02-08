@@ -14,7 +14,6 @@ import {
   Shield,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Logo } from "@/components/ui/Logo";
 
 const navItems = [
   { icon: MessageSquare, label: "Home", href: "/", highlight: false },
@@ -60,6 +59,8 @@ export function Sidebar({ collapsed, onCollapse, mobile = false, onMobileClose }
 
   return (
     <aside
+      onMouseEnter={() => !mobile && onCollapse(false)}
+      onMouseLeave={() => !mobile && onCollapse(true)}
       className={cn(
         "h-screen bg-sidebar border-r border-sidebar-border transition-all duration-300 flex flex-col",
         mobile ? "w-full" : "fixed left-0 top-0 z-40",
@@ -67,35 +68,23 @@ export function Sidebar({ collapsed, onCollapse, mobile = false, onMobileClose }
       )}
     >
       {/* Logo */}
-      <div className="flex items-center gap-2 sm:gap-3 p-3 sm:p-4 border-b border-sidebar-border">
-        <button
-          onClick={handleLogoClick}
-          className="shrink-0 hover:opacity-80 transition-opacity flex items-center justify-center"
-          aria-label="Go to home"
-        >
-          <Logo size="md" />
-        </button>
-        {(!collapsed || mobile) && (
+      <div className="flex items-center justify-center h-16 border-b border-sidebar-border relative">
+        {(!collapsed || mobile) ? (
           <button
             onClick={handleLogoClick}
-            className="font-semibold text-sidebar-foreground hover:text-primary transition-colors text-sm sm:text-base truncate flex-1 min-w-0"
+            className="font-bold text-xl text-sidebar-foreground tracking-tight hover:opacity-80 transition-opacity w-full text-center"
             aria-label="Go to home"
           >
             Catalyst
           </button>
-        )}
-        {!mobile && (
-          <Button
-            variant="ghost"
-            size="icon"
-            className={cn(
-              "ml-auto h-6 w-6 text-muted-foreground hover:text-foreground",
-              collapsed && "mx-auto ml-0"
-            )}
-            onClick={() => onCollapse(!collapsed)}
+        ) : (
+          <button
+            onClick={handleLogoClick}
+            className="font-bold text-xl text-sidebar-foreground tracking-tight hover:opacity-80 transition-opacity w-full text-center"
+            aria-label="Go to home"
           >
-            {collapsed ? <ChevronRight className="h-4 w-4" /> : <ChevronLeft className="h-4 w-4" />}
-          </Button>
+            C
+          </button>
         )}
       </div>
 
@@ -117,9 +106,12 @@ export function Sidebar({ collapsed, onCollapse, mobile = false, onMobileClose }
               )}
             >
               <item.icon className="h-4 w-4 sm:h-5 sm:w-5 shrink-0" />
-              {(!collapsed || mobile) && (
-                <span className="text-xs sm:text-sm font-medium truncate">{item.label}</span>
-              )}
+              <span className={cn(
+                "text-xs sm:text-sm font-medium truncate transition-all duration-300 origin-left",
+                (collapsed && !mobile) ? "opacity-0 w-0 scale-x-0" : "opacity-100 w-auto scale-x-100 ml-0"
+              )}>
+                {item.label}
+              </span>
             </Link>
           );
         })}
@@ -139,9 +131,12 @@ export function Sidebar({ collapsed, onCollapse, mobile = false, onMobileClose }
               )}
             >
               <item.icon className="h-4 w-4 sm:h-5 sm:w-5 shrink-0" />
-              {(!collapsed || mobile) && (
-                <span className="text-xs sm:text-sm font-medium truncate">{item.label}</span>
-              )}
+              <span className={cn(
+                "text-xs sm:text-sm font-medium truncate transition-all duration-300 origin-left",
+                (collapsed && !mobile) ? "opacity-0 w-0 scale-x-0" : "opacity-100 w-auto scale-x-100 ml-0"
+              )}>
+                {item.label}
+              </span>
             </Link>
           );
         })}
@@ -164,9 +159,12 @@ export function Sidebar({ collapsed, onCollapse, mobile = false, onMobileClose }
               )}
             >
               <item.icon className="h-4 w-4 sm:h-5 sm:w-5 shrink-0" />
-              {(!collapsed || mobile) && (
-                <span className="text-xs sm:text-sm font-medium truncate">{item.label}</span>
-              )}
+              <span className={cn(
+                "text-xs sm:text-sm font-medium truncate transition-all duration-300 origin-left",
+                (collapsed && !mobile) ? "opacity-0 w-0 scale-x-0" : "opacity-100 w-auto scale-x-100 ml-0"
+              )}>
+                {item.label}
+              </span>
             </Link>
           );
         })}
