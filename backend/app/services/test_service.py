@@ -230,7 +230,7 @@ async def submit_test_attempts(
         total_time += time_spent
         
         processed_attempts.append({
-            "test_id": test_id,
+            "test_id": str(test_id),
             "user_id": user_id,
             "question_id": q_id,
             "selected_answer": selected,
@@ -250,13 +250,13 @@ async def submit_test_attempts(
         "completed_at": datetime.utcnow().isoformat(),
         "score": total_score,
         "max_score": len(attempts) * 4, # Max possible
-    }).eq("id", test_id).execute()
+    }).eq("id", str(test_id)).execute()
     
     # 4. Update Analysis (Topic Mastery)
     await update_mastery_stats(user_id, processed_attempts, question_map)
     
     return {
-        "test_id": test_id,
+        "test_id": str(test_id),
         "score": total_score,
         "max_score": len(attempts) * 4,
         "total_questions": len(attempts),

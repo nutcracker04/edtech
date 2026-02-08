@@ -1,6 +1,7 @@
 from pydantic import BaseModel
 from typing import List, Optional, Dict, Any
 from datetime import datetime
+from uuid import UUID
 
 
 class Option(BaseModel):
@@ -71,5 +72,5 @@ class TestCreateRequest(BaseModel):
 
 
 class TestSubmitRequest(BaseModel):
-    test_id: str
+    test_id: UUID
     attempts: List[Dict[str, Any]]

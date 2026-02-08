@@ -18,7 +18,7 @@ interface Activity {
 
 const recentActivities: Activity[] = [
   {
-    id: "1",
+    id: "00000000-0000-0000-0000-000000000001",
     type: "test",
     title: "Mechanics Full Test",
     subject: "Physics",
@@ -27,7 +27,7 @@ const recentActivities: Activity[] = [
     status: "completed",
   },
   {
-    id: "2",
+    id: "00000000-0000-0000-0000-000000000002",
     type: "practice",
     title: "Organic Chemistry - Alcohols",
     subject: "Chemistry",
@@ -36,7 +36,7 @@ const recentActivities: Activity[] = [
     status: "completed",
   },
   {
-    id: "4",
+    id: "00000000-0000-0000-0000-000000000004",
     type: "test",
     title: "Thermodynamics Quiz",
     subject: "Physics",

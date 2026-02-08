@@ -1,6 +1,7 @@
 from fastapi import APIRouter, Depends, HTTPException, status
 from typing import List, Optional
 from datetime import datetime
+from uuid import UUID
 
 from app.utils.auth import get_current_user
 from app.database import supabase
@@ -49,7 +50,7 @@ async def get_user_tests(
 
 @router.get("/{test_id}", response_model=Test)
 async def get_test(
-    test_id: str,
+    test_id: UUID,
     current_user: dict = Depends(get_current_user)
 ):
     """
@@ -152,7 +153,7 @@ async def submit_test(
 
 @router.patch("/{test_id}/start")
 async def start_test(
-    test_id: str,
+    test_id: UUID,
     current_user: dict = Depends(get_current_user)
 ):
     """
@@ -180,7 +181,7 @@ async def start_test(
 
 @router.delete("/{test_id}")
 async def delete_test(
-    test_id: str,
+    test_id: UUID,
     current_user: dict = Depends(get_current_user)
 ):
     """
@@ -205,7 +206,7 @@ async def delete_test(
 
 @router.get("/{test_id}/attempts")
 async def get_test_attempts(
-    test_id: str,
+    test_id: UUID,
     current_user: dict = Depends(get_current_user)
 ):
     """
@@ -237,7 +238,7 @@ async def get_test_attempts(
 
 @router.get("/{test_id}/results")
 async def get_test_results(
-    test_id: str,
+    test_id: UUID,
     current_user: dict = Depends(get_current_user)
 ):
     """

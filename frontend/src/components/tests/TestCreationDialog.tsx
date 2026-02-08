@@ -82,7 +82,7 @@ export const TestCreationDialog = ({ open, onOpenChange, onSuccess }: TestCreati
 
             // Configure Type and Subjects based on Tab
             if (activeTab === 'jee-main' || activeTab === 'jee-advanced') {
-                payload.type = activeTab;
+                payload.type = 'full';
                 // No specific subject_id means "All Subjects" / "Full Mock" usually
                 // You might want to explicitly send all subject IDs if backend requires it, 
                 // but usually "Mock" implies all.
