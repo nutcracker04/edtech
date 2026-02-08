@@ -1,30 +1,24 @@
 import { useState, useEffect } from "react";
 import { testApi } from "@/api/test";
 import { MainLayout } from "@/components/layout/MainLayout";
-import { Calendar, Clock, Target, ChevronRight, Filter, Plus, CalendarClock, BookOpen } from "lucide-react";
+import { ChevronRight, Filter, Plus, BookOpen, FileText, Search } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { TestScheduler } from "@/components/tests/TestScheduler";
 import { TestCreationDialog } from "@/components/tests/TestCreationDialog";
-import { ScheduledTestCard } from "@/components/tests/ScheduledTestCard";
 import { PyqsDialog } from "@/components/tests/PyqsDialog";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Separator } from "@/components/ui/separator";
-import { Checkbox } from "@/components/ui/checkbox";
-import { Label } from "@/components/ui/label";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { TestCard } from "@/components/tests/TestCard";
 import { toast } from "sonner";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 
 interface Test {
   id: string;
   title: string;
   subject: string;
-  type: "full" | "topic" | "practice";
+  type: "full" | "topic" | "adaptive";
   questions: number;
   duration: number;
   score?: number;
@@ -33,8 +27,13 @@ interface Test {
   scheduledAt?: Date | null;
 }
 
+type TestCategory = 'all' | 'my_tests' | 'pyq_chapter' | 'pyq_mock' | 'physics_pyq' | 'chemistry_pyq' | 'maths_pyq' | 'physics_topic' | 'chemistry_topic' | 'maths_topic';
+
 const Tests = () => {
   const navigate = useNavigate();
+  const [searchParams, setSearchParams] = useSearchParams();
+  const initialSearch = searchParams.get('search') || "";
+
   const [showCreateDialog, setShowCreateDialog] = useState(false);
   const [showPyqsDialog, setShowPyqsDialog] = useState(false);
   const [showScheduleDialog, setShowScheduleDialog] = useState(false);
@@ -42,7 +41,8 @@ const Tests = () => {
   const [currentTestConfig, setCurrentTestConfig] = useState<any>(null);
   const [tests, setTests] = useState<Test[]>([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [activeTab, setActiveTab] = useState<'all' | 'scheduled'>('all');
+  const [selectedCategory, setSelectedCategory] = useState<TestCategory>('all');
+  const [searchQuery, setSearchQuery] = useState(initialSearch);
 
   useEffect(() => {
     loadTests();
@@ -74,7 +74,37 @@ const Tests = () => {
     }
   };
 
-  const scheduledTests = tests.filter(t => t.status === 'upcoming');
+  const filteredTests = tests.filter(test => {
+    // Basic Search
+    if (searchQuery && !test.title.toLowerCase().includes(searchQuery.toLowerCase())) {
+      return false;
+    }
+
+    // Category Filtering
+    switch (selectedCategory) {
+      case 'my_tests':
+        return test.status === 'completed' || test.status === 'in_progress';
+      case 'pyq_chapter':
+        return test.title.toLowerCase().includes("pyq") && test.type === 'topic'; // Assumption
+      case 'physics_pyq':
+        return test.title.toLowerCase().includes("pyq") && test.subject?.toLowerCase() === 'physics';
+      case 'chemistry_pyq':
+        return test.title.toLowerCase().includes("pyq") && test.subject?.toLowerCase() === 'chemistry';
+      case 'maths_pyq':
+        return test.title.toLowerCase().includes("pyq") && test.subject?.toLowerCase() === 'mathematics';
+      case 'pyq_mock':
+        return test.title.toLowerCase().includes("pyq") && test.type === 'full';
+      case 'physics_topic':
+        return (test.type === 'topic' || test.type === 'adaptive') && test.subject?.toLowerCase() === 'physics';
+      case 'chemistry_topic':
+        return (test.type === 'topic' || test.type === 'adaptive') && test.subject?.toLowerCase() === 'chemistry';
+      case 'maths_topic':
+        return (test.type === 'topic' || test.type === 'adaptive') && test.subject?.toLowerCase() === 'mathematics';
+      default:
+        return true;
+    }
+  });
+
 
   const handleCreateSuccess = (testId?: string) => {
     // Refresh test list logic would go here
@@ -94,164 +124,208 @@ const Tests = () => {
     // TODO: Actually create test in database with scheduled_at
   };
 
-  const handleStartScheduledTest = (testId: string) => {
-    navigate(`/test/${testId}`);
-  };
+  interface SidebarItemProps {
+    active: boolean;
+    label: string;
+    onClick: () => void;
+    icon?: React.ReactNode;
+    badge?: string;
+  }
 
-  const handleEditScheduledTest = (testId: string) => {
-    toast.info('Rescheduling feature coming soon');
-  };
-
-  const handleDeleteScheduledTest = (testId: string) => {
-    toast.success('Test removed from schedule');
-    // TODO: Delete from database
-  };
-
-  const getStatusBadge = (status: Test["status"]) => {
-    switch (status) {
-      case "completed":
-        return "bg-green-500/20 text-green-400";
-      case "in_progress":
-        return "bg-primary/20 text-primary";
-      case "upcoming":
-        return "bg-secondary text-muted-foreground";
-    }
-  };
-
-  const getTypeBadge = (type: Test["type"]) => {
-    switch (type) {
-      case "full":
-        return "bg-purple-500/20 text-purple-400";
-      case "topic":
-        return "bg-blue-500/20 text-blue-400";
-      case "practice":
-        return "bg-orange-500/20 text-orange-400";
-    }
-  };
+  const SidebarItem = ({ active, label, onClick, icon, badge }: SidebarItemProps) => (
+    <button
+      onClick={onClick}
+      className={cn(
+        "flex items-center w-full px-4 py-2 text-sm font-medium transition-colors rounded-md",
+        active
+          ? "bg-primary text-primary-foreground"
+          : "text-muted-foreground hover:bg-muted hover:text-foreground"
+      )}
+    >
+      {icon && <span className="mr-2">{icon}</span>}
+      <span className="flex-1 text-left">{label}</span>
+      {badge && (
+        <Badge variant={active ? "secondary" : "outline"} className="ml-2 text-[10px] h-5">
+          {badge}
+        </Badge>
+      )}
+      {!active && <ChevronRight className="w-3 h-3 opacity-50" />}
+    </button>
+  );
 
   return (
     <MainLayout>
-      <div className="h-screen flex flex-col p-4 sm:p-6 lg:p-8 gap-4 sm:gap-6 overflow-hidden">
-        {/* Header */}
-        <div className="shrink-0 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-          <div>
-            <h1 className="text-2xl sm:text-3xl font-bold text-foreground">My Tests</h1>
-          </div>
-          <div className="flex items-center gap-2 sm:gap-3">
-            <Button variant="outline" size="sm" className="flex-1 sm:flex-initial">
-              <Filter className="h-4 w-4 sm:mr-2" />
-              <span className="hidden sm:inline">Filter</span>
+      <div className="flex h-[calc(100vh-theme(spacing.4))] overflow-hidden">
+        {/* Sidebar */}
+        <div className="w-64 flex flex-col border-r bg-card/50 hidden md:flex shrink-0">
+          <div className="p-4 border-b space-y-2">
+            <Button onClick={() => setShowCreateDialog(true)} className="w-full justify-start">
+              <Plus className="mr-2 h-4 w-4" /> Create Test
             </Button>
             <Button
-              size="sm"
-              variant="outline"
-              onClick={() => setShowPyqsDialog(true)}
-              className="flex-1 sm:flex-initial"
+              variant={selectedCategory === 'my_tests' ? 'default' : 'outline'}
+              onClick={() => setSelectedCategory('my_tests')}
+              className={cn("w-full justify-start", selectedCategory === 'my_tests' && "bg-primary text-primary-foreground hover:bg-primary/90")}
             >
-              <BookOpen className="h-4 w-4 sm:mr-2" />
-              <span className="hidden sm:inline">PYQS</span>
-              <span className="sm:hidden">PYQS</span>
-            </Button>
-            <Button
-              size="sm"
-              onClick={() => setShowCreateDialog(true)}
-              className="flex-1 sm:flex-initial"
-            >
-              <Plus className="h-4 w-4 sm:mr-2" />
-              <span className="hidden sm:inline">Create Test</span>
-              <span className="sm:hidden">Create</span>
+              <FileText className="mr-2 h-4 w-4" /> My Tests
             </Button>
           </div>
-        </div>
+          <ScrollArea className="flex-1 py-4">
+            <div className="space-y-6 px-2">
+              {/* PYQS Section */}
+              <div>
+                <h3 className="px-2 mb-2 text-xs font-semibold text-muted-foreground uppercase tracking-wider">
+                  PYQ as Chapter-wise Tests
+                </h3>
+                <div className="space-y-1">
+                  <SidebarItem
+                    label="Physics PYQ"
+                    active={selectedCategory === 'physics_pyq'}
+                    onClick={() => setSelectedCategory('physics_pyq')}
+                  />
+                  <SidebarItem
+                    label="Chemistry PYQ"
+                    active={selectedCategory === 'chemistry_pyq'}
+                    onClick={() => setSelectedCategory('chemistry_pyq')}
 
-        {/* Stats Summary */}
-        <div className="shrink-0 grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
-          <Card>
-            <CardContent className="pt-4">
-              <p className="text-xs sm:text-sm text-muted-foreground">Total Tests</p>
-              <p className="text-xl sm:text-2xl font-bold text-foreground">23</p>
-            </CardContent>
-          </Card>
-          <Card>
-            <CardContent className="pt-4">
-              <p className="text-xs sm:text-sm text-muted-foreground">Avg Score</p>
-              <p className="text-xl sm:text-2xl font-bold text-foreground">76%</p>
-            </CardContent>
-          </Card>
-          <Card>
-            <CardContent className="pt-4">
-              <p className="text-xs sm:text-sm text-muted-foreground">Best Score</p>
-              <p className="text-xl sm:text-2xl font-bold text-green-400">92%</p>
-            </CardContent>
-          </Card>
-          <Card>
-            <CardContent className="pt-4">
-              <p className="text-xs sm:text-sm text-muted-foreground">Time Spent</p>
-              <p className="text-xl sm:text-2xl font-bold text-foreground">42h</p>
-            </CardContent>
-          </Card>
-        </div>
-
-        {/* Tabs for All Tests vs Scheduled */}
-        <Tabs value={activeTab} onValueChange={(v) => setActiveTab(v as 'all' | 'scheduled')} className="flex-1 flex flex-col min-h-0">
-          <TabsList className="shrink-0 w-fit">
-            <TabsTrigger value="all">All Tests</TabsTrigger>
-            <TabsTrigger value="scheduled">
-              <CalendarClock className="h-4 w-4 mr-2" />
-              Scheduled ({scheduledTests.length})
-            </TabsTrigger>
-          </TabsList>
-
-          {/* All Tests Tab */}
-          <TabsContent value="all" className="flex-1 min-h-0 mt-4 data-[state=active]:flex flex-col">
-            <ScrollArea className="h-full">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pb-4">
-                {tests.map((test) => (
-                  <TestCard key={test.id} test={test} />
-                ))}
+                  />
+                  <SidebarItem
+                    label="Mathematics PYQ"
+                    active={selectedCategory === 'maths_pyq'}
+                    onClick={() => setSelectedCategory('maths_pyq')}
+                  />
+                </div>
               </div>
-              {tests.length === 0 && (
-                <div className="flex flex-col items-center justify-center h-40 text-muted-foreground">
-                  <p>No tests found</p>
-                  <Button variant="link" onClick={() => setShowCreateDialog(true)}>Create your first test</Button>
-                </div>
-              )}
-            </ScrollArea>
-          </TabsContent>
 
-          {/* Scheduled Tests Tab */}
-          <TabsContent value="scheduled" className="flex-1 min-h-0 mt-4 data-[state=active]:flex flex-col">
-            <ScrollArea className="h-full">
-              {scheduledTests.length === 0 ? (
-                <Card>
-                  <CardContent className="py-12 text-center">
-                    <CalendarClock className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
-                    <h3 className="text-lg font-medium mb-2">No Scheduled Tests</h3>
-                    <p className="text-sm text-muted-foreground mb-4">
-                      Schedule tests to stay organized and get reminders
-                    </p>
-                    <Button onClick={() => setShowCreateDialog(true)}>
-                      <Plus className="h-4 w-4 mr-2" />
-                      Schedule a Test
-                    </Button>
-                  </CardContent>
-                </Card>
-              ) : (
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pb-4">
-                  {scheduledTests.map((test) => (
-                    <ScheduledTestCard
-                      key={test.id}
-                      test={test as any}
-                      onStart={handleStartScheduledTest}
-                      onEdit={handleEditScheduledTest}
-                      onDelete={handleDeleteScheduledTest}
-                    />
-                  ))}
+              {/* PYQs as Mock Tests */}
+              <div>
+                <h3 className="px-2 mb-2 text-xs font-semibold text-muted-foreground uppercase tracking-wider">
+                  PYQs as Mock Tests
+                </h3>
+                <div className="space-y-1">
+                  {/* Placeholder items from image */}
+                  <SidebarItem
+                    label="2026 PYQs"
+                    active={false}
+                    onClick={() => { }}
+                  />
+                  <SidebarItem
+                    label="2025 PYQs"
+                    active={false}
+                    onClick={() => { }}
+                  />
+                  <SidebarItem
+                    label="2024 PYQs"
+                    active={false}
+                    onClick={() => { }}
+                  />
+                  <SidebarItem
+                    label="2023 PYQs"
+                    active={false}
+                    onClick={() => { }}
+                  />
                 </div>
-              )}
+              </div>
+
+              {/* Topic & Chapter wise */}
+              <div>
+                <h3 className="px-2 mb-2 text-xs font-semibold text-muted-foreground uppercase tracking-wider">
+                  Topic & Chapter-wise
+                </h3>
+                <div className="space-y-1">
+                  <SidebarItem
+                    label="Physics"
+                    active={selectedCategory === 'physics_topic'}
+                    onClick={() => setSelectedCategory('physics_topic')}
+                  />
+                  <SidebarItem
+                    label="Chemistry"
+                    active={selectedCategory === 'chemistry_topic'}
+                    onClick={() => setSelectedCategory('chemistry_topic')}
+                  />
+                  <SidebarItem
+                    label="Mathematics"
+                    active={selectedCategory === 'maths_topic'}
+                    onClick={() => setSelectedCategory('maths_topic')}
+                  />
+                </div>
+              </div>
+            </div>
+          </ScrollArea>
+        </div>
+
+        {/* Main Content */}
+        <div className="flex-1 flex flex-col min-w-0 bg-background">
+          {/* Content Area */}
+          <div className="flex-1 overflow-hidden p-6 relative">
+            <ScrollArea className="h-full pr-4">
+              {/* Filter Chips / Tabs equivalent */}
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+                {selectedCategory !== 'my_tests' && (
+                  <div className="flex gap-2 overflow-x-auto pb-2 sm:pb-0">
+                    <Button
+                      variant={selectedCategory === 'all' ? 'default' : 'outline'}
+                      size="sm"
+                      className="rounded-full"
+                      onClick={() => setSelectedCategory('all')}
+                    >
+                      All
+                    </Button>
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="rounded-full"
+                    >
+                      Available
+                    </Button>
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="rounded-full"
+                    >
+                      Upcoming
+                    </Button>
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="rounded-full"
+                      onClick={() => setSelectedCategory('my_tests')}
+                    >
+                      Attempted
+                    </Button>
+                  </div>
+                )}
+                {/* Search Bar */}
+                <div className="relative w-full sm:w-auto">
+                  <Search className="absolute left-2 top-2.5 h-4 w-4 text-muted-foreground" />
+                  <input
+                    placeholder="Search Tests"
+                    className="pl-8 h-9 w-full sm:w-64 rounded-md border border-input bg-background px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                  />
+                </div>
+              </div>
+
+              {/* Test Grid */}
+              <div className="grid grid-cols-1 xl:grid-cols-2 gap-4 pb-10">
+                {filteredTests.length > 0 ? (
+                  filteredTests.map((test) => (
+                    <TestCard key={test.id} test={test} />
+                  ))
+                ) : (
+                  <div className="col-span-full flex flex-col items-center justify-center py-20 text-muted-foreground">
+                    <div className="h-16 w-16 bg-muted/50 rounded-full flex items-center justify-center mb-4">
+                      <FileText className="h-8 w-8 opacity-50" />
+                    </div>
+                    <h3 className="text-lg font-medium mb-1">No tests found</h3>
+                    <p>Try adjusting your search or filters</p>
+                  </div>
+                )}
+              </div>
             </ScrollArea>
-          </TabsContent>
-        </Tabs>
+          </div>
+        </div>
       </div>
 
       {/* Create Test Dialog */}

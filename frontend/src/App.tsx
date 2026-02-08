@@ -11,7 +11,7 @@ import Login from "./pages/Login";
 import Onboarding from "./pages/Onboarding";
 import Index from "./pages/Index";
 import Dashboard from "./pages/Dashboard";
-import Practice from "./pages/Practice";
+
 import Analysis from "./pages/Analysis";
 import Tests from "./pages/Tests";
 import UploadTest from "./pages/UploadTest";
@@ -61,11 +61,7 @@ const App = () => {
                     <Dashboard />
                   </ProtectedRoute>
                 } />
-                <Route path="/practice" element={
-                  <ProtectedRoute>
-                    <Practice />
-                  </ProtectedRoute>
-                } />
+
                 <Route path="/analysis" element={
                   <ProtectedRoute>
                     <Analysis />

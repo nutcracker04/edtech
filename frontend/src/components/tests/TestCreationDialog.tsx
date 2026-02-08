@@ -90,7 +90,7 @@ export const TestCreationDialog = ({ open, onOpenChange, onSuccess }: TestCreati
     };
 
     const getFormattedTitle = () => {
-        return customMode === 'adaptive' ? 'Adaptive Practice' : 'Custom Practice';
+        return customMode === 'adaptive' ? 'Adaptive Test' : 'Chapter Practice';
     };
 
     const currentSubjectObj = hierarchy.find(h => h.id === selectedSubject);

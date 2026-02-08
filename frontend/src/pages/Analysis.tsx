@@ -314,12 +314,12 @@ const Analysis = () => {
                               {area.recommendation}
                             </div>
                             <Button
-                              variant="link"
-                              size="sm"
-                              className="h-auto p-0 text-[11px] text-primary/60 hover:text-primary mr-auto"
-                              onClick={() => navigate(`/practice?topic=${encodeURIComponent(area.topic)}`)}
+                              className="w-full bg-primary/10 hover:bg-primary/20 text-primary border-none shadow-sm h-8 text-xs font-bold"
+                              variant="ghost"
+                              onClick={() => navigate(`/tests?search=${encodeURIComponent(area.topic)}`)}
                             >
-                              Practice this topic →
+                              Practice Topic
+                              <ChevronRight className="h-3 w-3 ml-auto opacity-70" />
                             </Button>
                           </div>
                         </div>
@@ -483,15 +483,13 @@ const Analysis = () => {
                               </span>
                             </div>
                           </div>
-                          <div className="pt-2">
-                            <Button
-                              className="w-full bg-primary hover:bg-primary/90 shadow-sm h-9 text-xs font-bold"
-                              onClick={() => navigate(`/practice?topic=${encodeURIComponent(metric.topic)}`)}
-                            >
-                              Practice Topic
-                              <ChevronRight className="h-3.5 w-3.5 ml-auto opacity-70" />
-                            </Button>
-                          </div>
+                          <Button
+                            className="w-full bg-primary hover:bg-primary/90 shadow-sm h-9 text-xs font-bold"
+                            onClick={() => navigate(`/tests?search=${encodeURIComponent(metric.topic)}`)}
+                          >
+                            Practice Topic
+                            <ChevronRight className="h-3.5 w-3.5 ml-auto opacity-70" />
+                          </Button>
                         </CardContent>
                       </Card>
                     ))}
@@ -574,16 +572,13 @@ const Analysis = () => {
                                     />
                                   </div>
                                 </div>
-                                <div className="pt-2">
-                                  <Button
-                                    className="w-full bg-secondary/50 hover:bg-secondary text-foreground hover:text-primary border border-transparent shadow-sm h-9 text-xs font-bold"
-                                    variant="secondary"
-                                    onClick={() => navigate(`/practice?topic=${encodeURIComponent(metric.topic)}`)}
-                                  >
-                                    Practice Topic
-                                    <ChevronRight className="h-3.5 w-3.5 ml-auto opacity-70" />
-                                  </Button>
-                                </div>
+                                <Button
+                                  className="w-full bg-primary hover:bg-primary/90 shadow-sm h-9 text-xs font-bold"
+                                  onClick={() => navigate(`/tests?search=${encodeURIComponent(metric.topic)}`)}
+                                >
+                                  Practice Topic
+                                  <ChevronRight className="h-3.5 w-3.5 ml-auto opacity-70" />
+                                </Button>
                               </CardContent>
                             </Card>
                           ))}
@@ -597,7 +592,7 @@ const Analysis = () => {
           </div>
         </div>
       </div>
-    </MainLayout>
+    </MainLayout >
   );
 };
 

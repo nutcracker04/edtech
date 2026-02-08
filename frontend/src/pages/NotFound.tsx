@@ -63,10 +63,10 @@ const NotFound = () => {
             Dashboard
           </button>
           <button
-            onClick={() => navigate("/practice")}
+            onClick={() => navigate("/analysis")}
             className="p-3 rounded-lg hover:bg-secondary/50 transition-colors text-sm text-muted-foreground hover:text-foreground"
           >
-            Practice
+            Analysis
           </button>
           <button
             onClick={() => navigate("/tests")}

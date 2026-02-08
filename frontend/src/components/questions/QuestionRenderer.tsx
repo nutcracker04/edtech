@@ -1,5 +1,5 @@
 import { Question, AnswerType } from '@/types';
-import { QuestionCard } from '@/components/practice/QuestionCard';
+import { QuestionCard } from './QuestionCard';
 import { IntegerInput } from './IntegerInput';
 import { MultiSelect } from './MultiSelect';
 import { MatchFollowing } from './MatchFollowing';

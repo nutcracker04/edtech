@@ -9,7 +9,7 @@ interface Test {
     id: string;
     title: string;
     subject: string;
-    type: "full" | "topic" | "practice";
+    type: "full" | "topic" | "adaptive";
     questions: number;
     duration: number;
     score?: number;
@@ -44,7 +44,7 @@ export function TestCard({ test }: TestCardProps) {
                 return "bg-purple-500/10 text-purple-700 border-purple-200";
             case "topic":
                 return "bg-blue-500/10 text-blue-700 border-blue-200";
-            case "practice":
+            case "adaptive":
                 return "bg-orange-500/10 text-orange-700 border-orange-200";
             default:
                 return "bg-secondary";
@@ -61,7 +61,7 @@ export function TestCard({ test }: TestCardProps) {
                         </CardTitle>
                         <div className="flex flex-wrap items-center gap-2">
                             <Badge variant="outline" className={cn("text-xs font-medium border", getTypeBadge(test.type))}>
-                                {test.type === 'full' ? 'Full Test' : test.type === 'topic' ? 'Topic Test' : 'Practice'}
+                                {test.type === 'full' ? 'Full Test' : test.type === 'topic' ? 'Topic Test' : 'Adaptive'}
                             </Badge>
                             <Badge variant="outline" className={cn("text-xs capitalize border", getStatusBadge(test.status))}>
                                 {test.status.replace("_", " ")}
