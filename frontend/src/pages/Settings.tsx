@@ -33,7 +33,7 @@ const Settings = () => {
   // Preferences
   const [notifications, setNotifications] = useState(true);
   const [dailyReminders, setDailyReminders] = useState(true);
-  const [darkMode, setDarkMode] = useState(true);
+  const [darkMode, setDarkMode] = useState(false);
   const [dailyGoal, setDailyGoal] = useState("20");
   const [difficultyLevel, setDifficultyLevel] = useState<'easy' | 'adaptive' | 'hard'>("adaptive");
   const [focusSubjects, setFocusSubjects] = useState<string[]>([]);
@@ -44,6 +44,15 @@ const Settings = () => {
   useEffect(() => {
     loadUserData();
   }, []);
+
+  // Update theme when darkMode state changes
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [darkMode]);
 
   const loadUserData = async () => {
     try {
@@ -91,7 +100,7 @@ const Settings = () => {
         setDifficultyLevel(preferences.difficulty_level as 'easy' | 'adaptive' | 'hard' || 'adaptive');
         setNotifications(preferences.notifications_enabled ?? true);
         setDailyReminders(preferences.daily_reminders ?? true);
-        setDarkMode(preferences.dark_mode ?? true);
+        setDarkMode(preferences.dark_mode ?? false);
       }
 
     } catch (error: any) {
@@ -379,6 +388,84 @@ const Settings = () => {
                   }}
                   className="shrink-0"
                 />
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* ADHD-Friendly Accessibility Section */}
+        <Card>
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2">
+              🧠 Accessibility
+              <span className="text-xs font-normal text-muted-foreground">(ADHD-Friendly Options)</span>
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="p-0">
+            <div className="divide-y divide-border">
+              {/* Reduce Animations */}
+              <div className="px-4 sm:px-6 py-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+                <div className="flex items-center gap-3 flex-1 min-w-0">
+                  <div className="p-2 rounded-lg bg-secondary shrink-0">
+                    <span className="text-lg">✨</span>
+                  </div>
+                  <div className="min-w-0">
+                    <p className="font-medium text-foreground text-sm sm:text-base">Reduce Animations</p>
+                    <p className="text-xs sm:text-sm text-muted-foreground">Less motion for reduced distraction</p>
+                  </div>
+                </div>
+                <Switch className="shrink-0" />
+              </div>
+
+              {/* Timer Preference */}
+              <div className="px-4 sm:px-6 py-4 space-y-3">
+                <div className="flex items-center gap-3">
+                  <div className="p-2 rounded-lg bg-secondary shrink-0">
+                    <span className="text-lg">⏱️</span>
+                  </div>
+                  <div className="min-w-0">
+                    <p className="font-medium text-foreground text-sm sm:text-base">Test Timer Preference</p>
+                    <p className="text-xs sm:text-sm text-muted-foreground">Choose how you see time during tests</p>
+                  </div>
+                </div>
+                <div className="grid grid-cols-3 gap-2 ml-11">
+                  <Button variant="outline" size="sm" className="text-xs">Hidden</Button>
+                  <Button variant="default" size="sm" className="text-xs">Optional</Button>
+                  <Button variant="outline" size="sm" className="text-xs">Always On</Button>
+                </div>
+              </div>
+
+              {/* Font Size */}
+              <div className="px-4 sm:px-6 py-4 space-y-3">
+                <div className="flex items-center gap-3">
+                  <div className="p-2 rounded-lg bg-secondary shrink-0">
+                    <span className="text-lg">🔤</span>
+                  </div>
+                  <div className="min-w-0">
+                    <p className="font-medium text-foreground text-sm sm:text-base">Text Size</p>
+                    <p className="text-xs sm:text-sm text-muted-foreground">Make text larger for easier reading</p>
+                  </div>
+                </div>
+                <div className="grid grid-cols-4 gap-2 ml-11">
+                  <Button variant="outline" size="sm" className="text-xs">S</Button>
+                  <Button variant="default" size="sm" className="text-sm font-medium">M</Button>
+                  <Button variant="outline" size="sm" className="text-base">L</Button>
+                  <Button variant="outline" size="sm" className="text-lg">XL</Button>
+                </div>
+              </div>
+
+              {/* High Contrast */}
+              <div className="px-4 sm:px-6 py-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+                <div className="flex items-center gap-3 flex-1 min-w-0">
+                  <div className="p-2 rounded-lg bg-secondary shrink-0">
+                    <span className="text-lg">🎨</span>
+                  </div>
+                  <div className="min-w-0">
+                    <p className="font-medium text-foreground text-sm sm:text-base">High Contrast Mode</p>
+                    <p className="text-xs sm:text-sm text-muted-foreground">Increase color contrast</p>
+                  </div>
+                </div>
+                <Switch className="shrink-0" />
               </div>
             </div>
           </CardContent>

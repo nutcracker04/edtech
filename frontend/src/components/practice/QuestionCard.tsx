@@ -78,34 +78,37 @@ export function QuestionCard({
         </div>
       </div>
 
-      {/* Question */}
+      {/* Question - ADHD-friendly: Larger, more readable */}
       <div className="p-6">
-        <p className="text-lg text-foreground leading-relaxed mb-6 font-medium">{question}</p>
+        <p className="text-xl text-foreground leading-relaxed mb-6 font-medium">{question}</p>
 
-        {/* Options */}
+        {/* Options - Large touch targets (52px+) */}
         <div className="space-y-3">
           {options.map((option, index) => (
             <button
               key={option.id}
               onClick={() => handleSelect(option.id)}
               className={cn(
-                "w-full text-left p-4 rounded-lg border transition-all duration-200 flex items-start gap-3",
+                "w-full text-left p-4 min-h-[52px] rounded-xl border-2 transition-all duration-200 flex items-start gap-3",
+                "active:scale-[0.98]", // Instant feedback on tap
                 getOptionStyle(option.id)
               )}
             >
               <span className={cn(
-                "w-6 h-6 rounded-full flex items-center justify-center text-sm font-medium shrink-0 transition-colors",
-                selectedAnswer === option.id ? "bg-primary text-primary-foreground" : "bg-secondary text-muted-foreground"
+                "w-8 h-8 rounded-full flex items-center justify-center text-base font-semibold shrink-0 transition-all",
+                selectedAnswer === option.id
+                  ? "bg-primary text-primary-foreground scale-110"
+                  : "bg-secondary text-muted-foreground"
               )}>
                 {String.fromCharCode(65 + index)}
               </span>
-              <span className="text-foreground flex-1">{option.text}</span>
+              <span className="text-foreground flex-1 text-base leading-relaxed pt-0.5">{option.text}</span>
 
               {showFeedback && isAnswered && option.id === correctAnswer && (
-                <CheckCircle className="h-5 w-5 text-green-500 shrink-0" />
+                <CheckCircle className="h-6 w-6 text-success shrink-0" />
               )}
               {showFeedback && isAnswered && option.id === selectedAnswer && !isCorrect && (
-                <XCircle className="h-5 w-5 text-red-500 shrink-0" />
+                <XCircle className="h-6 w-6 text-destructive shrink-0" />
               )}
             </button>
           ))}

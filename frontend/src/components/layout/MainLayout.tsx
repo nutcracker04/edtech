@@ -16,8 +16,8 @@ export function MainLayout({ children }: MainLayoutProps) {
   const isMobile = useIsMobile();
 
   useEffect(() => {
-    // Ensure dark mode is enabled
-    document.documentElement.classList.add("dark");
+    // Ensure light mode is enabled by default
+    document.documentElement.classList.remove("dark");
   }, []);
 
   return (
@@ -41,11 +41,11 @@ export function MainLayout({ children }: MainLayoutProps) {
             </Button>
           </SheetTrigger>
           <SheetContent side="left" className="w-[85vw] max-w-sm p-0">
-            <Sidebar 
-              collapsed={false} 
-              onCollapse={() => {}} 
-              mobile={true} 
-              onMobileClose={() => setMobileMenuOpen(false)} 
+            <Sidebar
+              collapsed={false}
+              onCollapse={() => { }}
+              mobile={true}
+              onMobileClose={() => setMobileMenuOpen(false)}
             />
           </SheetContent>
         </Sheet>

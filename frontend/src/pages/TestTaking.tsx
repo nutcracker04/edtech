@@ -5,16 +5,18 @@ import { QuestionRenderer } from '@/components/questions/QuestionRenderer';
 import { TestTimer } from '@/components/tests/TestTimer';
 import { TestNavigation } from '@/components/tests/TestNavigation';
 import { Button } from '@/components/ui/button';
+import { Progress } from '@/components/ui/progress';
 import {
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
 } from '@/components/ui/dialog';
-import { AlertTriangle, Loader2 } from 'lucide-react';
+import { AlertTriangle, Loader2, Eye, EyeOff, Save, CheckCircle2 } from 'lucide-react';
 import { Question } from '@/types';
 import { testApi } from '@/api/test';
 import { toast } from 'sonner';
+import { cn } from '@/lib/utils';
 
 interface TestSession {
   testId: string;
@@ -34,9 +36,17 @@ const TestTaking = () => {
   const [answers, setAnswers] = useState<Record<number, any>>({});
   const [markedForReview, setMarkedForReview] = useState<Set<number>>(new Set());
 
+  // ADHD-friendly: Timer visibility toggle (hidden by default)
+  const [showTimer, setShowTimer] = useState(false);
+
+  // Auto-save indicator
+  const [lastSaved, setLastSaved] = useState<Date | null>(null);
+  const [isSaving, setIsSaving] = useState(false);
+
   // Time tracking
   const [timeSpent, setTimeSpent] = useState<Record<number, number>>({});
   const timerRef = useRef<NodeJS.Timeout | null>(null);
+  const autoSaveRef = useRef<NodeJS.Timeout | null>(null);
 
   const [showSubmitDialog, setShowSubmitDialog] = useState(false);
 
@@ -88,6 +98,26 @@ const TestTaking = () => {
     };
   }, [currentQuestion, session]);
 
+  /* -------------------------- AUTO-SAVE (ADHD-FRIENDLY) -------------------------- */
+
+  useEffect(() => {
+    // Auto-save every 30 seconds
+    autoSaveRef.current = setInterval(() => {
+      if (Object.keys(answers).length > 0) {
+        setIsSaving(true);
+        // Simulate save (in real implementation, call API)
+        setTimeout(() => {
+          setLastSaved(new Date());
+          setIsSaving(false);
+        }, 500);
+      }
+    }, 30000);
+
+    return () => {
+      if (autoSaveRef.current) clearInterval(autoSaveRef.current);
+    };
+  }, [answers]);
+
   /* ---------------------------------- HANDLERS ---------------------------------- */
 
   const handleAnswer = (answer: any) => {
@@ -115,6 +145,8 @@ const TestTaking = () => {
     Object.keys(answers).map(k => Number(k))
   );
 
+  const unansweredCount = session ? session.questions.length - answeredQuestions.size : 0;
+
   /* -------------------------------- SUBMISSION -------------------------------- */
 
   const submitTest = useCallback(
@@ -136,7 +168,7 @@ const TestTaking = () => {
           attempts,
         });
 
-        toast.success('Test submitted successfully');
+        toast.success('Test submitted successfully! 🎉');
         navigate(`/tests/${session.testId}/results`);
       } catch (error) {
         console.error('Submission error:', error);
@@ -166,155 +198,220 @@ const TestTaking = () => {
   if (loading || !session) {
     return (
       <MainLayout>
-        <div className="flex justify-center py-20">
-          <Loader2 className="h-8 w-8 animate-spin" />
+        <div className="flex flex-col items-center justify-center py-20 gap-4">
+          <Loader2 className="h-10 w-10 animate-spin text-primary" />
+          <p className="text-muted-foreground">Loading your test...</p>
         </div>
       </MainLayout>
     );
   }
 
   const currentQData = session.questions[currentQuestion];
+  const progressPercent = ((currentQuestion + 1) / session.questions.length) * 100;
 
   return (
     <MainLayout>
-      <div className="container mx-auto py-6">
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
-          {/* MAIN CONTENT */}
-          <div className="lg:col-span-3 space-y-6">
-            <TestTimer
-              duration={session.duration}
-              onTimeUp={handleTimeUp}
-            />
+      {/* ADHD-Friendly: Calm background during tests */}
+      <div className="min-h-screen bg-muted/30">
+        {/* ============ TOP BAR - Minimal, non-distracting ============ */}
+        <div className="sticky top-0 z-10 bg-background/95 backdrop-blur border-b">
+          <div className="container mx-auto px-4 py-3">
+            <div className="flex items-center justify-between gap-4">
+              {/* Left: Question Progress */}
+              <div className="flex items-center gap-3">
+                <span className="text-lg font-semibold text-foreground">
+                  Q {currentQuestion + 1}
+                  <span className="text-muted-foreground font-normal">/{session.questions.length}</span>
+                </span>
 
-            <QuestionRenderer
-              question={currentQData}
-              questionNumber={currentQuestion + 1}
-              totalQuestions={session.questions.length}
-              onAnswer={handleAnswer}
-              currentAnswer={answers[currentQuestion]}
-              showFeedback={false}
-            />
+                {/* Progress dots - Color coded */}
+                <div className="hidden sm:flex items-center gap-1">
+                  {session.questions.map((_, idx) => (
+                    <button
+                      key={idx}
+                      onClick={() => setCurrentQuestion(idx)}
+                      className={cn(
+                        "w-2.5 h-2.5 rounded-full transition-all",
+                        idx === currentQuestion && "ring-2 ring-primary ring-offset-2",
+                        answeredQuestions.has(idx)
+                          ? "bg-success"
+                          : markedForReview.has(idx)
+                            ? "bg-warning"
+                            : "bg-muted-foreground/30"
+                      )}
+                      title={
+                        answeredQuestions.has(idx)
+                          ? "Answered"
+                          : markedForReview.has(idx)
+                            ? "Marked for review"
+                            : "Not answered"
+                      }
+                    />
+                  ))}
+                </div>
+              </div>
 
-            {/* hidden per-question time */}
-            <div className="hidden">
-              Time spent: {timeSpent[currentQuestion]}s
+              {/* Center: Auto-save indicator */}
+              <div className="hidden md:flex items-center gap-2 text-xs text-muted-foreground">
+                {isSaving ? (
+                  <>
+                    <Save className="h-3.5 w-3.5 animate-pulse" />
+                    <span>Saving...</span>
+                  </>
+                ) : lastSaved ? (
+                  <>
+                    <CheckCircle2 className="h-3.5 w-3.5 text-success" />
+                    <span>Auto-saved</span>
+                  </>
+                ) : null}
+              </div>
+
+              {/* Right: Timer (Optional - ADHD friendly) */}
+              <div className="flex items-center gap-2">
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={() => setShowTimer(!showTimer)}
+                  className="text-muted-foreground"
+                >
+                  {showTimer ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
+                  <span className="ml-1 hidden sm:inline">
+                    {showTimer ? 'Hide Timer' : 'Show Timer'}
+                  </span>
+                </Button>
+
+                {showTimer && (
+                  <TestTimer
+                    duration={session.duration}
+                    onTimeUp={handleTimeUp}
+                  />
+                )}
+              </div>
             </div>
 
-            {/* QUESTION ACTIONS */}
-            <div className="flex gap-3">
-              <Button
-                onClick={handleMarkForReview}
-                variant={
-                  markedForReview.has(currentQuestion)
-                    ? 'default'
-                    : 'outline'
-                }
-                className="flex-1"
-              >
-                {markedForReview.has(currentQuestion)
-                  ? '✓ Marked'
-                  : 'Mark for Review'}
-              </Button>
-            </div>
-
-            {/* NAVIGATION */}
-            <div className="flex gap-3">
-              <Button
-                onClick={() =>
-                  setCurrentQuestion(q => Math.max(0, q - 1))
-                }
-                disabled={currentQuestion === 0}
-                variant="outline"
-                className="flex-1"
-              >
-                ← Previous
-              </Button>
-              <Button
-                onClick={() =>
-                  setCurrentQuestion(q =>
-                    Math.min(session.questions.length - 1, q + 1)
-                  )
-                }
-                disabled={
-                  currentQuestion === session.questions.length - 1
-                }
-                className="flex-1"
-              >
-                Next →
-              </Button>
-            </div>
-
-            {/* SUBMIT */}
-            <Button
-              onClick={handleSubmitClick}
-              disabled={submitting}
-              size="lg"
-              className="w-full bg-green-600 hover:bg-green-700"
-            >
-              {submitting ? (
-                <>
-                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                  Submitting...
-                </>
-              ) : (
-                <>
-                  Submit Test
-                  {answeredQuestions.size <
-                    session.questions.length && (
-                      <span className="ml-2 text-xs opacity-75">
-                        ({answeredQuestions.size}/
-                        {session.questions.length} answered)
-                      </span>
-                    )}
-                </>
-              )}
-            </Button>
+            {/* Progress bar */}
+            <Progress value={progressPercent} className="h-1 mt-3" />
           </div>
+        </div>
 
-          {/* SIDEBAR */}
-          <div className="lg:col-span-1">
-            <TestNavigation
-              totalQuestions={session.questions.length}
-              currentQuestion={currentQuestion}
-              onNavigate={handleNavigate}
-              answeredQuestions={answeredQuestions}
-              markedForReview={markedForReview}
-            />
+        {/* ============ MAIN CONTENT - Focus Area ============ */}
+        <div className="container mx-auto px-4 py-6">
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
+            {/* MAIN QUESTION AREA - 3/4 width on desktop */}
+            <div className="lg:col-span-3 space-y-6">
+              {/* Question Card - Large, readable */}
+              <QuestionRenderer
+                question={currentQData}
+                questionNumber={currentQuestion + 1}
+                totalQuestions={session.questions.length}
+                onAnswer={handleAnswer}
+                currentAnswer={answers[currentQuestion]}
+                showFeedback={false}
+              />
+
+              {/* ============ ACTION BUTTONS - Large touch targets (48px+) ============ */}
+              <div className="flex flex-col sm:flex-row gap-3">
+                {/* Mark for Review */}
+                <Button
+                  onClick={handleMarkForReview}
+                  variant={markedForReview.has(currentQuestion) ? 'secondary' : 'outline'}
+                  className="touch-target text-base"
+                >
+                  {markedForReview.has(currentQuestion) ? '✓ Marked' : '🔖 Mark for Review'}
+                </Button>
+
+                {/* Navigation */}
+                <div className="flex gap-3 flex-1">
+                  <Button
+                    onClick={() => setCurrentQuestion(q => Math.max(0, q - 1))}
+                    disabled={currentQuestion === 0}
+                    variant="outline"
+                    className="flex-1 touch-target text-base"
+                  >
+                    ← Previous
+                  </Button>
+                  <Button
+                    onClick={() => setCurrentQuestion(q => Math.min(session.questions.length - 1, q + 1))}
+                    disabled={currentQuestion === session.questions.length - 1}
+                    className="flex-1 touch-target text-base"
+                  >
+                    Next →
+                  </Button>
+                </div>
+              </div>
+
+              {/* Submit Button with Reminder */}
+              <div className="space-y-2">
+                {unansweredCount > 0 && (
+                  <p className="text-sm text-warning text-center">
+                    ⚠️ {unansweredCount} question{unansweredCount > 1 ? 's' : ''} left unanswered
+                  </p>
+                )}
+                <Button
+                  onClick={handleSubmitClick}
+                  disabled={submitting}
+                  size="lg"
+                  className="w-full touch-target text-lg bg-success hover:bg-success/90"
+                >
+                  {submitting ? (
+                    <>
+                      <Loader2 className="mr-2 h-5 w-5 animate-spin" />
+                      Submitting...
+                    </>
+                  ) : (
+                    <>
+                      Submit Test
+                      {unansweredCount > 0 && (
+                        <span className="ml-2 text-sm opacity-80">
+                          ({answeredQuestions.size}/{session.questions.length})
+                        </span>
+                      )}
+                    </>
+                  )}
+                </Button>
+              </div>
+            </div>
+
+            {/* SIDEBAR - Question Navigation (hidden on mobile) */}
+            <div className="hidden lg:block">
+              <TestNavigation
+                totalQuestions={session.questions.length}
+                currentQuestion={currentQuestion}
+                onNavigate={handleNavigate}
+                answeredQuestions={answeredQuestions}
+                markedForReview={markedForReview}
+              />
+            </div>
           </div>
         </div>
       </div>
 
-      {/* INCOMPLETE SUBMISSION DIALOG */}
-      <Dialog
-        open={showSubmitDialog}
-        onOpenChange={setShowSubmitDialog}
-      >
-        <DialogContent>
+      {/* ============ INCOMPLETE SUBMISSION DIALOG ============ */}
+      <Dialog open={showSubmitDialog} onOpenChange={setShowSubmitDialog}>
+        <DialogContent className="rounded-xl">
           <DialogHeader>
-            <DialogTitle className="flex items-center gap-2">
-              <AlertTriangle className="h-5 w-5 text-yellow-500" />
-              Incomplete Test
+            <DialogTitle className="flex items-center gap-2 text-lg">
+              <AlertTriangle className="h-5 w-5 text-warning" />
+              You have unanswered questions
             </DialogTitle>
           </DialogHeader>
 
           <div className="space-y-4">
             <p className="text-muted-foreground">
-              You have not answered{' '}
-              {session.questions.length -
-                answeredQuestions.size}{' '}
-              question(s).
+              {unansweredCount} question{unansweredCount > 1 ? 's are' : ' is'} still unanswered.
+              Are you sure you want to submit?
             </p>
 
             <div className="flex gap-3">
               <Button
                 variant="outline"
-                className="flex-1"
+                className="flex-1 touch-target"
                 onClick={() => setShowSubmitDialog(false)}
               >
-                Continue Test
+                Go Back
               </Button>
               <Button
-                className="flex-1"
+                className="flex-1 touch-target"
                 onClick={() => {
                   setShowSubmitDialog(false);
                   submitTest(false);

@@ -25,7 +25,7 @@ const generateHeatmapData = () => {
 const heatmapData = generateHeatmapData();
 
 const getHeatColor = (intensity: number) => {
-  switch(intensity) {
+  switch (intensity) {
     case 0: return "bg-secondary/20";
     case 1: return "bg-emerald-400/40";
     case 2: return "bg-emerald-500/60";
@@ -44,15 +44,17 @@ export function StreakCard() {
       <CardHeader>
         {/* Header with Streak Info */}
         <div className="flex items-center gap-3">
-          <div className="h-12 w-12 rounded-lg bg-gradient-to-br from-orange-400 to-red-500 flex items-center justify-center shadow-lg">
-            <Flame className="h-6 w-6 text-white" />
+          <div className="relative h-12 w-12 rounded-xl bg-gradient-to-br from-orange-400 to-red-500 flex items-center justify-center shadow-lg hover:scale-110 transition-transform cursor-pointer">
+            <Flame className="h-6 w-6 text-white animate-pulse" />
+            {/* Glow effect */}
+            <div className="absolute inset-0 rounded-xl bg-orange-400/30 animate-ping" style={{ animationDuration: '2s' }} />
           </div>
           <div>
             <div className="flex items-baseline gap-2">
-              <h3 className="text-2xl font-bold text-foreground">{streakDays}</h3>
+              <h3 className="text-3xl font-bold bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">{streakDays}</h3>
               <span className="text-sm font-semibold text-muted-foreground">Day Streak</span>
             </div>
-            <p className="text-xs text-emerald-600 dark:text-emerald-400 font-medium">You're crushing it! 🚀</p>
+            <p className="text-xs text-success font-medium">You're crushing it! 🚀</p>
           </div>
         </div>
       </CardHeader>
@@ -76,40 +78,40 @@ export function StreakCard() {
         {/* Heatmap Calendar */}
         <div className="space-y-3 pt-2">
           <Separator />
-        <div className="flex items-center justify-between">
-          <h4 className="text-xs font-semibold text-foreground uppercase tracking-wider">Activity Heatmap</h4>
-          <div className="flex items-center gap-1 text-xs text-muted-foreground">
-            <span>Low</span>
-            <div className="flex gap-1">
-              <div className="w-2.5 h-2.5 rounded-sm bg-secondary/20"></div>
-              <div className="w-2.5 h-2.5 rounded-sm bg-emerald-400/40"></div>
-              <div className="w-2.5 h-2.5 rounded-sm bg-emerald-500/60"></div>
-              <div className="w-2.5 h-2.5 rounded-sm bg-emerald-600/80"></div>
-              <div className="w-2.5 h-2.5 rounded-sm bg-emerald-700"></div>
+          <div className="flex items-center justify-between">
+            <h4 className="text-xs font-semibold text-foreground uppercase tracking-wider">Activity Heatmap</h4>
+            <div className="flex items-center gap-1 text-xs text-muted-foreground">
+              <span>Low</span>
+              <div className="flex gap-1">
+                <div className="w-2.5 h-2.5 rounded-sm bg-secondary/20"></div>
+                <div className="w-2.5 h-2.5 rounded-sm bg-emerald-400/40"></div>
+                <div className="w-2.5 h-2.5 rounded-sm bg-emerald-500/60"></div>
+                <div className="w-2.5 h-2.5 rounded-sm bg-emerald-600/80"></div>
+                <div className="w-2.5 h-2.5 rounded-sm bg-emerald-700"></div>
+              </div>
+              <span>High</span>
             </div>
-            <span>High</span>
           </div>
-        </div>
 
-        {/* Heatmap Grid */}
-        <div className="bg-secondary/20 rounded-lg p-3 overflow-hidden">
-          <div className="grid gap-1" style={{ gridTemplateColumns: 'repeat(12, minmax(0, 1fr))' }}>
-            {heatmapData.map((day, i) => (
-              <div
-                key={i}
-                className={cn(
-                  "aspect-square rounded-sm transition-all duration-200 cursor-pointer",
-                  "hover:ring-2 hover:ring-primary hover:scale-125",
-                  getHeatColor(day.intensity)
-                )}
-                title={`${day.date}${day.completed ? ' - Completed' : ' - Missed'}`}
-              />
-            ))}
+          {/* Heatmap Grid */}
+          <div className="bg-secondary/20 rounded-lg p-3 overflow-hidden">
+            <div className="grid gap-1" style={{ gridTemplateColumns: 'repeat(12, minmax(0, 1fr))' }}>
+              {heatmapData.map((day, i) => (
+                <div
+                  key={i}
+                  className={cn(
+                    "aspect-square rounded-sm transition-all duration-200 cursor-pointer",
+                    "hover:ring-2 hover:ring-primary hover:scale-125",
+                    getHeatColor(day.intensity)
+                  )}
+                  title={`${day.date}${day.completed ? ' - Completed' : ' - Missed'}`}
+                />
+              ))}
+            </div>
           </div>
-        </div>
 
-        {/* Legend */}
-        <p className="text-xs text-muted-foreground text-center">12 weeks of activity • Each square = 1 day</p>
+          {/* Legend */}
+          <p className="text-xs text-muted-foreground text-center">12 weeks of activity • Each square = 1 day</p>
         </div>
       </CardContent>
     </Card>

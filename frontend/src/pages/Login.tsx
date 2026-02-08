@@ -24,9 +24,9 @@ export default function Login() {
 
   const from = location.state?.from?.pathname || '/dashboard';
 
-  // Force dark mode to match main app
+  // Force light mode to match main app
   useEffect(() => {
-    document.documentElement.classList.add("dark");
+    document.documentElement.classList.remove("dark");
   }, []);
 
   const handleLogin = async (e: React.FormEvent) => {

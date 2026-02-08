@@ -49,9 +49,9 @@ export default function Onboarding() {
 
   const progress = ((step + 1) / STEPS.length) * 100;
 
-  // Force dark mode to match main app
+  // Force light mode to match main app
   useEffect(() => {
-    document.documentElement.classList.add("dark");
+    document.documentElement.classList.remove("dark");
   }, []);
 
   useEffect(() => {

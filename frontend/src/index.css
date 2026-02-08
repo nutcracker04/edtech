@@ -1,97 +1,119 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;500;600;700&display=swap");
+/* Gen-Z Friendly Fonts - Inter for readability, Plus Jakarta for headings */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* =============================================================================
+   DESIGN SYSTEM - Gen-Z Vibrant Light Theme
+   Target: Indian teenagers 13-18 years, ADHD-friendly
+   ============================================================================= */
 
 @layer base {
   :root {
-    --background: 209 40% 96%;
-    --foreground: 222 47% 11%;
+    /* -------------------------------------------------------------------------
+       VIBRANT LIGHT THEME - Primary for teenagers
+       Soft pastels + energetic accents
+       ------------------------------------------------------------------------- */
 
-    --card: 210 40% 98%;
-    --card-foreground: 222 47% 11%;
+    /* Base Colors - Clean & Bright */
+    --background: 210 40% 98%;
+    /* Soft white with hint of blue */
+    --foreground: 224 71% 4%;
+    /* Near-black for readability */
 
-    --popover: 214 31% 91%;
-    --popover-foreground: 222 47% 11%;
+    /* Cards - Elevated surfaces */
+    --card: 0 0% 100%;
+    /* Pure white cards */
+    --card-foreground: 224 71% 4%;
 
-    --primary: 216 19% 26%;
-    --primary-foreground: 210 19% 98%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71% 4%;
 
-    --secondary: 215 19% 34%;
-    --secondary-foreground: 210 40% 98%;
+    /* Primary - Vibrant Electric Blue (Gen-Z favorite) */
+    --primary: 217 91% 60%;
+    /* #3B82F6 - Electric blue */
+    --primary-foreground: 0 0% 100%;
 
-    --muted: 215 20% 65%;
-    --muted-foreground: 222 47% 11%;
+    /* Secondary - Soft Purple */
+    --secondary: 270 50% 95%;
+    /* Light lavender background */
+    --secondary-foreground: 270 50% 30%;
 
-    --accent: 210 40% 98%;
-    --accent-foreground: 215 16% 46%;
+    /* Muted - Subtle grays */
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
 
-    --destructive: 0 72% 50%;
-    --destructive-foreground: 0 85% 97%;
+    /* Accent - Coral/Pink pop */
+    --accent: 350 89% 96%;
+    /* Soft pink tint */
+    --accent-foreground: 350 80% 50%;
 
-    --border: 212 26% 83%;
-    --input: 212 26% 83%;
-    --ring: 216 19% 26%;
+    /* Semantic Colors - ADHD friendly (not aggressive) */
+    --success: 160 84% 39%;
+    /* #10B981 - Calming green */
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    /* #F59E0B - Amber, not red */
+    --warning-foreground: 0 0% 0%;
+    --info: 199 89% 48%;
+    /* #0EA5E9 - Sky blue */
+    --info-foreground: 0 0% 100%;
+    --destructive: 0 72% 51%;
+    /* Softer red */
+    --destructive-foreground: 0 0% 100%;
 
-    --radius: 0rem;
+    /* Borders & Inputs */
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 217 91% 60%;
+    /* Match primary */
 
-    --sidebar-background: 0 0% 98%;
+    /* Modern rounded corners - friendly feel */
+    --radius: 0.625rem;
+    /* 10px - soft, modern */
 
-    --sidebar-foreground: 222 47% 11%;
+    /* Sidebar */
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 224 71% 4%;
+    --sidebar-primary: 217 91% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 270 50% 95%;
+    --sidebar-accent-foreground: 270 50% 30%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217 91% 60%;
+    --sidebar: 0 0% 100%;
 
-    --sidebar-primary: 216 19% 26%;
+    /* Charts - Vibrant & distinct */
+    --chart-1: 217 91% 60%;
+    /* Electric blue */
+    --chart-2: 160 84% 39%;
+    /* Success green */
+    --chart-3: 280 70% 60%;
+    /* Purple */
+    --chart-4: 350 80% 60%;
+    /* Coral */
+    --chart-5: 38 92% 50%;
+    /* Amber */
 
-    --sidebar-primary-foreground: 210 19% 98%;
+    /* Typography - Inter for ADHD readability */
+    --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    --font-display: 'Plus Jakarta Sans', var(--font-sans);
+    --font-mono: 'SF Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 
-    --sidebar-accent: 215 19% 34%;
+    /* Shadows - Soft, elevated feel */
+    --shadow-2xs: 0 1px 2px 0 hsl(0 0% 0% / 0.03);
+    --shadow-xs: 0 1px 3px 0 hsl(0 0% 0% / 0.04);
+    --shadow-sm: 0 2px 4px 0 hsl(0 0% 0% / 0.05);
+    --shadow: 0 4px 6px -1px hsl(0 0% 0% / 0.07), 0 2px 4px -2px hsl(0 0% 0% / 0.05);
+    --shadow-md: 0 6px 10px -2px hsl(0 0% 0% / 0.08), 0 3px 6px -3px hsl(0 0% 0% / 0.05);
+    --shadow-lg: 0 10px 20px -3px hsl(0 0% 0% / 0.1), 0 4px 8px -4px hsl(0 0% 0% / 0.05);
+    --shadow-xl: 0 20px 30px -5px hsl(0 0% 0% / 0.12), 0 8px 12px -6px hsl(0 0% 0% / 0.05);
+    --shadow-2xl: 0 25px 50px -12px hsl(0 0% 0% / 0.2);
 
-    --sidebar-accent-foreground: 210 40% 98%;
-
-    --sidebar-border: 212 26% 83%;
-
-    --sidebar-ring: 216 19% 26%;
-
-    --chart-1: 217 10% 64%;
-
-    --chart-2: 215 20% 65%;
-
-    --chart-3: 215 16% 46%;
-
-    --chart-4: 219 8% 46%;
-
-    --chart-5: 215 19% 34%;
-
-    --sidebar: 210 40% 98%;
-
-    --font-sans: 'DM Sans', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
-
-    --font-serif: 'Crimson Pro', ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
-
-    --font-mono: 'SF Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
-
-    --shadow-2xs: 0 1px 3px 0px hsl(0 0% 0% / 0.05);
-
-    --shadow-xs: 0 1px 3px 0px hsl(0 0% 0% / 0.05);
-
-    --shadow-sm: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 1px 2px -1px hsl(0 0% 0% / 0.1);
-
-    --shadow: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 1px 2px -1px hsl(0 0% 0% / 0.1);
-
-    --shadow-md: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 2px 4px -1px hsl(0 0% 0% / 0.1);
-
-    --shadow-lg: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 4px 6px -1px hsl(0 0% 0% / 0.1);
-
-    --shadow-xl: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 8px 10px -1px hsl(0 0% 0% / 0.1);
-
-    --shadow-2xl: 0 1px 3px 0px hsl(0 0% 0% / 0.25);
-
+    /* Spacing */
     --tracking-normal: 0em;
-
     --spacing: 0.25rem;
   }
 
@@ -168,35 +190,111 @@ All colors MUST be HSL.
     display: none;
   }
 
-  /* Smooth animations */
+  /* ==========================================================================
+     ANIMATIONS - Gen-Z Micro-interactions
+     ========================================================================== */
+
+  /* Basic animations */
   .animate-fade-in {
-    animation: fadeIn 0.3s ease-in;
+    animation: fadeIn 0.3s ease-out;
   }
 
   .animate-slide-up {
-    animation: slideUp 0.4s ease-out;
+    animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
   .animate-slide-down {
-    animation: slideDown 0.4s ease-out;
+    animation: slideDown 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
   .animate-scale-in {
-    animation: scaleIn 0.2s ease-out;
+    animation: scaleIn 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  /* Celebration animations - for achievements & streaks */
+  .animate-bounce-success {
+    animation: bounceSuccess 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .animate-pulse-glow {
+    animation: pulseGlow 2s ease-in-out infinite;
+  }
+
+  .animate-shake {
+    animation: shake 0.5s cubic-bezier(0.36, 0.07, 0.19, 0.97);
+  }
+
+  .animate-confetti {
+    animation: confettiBurst 0.8s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
   /* Page transitions */
   .page-transition {
-    @apply transition-all duration-300 ease-in-out;
+    @apply transition-all duration-300 ease-out;
   }
 
-  /* Hover effects */
+  /* Hover effects - playful & responsive */
   .hover-lift {
-    @apply transition-transform duration-200 ease-out hover:-translate-y-1;
+    @apply transition-all duration-200 ease-out hover:-translate-y-1 hover:shadow-lg;
   }
 
   .hover-scale {
     @apply transition-transform duration-200 ease-out hover:scale-105;
+  }
+
+  .hover-glow {
+    @apply transition-all duration-200;
+  }
+
+  .hover-glow:hover {
+    box-shadow: 0 0 20px hsl(var(--primary) / 0.3);
+  }
+
+  /* ==========================================================================
+     GLASSMORPHISM - Modern Gen-Z aesthetic
+     ========================================================================== */
+  .glass {
+    background: hsl(0 0% 100% / 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid hsl(0 0% 100% / 0.2);
+  }
+
+  .glass-card {
+    background: hsl(0 0% 100% / 0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+
+  /* ==========================================================================
+     GRADIENTS - Vibrant backgrounds for achievements
+     ========================================================================== */
+  .gradient-celebrate {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  }
+
+  .gradient-success {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  }
+
+  .gradient-streak {
+    background: linear-gradient(135deg, #f59e0b 0%, #ef4444 100%);
+  }
+
+  .gradient-primary {
+    background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+  }
+
+  /* ==========================================================================
+     ADHD-FRIENDLY FOCUS STATES
+     ========================================================================== */
+  .focus-ring {
+    @apply outline-none ring-2 ring-primary ring-offset-2 ring-offset-background;
+  }
+
+  /* Large touch targets for mobile */
+  .touch-target {
+    @apply min-h-[48px] min-w-[48px];
   }
 }
 
@@ -265,4 +363,113 @@ All colors MUST be HSL.
 .page-exit-active {
   opacity: 0;
   transition: opacity 300ms;
+}
+
+/* ==========================================================================
+   CELEBRATION KEYFRAMES - Gamification micro-interactions
+   ========================================================================== */
+
+@keyframes bounceSuccess {
+  0% {
+    transform: scale(1);
+  }
+
+  30% {
+    transform: scale(1.15);
+  }
+
+  50% {
+    transform: scale(0.95);
+  }
+
+  70% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes pulseGlow {
+
+  0%,
+  100% {
+    box-shadow: 0 0 5px hsl(var(--primary) / 0.3);
+  }
+
+  50% {
+    box-shadow: 0 0 20px hsl(var(--primary) / 0.6);
+  }
+}
+
+@keyframes shake {
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-4px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(4px);
+  }
+}
+
+@keyframes confettiBurst {
+  0% {
+    transform: scale(0) rotate(0deg);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1) rotate(360deg);
+    opacity: 1;
+  }
+}
+
+@keyframes streakFlame {
+
+  0%,
+  100% {
+    transform: scaleY(1) translateY(0);
+  }
+
+  50% {
+    transform: scaleY(1.1) translateY(-2px);
+  }
+}
+
+@keyframes confettiFall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(100vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+.animate-confetti {
+  animation: confettiFall 3s ease-out forwards;
+}
+
+.animate-streak-flame {
+  animation: streakFlame 1s ease-in-out infinite;
 }

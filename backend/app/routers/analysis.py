@@ -1,6 +1,6 @@
 from fastapi import APIRouter, Depends, HTTPException
 from typing import List, Optional
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 
 from app.utils.auth import get_current_user
 from app.database import supabase
@@ -277,11 +277,22 @@ async def get_recommendations(
         })
     
     # Check for inactive topics (not attempted recently)
-    inactive_threshold = datetime.utcnow() - timedelta(days=7)
-    inactive_topics = [
-        t for t in mastery_result.data
-        if datetime.fromisoformat(t["last_attempt_date"]) < inactive_threshold
-    ]
+    # Check for inactive topics (not attempted recently)
+    inactive_threshold = datetime.now(timezone.utc) - timedelta(days=7)
+    inactive_topics = []
+    
+    for t in mastery_result.data:
+        if t.get("last_attempt_date"):
+            try:
+                # Handle potentially naive or aware inputs
+                last_attempt = datetime.fromisoformat(t["last_attempt_date"])
+                if last_attempt.tzinfo is None:
+                    last_attempt = last_attempt.replace(tzinfo=timezone.utc)
+                
+                if last_attempt < inactive_threshold:
+                    inactive_topics.append(t)
+            except (ValueError, TypeError):
+                continue
     if inactive_topics and len(inactive_topics) > 3:
         recommendations.append({
             "type": "practice",

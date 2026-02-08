@@ -26,6 +26,19 @@ class Settings(BaseSettings):
     # AI
     groq_api_key: str = ""
     
+    # Concept Graph (Neo4j & Redis)
+    concept_graph_neo4j_uri: str = "bolt://localhost:7687"
+    concept_graph_neo4j_user: str = "neo4j"
+    concept_graph_neo4j_password: str = ""
+    concept_graph_neo4j_database: str = "neo4j"
+    
+    concept_graph_redis_host: str = "localhost"
+    concept_graph_redis_port: int = 6379
+    concept_graph_redis_db: int = 0
+    concept_graph_redis_password: str = ""
+    
+    concept_graph_nvidia_api_key: str = ""
+    
     class Config:
         env_file = ".env"
         case_sensitive = False
