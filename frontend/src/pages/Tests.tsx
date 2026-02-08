@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { testApi } from "@/api/test";
 import { MainLayout } from "@/components/layout/MainLayout";
-import { Calendar, Clock, Target, ChevronRight, Filter, Plus, CalendarClock } from "lucide-react";
+import { Calendar, Clock, Target, ChevronRight, Filter, Plus, CalendarClock, BookOpen } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
@@ -9,6 +9,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { TestScheduler } from "@/components/tests/TestScheduler";
 import { TestCreationDialog } from "@/components/tests/TestCreationDialog";
 import { ScheduledTestCard } from "@/components/tests/ScheduledTestCard";
+import { PyqsDialog } from "@/components/tests/PyqsDialog";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
@@ -35,6 +36,7 @@ interface Test {
 const Tests = () => {
   const navigate = useNavigate();
   const [showCreateDialog, setShowCreateDialog] = useState(false);
+  const [showPyqsDialog, setShowPyqsDialog] = useState(false);
   const [showScheduleDialog, setShowScheduleDialog] = useState(false);
   const [scheduleImmediately, setScheduleImmediately] = useState(false);
   const [currentTestConfig, setCurrentTestConfig] = useState<any>(null);
@@ -139,6 +141,16 @@ const Tests = () => {
             <Button variant="outline" size="sm" className="flex-1 sm:flex-initial">
               <Filter className="h-4 w-4 sm:mr-2" />
               <span className="hidden sm:inline">Filter</span>
+            </Button>
+            <Button
+              size="sm"
+              variant="outline"
+              onClick={() => setShowPyqsDialog(true)}
+              className="flex-1 sm:flex-initial"
+            >
+              <BookOpen className="h-4 w-4 sm:mr-2" />
+              <span className="hidden sm:inline">PYQS</span>
+              <span className="sm:hidden">PYQS</span>
             </Button>
             <Button
               size="sm"
@@ -247,6 +259,12 @@ const Tests = () => {
         open={showCreateDialog}
         onOpenChange={setShowCreateDialog}
         onSuccess={handleCreateSuccess}
+      />
+
+      {/* PYQS Dialog */}
+      <PyqsDialog
+        open={showPyqsDialog}
+        onOpenChange={setShowPyqsDialog}
       />
 
       {/* Schedule Test Dialog */}
