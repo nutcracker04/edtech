@@ -12,6 +12,8 @@ import {
   MessageSquare,
   Upload,
   Shield,
+  AlertCircle,
+  Sparkles,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -21,6 +23,8 @@ const navItems = [
   { icon: BookOpen, label: "My Tests", href: "/tests" },
   { icon: Upload, label: "Upload Test", href: "/upload-test", highlight: false },
   { icon: Target, label: "Analysis", href: "/analysis" },
+  { icon: AlertCircle, label: "Mistakes", href: "/mistakes" },
+  { icon: Sparkles, label: "Revision", href: "/revision-capsules" },
 ];
 
 const adminItems = [

@@ -11,6 +11,8 @@ import Login from "./pages/Login";
 import Onboarding from "./pages/Onboarding";
 import Index from "./pages/Index";
 import Dashboard from "./pages/Dashboard";
+import Mistakes from "./pages/Mistakes";
+import RevisionCapsulesPage from "./pages/RevisionCapsulesPage";
 
 import Analysis from "./pages/Analysis";
 import Tests from "./pages/Tests";
@@ -59,6 +61,16 @@ const App = () => {
                 <Route path="/dashboard" element={
                   <ProtectedRoute>
                     <Dashboard />
+                  </ProtectedRoute>
+                } />
+                <Route path="/mistakes" element={
+                  <ProtectedRoute>
+                    <Mistakes />
+                  </ProtectedRoute>
+                } />
+                <Route path="/revision-capsules" element={
+                  <ProtectedRoute>
+                    <RevisionCapsulesPage />
                   </ProtectedRoute>
                 } />
 

@@ -2,6 +2,7 @@ import { MainLayout } from "@/components/layout/MainLayout";
 import { StatsGrid } from "@/components/dashboard/StatsGrid";
 import { SubjectCard } from "@/components/dashboard/SubjectCard";
 import { UpcomingTestsWidget } from "@/components/dashboard/UpcomingTestsWidget";
+
 import { usePerformance, useSubjectPerformance } from "@/hooks/usePerformance";
 import { Calculator, Atom, FlaskConical, Loader2, BookOpen, Target, AlertTriangle, TrendingDown } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -318,10 +319,12 @@ const Dashboard = () => {
 
           {/* Right Column - Sidebar Widgets */}
           <div className="space-y-6">
-            {/* Upcoming Tests */}
+            {/* Upcoming Tests Widget (if you want to keep it or move it) */}
             <UpcomingTestsWidget />
           </div>
         </div>
+
+
       </div>
     </MainLayout>
   );
