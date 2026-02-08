@@ -26,7 +26,13 @@ import NotFound from "./pages/NotFound";
 import { AIAssistant } from "./components/ai/AIAssistant";
 import { AIAssistantButton } from "./components/ai/AIAssistantButton";
 
-const queryClient = new QueryClient();
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      refetchOnWindowFocus: false,
+    },
+  },
+});
 
 const App = () => {
   const [isAIOpen, setIsAIOpen] = useState(false);

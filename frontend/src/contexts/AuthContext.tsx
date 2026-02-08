@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useState } from 'react';
+import { createContext, useContext, useEffect, useState, useRef } from 'react';
 import { User, Session } from '@supabase/supabase-js';
 import { supabase } from '@/integrations/supabase/client';
 import { Database } from '@/integrations/supabase/types';
@@ -92,6 +92,12 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     }
   };
 
+  const userIdRef = useRef<string | null>(null);
+
+  useEffect(() => {
+    userIdRef.current = user?.id || null;
+  }, [user]);
+
   useEffect(() => {
     let isMounted = true;
     let fetchTimeout: NodeJS.Timeout | null = null;
@@ -102,6 +108,8 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
 
       setSession(session);
       setUser(session?.user ?? null);
+      userIdRef.current = session?.user?.id ?? null;
+
       if (session?.user) {
         fetchProfile(session.user.id);
       } else {
@@ -126,15 +134,23 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
       setSession(session);
       setUser(session?.user ?? null);
 
+      const previousUserId = userIdRef.current;
+      const currentUserId = session?.user?.id ?? null;
+
+      // Update ref for next time
+      userIdRef.current = currentUserId;
+
       if (session?.user) {
-        // Set loading state for sign-in events
-        if (event === 'SIGNED_IN' || event === 'INITIAL_SESSION') {
+        // Set loading state only if user changed or it's initial session
+        // Using ref to avoid stale closure issues
+        if (event === 'INITIAL_SESSION' || (event === 'SIGNED_IN' && currentUserId !== previousUserId)) {
           setLoading(true);
         }
 
         // Debounce profile fetches to prevent multiple rapid calls
         fetchTimeout = setTimeout(() => {
           if (isMounted) {
+            // Only fetch profile if not already loaded or if user changed
             fetchProfile(session.user.id);
           }
         }, 200);
