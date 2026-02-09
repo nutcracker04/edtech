@@ -6,7 +6,10 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Label } from "@/components/ui/label";
 import { Badge } from "@/components/ui/badge";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { Tag, CheckCircle2, AlertCircle, Loader2 } from "lucide-react";
+import { Tag, CheckCircle2, AlertCircle, Loader2, Check, ChevronsUpDown } from "lucide-react";
+import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList } from "@/components/ui/command";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import { cn } from "@/lib/utils";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 
@@ -35,9 +38,12 @@ const QuestionTagging = () => {
     const [topics, setTopics] = useState<Topic[]>([]);
 
     const [selectedSubject, setSelectedSubject] = useState<string>("");
-    const [selectedChapter, setSelectedChapter] = useState<string>("");
-    const [selectedTopic, setSelectedTopic] = useState<string>("");
+    const [selectedChapters, setSelectedChapters] = useState<string[]>([]);
+    const [selectedTopics, setSelectedTopics] = useState<string[]>([]);
     const [difficulty, setDifficulty] = useState<string>("medium");
+
+    const [openChapterSelect, setOpenChapterSelect] = useState(false);
+    const [openTopicSelect, setOpenTopicSelect] = useState(false);
 
     const [loading, setLoading] = useState(false);
 
@@ -49,17 +55,19 @@ const QuestionTagging = () => {
     useEffect(() => {
         if (selectedSubject) {
             fetchChapters(selectedSubject);
-            setSelectedChapter("");
+            setSelectedChapters([]);
             setTopics([]);
         }
     }, [selectedSubject]);
 
     useEffect(() => {
-        if (selectedChapter) {
-            fetchTopics(selectedChapter);
-            setSelectedTopic("");
+        if (selectedChapters.length > 0) {
+            fetchTopics(selectedChapters);
+            setSelectedTopics([]);
+        } else {
+            setTopics([]);
         }
-    }, [selectedChapter]);
+    }, [selectedChapters]);
 
     const fetchUntaggedQuestions = async () => {
         const { data, error } = await supabase
@@ -85,14 +93,14 @@ const QuestionTagging = () => {
         setChapters(data || []);
     };
 
-    const fetchTopics = async (cid: string) => {
-        const { data } = await supabase.from("topics").select("*").eq("chapter_id", cid).order("name");
+    const fetchTopics = async (cids: string[]) => {
+        const { data } = await supabase.from("topics").select("*").in("chapter_id", cids).order("name");
         setTopics(data || []);
     };
 
     const handleTagQuestion = async () => {
-        if (!currentQuestion || !selectedSubject || !selectedChapter || !selectedTopic) {
-            toast.error("Please select Subject, Chapter and Topic");
+        if (!currentQuestion || !selectedSubject || selectedChapters.length === 0 || selectedTopics.length === 0) {
+            toast.error("Please select Subject, at least one Chapter and Topic");
             return;
         }
 
@@ -101,8 +109,12 @@ const QuestionTagging = () => {
             .from("repository_questions")
             .update({
                 subject_id: selectedSubject,
-                chapter_id: selectedChapter,
-                topic_id: selectedTopic,
+                // Legacy fields for backward compatibility (Optional)
+                chapter_id: selectedChapters[0],
+                topic_id: selectedTopics[0],
+                // New Array fields
+                chapter_ids: selectedChapters,
+                topic_ids: selectedTopics,
                 difficulty_level: difficulty,
                 is_tagged: true,
                 updated_at: new Date().toISOString()
@@ -224,35 +236,97 @@ const QuestionTagging = () => {
                                 </div>
 
                                 <div className="space-y-2">
-                                    <Label>Chapter</Label>
-                                    <Select
-                                        value={selectedChapter}
-                                        onValueChange={setSelectedChapter}
-                                        disabled={!selectedSubject}
-                                    >
-                                        <SelectTrigger>
-                                            <SelectValue placeholder="Select Chapter" />
-                                        </SelectTrigger>
-                                        <SelectContent>
-                                            {chapters.map(c => <SelectItem key={c.id} value={c.id}>{c.name}</SelectItem>)}
-                                        </SelectContent>
-                                    </Select>
+                                    <Label>Chapters</Label>
+                                    <Popover open={openChapterSelect} onOpenChange={setOpenChapterSelect}>
+                                        <PopoverTrigger asChild>
+                                            <Button variant="outline" role="combobox" aria-expanded={openChapterSelect} className="w-full justify-between h-10 px-3 overflow-hidden text-left" disabled={!selectedSubject}>
+                                                <span className="truncate">
+                                                    {selectedChapters.length > 0
+                                                        ? `${selectedChapters.length} selected`
+                                                        : "Select Chapters"}
+                                                </span>
+                                                <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
+                                            </Button>
+                                        </PopoverTrigger>
+                                        <PopoverContent className="w-[var(--radix-popover-trigger-width)] p-0">
+                                            <Command>
+                                                <CommandInput placeholder="Search chapter..." />
+                                                <CommandList>
+                                                    <CommandEmpty>No chapter found.</CommandEmpty>
+                                                    <CommandGroup>
+                                                        {chapters.map((chapter) => (
+                                                            <CommandItem
+                                                                key={chapter.id}
+                                                                value={chapter.name}
+                                                                onSelect={() => {
+                                                                    const current = selectedChapters;
+                                                                    const newIds = current.includes(chapter.id)
+                                                                        ? current.filter((id) => id !== chapter.id)
+                                                                        : [...current, chapter.id];
+                                                                    setSelectedChapters(newIds);
+                                                                }}
+                                                            >
+                                                                <Check
+                                                                    className={cn(
+                                                                        "mr-2 h-4 w-4",
+                                                                        selectedChapters.includes(chapter.id) ? "opacity-100" : "opacity-0"
+                                                                    )}
+                                                                />
+                                                                {chapter.name}
+                                                            </CommandItem>
+                                                        ))}
+                                                    </CommandGroup>
+                                                </CommandList>
+                                            </Command>
+                                        </PopoverContent>
+                                    </Popover>
                                 </div>
 
                                 <div className="space-y-2">
-                                    <Label>Topic</Label>
-                                    <Select
-                                        value={selectedTopic}
-                                        onValueChange={setSelectedTopic}
-                                        disabled={!selectedChapter}
-                                    >
-                                        <SelectTrigger>
-                                            <SelectValue placeholder="Select Topic" />
-                                        </SelectTrigger>
-                                        <SelectContent>
-                                            {topics.map(t => <SelectItem key={t.id} value={t.id}>{t.name}</SelectItem>)}
-                                        </SelectContent>
-                                    </Select>
+                                    <Label>Topics</Label>
+                                    <Popover open={openTopicSelect} onOpenChange={setOpenTopicSelect}>
+                                        <PopoverTrigger asChild>
+                                            <Button variant="outline" role="combobox" aria-expanded={openTopicSelect} className="w-full justify-between h-10 px-3 overflow-hidden text-left" disabled={selectedChapters.length === 0}>
+                                                <span className="truncate">
+                                                    {selectedTopics.length > 0
+                                                        ? `${selectedTopics.length} selected`
+                                                        : "Select Topics"}
+                                                </span>
+                                                <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
+                                            </Button>
+                                        </PopoverTrigger>
+                                        <PopoverContent className="w-[var(--radix-popover-trigger-width)] p-0">
+                                            <Command>
+                                                <CommandInput placeholder="Search topic..." />
+                                                <CommandList>
+                                                    <CommandEmpty>No topic found.</CommandEmpty>
+                                                    <CommandGroup>
+                                                        {topics.map((topic) => (
+                                                            <CommandItem
+                                                                key={topic.id}
+                                                                value={topic.name}
+                                                                onSelect={() => {
+                                                                    const current = selectedTopics;
+                                                                    const newIds = current.includes(topic.id)
+                                                                        ? current.filter((id) => id !== topic.id)
+                                                                        : [...current, topic.id];
+                                                                    setSelectedTopics(newIds);
+                                                                }}
+                                                            >
+                                                                <Check
+                                                                    className={cn(
+                                                                        "mr-2 h-4 w-4",
+                                                                        selectedTopics.includes(topic.id) ? "opacity-100" : "opacity-0"
+                                                                    )}
+                                                                />
+                                                                {topic.name}
+                                                            </CommandItem>
+                                                        ))}
+                                                    </CommandGroup>
+                                                </CommandList>
+                                            </Command>
+                                        </PopoverContent>
+                                    </Popover>
                                 </div>
 
                                 <div className="space-y-2">

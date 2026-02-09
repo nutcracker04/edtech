@@ -113,6 +113,17 @@ async def update_question(question_id: UUID, question_data: dict, current_user: 
     if "id" in question_data:
         del question_data["id"]
         
+    # Handle array fields if they exist in payload
+    # This basic update works because Supabase/Postgres handles the JSON->Array conversion if the keys match column names
+    # But we might need explicit handling if the payload sends them as None or if we need to sync legacy fields
+    
+    # Sync legacy fields for backward compatibility (optional, but good for safety)
+    if "chapter_ids" in question_data and question_data["chapter_ids"] and len(question_data["chapter_ids"]) > 0:
+        question_data["chapter_id"] = question_data["chapter_ids"][0]
+    
+    if "topic_ids" in question_data and question_data["topic_ids"] and len(question_data["topic_ids"]) > 0:
+        question_data["topic_id"] = question_data["topic_ids"][0]
+
     res = supabase.table("pyq_questions").update(question_data).eq("id", str(question_id)).execute()
     if not res.data:
         raise HTTPException(status_code=404, detail="Question not found")

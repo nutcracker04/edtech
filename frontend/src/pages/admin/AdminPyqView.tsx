@@ -5,7 +5,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { supabase } from '@/integrations/supabase/client';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { ArrowLeft, Image as ImageIcon, Trash2, Pencil, Save, X, Loader2 } from 'lucide-react';
+import { ArrowLeft, Image as ImageIcon, Trash2, Pencil, Save, X, Loader2, Check, ChevronsUpDown } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { toast } from 'sonner';
 import {
@@ -20,6 +20,9 @@ import { Label } from '@/components/ui/label';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList } from "@/components/ui/command";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import { cn } from "@/lib/utils";
 import 'katex/dist/katex.min.css';
 import { InlineMath, BlockMath } from 'react-katex';
 
@@ -35,7 +38,13 @@ interface Question {
     topic_id: string;
     question_number: number;
     page_number: number;
+    chapter_ids: string[];
+    topic_ids: string[];
 }
+
+interface Subject { id: string; name: string; }
+interface Chapter { id: string; name: string; subject_id: string; }
+interface Topic { id: string; name: string; chapter_id: string; }
 
 const renderTable = (text: string) => {
     const match = text.match(/\\begin{tabular}{[^}]*}(.*?)\\end{tabular}/s);
@@ -158,9 +167,30 @@ const AdminPyqView = () => {
     const [confirmDeletePaper, setConfirmDeletePaper] = useState(false);
     const [isDeleting, setIsDeleting] = useState(false);
 
+    // Hierarchy State
+    const [subjects, setSubjects] = useState<Subject[]>([]);
+    const [chapters, setChapters] = useState<Chapter[]>([]);
+    const [topics, setTopics] = useState<Topic[]>([]);
+    const [openChapterSelect, setOpenChapterSelect] = useState(false);
+    const [openTopicSelect, setOpenTopicSelect] = useState(false);
+
     useEffect(() => {
-        if (id) fetchData();
+        if (id) {
+            fetchData();
+            fetchHierarchy();
+        }
     }, [id]);
+
+    const fetchHierarchy = async () => {
+        const { data: sData } = await supabase.from("subjects").select("*").order("name");
+        if (sData) setSubjects(sData);
+
+        const { data: cData } = await supabase.from("chapters").select("*").order("name");
+        if (cData) setChapters(cData);
+
+        const { data: tData } = await supabase.from("topics").select("*").order("name");
+        if (tData) setTopics(tData);
+    };
 
     const fetchData = async () => {
         if (!id) return;
@@ -250,6 +280,8 @@ const AdminPyqView = () => {
                 ...editingQuestion,
                 // If options is a string (JSON), parse it back to object for DB or keep as is depending on DB expectation
                 // The DB expects JSON type.
+                chapter_ids: editingQuestion.chapter_ids || (editingQuestion.chapter_id ? [editingQuestion.chapter_id] : []),
+                topic_ids: editingQuestion.topic_ids || (editingQuestion.topic_id ? [editingQuestion.topic_id] : [])
             };
 
             const res = await fetch(`${API_BASE_URL}/api/pyq/questions/${editingQuestion.id}`, {
@@ -345,6 +377,24 @@ const AdminPyqView = () => {
                                         <div className="flex-grow space-y-4">
                                             {/* Question Text */}
                                             <div className="prose max-w-none dark:prose-invert">
+                                                {/* Tags Display */}
+                                                <div className="flex flex-wrap gap-2 mb-2">
+                                                    {q.subject_id && (
+                                                        <Badge variant="outline" className="text-xs">
+                                                            {subjects.find(s => s.id === q.subject_id)?.name || "Subject"}
+                                                        </Badge>
+                                                    )}
+                                                    {(q.chapter_ids || (q.chapter_id ? [q.chapter_id] : [])).map(cid => (
+                                                        <Badge key={cid} variant="secondary" className="text-xs">
+                                                            {chapters.find(c => c.id === cid)?.name || "Chapter"}
+                                                        </Badge>
+                                                    ))}
+                                                    {(q.topic_ids || (q.topic_id ? [q.topic_id] : [])).map(tid => (
+                                                        <Badge key={tid} variant="outline" className="text-[10px] opacity-80">
+                                                            {topics.find(t => t.id === tid)?.name || "Topic"}
+                                                        </Badge>
+                                                    ))}
+                                                </div>
                                                 <div className="whitespace-normal leading-relaxed">{renderMathText(q.question_text)}</div>
                                             </div>
 
@@ -407,6 +457,123 @@ const AdminPyqView = () => {
                         </DialogHeader>
                         {editingQuestion && (
                             <div className="space-y-4 py-4">
+                                {/* Tagging Section */}
+                                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-4 border rounded-lg bg-muted/20">
+                                    <div className="space-y-2">
+                                        <Label>Subject</Label>
+                                        <Select
+                                            value={editingQuestion.subject_id || ""}
+                                            onValueChange={(val) => setEditingQuestion({ ...editingQuestion, subject_id: val })}
+                                        >
+                                            <SelectTrigger><SelectValue placeholder="Subject" /></SelectTrigger>
+                                            <SelectContent>
+                                                {subjects.map(s => <SelectItem key={s.id} value={s.id}>{s.name}</SelectItem>)}
+                                            </SelectContent>
+                                        </Select>
+                                    </div>
+
+                                    <div className="space-y-2">
+                                        <Label>Chapters</Label>
+                                        <Popover open={openChapterSelect} onOpenChange={setOpenChapterSelect}>
+                                            <PopoverTrigger asChild>
+                                                <Button variant="outline" role="combobox" aria-expanded={openChapterSelect} className="w-full justify-between h-10 px-3 overflow-hidden text-left">
+                                                    <span className="truncate">
+                                                        {(editingQuestion.chapter_ids || []).length > 0
+                                                            ? `${(editingQuestion.chapter_ids || []).length} selected`
+                                                            : "Select Chapters"}
+                                                    </span>
+                                                    <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
+                                                </Button>
+                                            </PopoverTrigger>
+                                            <PopoverContent className="w-[300px] p-0">
+                                                <Command>
+                                                    <CommandInput placeholder="Search chapter..." />
+                                                    <CommandList>
+                                                        <CommandEmpty>No chapter found.</CommandEmpty>
+                                                        <CommandGroup>
+                                                            {chapters
+                                                                .filter(c => !editingQuestion.subject_id || c.subject_id === editingQuestion.subject_id)
+                                                                .map((chapter) => (
+                                                                    <CommandItem
+                                                                        key={chapter.id}
+                                                                        value={chapter.name}
+                                                                        onSelect={() => {
+                                                                            const current = editingQuestion.chapter_ids || (editingQuestion.chapter_id ? [editingQuestion.chapter_id] : []);
+                                                                            const newIds = current.includes(chapter.id)
+                                                                                ? current.filter((id) => id !== chapter.id)
+                                                                                : [...current, chapter.id];
+                                                                            setEditingQuestion({ ...editingQuestion, chapter_ids: newIds });
+                                                                        }}
+                                                                    >
+                                                                        <Check
+                                                                            className={cn(
+                                                                                "mr-2 h-4 w-4",
+                                                                                (editingQuestion.chapter_ids || []).includes(chapter.id) ? "opacity-100" : "opacity-0"
+                                                                            )}
+                                                                        />
+                                                                        {chapter.name}
+                                                                    </CommandItem>
+                                                                ))}
+                                                        </CommandGroup>
+                                                    </CommandList>
+                                                </Command>
+                                            </PopoverContent>
+                                        </Popover>
+                                    </div>
+
+                                    <div className="space-y-2">
+                                        <Label>Topics</Label>
+                                        <Popover open={openTopicSelect} onOpenChange={setOpenTopicSelect}>
+                                            <PopoverTrigger asChild>
+                                                <Button variant="outline" role="combobox" aria-expanded={openTopicSelect} className="w-full justify-between h-10 px-3 overflow-hidden text-left">
+                                                    <span className="truncate">
+                                                        {(editingQuestion.topic_ids || []).length > 0
+                                                            ? `${(editingQuestion.topic_ids || []).length} selected`
+                                                            : "Select Topics"}
+                                                    </span>
+                                                    <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
+                                                </Button>
+                                            </PopoverTrigger>
+                                            <PopoverContent className="w-[300px] p-0">
+                                                <Command>
+                                                    <CommandInput placeholder="Search topic..." />
+                                                    <CommandList>
+                                                        <CommandEmpty>No topic found.</CommandEmpty>
+                                                        <CommandGroup>
+                                                            {topics
+                                                                .filter(t => {
+                                                                    const currentChapters = editingQuestion.chapter_ids || [];
+                                                                    return currentChapters.length === 0 || currentChapters.includes(t.chapter_id);
+                                                                })
+                                                                .map((topic) => (
+                                                                    <CommandItem
+                                                                        key={topic.id}
+                                                                        value={topic.name}
+                                                                        onSelect={() => {
+                                                                            const current = editingQuestion.topic_ids || (editingQuestion.topic_id ? [editingQuestion.topic_id] : []);
+                                                                            const newIds = current.includes(topic.id)
+                                                                                ? current.filter((id) => id !== topic.id)
+                                                                                : [...current, topic.id];
+                                                                            setEditingQuestion({ ...editingQuestion, topic_ids: newIds });
+                                                                        }}
+                                                                    >
+                                                                        <Check
+                                                                            className={cn(
+                                                                                "mr-2 h-4 w-4",
+                                                                                (editingQuestion.topic_ids || []).includes(topic.id) ? "opacity-100" : "opacity-0"
+                                                                            )}
+                                                                        />
+                                                                        {topic.name}
+                                                                    </CommandItem>
+                                                                ))}
+                                                        </CommandGroup>
+                                                    </CommandList>
+                                                </Command>
+                                            </PopoverContent>
+                                        </Popover>
+                                    </div>
+                                </div>
+
                                 <div className="space-y-2">
                                     <Label>Question Text (LaTeX supported with $...$)</Label>
                                     <Textarea

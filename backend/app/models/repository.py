@@ -54,8 +54,10 @@ class Topic(TopicBase):
 
 class RepositoryQuestionBase(BaseModel):
     subject_id: Optional[UUID] = None
-    chapter_id: Optional[UUID] = None
-    topic_id: Optional[UUID] = None
+    chapter_id: Optional[UUID] = None # Deprecated
+    topic_id: Optional[UUID] = None # Deprecated
+    chapter_ids: Optional[List[UUID]] = None
+    topic_ids: Optional[List[UUID]] = None
     question_text: str
     options: List[Dict[str, str]] = Field(default_factory=list)
     correct_answer: Optional[str] = None
@@ -78,6 +80,8 @@ class RepositoryQuestion(RepositoryQuestionBase):
 
 class QuestionTagRequest(BaseModel):
     subject_id: UUID
-    chapter_id: UUID
-    topic_id: UUID
+    chapter_id: Optional[UUID] = None # Deprecated
+    topic_id: Optional[UUID] = None # Deprecated
+    chapter_ids: Optional[List[UUID]] = None
+    topic_ids: Optional[List[UUID]] = None
     difficulty_level: Optional[str] = None

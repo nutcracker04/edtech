@@ -5,6 +5,7 @@ import json
 import base64
 import requests
 import uuid
+import re
 from typing import List, Dict, Any, Optional, Tuple
 from datetime import datetime
 from PIL import Image
@@ -77,7 +78,25 @@ class PyqService:
                             image_url = self._crop_and_upload_image(image, q["bbox"], paper_id, page_num, q.get("question_number", 0))
                         
                         # Resolve Tags (Strict Mapping)
-                        s_id, c_id, t_id = self._resolve_tags(q.get("subject"), q.get("chapter"), q.get("topic"))
+                        # Expecting lists from updated prompt, but handle single strings for robustness
+                        subjects_raw = q.get("subject")
+                        chapters_raw = q.get("chapter")
+                        topics_raw = q.get("topic")
+                        
+                        # Normalize to lists
+                        if isinstance(subjects_raw, str): subjects_raw = [subjects_raw]
+                        elif not subjects_raw: subjects_raw = []
+                        
+                        if isinstance(chapters_raw, str): chapters_raw = [chapters_raw]
+                        elif not chapters_raw: chapters_raw = []
+                        
+                        if isinstance(topics_raw, str): topics_raw = [topics_raw]
+                        elif not topics_raw: topics_raw = []
+
+                        s_id, c_ids, t_ids = self._resolve_tags(subjects_raw, chapters_raw, topics_raw)
+                        
+                        # Use the first subject as primary if multiple (DB schema technically has single subject_id for now)
+                        # But we support multiple chapters/topics
                         
                         question_payload = {
                             "paper_id": paper_id,
@@ -87,8 +106,10 @@ class PyqService:
                             "has_image": q.get("has_image", False),
                             "image_url": image_url,
                             "subject_id": s_id,
-                            "chapter_id": c_id,
-                            "topic_id": t_id,
+                            "chapter_ids": c_ids, # New Array Column
+                            "topic_ids": t_ids,   # New Array Column
+                            "chapter_id": c_ids[0] if c_ids else None, # Legacy/Primary
+                            "topic_id": t_ids[0] if t_ids else None,   # Legacy/Primary
                             "page_number": page_num,
                             "question_number": q.get("question_number"),
                             "created_at": datetime.utcnow().isoformat()
@@ -139,9 +160,9 @@ class PyqService:
             "question_text": "Full text of question...",
             "options": [{{"id": "A", "text": "..."}}, ...],
             "correct_answer": "A", (if marked),
-            "subject": "Math", (Must match provided hierarchy),
-            "chapter": "Calculus", (Must match provided hierarchy),
-            "topic": "Limits", (Must match provided hierarchy),
+            "subject": "Math", 
+            "chapter": ["Calculus", "Functions"], (Can be a list if multiple concepts involved),
+            "topic": ["Limits", "Domain"], (Can be a list if multiple concepts involved),
             "has_image": true/false, (Does this question have a diagram/figure?),
             "bbox": [ymin, xmin, ymax, xmax] (Normalized 0-1 coordinates of the diagram ONLY, if has_image is true. 0,0 is top-left)
           }}
@@ -150,7 +171,13 @@ class PyqService:
         IMPORTANT:
         1. Return ONLY the JSON list. No markdown formatting, no explanation.
         2. Accurately transcribe all math formulas using LaTeX.
-        3. **CRITICAL**: Use standard JSON string escaping. Write LaTeX commands with single backslash in your output: "\\frac", "\\alpha". The JSON encoder will handle escaping.
+        1. Return ONLY the JSON list. No markdown formatting, no explanation.
+        2. Accurately transcribe all math formulas using LaTeX.
+        3. **CRITICAL**: You MUST double-escape all LaTeX backslashes. 
+           - Write `\\frac` for `\frac`
+           - Write `\\alpha` for `\alpha`
+           - Write `\\int` for `\int`
+           - The raw JSON string must look like: "text": "Solve $\\int x dx$"
         4. **CRITICAL - Character Set**: 
            - NEVER use Unicode subscripts (₀₁₂₃₄₅₆₇₈₉) or superscripts (⁰¹²³⁴⁵⁶⁷⁸⁹)
            - Use LaTeX syntax: _2 for subscript, ^2 for superscript
@@ -170,7 +197,7 @@ class PyqService:
            OR describe in words: 'Truth table: A=0,B=0→Y=0; A=1,B=0→Y=1...'
         7. Degree symbol: Use $0^\\circ$C not 0°C or 0\\degreeC
         8. If a question has a diagram, set has_image=true and provide the bounding box [ymin, xmin, ymax, xmax] for the diagram.
-        9. STRICTLY use the provided hierarchy for tagging.
+        9. INVALID CHARACTERS: Do not use unescaped backslashes.
         """
         
         headers = {
@@ -204,6 +231,18 @@ class PyqService:
         response.raise_for_status()
         
         content = response.json()['choices'][0]['message']['content']
+        
+        def repair_json_content(json_str: str) -> str:
+            """
+            Attempts to repair common JSON errors in LLM output, specifically unescaped LaTeX backslashes.
+            Replaces `\` with `\\` unless it is followed by a valid escape character.
+            """
+            # Regex to match backslash NOT followed by valid JSON escape chars (" \ / b f n r t u)
+            # We want to match `\` that is NOT followed by these.
+            # \u must be followed by 4 hex, but we'll just check for u for simplicity as \user is rare in latex
+            # LaTeX: \alpha, \int, \frac -> all invalid escapes.
+            return re.sub(r'\\(?![/\"\\bfnrtu])', r'\\\\', json_str)
+
         try:
             # Attempt to find JSON list in the content
             start_index = content.find('[')
@@ -211,7 +250,13 @@ class PyqService:
             
             if start_index != -1 and end_index != -1:
                 json_str = content[start_index : end_index + 1]
-                data = json.loads(json_str)
+                try:
+                    data = json.loads(json_str)
+                except json.JSONDecodeError:
+                    # Try repairing
+                    print("JSON Decode Error in list, attempting repair...")
+                    json_str_repaired = repair_json_content(json_str)
+                    data = json.loads(json_str_repaired)
                 return data
             else:
                 print(f"No JSON array found in response")
@@ -221,7 +266,11 @@ class PyqService:
                 elif "```" in content:
                     content = content.split("```")[1].split("```")[0]
                     
-                data = json.loads(content)
+                try:
+                    data = json.loads(content)
+                except json.JSONDecodeError:
+                    print("JSON Decode Error in fallback, attempting repair...")
+                    data = json.loads(repair_json_content(content))
                 return data if isinstance(data, list) else []
         except json.JSONDecodeError as e:
             print(f"Failed to parse JSON: {e}")
@@ -232,9 +281,13 @@ class PyqService:
             if "```json" in content:
                 content = content.split("```json")[1].split("```")[0]
             elif "```" in content:
-                content = content.split("```")[1].split("```")[0]
+                content = content.split("```json")[1].split("```")[0]
                 
-            data = json.loads(content)
+            try:
+                data = json.loads(content)
+            except:
+                data = json.loads(repair_json_content(content))
+            
             if isinstance(data, dict):
                 for key in data:
                     if isinstance(data[key], list):
@@ -289,28 +342,47 @@ class PyqService:
             print(f"Error cropping/uploading image: {e}")
             return None
 
-    def _resolve_tags(self, s_name, c_name, t_name) -> Tuple[Optional[str], Optional[str], Optional[str]]:
+    def _resolve_tags(self, s_names: List[str], c_names: List[str], t_names: List[str]) -> Tuple[Optional[str], List[str], List[str]]:
         """
-        Resolves names to IDs using DB lookup.
-        Re-fetches map if needed or relies on cached logic (simplified here).
+        Resolves names to IDs using DB lookup. 
+        Accepts lists of names and returns lists of IDs.
         """
-        # For efficiency, we should probably cache specific IDs or query specifically
-        # Implementation similar to repository.py, simplified for brevity here:
-        s_id, c_id, t_id = None, None, None
+        s_id = None
+        c_ids = []
+        t_ids = []
         
-        if s_name:
-            res = supabase.table("subjects").select("id").eq("name", s_name).execute()
-            if res.data: s_id = res.data[0]["id"]
+        # 1. Resolve Subject (Single for now, take first)
+        if s_names and len(s_names) > 0:
+            s_name = s_names[0]
+            if s_name:
+                res = supabase.table("subjects").select("id").eq("name", s_name).execute()
+                if res.data: s_id = res.data[0]["id"]
             
-        if c_name and s_id:
-            res = supabase.table("chapters").select("id").eq("name", c_name).eq("subject_id", s_id).execute()
-            if res.data: c_id = res.data[0]["id"]
+        # 2. Resolve Chapters
+        if c_names and s_id:
+            for c_name in c_names:
+                if not c_name: continue
+                # We filter by subject_id to ensure correctness
+                res = supabase.table("chapters").select("id").eq("name", c_name).eq("subject_id", s_id).execute()
+                if res.data:
+                    c_ids.append(res.data[0]["id"])
+        
+        # 3. Resolve Topics
+        # Topics need to belong to one of the resolved chapters.
+        # This is tricky because we don't know which topic belongs to which chapter from names alone easily
+        # unless names are unique or we check all resolved chapters.
+        if t_names and c_ids:
+            for t_name in t_names:
+                if not t_name: continue
+                # Search in all resolved chapters
+                # Or just search by name and filter by chapter_ids in python (or use `in` query)
+                
+                # Using `in` query for chapter_id
+                res = supabase.table("topics").select("id").eq("name", t_name).in_("chapter_id", c_ids).execute()
+                if res.data:
+                    t_ids.append(res.data[0]["id"])
             
-        if t_name and c_id:
-            res = supabase.table("topics").select("id").eq("name", t_name).eq("chapter_id", c_id).execute()
-            if res.data: t_id = res.data[0]["id"]
-            
-        return s_id, c_id, t_id
+        return s_id, c_ids, t_ids
 
     def delete_images_from_storage(self, image_urls: List[str]):
         """
