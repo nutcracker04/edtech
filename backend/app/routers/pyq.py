@@ -66,6 +66,18 @@ async def delete_paper(paper_id: UUID, current_user: dict = Depends(get_current_
     # if current_user.get("role") != "admin": # Uncomment when role check is active
     #     raise HTTPException(status_code=403, detail="Not authorized")
         
+    # Delete Images from Storage first
+    try:
+        # Fetch all questions for this paper to get image URLs
+        questions_res = supabase.table("pyq_questions").select("image_url").eq("paper_id", str(paper_id)).execute()
+        if questions_res.data:
+            image_urls = [q["image_url"] for q in questions_res.data if q.get("image_url")]
+            if image_urls:
+                pyq_service.delete_images_from_storage(image_urls)
+    except Exception as e:
+        print(f"Error cleaning up images: {e}")
+        # Continue with DB deletion even if storage cleanup fails
+
     # Delete Questions first (if no cascade)
     supabase.table("pyq_questions").delete().eq("paper_id", str(paper_id)).execute()
     
@@ -79,6 +91,14 @@ async def delete_paper(paper_id: UUID, current_user: dict = Depends(get_current_
 
 @router.delete("/questions/{question_id}")
 async def delete_question(question_id: UUID, current_user: dict = Depends(get_current_user)):
+    # Delete Image from Storage first
+    try:
+        question_res = supabase.table("pyq_questions").select("image_url").eq("id", str(question_id)).single().execute()
+        if question_res.data and question_res.data.get("image_url"):
+            pyq_service.delete_images_from_storage([question_res.data["image_url"]])
+    except Exception as e:
+        print(f"Error cleaning up image: {e}")
+
     res = supabase.table("pyq_questions").delete().eq("id", str(question_id)).execute()
     if not res.data:
         raise HTTPException(status_code=404, detail="Question not found")

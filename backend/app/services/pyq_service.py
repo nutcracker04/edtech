@@ -312,4 +312,38 @@ class PyqService:
             
         return s_id, c_id, t_id
 
+    def delete_images_from_storage(self, image_urls: List[str]):
+        """
+        Deletes images from Supabase storage.
+        Expects full public URLs. Extracts the path relative to the bucket.
+        """
+        if not image_urls:
+            return
+            
+        try:
+            # Extract paths from URLs
+            # URL format example: https://<project>.supabase.co/storage/v1/object/public/question-images/{paper_id}/{filename}
+            # We need just {paper_id}/{filename} which comes after the bucket name "question-images/"
+            
+            paths = []
+            bucket_name = "question-images"
+            
+            for url in image_urls:
+                if not url: continue
+                
+                if bucket_name in url:
+                    # Split by bucket name and take the part after
+                    parts = url.split(f"{bucket_name}/")
+                    if len(parts) > 1:
+                        # Decode URL components if needed, but usually storage paths are safe? 
+                        # Ideally we should just grab the suffix.
+                        paths.append(parts[1])
+            
+            if paths:
+                supabase.storage.from_(bucket_name).remove(paths)
+                print(f"Deleted {len(paths)} images from storage: {paths}")
+                
+        except Exception as e:
+            print(f"Error deleting images from storage: {e}")
+
 pyq_service = PyqService()
