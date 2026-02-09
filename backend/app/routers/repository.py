@@ -138,20 +138,69 @@ async def import_questions_from_upload(
     if not questions:
         raise HTTPException(status_code=400, detail="No questions found in this upload")
     
+    today = datetime.utcnow().isoformat()
+    
+    # Build hierarchy map for quick lookup: topic_name -> {subject_id, chapter_id, topic_id}
+    # This assumes topic names are unique across the whole system or at within chapters.
+    # To be safe, we map: Subject -> Chapter -> Topic -> IDs
+    
+    # Fetch all metadata to build lookup
+    subjects = supabase.table("subjects").select("id, name").execute().data
+    subject_map = {s["name"]: s["id"] for s in subjects}
+    
+    chapters = supabase.table("chapters").select("id, name, subject_id").execute().data
+    chapter_map = {} # subject_id -> {chapter_name: chapter_id}
+    for c in chapters:
+        if c["subject_id"] not in chapter_map:
+            chapter_map[c["subject_id"]] = {}
+        chapter_map[c["subject_id"]][c["name"]] = c["id"]
+        
+    topics = supabase.table("topics").select("id, name, chapter_id").execute().data
+    topic_map = {} # chapter_id -> {topic_name: topic_id}
+    for t in topics:
+        if t["chapter_id"] not in topic_map:
+            topic_map[t["chapter_id"]] = {}
+        topic_map[t["chapter_id"]][t["name"]] = t["id"]
+
     repo_questions = []
+    
     for q in questions:
+        # Resolve Tags
+        s_id, c_id, t_id = None, None, None
+        is_tagged = False
+        
+        q_subj_name = q.get("subject")
+        q_chap_name = q.get("chapter")
+        q_topic_name = q.get("topic")
+        
+        if q_subj_name and q_subj_name in subject_map:
+            s_id = subject_map[q_subj_name]
+            
+            if q_chap_name and s_id in chapter_map and q_chap_name in chapter_map[s_id]:
+                c_id = chapter_map[s_id][q_chap_name]
+                
+                if q_topic_name and c_id in topic_map and q_topic_name in topic_map[c_id]:
+                    t_id = topic_map[c_id][q_topic_name]
+                    is_tagged = True 
+        
         repo_questions.append({
             "question_text": q.get("question_text"),
             "options": q.get("options", []),
             "correct_answer": q.get("correct_answer"),
             "source_paper_id": str(upload_id),
-            "is_tagged": False
+            "is_tagged": is_tagged,
+            "subject_id": s_id,
+            "chapter_id": c_id,
+            "topic_id": t_id,
+            "difficulty_level": q.get("difficulty_level"),
+            "created_at": today,
+            "updated_at": today
         })
     
     if repo_questions:
         supabase.table("repository_questions").insert(repo_questions).execute()
         
-    return {"message": f"Successfully imported {len(repo_questions)} questions to untagged repository"}
+    return {"message": f"Successfully imported {len(repo_questions)} questions to repository (Tagged: {sum(1 for q in repo_questions if q['is_tagged'])})"}
 
 @router.post("/questions/manual")
 async def create_manual_question(

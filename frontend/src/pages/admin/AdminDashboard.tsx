@@ -32,6 +32,14 @@ const AdminDashboard = () => {
             color: "text-orange-500",
             bgColor: "bg-orange-500/10",
         },
+        {
+            title: "PYQ Management",
+            description: "Upload and manage Previous Year Question papers.",
+            icon: FileUp,
+            path: "/admin/pyq",
+            color: "text-purple-500",
+            bgColor: "bg-purple-500/10",
+        },
     ];
 
     return (

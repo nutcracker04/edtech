@@ -42,8 +42,8 @@ export function BulkTextDumper({ onComplete }: { onComplete?: () => void }) {
 
       if (!token) return;
 
-      const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000';
-      
+      const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+
       const response = await fetch(`${API_BASE_URL}/api/ai/tag-hierarchy`, {
         headers: {
           'Authorization': `Bearer ${token}`
@@ -113,8 +113,8 @@ export function BulkTextDumper({ onComplete }: { onComplete?: () => void }) {
         return;
       }
 
-      const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000';
-      
+      const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+
       const response = await fetch(`${API_BASE_URL}/api/ai/parse-questions`, {
         method: 'POST',
         headers: {
@@ -126,7 +126,7 @@ export function BulkTextDumper({ onComplete }: { onComplete?: () => void }) {
 
       if (!response.ok) {
         const error = await response.json().catch(() => ({ detail: 'Failed to parse questions' }));
-        
+
         // Handle specific error cases
         if (response.status === 503) {
           throw new Error('AI service is not configured. Please contact administrator.');
@@ -157,10 +157,10 @@ export function BulkTextDumper({ onComplete }: { onComplete?: () => void }) {
           chapter: q.chapter || null,
           topic: q.topic || null
         }));
-        
+
         console.log('[DEBUG] Parsed questions with tags:', parsed);
         console.log('[DEBUG] First parsed question:', parsed[0]);
-        
+
         setParsedQuestions(parsed);
         toast.success(`🎉 AI parsed ${count} question(s) successfully!`);
       }
@@ -182,11 +182,11 @@ export function BulkTextDumper({ onComplete }: { onComplete?: () => void }) {
   const updateQuestionTags = (index: number, subject?: string | null, chapter?: string | null, topic?: string | null) => {
     const updated = [...parsedQuestions];
     const updates: Partial<ParsedQuestion> = {};
-    
+
     if (subject !== undefined) updates.subject = subject || undefined;
     if (chapter !== undefined) updates.chapter = chapter || undefined;
     if (topic !== undefined) updates.topic = topic || undefined;
-    
+
     updated[index] = { ...updated[index], ...updates };
     setParsedQuestions(updated);
   };
@@ -207,10 +207,10 @@ export function BulkTextDumper({ onComplete }: { onComplete?: () => void }) {
       const questionsToInsert = parsedQuestions.map(q => {
         // Map tag names to IDs
         const { subject_id, chapter_id, topic_id } = mapTagNamesToIds(q);
-        
+
         // Determine status based on whether question is fully tagged with valid IDs
         const isFullyTagged = subject_id && chapter_id && topic_id;
-        
+
         // Store AI-generated tag names in metadata for reference
         const metadata: any = {};
         if (q.subject || q.chapter || q.topic) {
@@ -220,7 +220,7 @@ export function BulkTextDumper({ onComplete }: { onComplete?: () => void }) {
             topic: q.topic
           };
         }
-        
+
         return {
           question_text: q.question_text,
           options: q.options,
@@ -304,7 +304,7 @@ export function BulkTextDumper({ onComplete }: { onComplete?: () => void }) {
                 <div className="text-muted-foreground mt-2">// AI handles different formats automatically</div>
               </div>
               <p className="text-xs text-muted-foreground mt-2">
-                💡 The AI can understand various question formats, numbering styles, and answer indicators. 
+                💡 The AI can understand various question formats, numbering styles, and answer indicators.
                 Just paste your questions naturally!
               </p>
             </div>
@@ -320,8 +320,8 @@ export function BulkTextDumper({ onComplete }: { onComplete?: () => void }) {
               />
             </div>
 
-            <Button 
-              onClick={parseQuestions} 
+            <Button
+              onClick={parseQuestions}
               disabled={!bulkText.trim() || parsing}
               className="w-full"
             >
@@ -366,242 +366,241 @@ export function BulkTextDumper({ onComplete }: { onComplete?: () => void }) {
                     console.log('[DEBUG] Rendering question:', q);
                     console.log('[DEBUG] Has tags?', q.subject, q.chapter, q.topic);
                   }
-                  
+
                   return (
-                  <div key={q.id} className="p-6 space-y-4">
-                    <div className="flex items-start justify-between gap-4">
-                      <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center font-bold text-primary">
-                        {qIdx + 1}
-                      </div>
-                      
-                      <div className="flex-grow space-y-4">
-                        {/* Question Text */}
-                        <div className="space-y-2">
-                          <Label>Question</Label>
-                          {editingIndex === qIdx ? (
-                            <Textarea
-                              value={q.question_text}
-                              onChange={(e) => updateQuestion(qIdx, 'question_text', e.target.value)}
-                              className="min-h-[80px]"
-                            />
-                          ) : (
-                            <p className="text-lg p-3 bg-muted/30 rounded-md">{q.question_text}</p>
-                          )}
+                    <div key={q.id} className="p-6 space-y-4">
+                      <div className="flex items-start justify-between gap-4">
+                        <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center font-bold text-primary">
+                          {qIdx + 1}
                         </div>
 
-                        {/* Options */}
-                        <div className="space-y-2">
-                          <Label>Options</Label>
-                          <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                            {q.options.map((opt, optIdx) => (
-                              <div key={opt.id} className="flex gap-2 items-center">
-                                <span className="font-bold text-primary w-6">{opt.id}.</span>
+                        <div className="flex-grow space-y-4">
+                          {/* Question Text */}
+                          <div className="space-y-2">
+                            <Label>Question</Label>
+                            {editingIndex === qIdx ? (
+                              <Textarea
+                                value={q.question_text}
+                                onChange={(e) => updateQuestion(qIdx, 'question_text', e.target.value)}
+                                className="min-h-[80px]"
+                              />
+                            ) : (
+                              <p className="text-lg p-3 bg-muted/30 rounded-md">{q.question_text}</p>
+                            )}
+                          </div>
+
+                          {/* Options */}
+                          <div className="space-y-2">
+                            <Label>Options</Label>
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                              {q.options.map((opt, optIdx) => (
+                                <div key={opt.id} className="flex gap-2 items-center">
+                                  <span className="font-bold text-primary w-6">{opt.id}.</span>
+                                  {editingIndex === qIdx ? (
+                                    <Input
+                                      value={opt.text}
+                                      onChange={(e) => updateOption(qIdx, optIdx, e.target.value)}
+                                      className="flex-grow"
+                                    />
+                                  ) : (
+                                    <span className={`flex-grow p-2 rounded border ${opt.id === q.correct_answer ? 'bg-green-500/10 border-green-500/30' : 'bg-card'
+                                      }`}>
+                                      {opt.text}
+                                    </span>
+                                  )}
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+
+                          {/* Metadata */}
+                          <div className="space-y-4">
+                            <div className="flex gap-4 items-end">
+                              <div className="space-y-2 flex-grow">
+                                <Label>Correct Answer</Label>
                                 {editingIndex === qIdx ? (
-                                  <Input
-                                    value={opt.text}
-                                    onChange={(e) => updateOption(qIdx, optIdx, e.target.value)}
-                                    className="flex-grow"
-                                  />
+                                  <Select
+                                    value={q.correct_answer}
+                                    onValueChange={(val) => updateQuestion(qIdx, 'correct_answer', val)}
+                                  >
+                                    <SelectTrigger>
+                                      <SelectValue />
+                                    </SelectTrigger>
+                                    <SelectContent>
+                                      {q.options.map(opt => (
+                                        <SelectItem key={opt.id} value={opt.id}>{opt.id}</SelectItem>
+                                      ))}
+                                    </SelectContent>
+                                  </Select>
                                 ) : (
-                                  <span className={`flex-grow p-2 rounded border ${
-                                    opt.id === q.correct_answer ? 'bg-green-500/10 border-green-500/30' : 'bg-card'
-                                  }`}>
-                                    {opt.text}
-                                  </span>
+                                  <Badge variant="outline" className="bg-green-500/10">
+                                    Answer: {q.correct_answer}
+                                  </Badge>
                                 )}
                               </div>
-                            ))}
+
+                              <div className="space-y-2 flex-grow">
+                                <Label>Difficulty</Label>
+                                {editingIndex === qIdx ? (
+                                  <Select
+                                    value={q.difficulty_level}
+                                    onValueChange={(val) => updateQuestion(qIdx, 'difficulty_level', val)}
+                                  >
+                                    <SelectTrigger>
+                                      <SelectValue />
+                                    </SelectTrigger>
+                                    <SelectContent>
+                                      <SelectItem value="easy">Easy</SelectItem>
+                                      <SelectItem value="medium">Medium</SelectItem>
+                                      <SelectItem value="hard">Hard</SelectItem>
+                                    </SelectContent>
+                                  </Select>
+                                ) : (
+                                  <Badge variant="secondary">
+                                    {q.difficulty_level?.toUpperCase()}
+                                  </Badge>
+                                )}
+                              </div>
+                            </div>
+
+                            {/* Tags */}
+                            {(q.subject || q.chapter || q.topic || editingIndex === qIdx) && (
+                              <div className="space-y-2">
+                                <Label className="text-xs">Tags</Label>
+                                {editingIndex === qIdx ? (
+                                  <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+                                    {/* Subject Selector */}
+                                    <div className="space-y-1">
+                                      <Label className="text-xs text-muted-foreground">Subject</Label>
+                                      <Select
+                                        value={q.subject || 'none'}
+                                        onValueChange={(val) => {
+                                          if (val === 'none') {
+                                            updateQuestionTags(qIdx, null, null, null);
+                                          } else {
+                                            updateQuestionTags(qIdx, val, null, null);
+                                          }
+                                        }}
+                                      >
+                                        <SelectTrigger>
+                                          <SelectValue />
+                                        </SelectTrigger>
+                                        <SelectContent>
+                                          <SelectItem value="none">-- Select Subject --</SelectItem>
+                                          {tagHierarchy && Object.keys(tagHierarchy).map(subject => (
+                                            <SelectItem key={subject} value={subject}>
+                                              {subject}
+                                            </SelectItem>
+                                          ))}
+                                        </SelectContent>
+                                      </Select>
+                                    </div>
+
+                                    {/* Chapter Selector */}
+                                    <div className="space-y-1">
+                                      <Label className="text-xs text-muted-foreground">Chapter</Label>
+                                      <Select
+                                        value={q.chapter || 'none'}
+                                        onValueChange={(val) => {
+                                          if (val === 'none') {
+                                            updateQuestionTags(qIdx, undefined, null, null);
+                                          } else {
+                                            updateQuestionTags(qIdx, undefined, val, null);
+                                          }
+                                        }}
+                                        disabled={!q.subject || !tagHierarchy?.[q.subject]}
+                                      >
+                                        <SelectTrigger>
+                                          <SelectValue />
+                                        </SelectTrigger>
+                                        <SelectContent>
+                                          <SelectItem value="none">-- Select Chapter --</SelectItem>
+                                          {q.subject && tagHierarchy?.[q.subject]?.chapters &&
+                                            Object.keys(tagHierarchy[q.subject].chapters).map(chapter => (
+                                              <SelectItem key={chapter} value={chapter}>
+                                                {chapter}
+                                              </SelectItem>
+                                            ))
+                                          }
+                                        </SelectContent>
+                                      </Select>
+                                    </div>
+
+                                    {/* Topic Selector */}
+                                    <div className="space-y-1">
+                                      <Label className="text-xs text-muted-foreground">Topic</Label>
+                                      <Select
+                                        value={q.topic || 'none'}
+                                        onValueChange={(val) => {
+                                          if (val === 'none') {
+                                            updateQuestionTags(qIdx, undefined, undefined, null);
+                                          } else {
+                                            updateQuestionTags(qIdx, undefined, undefined, val);
+                                          }
+                                        }}
+                                        disabled={!q.chapter || !q.subject || !tagHierarchy?.[q.subject]?.chapters?.[q.chapter]}
+                                      >
+                                        <SelectTrigger>
+                                          <SelectValue />
+                                        </SelectTrigger>
+                                        <SelectContent>
+                                          <SelectItem value="none">-- Select Topic --</SelectItem>
+                                          {q.subject && q.chapter && tagHierarchy?.[q.subject]?.chapters?.[q.chapter]?.topics &&
+                                            Object.keys(tagHierarchy[q.subject].chapters[q.chapter].topics).map(topic => (
+                                              <SelectItem key={topic} value={topic}>
+                                                {topic}
+                                              </SelectItem>
+                                            ))
+                                          }
+                                        </SelectContent>
+                                      </Select>
+                                    </div>
+                                  </div>
+                                ) : (
+                                  <div className="flex flex-wrap gap-2">
+                                    {q.subject && (
+                                      <Badge variant="outline" className="bg-blue-500/10 border-blue-500/30">
+                                        {q.subject}
+                                      </Badge>
+                                    )}
+                                    {q.chapter && (
+                                      <Badge variant="outline" className="bg-purple-500/10 border-purple-500/30">
+                                        {q.chapter}
+                                      </Badge>
+                                    )}
+                                    {q.topic && (
+                                      <Badge variant="outline" className="bg-green-500/10 border-green-500/30">
+                                        {q.topic}
+                                      </Badge>
+                                    )}
+                                  </div>
+                                )}
+                              </div>
+                            )}
                           </div>
                         </div>
 
-                        {/* Metadata */}
-                        <div className="space-y-4">
-                          <div className="flex gap-4 items-end">
-                            <div className="space-y-2 flex-grow">
-                              <Label>Correct Answer</Label>
-                              {editingIndex === qIdx ? (
-                                <Select
-                                  value={q.correct_answer}
-                                  onValueChange={(val) => updateQuestion(qIdx, 'correct_answer', val)}
-                                >
-                                  <SelectTrigger>
-                                    <SelectValue />
-                                  </SelectTrigger>
-                                  <SelectContent>
-                                    {q.options.map(opt => (
-                                      <SelectItem key={opt.id} value={opt.id}>{opt.id}</SelectItem>
-                                    ))}
-                                  </SelectContent>
-                                </Select>
-                              ) : (
-                                <Badge variant="outline" className="bg-green-500/10">
-                                  Answer: {q.correct_answer}
-                                </Badge>
-                              )}
-                            </div>
-
-                            <div className="space-y-2 flex-grow">
-                              <Label>Difficulty</Label>
-                              {editingIndex === qIdx ? (
-                                <Select
-                                  value={q.difficulty_level}
-                                  onValueChange={(val) => updateQuestion(qIdx, 'difficulty_level', val)}
-                                >
-                                  <SelectTrigger>
-                                    <SelectValue />
-                                  </SelectTrigger>
-                                  <SelectContent>
-                                    <SelectItem value="easy">Easy</SelectItem>
-                                    <SelectItem value="medium">Medium</SelectItem>
-                                    <SelectItem value="hard">Hard</SelectItem>
-                                  </SelectContent>
-                                </Select>
-                              ) : (
-                                <Badge variant="secondary">
-                                  {q.difficulty_level?.toUpperCase()}
-                                </Badge>
-                              )}
-                            </div>
-                          </div>
-
-                          {/* Tags */}
-                          {(q.subject || q.chapter || q.topic || editingIndex === qIdx) && (
-                            <div className="space-y-2">
-                              <Label className="text-xs">Tags</Label>
-                              {editingIndex === qIdx ? (
-                                <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-                                  {/* Subject Selector */}
-                                  <div className="space-y-1">
-                                    <Label className="text-xs text-muted-foreground">Subject</Label>
-                                    <Select
-                                      value={q.subject || 'none'}
-                                      onValueChange={(val) => {
-                                        if (val === 'none') {
-                                          updateQuestionTags(qIdx, null, null, null);
-                                        } else {
-                                          updateQuestionTags(qIdx, val, null, null);
-                                        }
-                                      }}
-                                    >
-                                      <SelectTrigger>
-                                        <SelectValue />
-                                      </SelectTrigger>
-                                      <SelectContent>
-                                        <SelectItem value="none">-- Select Subject --</SelectItem>
-                                        {tagHierarchy && Object.keys(tagHierarchy).map(subject => (
-                                          <SelectItem key={subject} value={subject}>
-                                            {subject}
-                                          </SelectItem>
-                                        ))}
-                                      </SelectContent>
-                                    </Select>
-                                  </div>
-
-                                  {/* Chapter Selector */}
-                                  <div className="space-y-1">
-                                    <Label className="text-xs text-muted-foreground">Chapter</Label>
-                                    <Select
-                                      value={q.chapter || 'none'}
-                                      onValueChange={(val) => {
-                                        if (val === 'none') {
-                                          updateQuestionTags(qIdx, undefined, null, null);
-                                        } else {
-                                          updateQuestionTags(qIdx, undefined, val, null);
-                                        }
-                                      }}
-                                      disabled={!q.subject || !tagHierarchy?.[q.subject]}
-                                    >
-                                      <SelectTrigger>
-                                        <SelectValue />
-                                      </SelectTrigger>
-                                      <SelectContent>
-                                        <SelectItem value="none">-- Select Chapter --</SelectItem>
-                                        {q.subject && tagHierarchy?.[q.subject]?.chapters && 
-                                          Object.keys(tagHierarchy[q.subject].chapters).map(chapter => (
-                                            <SelectItem key={chapter} value={chapter}>
-                                              {chapter}
-                                            </SelectItem>
-                                          ))
-                                        }
-                                      </SelectContent>
-                                    </Select>
-                                  </div>
-
-                                  {/* Topic Selector */}
-                                  <div className="space-y-1">
-                                    <Label className="text-xs text-muted-foreground">Topic</Label>
-                                    <Select
-                                      value={q.topic || 'none'}
-                                      onValueChange={(val) => {
-                                        if (val === 'none') {
-                                          updateQuestionTags(qIdx, undefined, undefined, null);
-                                        } else {
-                                          updateQuestionTags(qIdx, undefined, undefined, val);
-                                        }
-                                      }}
-                                      disabled={!q.chapter || !q.subject || !tagHierarchy?.[q.subject]?.chapters?.[q.chapter]}
-                                    >
-                                      <SelectTrigger>
-                                        <SelectValue />
-                                      </SelectTrigger>
-                                      <SelectContent>
-                                        <SelectItem value="none">-- Select Topic --</SelectItem>
-                                        {q.subject && q.chapter && tagHierarchy?.[q.subject]?.chapters?.[q.chapter]?.topics && 
-                                          Object.keys(tagHierarchy[q.subject].chapters[q.chapter].topics).map(topic => (
-                                            <SelectItem key={topic} value={topic}>
-                                              {topic}
-                                            </SelectItem>
-                                          ))
-                                        }
-                                      </SelectContent>
-                                    </Select>
-                                  </div>
-                                </div>
-                              ) : (
-                                <div className="flex flex-wrap gap-2">
-                                  {q.subject && (
-                                    <Badge variant="outline" className="bg-blue-500/10 border-blue-500/30">
-                                      {q.subject}
-                                    </Badge>
-                                  )}
-                                  {q.chapter && (
-                                    <Badge variant="outline" className="bg-purple-500/10 border-purple-500/30">
-                                      {q.chapter}
-                                    </Badge>
-                                  )}
-                                  {q.topic && (
-                                    <Badge variant="outline" className="bg-green-500/10 border-green-500/30">
-                                      {q.topic}
-                                    </Badge>
-                                  )}
-                                </div>
-                              )}
-                            </div>
-                          )}
+                        {/* Actions */}
+                        <div className="flex flex-col gap-2">
+                          <Button
+                            variant="ghost"
+                            size="icon"
+                            onClick={() => setEditingIndex(editingIndex === qIdx ? null : qIdx)}
+                            className="h-8 w-8"
+                          >
+                            <Edit2 className="h-4 w-4" />
+                          </Button>
+                          <Button
+                            variant="ghost"
+                            size="icon"
+                            onClick={() => deleteQuestion(qIdx)}
+                            className="h-8 w-8 text-destructive hover:text-destructive"
+                          >
+                            <Trash2 className="h-4 w-4" />
+                          </Button>
                         </div>
-                      </div>
-
-                      {/* Actions */}
-                      <div className="flex flex-col gap-2">
-                        <Button
-                          variant="ghost"
-                          size="icon"
-                          onClick={() => setEditingIndex(editingIndex === qIdx ? null : qIdx)}
-                          className="h-8 w-8"
-                        >
-                          <Edit2 className="h-4 w-4" />
-                        </Button>
-                        <Button
-                          variant="ghost"
-                          size="icon"
-                          onClick={() => deleteQuestion(qIdx)}
-                          className="h-8 w-8 text-destructive hover:text-destructive"
-                        >
-                          <Trash2 className="h-4 w-4" />
-                        </Button>
                       </div>
                     </div>
-                  </div>
                   );
                 })}
               </div>

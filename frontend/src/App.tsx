@@ -25,6 +25,8 @@ import AdminRepository from "./pages/admin/AdminRepository";
 import TestTaking from "./pages/TestTaking";
 import TestResults from "./pages/TestResults";
 import NotFound from "./pages/NotFound";
+import AdminPyq from "./pages/admin/AdminPyq";
+import AdminPyqView from "./pages/admin/AdminPyqView";
 import { AIAssistant } from "./components/ai/AIAssistant";
 import { AIAssistantButton } from "./components/ai/AIAssistantButton";
 
@@ -124,6 +126,16 @@ const App = () => {
                 <Route path="/admin/repository" element={
                   <ProtectedRoute>
                     <AdminRepository />
+                  </ProtectedRoute>
+                } />
+                <Route path="/admin/pyq" element={
+                  <ProtectedRoute>
+                    <AdminPyq />
+                  </ProtectedRoute>
+                } />
+                <Route path="/admin/pyq/:id" element={
+                  <ProtectedRoute>
+                    <AdminPyqView />
                   </ProtectedRoute>
                 } />
 

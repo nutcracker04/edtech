@@ -5,3 +5,4 @@ from .performance import router as performance_router
 from .auth import router as auth_router
 from .repository import router as repository_router
 from .ai import router as ai_router
+from .pyq import router as pyq_router

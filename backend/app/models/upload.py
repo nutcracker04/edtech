@@ -1,6 +1,6 @@
 from pydantic import BaseModel
 from typing import List, Optional, Dict, Any
-from datetime import datetime
+from datetime import datetime, date
 
 
 class ExtractedQuestion(BaseModel):
@@ -29,6 +29,9 @@ class UploadedTest(BaseModel):
     error_message: Optional[str] = None
     uploaded_at: datetime
     processed_at: Optional[datetime] = None
+    exam_type: Optional[str] = None
+    exam_date: Optional[date] = None
+    exam_session: Optional[str] = None
 
 
 class QuestionConfirmRequest(BaseModel):

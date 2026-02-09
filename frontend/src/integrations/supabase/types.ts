@@ -316,6 +316,82 @@ export interface Database {
           include_common_mistakes?: boolean
         }
       }
+      pyq_papers: {
+        Row: {
+          id: string
+          exam_type: string
+          exam_date: string
+          exam_session: string
+          processing_status: 'pending' | 'processing' | 'completed' | 'failed'
+          total_questions: number
+          created_at: string
+        }
+        Insert: {
+          id?: string
+          exam_type: string
+          exam_date: string
+          exam_session: string
+          processing_status?: 'pending' | 'processing' | 'completed' | 'failed'
+          total_questions: number
+          created_at?: string
+        }
+        Update: {
+          id?: string
+          exam_type?: string
+          exam_date?: string
+          exam_session?: string
+          processing_status?: 'pending' | 'processing' | 'completed' | 'failed'
+          total_questions?: number
+          created_at?: string
+        }
+      }
+      pyq_questions: {
+        Row: {
+          id: string
+          paper_id: string
+          question_text: string
+          options: Json
+          correct_answer: string
+          has_image: boolean
+          image_url: string | null
+          subject_id: string
+          chapter_id: string
+          topic_id: string
+          question_number: number | null
+          page_number: number | null
+          created_at: string
+        }
+        Insert: {
+          id?: string
+          paper_id: string
+          question_text: string
+          options: Json
+          correct_answer: string
+          has_image?: boolean
+          image_url?: string | null
+          subject_id: string
+          chapter_id: string
+          topic_id: string
+          question_number?: number | null
+          page_number?: number | null
+          created_at?: string
+        }
+        Update: {
+          id?: string
+          paper_id?: string
+          question_text?: string
+          options?: Json
+          correct_answer?: string
+          has_image?: boolean
+          image_url?: string | null
+          subject_id?: string
+          chapter_id?: string
+          topic_id?: string
+          question_number?: number | null
+          page_number?: number | null
+          created_at?: string
+        }
+      }
     }
     Views: {
       [_ in never]: never

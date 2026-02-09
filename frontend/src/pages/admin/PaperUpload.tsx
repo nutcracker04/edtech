@@ -21,6 +21,8 @@ const AdminPaperUpload = () => {
     const [lastUploadId, setLastUploadId] = useState<string | null>(null);
     const [isTaggingOpen, setIsTaggingOpen] = useState(false);
 
+    // Metadata state - REMOVED
+
     const handleFileSelect = async (file: File) => {
         setUploadStatus('uploading');
         setUploadProgress(20);
@@ -46,7 +48,7 @@ const AdminPaperUpload = () => {
                             return session?.access_token;
                         })();
 
-                        const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000';
+                        const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
                         await fetch(`${API_BASE_URL}/api/repository/questions/bulk-import-from-upload/${uploadResponse.id}`, {
                             method: 'POST',
                             headers: { 'Authorization': `Bearer ${token}` }
@@ -117,9 +119,11 @@ const AdminPaperUpload = () => {
                                         status={uploadStatus}
                                         error={error}
                                         label="Drop test paper (PDF/JPG) here"
+                                        accept="application/pdf,image/*"
                                     />
                                 </CardContent>
                             </Card>
+
                         ) : (
                             <Card className="border-2 border-primary/20 bg-primary/5">
                                 <CardHeader>
@@ -195,7 +199,7 @@ const AdminPaperUpload = () => {
                     onOpenChange={setIsTaggingOpen}
                 />
             </div>
-        </MainLayout>
+        </MainLayout >
     );
 };
 

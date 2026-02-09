@@ -41,16 +41,27 @@ export function FileUploader({
 
   const validateFile = (file: File): string | null => {
     // Check file type
-    if (!file.type.startsWith('image/')) {
+    // Check file type - simple validation based on accept prop
+    if (accept === 'image/*' && !file.type.startsWith('image/')) {
       return 'Please upload an image file';
     }
-    
+
+    // If accept allows specific types, we should ideally check against them
+    // For now, if it's PDF and we allow it, explicitly check
+    if (file.type === 'application/pdf') {
+      if (!accept?.includes('application/pdf') && !accept?.includes('.pdf')) {
+        return 'PDF files are not allowed';
+      }
+    } else if (!file.type.startsWith('image/') && accept?.startsWith('image/')) {
+      return 'Please upload an image file';
+    }
+
     // Check file size
     const sizeMB = file.size / (1024 * 1024);
     if (sizeMB > maxSize) {
       return `File size must be less than ${maxSize}MB`;
     }
-    
+
     return null;
   };
 
@@ -62,13 +73,13 @@ export function FileUploader({
     if (e.dataTransfer.files && e.dataTransfer.files[0]) {
       const file = e.dataTransfer.files[0];
       const error = validateFile(file);
-      
+
       if (error) {
         // Show error (you might want to use a toast here)
         console.error(error);
         return;
       }
-      
+
       setSelectedFile(file);
       onFileSelect(file);
     }
@@ -79,12 +90,12 @@ export function FileUploader({
     if (e.target.files && e.target.files[0]) {
       const file = e.target.files[0];
       const error = validateFile(file);
-      
+
       if (error) {
         console.error(error);
         return;
       }
-      
+
       setSelectedFile(file);
       onFileSelect(file);
     }
