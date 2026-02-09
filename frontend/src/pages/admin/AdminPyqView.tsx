@@ -37,27 +37,110 @@ interface Question {
     page_number: number;
 }
 
-const renderMathText = (text: string) => {
-    if (!text) return "";
+const renderTable = (text: string) => {
+    const match = text.match(/\\begin{tabular}{[^}]*}(.*?)\\end{tabular}/s);
+    if (!match) return text;
 
-    // Split by $...$ for inline math and $$...$$ for block math
-    // Simple regex for $...$ (non-greedy)
-    // Note: this is a basic splitter. Complex nested latex might need a better parser.
-    const parts = text.split(/(\$\$[\s\S]*?\$\$|\$[\s\S]*?\$)/g);
+    const content = match[1];
+    const rows = content
+        .split('\\\\')
+        .filter(r => r.trim() && !r.includes('\\hline'))
+        .map(r => r.split('&').map(c => c.trim()));
 
     return (
-        <span>
-            {parts.map((part, index) => {
-                if (part.startsWith('$$') && part.endsWith('$$')) {
-                    return <BlockMath key={index} math={part.slice(2, -2)} />;
-                } else if (part.startsWith('$') && part.endsWith('$')) {
-                    return <InlineMath key={index} math={part.slice(1, -1)} />;
-                } else {
-                    return <span key={index}>{part}</span>;
-                }
-            })}
-        </span>
+        <table className="border text-sm my-2">
+            <tbody>
+                {rows.map((row, i) => (
+                    <tr key={i}>
+                        {row.map((cell, j) => (
+                            <td key={j} className="border px-2 py-1">
+                                {renderMathText(cell)}
+                            </td>
+                        ))}
+                    </tr>
+                ))}
+            </tbody>
+        </table>
     );
+};
+
+const renderTextWithHeuristics = (text: string) => {
+    // Heuristic pattern to detect potential LaTeX that isn't wrapped in $...$
+    // Matches:
+    // 1. Exponents: 10^4, 10^{-6}, L^{-1}, M^2
+    // 2. LaTeX commands: \text{...}, \times, \alpha
+    // 3. Subscripts: P_C, V_C
+    const mathPattern = /([A-Za-z0-9]+\s*\^\s*(?:\{[^}]+\}|-?\d+)|\\text\{[^}]*\}|\\[a-zA-Z]+|[A-Z]_[A-Za-z0-9]+)/g;
+
+    // Split includes capturing groups, so odd indices will be the matches
+    const parts = text.split(mathPattern);
+
+    return (
+        <>
+            {parts.map((part, i) => {
+                // Odd indices are the regex matches (potential math)
+                // Filter out empty strings or purely whitespace matches if any
+                if (i % 2 === 1 && part.trim().length > 0) {
+                    try {
+                        return <InlineMath key={i} math={part} errorColor="#ef4444" />;
+                    } catch (e) {
+                        // Fallback if it wasn't actually valid math
+                        return <span key={i}>{part}</span>;
+                    }
+                }
+                return <span key={i}>{part}</span>;
+            })}
+        </>
+    );
+};
+
+const renderMathText = (text: string) => {
+    if (!text) return null;
+
+    // Check for LaTeX tables
+    if (text.includes('\\begin{tabular}')) {
+        return renderTable(text);
+    }
+
+    // Validation warning (keep for debugging)
+    if (/[₀-₉⁰-⁹°±×÷≠≤≥]/.test(text)) {
+        console.warn('Unicode math characters detected, backend should use LaTeX:', text);
+    }
+
+    try {
+        // Split by $...$ for inline math and $$...$$ for block math
+        const parts = text.split(/(\$\$[\s\S]*?\$\$|\$[\s\S]*?\$)/g);
+
+        return (
+            <span>
+                {parts.map((part, index) => {
+                    if (part.startsWith('$$') && part.endsWith('$$')) {
+                        const math = part.slice(2, -2);
+                        try {
+                            return <BlockMath key={index} math={math} errorColor="#ef4444" />;
+                        } catch (e) {
+                            console.error('BlockMath error:', e, 'Content:', math);
+                            return <span key={index} className="text-red-500 text-xs">[Math Error]</span>;
+                        }
+                    } else if (part.startsWith('$') && part.endsWith('$')) {
+                        const math = part.slice(1, -1);
+                        try {
+                            return <InlineMath key={index} math={math} errorColor="#ef4444" />;
+                        } catch (e) {
+                            console.error('InlineMath error:', e, 'Content:', math);
+                            return <span key={index} className="text-red-500 text-xs">[Math Error]</span>;
+                        }
+                    } else {
+                        // Regular text, but check for missed LaTeX patterns
+                        return <span key={index}>{renderTextWithHeuristics(part)}</span>;
+                    }
+                })}
+            </span>
+        );
+    } catch (e) {
+        console.error('Math rendering error:', e);
+        return <span className="text-red-500 text-xs">[Render Error]</span>;
+    }
 };
 
 const AdminPyqView = () => {
@@ -262,7 +345,7 @@ const AdminPyqView = () => {
                                         <div className="flex-grow space-y-4">
                                             {/* Question Text */}
                                             <div className="prose max-w-none dark:prose-invert">
-                                                <div className="whitespace-pre-wrap">{renderMathText(q.question_text)}</div>
+                                                <div className="whitespace-normal leading-relaxed">{renderMathText(q.question_text)}</div>
                                             </div>
 
                                             {/* Extracted Diagram */}

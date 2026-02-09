@@ -150,10 +150,27 @@ class PyqService:
         IMPORTANT:
         1. Return ONLY the JSON list. No markdown formatting, no explanation.
         2. Accurately transcribe all math formulas using LaTeX.
-        3. **CRITICAL**: Enclose ALL inline LaTeX in single dollar signs like $...$ and block/displayed equations in double dollar signs like $$...$$.
-        4. **CRITICAL**: You MUST double-escape all backslashes in LaTeX strings. For example, use "\\frac" instead of "\frac", and "\\alpha" instead of "\alpha".
-        5. If a question has a diagram, set has_image=true and provide the bounding box [ymin, xmin, ymax, xmax] for the diagram.
-        6. STRICTLY use the provided hierarchy for tagging.
+        3. **CRITICAL**: Use standard JSON string escaping. Write LaTeX commands with single backslash in your output: "\\frac", "\\alpha". The JSON encoder will handle escaping.
+        4. **CRITICAL - Character Set**: 
+           - NEVER use Unicode subscripts (₀₁₂₃₄₅₆₇₈₉) or superscripts (⁰¹²³⁴⁵⁶⁷⁸⁹)
+           - Use LaTeX syntax: _2 for subscript, ^2 for superscript
+           - Example: Write $H_2O$ NOT H₂O
+           - Example: Write $x^2$ NOT x²
+        5. **CRITICAL - Math Mode Wrapping**:
+           - ALL mathematical expressions must be wrapped in $...$ (inline) or $$...$$ (block)
+           - Chemistry formulas: $\\text{{H}}_2\\text{{SO}}_4$ not H₂SO₄
+           - Variables and symbols: $\\alpha$, $\\beta$, $\\theta$ not \\alpha, β, θ
+           - Mixed text-math: 'The compound $\\beta$-naphthol' not 'The compound \\β-naphthol'
+        6. **CRITICAL - Tables**:
+           - DO NOT use LaTeX tabular environment
+           - Instead, format as simple text table:
+           | A | B | Y |
+           | 0 | 0 | 0 |
+           | 1 | 0 | 1 |
+           OR describe in words: 'Truth table: A=0,B=0→Y=0; A=1,B=0→Y=1...'
+        7. Degree symbol: Use $0^\\circ$C not 0°C or 0\\degreeC
+        8. If a question has a diagram, set has_image=true and provide the bounding box [ymin, xmin, ymax, xmax] for the diagram.
+        9. STRICTLY use the provided hierarchy for tagging.
         """
         
         headers = {
@@ -194,22 +211,22 @@ class PyqService:
             
             if start_index != -1 and end_index != -1:
                 json_str = content[start_index : end_index + 1]
-                # Fix common LaTeX backslash issues if they exist
-                # This is a simple heuristic: if we see single backslashes that aren't valid JSON escapes
-                try:
-                    data = json.loads(json_str)
-                    return data
-                except json.JSONDecodeError:
-                    # Try to sanitize: replace single backslash with double, but careful not to break valid escapes
-                    # valid: \\ \" \/ \b \f \n \r \t \u
-                    # We can use a regex or just try a rough replace if the strict parse failed
-                    # A safer bet for now might be to replace \ with \\ except when it is \\ already? 
-                    # Actually, raw string literal logic is hard. 
-                    # Let's try raw replacement of \ with \\ if it fails, assuming the model didn't escape ANY latex.
-                     print("JSON Parse Failed, attempting to sanitize LaTeX backslashes...")
-                     sanitized = json_str.replace('\\', '\\\\').replace('\\\\"', '\\"') # This is a rough fix
-                     data = json.loads(sanitized)
-                     return data
+                data = json.loads(json_str)
+                return data
+            else:
+                print(f"No JSON array found in response")
+                # Try to fallback to finding any JSON object if list not found
+                if "```json" in content:
+                    content = content.split("```json")[1].split("```")[0]
+                elif "```" in content:
+                    content = content.split("```")[1].split("```")[0]
+                    
+                data = json.loads(content)
+                return data if isinstance(data, list) else []
+        except json.JSONDecodeError as e:
+            print(f"Failed to parse JSON: {e}")
+            print(f"Content snippet: {content[:200]}")
+            return []
             
             # Fallback to existing logic if [] not found or still fails
             if "```json" in content:
