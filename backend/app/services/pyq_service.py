@@ -47,6 +47,31 @@ class PyqService:
                     
         return hierarchy
 
+    def get_structured_hierarchy(self) -> List[Dict[str, Any]]:
+        """
+        Fetches hierarchy with IDs for frontend selection.
+        """
+        subjects = supabase.table("subjects").select("id, name").execute().data
+        chapters = supabase.table("chapters").select("id, name, subject_id").execute().data
+        topics = supabase.table("topics").select("id, name, chapter_id").execute().data
+        
+        result = []
+        for s in subjects:
+            s_obj = {"id": s["id"], "name": s["name"], "chapters": []}
+            
+            s_chapters = [c for c in chapters if c["subject_id"] == s["id"]]
+            for c in s_chapters:
+                c_obj = {"id": c["id"], "name": c["name"], "topics": []}
+                
+                c_topics = [t for t in topics if t["chapter_id"] == c["id"]]
+                for t in c_topics:
+                    c_obj["topics"].append({"id": t["id"], "name": t["name"]})
+                    
+                s_obj["chapters"].append(c_obj)
+            result.append(s_obj)
+            
+        return result
+
     async def process_pyq_paper(self, file_content: bytes, paper_id: str, exam_meta: dict):
         """
         Main entry point:

@@ -6,7 +6,7 @@ from uuid import UUID
 from app.utils.auth import get_current_user
 from app.database import supabase
 from app.models.test import Test, TestCreateRequest, TestSubmitRequest
-from app.services.test_service import create_test, generate_adaptive_test, generate_test, submit_test_attempts
+from app.services.test_service import create_test, generate_adaptive_test, generate_test, submit_test_attempts, generate_pyq_test
 
 router = APIRouter(prefix="/api/tests", tags=["tests"])
 
@@ -89,6 +89,15 @@ async def create_new_test(
             user_id=user_id,
             num_questions=request.number_of_questions,
             subject_id=request.subject_id
+        )
+    elif request.source == "pyq":
+        # Generate test from PYQ questions
+        questions = await generate_pyq_test(
+            user_id=user_id,
+            num_questions=request.number_of_questions,
+            subject_id=request.subject_id,
+            chapter_ids=request.chapter_ids,
+            topic_ids=request.topic_ids
         )
     else:
         # Generate standard test with filters

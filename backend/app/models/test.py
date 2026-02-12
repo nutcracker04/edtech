@@ -61,6 +61,7 @@ class TestAttempt(BaseModel):
 class TestCreateRequest(BaseModel):
     title: str
     type: str
+    source: str = "repository" # 'repository' or 'pyq'
     subject: Optional[str] = None
     duration: int
     number_of_questions: int = 20

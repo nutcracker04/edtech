@@ -13,6 +13,7 @@ export interface TestCreateRequest {
     topic_ids?: string[];
     difficulty?: string;
     schedule_at?: string;
+    source?: 'repository' | 'pyq';
 }
 
 export const testApi = {

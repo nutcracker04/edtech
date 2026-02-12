@@ -9,13 +9,14 @@ interface Test {
     id: string;
     title: string;
     subject: string;
-    type: "full" | "topic" | "adaptive";
+    type: "full" | "topic" | "adaptive" | "pyq_paper" | "practice";
     questions: number;
     duration: number;
     score?: number;
     date: string;
-    status: "completed" | "in_progress" | "upcoming";
+    status: "completed" | "in_progress" | "upcoming" | "available";
     scheduledAt?: Date | null;
+    onClick?: () => void;
 }
 
 interface TestCardProps {
@@ -25,7 +26,7 @@ interface TestCardProps {
 export function TestCard({ test }: TestCardProps) {
     const navigate = useNavigate();
 
-    const getStatusBadge = (status: Test["status"]) => {
+    const getStatusBadge = (status: any) => {
         switch (status) {
             case "completed":
                 return "bg-green-500/20 text-green-700 hover:bg-green-500/30 border-green-200";
@@ -33,12 +34,14 @@ export function TestCard({ test }: TestCardProps) {
                 return "bg-blue-500/20 text-blue-700 hover:bg-blue-500/30 border-blue-200";
             case "upcoming":
                 return "bg-secondary text-secondary-foreground hover:bg-secondary/80";
+            case "available":
+                return "bg-purple-500/20 text-purple-700 border-purple-200";
             default:
                 return "bg-secondary text-secondary-foreground";
         }
     };
 
-    const getTypeBadge = (type: Test["type"]) => {
+    const getTypeBadge = (type: any) => {
         switch (type) {
             case "full":
                 return "bg-purple-500/10 text-purple-700 border-purple-200";
@@ -46,8 +49,29 @@ export function TestCard({ test }: TestCardProps) {
                 return "bg-blue-500/10 text-blue-700 border-blue-200";
             case "adaptive":
                 return "bg-orange-500/10 text-orange-700 border-orange-200";
+            case "pyq_paper":
+                return "bg-red-500/10 text-red-700 border-red-200";
             default:
                 return "bg-secondary";
+        }
+    };
+
+    const handleAction = () => {
+        if (test.status === 'completed') {
+            navigate(`/tests/${test.id}/results`);
+        } else if (test.status === 'available') {
+            // If it's an available PYQ paper, we need to create a test session from it first
+            // or navigate to a specialized start page. 
+            // For now, let's assume we navigate to a route that handles creation or instructions
+            // Currently using onClick provided by parent, or default
+            if ((test as any).onClick) {
+                (test as any).onClick();
+            } else {
+                // Fallback or navigate to a launcher
+                console.log("Start available test", test.id);
+            }
+        } else {
+            navigate(`/test/${test.id}`);
         }
     };
 
@@ -61,7 +85,9 @@ export function TestCard({ test }: TestCardProps) {
                         </CardTitle>
                         <div className="flex flex-wrap items-center gap-2">
                             <Badge variant="outline" className={cn("text-xs font-medium border", getTypeBadge(test.type))}>
-                                {test.type === 'full' ? 'Full Test' : test.type === 'topic' ? 'Topic Test' : 'Adaptive'}
+                                {test.type === 'full' ? 'Full Test' :
+                                    test.type === 'topic' ? 'Topic Test' :
+                                        test.type === 'pyq_paper' ? 'PYQ Paper' : 'Adaptive'}
                             </Badge>
                             <Badge variant="outline" className={cn("text-xs capitalize border", getStatusBadge(test.status))}>
                                 {test.status.replace("_", " ")}
@@ -110,7 +136,7 @@ export function TestCard({ test }: TestCardProps) {
                         <Button
                             className="w-full bg-secondary/50 hover:bg-secondary text-foreground hover:text-primary border border-transparent hover:border-border/50 shadow-sm"
                             variant="secondary"
-                            onClick={() => navigate(`/tests/${test.id}/results`)}
+                            onClick={handleAction}
                         >
                             <BarChart className="h-4 w-4 mr-2 opacity-60" />
                             View Analysis
@@ -122,14 +148,21 @@ export function TestCard({ test }: TestCardProps) {
                                 "w-full shadow-sm",
                                 test.status === 'in_progress'
                                     ? "bg-blue-600 hover:bg-blue-700"
-                                    : "bg-primary hover:bg-primary/90"
+                                    : test.status === 'available'
+                                        ? "bg-purple-600 hover:bg-purple-700"
+                                        : "bg-primary hover:bg-primary/90"
                             )}
-                            onClick={() => navigate(`/test/${test.id}`)}
+                            onClick={handleAction}
                         >
                             {test.status === 'in_progress' ? (
                                 <>
                                     <Play className="h-4 w-4 mr-2" />
                                     Continue Test
+                                </>
+                            ) : test.status === 'available' ? (
+                                <>
+                                    <Play className="h-4 w-4 mr-2" />
+                                    Start Practice
                                 </>
                             ) : (
                                 <>

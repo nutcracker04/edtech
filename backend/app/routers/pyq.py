@@ -10,6 +10,46 @@ from app.services.pyq_service import pyq_service
 
 router = APIRouter(prefix="/api/pyq", tags=["pyq"])
 
+@router.get("/hierarchy")
+async def get_tag_hierarchy(current_user: dict = Depends(get_current_user)):
+    """
+    Get the Subject -> Chapter -> Topic hierarchy for filters.
+    """
+    return pyq_service.get_structured_hierarchy()
+
+@router.get("/questions")
+async def get_pyq_questions(
+    subject_id: Optional[str] = None,
+    chapter_id: Optional[str] = None,
+    topic_id: Optional[str] = None,
+    current_user: dict = Depends(get_current_user)
+):
+    """
+    Get questions filtered by subject, chapter, or topic.
+    """
+    query = supabase.table("pyq_questions").select("*")
+    
+    if subject_id:
+        query = query.eq("subject_id", subject_id)
+        
+    if chapter_id:
+        # Use array contains for flexible matching if stored as array, 
+        # but also check primary column just in case.
+        # Ideally, we should unify. Given pyq_service writes both, we can check array 'contains'.
+        # However, PostgREST syntax for array contains is `cs`.
+        # For simplicity and reliability with `pyq_service` logic (which sets both), checking single column might be faster if indexed?
+        # Let's check the array column `chapter_ids` using `cs` filter:
+        # query = query.cs("chapter_ids", [chapter_id])
+        # BUT pyq_service ALSO sets `chapter_id` (singular). Let's use singular for now as it's simpler.
+        query = query.eq("chapter_id", chapter_id)
+        
+    if topic_id:
+        query = query.eq("topic_id", topic_id)
+        
+    res = query.order("created_at", desc=True).limit(50).execute()
+    return res.data
+
+
 @router.post("/upload")
 async def upload_pyq_paper(
     background_tasks: BackgroundTasks,
@@ -46,8 +86,8 @@ async def upload_pyq_paper(
 
 @router.get("/papers")
 async def get_pyq_papers(current_user: dict = Depends(get_current_user)):
-    if current_user.get("role") != "admin":
-        raise HTTPException(status_code=403, detail="Not authorized")
+    # if current_user.get("role") != "admin":
+    #     raise HTTPException(status_code=403, detail="Not authorized")
         
     res = supabase.table("pyq_papers").select("*").order("created_at", desc=True).execute()
     return res.data

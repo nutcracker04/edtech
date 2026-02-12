@@ -1,59 +1,63 @@
 import { useState, useEffect } from "react";
 import { testApi } from "@/api/test";
+import { pyqApi } from "@/api/pyq";
 import { MainLayout } from "@/components/layout/MainLayout";
-import { ChevronRight, Filter, Plus, BookOpen, FileText, Search } from "lucide-react";
+import { ChevronRight, Plus, BookOpen, FileText, Search, GraduationCap, Bookmark } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { TestScheduler } from "@/components/tests/TestScheduler";
 import { TestCreationDialog } from "@/components/tests/TestCreationDialog";
-import { PyqsDialog } from "@/components/tests/PyqsDialog";
-import { Badge } from "@/components/ui/badge";
-import { ScrollArea } from "@/components/ui/scroll-area";
 import { TestCard } from "@/components/tests/TestCard";
 import { toast } from "sonner";
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { Badge } from "@/components/ui/badge";
 
-interface Test {
+interface UnifiedTest {
   id: string;
   title: string;
   subject: string;
-  type: "full" | "topic" | "adaptive";
+  type: "full" | "topic" | "adaptive" | "pyq_paper" | "practice";
   questions: number;
   duration: number;
   score?: number;
   date: string;
-  status: "completed" | "in_progress" | "upcoming";
-  scheduledAt?: Date | null;
+  status: "completed" | "in_progress" | "upcoming" | "available";
+  source?: "repository" | "pyq";
+  year?: string; // For year-based filtering
 }
 
-type TestCategory = 'all' | 'my_tests' | 'pyq_chapter' | 'pyq_mock' | 'physics_pyq' | 'chemistry_pyq' | 'maths_pyq' | 'physics_topic' | 'chemistry_topic' | 'maths_topic';
+type SectionType = 'all' | 'pyq_mock_2026' | 'pyq_mock_2025' | 'pyq_mock_2024' | 'pyq_mock_2023' |
+  'pyq_physics' | 'pyq_chemistry' | 'pyq_maths' |
+  'topic_physics' | 'topic_chemistry' | 'topic_maths';
+type FilterStatus = 'all' | 'available' | 'attempted' | 'upcoming';
 
 const Tests = () => {
   const navigate = useNavigate();
-  const [searchParams, setSearchParams] = useSearchParams();
-  const initialSearch = searchParams.get('search') || "";
-
   const [showCreateDialog, setShowCreateDialog] = useState(false);
-  const [showPyqsDialog, setShowPyqsDialog] = useState(false);
-  const [showScheduleDialog, setShowScheduleDialog] = useState(false);
-  const [scheduleImmediately, setScheduleImmediately] = useState(false);
-  const [currentTestConfig, setCurrentTestConfig] = useState<any>(null);
-  const [tests, setTests] = useState<Test[]>([]);
+
+  // Data State
+  const [allTests, setAllTests] = useState<UnifiedTest[]>([]);
+
+  // Navigation & Filter States
+  const [selectedSection, setSelectedSection] = useState<SectionType>('all');
+  const [sectionFilters, setSectionFilters] = useState<Record<string, FilterStatus>>({});
+  const [searchQuery, setSearchQuery] = useState("");
+
   const [isLoading, setIsLoading] = useState(true);
-  const [selectedCategory, setSelectedCategory] = useState<TestCategory>('all');
-  const [searchQuery, setSearchQuery] = useState(initialSearch);
 
   useEffect(() => {
-    loadTests();
+    loadData();
   }, []);
 
-  const loadTests = async () => {
+  const loadData = async () => {
     try {
       setIsLoading(true);
-      const data = await testApi.getTests();
-      // Map backend data to local Test interface
-      const mappedTests = data.map((t: any) => ({
+      const [userTests, papers] = await Promise.all([
+        testApi.getTests(),
+        pyqApi.getPapers()
+      ]);
+
+      const mappedUserTests: UnifiedTest[] = userTests.map((t: any) => ({
         id: t.id,
         title: t.title,
         subject: t.subject || "All Subjects",
@@ -63,76 +67,179 @@ const Tests = () => {
         score: t.max_score > 0 ? Math.round((t.score / t.max_score) * 100) : undefined,
         date: new Date(t.created_at).toLocaleDateString(),
         status: t.status,
-        scheduledAt: t.scheduled_at ? new Date(t.scheduled_at) : null
+        source: t.source || 'repository'
       }));
-      setTests(mappedTests);
+
+      const mappedPapers: UnifiedTest[] = papers.map((p: any) => {
+        // Extract year from exam_date or title
+        const yearMatch = p.exam_date?.match(/\d{4}/) || p.exam_type?.match(/\d{4}/);
+        const year = yearMatch ? yearMatch[0] : new Date(p.created_at).getFullYear().toString();
+
+        return {
+          id: p.id,
+          title: `${p.exam_type} ${p.exam_session || ''} ${p.exam_date || ''}`.trim(),
+          subject: "All Subjects",
+          type: "pyq_paper" as const,
+          questions: p.total_questions || 0,
+          duration: 180,
+          status: "available" as const,
+          date: new Date(p.created_at).toLocaleDateString(),
+          source: "pyq" as const,
+          year: year
+        };
+      });
+
+      setAllTests([...mappedPapers, ...mappedUserTests]);
+
     } catch (error) {
-      console.error("Failed to load tests", error);
+      console.error(error);
       toast.error("Failed to load tests");
     } finally {
       setIsLoading(false);
     }
   };
 
-  const filteredTests = tests.filter(test => {
-    // Basic Search
-    if (searchQuery && !test.title.toLowerCase().includes(searchQuery.toLowerCase())) {
-      return false;
-    }
-
-    // Category Filtering
-    switch (selectedCategory) {
-      case 'my_tests':
-        return test.status === 'completed' || test.status === 'in_progress';
-      case 'pyq_chapter':
-        return test.title.toLowerCase().includes("pyq") && test.type === 'topic'; // Assumption
-      case 'physics_pyq':
-        return test.title.toLowerCase().includes("pyq") && test.subject?.toLowerCase() === 'physics';
-      case 'chemistry_pyq':
-        return test.title.toLowerCase().includes("pyq") && test.subject?.toLowerCase() === 'chemistry';
-      case 'maths_pyq':
-        return test.title.toLowerCase().includes("pyq") && test.subject?.toLowerCase() === 'mathematics';
-      case 'pyq_mock':
-        return test.title.toLowerCase().includes("pyq") && test.type === 'full';
-      case 'physics_topic':
-        return (test.type === 'topic' || test.type === 'adaptive') && test.subject?.toLowerCase() === 'physics';
-      case 'chemistry_topic':
-        return (test.type === 'topic' || test.type === 'adaptive') && test.subject?.toLowerCase() === 'chemistry';
-      case 'maths_topic':
-        return (test.type === 'topic' || test.type === 'adaptive') && test.subject?.toLowerCase() === 'mathematics';
-      default:
-        return true;
-    }
-  });
-
-
   const handleCreateSuccess = (testId?: string) => {
-    // Refresh test list logic would go here
-    if (testId) {
-      navigate(`/test/${testId}`);
-    } else {
-      navigate(0); // Fallback to refresh if no ID (shouldn't happen with new logic)
+    if (testId) navigate(`/test/${testId}`);
+    else loadData();
+  };
+
+  // Get current filter for selected section
+  const getCurrentFilter = (): FilterStatus => {
+    return sectionFilters[selectedSection] || 'all';
+  };
+
+  const setCurrentFilter = (filter: FilterStatus) => {
+    setSectionFilters(prev => ({ ...prev, [selectedSection]: filter }));
+  };
+
+  // Get tests for display based on section and filters
+  const getDisplayTests = () => {
+    let filtered = allTests;
+
+    // Section-based filtering
+    if (selectedSection.startsWith('pyq_mock_')) {
+      const year = selectedSection.replace('pyq_mock_', '');
+      filtered = filtered.filter(t =>
+        t.source === 'pyq' &&
+        (t.type === 'full' || t.type === 'practice' || t.type === 'pyq_paper') &&
+        t.year === year
+      );
+    } else if (selectedSection === 'pyq_physics') {
+      filtered = filtered.filter(t =>
+        t.source === 'pyq' &&
+        t.type === 'topic' &&
+        t.subject?.toLowerCase() === 'physics'
+      );
+    } else if (selectedSection === 'pyq_chemistry') {
+      filtered = filtered.filter(t =>
+        t.source === 'pyq' &&
+        t.type === 'topic' &&
+        t.subject?.toLowerCase() === 'chemistry'
+      );
+    } else if (selectedSection === 'pyq_maths') {
+      filtered = filtered.filter(t =>
+        t.source === 'pyq' &&
+        t.type === 'topic' &&
+        (t.subject?.toLowerCase() === 'mathematics' || t.subject?.toLowerCase() === 'maths')
+      );
+    } else if (selectedSection === 'topic_physics') {
+      filtered = filtered.filter(t =>
+        t.source !== 'pyq' &&
+        (t.type === 'topic' || t.type === 'adaptive') &&
+        t.subject?.toLowerCase() === 'physics'
+      );
+    } else if (selectedSection === 'topic_chemistry') {
+      filtered = filtered.filter(t =>
+        t.source !== 'pyq' &&
+        (t.type === 'topic' || t.type === 'adaptive') &&
+        t.subject?.toLowerCase() === 'chemistry'
+      );
+    } else if (selectedSection === 'topic_maths') {
+      filtered = filtered.filter(t =>
+        t.source !== 'pyq' &&
+        (t.type === 'topic' || t.type === 'adaptive') &&
+        (t.subject?.toLowerCase() === 'mathematics' || t.subject?.toLowerCase() === 'maths')
+      );
     }
+
+    // Apply status filter
+    const statusFilter = getCurrentFilter();
+    if (statusFilter !== 'all') {
+      if (statusFilter === 'attempted') {
+        filtered = filtered.filter(t => t.status === 'completed' || t.status === 'in_progress');
+      } else if (statusFilter === 'available') {
+        filtered = filtered.filter(t => t.status === 'available');
+      } else if (statusFilter === 'upcoming') {
+        filtered = filtered.filter(t => t.status === 'upcoming');
+      }
+    }
+
+    // Apply search filter
+    if (searchQuery) {
+      filtered = filtered.filter(t =>
+        t.title.toLowerCase().includes(searchQuery.toLowerCase())
+      );
+    }
+
+    return filtered;
   };
 
-  const handleScheduleTest = (scheduledDate: Date) => {
-    console.log('Scheduling test for:', scheduledDate, currentTestConfig);
-    toast.success(`Test scheduled for ${scheduledDate.toLocaleString()}`);
-    setShowScheduleDialog(false);
-    setShowCreateDialog(false);
-    setScheduleImmediately(false);
-    // TODO: Actually create test in database with scheduled_at
+  // Count tests for badges
+  const getTestCount = (section: SectionType) => {
+    let count = 0;
+    if (section.startsWith('pyq_mock_')) {
+      const year = section.replace('pyq_mock_', '');
+      count = allTests.filter(t =>
+        t.source === 'pyq' &&
+        (t.type === 'full' || t.type === 'practice' || t.type === 'pyq_paper') &&
+        t.year === year
+      ).length;
+    } else if (section === 'pyq_physics') {
+      count = allTests.filter(t =>
+        t.source === 'pyq' && t.type === 'topic' && t.subject?.toLowerCase() === 'physics'
+      ).length;
+    } else if (section === 'pyq_chemistry') {
+      count = allTests.filter(t =>
+        t.source === 'pyq' && t.type === 'topic' && t.subject?.toLowerCase() === 'chemistry'
+      ).length;
+    } else if (section === 'pyq_maths') {
+      count = allTests.filter(t =>
+        t.source === 'pyq' && t.type === 'topic' &&
+        (t.subject?.toLowerCase() === 'mathematics' || t.subject?.toLowerCase() === 'maths')
+      ).length;
+    } else if (section === 'topic_physics') {
+      count = allTests.filter(t =>
+        t.source !== 'pyq' && (t.type === 'topic' || t.type === 'adaptive') &&
+        t.subject?.toLowerCase() === 'physics'
+      ).length;
+    } else if (section === 'topic_chemistry') {
+      count = allTests.filter(t =>
+        t.source !== 'pyq' && (t.type === 'topic' || t.type === 'adaptive') &&
+        t.subject?.toLowerCase() === 'chemistry'
+      ).length;
+    } else if (section === 'topic_maths') {
+      count = allTests.filter(t =>
+        t.source !== 'pyq' && (t.type === 'topic' || t.type === 'adaptive') &&
+        (t.subject?.toLowerCase() === 'mathematics' || t.subject?.toLowerCase() === 'maths')
+      ).length;
+    }
+    return count;
   };
 
-  interface SidebarItemProps {
-    active: boolean;
-    label: string;
-    onClick: () => void;
-    icon?: React.ReactNode;
-    badge?: string;
-  }
-
-  const SidebarItem = ({ active, label, onClick, icon, badge }: SidebarItemProps) => (
+  const SidebarItem = ({
+    active,
+    label,
+    onClick,
+    icon,
+    badge
+  }: {
+    active: boolean,
+    label: string,
+    onClick: () => void,
+    icon?: React.ReactNode,
+    badge?: string
+  }) => (
     <button
       onClick={onClick}
       className={cn(
@@ -153,6 +260,45 @@ const Tests = () => {
     </button>
   );
 
+  const FilterBar = ({ selected, onChange }: { selected: FilterStatus, onChange: (s: FilterStatus) => void }) => (
+    <div className="flex gap-2 overflow-x-auto pb-2 sm:pb-0">
+      <Button
+        variant={selected === 'all' ? 'default' : 'outline'}
+        size="sm"
+        className="rounded-full"
+        onClick={() => onChange('all')}
+      >
+        All
+      </Button>
+      <Button
+        variant={selected === 'available' ? 'default' : 'outline'}
+        size="sm"
+        className="rounded-full"
+        onClick={() => onChange('available')}
+      >
+        Available
+      </Button>
+      <Button
+        variant={selected === 'attempted' ? 'default' : 'outline'}
+        size="sm"
+        className="rounded-full"
+        onClick={() => onChange('attempted')}
+      >
+        Attempted
+      </Button>
+      <Button
+        variant={selected === 'upcoming' ? 'default' : 'outline'}
+        size="sm"
+        className="rounded-full"
+        onClick={() => onChange('upcoming')}
+      >
+        Upcoming
+      </Button>
+    </div>
+  );
+
+  const filteredTests = getDisplayTests();
+
   return (
     <MainLayout>
       <div className="flex h-[calc(100vh-theme(spacing.4))] overflow-hidden">
@@ -163,90 +309,99 @@ const Tests = () => {
               <Plus className="mr-2 h-4 w-4" /> Create Test
             </Button>
             <Button
-              variant={selectedCategory === 'my_tests' ? 'default' : 'outline'}
-              onClick={() => setSelectedCategory('my_tests')}
-              className={cn("w-full justify-start", selectedCategory === 'my_tests' && "bg-primary text-primary-foreground hover:bg-primary/90")}
+              variant={selectedSection === 'all' ? 'default' : 'outline'}
+              onClick={() => setSelectedSection('all')}
+              className={cn("w-full justify-start", selectedSection === 'all' && "bg-primary text-primary-foreground hover:bg-primary/90")}
             >
-              <FileText className="mr-2 h-4 w-4" /> My Tests
+              <FileText className="mr-2 h-4 w-4" /> All Tests
             </Button>
           </div>
+
           <ScrollArea className="flex-1 py-4">
             <div className="space-y-6 px-2">
-              {/* PYQS Section */}
-              <div>
-                <h3 className="px-2 mb-2 text-xs font-semibold text-muted-foreground uppercase tracking-wider">
-                  PYQ as Chapter-wise Tests
-                </h3>
-                <div className="space-y-1">
-                  <SidebarItem
-                    label="Physics PYQ"
-                    active={selectedCategory === 'physics_pyq'}
-                    onClick={() => setSelectedCategory('physics_pyq')}
-                  />
-                  <SidebarItem
-                    label="Chemistry PYQ"
-                    active={selectedCategory === 'chemistry_pyq'}
-                    onClick={() => setSelectedCategory('chemistry_pyq')}
-
-                  />
-                  <SidebarItem
-                    label="Mathematics PYQ"
-                    active={selectedCategory === 'maths_pyq'}
-                    onClick={() => setSelectedCategory('maths_pyq')}
-                  />
-                </div>
-              </div>
-
-              {/* PYQs as Mock Tests */}
+              {/* PYQs as Mock Tests - Year-wise */}
               <div>
                 <h3 className="px-2 mb-2 text-xs font-semibold text-muted-foreground uppercase tracking-wider">
                   PYQs as Mock Tests
                 </h3>
                 <div className="space-y-1">
-                  {/* Placeholder items from image */}
                   <SidebarItem
                     label="2026 PYQs"
-                    active={false}
-                    onClick={() => { }}
+                    active={selectedSection === 'pyq_mock_2026'}
+                    onClick={() => setSelectedSection('pyq_mock_2026')}
+                    badge={getTestCount('pyq_mock_2026').toString()}
                   />
                   <SidebarItem
                     label="2025 PYQs"
-                    active={false}
-                    onClick={() => { }}
+                    active={selectedSection === 'pyq_mock_2025'}
+                    onClick={() => setSelectedSection('pyq_mock_2025')}
+                    badge={getTestCount('pyq_mock_2025').toString()}
                   />
                   <SidebarItem
                     label="2024 PYQs"
-                    active={false}
-                    onClick={() => { }}
+                    active={selectedSection === 'pyq_mock_2024'}
+                    onClick={() => setSelectedSection('pyq_mock_2024')}
+                    badge={getTestCount('pyq_mock_2024').toString()}
                   />
                   <SidebarItem
                     label="2023 PYQs"
-                    active={false}
-                    onClick={() => { }}
+                    active={selectedSection === 'pyq_mock_2023'}
+                    onClick={() => setSelectedSection('pyq_mock_2023')}
+                    badge={getTestCount('pyq_mock_2023').toString()}
                   />
                 </div>
               </div>
 
-              {/* Topic & Chapter wise */}
+              {/* PYQ Chapter-wise - Subject-wise */}
               <div>
                 <h3 className="px-2 mb-2 text-xs font-semibold text-muted-foreground uppercase tracking-wider">
-                  Topic & Chapter-wise
+                  PYQ Chapter-wise
+                </h3>
+                <div className="space-y-1">
+                  <SidebarItem
+                    label="Physics PYQ"
+                    active={selectedSection === 'pyq_physics'}
+                    onClick={() => setSelectedSection('pyq_physics')}
+                    badge={getTestCount('pyq_physics').toString()}
+                  />
+                  <SidebarItem
+                    label="Chemistry PYQ"
+                    active={selectedSection === 'pyq_chemistry'}
+                    onClick={() => setSelectedSection('pyq_chemistry')}
+                    badge={getTestCount('pyq_chemistry').toString()}
+                  />
+                  <SidebarItem
+                    label="Mathematics PYQ"
+                    active={selectedSection === 'pyq_maths'}
+                    onClick={() => setSelectedSection('pyq_maths')}
+                    badge={getTestCount('pyq_maths').toString()}
+                  />
+                </div>
+              </div>
+
+              {/* Topic & Chapter Tests - Subject-wise */}
+              <div>
+                <h3 className="px-2 mb-2 text-xs font-semibold text-muted-foreground uppercase tracking-wider">
+                  Topic & Chapter Tests
                 </h3>
                 <div className="space-y-1">
                   <SidebarItem
                     label="Physics"
-                    active={selectedCategory === 'physics_topic'}
-                    onClick={() => setSelectedCategory('physics_topic')}
+                    active={selectedSection === 'topic_physics'}
+                    onClick={() => setSelectedSection('topic_physics')}
+                    badge={getTestCount('topic_physics').toString()}
                   />
                   <SidebarItem
                     label="Chemistry"
-                    active={selectedCategory === 'chemistry_topic'}
-                    onClick={() => setSelectedCategory('chemistry_topic')}
+                    active={selectedSection === 'topic_chemistry'}
+                    onClick={() => setSelectedSection('topic_chemistry')}
+                    badge={getTestCount('topic_chemistry').toString()}
                   />
                   <SidebarItem
                     label="Mathematics"
-                    active={selectedCategory === 'maths_topic'}
-                    onClick={() => setSelectedCategory('maths_topic')}
+                    active={selectedSection === 'topic_maths'}
+                    onClick={() => setSelectedSection('topic_maths')}
+                    badge={getTestCount('topic_maths').toString()}
                   />
                 </div>
               </div>
@@ -256,45 +411,17 @@ const Tests = () => {
 
         {/* Main Content */}
         <div className="flex-1 flex flex-col min-w-0 bg-background">
-          {/* Content Area */}
           <div className="flex-1 overflow-hidden p-6 relative">
             <ScrollArea className="h-full pr-4">
-              {/* Filter Chips / Tabs equivalent */}
+              {/* Filter Chips / Tabs */}
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
-                {selectedCategory !== 'my_tests' && (
-                  <div className="flex gap-2 overflow-x-auto pb-2 sm:pb-0">
-                    <Button
-                      variant={selectedCategory === 'all' ? 'default' : 'outline'}
-                      size="sm"
-                      className="rounded-full"
-                      onClick={() => setSelectedCategory('all')}
-                    >
-                      All
-                    </Button>
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      className="rounded-full"
-                    >
-                      Available
-                    </Button>
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      className="rounded-full"
-                    >
-                      Upcoming
-                    </Button>
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      className="rounded-full"
-                      onClick={() => setSelectedCategory('my_tests')}
-                    >
-                      Attempted
-                    </Button>
-                  </div>
+                {selectedSection !== 'all' && (
+                  <FilterBar
+                    selected={getCurrentFilter()}
+                    onChange={setCurrentFilter}
+                  />
                 )}
+
                 {/* Search Bar */}
                 <div className="relative w-full sm:w-auto">
                   <Search className="absolute left-2 top-2.5 h-4 w-4 text-muted-foreground" />
@@ -328,36 +455,11 @@ const Tests = () => {
         </div>
       </div>
 
-      {/* Create Test Dialog */}
       <TestCreationDialog
         open={showCreateDialog}
         onOpenChange={setShowCreateDialog}
         onSuccess={handleCreateSuccess}
       />
-
-      {/* PYQS Dialog */}
-      <PyqsDialog
-        open={showPyqsDialog}
-        onOpenChange={setShowPyqsDialog}
-      />
-
-      {/* Schedule Test Dialog */}
-      <Dialog open={showScheduleDialog} onOpenChange={setShowScheduleDialog}>
-        <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
-          <DialogHeader>
-            <DialogTitle>Schedule Test</DialogTitle>
-          </DialogHeader>
-          <TestScheduler
-            testTitle={currentTestConfig?.title || 'Test'}
-            testDuration={currentTestConfig?.duration || 60}
-            onSchedule={handleScheduleTest}
-            onCancel={() => {
-              setShowScheduleDialog(false);
-              setScheduleImmediately(false);
-            }}
-          />
-        </DialogContent>
-      </Dialog>
     </MainLayout>
   );
 };

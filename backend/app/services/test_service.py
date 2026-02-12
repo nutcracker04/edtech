@@ -425,3 +425,71 @@ async def _get_topics_lookup():
     """Helper to map Topic Name -> ID"""
     res = supabase.table("topics").select("id, name").execute()
     return {r["name"]: r["id"] for r in res.data}
+
+async def generate_pyq_test(
+    user_id: str,
+    num_questions: int = 20,
+    subject_id: Optional[str] = None,
+    chapter_ids: Optional[List[str]] = None,
+    topic_ids: Optional[List[str]] = None
+) -> List[Question]:
+    """
+    Generate a test from PYQ questions.
+    """
+    query = supabase.table("pyq_questions").select("*")
+    
+    if subject_id:
+        query = query.eq("subject_id", subject_id)
+        
+    if chapter_ids:
+        # Check if chapter_id is in the list of desired chapters.
+        # Since pyq_questions has both chapter_id and chapter_ids array, 
+        # checking chapter_id against the list is simplest for now.
+        query = query.in_("chapter_id", chapter_ids)
+        
+    if topic_ids:
+        query = query.in_("topic_id", topic_ids)
+        
+    # random sample logic similar to generate_test
+    # Fetch all matching (or limit if too many, but for now fetch all ids first maybe? No, select * is fine if dataset isn't huge)
+    # Using a limit to avoid fetching everything
+    result = query.limit(200).execute()
+    all_questions = result.data
+    
+    if not all_questions:
+        return []
+        
+    selected_data = random.sample(all_questions, min(len(all_questions), num_questions))
+    
+    return [await _map_pyq_question(q) for q in selected_data]
+
+async def _map_pyq_question(pyq: Dict) -> Question:
+    """
+    Map PYQ table row to Pydantic Model.
+    """
+    options = []
+    if pyq.get("options"):
+        # Options in pyq are List[Dict] usually [{"id": "A", "text": "..."}]
+        for opt in pyq["options"]:
+            if isinstance(opt, dict):
+                options.append({"id": opt.get("id"), "text": opt.get("text", "")})
+            elif isinstance(opt, str):
+                # Fallback if just strings
+                options.append({"id": str(uuid.uuid4())[:4], "text": opt})
+
+    return Question(
+        id=pyq["id"],
+        question=pyq["question_text"] or "",
+        options=options,
+        correct_answer=pyq["correct_answer"] or "",
+        explanation=None, # PYQs might not have explanations yet
+        difficulty="medium", # Default
+        topic_id=pyq.get("topic_id"),
+        chapter_id=pyq.get("chapter_id"),
+        subject_id=pyq.get("subject_id"),
+        topic=pyq.get("topic_id"), 
+        chapter=pyq.get("chapter_id"),
+        subject=pyq.get("subject_id"),
+        grade_level=[],
+        answer_type="single_choice"
+    )
