@@ -84,5 +84,21 @@ export const analysisApi = {
         });
         if (!response.ok) throw new Error('Failed to fetch recommendations');
         return response.json();
+    },
+
+    getFullAnalysisData: async (timePeriod: '7d' | '30d' | '90d' | 'all' = '30d') => {
+        const { data: { session } } = await supabase.auth.getSession();
+        const token = session?.access_token;
+        if (!token) throw new Error('No session');
+
+        const url = new URL('/api/analysis/full', API_BASE_URL);
+        url.searchParams.append('time_period', timePeriod);
+
+        const response = await fetch(url.toString(), {
+            headers: { 'Authorization': `Bearer ${token}` }
+        });
+
+        if (!response.ok) throw new Error('Failed to fetch full analysis data');
+        return response.json();
     }
 };
