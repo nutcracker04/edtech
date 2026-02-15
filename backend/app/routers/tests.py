@@ -134,6 +134,7 @@ async def submit_test(
 ):
     """
     Submit test attempts and calculate score.
+    Also saves navigation log and answer changes for journey analysis.
     """
     user_id = current_user["user_id"]
     
@@ -156,6 +157,19 @@ async def submit_test(
         user_id=user_id,
         attempts=request.attempts
     )
+    
+    # Save navigation log and answer changes for time analysis
+    from app.services.time_analysis_service import save_navigation_log, save_answer_changes
+    
+    try:
+        if request.navigation_log:
+            await save_navigation_log(request.test_id, user_id, request.navigation_log)
+        
+        if request.answer_changes:
+            await save_answer_changes(request.test_id, user_id, request.answer_changes)
+    except Exception as e:
+        # Don't fail submission if tracking fails
+        print(f"Warning: Failed to save tracking data: {str(e)}")
     
     return result
 
@@ -363,4 +377,123 @@ async def get_test_results(
         "attempts": detailed_attempts,
         "topic_breakdown": topic_breakdown
     }
+
+
+@router.get("/{test_id}/time-analysis")
+async def get_test_time_analysis(
+    test_id: UUID,
+    current_user: dict = Depends(get_current_user)
+):
+    """
+    Get comprehensive time-based analysis for a test.
+    Includes time breakdown by question, subject, and topic.
+    """
+    from app.services.time_analysis_service import get_test_time_breakdown
+    
+    user_id = current_user["user_id"]
+    
+    # Verify test belongs to user
+    test_result = supabase.table("tests")\
+        .select("id")\
+        .eq("id", test_id)\
+        .eq("user_id", user_id)\
+        .execute()
+    
+    if not test_result.data:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Test not found"
+        )
+    
+    analysis = await get_test_time_breakdown(test_id, user_id)
+    return analysis
+
+
+@router.get("/{test_id}/journey-analysis")
+async def get_test_journey(
+    test_id: UUID,
+    current_user: dict = Depends(get_current_user)
+):
+    """
+    Get test journey analysis showing navigation patterns and answer changes.
+    """
+    from app.services.time_analysis_service import get_test_journey_analysis
+    
+    user_id = current_user["user_id"]
+    
+    # Verify test belongs to user
+    test_result = supabase.table("tests")\
+        .select("id")\
+        .eq("id", test_id)\
+        .eq("user_id", user_id)\
+        .execute()
+    
+    if not test_result.data:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Test not found"
+        )
+    
+    journey = await get_test_journey_analysis(test_id, user_id)
+    return journey
+
+
+@router.get("/{test_id}/difficulty-analysis")
+async def get_question_difficulty_analysis(
+    test_id: UUID,
+    current_user: dict = Depends(get_current_user)
+):
+    """
+    Analyze question difficulty based on time spent.
+    Identifies questions that took unusually long or short time.
+    """
+    from app.services.time_analysis_service import get_question_difficulty_by_time
+    
+    user_id = current_user["user_id"]
+    
+    # Verify test belongs to user
+    test_result = supabase.table("tests")\
+        .select("id")\
+        .eq("id", test_id)\
+        .eq("user_id", user_id)\
+        .execute()
+    
+    if not test_result.data:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Test not found"
+        )
+    
+    analysis = await get_question_difficulty_by_time(test_id, user_id)
+    return {"questions": analysis}
+
+
+@router.get("/{test_id}/efficiency-analysis")
+async def get_subject_efficiency(
+    test_id: UUID,
+    current_user: dict = Depends(get_current_user)
+):
+    """
+    Analyze time efficiency per subject.
+    Shows which subjects take more time and their accuracy correlation.
+    """
+    from app.services.time_analysis_service import get_subject_time_efficiency
+    
+    user_id = current_user["user_id"]
+    
+    # Verify test belongs to user
+    test_result = supabase.table("tests")\
+        .select("id")\
+        .eq("id", test_id)\
+        .eq("user_id", user_id)\
+        .execute()
+    
+    if not test_result.data:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Test not found"
+        )
+    
+    efficiency = await get_subject_time_efficiency(test_id, user_id)
+    return efficiency
 

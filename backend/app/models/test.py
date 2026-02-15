@@ -56,6 +56,39 @@ class TestAttempt(BaseModel):
     time_spent: int = 0  # in seconds
     marked_for_review: bool = False
     created_at: datetime
+    # Enhanced time tracking fields
+    question_order: Optional[int] = None
+    first_viewed_at: Optional[datetime] = None
+    last_viewed_at: Optional[datetime] = None
+    view_count: int = 1
+    answer_changed_count: int = 0
+
+
+class QuestionNavigation(BaseModel):
+    """Tracks navigation between questions during test"""
+    id: Optional[str] = None
+    test_id: str
+    user_id: str
+    from_question_id: Optional[str] = None
+    to_question_id: str
+    from_question_index: Optional[int] = None
+    to_question_index: int
+    navigation_type: str  # 'next', 'previous', 'jump', 'review', 'initial'
+    time_on_previous_question: Optional[int] = None  # seconds
+    timestamp: datetime
+
+
+class AnswerChange(BaseModel):
+    """Tracks answer changes for analysis"""
+    id: Optional[str] = None
+    test_id: str
+    user_id: str
+    question_id: str
+    question_index: int
+    previous_answer: Optional[str] = None
+    new_answer: Optional[str] = None
+    change_type: str  # 'initial', 'modified', 'cleared'
+    timestamp: datetime
 
 
 class TestCreateRequest(BaseModel):
@@ -75,3 +108,10 @@ class TestCreateRequest(BaseModel):
 class TestSubmitRequest(BaseModel):
     test_id: UUID
     attempts: List[Dict[str, Any]]
+    navigation_log: Optional[List[Dict[str, Any]]] = []
+    answer_changes: Optional[List[Dict[str, Any]]] = []
+
+
+class TestTimeAnalysisRequest(BaseModel):
+    """Request for time-based test analysis"""
+    test_id: UUID

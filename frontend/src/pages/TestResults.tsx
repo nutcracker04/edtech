@@ -1,56 +1,19 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { MainLayout } from '@/components/layout/MainLayout';
+import { testApi } from '@/api/test';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Progress } from '@/components/ui/progress';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { TestTimeAnalysis } from '@/components/analysis/TestTimeAnalysis';
+import { ArrowLeft, Trophy, Clock, Target, TrendingUp } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
-import { 
-  CheckCircle, 
-  XCircle, 
-  Clock, 
-  Target, 
-  TrendingUp,
-  AlertCircle,
-  BarChart3,
-  Loader2,
-  Flag
-} from 'lucide-react';
-import { testApi } from '@/api/test';
-import { toast } from 'sonner';
-
-interface TestResult {
-  test_id: string;
-  title: string;
-  score: number;
-  max_score: number;
-  total_questions: number;
-  correct_answers: number;
-  time_taken: number;
-  attempts: Array<{
-    question_id: string;
-    question_text: string;
-    selected_answer: string | null;
-    correct_answer: string;
-    is_correct: boolean;
-    time_spent: number;
-    marked_for_review?: boolean;
-    topic: string;
-    subject: string;
-  }>;
-  topic_breakdown: Array<{
-    topic: string;
-    correct: number;
-    total: number;
-    accuracy: number;
-  }>;
-}
 
 const TestResults = () => {
   const { testId } = useParams();
   const navigate = useNavigate();
+  const [results, setResults] = useState<any>(null);
   const [loading, setLoading] = useState(true);
-  const [result, setResult] = useState<TestResult | null>(null);
 
   useEffect(() => {
     if (!testId) return;
@@ -60,267 +23,238 @@ const TestResults = () => {
   const loadResults = async () => {
     try {
       const data = await testApi.getTestResults(testId!);
-      setResult(data);
+      setResults(data);
     } catch (error) {
-      toast.error('Failed to load test results');
-      navigate('/tests');
+      console.error('Failed to load results:', error);
     } finally {
       setLoading(false);
     }
   };
 
-  if (loading || !result) {
+  const formatTime = (seconds: number) => {
+    const mins = Math.floor(seconds / 60);
+    const secs = seconds % 60;
+    return `${mins}:${secs.toString().padStart(2, '0')}`;
+  };
+
+  if (loading) {
     return (
       <MainLayout>
-        <div className="flex justify-center items-center py-20">
-          <Loader2 className="h-8 w-8 animate-spin" />
+        <div className="flex items-center justify-center py-20">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary" />
         </div>
       </MainLayout>
     );
   }
 
-  const percentage = Math.round((result.score / result.max_score) * 100);
-  const accuracy = Math.round((result.correct_answers / result.total_questions) * 100);
-  const avgTimePerQuestion = Math.round(result.time_taken / result.total_questions);
-  const markedCount = result.attempts.filter(a => a.marked_for_review).length;
-
-  return (
-    <MainLayout>
-      <div className="container mx-auto py-6 space-y-6">
-        {/* Header */}
-        <div className="text-center space-y-2">
-          <h1 className="text-3xl font-bold">Test Completed!</h1>
-          <p className="text-muted-foreground">{result.title}</p>
-        </div>
-
-        {/* Score Overview */}
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-          <Card>
-            <CardContent className="pt-6">
-              <div className="text-center space-y-2">
-                <Target className="h-8 w-8 mx-auto text-primary" />
-                <p className="text-sm text-muted-foreground">Score</p>
-                <p className="text-3xl font-bold">{result.score}/{result.max_score}</p>
-                <p className="text-xs text-muted-foreground">{percentage}%</p>
-              </div>
-            </CardContent>
-          </Card>
-
-          <Card>
-            <CardContent className="pt-6">
-              <div className="text-center space-y-2">
-                <CheckCircle className="h-8 w-8 mx-auto text-green-500" />
-                <p className="text-sm text-muted-foreground">Correct</p>
-                <p className="text-3xl font-bold text-green-500">{result.correct_answers}</p>
-                <p className="text-xs text-muted-foreground">{accuracy}% accuracy</p>
-              </div>
-            </CardContent>
-          </Card>
-
-          <Card>
-            <CardContent className="pt-6">
-              <div className="text-center space-y-2">
-                <XCircle className="h-8 w-8 mx-auto text-red-500" />
-                <p className="text-sm text-muted-foreground">Incorrect</p>
-                <p className="text-3xl font-bold text-red-500">
-                  {result.total_questions - result.correct_answers}
-                </p>
-                <p className="text-xs text-muted-foreground">
-                  {Math.round(((result.total_questions - result.correct_answers) / result.total_questions) * 100)}%
-                </p>
-              </div>
-            </CardContent>
-          </Card>
-
-          <Card>
-            <CardContent className="pt-6">
-              <div className="text-center space-y-2">
-                <Clock className="h-8 w-8 mx-auto text-blue-500" />
-                <p className="text-sm text-muted-foreground">Avg Time</p>
-                <p className="text-3xl font-bold">{avgTimePerQuestion}s</p>
-                <p className="text-xs text-muted-foreground">per question</p>
-              </div>
-            </CardContent>
-          </Card>
-
-          <Card>
-            <CardContent className="pt-6">
-              <div className="text-center space-y-2">
-                <Flag className="h-8 w-8 mx-auto text-yellow-500" />
-                <p className="text-sm text-muted-foreground">Marked</p>
-                <p className="text-3xl font-bold text-yellow-500">{markedCount}</p>
-                <p className="text-xs text-muted-foreground">for review</p>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-
-        {/* Performance Indicator */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2">
-              <TrendingUp className="h-5 w-5" />
-              Performance
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="space-y-4">
-            <div>
-              <div className="flex justify-between mb-2">
-                <span className="text-sm font-medium">Overall Score</span>
-                <span className="text-sm text-muted-foreground">{percentage}%</span>
-              </div>
-              <Progress value={percentage} className="h-3" />
-            </div>
-            
-            {percentage >= 80 && (
-              <div className="flex items-start gap-2 p-3 bg-green-500/10 border border-green-500/20 rounded-lg">
-                <CheckCircle className="h-5 w-5 text-green-500 mt-0.5" />
-                <div>
-                  <p className="font-medium text-green-500">Excellent Performance!</p>
-                  <p className="text-sm text-muted-foreground">You've demonstrated strong understanding of the topics.</p>
-                </div>
-              </div>
-            )}
-            
-            {percentage >= 60 && percentage < 80 && (
-              <div className="flex items-start gap-2 p-3 bg-yellow-500/10 border border-yellow-500/20 rounded-lg">
-                <AlertCircle className="h-5 w-5 text-yellow-500 mt-0.5" />
-                <div>
-                  <p className="font-medium text-yellow-500">Good Effort!</p>
-                  <p className="text-sm text-muted-foreground">Review the topics where you struggled to improve further.</p>
-                </div>
-              </div>
-            )}
-            
-            {percentage < 60 && (
-              <div className="flex items-start gap-2 p-3 bg-red-500/10 border border-red-500/20 rounded-lg">
-                <XCircle className="h-5 w-5 text-red-500 mt-0.5" />
-                <div>
-                  <p className="font-medium text-red-500">Needs Improvement</p>
-                  <p className="text-sm text-muted-foreground">Focus on practicing the weak areas identified below.</p>
-                </div>
-              </div>
-            )}
-          </CardContent>
-        </Card>
-
-        {/* Topic Breakdown */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2">
-              <BarChart3 className="h-5 w-5" />
-              Topic-wise Performance
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="space-y-4">
-              {result.topic_breakdown.map((topic) => (
-                <div key={topic.topic} className="space-y-2">
-                  <div className="flex justify-between items-center">
-                    <span className="text-sm font-medium">{topic.topic}</span>
-                    <div className="flex items-center gap-2">
-                      <span className="text-sm text-muted-foreground">
-                        {topic.correct}/{topic.total}
-                      </span>
-                      <Badge variant={topic.accuracy >= 70 ? 'default' : 'destructive'}>
-                        {Math.round(topic.accuracy)}%
-                      </Badge>
-                    </div>
-                  </div>
-                  <Progress value={topic.accuracy} className="h-2" />
-                </div>
-              ))}
-            </div>
-          </CardContent>
-        </Card>
-
-        {/* Question-by-Question Review */}
-        <Card>
-          <CardHeader>
-            <CardTitle>Detailed Review</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="space-y-4">
-              {result.attempts.map((attempt, index) => (
-                <div
-                  key={attempt.question_id}
-                  className={`p-4 rounded-lg border ${
-                    attempt.is_correct
-                      ? 'bg-green-500/5 border-green-500/20'
-                      : 'bg-red-500/5 border-red-500/20'
-                  }`}
-                >
-                  <div className="flex items-start gap-3">
-                    {attempt.is_correct ? (
-                      <CheckCircle className="h-5 w-5 text-green-500 mt-1" />
-                    ) : (
-                      <XCircle className="h-5 w-5 text-red-500 mt-1" />
-                    )}
-                    <div className="flex-1 space-y-2">
-                      <div className="flex justify-between items-start">
-                        <div className="flex items-center gap-2">
-                          <p className="font-medium">Question {index + 1}</p>
-                          {attempt.marked_for_review && (
-                            <Badge variant="outline" className="text-xs bg-yellow-500/10 border-yellow-500/30 text-yellow-600">
-                              <Flag className="h-3 w-3 mr-1" />
-                              Marked
-                            </Badge>
-                          )}
-                        </div>
-                        <Badge variant="outline" className="text-xs">
-                          {attempt.topic}
-                        </Badge>
-                      </div>
-                      <p className="text-sm text-muted-foreground">{attempt.question_text}</p>
-                      
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
-                        <div>
-                          <span className="text-muted-foreground">Your answer: </span>
-                          <span className={attempt.is_correct ? 'text-green-500' : 'text-red-500'}>
-                            {attempt.selected_answer || 'Not answered'}
-                          </span>
-                        </div>
-                        {!attempt.is_correct && (
-                          <div>
-                            <span className="text-muted-foreground">Correct answer: </span>
-                            <span className="text-green-500">{attempt.correct_answer}</span>
-                          </div>
-                        )}
-                      </div>
-                      
-                      <div className="flex items-center gap-4 text-xs text-muted-foreground">
-                        <div className="flex items-center gap-1">
-                          <Clock className="h-3 w-3" />
-                          <span>{attempt.time_spent}s</span>
-                        </div>
-                        {attempt.time_spent > avgTimePerQuestion * 1.5 && (
-                          <Badge variant="outline" className="text-xs bg-orange-500/10 border-orange-500/30">
-                            Took longer
-                          </Badge>
-                        )}
-                        {attempt.time_spent < avgTimePerQuestion * 0.5 && attempt.time_spent > 5 && (
-                          <Badge variant="outline" className="text-xs bg-blue-500/10 border-blue-500/30">
-                            Quick answer
-                          </Badge>
-                        )}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </CardContent>
-        </Card>
-
-        {/* Actions */}
-        <div className="flex gap-3">
-          <Button onClick={() => navigate('/analysis')} className="flex-1">
-            View Detailed Analysis
-          </Button>
-          <Button onClick={() => navigate('/tests')} variant="outline" className="flex-1">
+  if (!results) {
+    return (
+      <MainLayout>
+        <div className="text-center py-20">
+          <p className="text-muted-foreground">Failed to load test results</p>
+          <Button onClick={() => navigate('/tests')} className="mt-4">
             Back to Tests
           </Button>
         </div>
+      </MainLayout>
+    );
+  }
+
+  const scorePercentage = (results.score / results.max_score) * 100;
+
+  return (
+    <MainLayout>
+      <div className="container mx-auto px-4 py-6 max-w-7xl">
+        {/* Header */}
+        <div className="mb-6">
+          <Button
+            variant="ghost"
+            onClick={() => navigate('/tests')}
+            className="mb-4"
+          >
+            <ArrowLeft className="mr-2 h-4 w-4" />
+            Back to Tests
+          </Button>
+
+          <div className="flex items-start justify-between">
+            <div>
+              <h1 className="text-3xl font-bold">{results.title}</h1>
+              <p className="text-muted-foreground mt-1">Test Results & Analysis</p>
+            </div>
+            <Badge
+              variant={scorePercentage >= 70 ? 'default' : scorePercentage >= 50 ? 'secondary' : 'destructive'}
+              className="text-lg px-4 py-2"
+            >
+              {scorePercentage.toFixed(0)}%
+            </Badge>
+          </div>
+        </div>
+
+        {/* Summary Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
+          <Card>
+            <CardHeader className="pb-2">
+              <CardTitle className="text-sm font-medium text-muted-foreground flex items-center gap-2">
+                <Trophy className="h-4 w-4" />
+                Score
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-3xl font-bold">
+                {results.score} / {results.max_score}
+              </p>
+              <p className="text-sm text-muted-foreground mt-1">
+                {scorePercentage.toFixed(1)}%
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardHeader className="pb-2">
+              <CardTitle className="text-sm font-medium text-muted-foreground flex items-center gap-2">
+                <Target className="h-4 w-4" />
+                Accuracy
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-3xl font-bold">
+                {results.correct_answers} / {results.total_questions}
+              </p>
+              <p className="text-sm text-muted-foreground mt-1">
+                {((results.correct_answers / results.total_questions) * 100).toFixed(1)}% correct
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardHeader className="pb-2">
+              <CardTitle className="text-sm font-medium text-muted-foreground flex items-center gap-2">
+                <Clock className="h-4 w-4" />
+                Time Taken
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-3xl font-bold">{formatTime(results.time_taken)}</p>
+              <p className="text-sm text-muted-foreground mt-1">
+                {formatTime(Math.round(results.time_taken / results.total_questions))} avg
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardHeader className="pb-2">
+              <CardTitle className="text-sm font-medium text-muted-foreground flex items-center gap-2">
+                <TrendingUp className="h-4 w-4" />
+                Performance
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-3xl font-bold">
+                {scorePercentage >= 80 ? 'Excellent' : scorePercentage >= 60 ? 'Good' : 'Needs Work'}
+              </p>
+              <p className="text-sm text-muted-foreground mt-1">
+                {results.topic_breakdown?.length || 0} topics covered
+              </p>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* Detailed Analysis Tabs */}
+        <Tabs defaultValue="overview" className="w-full">
+          <TabsList className="grid w-full grid-cols-3">
+            <TabsTrigger value="overview">Overview</TabsTrigger>
+            <TabsTrigger value="time-analysis">Time Analysis</TabsTrigger>
+            <TabsTrigger value="questions">Questions</TabsTrigger>
+          </TabsList>
+
+          <TabsContent value="overview" className="space-y-4">
+            <Card>
+              <CardHeader>
+                <CardTitle>Topic Breakdown</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-3">
+                  {results.topic_breakdown?.map((topic: any, idx: number) => (
+                    <div key={idx} className="flex items-center justify-between p-3 border rounded-lg">
+                      <div>
+                        <p className="font-medium">{topic.topic}</p>
+                        <p className="text-sm text-muted-foreground">
+                          {topic.correct} / {topic.total} correct
+                        </p>
+                      </div>
+                      <Badge variant={topic.accuracy >= 70 ? 'default' : 'destructive'}>
+                        {topic.accuracy.toFixed(0)}%
+                      </Badge>
+                    </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+          </TabsContent>
+
+          <TabsContent value="time-analysis">
+            <TestTimeAnalysis testId={testId!} />
+          </TabsContent>
+
+          <TabsContent value="questions" className="space-y-4">
+            <Card>
+              <CardHeader>
+                <CardTitle>Question-by-Question Review</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-3">
+                  {results.attempts?.map((attempt: any, idx: number) => (
+                    <div
+                      key={idx}
+                      className={`p-4 border rounded-lg ${
+                        attempt.is_correct
+                          ? 'bg-green-50 dark:bg-green-950/20 border-green-200 dark:border-green-800'
+                          : 'bg-red-50 dark:bg-red-950/20 border-red-200 dark:border-red-800'
+                      }`}
+                    >
+                      <div className="flex items-start justify-between mb-2">
+                        <div className="flex items-center gap-2">
+                          <span className="font-semibold">Question {idx + 1}</span>
+                          <Badge variant="outline" className="text-xs">
+                            {attempt.subject}
+                          </Badge>
+                          <Badge variant="outline" className="text-xs">
+                            {attempt.topic}
+                          </Badge>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <span className="text-sm text-muted-foreground">
+                            {formatTime(attempt.time_spent)}
+                          </span>
+                          <Badge variant={attempt.is_correct ? 'default' : 'destructive'}>
+                            {attempt.is_correct ? 'Correct' : 'Incorrect'}
+                          </Badge>
+                        </div>
+                      </div>
+                      <p className="text-sm mb-2">{attempt.question_text}</p>
+                      <div className="text-sm space-y-1">
+                        <p>
+                          <span className="text-muted-foreground">Your answer:</span>{' '}
+                          <span className={attempt.is_correct ? 'text-green-600 dark:text-green-400' : 'text-red-600 dark:text-red-400'}>
+                            {attempt.selected_answer || 'Not answered'}
+                          </span>
+                        </p>
+                        {!attempt.is_correct && (
+                          <p>
+                            <span className="text-muted-foreground">Correct answer:</span>{' '}
+                            <span className="text-green-600 dark:text-green-400">
+                              {attempt.correct_answer}
+                            </span>
+                          </p>
+                        )}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+          </TabsContent>
+        </Tabs>
       </div>
     </MainLayout>
   );

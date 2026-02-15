@@ -48,6 +48,12 @@ const TestTaking = () => {
   const timerRef = useRef<NodeJS.Timeout | null>(null);
   const autoSaveRef = useRef<NodeJS.Timeout | null>(null);
 
+  // Enhanced tracking for journey analysis
+  const [navigationLog, setNavigationLog] = useState<any[]>([]);
+  const [answerChanges, setAnswerChanges] = useState<any[]>([]);
+  const [questionViewTimes, setQuestionViewTimes] = useState<Record<number, { first: Date | null, last: Date | null, count: number }>>({});
+  const previousQuestionRef = useRef<number>(0);
+
   const [showSubmitDialog, setShowSubmitDialog] = useState(false);
 
   /* ---------------------------------- LOAD TEST ---------------------------------- */
@@ -66,10 +72,31 @@ const TestTaking = () => {
         });
 
         const initialTime: Record<number, number> = {};
+        const initialViewTimes: Record<number, { first: Date | null, last: Date | null, count: number }> = {};
         data.questions.forEach((_: any, idx: number) => {
           initialTime[idx] = 0;
+          initialViewTimes[idx] = { first: null, last: null, count: 0 };
         });
         setTimeSpent(initialTime);
+        setQuestionViewTimes(initialViewTimes);
+
+        // Log initial navigation
+        const now = new Date();
+        setNavigationLog([{
+          from_question_id: null,
+          to_question_id: data.questions[0]?.id,
+          from_question_index: null,
+          to_question_index: 0,
+          navigation_type: 'initial',
+          time_on_previous_question: 0,
+          timestamp: now.toISOString()
+        }]);
+
+        // Mark first question as viewed
+        setQuestionViewTimes(prev => ({
+          ...prev,
+          0: { first: now, last: now, count: 1 }
+        }));
       } catch {
         toast.error('Failed to load test');
         navigate('/tests');
@@ -121,10 +148,26 @@ const TestTaking = () => {
   /* ---------------------------------- HANDLERS ---------------------------------- */
 
   const handleAnswer = (answer: any) => {
+    const previousAnswer = answers[currentQuestion];
+    const now = new Date();
+
     setAnswers(prev => ({
       ...prev,
       [currentQuestion]: answer,
     }));
+
+    // Log answer change
+    const changeType = previousAnswer === undefined ? 'initial' : 
+                      answer === null ? 'cleared' : 'modified';
+
+    setAnswerChanges(prev => [...prev, {
+      question_id: session?.questions[currentQuestion]?.id,
+      question_index: currentQuestion,
+      previous_answer: previousAnswer,
+      new_answer: answer,
+      change_type: changeType,
+      timestamp: now.toISOString()
+    }]);
   };
 
   const handleMarkForReview = () => {
@@ -137,7 +180,37 @@ const TestTaking = () => {
     });
   };
 
-  const handleNavigate = (index: number) => {
+  const handleNavigate = (index: number, navigationType: 'next' | 'previous' | 'jump' | 'review' = 'jump') => {
+    if (!session || index === currentQuestion) return;
+
+    const now = new Date();
+    const timeOnCurrent = timeSpent[currentQuestion] || 0;
+
+    // Log navigation
+    setNavigationLog(prev => [...prev, {
+      from_question_id: session.questions[currentQuestion]?.id,
+      to_question_id: session.questions[index]?.id,
+      from_question_index: currentQuestion,
+      to_question_index: index,
+      navigation_type: navigationType,
+      time_on_previous_question: timeOnCurrent,
+      timestamp: now.toISOString()
+    }]);
+
+    // Update view times for new question
+    setQuestionViewTimes(prev => {
+      const viewData = prev[index] || { first: null, last: null, count: 0 };
+      return {
+        ...prev,
+        [index]: {
+          first: viewData.first || now,
+          last: now,
+          count: viewData.count + 1
+        }
+      };
+    });
+
+    previousQuestionRef.current = currentQuestion;
     setCurrentQuestion(index);
   };
 
@@ -156,16 +229,27 @@ const TestTaking = () => {
       setSubmitting(true);
 
       try {
-        const attempts = session.questions.map((q, index) => ({
-          question_id: q.id,
-          selected_answer: answers[index] || null,
-          time_spent: timeSpent[index] || 0,
-          marked_for_review: markedForReview.has(index),
-        }));
+        const attempts = session.questions.map((q, index) => {
+          const viewData = questionViewTimes[index] || { first: null, last: null, count: 0 };
+          
+          return {
+            question_id: q.id,
+            selected_answer: answers[index] || null,
+            time_spent: timeSpent[index] || 0,
+            marked_for_review: markedForReview.has(index),
+            question_order: index,
+            first_viewed_at: viewData.first?.toISOString() || null,
+            last_viewed_at: viewData.last?.toISOString() || null,
+            view_count: viewData.count,
+            answer_changed_count: answerChanges.filter(c => c.question_index === index).length
+          };
+        });
 
         await testApi.submitTest({
           test_id: session.testId,
           attempts,
+          navigation_log: navigationLog,
+          answer_changes: answerChanges
         });
 
         toast.success('Test submitted successfully! 🎉');
@@ -229,7 +313,7 @@ const TestTaking = () => {
                   {session.questions.map((_, idx) => (
                     <button
                       key={idx}
-                      onClick={() => setCurrentQuestion(idx)}
+                      onClick={() => handleNavigate(idx, 'jump')}
                       className={cn(
                         "w-2.5 h-2.5 rounded-full transition-all",
                         idx === currentQuestion && "ring-2 ring-primary ring-offset-2",
@@ -323,7 +407,7 @@ const TestTaking = () => {
                 {/* Navigation */}
                 <div className="flex gap-3 flex-1">
                   <Button
-                    onClick={() => setCurrentQuestion(q => Math.max(0, q - 1))}
+                    onClick={() => handleNavigate(Math.max(0, currentQuestion - 1), 'previous')}
                     disabled={currentQuestion === 0}
                     variant="outline"
                     className="flex-1 touch-target text-base"
@@ -331,7 +415,7 @@ const TestTaking = () => {
                     ← Previous
                   </Button>
                   <Button
-                    onClick={() => setCurrentQuestion(q => Math.min(session.questions.length - 1, q + 1))}
+                    onClick={() => handleNavigate(Math.min(session.questions.length - 1, currentQuestion + 1), 'next')}
                     disabled={currentQuestion === session.questions.length - 1}
                     className="flex-1 touch-target text-base"
                   >

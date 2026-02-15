@@ -102,5 +102,53 @@ export const testApi = {
         });
         if (!response.ok) throw new Error('Failed to fetch test results');
         return response.json();
+    },
+
+    getTimeAnalysis: async (testId: string) => {
+        const { data: { session } } = await supabase.auth.getSession();
+        const token = session?.access_token;
+        if (!token) throw new Error('No session');
+
+        const response = await fetch(`${API_BASE_URL}/api/tests/${testId}/time-analysis`, {
+            headers: { 'Authorization': `Bearer ${token}` }
+        });
+        if (!response.ok) throw new Error('Failed to fetch time analysis');
+        return response.json();
+    },
+
+    getJourneyAnalysis: async (testId: string) => {
+        const { data: { session } } = await supabase.auth.getSession();
+        const token = session?.access_token;
+        if (!token) throw new Error('No session');
+
+        const response = await fetch(`${API_BASE_URL}/api/tests/${testId}/journey-analysis`, {
+            headers: { 'Authorization': `Bearer ${token}` }
+        });
+        if (!response.ok) throw new Error('Failed to fetch journey analysis');
+        return response.json();
+    },
+
+    getDifficultyAnalysis: async (testId: string) => {
+        const { data: { session } } = await supabase.auth.getSession();
+        const token = session?.access_token;
+        if (!token) throw new Error('No session');
+
+        const response = await fetch(`${API_BASE_URL}/api/tests/${testId}/difficulty-analysis`, {
+            headers: { 'Authorization': `Bearer ${token}` }
+        });
+        if (!response.ok) throw new Error('Failed to fetch difficulty analysis');
+        return response.json();
+    },
+
+    getEfficiencyAnalysis: async (testId: string) => {
+        const { data: { session } } = await supabase.auth.getSession();
+        const token = session?.access_token;
+        if (!token) throw new Error('No session');
+
+        const response = await fetch(`${API_BASE_URL}/api/tests/${testId}/efficiency-analysis`, {
+            headers: { 'Authorization': `Bearer ${token}` }
+        });
+        if (!response.ok) throw new Error('Failed to fetch efficiency analysis');
+        return response.json();
     }
 };
