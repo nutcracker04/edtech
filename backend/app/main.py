@@ -2,20 +2,21 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.config import settings
 from app.routers import (
-    upload_router,
     tests_router,
     analysis_router,
     performance_router,
     auth_router,
     repository_router,
     ai_router,
-    pyq_router
+    pyq_router,
+    dashboard_router,
+    analysis_page_router
 )
 
 # Create FastAPI app
 app = FastAPI(
     title="EdTech Platform API",
-    description="Backend API for EdTech platform with OCR test upload, adaptive testing, and performance analytics",
+    description="Backend API for EdTech platform with adaptive testing and performance analytics",
     version="1.0.0"
 )
 
@@ -30,13 +31,14 @@ app.add_middleware(
 
 # Include routers
 app.include_router(auth_router)
-app.include_router(upload_router)
 app.include_router(tests_router)
 app.include_router(analysis_router)
 app.include_router(performance_router)
 app.include_router(repository_router)
 app.include_router(pyq_router) # Added pyq_router
 app.include_router(ai_router)
+app.include_router(dashboard_router)
+app.include_router(analysis_page_router)
 
 
 @app.get("/")

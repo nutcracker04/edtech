@@ -14,13 +14,12 @@ import Dashboard from "./pages/Dashboard";
 import Mistakes from "./pages/Mistakes";
 import RevisionCapsulesPage from "./pages/RevisionCapsulesPage";
 
-import Analysis from "./pages/Analysis";
+import Analysis from "./pages/AnalysisNew";
+import Landing from "./pages/Landing";
 import Tests from "./pages/Tests";
-import UploadTest from "./pages/UploadTest";
 import Settings from "./pages/Settings";
 import AdminDashboard from "./pages/admin/AdminDashboard";
 import HierarchyManager from "./pages/admin/HierarchyManager";
-import AdminPaperUpload from "./pages/admin/PaperUpload";
 import AdminRepository from "./pages/admin/AdminRepository";
 import TestTaking from "./pages/TestTaking";
 import TestResults from "./pages/TestResults";
@@ -51,6 +50,7 @@ const App = () => {
             <BrowserRouter>
               <Routes>
                 {/* Public routes */}
+                <Route path="/landing" element={<Landing />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/onboarding" element={<Onboarding />} />
 
@@ -96,12 +96,6 @@ const App = () => {
                     <TestResults />
                   </ProtectedRoute>
                 } />
-                <Route path="/upload-test" element={
-                  <ProtectedRoute>
-                    <UploadTest />
-                  </ProtectedRoute>
-                } />
-
 
                 <Route path="/settings" element={
                   <ProtectedRoute>
@@ -117,11 +111,6 @@ const App = () => {
                 <Route path="/admin/hierarchy" element={
                   <ProtectedRoute>
                     <HierarchyManager />
-                  </ProtectedRoute>
-                } />
-                <Route path="/admin/upload" element={
-                  <ProtectedRoute>
-                    <AdminPaperUpload />
                   </ProtectedRoute>
                 } />
                 <Route path="/admin/repository" element={

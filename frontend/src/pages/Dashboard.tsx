@@ -66,14 +66,10 @@ const Dashboard = () => {
           <EmptyState
             icon={Target}
             title="Welcome to Your Dashboard!"
-            description="Start taking tests or uploading papers to see your performance data and analytics here. Your journey to success begins with the first test!"
+            description="Start taking tests to see your performance data and analytics here. Your journey to success begins with the first test!"
             action={{
               label: 'Take a Test',
               onClick: () => navigate('/tests'),
-            }}
-            secondaryAction={{
-              label: 'Upload a Test',
-              onClick: () => navigate('/upload-test'),
             }}
           />
 

@@ -40,7 +40,7 @@ class ActivityItem(BaseModel):
 class UpcomingTest(BaseModel):
     test_id: str
     test_name: str
-    test_type: Literal["mock", "pyq", "topic", "adaptive", "full", "practice", "uploaded"]
+    test_type: Literal["mock", "pyq", "topic", "adaptive", "full", "practice"]
     date: str
     difficulty: Literal["easy", "medium", "hard"]
 

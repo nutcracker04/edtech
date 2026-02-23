@@ -2,7 +2,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { MainLayout } from '@/components/layout/MainLayout';
-import { FileUploader } from '@/components/upload/FileUploader';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Label } from '@/components/ui/label';
@@ -176,12 +175,20 @@ const AdminPyq = () => {
                                     </Select>
                                 </div>
 
-                                <FileUploader
-                                    onFileSelect={handleFileSelect}
-                                    loading={uploading}
-                                    label="Drop PDF Here"
-                                    accept="application/pdf"
-                                />
+                                <div className="space-y-2">
+                                    <Label>PDF File</Label>
+                                    <Input
+                                        type="file"
+                                        accept="application/pdf"
+                                        disabled={uploading}
+                                        onChange={(e) => {
+                                            if (e.target.files && e.target.files[0]) {
+                                                handleFileSelect(e.target.files[0]);
+                                            }
+                                        }}
+                                        className="cursor-pointer"
+                                    />
+                                </div>
                             </CardContent>
                         </Card>
                     </div>

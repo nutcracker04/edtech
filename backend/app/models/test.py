@@ -32,7 +32,7 @@ class Test(BaseModel):
     id: str
     user_id: str
     title: str
-    type: str  # 'full', 'topic', 'practice', 'adaptive', 'uploaded'
+    type: str  # 'full', 'topic', 'practice', 'adaptive'
     subject: Optional[str] = None
     status: str  # 'completed', 'in_progress', 'upcoming', 'paused'
     duration: int  # in minutes

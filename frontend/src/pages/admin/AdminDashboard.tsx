@@ -17,14 +17,6 @@ const AdminDashboard = () => {
             bgColor: "bg-blue-500/10",
         },
         {
-            title: "Upload & Tag",
-            description: "Upload papers or manually tag extracted questions.",
-            icon: FileUp,
-            path: "/admin/upload",
-            color: "text-emerald-500",
-            bgColor: "bg-emerald-500/10",
-        },
-        {
             title: "Repository",
             description: "View and manage the global tagged repository.",
             icon: Database,
