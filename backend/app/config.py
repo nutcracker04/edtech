@@ -4,9 +4,9 @@ from typing import List
 
 class Settings(BaseSettings):
     # Supabase
-    supabase_url: str
-    supabase_service_key: str
-    supabase_jwt_secret: str
+    supabase_url: str = ""
+    supabase_service_key: str = ""
+    supabase_jwt_secret: str = ""
     
     # Storage
     storage_bucket_test_papers: str = "test-papers"
