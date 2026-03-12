@@ -7,3 +7,4 @@ from .ai import router as ai_router
 from .pyq import router as pyq_router
 from .dashboard import router as dashboard_router
 from .analysis_page import router as analysis_page_router
+from .pdf_processing import router as pdf_processing_router

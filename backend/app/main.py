@@ -10,12 +10,13 @@ from app.routers import (
     ai_router,
     pyq_router,
     dashboard_router,
-    analysis_page_router
+    analysis_page_router,
+    pdf_processing_router
 )
 
 # Create FastAPI app
 app = FastAPI(
-    title="EdTech Platform API",
+    title="JEE-Test Platform",
     description="Backend API for EdTech platform with adaptive testing and performance analytics",
     version="1.0.0"
 )
@@ -39,6 +40,7 @@ app.include_router(pyq_router) # Added pyq_router
 app.include_router(ai_router)
 app.include_router(dashboard_router)
 app.include_router(analysis_page_router)
+app.include_router(pdf_processing_router)
 
 
 @app.get("/")
