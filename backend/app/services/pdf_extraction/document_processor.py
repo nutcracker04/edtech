@@ -26,6 +26,7 @@ from uuid import uuid4
 
 from dotenv import load_dotenv
 from pydantic import BaseModel, Field
+from pypdf import PdfReader, PdfWriter
 from sarvamai import SarvamAI
 
 try:
@@ -268,6 +269,10 @@ class DocumentProcessor:
     def _extract_pdf_content(self, pdf_path: str, job_id: str) -> str:
         """
         Call Sarvam Document Intelligence and download the full extraction bundle.
+
+        Sarvam currently limits each extraction request to 10 pages, so large PDFs
+        are split into chunks and processed sequentially. Their outputs are stored
+        under a single job directory for local inspection.
         """
 
         job_output_dir = self.storage_root / job_id
@@ -277,6 +282,93 @@ class DocumentProcessor:
             shutil.rmtree(extracted_dir)
         extracted_dir.mkdir(parents=True, exist_ok=True)
 
+        total_pages = self._get_pdf_page_count(pdf_path)
+        max_pages_per_job = max(1, self.config.max_pages_per_job)
+
+        if total_pages <= max_pages_per_job:
+            self._extract_single_pdf(
+                pdf_path=pdf_path,
+                job_output_dir=job_output_dir,
+                extract_destination=extracted_dir,
+                archive_prefix="full_document",
+            )
+            return str(extracted_dir)
+
+        chunk_dir = job_output_dir / "chunks"
+        chunk_paths = self._split_pdf_into_chunks(pdf_path, chunk_dir, max_pages_per_job)
+
+        logger.info(
+            "PDF %s has %s pages; splitting into %s chunk(s) of up to %s pages",
+            pdf_path,
+            total_pages,
+            len(chunk_paths),
+            max_pages_per_job,
+        )
+
+        for index, chunk_path in enumerate(chunk_paths, start=1):
+            chunk_name = f"chunk_{index:03d}"
+            chunk_extract_dir = extracted_dir / chunk_name
+            chunk_extract_dir.mkdir(parents=True, exist_ok=True)
+
+            progress = 20.0 + (index / len(chunk_paths)) * 65.0
+            self._update_job_status(
+                job_id,
+                ProcessingStage.EXTRACTION,
+                progress,
+                current_chapter=f"Chunk {index}/{len(chunk_paths)}",
+                current_topic=f"Pages {self._chunk_page_label(chunk_path)}",
+            )
+
+            self._extract_single_pdf(
+                pdf_path=str(chunk_path),
+                job_output_dir=job_output_dir,
+                extract_destination=chunk_extract_dir,
+                archive_prefix=chunk_name,
+            )
+
+        self._build_combined_markdown(extracted_dir)
+        return str(extracted_dir)
+
+    def _get_pdf_page_count(self, pdf_path: str) -> int:
+        reader = PdfReader(pdf_path)
+        return len(reader.pages)
+
+    def _split_pdf_into_chunks(
+        self,
+        pdf_path: str,
+        chunk_dir: Path,
+        max_pages_per_job: int,
+    ) -> List[Path]:
+        reader = PdfReader(pdf_path)
+        chunk_dir.mkdir(parents=True, exist_ok=True)
+
+        chunk_paths: List[Path] = []
+        total_pages = len(reader.pages)
+
+        for start_page in range(0, total_pages, max_pages_per_job):
+            end_page = min(start_page + max_pages_per_job, total_pages)
+            writer = PdfWriter()
+
+            for page_index in range(start_page, end_page):
+                writer.add_page(reader.pages[page_index])
+
+            chunk_number = len(chunk_paths) + 1
+            chunk_path = chunk_dir / (
+                f"chunk_{chunk_number:03d}_pages_{start_page + 1:04d}_{end_page:04d}.pdf"
+            )
+            with chunk_path.open("wb") as file_handle:
+                writer.write(file_handle)
+            chunk_paths.append(chunk_path)
+
+        return chunk_paths
+
+    def _extract_single_pdf(
+        self,
+        pdf_path: str,
+        job_output_dir: Path,
+        extract_destination: Path,
+        archive_prefix: str,
+    ) -> None:
         retry_count = 0
         last_error: Optional[Exception] = None
 
@@ -302,24 +394,25 @@ class DocumentProcessor:
                 try:
                     metrics = extraction_job.get_page_metrics()
                     if metrics:
-                        logger.info("Extraction metrics for %s: %s", job_id, metrics)
+                        logger.info("Extraction metrics for %s: %s", archive_prefix, metrics)
                 except Exception:
-                    logger.debug("Page metrics were not available for job %s", job_id)
+                    logger.debug("Page metrics were not available for %s", archive_prefix)
 
-                zip_name = f"{getattr(extraction_job, 'job_id', job_id)}_output.zip"
+                zip_name = f"{archive_prefix}_{getattr(extraction_job, 'job_id', 'output')}.zip"
                 zip_path = job_output_dir / zip_name
                 extraction_job.download_output(str(zip_path))
 
                 with zipfile.ZipFile(zip_path, "r") as zip_ref:
-                    zip_ref.extractall(extracted_dir)
+                    zip_ref.extractall(extract_destination)
 
-                return str(extracted_dir)
+                return
 
             except Exception as exc:
                 last_error = exc
                 retry_count += 1
+                should_retry = retry_count < self.config.max_retries and not self._is_non_retryable_error(exc)
 
-                if retry_count >= self.config.max_retries:
+                if not should_retry:
                     break
 
                 delay = self.config.retry_delay_seconds * (2 ** (retry_count - 1))
@@ -327,7 +420,7 @@ class DocumentProcessor:
                     "Extraction attempt %s/%s failed for %s: %s. Retrying in %ss",
                     retry_count,
                     self.config.max_retries,
-                    job_id,
+                    archive_prefix,
                     exc,
                     delay,
                 )
@@ -335,6 +428,34 @@ class DocumentProcessor:
 
         raise RuntimeError(
             f"PDF extraction failed after {retry_count} attempt(s): {last_error}"
+        )
+
+    def _is_non_retryable_error(self, exc: Exception) -> bool:
+        error_text = str(exc).lower()
+        return "status_code: 400" in error_text or "invalid_request_error" in error_text
+
+    def _chunk_page_label(self, chunk_path: Path) -> str:
+        stem_parts = chunk_path.stem.split("_")
+        if len(stem_parts) >= 5:
+            return f"{int(stem_parts[-2])}-{int(stem_parts[-1])}"
+        return chunk_path.stem
+
+    def _build_combined_markdown(self, extracted_dir: Path) -> None:
+        markdown_files = sorted(
+            path for path in extracted_dir.rglob("*.md") if path.name != "combined.md"
+        )
+        if not markdown_files:
+            return
+
+        combined_parts = []
+        for markdown_path in markdown_files:
+            relative_path = markdown_path.relative_to(extracted_dir)
+            content = markdown_path.read_text(encoding="utf-8", errors="ignore").strip()
+            combined_parts.append(f"<!-- Source: {relative_path} -->\n\n{content}")
+
+        (extracted_dir / "combined.md").write_text(
+            "\n\n".join(part for part in combined_parts if part.strip()),
+            encoding="utf-8",
         )
 
     def _collect_artifacts(

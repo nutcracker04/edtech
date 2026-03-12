@@ -7,6 +7,7 @@ from unittest.mock import patch
 
 from fastapi import FastAPI
 from fastapi.testclient import TestClient
+from pypdf import PdfWriter
 
 from app.routers import pdf_processing
 from app.services.pdf_extraction.config import PDFExtractionConfig
@@ -218,6 +219,78 @@ class DocumentProcessorLocalManifestTest(unittest.TestCase):
             manifest = json.loads(Path(result.artifacts.manifest_path).read_text(encoding="utf-8"))
             self.assertEqual(manifest["metadata"]["title"], "Test Book")
             self.assertEqual(manifest["markdown_files"], ["extracted/content.md"])
+
+    def test_process_pdf_splits_large_books_into_chunked_extractions(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            storage_root = Path(temp_dir) / "local-extractions"
+            uploads_root = Path(temp_dir) / "uploads"
+            uploads_root.mkdir(parents=True, exist_ok=True)
+
+            pdf_path = uploads_root / "large-book.pdf"
+            writer = PdfWriter()
+            for _ in range(12):
+                writer.add_blank_page(width=72, height=72)
+            with pdf_path.open("wb") as file_handle:
+                writer.write(file_handle)
+
+            config = PDFExtractionConfig(
+                sarvam_api_key="test-key",
+                image_storage_path=str(storage_root),
+                max_retries=1,
+                max_pages_per_job=10,
+            )
+            metadata = BookMetadata(
+                title="Large Test Book",
+                subject="Physics",
+                grade_level="11",
+                publisher="Test Publisher",
+            )
+
+            with patch("app.services.pdf_extraction.document_processor.SarvamAI"):
+                processor = DocumentProcessor(config=config)
+
+            extracted_chunks = []
+
+            def fake_extract_single(
+                pdf_path: str,
+                job_output_dir: Path,
+                extract_destination: Path,
+                archive_prefix: str,
+            ) -> None:
+                chunk_index = len(extracted_chunks) + 1
+                extract_destination.mkdir(parents=True, exist_ok=True)
+                (extract_destination / f"content-{chunk_index}.md").write_text(
+                    f"Chunk {chunk_index} content",
+                    encoding="utf-8",
+                )
+                (extract_destination / f"image-{chunk_index}.png").write_bytes(b"png")
+                (job_output_dir / f"{archive_prefix}_output.zip").write_bytes(b"zip")
+                extracted_chunks.append(Path(pdf_path))
+
+            processor._extract_single_pdf = fake_extract_single  # type: ignore[method-assign]
+
+            result = processor.process_pdf(str(pdf_path), metadata, job_id="job-large")
+
+            self.assertTrue(result.success)
+            self.assertEqual(len(extracted_chunks), 2)
+            self.assertEqual(
+                [path.name for path in extracted_chunks],
+                [
+                    "chunk_001_pages_0001_0010.pdf",
+                    "chunk_002_pages_0011_0012.pdf",
+                ],
+            )
+
+            assert result.artifacts is not None
+            self.assertIn("extracted/combined.md", result.artifacts.markdown_files)
+            self.assertIn("extracted/chunk_001/content-1.md", result.artifacts.markdown_files)
+            self.assertIn("extracted/chunk_002/content-2.md", result.artifacts.markdown_files)
+
+            combined_markdown = (
+                Path(result.artifacts.output_dir) / "extracted" / "combined.md"
+            ).read_text(encoding="utf-8")
+            self.assertIn("Chunk 1 content", combined_markdown)
+            self.assertIn("Chunk 2 content", combined_markdown)
 
 
 if __name__ == "__main__":

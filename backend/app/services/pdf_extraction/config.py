@@ -36,6 +36,10 @@ class PDFExtractionConfig(BaseSettings):
         default=100,
         description="Maximum PDF file size in MB"
     )
+    max_pages_per_job: int = Field(
+        default=10,
+        description="Maximum number of PDF pages to send per extraction job"
+    )
     structure_confidence_threshold: float = Field(
         default=0.7,
         ge=0.0,
@@ -132,6 +136,7 @@ def get_config() -> PDFExtractionConfig:
         "sarvam_timeout",
         "doc_intelligence_model",
         "max_pdf_size_mb",
+        "max_pages_per_job",
         "structure_confidence_threshold",
         "link_confidence_threshold",
         "image_storage_path",
