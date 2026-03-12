@@ -26,6 +26,9 @@ class Settings(BaseSettings):
     # AI
     groq_api_key: str = ""
     
+    # PDF Extraction
+    sarvam_api_key: str = ""
+    
     # Concept Graph (Neo4j & Redis)
     concept_graph_neo4j_uri: str = "bolt://localhost:7687"
     concept_graph_neo4j_user: str = "neo4j"
