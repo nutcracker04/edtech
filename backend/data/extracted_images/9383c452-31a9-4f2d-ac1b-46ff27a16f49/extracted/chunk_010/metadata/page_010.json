@@ -1,0 +1,164 @@
+{
+  "page_num": 10,
+  "image_width": 2402,
+  "image_height": 3001,
+  "created_at": "2026-03-12T18:58:01.684474+00:00",
+  "blocks": [
+    {
+      "block_id": "20260312_9d7fdf96-f009-43a0-9d79-0a23a69f8af4_10_block_000",
+      "coordinates": {
+        "x1": 185.0,
+        "y1": 181.0,
+        "x2": 788.0,
+        "y2": 243.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.7524227499961853,
+      "reading_order": 1,
+      "text": "7.10 Chapter 7 Organic Chemistry"
+    },
+    {
+      "block_id": "20260312_9d7fdf96-f009-43a0-9d79-0a23a69f8af4_10_block_001",
+      "coordinates": {
+        "x1": 1451.0,
+        "y1": 325.0,
+        "x2": 1692.0,
+        "y2": 372.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.7265021800994873,
+      "reading_order": 2,
+      "text": "Time: 30 min."
+    },
+    {
+      "block_id": "20260312_9d7fdf96-f009-43a0-9d79-0a23a69f8af4_10_block_002",
+      "coordinates": {
+        "x1": 184.0,
+        "y1": 294.0,
+        "x2": 933.0,
+        "y2": 375.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.6886018514633179,
+      "reading_order": 3,
+      "text": "Assessment Test IV"
+    },
+    {
+      "block_id": "20260312_9d7fdf96-f009-43a0-9d79-0a23a69f8af4_10_block_003",
+      "coordinates": {
+        "x1": 179.0,
+        "y1": 450.0,
+        "x2": 1694.0,
+        "y2": 506.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.7291422486305237,
+      "reading_order": 4,
+      "text": "Directions for questions from 1 to 15: Select the correct answer from the given options."
+    },
+    {
+      "block_id": "20260312_9d7fdf96-f009-43a0-9d79-0a23a69f8af4_10_block_004",
+      "coordinates": {
+        "x1": 237.0,
+        "y1": 547.0,
+        "x2": 1691.0,
+        "y2": 978.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.3635869026184082,
+      "reading_order": 5,
+      "text": "1. Assertion (A): The tendency of vanaspati to get rancid is less than corre-\nsponding vegetable oil.\nReason (R): Unsaturation is more in vanaspati.\n(a) Both A and R are true and R is the correct explanation of A.\n(b) Both A and R are true, but R is not the correct explanation of A.\n(c) A is true and R is false.\n(d) A is false and R is true."
+    },
+    {
+      "block_id": "20260312_9d7fdf96-f009-43a0-9d79-0a23a69f8af4_10_block_005",
+      "coordinates": {
+        "x1": 233.0,
+        "y1": 997.0,
+        "x2": 1149.0,
+        "y2": 1047.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.6017053127288818,
+      "reading_order": 6,
+      "text": "2. Assertion (A): CNG is a better fuel than LPG."
+    },
+    {
+      "block_id": "20260312_9d7fdf96-f009-43a0-9d79-0a23a69f8af4_10_block_006",
+      "coordinates": {
+        "x1": 264.0,
+        "y1": 1068.0,
+        "x2": 1706.0,
+        "y2": 1421.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6770573258399963,
+      "reading_order": 7,
+      "text": "**Reason (R):** The major component of CNG is methane and that of LPG are\npropane and butane.\n(a) Both A and R are true and R is the correct explanation of A.\n(b) Both A and R are true, but R is not the correct explanation of A.\n(c) A is true and R is false.\n(d) A is false and R is true."
+    },
+    {
+      "block_id": "20260312_9d7fdf96-f009-43a0-9d79-0a23a69f8af4_10_block_007",
+      "coordinates": {
+        "x1": 233.0,
+        "y1": 1446.0,
+        "x2": 1700.0,
+        "y2": 1754.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9364901781082153,
+      "reading_order": 8,
+      "text": "3. Arrange the following compounds in the decreasing order of the total num-\nber of hydrogen atoms present in them.\n(A) 4-methyl 2-pentyne (B) 4, 4-dimethyl 2-hexene\n(C) 3, 4, 5-trimethyl 2-hexene (D) 2, 3-dimethyl 2-pentene\n(a) CBDA (b) BDAC (c) CBAD (d) BCDA"
+    },
+    {
+      "block_id": "20260312_9d7fdf96-f009-43a0-9d79-0a23a69f8af4_10_block_008",
+      "coordinates": {
+        "x1": 233.0,
+        "y1": 1778.0,
+        "x2": 1689.0,
+        "y2": 2279.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9355983138084412,
+      "reading_order": 9,
+      "text": "4. The products formed by ethyne in different reactions are given below.\nGlyoxal, oxalic acid, benzene and acetaldehyde\nArrange the following reactions in the order of the above products.\n(A) Polymerization\n(B) Oxidation with alkaline $\\text{KMnO}_4$\n(C) Ozonolysis\n(D) Addition of water\n(a) DCBA (b) CBAD (c) CDBA (d) DCAB"
+    },
+    {
+      "block_id": "20260312_9d7fdf96-f009-43a0-9d79-0a23a69f8af4_10_block_009",
+      "coordinates": {
+        "x1": 239.0,
+        "y1": 2303.0,
+        "x2": 1333.0,
+        "y2": 2353.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.3213420808315277,
+      "reading_order": 10,
+      "text": "5. Match the entries of Column A with those of Column B."
+    },
+    {
+      "block_id": "20260312_9d7fdf96-f009-43a0-9d79-0a23a69f8af4_10_block_010",
+      "coordinates": {
+        "x1": 271.0,
+        "y1": 2365.0,
+        "x2": 1002.0,
+        "y2": 2740.0
+      },
+      "layout_tag": "table",
+      "confidence": 0.7822107672691345,
+      "reading_order": 11,
+      "text": "<table>\n<thead>\n<tr>\n<th>Column A<br/>(Main Fraction)</th>\n<th>Column B<br/>(Composition)</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>(i) Fuel oil</td>\n<td>(A) C_{20} – C_{24}</td>\n</tr>\n<tr>\n<td>(ii) Crude naphtha</td>\n<td>(B) C_{16} – C_{20}</td>\n</tr>\n<tr>\n<td>(iii) Lubricating oil</td>\n<td>(C) C_{10} – C_{16}</td>\n</tr>\n<tr>\n<td>(iv) Kerosene</td>\n<td>(D) C_5 – C_{10}</td>\n</tr>\n</tbody>\n</table>"
+    },
+    {
+      "block_id": "20260312_9d7fdf96-f009-43a0-9d79-0a23a69f8af4_10_block_011",
+      "coordinates": {
+        "x1": 1793.0,
+        "y1": 312.0,
+        "x2": 2172.0,
+        "y2": 364.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.4048849046230316,
+      "reading_order": 12,
+      "text": "Space for rough work"
+    }
+  ]
+}

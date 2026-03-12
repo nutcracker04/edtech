@@ -1,0 +1,177 @@
+{
+  "page_num": 9,
+  "image_width": 2402,
+  "image_height": 3001,
+  "created_at": "2026-03-12T18:57:36.259521+00:00",
+  "blocks": [
+    {
+      "block_id": "20260312_01685bfa-ccb1-4784-a0a3-3a5c2903e07f_9_block_000",
+      "coordinates": {
+        "x1": 1772.0,
+        "y1": 188.0,
+        "x2": 2055.0,
+        "y2": 238.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.8691189885139465,
+      "reading_order": 1,
+      "text": "Assessment Test I"
+    },
+    {
+      "block_id": "20260312_01685bfa-ccb1-4784-a0a3-3a5c2903e07f_9_block_001",
+      "coordinates": {
+        "x1": 2109.0,
+        "y1": 186.0,
+        "x2": 2197.0,
+        "y2": 234.0
+      },
+      "layout_tag": "page-number",
+      "confidence": 0.7771357297897339,
+      "reading_order": 2,
+      "text": "6.3"
+    },
+    {
+      "block_id": "20260312_01685bfa-ccb1-4784-a0a3-3a5c2903e07f_9_block_002",
+      "coordinates": {
+        "x1": 234.0,
+        "y1": 290.0,
+        "x2": 1693.0,
+        "y2": 475.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.921995997428894,
+      "reading_order": 3,
+      "text": "8. A burning match stick, when introduced into a jar containing $\\mathrm{NH}_3$ and $\\mathrm{O}_2$,\nburns with a pale blue flame. Identify one of the products of the reaction.\n(a) $\\mathrm{N}_2$ (b) $\\mathrm{N}_2\\mathrm{O}$ (c) NO (d) $\\mathrm{NO}_2$"
+    },
+    {
+      "block_id": "20260312_01685bfa-ccb1-4784-a0a3-3a5c2903e07f_9_block_003",
+      "coordinates": {
+        "x1": 233.0,
+        "y1": 495.0,
+        "x2": 1676.0,
+        "y2": 554.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8285730481147766,
+      "reading_order": 4,
+      "text": "9. Identify the following properties that are not related to the given diagram."
+    },
+    {
+      "block_id": "20260312_01685bfa-ccb1-4784-a0a3-3a5c2903e07f_9_block_004",
+      "coordinates": {
+        "x1": 775.0,
+        "y1": 562.0,
+        "x2": 1103.0,
+        "y2": 841.0
+      },
+      "layout_tag": "image",
+      "confidence": 0.9262387156486511,
+      "reading_order": 5,
+      "text": "The image displays a black-and-white schematic diagram of a graph, specifically a complete graph denoted as K4 (Kn = 4). The diagram consists of four circular nodes, each containing the letter 'P'. These nodes are arranged at the vertices of a tetrahedron (a three-dimensional shape with four triangular faces). The nodes are connected by straight lines (edges) that form the faces of the tetrahedron. Specifically, there is a vertical line connecting the top node to the bottom node, and horizontal lines connecting the left node to the right node, and the top node to the right node. This structure represents a fully connected network where every node is directly linked to every other node."
+    },
+    {
+      "block_id": "20260312_01685bfa-ccb1-4784-a0a3-3a5c2903e07f_9_block_005",
+      "coordinates": {
+        "x1": 293.0,
+        "y1": 858.0,
+        "x2": 1261.0,
+        "y2": 979.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.2793816328048706,
+      "reading_order": 6,
+      "text": "(a) Soft solid (b) Dark red\n(c) Garlic smell (d) Poisonous"
+    },
+    {
+      "block_id": "20260312_01685bfa-ccb1-4784-a0a3-3a5c2903e07f_9_block_006",
+      "coordinates": {
+        "x1": 972.0,
+        "y1": 860.0,
+        "x2": 1263.0,
+        "y2": 978.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.32453808188438416,
+      "reading_order": 7,
+      "text": "(b) Dark red\n(d) Poisonous"
+    },
+    {
+      "block_id": "20260312_01685bfa-ccb1-4784-a0a3-3a5c2903e07f_9_block_007",
+      "coordinates": {
+        "x1": 215.0,
+        "y1": 1003.0,
+        "x2": 1051.0,
+        "y2": 1058.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8365157246589661,
+      "reading_order": 8,
+      "text": "10. Identify 'A' from the figure given below."
+    },
+    {
+      "block_id": "20260312_01685bfa-ccb1-4784-a0a3-3a5c2903e07f_9_block_008",
+      "coordinates": {
+        "x1": 604.0,
+        "y1": 1078.0,
+        "x2": 1273.0,
+        "y2": 2005.0
+      },
+      "layout_tag": "image",
+      "confidence": 0.9455977082252502,
+      "reading_order": 9,
+      "text": "The image is a technical schematic diagram illustrating a geological or engineering cross-section labeled \"French process.\" It is not a data chart with axes or numerical values. The diagram depicts a vertical structure (likely a wellbore or borehole) extending upwards from a horizontal baseline. At the top, a series of vertical lines connect to a horizontal line labeled \"A,\" which appears to represent a surface or interface. Below the baseline, the structure is divided into three vertical columns. The central column features upward-pointing arrows, indicating upward fluid flow or pressure. The lower sections of the columns contain grids of circles, likely representing a grid of wells or monitoring points. The surrounding area is filled with hatched patterns, suggesting rock or soil layers. The diagram serves to visualize the spatial arrangement and flow characteristics of the French process."
+    },
+    {
+      "block_id": "20260312_01685bfa-ccb1-4784-a0a3-3a5c2903e07f_9_block_009",
+      "coordinates": {
+        "x1": 292.0,
+        "y1": 2049.0,
+        "x2": 1440.0,
+        "y2": 2171.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6546065807342529,
+      "reading_order": 10,
+      "text": "(a) Hot compressed air (b) Molten sulphur\n(c) Super-heated steam (d) Solid roll of sulphur"
+    },
+    {
+      "block_id": "20260312_01685bfa-ccb1-4784-a0a3-3a5c2903e07f_9_block_010",
+      "coordinates": {
+        "x1": 215.0,
+        "y1": 2192.0,
+        "x2": 1699.0,
+        "y2": 2376.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.942783772945404,
+      "reading_order": 11,
+      "text": "11. The solubility of salt 'A' is 20 at a given temperature. How much of salt A is\npresent in 600 g of saturated solution at that temperature?\n(a) 100 g (b) 120 g (c) 20 g (d) 80 g"
+    },
+    {
+      "block_id": "20260312_01685bfa-ccb1-4784-a0a3-3a5c2903e07f_9_block_011",
+      "coordinates": {
+        "x1": 218.0,
+        "y1": 2397.0,
+        "x2": 1693.0,
+        "y2": 2639.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9503108859062195,
+      "reading_order": 12,
+      "text": "12. The molarity of $\\mathrm{NaOH}$ solution is 5 M. Calculate the amount of solute required\nto be added to 1 L of the solution to saturate it at $25^{\\circ}\\mathrm{C}$. The solubility of the sol-\nute is 20 at $25^{\\circ}\\mathrm{C}$ and the density of 5 M $\\mathrm{NaOH}$ solution is 1.5 g/mL.\n(a) 20 g (b) 50 g (c) 75 g (d) 60 g"
+    },
+    {
+      "block_id": "20260312_01685bfa-ccb1-4784-a0a3-3a5c2903e07f_9_block_012",
+      "coordinates": {
+        "x1": 1791.0,
+        "y1": 312.0,
+        "x2": 2175.0,
+        "y2": 365.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.673228919506073,
+      "reading_order": 13,
+      "text": "Space for rough work"
+    }
+  ]
+}

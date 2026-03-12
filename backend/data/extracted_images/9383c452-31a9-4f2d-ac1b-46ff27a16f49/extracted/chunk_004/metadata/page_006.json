@@ -1,0 +1,138 @@
+{
+  "page_num": 6,
+  "image_width": 2402,
+  "image_height": 3001,
+  "created_at": "2026-03-12T18:57:08.432222+00:00",
+  "blocks": [
+    {
+      "block_id": "20260312_293cc747-e839-4df7-b470-7633f0fa3e61_6_block_000",
+      "coordinates": {
+        "x1": 202.0,
+        "y1": 185.0,
+        "x2": 766.0,
+        "y2": 240.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.6540359854698181,
+      "reading_order": 1,
+      "text": "2.8 Chapter 2 Atomic Structure"
+    },
+    {
+      "block_id": "20260312_293cc747-e839-4df7-b470-7633f0fa3e61_6_block_001",
+      "coordinates": {
+        "x1": 230.0,
+        "y1": 290.0,
+        "x2": 1407.0,
+        "y2": 343.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.3612718880176544,
+      "reading_order": 2,
+      "text": "7. Match the statements of Column A with those of Column B."
+    },
+    {
+      "block_id": "20260312_293cc747-e839-4df7-b470-7633f0fa3e61_6_block_002",
+      "coordinates": {
+        "x1": 279.0,
+        "y1": 354.0,
+        "x2": 1659.0,
+        "y2": 959.0
+      },
+      "layout_tag": "table",
+      "confidence": 0.4130112826824188,
+      "reading_order": 3,
+      "text": "<table>\n<thead>\n<tr>\n<th>Column A</th>\n<th>Column B</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>(i) Presence of central nucleus</td>\n<td>(A) Thomson’s atomic model</td>\n</tr>\n<tr>\n<td>(ii) Presence of circular orbits</td>\n<td>(B) Dalton’s atomic theory</td>\n</tr>\n<tr>\n<td>(iii) Atoms can neither be created nor<br/>be destroyed</td>\n<td>(C) Planck’s quantum theory</td>\n</tr>\n<tr>\n<td>(iv) Negatively charged particles<br/>embedded in positively charged<br/>mass</td>\n<td>(D) Bohr’s atomic model</td>\n</tr>\n<tr>\n<td>(v) Quantization of energy</td>\n<td>(E) Rutherford’s atomic<br/>model</td>\n</tr>\n</tbody>\n</table>"
+    },
+    {
+      "block_id": "20260312_293cc747-e839-4df7-b470-7633f0fa3e61_6_block_003",
+      "coordinates": {
+        "x1": 291.0,
+        "y1": 978.0,
+        "x2": 1398.0,
+        "y2": 1226.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.28546249866485596,
+      "reading_order": 4,
+      "text": "(a) (i) $\\rightarrow$ (C); (ii) $\\rightarrow$ (A); (iii) $\\rightarrow$ (E); (iv) $\\rightarrow$ (B); (v) $\\rightarrow$ (D)\n(b) (i) $\\rightarrow$ (D); (ii) $\\rightarrow$ (E); (iii) $\\rightarrow$ (B); (iv) $\\rightarrow$ (A); (v) $\\rightarrow$ (D)\n(c) (i) $\\rightarrow$ (E); (ii) $\\rightarrow$ (D); (iii) $\\rightarrow$ (B); (iv) $\\rightarrow$ (A); (v) $\\rightarrow$ (C)\n(d) (i) $\\rightarrow$ (E); (ii) $\\rightarrow$ (A); (iii) $\\rightarrow$ (D); (iv) $\\rightarrow$ (B); (v) $\\rightarrow$ (C)"
+    },
+    {
+      "block_id": "20260312_293cc747-e839-4df7-b470-7633f0fa3e61_6_block_004",
+      "coordinates": {
+        "x1": 233.0,
+        "y1": 1247.0,
+        "x2": 1699.0,
+        "y2": 1489.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9201933741569519,
+      "reading_order": 5,
+      "text": "8. Atom of an element 'X' has 'N' shell as valence shell. The sum of electrons\nin K, L and N shells is equal to the number of electrons in 'M' shell. Find the\natomic number of X.\n\n(a) 20 (b) 18 (c) 36 (d) 38"
+    },
+    {
+      "block_id": "20260312_293cc747-e839-4df7-b470-7633f0fa3e61_6_block_005",
+      "coordinates": {
+        "x1": 233.0,
+        "y1": 1510.0,
+        "x2": 1697.0,
+        "y2": 1878.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9345202445983887,
+      "reading_order": 6,
+      "text": "9. The mass of protons is 36,740 times that of an electron. Identify the false\nstatement regarding the element.\n(a) The element can form a dipositive ion.\n(b) 'N' shell is the valence shell in the element.\n(c) The ion formed has 18 electrons in the outermost shell.\n(d) The atom of this element has 18 core electrons."
+    },
+    {
+      "block_id": "20260312_293cc747-e839-4df7-b470-7633f0fa3e61_6_block_006",
+      "coordinates": {
+        "x1": 215.0,
+        "y1": 1903.0,
+        "x2": 1694.0,
+        "y2": 2151.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9366862773895264,
+      "reading_order": 7,
+      "text": "10. The amount of energy required to remove an electron from a particular orbit\nof hydrogen atom is $x$ Joules. What is the amount of energy required to\nremove the electron from the same orbit of $\\mathrm{He}^+$ ion?\n(a) $2x$ J (b) $\\frac{x}{4}$ J (c) $4x$ J (d) $\\frac{x}{2}$ J"
+    },
+    {
+      "block_id": "20260312_293cc747-e839-4df7-b470-7633f0fa3e61_6_block_007",
+      "coordinates": {
+        "x1": 213.0,
+        "y1": 2159.0,
+        "x2": 1700.0,
+        "y2": 2458.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9389310479164124,
+      "reading_order": 8,
+      "text": "11. In Millikan’s oil drop experiment, the charges of three oil drops ‘A’, ‘B’ and\n‘C’ are 1.2 C, 2.8 C and 0.72 C, respectively. What would be the number of\nelectrons attached to these oil drops?\n\n(a) 3, 7, 9 (b) 15, 35, 9\n(c) 30, 70, 18 (d) 8, 16, 24"
+    },
+    {
+      "block_id": "20260312_293cc747-e839-4df7-b470-7633f0fa3e61_6_block_008",
+      "coordinates": {
+        "x1": 215.0,
+        "y1": 2481.0,
+        "x2": 1698.0,
+        "y2": 2719.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9454386830329895,
+      "reading_order": 9,
+      "text": "12. Oxygen exists in three isotopic forms with mass numbers 16, 17 and 18. The\npercentage abundances of these isotopes are 81%, 9% and 10%, respectively.\nCalculate the average atomic mass of the element.\n(a) 16.9 (b) 17.2 (c) 16.29 (d) 16.5"
+    },
+    {
+      "block_id": "20260312_293cc747-e839-4df7-b470-7633f0fa3e61_6_block_009",
+      "coordinates": {
+        "x1": 1793.0,
+        "y1": 312.0,
+        "x2": 2173.0,
+        "y2": 363.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.32094600796699524,
+      "reading_order": 10,
+      "text": "Space for rough work"
+    }
+  ]
+}

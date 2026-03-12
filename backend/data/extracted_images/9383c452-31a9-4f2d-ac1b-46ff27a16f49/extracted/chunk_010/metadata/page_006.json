@@ -1,0 +1,190 @@
+{
+  "page_num": 6,
+  "image_width": 2402,
+  "image_height": 3001,
+  "created_at": "2026-03-12T18:58:01.568243+00:00",
+  "blocks": [
+    {
+      "block_id": "20260312_9d7fdf96-f009-43a0-9d79-0a23a69f8af4_6_block_000",
+      "coordinates": {
+        "x1": 199.0,
+        "y1": 185.0,
+        "x2": 790.0,
+        "y2": 243.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.7750111818313599,
+      "reading_order": 1,
+      "text": "7.6 Chapter 7 Organic Chemistry"
+    },
+    {
+      "block_id": "20260312_9d7fdf96-f009-43a0-9d79-0a23a69f8af4_6_block_001",
+      "coordinates": {
+        "x1": 215.0,
+        "y1": 291.0,
+        "x2": 1697.0,
+        "y2": 538.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7671380043029785,
+      "reading_order": 2,
+      "text": "12. The ratio of the number of carbon atoms to hydrogen atoms is 1:1 in an\nalkyne 'X'. X on ozonolysis gives ______.\n(a) oxalic acid (b) glyoxal\n(c) formaldehyde (d) acetaldehyde"
+    },
+    {
+      "block_id": "20260312_9d7fdf96-f009-43a0-9d79-0a23a69f8af4_6_block_002",
+      "coordinates": {
+        "x1": 218.0,
+        "y1": 559.0,
+        "x2": 1699.0,
+        "y2": 919.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5089092254638672,
+      "reading_order": 3,
+      "text": "13. In which among the following reactions does the total number of bonds\nincreases by one?\n(a) Complete hydrogenation of ethyne\n(b) Hydrogenation of ethene\n(c) Chlorination of methyl chloride\n(d) Oxidation of ethene"
+    },
+    {
+      "block_id": "20260312_9d7fdf96-f009-43a0-9d79-0a23a69f8af4_6_block_003",
+      "coordinates": {
+        "x1": 215.0,
+        "y1": 950.0,
+        "x2": 1694.0,
+        "y2": 1057.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.49931466579437256,
+      "reading_order": 4,
+      "text": "14. Hydrocarbon 'X' requires 4 moles of chlorine gas for complete chlorination. Identify the true statement regarding X."
+    },
+    {
+      "block_id": "20260312_9d7fdf96-f009-43a0-9d79-0a23a69f8af4_6_block_004",
+      "coordinates": {
+        "x1": 291.0,
+        "y1": 1073.0,
+        "x2": 962.0,
+        "y2": 1134.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7330017685890198,
+      "reading_order": 5,
+      "text": "(a) On pyrolysis, it gives C and $\\mathrm{H}_2$."
+    },
+    {
+      "block_id": "20260312_9d7fdf96-f009-43a0-9d79-0a23a69f8af4_6_block_005",
+      "coordinates": {
+        "x1": 292.0,
+        "y1": 1137.0,
+        "x2": 1204.0,
+        "y2": 1193.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7502734065055847,
+      "reading_order": 6,
+      "text": "(b) On reaction with steam, it gives CO₂ and H₂."
+    },
+    {
+      "block_id": "20260312_9d7fdf96-f009-43a0-9d79-0a23a69f8af4_6_block_006",
+      "coordinates": {
+        "x1": 291.0,
+        "y1": 1199.0,
+        "x2": 1160.0,
+        "y2": 1256.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7446883320808411,
+      "reading_order": 7,
+      "text": "(c) It is obtained by hydrogenation of ethyne."
+    },
+    {
+      "block_id": "20260312_9d7fdf96-f009-43a0-9d79-0a23a69f8af4_6_block_007",
+      "coordinates": {
+        "x1": 292.0,
+        "y1": 1263.0,
+        "x2": 826.0,
+        "y2": 1318.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7696349620819092,
+      "reading_order": 8,
+      "text": "(d) Its vapour density is 16."
+    },
+    {
+      "block_id": "20260312_9d7fdf96-f009-43a0-9d79-0a23a69f8af4_6_block_008",
+      "coordinates": {
+        "x1": 215.0,
+        "y1": 1341.0,
+        "x2": 1699.0,
+        "y2": 1451.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.5604215860366821,
+      "reading_order": 9,
+      "text": "15. Alcohol 'X' and diethyl ether are functional isomers. Identify true statement regarding X."
+    },
+    {
+      "block_id": "20260312_9d7fdf96-f009-43a0-9d79-0a23a69f8af4_6_block_009",
+      "coordinates": {
+        "x1": 293.0,
+        "y1": 1466.0,
+        "x2": 866.0,
+        "y2": 1519.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8082720637321472,
+      "reading_order": 10,
+      "text": "(a) It has three chain isomers."
+    },
+    {
+      "block_id": "20260312_9d7fdf96-f009-43a0-9d79-0a23a69f8af4_6_block_010",
+      "coordinates": {
+        "x1": 293.0,
+        "y1": 1529.0,
+        "x2": 893.0,
+        "y2": 1583.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8130011558532715,
+      "reading_order": 11,
+      "text": "(b) It has two position isomers."
+    },
+    {
+      "block_id": "20260312_9d7fdf96-f009-43a0-9d79-0a23a69f8af4_6_block_011",
+      "coordinates": {
+        "x1": 291.0,
+        "y1": 1591.0,
+        "x2": 1265.0,
+        "y2": 1647.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8324061632156372,
+      "reading_order": 12,
+      "text": "(c) It is the third member of the homologous series."
+    },
+    {
+      "block_id": "20260312_9d7fdf96-f009-43a0-9d79-0a23a69f8af4_6_block_012",
+      "coordinates": {
+        "x1": 293.0,
+        "y1": 1654.0,
+        "x2": 769.0,
+        "y2": 1710.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8107885718345642,
+      "reading_order": 13,
+      "text": "(d) Its root word is pent."
+    },
+    {
+      "block_id": "20260312_9d7fdf96-f009-43a0-9d79-0a23a69f8af4_6_block_013",
+      "coordinates": {
+        "x1": 1792.0,
+        "y1": 313.0,
+        "x2": 2173.0,
+        "y2": 363.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.39546021819114685,
+      "reading_order": 14,
+      "text": "Space for rough work"
+    }
+  ]
+}

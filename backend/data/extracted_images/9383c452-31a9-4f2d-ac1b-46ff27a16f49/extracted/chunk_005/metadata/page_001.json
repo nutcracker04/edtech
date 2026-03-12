@@ -1,0 +1,177 @@
+{
+  "page_num": 1,
+  "image_width": 2402,
+  "image_height": 3001,
+  "created_at": "2026-03-12T18:57:15.074707+00:00",
+  "blocks": [
+    {
+      "block_id": "20260312_38d2b3f5-c887-46b1-a04d-d6a1c5125108_1_block_000",
+      "coordinates": {
+        "x1": 1461.0,
+        "y1": 383.0,
+        "x2": 1613.0,
+        "y2": 610.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.4189261496067047,
+      "reading_order": 1,
+      "text": "3"
+    },
+    {
+      "block_id": "20260312_38d2b3f5-c887-46b1-a04d-d6a1c5125108_1_block_001",
+      "coordinates": {
+        "x1": 265.0,
+        "y1": 370.0,
+        "x2": 1317.0,
+        "y2": 608.0
+      },
+      "layout_tag": "headline",
+      "confidence": 0.9405099749565125,
+      "reading_order": 2,
+      "text": "Periodic Classification\nof Elements"
+    },
+    {
+      "block_id": "20260312_38d2b3f5-c887-46b1-a04d-d6a1c5125108_1_block_002",
+      "coordinates": {
+        "x1": 1685.0,
+        "y1": 302.0,
+        "x2": 2211.0,
+        "y2": 655.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.6503893733024597,
+      "reading_order": 3,
+      "text": "This image contains no readable text."
+    },
+    {
+      "block_id": "20260312_38d2b3f5-c887-46b1-a04d-d6a1c5125108_1_block_003",
+      "coordinates": {
+        "x1": 181.0,
+        "y1": 709.0,
+        "x2": 2219.0,
+        "y2": 815.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6074923872947693,
+      "reading_order": 4,
+      "text": "Reference: Coursebook - IIT Foundation Chemistry Class 9; Chapter - Periodic Classification of Elements; Page\nnumber - 3.1–3.13"
+    },
+    {
+      "block_id": "20260312_38d2b3f5-c887-46b1-a04d-d6a1c5125108_1_block_004",
+      "coordinates": {
+        "x1": 184.0,
+        "y1": 848.0,
+        "x2": 870.0,
+        "y2": 929.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.8406851887702942,
+      "reading_order": 5,
+      "text": "Assessment Test I"
+    },
+    {
+      "block_id": "20260312_38d2b3f5-c887-46b1-a04d-d6a1c5125108_1_block_005",
+      "coordinates": {
+        "x1": 1450.0,
+        "y1": 877.0,
+        "x2": 1695.0,
+        "y2": 929.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7890169620513916,
+      "reading_order": 6,
+      "text": "Time: 30 min."
+    },
+    {
+      "block_id": "20260312_38d2b3f5-c887-46b1-a04d-d6a1c5125108_1_block_006",
+      "coordinates": {
+        "x1": 181.0,
+        "y1": 1004.0,
+        "x2": 1692.0,
+        "y2": 1058.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.8005585670471191,
+      "reading_order": 7,
+      "text": "Directions for questions from 1 to 15: Select the correct answer from the given options."
+    },
+    {
+      "block_id": "20260312_38d2b3f5-c887-46b1-a04d-d6a1c5125108_1_block_007",
+      "coordinates": {
+        "x1": 231.0,
+        "y1": 1100.0,
+        "x2": 1630.0,
+        "y2": 1456.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.36534228920936584,
+      "reading_order": 8,
+      "text": "1. The electronic configuration of element 'X' is 2, 8 and 7. Identify the t\nstatement regarding X.\n(a) It belongs to VII-A group and it is a typical element.\n(b) It is a halogen and it is a bridge element.\n(c) It belongs to the fourth period and VI-A group.\n(d) It is a chalcogen and it belongs to the third period."
+    },
+    {
+      "block_id": "20260312_38d2b3f5-c887-46b1-a04d-d6a1c5125108_1_block_008",
+      "coordinates": {
+        "x1": 233.0,
+        "y1": 1480.0,
+        "x2": 1613.0,
+        "y2": 1607.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8962966799736023,
+      "reading_order": 9,
+      "text": "2. Identify the best oxidizing agent among the following.\n(a) K (b) O (c) F (d) N"
+    },
+    {
+      "block_id": "20260312_38d2b3f5-c887-46b1-a04d-d6a1c5125108_1_block_009",
+      "coordinates": {
+        "x1": 233.0,
+        "y1": 1628.0,
+        "x2": 1544.0,
+        "y2": 1818.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9351362586021423,
+      "reading_order": 10,
+      "text": "3. Identify the set of three elements which can obey the Law of triads.\n(a) Na, K, Rb (b) Be, Mg, Ca\n(c) F, Cl, Br (d) C, Si, Ge"
+    },
+    {
+      "block_id": "20260312_38d2b3f5-c887-46b1-a04d-d6a1c5125108_1_block_010",
+      "coordinates": {
+        "x1": 231.0,
+        "y1": 1842.0,
+        "x2": 1508.0,
+        "y2": 2406.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.933790922164917,
+      "reading_order": 11,
+      "text": "4. Arrange the elements mentioned below in the order of maximum\n(A) Metallic character (B) Electronegativity\n(C) Ionization energy (D) Electron affinity\n(i) A belongs to the first period and the 18th group.\n(ii) B belongs to the sixth period and the first group.\n(iii) C belongs to the third period and the 17th group.\n(iv) D belongs to the second period and 17th group.\n(a) BDAC (b) BDCA\n(c) DBAC (d) DBCA"
+    },
+    {
+      "block_id": "20260312_38d2b3f5-c887-46b1-a04d-d6a1c5125108_1_block_011",
+      "coordinates": {
+        "x1": 234.0,
+        "y1": 2428.0,
+        "x2": 1698.0,
+        "y2": 2721.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9452013373374939,
+      "reading_order": 12,
+      "text": "5. 'A', 'B', 'C' and 'D' are four elements belonging to the third period. A and B\ncan form monovalent and divalent cations, respectively. C and D can form\nmonovalent and divalent anions, respectively. Arrange the corresponding\nelements in the increasing order of sizes of the respective ions.\n(a) BADC (b) ABCD (c) CDBA (d) ABDC"
+    },
+    {
+      "block_id": "20260312_38d2b3f5-c887-46b1-a04d-d6a1c5125108_1_block_012",
+      "coordinates": {
+        "x1": 1792.0,
+        "y1": 1041.0,
+        "x2": 2170.0,
+        "y2": 1095.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7111177444458008,
+      "reading_order": 13,
+      "text": "Space for rough work"
+    }
+  ]
+}

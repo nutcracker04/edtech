@@ -1,0 +1,151 @@
+{
+  "page_num": 7,
+  "image_width": 2402,
+  "image_height": 3001,
+  "created_at": "2026-03-12T18:57:21.586031+00:00",
+  "blocks": [
+    {
+      "block_id": "20260312_cdf0d880-a229-431d-b739-af0eb2618f8d_7_block_000",
+      "coordinates": {
+        "x1": 1763.0,
+        "y1": 186.0,
+        "x2": 2055.0,
+        "y2": 239.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.8640663027763367,
+      "reading_order": 1,
+      "text": "Assessment Test II"
+    },
+    {
+      "block_id": "20260312_cdf0d880-a229-431d-b739-af0eb2618f8d_7_block_001",
+      "coordinates": {
+        "x1": 2107.0,
+        "y1": 186.0,
+        "x2": 2196.0,
+        "y2": 235.0
+      },
+      "layout_tag": "page-number",
+      "confidence": 0.7863214015960693,
+      "reading_order": 2,
+      "text": "4.5"
+    },
+    {
+      "block_id": "20260312_cdf0d880-a229-431d-b739-af0eb2618f8d_7_block_002",
+      "coordinates": {
+        "x1": 230.0,
+        "y1": 289.0,
+        "x2": 1604.0,
+        "y2": 479.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.490632563829422,
+      "reading_order": 3,
+      "text": "8. Which of the following is not a redox reaction?\n(a) $\\mathrm{CaO} + \\mathrm{H}_2\\mathrm{O} \\rightarrow \\mathrm{Ca}(\\mathrm{OH})_2$ (b) $\\mathrm{Ca} + \\mathrm{H}_2\\mathrm{O} \\rightarrow \\mathrm{Ca}(\\mathrm{OH})_2 + \\mathrm{H}_2$\n(c) $\\mathrm{Ca} + \\mathrm{HCl} \\rightarrow \\mathrm{CaCl}_2 + \\mathrm{H}_2$ (d) $\\mathrm{Ca}(\\mathrm{NO}_3)_2 \\rightarrow \\mathrm{CaO} + \\mathrm{NO}_2 + \\mathrm{O}_2$"
+    },
+    {
+      "block_id": "20260312_cdf0d880-a229-431d-b739-af0eb2618f8d_7_block_003",
+      "coordinates": {
+        "x1": 231.0,
+        "y1": 522.0,
+        "x2": 1526.0,
+        "y2": 711.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8413344025611877,
+      "reading_order": 4,
+      "text": "9. Identify the bonds present in HClO.\n(a) Polar covalent bond (b) Nonpolar covalent bond\n(c) Dative bond (d) Both (a) and (c)"
+    },
+    {
+      "block_id": "20260312_cdf0d880-a229-431d-b739-af0eb2618f8d_7_block_004",
+      "coordinates": {
+        "x1": 213.0,
+        "y1": 754.0,
+        "x2": 1701.0,
+        "y2": 944.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8997366428375244,
+      "reading_order": 5,
+      "text": "10. Arrange the following in the decreasing order of the strength of ionic bond.\n(A) CsCl (B) BaO (C) SrO (D) $\\text{Cs}_2\\text{O}$\n(a) CBDA (b) ADBC (c) BCDA (d) CDAB"
+    },
+    {
+      "block_id": "20260312_cdf0d880-a229-431d-b739-af0eb2618f8d_7_block_005",
+      "coordinates": {
+        "x1": 216.0,
+        "y1": 990.0,
+        "x2": 1700.0,
+        "y2": 1231.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8970286250114441,
+      "reading_order": 6,
+      "text": "11. Arrange the following in the descending order of the number of covalent\nbonds present in them.\n(A) $\\mathrm{C}_2\\mathrm{H}_2$ (B) $\\mathrm{CHCl}_3$ (C) $\\mathrm{NH}_3$ (D) $\\mathrm{Cl}_2$\n(a) BADC (b) CDBA (c) ABCD (d) DCBA"
+    },
+    {
+      "block_id": "20260312_cdf0d880-a229-431d-b739-af0eb2618f8d_7_block_006",
+      "coordinates": {
+        "x1": 219.0,
+        "y1": 1286.0,
+        "x2": 1695.0,
+        "y2": 1693.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.366897314786911,
+      "reading_order": 7,
+      "text": "12. Assertion (A): Sodium can be cut with a knife.\nReason (R): The bigger the size of the metal kernel, the stronger is the\nmetallic bond.\n(a) Both A and R are true and R is the correct explanation of A.\n(b) Both A and R are true, but R is not the correct explanation of A.\n(c) A is true and R is false.\n(d) A is false and R is true."
+    },
+    {
+      "block_id": "20260312_cdf0d880-a229-431d-b739-af0eb2618f8d_7_block_007",
+      "coordinates": {
+        "x1": 212.0,
+        "y1": 1749.0,
+        "x2": 1699.0,
+        "y2": 2165.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.31991150975227356,
+      "reading_order": 8,
+      "text": "13. Assertion (A): Non-metals are generally good oxidizing agents.\nReason (R): Electron affinity decreases with increase in non-metallic char-\nacter of the elements.\n(a) Both A and R are true and R is the correct explanation of A.\n(b) Both A and R are true, but R is not the correct explanation of A.\n(c) A is true and R is false.\n(d) A is false and R is true."
+    },
+    {
+      "block_id": "20260312_cdf0d880-a229-431d-b739-af0eb2618f8d_7_block_008",
+      "coordinates": {
+        "x1": 216.0,
+        "y1": 2211.0,
+        "x2": 1379.0,
+        "y2": 2262.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.41860249638557434,
+      "reading_order": 9,
+      "text": "14. Match the statements of Column A with those of Column B."
+    },
+    {
+      "block_id": "20260312_cdf0d880-a229-431d-b739-af0eb2618f8d_7_block_009",
+      "coordinates": {
+        "x1": 226.0,
+        "y1": 2265.0,
+        "x2": 1659.0,
+        "y2": 2826.0
+      },
+      "layout_tag": "table",
+      "confidence": 0.9050648212432861,
+      "reading_order": 10,
+      "text": "<table>\n<thead>\n<tr>\n<th>Column A<br/>(Description of Atoms Forming the<br/>Molecule)</th>\n<th>Column B<br/>(Forces of Attraction<br/>among the Molecules)</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>(i) A has 7 protons and B has 1 proton.</td>\n<td>(A) Interionic attraction</td>\n</tr>\n<tr>\n<td>(ii) Both the atoms have identical elec-<br/>tronic configuration.</td>\n<td>(B) Dipole-dipole<br/>interaction</td>\n</tr>\n<tr>\n<td>(iii) A has 20 protons and B has 8 protons.</td>\n<td>(C) H – bonding</td>\n</tr>\n<tr>\n<td>(iv) A has 1 proton and B has 16 protons.</td>\n<td>(D) Van der Waals’ forces<br/>of attraction</td>\n</tr>\n</tbody>\n</table>"
+    },
+    {
+      "block_id": "20260312_cdf0d880-a229-431d-b739-af0eb2618f8d_7_block_010",
+      "coordinates": {
+        "x1": 1791.0,
+        "y1": 311.0,
+        "x2": 2176.0,
+        "y2": 365.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7041650414466858,
+      "reading_order": 11,
+      "text": "Space for rough work"
+    }
+  ]
+}

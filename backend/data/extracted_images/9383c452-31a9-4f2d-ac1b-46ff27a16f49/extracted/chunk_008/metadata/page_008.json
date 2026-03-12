@@ -1,0 +1,203 @@
+{
+  "page_num": 8,
+  "image_width": 2402,
+  "image_height": 3001,
+  "created_at": "2026-03-12T18:57:36.122179+00:00",
+  "blocks": [
+    {
+      "block_id": "20260312_01685bfa-ccb1-4784-a0a3-3a5c2903e07f_8_block_000",
+      "coordinates": {
+        "x1": 201.0,
+        "y1": 184.0,
+        "x2": 1508.0,
+        "y2": 243.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.8057829141616821,
+      "reading_order": 1,
+      "text": "6.2 Chapter 6 Water, Solutions, Solubility and Hydrogen; Metals and Non-metals"
+    },
+    {
+      "block_id": "20260312_01685bfa-ccb1-4784-a0a3-3a5c2903e07f_8_block_001",
+      "coordinates": {
+        "x1": 232.0,
+        "y1": 290.0,
+        "x2": 1407.0,
+        "y2": 344.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.44638073444366455,
+      "reading_order": 2,
+      "text": "5. Match the statements of Column A with those of Column B."
+    },
+    {
+      "block_id": "20260312_01685bfa-ccb1-4784-a0a3-3a5c2903e07f_8_block_002",
+      "coordinates": {
+        "x1": 302.0,
+        "y1": 369.0,
+        "x2": 1559.0,
+        "y2": 904.0
+      },
+      "layout_tag": "table",
+      "confidence": 0.9088901281356812,
+      "reading_order": 3,
+      "text": "<table>\n<thead>\n<tr>\n<th>Column A<br/>(Substances)</th>\n<th>Column B<br/>(Uses)</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>(i) Wood charcoal</td>\n<td>(A) Black shoe polishes</td>\n</tr>\n<tr>\n<td>(ii) Activated charcoal</td>\n<td>(B) Extraction of metal</td>\n</tr>\n<tr>\n<td>(iii) Lamp black</td>\n<td>(C) Gas masks</td>\n</tr>\n<tr>\n<td>(iv) Coke</td>\n<td>(D) Removal of colour from sugar cane<br/>juice</td>\n</tr>\n<tr>\n<td>(v) Animal charcoal</td>\n<td>(E) Adsorbent material</td>\n</tr>\n</tbody>\n</table>"
+    },
+    {
+      "block_id": "20260312_01685bfa-ccb1-4784-a0a3-3a5c2903e07f_8_block_003",
+      "coordinates": {
+        "x1": 290.0,
+        "y1": 960.0,
+        "x2": 1463.0,
+        "y2": 1018.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.37567391991615295,
+      "reading_order": 4,
+      "text": "(a) (i) $\\rightarrow$ (C); (ii) $\\rightarrow$ (E); (iii) $\\rightarrow$ (A); (iv) $\\rightarrow$ (B); (v) $\\rightarrow$ (D)"
+    },
+    {
+      "block_id": "20260312_01685bfa-ccb1-4784-a0a3-3a5c2903e07f_8_block_004",
+      "coordinates": {
+        "x1": 291.0,
+        "y1": 1022.0,
+        "x2": 1463.0,
+        "y2": 1082.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.37288132309913635,
+      "reading_order": 5,
+      "text": "(b) (i) $\\rightarrow$ (C); (ii) $\\rightarrow$ (A); (iii) $\\rightarrow$ (E); (iv) $\\rightarrow$ (B); (v) $\\rightarrow$ (D)"
+    },
+    {
+      "block_id": "20260312_01685bfa-ccb1-4784-a0a3-3a5c2903e07f_8_block_005",
+      "coordinates": {
+        "x1": 291.0,
+        "y1": 1085.0,
+        "x2": 1463.0,
+        "y2": 1145.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.38850706815719604,
+      "reading_order": 6,
+      "text": "(c) (i) $\\rightarrow$ (C); (ii) $\\rightarrow$ (A); (iii) $\\rightarrow$ (B); (iv) $\\rightarrow$ (E); (v) $\\rightarrow$ (D)"
+    },
+    {
+      "block_id": "20260312_01685bfa-ccb1-4784-a0a3-3a5c2903e07f_8_block_006",
+      "coordinates": {
+        "x1": 292.0,
+        "y1": 1148.0,
+        "x2": 1468.0,
+        "y2": 1207.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.33080777525901794,
+      "reading_order": 7,
+      "text": "(d) (i) $\\rightarrow$ (B); (ii) $\\rightarrow$ (E); (iii) $\\rightarrow$ (C); (iv) $\\rightarrow$ (A); (v) $\\rightarrow$ (D)"
+    },
+    {
+      "block_id": "20260312_01685bfa-ccb1-4784-a0a3-3a5c2903e07f_8_block_007",
+      "coordinates": {
+        "x1": 234.0,
+        "y1": 1228.0,
+        "x2": 1700.0,
+        "y2": 1474.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7837205529212952,
+      "reading_order": 8,
+      "text": "6. Which of the following methods of concentration is inappropriate for an\noxide ore?\n(a) Magnetic separation (b) Gravity separation\n(c) Froth floatation (d) Chemical separation"
+    },
+    {
+      "block_id": "20260312_01685bfa-ccb1-4784-a0a3-3a5c2903e07f_8_block_008",
+      "coordinates": {
+        "x1": 231.0,
+        "y1": 1494.0,
+        "x2": 1535.0,
+        "y2": 1552.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.4639934003353119,
+      "reading_order": 9,
+      "text": "7. Identify the substance present in region 'A' in the following figure."
+    },
+    {
+      "block_id": "20260312_01685bfa-ccb1-4784-a0a3-3a5c2903e07f_8_block_009",
+      "coordinates": {
+        "x1": 533.0,
+        "y1": 1584.0,
+        "x2": 1343.0,
+        "y2": 2586.0
+      },
+      "layout_tag": "image",
+      "confidence": 0.9314990043640137,
+      "reading_order": 10,
+      "text": "The image is a technical schematic diagram labeled \"Blast furnace\" at the bottom. It illustrates the internal components and airflow dynamics of a blast furnace. The main structure is a tall, inverted trapezoidal chamber with a conical top. The interior is filled with a stippled pattern representing molten material or slag. At the top, there is a feed system consisting of a hopper with a dotted pattern and a conical chute, which directs material into the top of the furnace. The sides of the furnace feature diagonal hatching, indicating thick refractory lining. At the base, a horizontal pipe runs across the furnace width, with arrows indicating a counter-current flow of gas (indicated by a right-pointing arrow) and liquid (indicated by a left-pointing arrow). A rectangular hearth labeled \"A\" sits at the bottom center. At the top corners, there are circular symbols with arrows, likely representing air inlets or blowers. The diagram is a cross-sectional view and does not contain numerical data, axes, or a legend."
+    },
+    {
+      "block_id": "20260312_01685bfa-ccb1-4784-a0a3-3a5c2903e07f_8_block_010",
+      "coordinates": {
+        "x1": 293.0,
+        "y1": 2624.0,
+        "x2": 605.0,
+        "y2": 2747.0
+      },
+      "layout_tag": "image-caption",
+      "confidence": 0.47617051005363464,
+      "reading_order": 11,
+      "text": "(a) Molten slag\n(c) Coke"
+    },
+    {
+      "block_id": "20260312_01685bfa-ccb1-4784-a0a3-3a5c2903e07f_8_block_011",
+      "coordinates": {
+        "x1": 861.0,
+        "y1": 2564.0,
+        "x2": 1075.0,
+        "y2": 2608.0
+      },
+      "layout_tag": "footnote",
+      "confidence": 0.39973485469818115,
+      "reading_order": 12,
+      "text": "Blast furnace"
+    },
+    {
+      "block_id": "20260312_01685bfa-ccb1-4784-a0a3-3a5c2903e07f_8_block_012",
+      "coordinates": {
+        "x1": 973.0,
+        "y1": 2629.0,
+        "x2": 1286.0,
+        "y2": 2682.0
+      },
+      "layout_tag": "image-caption",
+      "confidence": 0.6194565892219543,
+      "reading_order": 13,
+      "text": "(b) Molten iron"
+    },
+    {
+      "block_id": "20260312_01685bfa-ccb1-4784-a0a3-3a5c2903e07f_8_block_013",
+      "coordinates": {
+        "x1": 976.0,
+        "y1": 2691.0,
+        "x2": 1177.0,
+        "y2": 2751.0
+      },
+      "layout_tag": "image-caption",
+      "confidence": 0.673209547996521,
+      "reading_order": 14,
+      "text": "(d) $\\mathrm{Fe}_2\\mathrm{O}_3$"
+    },
+    {
+      "block_id": "20260312_01685bfa-ccb1-4784-a0a3-3a5c2903e07f_8_block_014",
+      "coordinates": {
+        "x1": 1794.0,
+        "y1": 312.0,
+        "x2": 2172.0,
+        "y2": 364.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.37015655636787415,
+      "reading_order": 15,
+      "text": "Space for rough work"
+    }
+  ]
+}

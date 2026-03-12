@@ -1,0 +1,255 @@
+{
+  "page_num": 2,
+  "image_width": 2402,
+  "image_height": 3001,
+  "created_at": "2026-03-12T18:58:15.191181+00:00",
+  "blocks": [
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_2_block_000",
+      "coordinates": {
+        "x1": 182.0,
+        "y1": 184.0,
+        "x2": 1024.0,
+        "y2": 240.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.8820238709449768,
+      "reading_order": 1,
+      "text": "A.10 Chapter 3 Periodic Classification of Elements"
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_2_block_001",
+      "coordinates": {
+        "x1": 991.0,
+        "y1": 306.0,
+        "x2": 1363.0,
+        "y2": 369.0
+      },
+      "layout_tag": "headline",
+      "confidence": 0.7729838490486145,
+      "reading_order": 2,
+      "text": "CHAPTER 3"
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_2_block_002",
+      "coordinates": {
+        "x1": 815.0,
+        "y1": 399.0,
+        "x2": 1542.0,
+        "y2": 468.0
+      },
+      "layout_tag": "headline",
+      "confidence": 0.7831688523292542,
+      "reading_order": 3,
+      "text": "Periodic Classification of"
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_2_block_003",
+      "coordinates": {
+        "x1": 1040.0,
+        "y1": 495.0,
+        "x2": 1315.0,
+        "y2": 559.0
+      },
+      "layout_tag": "headline",
+      "confidence": 0.6818906664848328,
+      "reading_order": 4,
+      "text": "Elements"
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_2_block_004",
+      "coordinates": {
+        "x1": 195.0,
+        "y1": 600.0,
+        "x2": 605.0,
+        "y2": 651.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.8268327713012695,
+      "reading_order": 5,
+      "text": "Assessment Test I"
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_2_block_005",
+      "coordinates": {
+        "x1": 237.0,
+        "y1": 692.0,
+        "x2": 1172.0,
+        "y2": 920.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9244340658187866,
+      "reading_order": 6,
+      "text": "1. Element X belongs to VII-A group and third\nperiod. Third period elements are called typi-\ncal elements.\nHence, the correct option is (a)."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_2_block_006",
+      "coordinates": {
+        "x1": 234.0,
+        "y1": 936.0,
+        "x2": 1173.0,
+        "y2": 1167.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9288792014122009,
+      "reading_order": 7,
+      "text": "2. Oxidizing property is directly proportional to\nelectro negativity and electron affinity. There-\nfore, fluorine is a good oxidizing agent.\nHence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_2_block_007",
+      "coordinates": {
+        "x1": 235.0,
+        "y1": 1186.0,
+        "x2": 1173.0,
+        "y2": 1416.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9286046624183655,
+      "reading_order": 8,
+      "text": "3. According to the law of triads, the average of\natomic weights of Be and Ca is equal to the\natomic weight of Mg.\n\nHence, the correct option is (b)."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_2_block_008",
+      "coordinates": {
+        "x1": 234.0,
+        "y1": 1433.0,
+        "x2": 957.0,
+        "y2": 1810.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9372850060462952,
+      "reading_order": 9,
+      "text": "4. A → He, B → Cs, C → Cl, D → F\nMaximum metallic character is Cs.\nMaximum electronegativity is F.\nMaximum electron affinity is Cl.\nMaximum ionization energy is He.\nHence, the correct option is (a)."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_2_block_009",
+      "coordinates": {
+        "x1": 235.0,
+        "y1": 1821.0,
+        "x2": 1169.0,
+        "y2": 2205.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9452634453773499,
+      "reading_order": 10,
+      "text": "5. $\\mathrm{A} \\rightarrow \\text{I-A}$ group and cation formed is $\\mathrm{A}^{+1}$ ($\\mathrm{Na}^{+1}$).\n$\\mathrm{B} \\rightarrow \\text{II-A}$ group and cation formed is $\\mathrm{B}^{+2}$ ($\\mathrm{Mg}^{+2}$).\n$\\mathrm{C} \\rightarrow \\text{VII-A}$ group and anion formed is $\\mathrm{C}^{-1}$ ($\\overline{\\mathrm{Cl}}$).\n$\\mathrm{D} \\rightarrow \\text{VI-A}$ group and anion formed is $\\mathrm{D}^{-2}$ ($\\mathrm{S}^{-2}$).\n$\\therefore$ Increasing order of sizes is CDBA.\nHence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_2_block_010",
+      "coordinates": {
+        "x1": 236.0,
+        "y1": 2227.0,
+        "x2": 1016.0,
+        "y2": 2543.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9363054633140564,
+      "reading_order": 11,
+      "text": "6. Caesium belongs to very long period.\nXeon belongs to second long period.\nPotassium belongs to long period.\nRadium belongs to incomplete period.\nHence, the correct option is (b)."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_2_block_011",
+      "coordinates": {
+        "x1": 235.0,
+        "y1": 2566.0,
+        "x2": 1173.0,
+        "y2": 2901.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9494184851646423,
+      "reading_order": 12,
+      "text": "7. Across the period, ionization energy increases\ndue to decrease in atomic size. Due to stable\nvalence electronic configuration of II-A group\nelements, they possess higher I.P values than\ncorresponding III-A group elements.\nHence, the correct option is (b)."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_2_block_012",
+      "coordinates": {
+        "x1": 1285.0,
+        "y1": 694.0,
+        "x2": 2220.0,
+        "y2": 980.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9437713623046875,
+      "reading_order": 13,
+      "text": "8. Across the period, electron affinity increases\ndue to decrease in atomic size. The 18th group\nelements possess zero electron affinity values\ndue to stable octet configuration.\nHence, the correct option is (a)."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_2_block_013",
+      "coordinates": {
+        "x1": 1285.0,
+        "y1": 997.0,
+        "x2": 2221.0,
+        "y2": 1231.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9279345273971558,
+      "reading_order": 14,
+      "text": "9. Drastic increase in the second and fourth I.P\nvalues indicates the two elements A and B\nbelong to I-A and III-A groups, respectively.\nHence, the correct option is (a)."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_2_block_014",
+      "coordinates": {
+        "x1": 1265.0,
+        "y1": 1249.0,
+        "x2": 2220.0,
+        "y2": 1488.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.930110514163971,
+      "reading_order": 15,
+      "text": "10. Electronic configuration of element belongs to\nthe third period and IV-A group is 2, 8, and 4.\n$\\therefore$ Difference in electrons = $8 - 4 = 4$\nHence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_2_block_015",
+      "coordinates": {
+        "x1": 1264.0,
+        "y1": 1508.0,
+        "x2": 2221.0,
+        "y2": 2007.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9414105415344238,
+      "reading_order": 16,
+      "text": "11. $\\mathrm{A} \\rightarrow 2, 8, 8, 1 \\Rightarrow$ 4th period and I-A group\n$\\mathrm{B} \\rightarrow 2, 8, 6 \\Rightarrow$ 3rd period VI-A group\n$\\mathrm{C} \\rightarrow 2, 8, 1 \\Rightarrow$ 3rd period I-A group\n$\\mathrm{D} \\rightarrow 2, 5 \\Rightarrow$ 2nd period and V-A group\n$\\mathrm{E} \\rightarrow 2, 8, 18, 8, 2 \\Rightarrow$ 5th period II-A group\nThe correct order of atomic sizes is $\\mathrm{E} > \\mathrm{A} > \\mathrm{C}$\n$> \\mathrm{B} > \\mathrm{D}$.\nHence, the correct option is (b)."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_2_block_016",
+      "coordinates": {
+        "x1": 1265.0,
+        "y1": 2032.0,
+        "x2": 2218.0,
+        "y2": 2210.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8968483209609985,
+      "reading_order": 17,
+      "text": "12. Element A is Ba and B is Rb. I.P of Ba is less\nthan that of Rb.\n\nHence, the correct option is (d)."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_2_block_017",
+      "coordinates": {
+        "x1": 1266.0,
+        "y1": 2236.0,
+        "x2": 2220.0,
+        "y2": 2522.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.928652286529541,
+      "reading_order": 18,
+      "text": "13. In case of iso electronic species, with increase\nin charge of anion, effective nuclear charge\ndecreases and hence, ionic size increases. In\ncase of cations it is exactly reverse.\nHence, the correct option is (d)."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_2_block_018",
+      "coordinates": {
+        "x1": 1261.0,
+        "y1": 2552.0,
+        "x2": 2224.0,
+        "y2": 2895.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9431617856025696,
+      "reading_order": 19,
+      "text": "14. $\\mathrm{A} \\rightarrow \\mathrm{Al}$ and belongs to III-A group and 3rd\nperiod.\n$\\mathrm{B} \\rightarrow \\mathrm{Ge}$ and belongs to IV-A group and 4th\nperiod.\n$\\mathrm{C} \\rightarrow \\mathrm{Si}$ and belongs to IV-A group and 3rd\nperiod."
+    }
+  ]
+}

@@ -1,0 +1,164 @@
+{
+  "page_num": 6,
+  "image_width": 2402,
+  "image_height": 3001,
+  "created_at": "2026-03-12T18:57:43.008179+00:00",
+  "blocks": [
+    {
+      "block_id": "20260312_619a7db2-27e4-4572-9311-63029574bf01_6_block_000",
+      "coordinates": {
+        "x1": 185.0,
+        "y1": 184.0,
+        "x2": 1508.0,
+        "y2": 242.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.7644805312156677,
+      "reading_order": 1,
+      "text": "6.10 Chapter 6 Water, Solutions, Solubility and Hydrogen; Metals and Non-metals"
+    },
+    {
+      "block_id": "20260312_619a7db2-27e4-4572-9311-63029574bf01_6_block_001",
+      "coordinates": {
+        "x1": 235.0,
+        "y1": 291.0,
+        "x2": 1695.0,
+        "y2": 473.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9189469218254089,
+      "reading_order": 2,
+      "text": "6. 180 g of 30% (w/w) NaOH is prepared. Calculate the volume of water uti-\nlised if the density of water is 0.9 g/cc.\n(a) 130 mL (b) 140 mL (c) 125 mL (d) 135 mL"
+    },
+    {
+      "block_id": "20260312_619a7db2-27e4-4572-9311-63029574bf01_6_block_002",
+      "coordinates": {
+        "x1": 236.0,
+        "y1": 496.0,
+        "x2": 1701.0,
+        "y2": 659.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9185121655464172,
+      "reading_order": 3,
+      "text": "7. The amounts of solutes 'A', 'B' and 'C' in 300 g of water at 25°C, 40°C and\n60°C in their saturated solutions are given below. Identify the true statement\namong the following:"
+    },
+    {
+      "block_id": "20260312_619a7db2-27e4-4572-9311-63029574bf01_6_block_003",
+      "coordinates": {
+        "x1": 309.0,
+        "y1": 679.0,
+        "x2": 835.0,
+        "y2": 942.0
+      },
+      "layout_tag": "table",
+      "confidence": 0.9354700446128845,
+      "reading_order": 4,
+      "text": "<table>\n<thead>\n<tr>\n<th></th>\n<th>25°C</th>\n<th>40°C</th>\n<th>60°C</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>A</td>\n<td>110 g</td>\n<td>90 g</td>\n<td>105 g</td>\n</tr>\n<tr>\n<td>B</td>\n<td>140 g</td>\n<td>170 g</td>\n<td>180 g</td>\n</tr>\n<tr>\n<td>C</td>\n<td>130 g</td>\n<td>150 g</td>\n<td>140 g</td>\n</tr>\n</tbody>\n</table>"
+    },
+    {
+      "block_id": "20260312_619a7db2-27e4-4572-9311-63029574bf01_6_block_004",
+      "coordinates": {
+        "x1": 292.0,
+        "y1": 997.0,
+        "x2": 1693.0,
+        "y2": 1099.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9043376445770264,
+      "reading_order": 5,
+      "text": "(a) A, B and C form precipitates on cooling their respective saturated solu-\ntions at 60°C – 40°C."
+    },
+    {
+      "block_id": "20260312_619a7db2-27e4-4572-9311-63029574bf01_6_block_005",
+      "coordinates": {
+        "x1": 295.0,
+        "y1": 1114.0,
+        "x2": 1696.0,
+        "y2": 1216.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9114370942115784,
+      "reading_order": 6,
+      "text": "(b) A and B form precipitates on cooling their respective saturated solutions from 40°C – 25°C."
+    },
+    {
+      "block_id": "20260312_619a7db2-27e4-4572-9311-63029574bf01_6_block_006",
+      "coordinates": {
+        "x1": 295.0,
+        "y1": 1230.0,
+        "x2": 1695.0,
+        "y2": 1332.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8981648087501526,
+      "reading_order": 7,
+      "text": "(c) B and C form precipitates on cooling their respective saturated solutions\nfrom 60°C – 40°C."
+    },
+    {
+      "block_id": "20260312_619a7db2-27e4-4572-9311-63029574bf01_6_block_007",
+      "coordinates": {
+        "x1": 295.0,
+        "y1": 1345.0,
+        "x2": 1696.0,
+        "y2": 1505.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9164820909500122,
+      "reading_order": 8,
+      "text": "(d) ‘A’ can form precipitate on cooling its saturated solution at 60°C – 40°C,\nwhereas C forms precipitate on cooling its saturated solution at 40°C\n– 25°C."
+    },
+    {
+      "block_id": "20260312_619a7db2-27e4-4572-9311-63029574bf01_6_block_008",
+      "coordinates": {
+        "x1": 236.0,
+        "y1": 1536.0,
+        "x2": 1695.0,
+        "y2": 2024.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9439116716384888,
+      "reading_order": 9,
+      "text": "8. Examine the constituents of the containers given below and identify the\ncontainer in which change in colour is observed.\nContainer 'A': Glauber’s salt + anhydrous copper sulphate\nContainer 'B': Hydrated $\\text{MgCl}_2$ + anhydrous copper sulphate\nContainer 'C': Calcium oxide + anhydrous cobalt chloride\nContainer 'D': Anhydrous $\\text{CaCl}_2$ + anhydrous cobalt chloride\n(a) Container C (b) Container D\n(c) Container B (d) Container A"
+    },
+    {
+      "block_id": "20260312_619a7db2-27e4-4572-9311-63029574bf01_6_block_009",
+      "coordinates": {
+        "x1": 236.0,
+        "y1": 2050.0,
+        "x2": 1661.0,
+        "y2": 2154.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6791635155677795,
+      "reading_order": 10,
+      "text": "9. Observations made by students 'A', 'B', 'C' and 'D' are given below in the table. Identify whose report (or) observation is correct?"
+    },
+    {
+      "block_id": "20260312_619a7db2-27e4-4572-9311-63029574bf01_6_block_010",
+      "coordinates": {
+        "x1": 302.0,
+        "y1": 2161.0,
+        "x2": 1658.0,
+        "y2": 2898.0
+      },
+      "layout_tag": "table",
+      "confidence": 0.9294441342353821,
+      "reading_order": 11,
+      "text": "<table>\n<thead>\n<tr>\n<th>Student</th>\n<th>Solution</th>\n<th>Colloid</th>\n<th>Suspension</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>A</td>\n<td>Homogeneous</td>\n<td>Brownian<br/>motion is<br/>significant.</td>\n<td>Tyndall effect is<br/>significant.</td>\n</tr>\n<tr>\n<td>B</td>\n<td>Tyndall effect is<br/>observed.</td>\n<td>Heterogeneous</td>\n<td>Can be observed<br/>with naked eyes.</td>\n</tr>\n<tr>\n<td>C</td>\n<td>Particles never set-<br/>tle down.</td>\n<td>Size of particles<br/>is 10 nm – 1 µm</td>\n<td>Tyndall effect is<br/>insignificant.</td>\n</tr>\n<tr>\n<td>D</td>\n<td>Heterogeneous</td>\n<td>Tyndall effect is<br/>observed.</td>\n<td>Ordinary filtration</td>\n</tr>\n</tbody>\n</table>"
+    },
+    {
+      "block_id": "20260312_619a7db2-27e4-4572-9311-63029574bf01_6_block_011",
+      "coordinates": {
+        "x1": 1793.0,
+        "y1": 313.0,
+        "x2": 2172.0,
+        "y2": 363.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6962893009185791,
+      "reading_order": 12,
+      "text": "Space for rough work"
+    }
+  ]
+}

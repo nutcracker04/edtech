@@ -1,0 +1,229 @@
+{
+  "page_num": 5,
+  "image_width": 2402,
+  "image_height": 3001,
+  "created_at": "2026-03-12T18:56:48.355267+00:00",
+  "blocks": [
+    {
+      "block_id": "20260312_78284854-69ed-4150-8834-5a3258ca945d_5_block_000",
+      "coordinates": {
+        "x1": 359.0,
+        "y1": 439.0,
+        "x2": 1223.0,
+        "y2": 553.0
+      },
+      "layout_tag": "headline",
+      "confidence": 0.6728737354278564,
+      "reading_order": 1,
+      "text": "Nature of Matter"
+    },
+    {
+      "block_id": "20260312_78284854-69ed-4150-8834-5a3258ca945d_5_block_001",
+      "coordinates": {
+        "x1": 1470.0,
+        "y1": 384.0,
+        "x2": 1580.0,
+        "y2": 608.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.35380497574806213,
+      "reading_order": 2,
+      "text": "1"
+    },
+    {
+      "block_id": "20260312_78284854-69ed-4150-8834-5a3258ca945d_5_block_002",
+      "coordinates": {
+        "x1": 1684.0,
+        "y1": 304.0,
+        "x2": 2213.0,
+        "y2": 657.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.7662017941474915,
+      "reading_order": 3,
+      "text": "There is no readable text in this image."
+    },
+    {
+      "block_id": "20260312_78284854-69ed-4150-8834-5a3258ca945d_5_block_003",
+      "coordinates": {
+        "x1": 181.0,
+        "y1": 707.0,
+        "x2": 2063.0,
+        "y2": 764.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.6863052845001221,
+      "reading_order": 4,
+      "text": "Reference: Coursebook - IIT Foundation Chemistry Class 9; Chapter - Nature of Matter; Page number - 1.1–1.17"
+    },
+    {
+      "block_id": "20260312_78284854-69ed-4150-8834-5a3258ca945d_5_block_004",
+      "coordinates": {
+        "x1": 184.0,
+        "y1": 792.0,
+        "x2": 870.0,
+        "y2": 875.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.8262422680854797,
+      "reading_order": 5,
+      "text": "Assessment Test I"
+    },
+    {
+      "block_id": "20260312_78284854-69ed-4150-8834-5a3258ca945d_5_block_005",
+      "coordinates": {
+        "x1": 1450.0,
+        "y1": 822.0,
+        "x2": 1695.0,
+        "y2": 873.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7650904655456543,
+      "reading_order": 6,
+      "text": "Time: 30 min."
+    },
+    {
+      "block_id": "20260312_78284854-69ed-4150-8834-5a3258ca945d_5_block_006",
+      "coordinates": {
+        "x1": 181.0,
+        "y1": 947.0,
+        "x2": 1693.0,
+        "y2": 1006.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.8197638988494873,
+      "reading_order": 7,
+      "text": "Directions for questions from 1 to 15: Select the correct answer from the given options."
+    },
+    {
+      "block_id": "20260312_78284854-69ed-4150-8834-5a3258ca945d_5_block_007",
+      "coordinates": {
+        "x1": 231.0,
+        "y1": 1039.0,
+        "x2": 1488.0,
+        "y2": 1095.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7676227688789368,
+      "reading_order": 8,
+      "text": "1. In which of the following cases, phase transition will be visible?"
+    },
+    {
+      "block_id": "20260312_78284854-69ed-4150-8834-5a3258ca945d_5_block_008",
+      "coordinates": {
+        "x1": 292.0,
+        "y1": 1105.0,
+        "x2": 1697.0,
+        "y2": 1209.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8915389776229858,
+      "reading_order": 9,
+      "text": "(a) A test tube filled with distilled water kept in a container with boiling sea\nwater."
+    },
+    {
+      "block_id": "20260312_78284854-69ed-4150-8834-5a3258ca945d_5_block_009",
+      "coordinates": {
+        "x1": 292.0,
+        "y1": 1220.0,
+        "x2": 1695.0,
+        "y2": 1326.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8987324833869934,
+      "reading_order": 10,
+      "text": "(b) A test tube filled with distilled water kept in a container with boiling\ndistilled water."
+    },
+    {
+      "block_id": "20260312_78284854-69ed-4150-8834-5a3258ca945d_5_block_010",
+      "coordinates": {
+        "x1": 292.0,
+        "y1": 1336.0,
+        "x2": 1696.0,
+        "y2": 1443.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8991916179656982,
+      "reading_order": 11,
+      "text": "(c) A test tube filled with sea water kept in a container with boiling distilled\nwater."
+    },
+    {
+      "block_id": "20260312_78284854-69ed-4150-8834-5a3258ca945d_5_block_011",
+      "coordinates": {
+        "x1": 293.0,
+        "y1": 1452.0,
+        "x2": 1698.0,
+        "y2": 1565.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8885647058486938,
+      "reading_order": 12,
+      "text": "(d) A test tube filled with sea water kept in a container filled with the same\nsample of sea water which is boiling."
+    },
+    {
+      "block_id": "20260312_78284854-69ed-4150-8834-5a3258ca945d_5_block_012",
+      "coordinates": {
+        "x1": 236.0,
+        "y1": 1623.0,
+        "x2": 1682.0,
+        "y2": 1989.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5760678648948669,
+      "reading_order": 13,
+      "text": "2. Which of the following activities does not involve the principle that evapo-\nration causes cooling?\n(a) Cooling of water in an earthen pot.\n(b) Cooling sensation perceived while using perfume.\n(c) Fogging on spectacles after coming out from an air-conditioned car.\n(d) Usage of air cooler."
+    },
+    {
+      "block_id": "20260312_78284854-69ed-4150-8834-5a3258ca945d_5_block_013",
+      "coordinates": {
+        "x1": 234.0,
+        "y1": 2044.0,
+        "x2": 1694.0,
+        "y2": 2282.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9394930005073547,
+      "reading_order": 14,
+      "text": "3. A metallic wire can be cut through ice even by keeping the ice block intact.\nIdentify the term which describes this activity.\n(a) Regelation (b) Eutrophication\n(c) Osmoregulation (d) Condensation"
+    },
+    {
+      "block_id": "20260312_78284854-69ed-4150-8834-5a3258ca945d_5_block_014",
+      "coordinates": {
+        "x1": 234.0,
+        "y1": 2333.0,
+        "x2": 1692.0,
+        "y2": 2698.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.835025429725647,
+      "reading_order": 15,
+      "text": "4. Which of the following applications is based on the principle of elevation in\nfreezing point with decrease in external pressure?\n(a) Cooking of food at high altitudes using pressure cooker.\n(b) Addition of alcohol to water used as a coolant.\n(c) Existence of ice below $0^\\circ\\mathrm{C}$ on mountain peaks.\n(d) Survival of aquatic animals in cold countries in winter at above $0^\\circ\\mathrm{C}$."
+    },
+    {
+      "block_id": "20260312_78284854-69ed-4150-8834-5a3258ca945d_5_block_015",
+      "coordinates": {
+        "x1": 235.0,
+        "y1": 2742.0,
+        "x2": 1700.0,
+        "y2": 2859.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8977672457695007,
+      "reading_order": 16,
+      "text": "5. Arrange the following methods of separation in the order of the following principles exploited for that purpose: Difference in boiling points; difference"
+    },
+    {
+      "block_id": "20260312_78284854-69ed-4150-8834-5a3258ca945d_5_block_016",
+      "coordinates": {
+        "x1": 1792.0,
+        "y1": 984.0,
+        "x2": 2174.0,
+        "y2": 1041.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6769158840179443,
+      "reading_order": 17,
+      "text": "Space for rough work"
+    }
+  ]
+}

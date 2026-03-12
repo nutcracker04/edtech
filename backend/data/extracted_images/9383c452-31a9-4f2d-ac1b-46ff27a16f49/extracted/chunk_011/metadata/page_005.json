@@ -1,0 +1,294 @@
+{
+  "page_num": 5,
+  "image_width": 2402,
+  "image_height": 3001,
+  "created_at": "2026-03-12T18:58:08.247395+00:00",
+  "blocks": [
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_5_block_000",
+      "coordinates": {
+        "x1": 1696.0,
+        "y1": 188.0,
+        "x2": 2053.0,
+        "y2": 240.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.8699052929878235,
+      "reading_order": 1,
+      "text": "Hints and Explanations"
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_5_block_001",
+      "coordinates": {
+        "x1": 2106.0,
+        "y1": 187.0,
+        "x2": 2198.0,
+        "y2": 235.0
+      },
+      "layout_tag": "page-number",
+      "confidence": 0.7927960157394409,
+      "reading_order": 2,
+      "text": "A.3"
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_5_block_002",
+      "coordinates": {
+        "x1": 291.0,
+        "y1": 288.0,
+        "x2": 1171.0,
+        "y2": 472.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6527524590492249,
+      "reading_order": 3,
+      "text": "and B are, therefore, immiscible liquids and the\ndenser liquid B forms the bottom layer.\nHence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_5_block_003",
+      "coordinates": {
+        "x1": 220.0,
+        "y1": 498.0,
+        "x2": 1171.0,
+        "y2": 792.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9280220866203308,
+      "reading_order": 4,
+      "text": "11. On cooling the hot-saturated solution of X and\nY, Y being more soluble at $30^\\circ\\mathrm{C}$ than X at the\nsame temperature, crystallizes first leaving\nbehind the other component.\nHence, the correct option is (d)."
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_5_block_004",
+      "coordinates": {
+        "x1": 219.0,
+        "y1": 821.0,
+        "x2": 1173.0,
+        "y2": 1393.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8138775825500488,
+      "reading_order": 5,
+      "text": "12. Preferential liquefaction is based on the differ-\nence in critical temperatures. Fractional evap-\noration is based on the difference in boiling\npoints of liquids of the corresponding gases.\nDiffusion is based on the difference in the\nmolecular masses of gases. Dissolution in a\nsuitable solvent is based on preferential solu-\nbility of a gas in a solvent.\n(a) $\\rightarrow$ (iii); (b) $\\rightarrow$ (iv); (c) $\\rightarrow$ (i); (d) $\\rightarrow$ (ii);\nHence, the correct option is (a)."
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_5_block_005",
+      "coordinates": {
+        "x1": 215.0,
+        "y1": 1412.0,
+        "x2": 1173.0,
+        "y2": 1646.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9175276756286621,
+      "reading_order": 6,
+      "text": "13. NaCl and C can be separated by dissolution in\nwater as NaCl is highly soluble in water and C\nis insoluble in water.\n\nHence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_5_block_006",
+      "coordinates": {
+        "x1": 216.0,
+        "y1": 1672.0,
+        "x2": 1170.0,
+        "y2": 1905.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.908753514289856,
+      "reading_order": 7,
+      "text": "14. On opening a Pepsi bottle, $\\mathrm{CO}_2$ comes out\nwith a fizzing sound as the solubility of gas\ndecreases with the decrease in pressure.\nHence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_5_block_007",
+      "coordinates": {
+        "x1": 217.0,
+        "y1": 1929.0,
+        "x2": 1171.0,
+        "y2": 2143.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8831498026847839,
+      "reading_order": 8,
+      "text": "15. Making of coffee decoction involves the prin-\nciple of solvent extraction. Refining of petrol\nand purification of ethyl alcohol are based on\nfractional distillation."
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_5_block_008",
+      "coordinates": {
+        "x1": 291.0,
+        "y1": 2163.0,
+        "x2": 884.0,
+        "y2": 2218.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.4434533417224884,
+      "reading_order": 9,
+      "text": "Hence, the correct option is (b)."
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_5_block_009",
+      "coordinates": {
+        "x1": 195.0,
+        "y1": 2262.0,
+        "x2": 653.0,
+        "y2": 2317.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.8347888588905334,
+      "reading_order": 10,
+      "text": "Assessment Test III"
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_5_block_010",
+      "coordinates": {
+        "x1": 234.0,
+        "y1": 2356.0,
+        "x2": 1172.0,
+        "y2": 2555.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.506423830986023,
+      "reading_order": 11,
+      "text": "1. Rate of evaporation is directly proportional\nto wind speed and inversely proportional to\nhumidity."
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_5_block_011",
+      "coordinates": {
+        "x1": 292.0,
+        "y1": 2538.0,
+        "x2": 880.0,
+        "y2": 2592.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.2970205545425415,
+      "reading_order": 12,
+      "text": "Hence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_5_block_012",
+      "coordinates": {
+        "x1": 234.0,
+        "y1": 2616.0,
+        "x2": 1173.0,
+        "y2": 2795.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9006268978118896,
+      "reading_order": 13,
+      "text": "2. In a compound, only one type of molecules is\npresent and it is uniformly distributed.\nHence, the correct option is (a)."
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_5_block_013",
+      "coordinates": {
+        "x1": 1285.0,
+        "y1": 290.0,
+        "x2": 2115.0,
+        "y2": 418.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8976961374282837,
+      "reading_order": 14,
+      "text": "3. (i) $\\rightarrow$ (D); (ii) $\\rightarrow$ (A); (iii) $\\rightarrow$ (E); (iv) $\\rightarrow$ (F)\nHence, the correct option is (a)."
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_5_block_014",
+      "coordinates": {
+        "x1": 1284.0,
+        "y1": 441.0,
+        "x2": 2222.0,
+        "y2": 958.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9337973594665527,
+      "reading_order": 15,
+      "text": "4. The liquid mixture is taken in a separating\nfunnel.\nThe mixture is kept still.\nClear layers of the liquids are formed and the\nheavier liquid, that is, water forms the bottom\nlayer.\nThe heavier component is collected first by\nopening the stop lock.\nHence, the correct option is (a)."
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_5_block_015",
+      "coordinates": {
+        "x1": 1287.0,
+        "y1": 982.0,
+        "x2": 2217.0,
+        "y2": 1164.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8984212875366211,
+      "reading_order": 16,
+      "text": "5. In solids, molecules possess a very low kinetic\nenergy.\nHence, the correct option is (d)."
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_5_block_016",
+      "coordinates": {
+        "x1": 1283.0,
+        "y1": 1192.0,
+        "x2": 2221.0,
+        "y2": 1814.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8120748400688171,
+      "reading_order": 17,
+      "text": "6. On cooling, the gas molecules lose heat energy\nwhich decreases the kinetic energy as well as\npotential energy of the molecules.\nFurther extraction of heat results in the decrease\nin potential energy of molecules whereas kinetic\nenergy remains constant.\nDecrease in potential energy leads to increase\nin intermolecular forces of attraction.\nIncrease in forces of attraction results in the\nconversion of state.\nHence, the correct option is (b)."
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_5_block_017",
+      "coordinates": {
+        "x1": 1284.0,
+        "y1": 1841.0,
+        "x2": 2220.0,
+        "y2": 2022.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9063562154769897,
+      "reading_order": 18,
+      "text": "7. Addition of impurities to the solids decreases\nthe melting point of solids.\nHence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_5_block_018",
+      "coordinates": {
+        "x1": 1286.0,
+        "y1": 2046.0,
+        "x2": 2217.0,
+        "y2": 2226.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9015756845474243,
+      "reading_order": 19,
+      "text": "8. Gas molecules are very loosely packed. Hence,\nthey are bad conductors of heat.\nHence, the correct option is (a)."
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_5_block_019",
+      "coordinates": {
+        "x1": 1286.0,
+        "y1": 2249.0,
+        "x2": 2220.0,
+        "y2": 2486.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9197840690612793,
+      "reading_order": 20,
+      "text": "9. The appearance of fog is due to the condensa-\ntion of water vapour into tiny droplets due to\nvery low temperatures in winter morning.\nHence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_5_block_020",
+      "coordinates": {
+        "x1": 1267.0,
+        "y1": 2508.0,
+        "x2": 2223.0,
+        "y2": 2723.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.909623920917511,
+      "reading_order": 21,
+      "text": "10. In a mixture of iron and sand, iron is magnetic\nand sand is non-magnetic in nature. Therefore,\nit can be separated by magnetic separation\nmethod."
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_5_block_021",
+      "coordinates": {
+        "x1": 1331.0,
+        "y1": 2742.0,
+        "x2": 1933.0,
+        "y2": 2796.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5509597063064575,
+      "reading_order": 22,
+      "text": "Hence, the correct option is (b)."
+    }
+  ]
+}

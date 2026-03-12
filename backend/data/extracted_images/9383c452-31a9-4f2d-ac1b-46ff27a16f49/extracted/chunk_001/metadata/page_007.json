@@ -1,0 +1,47 @@
+{
+  "page_num": 7,
+  "image_width": 2402,
+  "image_height": 3001,
+  "created_at": "2026-03-12T18:56:41.659217+00:00",
+  "blocks": [
+    {
+      "block_id": "20260312_02884a5f-6dcd-44e3-b81f-9481721c94a0_7_block_000",
+      "coordinates": {
+        "x1": 977.0,
+        "y1": 352.0,
+        "x2": 1483.0,
+        "y2": 460.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.8616629242897034,
+      "reading_order": 1,
+      "text": "Contents"
+    },
+    {
+      "block_id": "20260312_02884a5f-6dcd-44e3-b81f-9481721c94a0_7_block_001",
+      "coordinates": {
+        "x1": 175.0,
+        "y1": 634.0,
+        "x2": 1193.0,
+        "y2": 2570.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9663369655609131,
+      "reading_order": 2,
+      "text": "Preface vii\nHow to Use the Practice Book ix\nSeries Chapter Flow x\n\nCHAPTER 1 NATURE OF MATTER 1.1\nAssessment Test I 1.1\nAssessment Test II 1.4\nAssessment Test III 1.8\nAssessment Test IV 1.11\nAnswer Keys 1.14\n\nCHAPTER 2 ATOMIC STRUCTURE 2.1\nAssessment Test I 2.1\nAssessment Test II 2.4\nAssessment Test III 2.7\nAssessment Test IV 2.10\nAnswer Keys 2.12\n\nCHAPTER 3 PERIODIC CLASSIFICATION OF 3.1\nELEMENTS\nAssessment Test I 3.1\nAssessment Test II 3.4\nAssessment Test III 3.7\nAssessment Test IV 3.10\nAnswer Keys 3.12\n\nCHAPTER 4 CHEMICAL BONDING 4.1\nAssessment Test I 4.1\nAssessment Test II 4.4"
+    },
+    {
+      "block_id": "20260312_02884a5f-6dcd-44e3-b81f-9481721c94a0_7_block_002",
+      "coordinates": {
+        "x1": 1215.0,
+        "y1": 638.0,
+        "x2": 2224.0,
+        "y2": 2550.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9589597582817078,
+      "reading_order": 3,
+      "text": "Assessment Test III 4.7\nAssessment Test IV 4.10\nAnswer Keys 4.12\n\nCHAPTER 5 MOLE CONCEPT, STOICHIOMETRY\nAND BEHAVIOUR OF GASES 5.1\n\nAssessment Test I 5.1\nAssessment Test II 5.4\nAssessment Test III 5.7\nAssessment Test IV 5.10\nAnswer Keys 5.12\n\nCHAPTER 6 WATER, SOLUTIONS, SOLUBILITY\nAND HYDROGEN; METALS\nAND NON-METALS 6.1\n\nAssessment Test I 6.1\nAssessment Test II 6.5\nAssessment Test III 6.9\nAssessment Test IV 6.12\nAnswer Keys 6.14\n\nCHAPTER 7 ORGANIC CHEMISTRY 7.1\n\nAssessment Test I 7.1\nAssessment Test II 7.4\nAssessment Test III 7.7\nAssessment Test IV 7.10\nAnswer Keys 7.12\n\nHINTS AND EXPLANATIONS A.1"
+    }
+  ]
+}

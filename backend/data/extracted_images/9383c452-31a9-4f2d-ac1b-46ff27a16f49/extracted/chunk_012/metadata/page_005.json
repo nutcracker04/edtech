@@ -1,0 +1,229 @@
+{
+  "page_num": 5,
+  "image_width": 2402,
+  "image_height": 3001,
+  "created_at": "2026-03-12T18:58:15.174819+00:00",
+  "blocks": [
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_5_block_000",
+      "coordinates": {
+        "x1": 1695.0,
+        "y1": 188.0,
+        "x2": 2053.0,
+        "y2": 241.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.8624218106269836,
+      "reading_order": 1,
+      "text": "Hints and Explanations"
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_5_block_001",
+      "coordinates": {
+        "x1": 2093.0,
+        "y1": 184.0,
+        "x2": 2211.0,
+        "y2": 236.0
+      },
+      "layout_tag": "page-number",
+      "confidence": 0.7892133593559265,
+      "reading_order": 2,
+      "text": "A.13"
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_5_block_002",
+      "coordinates": {
+        "x1": 232.0,
+        "y1": 312.0,
+        "x2": 886.0,
+        "y2": 465.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7938432693481445,
+      "reading_order": 3,
+      "text": "2. $y = \\frac{x + z}{2} 2y = x + z$\nHence, the correct option is (b)."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_5_block_003",
+      "coordinates": {
+        "x1": 234.0,
+        "y1": 483.0,
+        "x2": 956.0,
+        "y2": 675.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8945083618164062,
+      "reading_order": 4,
+      "text": "3. 4th period, 15th group $\\rightarrow$ 2, 8, 18, 5\n$\\therefore$ Atomic number = 33\nHence, the correct option is (c)"
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_5_block_004",
+      "coordinates": {
+        "x1": 235.0,
+        "y1": 698.0,
+        "x2": 1173.0,
+        "y2": 934.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.927448034286499,
+      "reading_order": 5,
+      "text": "4. K has the least density among the given ele-\nments. Density decreases down the group and\nincreases across a period.\n\nHence, the correct option is (a)."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_5_block_005",
+      "coordinates": {
+        "x1": 235.0,
+        "y1": 956.0,
+        "x2": 1174.0,
+        "y2": 1138.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9180558919906616,
+      "reading_order": 6,
+      "text": "5. Electropositivity is pertinent to the tendency of\nan element to lose an electron.\nHence, the correct option is (b)."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_5_block_006",
+      "coordinates": {
+        "x1": 236.0,
+        "y1": 1160.0,
+        "x2": 1080.0,
+        "y2": 1488.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9247446060180664,
+      "reading_order": 7,
+      "text": "6. Atomic number 13 $\\rightarrow$ 2, 8, 3; group is 13.\nAtomic number 20 $\\rightarrow$ 2, 8, 8, 2; group is 2.\nAtomic number 6 $\\rightarrow$ 2, 4; group is 14.\nAtomic number 14 $\\rightarrow$ 2, 8, 4; group is 14.\nHence, the correct option is (b)."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_5_block_007",
+      "coordinates": {
+        "x1": 233.0,
+        "y1": 1508.0,
+        "x2": 1076.0,
+        "y2": 1900.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9193564057350159,
+      "reading_order": 8,
+      "text": "7. Atomic number: 7 $\\rightarrow$ 2, 5\nAtomic number: 3 $\\rightarrow$ 2, 1\nAtomic number: 9 $\\rightarrow$ 2, 7\nAtomic number: 11 $\\rightarrow$ 2, 8, 1\nDecreasing order of atomic size is DBAC.\nHence, the correct option is (b)."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_5_block_008",
+      "coordinates": {
+        "x1": 234.0,
+        "y1": 1923.0,
+        "x2": 1171.0,
+        "y2": 2105.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.910906970500946,
+      "reading_order": 9,
+      "text": "8. Since K has the largest size among the given\nelements, its ionization energy is the least.\nHence, the correct option is (a)."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_5_block_009",
+      "coordinates": {
+        "x1": 234.0,
+        "y1": 2127.0,
+        "x2": 1174.0,
+        "y2": 2363.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9091030955314636,
+      "reading_order": 10,
+      "text": "9. Elements with greater electron affinity can take\naway electrons from other elements and thus\nthe other elements undergo oxidation.\nHence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_5_block_010",
+      "coordinates": {
+        "x1": 1266.0,
+        "y1": 290.0,
+        "x2": 2218.0,
+        "y2": 473.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9105920791625977,
+      "reading_order": 11,
+      "text": "10. Non-metallic character of an element is directly\nproportional to the electronegativity.\nHence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_5_block_011",
+      "coordinates": {
+        "x1": 1265.0,
+        "y1": 509.0,
+        "x2": 2222.0,
+        "y2": 839.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8053396344184875,
+      "reading_order": 12,
+      "text": "11. Sodium has only one valence electron. Hence,\nit becomes stable after losing one electron.\nTherefore, the value of 2nd ionization poten-\ntial increases drastically. Hence, the difference\nbetween the second and the first ionization\nenergies is the maximum."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_5_block_012",
+      "coordinates": {
+        "x1": 1340.0,
+        "y1": 858.0,
+        "x2": 1934.0,
+        "y2": 914.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.3586673438549042,
+      "reading_order": 13,
+      "text": "Hence, the correct option is (a)."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_5_block_013",
+      "coordinates": {
+        "x1": 1264.0,
+        "y1": 944.0,
+        "x2": 2221.0,
+        "y2": 1283.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7199071645736694,
+      "reading_order": 14,
+      "text": "12. They are isoelectronic with 10 electrons in\ntheir atoms. $\\mathrm{O}^{-2}$ has the largest radius since\nthe number of protons in it is the least. That is,\nthe effective nuclear force of attraction on the\nvalence electrons is less.\n\nHence, the correct option is (a)."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_5_block_014",
+      "coordinates": {
+        "x1": 1263.0,
+        "y1": 1328.0,
+        "x2": 2220.0,
+        "y2": 1574.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8754183650016785,
+      "reading_order": 15,
+      "text": "13. Reducing character is the tendency to undergo\noxidation and is directly proportional to the\ntendency to lose electrons.\n\nHence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_5_block_015",
+      "coordinates": {
+        "x1": 1265.0,
+        "y1": 1604.0,
+        "x2": 2221.0,
+        "y2": 1847.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9045648574829102,
+      "reading_order": 16,
+      "text": "14. A non-metal occupies the right portion of the\nperiodic table as the non-metallic character inc-\nreases from left to right across a period.\n\nHence, the correct option is (b)."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_5_block_016",
+      "coordinates": {
+        "x1": 1267.0,
+        "y1": 1873.0,
+        "x2": 1934.0,
+        "y2": 2217.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6802816390991211,
+      "reading_order": 17,
+      "text": "15. (i) 14 (Silicon) $\\rightarrow$ D\n(ii) 37 (Rubidium) $\\rightarrow$ A\n(iii) 4 (Beryllium) $\\rightarrow$ B\n(iv) 8 (Oxygen) $\\rightarrow$ C\nHence, the correct option is (c)."
+    }
+  ]
+}

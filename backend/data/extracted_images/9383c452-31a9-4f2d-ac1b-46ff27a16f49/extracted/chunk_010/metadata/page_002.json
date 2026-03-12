@@ -1,0 +1,125 @@
+{
+  "page_num": 2,
+  "image_width": 2402,
+  "image_height": 3001,
+  "created_at": "2026-03-12T18:58:01.708023+00:00",
+  "blocks": [
+    {
+      "block_id": "20260312_9d7fdf96-f009-43a0-9d79-0a23a69f8af4_2_block_000",
+      "coordinates": {
+        "x1": 201.0,
+        "y1": 184.0,
+        "x2": 789.0,
+        "y2": 242.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.44987231492996216,
+      "reading_order": 1,
+      "text": "7.2 Chapter 7 Organic Chemistry"
+    },
+    {
+      "block_id": "20260312_9d7fdf96-f009-43a0-9d79-0a23a69f8af4_2_block_001",
+      "coordinates": {
+        "x1": 291.0,
+        "y1": 285.0,
+        "x2": 1219.0,
+        "y2": 412.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5834223031997681,
+      "reading_order": 2,
+      "text": "(a) BCDAE (b) DEBAC\n(c) DCBAE (d) CBEAD"
+    },
+    {
+      "block_id": "20260312_9d7fdf96-f009-43a0-9d79-0a23a69f8af4_2_block_002",
+      "coordinates": {
+        "x1": 236.0,
+        "y1": 464.0,
+        "x2": 1699.0,
+        "y2": 891.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8683612942695618,
+      "reading_order": 3,
+      "text": "5. Arrange the following main fractions of refining of petroleum in the correct\norder of temperature range in which they are obtained.\n(A) Lubricating oil (B) Kerosene oil\n(C) Petroleum gas (D) Paraffin wax\n(E) Fuel oil\n(a) CBDAE (b) DEBAC\n(c) DCBAE (d) CBEAD"
+    },
+    {
+      "block_id": "20260312_9d7fdf96-f009-43a0-9d79-0a23a69f8af4_2_block_003",
+      "coordinates": {
+        "x1": 238.0,
+        "y1": 938.0,
+        "x2": 1701.0,
+        "y2": 1362.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6000838875770569,
+      "reading_order": 4,
+      "text": "6. Assertion (A): Bromine water is used to distinguish between ethane and\nethene.\nReason (R): Ethene undergoes addition reaction with bromine water.\n(a) Both A and R are true and R is the correct explanation of A.\n(b) Both A and R are true, but R is not the correct explanation of A.\n(c) A is true and R is false.\n(d) A is false and R is true."
+    },
+    {
+      "block_id": "20260312_9d7fdf96-f009-43a0-9d79-0a23a69f8af4_2_block_004",
+      "coordinates": {
+        "x1": 233.0,
+        "y1": 1411.0,
+        "x2": 1703.0,
+        "y2": 1783.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6681666374206543,
+      "reading_order": 5,
+      "text": "7. Assertion (A): Ethyne decolourises pink colour of alkaline $\\mathrm{KMnO}_4$ solution.\nReason (R): Ethyne gets oxidized to glyoxal.\n(a) Both A and R are true and R is the correct explanation of A.\n(b) Both A and R are true, but R is not the correct explanation of A.\n(c) A is true and R is false.\n(d) A is false and R is true."
+    },
+    {
+      "block_id": "20260312_9d7fdf96-f009-43a0-9d79-0a23a69f8af4_2_block_005",
+      "coordinates": {
+        "x1": 232.0,
+        "y1": 1832.0,
+        "x2": 1333.0,
+        "y2": 1885.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.523883044719696,
+      "reading_order": 6,
+      "text": "8. Match the entries of Column A with those of Column B."
+    },
+    {
+      "block_id": "20260312_9d7fdf96-f009-43a0-9d79-0a23a69f8af4_2_block_006",
+      "coordinates": {
+        "x1": 266.0,
+        "y1": 1903.0,
+        "x2": 1506.0,
+        "y2": 2583.0
+      },
+      "layout_tag": "table",
+      "confidence": 0.8224610090255737,
+      "reading_order": 7,
+      "text": "<table>\n<thead>\n<tr>\n<th>Column A<br/>(Main Fraction of Distribution of Coal<br/>Tar)</th>\n<th>Column B<br/>(Composition)</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>(i) Green oil</td>\n<td>(A) Pitch</td>\n</tr>\n<tr>\n<td>(ii) Heavy oil</td>\n<td>(B) Benzene</td>\n</tr>\n<tr>\n<td>(iii) Residue</td>\n<td>(C) Anthracene</td>\n</tr>\n<tr>\n<td>(iv) Light oil</td>\n<td>(D) Phenol</td>\n</tr>\n<tr>\n<td>(a) (i) → (C); (ii) → (D); (iii) → (A); (iv) → (B)</td>\n<td></td>\n</tr>\n<tr>\n<td>(b) (i) → (C); (ii) → (D); (iii) → (B); (iv) → (A)</td>\n<td></td>\n</tr>\n<tr>\n<td>(c) (i) → (B); (ii) → (D); (iii) → (A); (iv) → (C)</td>\n<td></td>\n</tr>\n<tr>\n<td>(d) (i) → (D); (ii) → (A); (iii) → (B); (iv) → (C)</td>\n<td></td>\n</tr>\n</tbody>\n</table>"
+    },
+    {
+      "block_id": "20260312_9d7fdf96-f009-43a0-9d79-0a23a69f8af4_2_block_007",
+      "coordinates": {
+        "x1": 236.0,
+        "y1": 2620.0,
+        "x2": 1699.0,
+        "y2": 2866.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5154697299003601,
+      "reading_order": 8,
+      "text": "9. The molecular mass of a hydrocarbon 'X' is 70. What would be the molecu-\nlar formulae of its nearest neighbouring homologues?\n(a) $\\mathrm{C}_4\\mathrm{H}_8$ and $\\mathrm{C}_6\\mathrm{H}_{12}$ (b) $\\mathrm{C}_4\\mathrm{H}_{10}$ and $\\mathrm{C}_6\\mathrm{H}_{14}$\n(c) $\\mathrm{C}_4\\mathrm{H}_6$ and $\\mathrm{C}_6\\mathrm{H}_{10}$ (d) $\\mathrm{C}_5\\mathrm{H}_{12}$ and $\\mathrm{C}_7\\mathrm{H}_{14}$"
+    },
+    {
+      "block_id": "20260312_9d7fdf96-f009-43a0-9d79-0a23a69f8af4_2_block_008",
+      "coordinates": {
+        "x1": 1793.0,
+        "y1": 312.0,
+        "x2": 2173.0,
+        "y2": 364.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.31653377413749695,
+      "reading_order": 9,
+      "text": "Space for rough work"
+    }
+  ]
+}

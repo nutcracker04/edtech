@@ -1,0 +1,281 @@
+{
+  "page_num": 8,
+  "image_width": 2402,
+  "image_height": 3001,
+  "created_at": "2026-03-12T18:58:29.034117+00:00",
+  "blocks": [
+    {
+      "block_id": "20260312_a7ee6e7a-3a9d-409b-8561-8b9589a68fc1_8_block_000",
+      "coordinates": {
+        "x1": 184.0,
+        "y1": 184.0,
+        "x2": 788.0,
+        "y2": 242.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.5095537900924683,
+      "reading_order": 1,
+      "text": "A.36 Chapter 7 Organic Chemistry"
+    },
+    {
+      "block_id": "20260312_a7ee6e7a-3a9d-409b-8561-8b9589a68fc1_8_block_001",
+      "coordinates": {
+        "x1": 234.0,
+        "y1": 294.0,
+        "x2": 289.0,
+        "y2": 344.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.2642497420310974,
+      "reading_order": 2,
+      "text": "6."
+    },
+    {
+      "block_id": "20260312_a7ee6e7a-3a9d-409b-8561-8b9589a68fc1_8_block_002",
+      "coordinates": {
+        "x1": 301.0,
+        "y1": 302.0,
+        "x2": 603.0,
+        "y2": 358.0
+      },
+      "layout_tag": "formula",
+      "confidence": 0.47210243344306946,
+      "reading_order": 3,
+      "text": "$$ \\mathrm{C}_7\\mathrm{H}_{12} \\Rightarrow \\mathrm{CH}\\equiv $$"
+    },
+    {
+      "block_id": "20260312_a7ee6e7a-3a9d-409b-8561-8b9589a68fc1_8_block_003",
+      "coordinates": {
+        "x1": 407.0,
+        "y1": 369.0,
+        "x2": 1135.0,
+        "y2": 491.0
+      },
+      "layout_tag": "formula",
+      "confidence": 0.4276658892631531,
+      "reading_order": 4,
+      "text": "$$ \\mathrm{C—CH_2—CH_2—CH_2—CH_2—CH_3} $$\n1-heptyne"
+    },
+    {
+      "block_id": "20260312_a7ee6e7a-3a9d-409b-8561-8b9589a68fc1_8_block_004",
+      "coordinates": {
+        "x1": 295.0,
+        "y1": 510.0,
+        "x2": 987.0,
+        "y2": 652.0
+      },
+      "layout_tag": "formula",
+      "confidence": 0.5197118520736694,
+      "reading_order": 5,
+      "text": "$$ \\mathrm{CH} \\equiv \\mathrm{C} - \\underset{\\mathrm{CH}_3}{\\mathrm{CH}} - \\mathrm{CH}_2 - \\mathrm{CH}_2 - \\mathrm{CH}_3 $$"
+    },
+    {
+      "block_id": "20260312_a7ee6e7a-3a9d-409b-8561-8b9589a68fc1_8_block_005",
+      "coordinates": {
+        "x1": 293.0,
+        "y1": 660.0,
+        "x2": 659.0,
+        "y2": 711.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.3420684039592743,
+      "reading_order": 6,
+      "text": "3-methyl 1-hexyne"
+    },
+    {
+      "block_id": "20260312_a7ee6e7a-3a9d-409b-8561-8b9589a68fc1_8_block_006",
+      "coordinates": {
+        "x1": 295.0,
+        "y1": 732.0,
+        "x2": 822.0,
+        "y2": 957.0
+      },
+      "layout_tag": "image",
+      "confidence": 0.7671293020248413,
+      "reading_order": 7,
+      "text": "The image displays a skeletal chemical structure of an organic molecule, specifically 2-methyl-3-hexyne. The structure is centered around a carbon-carbon triple bond (C≡C). To the left of the triple bond is a terminal carbon bonded to a methyl group (CH₃). To the right of the triple bond is a central carbon bonded to a methylene group (CH₂) and an ethyl group (CH₂—CH₃). This central carbon is also bonded to two methyl groups (CH₃), one above and one below the main chain. The structure represents a linear alkynyl compound with two methyl substituents on the central carbon."
+    },
+    {
+      "block_id": "20260312_a7ee6e7a-3a9d-409b-8561-8b9589a68fc1_8_block_007",
+      "coordinates": {
+        "x1": 292.0,
+        "y1": 965.0,
+        "x2": 886.0,
+        "y2": 1086.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.47331729531288147,
+      "reading_order": 8,
+      "text": "3, 3-dimethyl 1-pentyne\n\nHence, the correct option is (b)."
+    },
+    {
+      "block_id": "20260312_a7ee6e7a-3a9d-409b-8561-8b9589a68fc1_8_block_008",
+      "coordinates": {
+        "x1": 234.0,
+        "y1": 1111.0,
+        "x2": 285.0,
+        "y2": 1155.0
+      },
+      "layout_tag": "image-caption",
+      "confidence": 0.3037368357181549,
+      "reading_order": 9,
+      "text": "7."
+    },
+    {
+      "block_id": "20260312_a7ee6e7a-3a9d-409b-8561-8b9589a68fc1_8_block_009",
+      "coordinates": {
+        "x1": 186.0,
+        "y1": 1146.0,
+        "x2": 1189.0,
+        "y2": 1777.0
+      },
+      "layout_tag": "table",
+      "confidence": 0.9340522289276123,
+      "reading_order": 10,
+      "text": "<table>\n<tbody>\n<tr>\n<td>H2C=C—CH2—CH2—CH3<br/>| CH3<br/>2-methyl 1-pentene</td>\n<td>CH2=CH—CH—CH2—CH3<br/>| CH3<br/>3-methyl 1-pentene</td>\n</tr>\n<tr>\n<td>H3C—C=CH—CH2CH3<br/>| CH3<br/>2-methyl 2-pentene</td>\n<td>H3C—HC=C—CH2CH3<br/>| CH3<br/>3-methyl 2-pentene</td>\n</tr>\n<tr>\n<td>CH2=CH—CH2—CH—CH3<br/>| CH3<br/>4-methyl 1-pentene</td>\n<td>H3C—HC=CH—CH—CH3<br/>| CH3<br/>4-methyl 2-pentene</td>\n</tr>\n</tbody>\n</table>"
+    },
+    {
+      "block_id": "20260312_a7ee6e7a-3a9d-409b-8561-8b9589a68fc1_8_block_010",
+      "coordinates": {
+        "x1": 292.0,
+        "y1": 1851.0,
+        "x2": 887.0,
+        "y2": 1903.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7793083786964417,
+      "reading_order": 11,
+      "text": "Hence, the correct option is (d)."
+    },
+    {
+      "block_id": "20260312_a7ee6e7a-3a9d-409b-8561-8b9589a68fc1_8_block_011",
+      "coordinates": {
+        "x1": 233.0,
+        "y1": 1935.0,
+        "x2": 975.0,
+        "y2": 2062.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8833993077278137,
+      "reading_order": 12,
+      "text": "8. $\\mathrm{C}_5\\mathrm{H}_8$ is alkyne with one triple bond.\nHence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260312_a7ee6e7a-3a9d-409b-8561-8b9589a68fc1_8_block_012",
+      "coordinates": {
+        "x1": 233.0,
+        "y1": 2091.0,
+        "x2": 758.0,
+        "y2": 2141.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.2961376905441284,
+      "reading_order": 13,
+      "text": "9. GMM of X is $2 \\times 13 = 26$."
+    },
+    {
+      "block_id": "20260312_a7ee6e7a-3a9d-409b-8561-8b9589a68fc1_8_block_013",
+      "coordinates": {
+        "x1": 237.0,
+        "y1": 2116.0,
+        "x2": 1167.0,
+        "y2": 2762.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7817183136940002,
+      "reading_order": 14,
+      "text": "9. GMM of X is $2 \\times 13 - 26$.\nSince X is unsaturated hydrocarbon, it is either\nalkene or alkyne.\nIf X is alkene $\\mathrm{C}_n\\mathrm{H}_{2n}$, $n = 2, 3, 4...$\nGMM = $12n + 2n = 26$\n$\\Rightarrow 14n = 26$\n$\\Rightarrow n = \\frac{26}{14}, \\text{n}$ could have only whole number\n$\\Rightarrow x$ is alkyne $\\mathrm{C}_n\\mathrm{H}_{2n-2}$; $n = 2, 3, ...$\nGMM = $12n + 2n - 2 = 26$\n$\\Rightarrow 14n = 28$"
+    },
+    {
+      "block_id": "20260312_a7ee6e7a-3a9d-409b-8561-8b9589a68fc1_8_block_014",
+      "coordinates": {
+        "x1": 1329.0,
+        "y1": 291.0,
+        "x2": 2144.0,
+        "y2": 701.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.3707060217857361,
+      "reading_order": 15,
+      "text": "$\\Rightarrow n = 2$\n$\\therefore$ X is $\\text{C}_2\\text{H}_2(\\text{ethyne})$\n\n$$ \\mathrm{CH} \\equiv \\mathrm{CH} + 2\\mathrm{Br}_2 \\longrightarrow \\mathrm{Br}-\\underset{\\mid}{\\mathrm{CH}}-\\underset{\\mid}{\\mathrm{CH}}-\\underset{\\mid}{\\mathrm{Br}} $$\n\n1, 1, 2, 2 tetra bromo ethane\nHence, the correct option is (d)."
+    },
+    {
+      "block_id": "20260312_a7ee6e7a-3a9d-409b-8561-8b9589a68fc1_8_block_015",
+      "coordinates": {
+        "x1": 1263.0,
+        "y1": 731.0,
+        "x2": 1968.0,
+        "y2": 859.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8291174173355103,
+      "reading_order": 16,
+      "text": "10. $\\mathrm{C}_5\\mathrm{H}_8$ and $\\mathrm{C}_6\\mathrm{H}_{10}$ are homologues.\nHence, the correct option is (d)."
+    },
+    {
+      "block_id": "20260312_a7ee6e7a-3a9d-409b-8561-8b9589a68fc1_8_block_016",
+      "coordinates": {
+        "x1": 1265.0,
+        "y1": 882.0,
+        "x2": 1932.0,
+        "y2": 1070.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8271023035049438,
+      "reading_order": 17,
+      "text": "11. $\\mathrm{CH}_4 + \\mathrm{Cl}_2 \\xrightarrow{h\\nu} \\mathrm{CH}_3\\mathrm{Cl} + \\mathrm{HCl}$\n(Excess)\nHence, the correct option is (b)."
+    },
+    {
+      "block_id": "20260312_a7ee6e7a-3a9d-409b-8561-8b9589a68fc1_8_block_017",
+      "coordinates": {
+        "x1": 1261.0,
+        "y1": 1083.0,
+        "x2": 2147.0,
+        "y2": 1407.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7522274851799011,
+      "reading_order": 18,
+      "text": "12. $\\mathrm{CH_3COONa} \\xrightarrow{\\mathrm{NaOH+CaO}} \\mathrm{CH_4} + \\mathrm{Na_2CO_3}$\n(X)\n\n$4\\mathrm{CO} + 2\\mathrm{H_2O} \\xrightarrow[250^\\circ\\mathrm{C}]{\\mathrm{NiCO_3}} \\mathrm{CH_4} + \\mathrm{CO_2}$\n(Y) (Z) (X)\n\nHence, the correct option is (b)."
+    },
+    {
+      "block_id": "20260312_a7ee6e7a-3a9d-409b-8561-8b9589a68fc1_8_block_018",
+      "coordinates": {
+        "x1": 1261.0,
+        "y1": 1441.0,
+        "x2": 2179.0,
+        "y2": 1879.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8898165225982666,
+      "reading_order": 19,
+      "text": "**13.** $\\mathrm{HC \\equiv CH} + 2\\mathrm{AgNO}_3 + 2\\mathrm{NH}_4\\mathrm{OH}$\n$\\downarrow$\n$\\mathrm{AgC \\equiv CAg} + 2\\mathrm{NH}_4\\mathrm{NO}_3 + 2\\mathrm{H}_2\\mathrm{O}$\nsilver acetylide white precipitate\n$\\mathrm{HC \\equiv CH} + 2\\mathrm{CuCl} \\longrightarrow \\mathrm{CuC \\equiv CCu} + 2\\mathrm{HCl}$\nCopper acetylide Red precipitate\nHence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260312_a7ee6e7a-3a9d-409b-8561-8b9589a68fc1_8_block_019",
+      "coordinates": {
+        "x1": 1264.0,
+        "y1": 1902.0,
+        "x2": 2127.0,
+        "y2": 2025.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8796833753585815,
+      "reading_order": 20,
+      "text": "14. The range of temperature is 170°C–270°C.\nHence, the correct option is (b)."
+    },
+    {
+      "block_id": "20260312_a7ee6e7a-3a9d-409b-8561-8b9589a68fc1_8_block_020",
+      "coordinates": {
+        "x1": 1256.0,
+        "y1": 2051.0,
+        "x2": 2125.0,
+        "y2": 2771.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8749715089797974,
+      "reading_order": 21,
+      "text": "15. $\\mathrm{C}_x\\mathrm{H}_y\\left(x+\\frac{y}{4}\\right)\\mathrm{O}_2 \\rightarrow x\\mathrm{CO}_2 + \\frac{y}{2}\\mathrm{H}_2\\mathrm{O}$\n\nGiven that $x: \\frac{y}{2} = 10:8$\n\n$\\Rightarrow \\frac{x}{\\left(\\frac{y}{2}\\right)} = \\frac{10}{8} \\Rightarrow \\frac{2x}{y} = \\frac{10}{8}$\n\n$\\Rightarrow \\frac{x}{y} = \\frac{5}{8}$\n\n$\\therefore X$ is $\\mathrm{C}_5\\mathrm{H}_8$.\n\n$\\therefore \\% \\text{ of C} = \\frac{5 \\times 12 \\times 100}{(5 \\times 12) + 8} = \\frac{60 \\times 100}{68} = 88.2\\%$\n\nHence, the correct option is (b)."
+    }
+  ]
+}

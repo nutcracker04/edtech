@@ -1,0 +1,216 @@
+{
+  "page_num": 1,
+  "image_width": 2402,
+  "image_height": 3001,
+  "created_at": "2026-03-12T18:58:01.564621+00:00",
+  "blocks": [
+    {
+      "block_id": "20260312_9d7fdf96-f009-43a0-9d79-0a23a69f8af4_1_block_000",
+      "coordinates": {
+        "x1": 311.0,
+        "y1": 436.0,
+        "x2": 1265.0,
+        "y2": 564.0
+      },
+      "layout_tag": "headline",
+      "confidence": 0.8671777844429016,
+      "reading_order": 1,
+      "text": "Organic Chemistry"
+    },
+    {
+      "block_id": "20260312_9d7fdf96-f009-43a0-9d79-0a23a69f8af4_1_block_001",
+      "coordinates": {
+        "x1": 1457.0,
+        "y1": 386.0,
+        "x2": 1600.0,
+        "y2": 610.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.3360329270362854,
+      "reading_order": 2,
+      "text": "7"
+    },
+    {
+      "block_id": "20260312_9d7fdf96-f009-43a0-9d79-0a23a69f8af4_1_block_002",
+      "coordinates": {
+        "x1": 1683.0,
+        "y1": 302.0,
+        "x2": 2211.0,
+        "y2": 656.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.5687617063522339,
+      "reading_order": 3,
+      "text": "There is no readable text in this image."
+    },
+    {
+      "block_id": "20260312_9d7fdf96-f009-43a0-9d79-0a23a69f8af4_1_block_003",
+      "coordinates": {
+        "x1": 181.0,
+        "y1": 709.0,
+        "x2": 2098.0,
+        "y2": 762.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.5694146156311035,
+      "reading_order": 4,
+      "text": "Reference: Coursebook - IIT Foundation Chemistry Class 9; Chapter - Organic Chemistry; Page number - 7.1–7.26"
+    },
+    {
+      "block_id": "20260312_9d7fdf96-f009-43a0-9d79-0a23a69f8af4_1_block_004",
+      "coordinates": {
+        "x1": 184.0,
+        "y1": 793.0,
+        "x2": 871.0,
+        "y2": 873.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.7656886577606201,
+      "reading_order": 5,
+      "text": "Assessment Test I"
+    },
+    {
+      "block_id": "20260312_9d7fdf96-f009-43a0-9d79-0a23a69f8af4_1_block_005",
+      "coordinates": {
+        "x1": 1450.0,
+        "y1": 823.0,
+        "x2": 1695.0,
+        "y2": 871.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.753068745136261,
+      "reading_order": 6,
+      "text": "Time: 30 min."
+    },
+    {
+      "block_id": "20260312_9d7fdf96-f009-43a0-9d79-0a23a69f8af4_1_block_006",
+      "coordinates": {
+        "x1": 181.0,
+        "y1": 949.0,
+        "x2": 1692.0,
+        "y2": 1004.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.8320905566215515,
+      "reading_order": 7,
+      "text": "Directions for questions from 1 to 15: Select the correct answer from the given options."
+    },
+    {
+      "block_id": "20260312_9d7fdf96-f009-43a0-9d79-0a23a69f8af4_1_block_007",
+      "coordinates": {
+        "x1": 237.0,
+        "y1": 1041.0,
+        "x2": 1694.0,
+        "y2": 1276.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9141041040420532,
+      "reading_order": 8,
+      "text": "1. The number of sigma and pi bonds in 4-methyl 2-hexyne are ________\nand ________, respectively.\n(a) 18 and 2 (b) 17 and 1\n(c) 17 and 2 (d) 18 and 1"
+    },
+    {
+      "block_id": "20260312_9d7fdf96-f009-43a0-9d79-0a23a69f8af4_1_block_008",
+      "coordinates": {
+        "x1": 233.0,
+        "y1": 1316.0,
+        "x2": 1695.0,
+        "y2": 1496.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9308989644050598,
+      "reading_order": 9,
+      "text": "2. Among the following, identify the formula of a compound which can exhibit\nboth chain and position isomerism.\n(a) $\\mathrm{C}_5\\mathrm{H}_{12}$ (b) $\\mathrm{C}_4\\mathrm{H}_{10}$ (c) $\\mathrm{C}_4\\mathrm{H}_6$ (d) $\\mathrm{C}_6\\mathrm{H}_{14}$"
+    },
+    {
+      "block_id": "20260312_9d7fdf96-f009-43a0-9d79-0a23a69f8af4_1_block_009",
+      "coordinates": {
+        "x1": 236.0,
+        "y1": 1521.0,
+        "x2": 1696.0,
+        "y2": 1899.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8876013159751892,
+      "reading_order": 10,
+      "text": "3. Among the following compounds, identify the compound which possesses\nsimilar root word and position of substituent as 3-methyl 1-pentene.\n(a) C—C—C—C—C—C (b) C—C=C—C—C\n| | | |\nC—C (c) C—C—C—C—C (d) C—C\n| | | |\nC (e) C—C—C—C—C"
+    },
+    {
+      "block_id": "20260312_9d7fdf96-f009-43a0-9d79-0a23a69f8af4_1_block_011",
+      "coordinates": {
+        "x1": 234.0,
+        "y1": 1913.0,
+        "x2": 1624.0,
+        "y2": 2128.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7219049334526062,
+      "reading_order": 12,
+      "text": "4. Arrange the following compounds in the increasing order of root word.\n(A) $\\mathrm{C}-\\mathrm{C}-\\mathrm{C}-\\mathrm{C}-\\mathrm{C}=\\mathrm{C}-\\mathrm{C}$\n$\\mathrm{C}-\\mathrm{C}-\\mathrm{C}$"
+    },
+    {
+      "block_id": "20260312_9d7fdf96-f009-43a0-9d79-0a23a69f8af4_1_block_012",
+      "coordinates": {
+        "x1": 373.0,
+        "y1": 2141.0,
+        "x2": 775.0,
+        "y2": 2329.0
+      },
+      "layout_tag": "image",
+      "confidence": 0.8703069686889648,
+      "reading_order": 13,
+      "text": "The image displays a skeletal chemical structure diagram of a hydrocarbon molecule, specifically 2,3-dimethylbut-2-ene. The structure consists of a carbon backbone with five carbon atoms arranged in a chain: C—C—C—C—C. The second carbon from the left is bonded to a methyl group (C) and also contains a double bond (C=C) with the fourth carbon. The fourth carbon is bonded to a methyl group (C) and the double bond. The double bond is located between the second and third carbons in the chain. The structure corresponds to the molecular formula C6H12."
+    },
+    {
+      "block_id": "20260312_9d7fdf96-f009-43a0-9d79-0a23a69f8af4_1_block_013",
+      "coordinates": {
+        "x1": 452.0,
+        "y1": 2339.0,
+        "x2": 689.0,
+        "y2": 2559.0
+      },
+      "layout_tag": "image",
+      "confidence": 0.8256622552871704,
+      "reading_order": 14,
+      "text": "The image displays a skeletal chemical structure diagram representing a segment of a hydrocarbon molecule, specifically a portion of a branched alkane. The structure is composed of carbon atoms (C) and hydrogen atoms (H), which are implied by the valency of the carbon atoms but not explicitly drawn. The diagram shows a central carbon atom bonded to three other carbon atoms. One of these attached carbons is part of a linear chain, while the other two are attached to a central carbon that is also bonded to another linear chain. The structure is symmetric, with the central carbon acting as a bridge between two methyl groups (each consisting of one carbon bonded to three hydrogens). The notation follows standard organic chemistry conventions where lines represent bonds and vertices represent carbon atoms."
+    },
+    {
+      "block_id": "20260312_9d7fdf96-f009-43a0-9d79-0a23a69f8af4_1_block_014",
+      "coordinates": {
+        "x1": 374.0,
+        "y1": 2568.0,
+        "x2": 690.0,
+        "y2": 2706.0
+      },
+      "layout_tag": "image",
+      "confidence": 0.5193377733230591,
+      "reading_order": 15,
+      "text": "$$ \\mathrm{C}-\\mathrm{C}-\\mathrm{C}=\\mathrm{C} $$\n$$ | $$\n$$ \\mathrm{C}=\\mathrm{C} $$"
+    },
+    {
+      "block_id": "20260312_9d7fdf96-f009-43a0-9d79-0a23a69f8af4_1_block_015",
+      "coordinates": {
+        "x1": 369.0,
+        "y1": 2715.0,
+        "x2": 1104.0,
+        "y2": 2854.0
+      },
+      "layout_tag": "image",
+      "confidence": 0.6702666282653809,
+      "reading_order": 16,
+      "text": "The image displays a skeletal chemical structure of a hydrocarbon chain, specifically a saturated alkane. The structure consists of a linear backbone of six carbon atoms (C), connected by single bonds. The top row shows the carbon atoms in a linear sequence: C—C—C—C—C—C. The bottom row shows the bonds connecting the carbons to hydrogen atoms, completing the valence for each carbon (each carbon is bonded to two other carbons and three hydrogens). The structure is a straight-chain alkane with the molecular formula C₆H₁₄."
+    },
+    {
+      "block_id": "20260312_9d7fdf96-f009-43a0-9d79-0a23a69f8af4_1_block_016",
+      "coordinates": {
+        "x1": 1793.0,
+        "y1": 986.0,
+        "x2": 2173.0,
+        "y2": 1038.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6203061938285828,
+      "reading_order": 17,
+      "text": "Space for rough work"
+    }
+  ]
+}

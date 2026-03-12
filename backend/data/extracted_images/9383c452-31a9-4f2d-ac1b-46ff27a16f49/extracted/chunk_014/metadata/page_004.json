@@ -1,0 +1,307 @@
+{
+  "page_num": 4,
+  "image_width": 2402,
+  "image_height": 3001,
+  "created_at": "2026-03-12T18:58:29.068933+00:00",
+  "blocks": [
+    {
+      "block_id": "20260312_a7ee6e7a-3a9d-409b-8561-8b9589a68fc1_4_block_000",
+      "coordinates": {
+        "x1": 189.0,
+        "y1": 184.0,
+        "x2": 784.0,
+        "y2": 242.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.7346277832984924,
+      "reading_order": 1,
+      "text": "A.32 Chapter 7 Organic Chemistry"
+    },
+    {
+      "block_id": "20260312_a7ee6e7a-3a9d-409b-8561-8b9589a68fc1_4_block_001",
+      "coordinates": {
+        "x1": 231.0,
+        "y1": 292.0,
+        "x2": 1174.0,
+        "y2": 536.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8299280405044556,
+      "reading_order": 2,
+      "text": "9. If X is alkene; $12 \\times 5 + 1 \\times 10 = 70 \\Rightarrow n = 5$\n\n$\\therefore$ X is $\\mathrm{C}_5\\mathrm{H}_{10}$ and nearest neighbouring homo-\nlogues are $\\mathrm{C}_4\\mathrm{H}_8$ and $\\mathrm{C}_6\\mathrm{H}_{12}$.\n\nHence, the correct option is (a)."
+    },
+    {
+      "block_id": "20260312_a7ee6e7a-3a9d-409b-8561-8b9589a68fc1_4_block_002",
+      "coordinates": {
+        "x1": 215.0,
+        "y1": 567.0,
+        "x2": 1176.0,
+        "y2": 884.0
+      },
+      "layout_tag": "image",
+      "confidence": 0.49341607093811035,
+      "reading_order": 3,
+      "text": "**10.** $\\mathrm{C_2H_5—OH} \\xrightarrow[\\mathrm{350^\\circ C}]{\\mathrm{Al_2O_3}} \\mathrm{CH_2=CH_2} \\xrightarrow{\\mathrm{O_3/Zn,H_2O}}$\n\nEthyl alcohol Ethene\n(A) 2HCHO\nFormaldehyde\n(B)"
+    },
+    {
+      "block_id": "20260312_a7ee6e7a-3a9d-409b-8561-8b9589a68fc1_4_block_003",
+      "coordinates": {
+        "x1": 294.0,
+        "y1": 894.0,
+        "x2": 884.0,
+        "y2": 946.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.445402055978775,
+      "reading_order": 4,
+      "text": "Hence, the correct option is (b)."
+    },
+    {
+      "block_id": "20260312_a7ee6e7a-3a9d-409b-8561-8b9589a68fc1_4_block_004",
+      "coordinates": {
+        "x1": 217.0,
+        "y1": 971.0,
+        "x2": 1172.0,
+        "y2": 1385.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6770898103713989,
+      "reading_order": 5,
+      "text": "**11.** $\\mathrm{C}_x\\mathrm{H}_y + (x + y/4)\\mathrm{O}_2 \\longrightarrow x\\mathrm{CO}_2 + y/2\\mathrm{H}_2\\mathrm{O}$\n$\\therefore x = 2, y/2 = 2 \\Rightarrow y = 4$\n$\\therefore$ X is $\\mathrm{C}_2\\mathrm{H}_4$ (ethene)\nEthene can be prepared by dehydration of\nethyl alcohol in the presence of conc. $\\mathrm{H}_2\\mathrm{SO}_4$ at\n$180^\\circ\\mathrm{C}$.\nHence, the correct option is (b)."
+    },
+    {
+      "block_id": "20260312_a7ee6e7a-3a9d-409b-8561-8b9589a68fc1_4_block_005",
+      "coordinates": {
+        "x1": 213.0,
+        "y1": 1413.0,
+        "x2": 1171.0,
+        "y2": 1513.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7904381155967712,
+      "reading_order": 6,
+      "text": "12. Alkyne with least number of carbon atoms is ethyne."
+    },
+    {
+      "block_id": "20260312_a7ee6e7a-3a9d-409b-8561-8b9589a68fc1_4_block_006",
+      "coordinates": {
+        "x1": 290.0,
+        "y1": 1514.0,
+        "x2": 1174.0,
+        "y2": 1959.0
+      },
+      "layout_tag": "image",
+      "confidence": 0.833270788192749,
+      "reading_order": 7,
+      "text": "The image displays a chemical reaction scheme illustrating the stepwise bromination of ethyne (acetylene). The process begins with the reaction of ethyne ($\\text{CH}\\equiv\\text{CH}$) with bromine ($\\text{Br}_2$), indicated by a reaction arrow. This first step yields 1,2-dibromoethene, where the triple bond is converted to a double bond, and two bromine atoms are attached to the terminal carbons. A second reaction arrow indicates that 1,2-dibromoethene can undergo further bromination with $\\text{Br}_2$. This second step results in the formation of 1,1,2,2-tetrabromoethane, where all four hydrogen atoms on the central carbon atoms are replaced by bromine atoms. The text labels identify the starting material as \"Ethyne\" and the final product as \"1,1,2,2-tetrabromoethane\". The chemical structures are drawn with standard skeletal formulas, showing carbon atoms as vertices and hydrogen atoms as implied by the valency, with bromine atoms explicitly labeled."
+    },
+    {
+      "block_id": "20260312_a7ee6e7a-3a9d-409b-8561-8b9589a68fc1_4_block_007",
+      "coordinates": {
+        "x1": 294.0,
+        "y1": 1981.0,
+        "x2": 887.0,
+        "y2": 2036.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5045981407165527,
+      "reading_order": 8,
+      "text": "Hence, the correct option is (d)."
+    },
+    {
+      "block_id": "20260312_a7ee6e7a-3a9d-409b-8561-8b9589a68fc1_4_block_008",
+      "coordinates": {
+        "x1": 214.0,
+        "y1": 2060.0,
+        "x2": 1171.0,
+        "y2": 2219.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.675386369228363,
+      "reading_order": 9,
+      "text": "13. Since chlorination of methane is a substitution\nreaction, the total number of bonds remains\nsame."
+    },
+    {
+      "block_id": "20260312_a7ee6e7a-3a9d-409b-8561-8b9589a68fc1_4_block_009",
+      "coordinates": {
+        "x1": 290.0,
+        "y1": 2239.0,
+        "x2": 881.0,
+        "y2": 2294.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.39054837822914124,
+      "reading_order": 10,
+      "text": "Hence, the correct option is (a)."
+    },
+    {
+      "block_id": "20260312_a7ee6e7a-3a9d-409b-8561-8b9589a68fc1_4_block_010",
+      "coordinates": {
+        "x1": 215.0,
+        "y1": 2318.0,
+        "x2": 1170.0,
+        "y2": 2552.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.753584623336792,
+      "reading_order": 11,
+      "text": "14. Saturated hydrocarbon with vapour density 8\nis methane which can be prepared by decar-\nboxylation of sodium acetate.\nHence, the correct option is (b)."
+    },
+    {
+      "block_id": "20260312_a7ee6e7a-3a9d-409b-8561-8b9589a68fc1_4_block_011",
+      "coordinates": {
+        "x1": 211.0,
+        "y1": 2574.0,
+        "x2": 1175.0,
+        "y2": 2758.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.48568424582481384,
+      "reading_order": 12,
+      "text": "15. Butanol and diethyl ether are functional\nisomers.\n\nHence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260312_a7ee6e7a-3a9d-409b-8561-8b9589a68fc1_4_block_012",
+      "coordinates": {
+        "x1": 1239.0,
+        "y1": 292.0,
+        "x2": 1685.0,
+        "y2": 348.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.8052286505699158,
+      "reading_order": 13,
+      "text": "Assessment Test II"
+    },
+    {
+      "block_id": "20260312_a7ee6e7a-3a9d-409b-8561-8b9589a68fc1_4_block_013",
+      "coordinates": {
+        "x1": 1285.0,
+        "y1": 389.0,
+        "x2": 1511.0,
+        "y2": 439.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.46717602014541626,
+      "reading_order": 14,
+      "text": "1. Toluene"
+    },
+    {
+      "block_id": "20260312_a7ee6e7a-3a9d-409b-8561-8b9589a68fc1_4_block_014",
+      "coordinates": {
+        "x1": 1408.0,
+        "y1": 456.0,
+        "x2": 2026.0,
+        "y2": 951.0
+      },
+      "layout_tag": "image",
+      "confidence": 0.7188441753387451,
+      "reading_order": 15,
+      "text": "The image is a chemical diagram illustrating the calculation of the total number of Carbon-Carbon (C-C) bonds in a specific organic molecule. The diagram features a structural representation of a benzene ring, where a methyl group (-CH3) is attached to one of the ring carbons. Below the structure, a mathematical equation is presented: \"Total C – C bonds = 7 + 3 = 10\". Two downward-pointing arrows are drawn beneath the equals sign, directing attention to the text \"sigma pi\" below them. This notation indicates that the total of 10 bonds consists of 7 sigma bonds and 3 pi bonds."
+    },
+    {
+      "block_id": "20260312_a7ee6e7a-3a9d-409b-8561-8b9589a68fc1_4_block_015",
+      "coordinates": {
+        "x1": 1346.0,
+        "y1": 973.0,
+        "x2": 1594.0,
+        "y2": 1024.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5437707901000977,
+      "reading_order": 16,
+      "text": "Benzoic acid"
+    },
+    {
+      "block_id": "20260312_a7ee6e7a-3a9d-409b-8561-8b9589a68fc1_4_block_016",
+      "coordinates": {
+        "x1": 1340.0,
+        "y1": 1045.0,
+        "x2": 1956.0,
+        "y2": 1633.0
+      },
+      "layout_tag": "image",
+      "confidence": 0.5707685351371765,
+      "reading_order": 17,
+      "text": "The image displays a chemical diagram illustrating the structure and bonding of Benzoic acid. At the top, the chemical structure of Benzoic acid is shown, featuring a benzene ring with a carboxylic acid group (-COOH) attached to one of the ring carbons. Below the structure, the text identifies the molecule as \"Benzoic acid\". A mathematical equation is presented: \"Total C – C bonds = 7 + 3 = 10\". Two downward-pointing arrows originate from the numbers 7 and 3, pointing to the text \"sigma pi\", indicating the classification of these bonds as sigma and pi bonds. Finally, the text concludes with \"Hence, the correct option is (d).\""
+    },
+    {
+      "block_id": "20260312_a7ee6e7a-3a9d-409b-8561-8b9589a68fc1_4_block_018",
+      "coordinates": {
+        "x1": 1342.0,
+        "y1": 1586.0,
+        "x2": 1936.0,
+        "y2": 1640.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.42148396372795105,
+      "reading_order": 19,
+      "text": "Hence, the correct option is (d)."
+    },
+    {
+      "block_id": "20260312_a7ee6e7a-3a9d-409b-8561-8b9589a68fc1_4_block_019",
+      "coordinates": {
+        "x1": 1282.0,
+        "y1": 1662.0,
+        "x2": 1941.0,
+        "y2": 1722.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6184764504432678,
+      "reading_order": 20,
+      "text": "2. X is $\\mathrm{C}_5\\mathrm{H}_{10}$ (2-methyle 1-butene)"
+    },
+    {
+      "block_id": "20260312_a7ee6e7a-3a9d-409b-8561-8b9589a68fc1_4_block_020",
+      "coordinates": {
+        "x1": 1418.0,
+        "y1": 1733.0,
+        "x2": 1881.0,
+        "y2": 1958.0
+      },
+      "layout_tag": "image",
+      "confidence": 0.670437753200531,
+      "reading_order": 21,
+      "text": "The image displays a skeletal chemical structure of an organic molecule, specifically 2-methyl 1-butene, labeled as (X). The structure consists of a carbon chain with a double bond. The main chain is written as $\\mathrm{CH_2=C-CH_2-CH_3}$. A vertical line indicates a branching point, with a methyl group ($\\mathrm{CH_3}$) attached to the second carbon of the main chain. The text \"2-methyl 1-butene (X)\" is positioned below the structure, identifying the compound."
+    },
+    {
+      "block_id": "20260312_a7ee6e7a-3a9d-409b-8561-8b9589a68fc1_4_block_021",
+      "coordinates": {
+        "x1": 1352.0,
+        "y1": 1996.0,
+        "x2": 1898.0,
+        "y2": 2217.0
+      },
+      "layout_tag": "image",
+      "confidence": 0.7272390723228455,
+      "reading_order": 22,
+      "text": "(b) $\\mathrm{CH_2=CH-CH-CH_3}$\n|\n$\\mathrm{CH_3}$\n3-methyl 1-butene"
+    },
+    {
+      "block_id": "20260312_a7ee6e7a-3a9d-409b-8561-8b9589a68fc1_4_block_022",
+      "coordinates": {
+        "x1": 1423.0,
+        "y1": 2258.0,
+        "x2": 1863.0,
+        "y2": 2477.0
+      },
+      "layout_tag": "image",
+      "confidence": 0.7538785338401794,
+      "reading_order": 23,
+      "text": "The image displays a skeletal chemical structure of an organic molecule, specifically 2-methyl 2-butene. The structure is written using standard line notation. The main carbon chain consists of four carbon atoms connected by alternating single and double bonds (a conjugated system), specifically CH₃—C=CH—CH₃. A vertical line indicates a branch point, where a methyl group (CH₃) is attached to the second carbon of the chain. The text \"2–methyl 2 – butene\" is positioned below the structure, identifying the compound."
+    },
+    {
+      "block_id": "20260312_a7ee6e7a-3a9d-409b-8561-8b9589a68fc1_4_block_023",
+      "coordinates": {
+        "x1": 1346.0,
+        "y1": 2516.0,
+        "x2": 2064.0,
+        "y2": 2745.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.4321482181549072,
+      "reading_order": 24,
+      "text": "(d) $\\mathrm{CH}_2=\\mathrm{CH}-\\mathrm{CH}_2-\\mathrm{CH}_2-\\mathrm{CH}_3$\n1-pentene is the chain isomer of X.\nHence, the correct option is (d)."
+    }
+  ]
+}

@@ -1,0 +1,359 @@
+{
+  "page_num": 5,
+  "image_width": 2402,
+  "image_height": 3001,
+  "created_at": "2026-03-12T18:58:01.586307+00:00",
+  "blocks": [
+    {
+      "block_id": "20260312_9d7fdf96-f009-43a0-9d79-0a23a69f8af4_5_block_000",
+      "coordinates": {
+        "x1": 1764.0,
+        "y1": 187.0,
+        "x2": 2054.0,
+        "y2": 238.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.8569424748420715,
+      "reading_order": 1,
+      "text": "Assessment Test II"
+    },
+    {
+      "block_id": "20260312_9d7fdf96-f009-43a0-9d79-0a23a69f8af4_5_block_001",
+      "coordinates": {
+        "x1": 2107.0,
+        "y1": 185.0,
+        "x2": 2196.0,
+        "y2": 236.0
+      },
+      "layout_tag": "page-number",
+      "confidence": 0.7894994020462036,
+      "reading_order": 2,
+      "text": "7.5"
+    },
+    {
+      "block_id": "20260312_9d7fdf96-f009-43a0-9d79-0a23a69f8af4_5_block_002",
+      "coordinates": {
+        "x1": 289.0,
+        "y1": 290.0,
+        "x2": 1474.0,
+        "y2": 344.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8096961975097656,
+      "reading_order": 3,
+      "text": "(a) Both A and R are true and R is the correct explanation of A."
+    },
+    {
+      "block_id": "20260312_9d7fdf96-f009-43a0-9d79-0a23a69f8af4_5_block_003",
+      "coordinates": {
+        "x1": 290.0,
+        "y1": 353.0,
+        "x2": 1488.0,
+        "y2": 407.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8001794815063477,
+      "reading_order": 4,
+      "text": "(b) Both A and R are true, but R is not the correct explanation of A."
+    },
+    {
+      "block_id": "20260312_9d7fdf96-f009-43a0-9d79-0a23a69f8af4_5_block_004",
+      "coordinates": {
+        "x1": 293.0,
+        "y1": 415.0,
+        "x2": 808.0,
+        "y2": 469.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7629950046539307,
+      "reading_order": 5,
+      "text": "(c) A is true and R is false."
+    },
+    {
+      "block_id": "20260312_9d7fdf96-f009-43a0-9d79-0a23a69f8af4_5_block_005",
+      "coordinates": {
+        "x1": 294.0,
+        "y1": 479.0,
+        "x2": 806.0,
+        "y2": 533.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8006952404975891,
+      "reading_order": 6,
+      "text": "(d) A is false and R is true."
+    },
+    {
+      "block_id": "20260312_9d7fdf96-f009-43a0-9d79-0a23a69f8af4_5_block_006",
+      "coordinates": {
+        "x1": 235.0,
+        "y1": 556.0,
+        "x2": 1696.0,
+        "y2": 664.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.7331501245498657,
+      "reading_order": 7,
+      "text": "7. Assertion (A): Ethene and ethyne can be distinguished by alkaline KMnO₄ solution."
+    },
+    {
+      "block_id": "20260312_9d7fdf96-f009-43a0-9d79-0a23a69f8af4_5_block_007",
+      "coordinates": {
+        "x1": 292.0,
+        "y1": 682.0,
+        "x2": 1505.0,
+        "y2": 738.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8134013414382935,
+      "reading_order": 8,
+      "text": "**Reason (R):** Alkaline KMnO₄ solution is a good oxidizing agent."
+    },
+    {
+      "block_id": "20260312_9d7fdf96-f009-43a0-9d79-0a23a69f8af4_5_block_008",
+      "coordinates": {
+        "x1": 291.0,
+        "y1": 746.0,
+        "x2": 1473.0,
+        "y2": 799.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8189160227775574,
+      "reading_order": 9,
+      "text": "(a) Both A and R are true and R is the correct explanation of A."
+    },
+    {
+      "block_id": "20260312_9d7fdf96-f009-43a0-9d79-0a23a69f8af4_5_block_009",
+      "coordinates": {
+        "x1": 289.0,
+        "y1": 807.0,
+        "x2": 1489.0,
+        "y2": 861.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8188199400901794,
+      "reading_order": 10,
+      "text": "(b) Both A and R are true, but R is not the correct explanation of A."
+    },
+    {
+      "block_id": "20260312_9d7fdf96-f009-43a0-9d79-0a23a69f8af4_5_block_010",
+      "coordinates": {
+        "x1": 293.0,
+        "y1": 871.0,
+        "x2": 806.0,
+        "y2": 924.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7812383770942688,
+      "reading_order": 11,
+      "text": "(c) A is true and R is false."
+    },
+    {
+      "block_id": "20260312_9d7fdf96-f009-43a0-9d79-0a23a69f8af4_5_block_011",
+      "coordinates": {
+        "x1": 294.0,
+        "y1": 934.0,
+        "x2": 806.0,
+        "y2": 985.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.78870689868927,
+      "reading_order": 12,
+      "text": "(d) A is false and R is true."
+    },
+    {
+      "block_id": "20260312_9d7fdf96-f009-43a0-9d79-0a23a69f8af4_5_block_012",
+      "coordinates": {
+        "x1": 234.0,
+        "y1": 1011.0,
+        "x2": 1332.0,
+        "y2": 1064.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5077251195907593,
+      "reading_order": 13,
+      "text": "8. Match the entries of Column A with those of Column B."
+    },
+    {
+      "block_id": "20260312_9d7fdf96-f009-43a0-9d79-0a23a69f8af4_5_block_013",
+      "coordinates": {
+        "x1": 291.0,
+        "y1": 1076.0,
+        "x2": 1041.0,
+        "y2": 1397.0
+      },
+      "layout_tag": "table",
+      "confidence": 0.7297724485397339,
+      "reading_order": 14,
+      "text": "<table>\n<thead>\n<tr>\n<th>Column A</th>\n<th>Column B</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>(i) Middle oil</td>\n<td>(A) > 400°C</td>\n</tr>\n<tr>\n<td>(ii) Heavy oil</td>\n<td>(B) 170°C – 230°C</td>\n</tr>\n<tr>\n<td>(iii) Green oil</td>\n<td>(C) 230°C – 270°C</td>\n</tr>\n<tr>\n<td>(iv) Residue</td>\n<td>(D) 270°C – 400°C</td>\n</tr>\n</tbody>\n</table>"
+    },
+    {
+      "block_id": "20260312_9d7fdf96-f009-43a0-9d79-0a23a69f8af4_5_block_014",
+      "coordinates": {
+        "x1": 292.0,
+        "y1": 1417.0,
+        "x2": 1252.0,
+        "y2": 1474.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7597562074661255,
+      "reading_order": 15,
+      "text": "(a) (i) $\\rightarrow$ (B); (ii) $\\rightarrow$ (A); (iii) $\\rightarrow$ (D); (iv) $\\rightarrow$ (C)"
+    },
+    {
+      "block_id": "20260312_9d7fdf96-f009-43a0-9d79-0a23a69f8af4_5_block_015",
+      "coordinates": {
+        "x1": 293.0,
+        "y1": 1481.0,
+        "x2": 1251.0,
+        "y2": 1538.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7222752571105957,
+      "reading_order": 16,
+      "text": "(b) (i) $\\rightarrow$ (D); (ii) $\\rightarrow$ (C); (iii) $\\rightarrow$ (B); (iv) $\\rightarrow$ (A)"
+    },
+    {
+      "block_id": "20260312_9d7fdf96-f009-43a0-9d79-0a23a69f8af4_5_block_016",
+      "coordinates": {
+        "x1": 292.0,
+        "y1": 1544.0,
+        "x2": 1251.0,
+        "y2": 1600.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7530379891395569,
+      "reading_order": 17,
+      "text": "(c) (i) $\\rightarrow$ (C); (ii) $\\rightarrow$ (D); (iii) $\\rightarrow$ (A); (iv) $\\rightarrow$ (B)"
+    },
+    {
+      "block_id": "20260312_9d7fdf96-f009-43a0-9d79-0a23a69f8af4_5_block_017",
+      "coordinates": {
+        "x1": 292.0,
+        "y1": 1607.0,
+        "x2": 1251.0,
+        "y2": 1662.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.72757488489151,
+      "reading_order": 18,
+      "text": "(d) (i) → (B); (ii) → (C); (iii) → (D); (iv) → (A)"
+    },
+    {
+      "block_id": "20260312_9d7fdf96-f009-43a0-9d79-0a23a69f8af4_5_block_018",
+      "coordinates": {
+        "x1": 235.0,
+        "y1": 1686.0,
+        "x2": 1695.0,
+        "y2": 1946.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.4617989659309387,
+      "reading_order": 19,
+      "text": "9. Two homologues of a series differ by 56 in their molecular mass. What could\nbe their molecular formulae?\n(a) $\\mathrm{C}_6\\mathrm{H}_{14}$ and $\\mathrm{C}_9\\mathrm{H}_{20}$ (b) $\\mathrm{C}_2\\mathrm{H}_6$ and $\\mathrm{C}_6\\mathrm{H}_{12}$\n(c) $\\mathrm{C}_4\\mathrm{H}_8$ and $\\mathrm{C}_8\\mathrm{H}_{14}$ (d) $\\mathrm{C}_4\\mathrm{H}_{10}$ and $\\mathrm{C}_8\\mathrm{H}_{18}$"
+    },
+    {
+      "block_id": "20260312_9d7fdf96-f009-43a0-9d79-0a23a69f8af4_5_block_019",
+      "coordinates": {
+        "x1": 238.0,
+        "y1": 1980.0,
+        "x2": 1701.0,
+        "y2": 2404.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.31400012969970703,
+      "reading_order": 20,
+      "text": "10. In the following reaction, compound A, on treatment with water, gives B.\nWhat could be A and B?\nA $\\xrightarrow{\\text{Alkaline KMnO}_4}$ Ethene glycol.\n(a) A → Ethene, B → Acetaldehyde\n(b) A → Ethyne, B → Ethyl alcohol\n(c) A → Ethene, B → Ethyl alcohol\n(d) A → Ethyne, B → Acetaldehyde"
+    },
+    {
+      "block_id": "20260312_9d7fdf96-f009-43a0-9d79-0a23a69f8af4_5_block_020",
+      "coordinates": {
+        "x1": 294.0,
+        "y1": 2369.0,
+        "x2": 973.0,
+        "y2": 2425.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7745876908302307,
+      "reading_order": 21,
+      "text": "(d) A → Ethyne, B → Acetaldehyde"
+    },
+    {
+      "block_id": "20260312_9d7fdf96-f009-43a0-9d79-0a23a69f8af4_5_block_021",
+      "coordinates": {
+        "x1": 217.0,
+        "y1": 2448.0,
+        "x2": 1696.0,
+        "y2": 2557.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.838300883769989,
+      "reading_order": 22,
+      "text": "11. Alkane 'X' with six carbon atoms on cracking gives alkane 'Y' and alkene 'Z'. Identify the correct statement regarding Z."
+    },
+    {
+      "block_id": "20260312_9d7fdf96-f009-43a0-9d79-0a23a69f8af4_5_block_022",
+      "coordinates": {
+        "x1": 291.0,
+        "y1": 2573.0,
+        "x2": 1040.0,
+        "y2": 2628.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8425458669662476,
+      "reading_order": 23,
+      "text": "(a) Z on polymerisation gives benzene."
+    },
+    {
+      "block_id": "20260312_9d7fdf96-f009-43a0-9d79-0a23a69f8af4_5_block_023",
+      "coordinates": {
+        "x1": 290.0,
+        "y1": 2635.0,
+        "x2": 1462.0,
+        "y2": 2690.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8569672107696533,
+      "reading_order": 24,
+      "text": "(b) Z gives red precipitate with ammoniacal cuprous chloride."
+    },
+    {
+      "block_id": "20260312_9d7fdf96-f009-43a0-9d79-0a23a69f8af4_5_block_024",
+      "coordinates": {
+        "x1": 294.0,
+        "y1": 2700.0,
+        "x2": 1701.0,
+        "y2": 2805.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.886030375957489,
+      "reading_order": 25,
+      "text": "(c) Z can be prepared by dehydration of ethyl alcohol in the presence of\n$\\mathrm{Al}_2\\mathrm{O}_3$ at 170°C."
+    },
+    {
+      "block_id": "20260312_9d7fdf96-f009-43a0-9d79-0a23a69f8af4_5_block_025",
+      "coordinates": {
+        "x1": 293.0,
+        "y1": 2815.0,
+        "x2": 971.0,
+        "y2": 2870.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.838972270488739,
+      "reading_order": 26,
+      "text": "(d) Z is used in oxyacetylene flame."
+    },
+    {
+      "block_id": "20260312_9d7fdf96-f009-43a0-9d79-0a23a69f8af4_5_block_026",
+      "coordinates": {
+        "x1": 1792.0,
+        "y1": 312.0,
+        "x2": 2174.0,
+        "y2": 364.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6862167119979858,
+      "reading_order": 27,
+      "text": "Space for rough work"
+    }
+  ]
+}

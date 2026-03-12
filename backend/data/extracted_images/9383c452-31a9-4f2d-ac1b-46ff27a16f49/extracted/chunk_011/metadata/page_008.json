@@ -1,0 +1,242 @@
+{
+  "page_num": 8,
+  "image_width": 2402,
+  "image_height": 3001,
+  "created_at": "2026-03-12T18:58:08.020560+00:00",
+  "blocks": [
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_8_block_000",
+      "coordinates": {
+        "x1": 200.0,
+        "y1": 186.0,
+        "x2": 765.0,
+        "y2": 241.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.6931443214416504,
+      "reading_order": 1,
+      "text": "A.6 Chapter 2 Atomic Structure"
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_8_block_001",
+      "coordinates": {
+        "x1": 218.0,
+        "y1": 292.0,
+        "x2": 1170.0,
+        "y2": 525.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8884141445159912,
+      "reading_order": 2,
+      "text": "13. 8 electrons in the last orbit make the atom sta-\nble (unreactive) because they remain in low-\nenergy state.\n\nHence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_8_block_002",
+      "coordinates": {
+        "x1": 219.0,
+        "y1": 554.0,
+        "x2": 1171.0,
+        "y2": 929.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9391111731529236,
+      "reading_order": 3,
+      "text": "14. From J. J. Thomson’s experiment, $\\frac{e}{m}$ ratio (specific\ncharge) can be calculated and from Millikan’s oil\ndrop experiment, charge of an electron can be\ncalculated. Hence, dividing $e$ by $\\frac{e}{m}$, mass of the\nelectron can be calculated.\n\nHence, the correct option is (a)."
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_8_block_003",
+      "coordinates": {
+        "x1": 213.0,
+        "y1": 955.0,
+        "x2": 1080.0,
+        "y2": 1348.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.925096869468689,
+      "reading_order": 4,
+      "text": "15. 5th orbit to 3rd orbit $\\rightarrow$ 3\n4th orbit to 1st orbit $\\rightarrow$ 6\n6th orbit to 2nd orbit $\\rightarrow$ 10\n5th orbit to 4th orbit $\\rightarrow$ 1\n(i) $\\rightarrow$ (D), (ii) $\\rightarrow$ (C), (iii) $\\rightarrow$ (A), (iv) $\\rightarrow$ (B)\nHence, the correct option is (d)."
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_8_block_004",
+      "coordinates": {
+        "x1": 195.0,
+        "y1": 1379.0,
+        "x2": 629.0,
+        "y2": 1433.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.820105791091919,
+      "reading_order": 5,
+      "text": "Assessment Test II"
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_8_block_005",
+      "coordinates": {
+        "x1": 234.0,
+        "y1": 1476.0,
+        "x2": 1171.0,
+        "y2": 1715.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9097217321395874,
+      "reading_order": 6,
+      "text": "1. The electronic configuration of the element is 2,\n8, 14, and 2.\n$\\therefore$ The element is iron.\nHence, the correct option is (a)."
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_8_block_006",
+      "coordinates": {
+        "x1": 232.0,
+        "y1": 1740.0,
+        "x2": 1171.0,
+        "y2": 1921.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8737321496009827,
+      "reading_order": 7,
+      "text": "2. The electronic configuration of zinc is 2, 8, 18, 2\n$[x, (x + y), 3y, x]$.\nHence, the correct option is (a)."
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_8_block_007",
+      "coordinates": {
+        "x1": 235.0,
+        "y1": 1945.0,
+        "x2": 1169.0,
+        "y2": 2071.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8674861788749695,
+      "reading_order": 8,
+      "text": "3. Atoms of same element are identical in all aspects.\nHence, the correct option is (b)."
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_8_block_008",
+      "coordinates": {
+        "x1": 247.0,
+        "y1": 2101.0,
+        "x2": 1170.0,
+        "y2": 2627.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7801012396812439,
+      "reading_order": 9,
+      "text": "4. Given that $Z_p: Z_Q = 2:7$\n\n$$ r_4 = \\frac{-13.6 \\times Z^2}{n^2} $$\n\n$$ \\Rightarrow -13.6 = \\frac{-13.6 \\times Z_p^2}{4^2} \\Rightarrow Z_p = 4 $$\n\n$\\therefore Z_Q = 14$\n\nElectronic configuration of $Q$ is 2, 8, and 4.\n\n$\\therefore$ Difference in number of electrons $= 8 - 4 = 4$\n\nHence, the correct option is (b)."
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_8_block_009",
+      "coordinates": {
+        "x1": 234.0,
+        "y1": 2640.0,
+        "x2": 1122.0,
+        "y2": 2830.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9150587320327759,
+      "reading_order": 10,
+      "text": "5. Electronic configuration of X is 2, 8 and 5.\n$\\therefore$ Electronic configuration of Y is 2, 8 and 8.\nHence, the correct option is (b)."
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_8_block_010",
+      "coordinates": {
+        "x1": 1286.0,
+        "y1": 292.0,
+        "x2": 2219.0,
+        "y2": 526.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9178030490875244,
+      "reading_order": 11,
+      "text": "6. According to Bohr’s atomic model, a fixed\namount of energy is emitted when an electron\njumps from an outer orbit to an inner orbit.\nHence, the correct option is (d)."
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_8_block_011",
+      "coordinates": {
+        "x1": 1283.0,
+        "y1": 541.0,
+        "x2": 2220.0,
+        "y2": 774.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.4942931830883026,
+      "reading_order": 12,
+      "text": "7. $\\alpha$-ray scattering experiment was carried out to\nprove the correctness of J. J. Thomson’s atomic\nmodel.\n\nHence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_8_block_012",
+      "coordinates": {
+        "x1": 1286.0,
+        "y1": 807.0,
+        "x2": 2161.0,
+        "y2": 1415.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5777783989906311,
+      "reading_order": 13,
+      "text": "8. $\\frac{A \\times m + (A + 2)n}{m + n} = A + 1.25$\nwhere $A$ is atomic weight of lighter isotope.\n$(A + Z)$ is atomic weight of heavier isotope\n$m$ is % abundance of lighter isotope.\n$n$ is % abundance of heaver isotope.\n$\\therefore mA + nA + 2n = mA + nA + 1.25m + 1.25n$\n$\\therefore 0.75n = 1.25m$\n$\\therefore \\frac{m}{n} = \\frac{0.75}{1.25} = \\frac{3}{5}$"
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_8_block_013",
+      "coordinates": {
+        "x1": 1343.0,
+        "y1": 1413.0,
+        "x2": 1926.0,
+        "y2": 1466.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.2602430582046509,
+      "reading_order": 14,
+      "text": "Hence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_8_block_014",
+      "coordinates": {
+        "x1": 1283.0,
+        "y1": 1490.0,
+        "x2": 1934.0,
+        "y2": 1880.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7045150995254517,
+      "reading_order": 15,
+      "text": "9. $r_3 = \\frac{0.529 \\times n^2}{Z}$\n\n$\\therefore x = \\frac{0.529 \\times 9}{Z}$\n\n$\\therefore Z = \\frac{4.761}{x}$\n\nHence, the correct option is (a)."
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_8_block_015",
+      "coordinates": {
+        "x1": 1267.0,
+        "y1": 1935.0,
+        "x2": 1336.0,
+        "y2": 2001.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.2891045808792114,
+      "reading_order": 16,
+      "text": "10."
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_8_block_016",
+      "coordinates": {
+        "x1": 1272.0,
+        "y1": 1918.0,
+        "x2": 2135.0,
+        "y2": 2419.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8755092024803162,
+      "reading_order": 17,
+      "text": "10. $r_4 = \\frac{0.529 \\times 4^2}{Z} A^\\circ$\n\n$\\therefore 2.116 = \\frac{0.529 \\times 4^2}{Z}$\n\n$\\therefore Z = \\frac{0.529 \\times 4^2}{2.116} = 4$\n\n$\\therefore E_4 = \\frac{-13.6 \\times n^2}{Z^2} \\mathrm{eV} = \\frac{-13.6 \\times 4^2}{4^2} = -13.6 \\mathrm{eV}$\n\nHence, the correct option is (b)."
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_8_block_017",
+      "coordinates": {
+        "x1": 1264.0,
+        "y1": 2443.0,
+        "x2": 1940.0,
+        "y2": 2819.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9129295945167542,
+      "reading_order": 18,
+      "text": "11. Atomic number of P is 24.\nAtomic number of Q is 32.\nAtomic number of R is 19.\nAtomic number of S is 36.\nThe order is DBAC.\nHence, the correct option is (d)."
+    }
+  ]
+}

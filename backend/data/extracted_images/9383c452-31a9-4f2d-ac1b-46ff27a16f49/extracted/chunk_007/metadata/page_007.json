@@ -1,0 +1,138 @@
+{
+  "page_num": 7,
+  "image_width": 2402,
+  "image_height": 3001,
+  "created_at": "2026-03-12T18:57:27.956153+00:00",
+  "blocks": [
+    {
+      "block_id": "20260312_6a45e4ef-ea6b-4c57-a0bb-e2a23306d763_7_block_000",
+      "coordinates": {
+        "x1": 1772.0,
+        "y1": 187.0,
+        "x2": 2054.0,
+        "y2": 238.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.8604183197021484,
+      "reading_order": 1,
+      "text": "Assessment Test I"
+    },
+    {
+      "block_id": "20260312_6a45e4ef-ea6b-4c57-a0bb-e2a23306d763_7_block_001",
+      "coordinates": {
+        "x1": 2109.0,
+        "y1": 186.0,
+        "x2": 2196.0,
+        "y2": 235.0
+      },
+      "layout_tag": "page-number",
+      "confidence": 0.7886480689048767,
+      "reading_order": 2,
+      "text": "5.3"
+    },
+    {
+      "block_id": "20260312_6a45e4ef-ea6b-4c57-a0bb-e2a23306d763_7_block_002",
+      "coordinates": {
+        "x1": 217.0,
+        "y1": 291.0,
+        "x2": 1696.0,
+        "y2": 464.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9293420910835266,
+      "reading_order": 3,
+      "text": "11. A trivalent metallic oxide contains 68.4% by weight of metal. What could be\nthe atomic weight of the metal?\n(a) 27 (b) 39 (c) 52 (d) 152"
+    },
+    {
+      "block_id": "20260312_6a45e4ef-ea6b-4c57-a0bb-e2a23306d763_7_block_003",
+      "coordinates": {
+        "x1": 215.0,
+        "y1": 526.0,
+        "x2": 1699.0,
+        "y2": 868.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9507787823677063,
+      "reading_order": 4,
+      "text": "12. 70 g of a mixture of sodium carbonate and sodium bicarbonate is taken and\nsubjected to heating until there is no further loss in weight. The heating was\nfollowed by condensation. The loss in weight of the sample was 15.7% of the\ninitial weight of the mixture. Find out the amount of the sodium carbonate\nin the mixture.\n(a) 42 g (b) 53 g (c) 28 g (d) 64 g"
+    },
+    {
+      "block_id": "20260312_6a45e4ef-ea6b-4c57-a0bb-e2a23306d763_7_block_004",
+      "coordinates": {
+        "x1": 217.0,
+        "y1": 921.0,
+        "x2": 1694.0,
+        "y2": 1150.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9383946061134338,
+      "reading_order": 5,
+      "text": "13. When 1.225 kg of potassium chlorate was subjected to decomposition, the\noxygen evolved in the reaction occupied a volume of 224 L. What would be\nthe percentage purity of potassium chlorate?\n(a) 82% (b) 30% (c) 66% (d) 25%"
+    },
+    {
+      "block_id": "20260312_6a45e4ef-ea6b-4c57-a0bb-e2a23306d763_7_block_005",
+      "coordinates": {
+        "x1": 215.0,
+        "y1": 1208.0,
+        "x2": 1408.0,
+        "y2": 1260.0
+      },
+      "layout_tag": "image-caption",
+      "confidence": 0.7332445383071899,
+      "reading_order": 6,
+      "text": "14. Match the statements of Column A with those of Column B."
+    },
+    {
+      "block_id": "20260312_6a45e4ef-ea6b-4c57-a0bb-e2a23306d763_7_block_006",
+      "coordinates": {
+        "x1": 298.0,
+        "y1": 1285.0,
+        "x2": 1518.0,
+        "y2": 1721.0
+      },
+      "layout_tag": "table",
+      "confidence": 0.9494885802268982,
+      "reading_order": 7,
+      "text": "<table>\n<thead>\n<tr>\n<th>Column A<br/>(Formula of Hydrocarbon)</th>\n<th>Column B<br/>(Volume Ratio of CO2 and H2O<br/>at STP)</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>(i) C2H2</td>\n<td>(A) 1:1</td>\n</tr>\n<tr>\n<td>(ii) CH4</td>\n<td>(B) 2:1</td>\n</tr>\n<tr>\n<td>(iii) C2H4</td>\n<td>(C) 2:3</td>\n</tr>\n<tr>\n<td>(iv) C2H6</td>\n<td>(D) 1:2</td>\n</tr>\n</tbody>\n</table>"
+    },
+    {
+      "block_id": "20260312_6a45e4ef-ea6b-4c57-a0bb-e2a23306d763_7_block_007",
+      "coordinates": {
+        "x1": 291.0,
+        "y1": 1753.0,
+        "x2": 1241.0,
+        "y2": 2001.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.3282463848590851,
+      "reading_order": 8,
+      "text": "(a) (i) $\\rightarrow$ (B); (ii) $\\rightarrow$ (D); (iii) $\\rightarrow$ (A); (iv) $\\rightarrow$ (C)\n(b) (i) $\\rightarrow$ (B); (ii) $\\rightarrow$ (A); (iii) $\\rightarrow$ (D); (iv) $\\rightarrow$ (C)\n(c) (i) $\\rightarrow$ (C); (ii) $\\rightarrow$ (D); (iii) $\\rightarrow$ (A); (iv) $\\rightarrow$ (B)\n(d) (i) $\\rightarrow$ (C); (ii) $\\rightarrow$ (A); (iii) $\\rightarrow$ (D); (iv) $\\rightarrow$ (B)"
+    },
+    {
+      "block_id": "20260312_6a45e4ef-ea6b-4c57-a0bb-e2a23306d763_7_block_008",
+      "coordinates": {
+        "x1": 216.0,
+        "y1": 2060.0,
+        "x2": 1701.0,
+        "y2": 2412.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8913822770118713,
+      "reading_order": 9,
+      "text": "15. Two moles of a hydrocarbon for complete combustion consume 13 moles of\noxygen. When 1 mole of it is subjected to complete combustion, the num-\nber of moles of water vapour formed is one mole more than the number of\nmoles of $\\mathrm{CO}_2$ formed. Identify the formula of hydrocarbon.\n(a) $\\mathrm{C}_4\\mathrm{H}_{10}$ (b) $\\mathrm{C}_5\\mathrm{H}_{12}$\n(c) $\\mathrm{C}_5\\mathrm{H}_{10}$ (d) $\\mathrm{C}_4\\mathrm{H}_8$"
+    },
+    {
+      "block_id": "20260312_6a45e4ef-ea6b-4c57-a0bb-e2a23306d763_7_block_009",
+      "coordinates": {
+        "x1": 1790.0,
+        "y1": 312.0,
+        "x2": 2175.0,
+        "y2": 364.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6557931900024414,
+      "reading_order": 10,
+      "text": "Space for rough work"
+    }
+  ]
+}

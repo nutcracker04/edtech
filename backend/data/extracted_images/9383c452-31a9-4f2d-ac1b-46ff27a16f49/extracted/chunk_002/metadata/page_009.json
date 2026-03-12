@@ -1,0 +1,138 @@
+{
+  "page_num": 9,
+  "image_width": 2402,
+  "image_height": 3001,
+  "created_at": "2026-03-12T18:56:48.285080+00:00",
+  "blocks": [
+    {
+      "block_id": "20260312_78284854-69ed-4150-8834-5a3258ca945d_9_block_000",
+      "coordinates": {
+        "x1": 1764.0,
+        "y1": 187.0,
+        "x2": 2054.0,
+        "y2": 239.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.8353366255760193,
+      "reading_order": 1,
+      "text": "Assessment Test II"
+    },
+    {
+      "block_id": "20260312_78284854-69ed-4150-8834-5a3258ca945d_9_block_001",
+      "coordinates": {
+        "x1": 2110.0,
+        "y1": 185.0,
+        "x2": 2195.0,
+        "y2": 236.0
+      },
+      "layout_tag": "page-number",
+      "confidence": 0.7625123262405396,
+      "reading_order": 2,
+      "text": "1.5"
+    },
+    {
+      "block_id": "20260312_78284854-69ed-4150-8834-5a3258ca945d_9_block_002",
+      "coordinates": {
+        "x1": 292.0,
+        "y1": 286.0,
+        "x2": 1220.0,
+        "y2": 411.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.644058108329773,
+      "reading_order": 3,
+      "text": "(a) DECAB (b) DCAEB\n(c) CADEB (d) CEABD"
+    },
+    {
+      "block_id": "20260312_78284854-69ed-4150-8834-5a3258ca945d_9_block_003",
+      "coordinates": {
+        "x1": 234.0,
+        "y1": 471.0,
+        "x2": 1464.0,
+        "y2": 905.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9441949129104614,
+      "reading_order": 4,
+      "text": "6. Arrange the following in the decreasing order of cooking time.\n(A) Cooking in a vessel covered with a lid at a hill station.\n(B) Cooking in pressure cooker at sea level.\n(C) Cooking in open vessel at hill station.\n(D) Cooking in pressure cooker at hill station.\n(a) ADCB (b) CDBA\n(c) DCAB (d) CADB"
+    },
+    {
+      "block_id": "20260312_78284854-69ed-4150-8834-5a3258ca945d_9_block_004",
+      "coordinates": {
+        "x1": 233.0,
+        "y1": 961.0,
+        "x2": 1701.0,
+        "y2": 1200.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9390329718589783,
+      "reading_order": 5,
+      "text": "7. Identify the term which is not related to the method of separation of leaf\npigments.\n(a) Distillate (b) Stationary phase\n(c) Mobile phase (d) Adsorption"
+    },
+    {
+      "block_id": "20260312_78284854-69ed-4150-8834-5a3258ca945d_9_block_005",
+      "coordinates": {
+        "x1": 233.0,
+        "y1": 1258.0,
+        "x2": 1697.0,
+        "y2": 1675.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9360196590423584,
+      "reading_order": 6,
+      "text": "8. A mixture of two liquids ‘X’ and ‘Y’ is taken. The boiling points of X and Y\nare $80^\\circ\\mathrm{C}$ and $110^\\circ\\mathrm{C}$, respectively. Which of the following conclusions would\nbe the correct experimental result?\n(a) X is the distillate and is collected in the receiver flask.\n(b) Y is the distillate and is collected in the receiver flask.\n(c) X is the distillate and is left in the distillation flask.\n(d) Y is the distillate and is left in the distillation flask."
+    },
+    {
+      "block_id": "20260312_78284854-69ed-4150-8834-5a3258ca945d_9_block_006",
+      "coordinates": {
+        "x1": 233.0,
+        "y1": 1732.0,
+        "x2": 1697.0,
+        "y2": 1843.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9000635743141174,
+      "reading_order": 7,
+      "text": "9. Which of the following mixtures can be separated by the method repre-\nsented by the following figure?"
+    },
+    {
+      "block_id": "20260312_78284854-69ed-4150-8834-5a3258ca945d_9_block_007",
+      "coordinates": {
+        "x1": 673.0,
+        "y1": 1868.0,
+        "x2": 1214.0,
+        "y2": 2305.0
+      },
+      "layout_tag": "image",
+      "confidence": 0.9159703850746155,
+      "reading_order": 8,
+      "text": "The image is a black-and-white technical schematic diagram illustrating the setup for a chemical mixing process, likely a reflux or distillation experiment. It is not a data chart and contains no numerical axes or quantitative values. The diagram depicts a conical flask (or round-bottom flask) containing a solid material (represented by a stippled pattern) resting on a circular platform. This platform is supported by three curved legs and is positioned over a Bunsen burner, which is mounted on a rectangular base. A horizontal arrow labeled \"Mixture\" points to the contents of the flask, indicating the direction of the reaction or the flow of the material. A tube extends from the bottom of the burner, suggesting a gas supply (likely air or inert gas) for heating."
+    },
+    {
+      "block_id": "20260312_78284854-69ed-4150-8834-5a3258ca945d_9_block_008",
+      "coordinates": {
+        "x1": 289.0,
+        "y1": 2370.0,
+        "x2": 1157.0,
+        "y2": 2613.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.3169895112514496,
+      "reading_order": 9,
+      "text": "(a) Sulphur and sand\n(b) Potassium nitrate and potassium chloride\n(c) Iodine and ammonium chloride\n(d) Ammonium chloride and sand"
+    },
+    {
+      "block_id": "20260312_78284854-69ed-4150-8834-5a3258ca945d_9_block_009",
+      "coordinates": {
+        "x1": 1793.0,
+        "y1": 312.0,
+        "x2": 2174.0,
+        "y2": 364.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.47328728437423706,
+      "reading_order": 10,
+      "text": "Space for rough work"
+    }
+  ]
+}

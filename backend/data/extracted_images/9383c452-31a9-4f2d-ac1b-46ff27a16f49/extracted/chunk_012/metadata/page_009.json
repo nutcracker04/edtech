@@ -1,0 +1,320 @@
+{
+  "page_num": 9,
+  "image_width": 2402,
+  "image_height": 3001,
+  "created_at": "2026-03-12T18:58:15.313108+00:00",
+  "blocks": [
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_9_block_000",
+      "coordinates": {
+        "x1": 1696.0,
+        "y1": 187.0,
+        "x2": 2052.0,
+        "y2": 240.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.8677971363067627,
+      "reading_order": 1,
+      "text": "Hints and Explanations"
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_9_block_001",
+      "coordinates": {
+        "x1": 2094.0,
+        "y1": 184.0,
+        "x2": 2209.0,
+        "y2": 235.0
+      },
+      "layout_tag": "page-number",
+      "confidence": 0.7919902801513672,
+      "reading_order": 2,
+      "text": "A.17"
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_9_block_002",
+      "coordinates": {
+        "x1": 294.0,
+        "y1": 290.0,
+        "x2": 887.0,
+        "y2": 420.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.4977506697177887,
+      "reading_order": 3,
+      "text": "the three types of bonds.\nHence, the correct option is (d)."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_9_block_003",
+      "coordinates": {
+        "x1": 196.0,
+        "y1": 463.0,
+        "x2": 650.0,
+        "y2": 516.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.8420019745826721,
+      "reading_order": 4,
+      "text": "Assessment Test IV"
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_9_block_004",
+      "coordinates": {
+        "x1": 237.0,
+        "y1": 559.0,
+        "x2": 1170.0,
+        "y2": 792.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7273064255714417,
+      "reading_order": 5,
+      "text": "1. Carbon attains neon configuration by shar-\ning four electrons with other atoms. Hence, it\nexhibits tetravalency.\n\nHence, the correct option is (a)."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_9_block_005",
+      "coordinates": {
+        "x1": 235.0,
+        "y1": 816.0,
+        "x2": 1172.0,
+        "y2": 1042.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.680376410484314,
+      "reading_order": 6,
+      "text": "2. $\\mathrm{H}_2\\mathrm{O}$ has a higher boiling point than HF due to\ngreater number of hydrogen bonds formed in\ncase of water, even though HF has a stronger\nhydrogen bond."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_9_block_006",
+      "coordinates": {
+        "x1": 293.0,
+        "y1": 1051.0,
+        "x2": 884.0,
+        "y2": 1104.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.3663219213485718,
+      "reading_order": 7,
+      "text": "Hence, the correct option is (d)."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_9_block_007",
+      "coordinates": {
+        "x1": 261.0,
+        "y1": 1134.0,
+        "x2": 593.0,
+        "y2": 1382.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.29358214139938354,
+      "reading_order": 8,
+      "text": "3. Z = 8; oxygen\nZ = 17; chlorine\nZ = 9; fluorine\nZ = 7; nitrogen"
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_9_block_008",
+      "coordinates": {
+        "x1": 291.0,
+        "y1": 1390.0,
+        "x2": 1171.0,
+        "y2": 1764.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7883407473564148,
+      "reading_order": 9,
+      "text": "The ease of formation of anion depends upon\nthe electron affinity value of non-metals. Elec-\ntron affinity increases from left to right in a\nperiod and decreases from top to bottom in a\ngroup. Thus, the correct order is $\\mathrm{Cl} > \\mathrm{F} > \\mathrm{O} > \\mathrm{N}$.\nTherefore, the required order is CDAB.\nHence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_9_block_009",
+      "coordinates": {
+        "x1": 237.0,
+        "y1": 1792.0,
+        "x2": 1171.0,
+        "y2": 2062.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7390263080596924,
+      "reading_order": 10,
+      "text": "4. The strength of the ionic bond is inversely\nproportional to the size of the anion, provided\nthe cation is the same. The correct decreasing\norder of strength ionic compounds should be\nDBEAC."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_9_block_010",
+      "coordinates": {
+        "x1": 295.0,
+        "y1": 2081.0,
+        "x2": 880.0,
+        "y2": 2135.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.33535972237586975,
+      "reading_order": 11,
+      "text": "Hence, the correct option is (a)."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_9_block_011",
+      "coordinates": {
+        "x1": 235.0,
+        "y1": 2163.0,
+        "x2": 888.0,
+        "y2": 2551.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.470511257648468,
+      "reading_order": 12,
+      "text": "5. (i) $\\rightarrow$ (C)\n(ii) $\\rightarrow$ (D)\n(iii) $\\rightarrow$ (A)\n(iv) $\\rightarrow$ (B)\n(v) $\\rightarrow$ (E)\nHence, the correct option is (d)."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_9_block_012",
+      "coordinates": {
+        "x1": 240.0,
+        "y1": 2577.0,
+        "x2": 806.0,
+        "y2": 2834.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6081560850143433,
+      "reading_order": 13,
+      "text": "6. M + acid → metal salt + H$_2$\nMg + O$_2$ → MgO\nMg + N$_2$ → Mg$_3$N$_2$\nFe + S → FeS"
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_9_block_013",
+      "coordinates": {
+        "x1": 1343.0,
+        "y1": 292.0,
+        "x2": 2064.0,
+        "y2": 410.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8711020350456238,
+      "reading_order": 14,
+      "text": "All these reactions are redox reactions.\nHence, the correct option is (d)."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_9_block_014",
+      "coordinates": {
+        "x1": 1286.0,
+        "y1": 434.0,
+        "x2": 2222.0,
+        "y2": 668.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9400190711021423,
+      "reading_order": 15,
+      "text": "7. In $\\mathrm{M}_2\\mathrm{X}_3$, metal has +3 charge and non-metal has\n–2 charge. Therefore, the electrovalencies of\nmetal and non-metal are 3 and 2, respectively.\nHence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_9_block_015",
+      "coordinates": {
+        "x1": 1289.0,
+        "y1": 693.0,
+        "x2": 2221.0,
+        "y2": 1036.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9285008907318115,
+      "reading_order": 16,
+      "text": "8. The electronic configuration of metal could be\n2, 8, 1. It can lose an electron to get the configu-\nration of neon. The electronic configuration of\na non-metal could be 2, 5 as it can gain three\nelectrons to get the configuration of neon.\nHence, the correct option is (d)."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_9_block_016",
+      "coordinates": {
+        "x1": 1287.0,
+        "y1": 1059.0,
+        "x2": 2222.0,
+        "y2": 1218.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9149933457374573,
+      "reading_order": 17,
+      "text": "9. The element with electronic configuration 2, 7\nis fluorine. The Lewis dot diagram for $\\mathrm{F}_2$ mole-\ncule is as follows."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_9_block_017",
+      "coordinates": {
+        "x1": 1552.0,
+        "y1": 1237.0,
+        "x2": 1896.0,
+        "y2": 1438.0
+      },
+      "layout_tag": "image",
+      "confidence": 0.8435766696929932,
+      "reading_order": 18,
+      "text": "The image displays a standard Venn diagram consisting of two overlapping circles. The left circle contains three distinct elements: the text \"xx\" positioned at the top, \"xx F\" in the middle-left, and \"xx\" at the bottom. The right circle contains two distinct elements: the text \"x•\" in the middle-right, and \"F:\" at the bottom. The overlapping region between the two circles contains the element \"x•\". There are no numerical axes, legends, or quantitative data points present in the image."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_9_block_018",
+      "coordinates": {
+        "x1": 1345.0,
+        "y1": 1482.0,
+        "x2": 2176.0,
+        "y2": 1599.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.898327648639679,
+      "reading_order": 19,
+      "text": "There are 3 lone pairs on each fluorine atom.\nHence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_9_block_019",
+      "coordinates": {
+        "x1": 1265.0,
+        "y1": 1623.0,
+        "x2": 2220.0,
+        "y2": 1857.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9215889573097229,
+      "reading_order": 20,
+      "text": "10. Z = 16 corresponds to sulphur and Z = 8 corre-\nsponds to oxygen. Sulphur and oxygen belong\nto VI group and form a covalent compound.\nHence, the correct option is (a)."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_9_block_020",
+      "coordinates": {
+        "x1": 1268.0,
+        "y1": 1888.0,
+        "x2": 2219.0,
+        "y2": 2224.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8866578936576843,
+      "reading_order": 21,
+      "text": "11. In iron, the penultimate shell electrons can also\nparticipate in metallic bonding. As more num-\nber of electrons are involved in metallic bond-\ning, the metallic bond becomes strong. This\nimparts greater hardness to iron.\nHence, the correct option is (d)."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_9_block_021",
+      "coordinates": {
+        "x1": 1266.0,
+        "y1": 2249.0,
+        "x2": 2222.0,
+        "y2": 2647.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.797188937664032,
+      "reading_order": 22,
+      "text": "12. Hydrogen bonding is responsible for relatively\nhigh boiling point of water and dissolution of\nglucose in water. Due to the presence of hydro-\ngen bonding, water exists as associated liquids.\nConduction of electricity does not depend on\nhydrogen bonding. It depends on the availabil-\nity of free electrons or ions as charge carriers."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_9_block_022",
+      "coordinates": {
+        "x1": 1345.0,
+        "y1": 2644.0,
+        "x2": 1937.0,
+        "y2": 2698.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.3327200710773468,
+      "reading_order": 23,
+      "text": "Hence, the correct option is (d)."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_9_block_023",
+      "coordinates": {
+        "x1": 1265.0,
+        "y1": 2725.0,
+        "x2": 2220.0,
+        "y2": 2836.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8998674154281616,
+      "reading_order": 24,
+      "text": "13. Ethylene molecule can be represented by the following Lewis dot diagram."
+    }
+  ]
+}

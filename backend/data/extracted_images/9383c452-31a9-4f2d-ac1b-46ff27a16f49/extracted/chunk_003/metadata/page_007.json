@@ -1,0 +1,385 @@
+{
+  "page_num": 7,
+  "image_width": 2402,
+  "image_height": 3001,
+  "created_at": "2026-03-12T18:56:56.252565+00:00",
+  "blocks": [
+    {
+      "block_id": "20260312_62a3f467-e446-41ac-9358-8844b1081240_7_block_000",
+      "coordinates": {
+        "x1": 1751.0,
+        "y1": 187.0,
+        "x2": 2055.0,
+        "y2": 238.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.8363279700279236,
+      "reading_order": 1,
+      "text": "Assessment Test IV"
+    },
+    {
+      "block_id": "20260312_62a3f467-e446-41ac-9358-8844b1081240_7_block_001",
+      "coordinates": {
+        "x1": 2098.0,
+        "y1": 183.0,
+        "x2": 2210.0,
+        "y2": 237.0
+      },
+      "layout_tag": "page-number",
+      "confidence": 0.7454215884208679,
+      "reading_order": 2,
+      "text": "1.13"
+    },
+    {
+      "block_id": "20260312_62a3f467-e446-41ac-9358-8844b1081240_7_block_002",
+      "coordinates": {
+        "x1": 215.0,
+        "y1": 289.0,
+        "x2": 1327.0,
+        "y2": 347.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7570929527282715,
+      "reading_order": 3,
+      "text": "10. Mixture of NaCl and NH₄Cl can be separated by ____."
+    },
+    {
+      "block_id": "20260312_62a3f467-e446-41ac-9358-8844b1081240_7_block_003",
+      "coordinates": {
+        "x1": 293.0,
+        "y1": 354.0,
+        "x2": 674.0,
+        "y2": 410.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7368490099906921,
+      "reading_order": 4,
+      "text": "(a) gravity method"
+    },
+    {
+      "block_id": "20260312_62a3f467-e446-41ac-9358-8844b1081240_7_block_004",
+      "coordinates": {
+        "x1": 293.0,
+        "y1": 416.0,
+        "x2": 715.0,
+        "y2": 470.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7532634735107422,
+      "reading_order": 5,
+      "text": "(b) solvent extraction"
+    },
+    {
+      "block_id": "20260312_62a3f467-e446-41ac-9358-8844b1081240_7_block_005",
+      "coordinates": {
+        "x1": 293.0,
+        "y1": 478.0,
+        "x2": 610.0,
+        "y2": 531.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7261270880699158,
+      "reading_order": 6,
+      "text": "(c) sublimation"
+    },
+    {
+      "block_id": "20260312_62a3f467-e446-41ac-9358-8844b1081240_7_block_006",
+      "coordinates": {
+        "x1": 292.0,
+        "y1": 541.0,
+        "x2": 835.0,
+        "y2": 597.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7782006859779358,
+      "reading_order": 7,
+      "text": "(d) fractional crystallization"
+    },
+    {
+      "block_id": "20260312_62a3f467-e446-41ac-9358-8844b1081240_7_block_007",
+      "coordinates": {
+        "x1": 216.0,
+        "y1": 657.0,
+        "x2": 1700.0,
+        "y2": 763.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6945629119873047,
+      "reading_order": 8,
+      "text": "11. Cotton clothes are preferred in summer. Which among the following is the reason for this statement?"
+    },
+    {
+      "block_id": "20260312_62a3f467-e446-41ac-9358-8844b1081240_7_block_008",
+      "coordinates": {
+        "x1": 291.0,
+        "y1": 774.0,
+        "x2": 973.0,
+        "y2": 830.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.819868803024292,
+      "reading_order": 9,
+      "text": "(a) They are attractive and cheaper."
+    },
+    {
+      "block_id": "20260312_62a3f467-e446-41ac-9358-8844b1081240_7_block_009",
+      "coordinates": {
+        "x1": 291.0,
+        "y1": 836.0,
+        "x2": 1698.0,
+        "y2": 944.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8818092346191406,
+      "reading_order": 10,
+      "text": "(b) Cotton clothes absorb sweat more due to the greater adhesive forces\nbetween cotton and water."
+    },
+    {
+      "block_id": "20260312_62a3f467-e446-41ac-9358-8844b1081240_7_block_010",
+      "coordinates": {
+        "x1": 291.0,
+        "y1": 953.0,
+        "x2": 874.0,
+        "y2": 1008.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.799592137336731,
+      "reading_order": 11,
+      "text": "(c) Cotton is an artificial fibre."
+    },
+    {
+      "block_id": "20260312_62a3f467-e446-41ac-9358-8844b1081240_7_block_011",
+      "coordinates": {
+        "x1": 292.0,
+        "y1": 1016.0,
+        "x2": 1014.0,
+        "y2": 1072.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.805453896522522,
+      "reading_order": 12,
+      "text": "(d) Cotton fibres do not absorb sweat."
+    },
+    {
+      "block_id": "20260312_62a3f467-e446-41ac-9358-8844b1081240_7_block_012",
+      "coordinates": {
+        "x1": 216.0,
+        "y1": 1131.0,
+        "x2": 1699.0,
+        "y2": 1376.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.32915830612182617,
+      "reading_order": 13,
+      "text": "12. Which among the following gaseous mixtures can be separated by fractional\nevaporation?\n(a) $\\mathrm{H}_2 + \\mathrm{SO}_2$ (b) $\\mathrm{CO} + \\mathrm{CO}_2$\n(c) $\\mathrm{NH}_3 + \\mathrm{SO}_2$ (d) $\\mathrm{O}_2 + \\mathrm{N}_2$"
+    },
+    {
+      "block_id": "20260312_62a3f467-e446-41ac-9358-8844b1081240_7_block_013",
+      "coordinates": {
+        "x1": 213.0,
+        "y1": 1427.0,
+        "x2": 1383.0,
+        "y2": 1483.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8025605082511902,
+      "reading_order": 14,
+      "text": "13. Identify the false statement regarding critical temperature."
+    },
+    {
+      "block_id": "20260312_62a3f467-e446-41ac-9358-8844b1081240_7_block_014",
+      "coordinates": {
+        "x1": 289.0,
+        "y1": 1490.0,
+        "x2": 1154.0,
+        "y2": 1549.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8194990158081055,
+      "reading_order": 15,
+      "text": "(a) It is directly proportional to boiling point."
+    },
+    {
+      "block_id": "20260312_62a3f467-e446-41ac-9358-8844b1081240_7_block_015",
+      "coordinates": {
+        "x1": 288.0,
+        "y1": 1554.0,
+        "x2": 1461.0,
+        "y2": 1611.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8438460826873779,
+      "reading_order": 16,
+      "text": "(b) Every gas is associated with a specific critical temperature."
+    },
+    {
+      "block_id": "20260312_62a3f467-e446-41ac-9358-8844b1081240_7_block_016",
+      "coordinates": {
+        "x1": 288.0,
+        "y1": 1615.0,
+        "x2": 1306.0,
+        "y2": 1671.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8250536322593689,
+      "reading_order": 17,
+      "text": "(c) It is directly proportional to intermolecular forces."
+    },
+    {
+      "block_id": "20260312_62a3f467-e446-41ac-9358-8844b1081240_7_block_017",
+      "coordinates": {
+        "x1": 290.0,
+        "y1": 1679.0,
+        "x2": 1408.0,
+        "y2": 1736.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8289132714271545,
+      "reading_order": 18,
+      "text": "(d) A gas cannot be liquefied below its critical temperature."
+    },
+    {
+      "block_id": "20260312_62a3f467-e446-41ac-9358-8844b1081240_7_block_018",
+      "coordinates": {
+        "x1": 215.0,
+        "y1": 1795.0,
+        "x2": 1696.0,
+        "y2": 1904.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7942194938659668,
+      "reading_order": 19,
+      "text": "14. Addition of impurities to a solid decreases the melting point. In which\namong the following this phenomenon is not exploited?"
+    },
+    {
+      "block_id": "20260312_62a3f467-e446-41ac-9358-8844b1081240_7_block_019",
+      "coordinates": {
+        "x1": 291.0,
+        "y1": 1912.0,
+        "x2": 1696.0,
+        "y2": 2017.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9150603413581848,
+      "reading_order": 20,
+      "text": "(a) Fish and meat can be preserved for a longer time in ice if common salt is added to it."
+    },
+    {
+      "block_id": "20260312_62a3f467-e446-41ac-9358-8844b1081240_7_block_020",
+      "coordinates": {
+        "x1": 291.0,
+        "y1": 2028.0,
+        "x2": 1677.0,
+        "y2": 2084.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8699116706848145,
+      "reading_order": 21,
+      "text": "(b) Brine solution is used to remove the ice piled on roads in cold regions."
+    },
+    {
+      "block_id": "20260312_62a3f467-e446-41ac-9358-8844b1081240_7_block_021",
+      "coordinates": {
+        "x1": 290.0,
+        "y1": 2092.0,
+        "x2": 1527.0,
+        "y2": 2147.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8721776604652405,
+      "reading_order": 22,
+      "text": "(c) Melting point of rose metal is less than that of its components."
+    },
+    {
+      "block_id": "20260312_62a3f467-e446-41ac-9358-8844b1081240_7_block_022",
+      "coordinates": {
+        "x1": 293.0,
+        "y1": 2159.0,
+        "x2": 587.0,
+        "y2": 2218.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8016601800918579,
+      "reading_order": 23,
+      "text": "(d) Regelation"
+    },
+    {
+      "block_id": "20260312_62a3f467-e446-41ac-9358-8844b1081240_7_block_023",
+      "coordinates": {
+        "x1": 213.0,
+        "y1": 2282.0,
+        "x2": 1503.0,
+        "y2": 2335.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8429750204086304,
+      "reading_order": 24,
+      "text": "15. Solid carbon dioxide undergoes sublimation due to ________."
+    },
+    {
+      "block_id": "20260312_62a3f467-e446-41ac-9358-8844b1081240_7_block_024",
+      "coordinates": {
+        "x1": 292.0,
+        "y1": 2345.0,
+        "x2": 1110.0,
+        "y2": 2400.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8416969776153564,
+      "reading_order": 25,
+      "text": "(a) high intermolecular forces of attraction"
+    },
+    {
+      "block_id": "20260312_62a3f467-e446-41ac-9358-8844b1081240_7_block_025",
+      "coordinates": {
+        "x1": 291.0,
+        "y1": 2407.0,
+        "x2": 1042.0,
+        "y2": 2462.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8426728248596191,
+      "reading_order": 26,
+      "text": "(b) high kinetic energy of all molecules"
+    },
+    {
+      "block_id": "20260312_62a3f467-e446-41ac-9358-8844b1081240_7_block_026",
+      "coordinates": {
+        "x1": 292.0,
+        "y1": 2470.0,
+        "x2": 1129.0,
+        "y2": 2525.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8448958992958069,
+      "reading_order": 27,
+      "text": "(c) high kinetic energy of surface molecules"
+    },
+    {
+      "block_id": "20260312_62a3f467-e446-41ac-9358-8844b1081240_7_block_027",
+      "coordinates": {
+        "x1": 293.0,
+        "y1": 2531.0,
+        "x2": 1029.0,
+        "y2": 2589.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8539043664932251,
+      "reading_order": 28,
+      "text": "(d) high potential energy of molecules"
+    },
+    {
+      "block_id": "20260312_62a3f467-e446-41ac-9358-8844b1081240_7_block_028",
+      "coordinates": {
+        "x1": 1792.0,
+        "y1": 311.0,
+        "x2": 2174.0,
+        "y2": 365.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6370432376861572,
+      "reading_order": 29,
+      "text": "Space for rough work"
+    }
+  ]
+}

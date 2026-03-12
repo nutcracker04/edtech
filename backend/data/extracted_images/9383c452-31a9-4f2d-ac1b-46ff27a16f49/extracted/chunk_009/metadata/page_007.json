@@ -1,0 +1,177 @@
+{
+  "page_num": 7,
+  "image_width": 2402,
+  "image_height": 3001,
+  "created_at": "2026-03-12T18:57:43.139479+00:00",
+  "blocks": [
+    {
+      "block_id": "20260312_619a7db2-27e4-4572-9311-63029574bf01_7_block_000",
+      "coordinates": {
+        "x1": 1752.0,
+        "y1": 188.0,
+        "x2": 2053.0,
+        "y2": 238.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.8590519428253174,
+      "reading_order": 1,
+      "text": "Assessment Test III"
+    },
+    {
+      "block_id": "20260312_619a7db2-27e4-4572-9311-63029574bf01_7_block_001",
+      "coordinates": {
+        "x1": 2096.0,
+        "y1": 185.0,
+        "x2": 2207.0,
+        "y2": 236.0
+      },
+      "layout_tag": "page-number",
+      "confidence": 0.7785352468490601,
+      "reading_order": 2,
+      "text": "6.11"
+    },
+    {
+      "block_id": "20260312_619a7db2-27e4-4572-9311-63029574bf01_7_block_002",
+      "coordinates": {
+        "x1": 215.0,
+        "y1": 292.0,
+        "x2": 1324.0,
+        "y2": 482.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9159618020057678,
+      "reading_order": 3,
+      "text": "10. Butter is a(an) ______.\n(a) emulsion (b) sol\n(c) gel (d) liquid aerosol"
+    },
+    {
+      "block_id": "20260312_619a7db2-27e4-4572-9311-63029574bf01_7_block_003",
+      "coordinates": {
+        "x1": 217.0,
+        "y1": 504.0,
+        "x2": 1472.0,
+        "y2": 692.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.931916356086731,
+      "reading_order": 4,
+      "text": "11. Which among the following is not used for making any article?\n(a) Steel (b) Cast iron\n(c) Pig iron (d) Wrought iron"
+    },
+    {
+      "block_id": "20260312_619a7db2-27e4-4572-9311-63029574bf01_7_block_004",
+      "coordinates": {
+        "x1": 214.0,
+        "y1": 717.0,
+        "x2": 1210.0,
+        "y2": 770.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.5027997493743896,
+      "reading_order": 5,
+      "text": "12. Identify the true statement among the following:"
+    },
+    {
+      "block_id": "20260312_619a7db2-27e4-4572-9311-63029574bf01_7_block_005",
+      "coordinates": {
+        "x1": 288.0,
+        "y1": 787.0,
+        "x2": 1699.0,
+        "y2": 894.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8037877082824707,
+      "reading_order": 6,
+      "text": "(a) Red phosphorus is constituted of isolated tetrahedral units, whereas\nwhite phosphorus contains chains of tetrahedral units."
+    },
+    {
+      "block_id": "20260312_619a7db2-27e4-4572-9311-63029574bf01_7_block_006",
+      "coordinates": {
+        "x1": 294.0,
+        "y1": 904.0,
+        "x2": 1699.0,
+        "y2": 1010.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8487224578857422,
+      "reading_order": 7,
+      "text": "(b) Red phosphorus is constituted of chains of tetrahedral units, whereas\nwhite phosphorus contains isolated tetrahedral units."
+    },
+    {
+      "block_id": "20260312_619a7db2-27e4-4572-9311-63029574bf01_7_block_007",
+      "coordinates": {
+        "x1": 294.0,
+        "y1": 1021.0,
+        "x2": 1700.0,
+        "y2": 1126.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8111151456832886,
+      "reading_order": 8,
+      "text": "(c) Both red and white phosphorus are constituted of isolated tetrahedral units."
+    },
+    {
+      "block_id": "20260312_619a7db2-27e4-4572-9311-63029574bf01_7_block_008",
+      "coordinates": {
+        "x1": 294.0,
+        "y1": 1138.0,
+        "x2": 1698.0,
+        "y2": 1243.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8128725290298462,
+      "reading_order": 9,
+      "text": "(d) Both red and white phosphorus are constituted of chains of tetrahedral units."
+    },
+    {
+      "block_id": "20260312_619a7db2-27e4-4572-9311-63029574bf01_7_block_009",
+      "coordinates": {
+        "x1": 217.0,
+        "y1": 1271.0,
+        "x2": 1683.0,
+        "y2": 1518.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9246751070022583,
+      "reading_order": 10,
+      "text": "**13.** Examine the following reaction: $\\mathrm{Cu} + \\mathrm{H}_2\\mathrm{SO}_4 \\rightarrow \\mathrm{A} + \\mathrm{H}_2\\mathrm{O} + \\mathrm{SO}_2$\nAqueous solution of 'A' on treatment with $\\mathrm{H}_2\\mathrm{S}$ forms 'B'. Identify A and B.\n(a) $\\mathrm{CuSO}_4$, CuS (b) $\\mathrm{Cu}_2\\mathrm{SO}_4$, $\\mathrm{Cu}_2\\mathrm{S}$\n(c) $\\mathrm{Cu}_2\\mathrm{SO}_4$, CuS (d) $\\mathrm{CuSO}_4$, $\\mathrm{Cu}_2\\mathrm{S}$"
+    },
+    {
+      "block_id": "20260312_619a7db2-27e4-4572-9311-63029574bf01_7_block_010",
+      "coordinates": {
+        "x1": 216.0,
+        "y1": 1538.0,
+        "x2": 1698.0,
+        "y2": 1780.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9470918774604797,
+      "reading_order": 11,
+      "text": "14. Which among the following pairs of compounds gives pale yellow precipi-\ntates with silver nitrate solution?\n(a) KBr, NaCl (b) NaBr, NaCl\n(c) NaCl, NaI (d) NaBr, NaI"
+    },
+    {
+      "block_id": "20260312_619a7db2-27e4-4572-9311-63029574bf01_7_block_011",
+      "coordinates": {
+        "x1": 214.0,
+        "y1": 1804.0,
+        "x2": 1695.0,
+        "y2": 2174.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9553430080413818,
+      "reading_order": 12,
+      "text": "15. The property exploited in the usage of argon in incandescent light bulbs\nalong with mercury is ______.\n(a) easy ionization\n(b) low density\n(c) prevention of oxidation of tungsten\n(d) long life"
+    },
+    {
+      "block_id": "20260312_619a7db2-27e4-4572-9311-63029574bf01_7_block_012",
+      "coordinates": {
+        "x1": 1793.0,
+        "y1": 313.0,
+        "x2": 2173.0,
+        "y2": 363.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.45485594868659973,
+      "reading_order": 13,
+      "text": "Space for rough work"
+    }
+  ]
+}

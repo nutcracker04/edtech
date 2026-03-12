@@ -1,0 +1,47 @@
+{
+  "page_num": 9,
+  "image_width": 2402,
+  "image_height": 3001,
+  "created_at": "2026-03-12T18:56:41.858205+00:00",
+  "blocks": [
+    {
+      "block_id": "20260312_02884a5f-6dcd-44e3-b81f-9481721c94a0_9_block_000",
+      "coordinates": {
+        "x1": 847.0,
+        "y1": 344.0,
+        "x2": 1271.0,
+        "y2": 458.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.5507255792617798,
+      "reading_order": 1,
+      "text": "Preface"
+    },
+    {
+      "block_id": "20260312_02884a5f-6dcd-44e3-b81f-9481721c94a0_9_block_001",
+      "coordinates": {
+        "x1": 178.0,
+        "y1": 659.0,
+        "x2": 1936.0,
+        "y2": 1042.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.94012850522995,
+      "reading_order": 2,
+      "text": "*Pearson IIT Foundation Practice Book Series* is designed to accompany the course-books available\nin this series. Developed by a team of experienced faculties, this workbook series connects\nthe subjective knowledge to its real world applications through various text and chapter level\nproblems. Each chapter has a set of assessment tests which are mapped to chapters covered in\nthe course-book. These worksheets will guide students step-by-step towards understanding the\ncentral concept of that particular chapter. These tests are recommended as after class material for\nfurther practice."
+    },
+    {
+      "block_id": "20260312_02884a5f-6dcd-44e3-b81f-9481721c94a0_9_block_002",
+      "coordinates": {
+        "x1": 180.0,
+        "y1": 1064.0,
+        "x2": 1934.0,
+        "y2": 1177.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.87326979637146,
+      "reading_order": 3,
+      "text": "Any suggestions for added or updated additional readings would also be welcome. Students can\nshare their feedback at reachus@pearson.com."
+    }
+  ]
+}

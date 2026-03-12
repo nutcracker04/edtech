@@ -1,0 +1,177 @@
+{
+  "page_num": 2,
+  "image_width": 2402,
+  "image_height": 3001,
+  "created_at": "2026-03-12T18:57:15.114541+00:00",
+  "blocks": [
+    {
+      "block_id": "20260312_38d2b3f5-c887-46b1-a04d-d6a1c5125108_2_block_000",
+      "coordinates": {
+        "x1": 201.0,
+        "y1": 184.0,
+        "x2": 1026.0,
+        "y2": 242.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.7274958491325378,
+      "reading_order": 1,
+      "text": "3.2 Chapter 3 Periodic Classification of Elements"
+    },
+    {
+      "block_id": "20260312_38d2b3f5-c887-46b1-a04d-d6a1c5125108_2_block_001",
+      "coordinates": {
+        "x1": 231.0,
+        "y1": 291.0,
+        "x2": 1406.0,
+        "y2": 344.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.3759821951389313,
+      "reading_order": 2,
+      "text": "6. Match the statements of Column A with those of Column B."
+    },
+    {
+      "block_id": "20260312_38d2b3f5-c887-46b1-a04d-d6a1c5125108_2_block_002",
+      "coordinates": {
+        "x1": 306.0,
+        "y1": 358.0,
+        "x2": 1300.0,
+        "y2": 676.0
+      },
+      "layout_tag": "table",
+      "confidence": 0.8843913674354553,
+      "reading_order": 3,
+      "text": "<table>\n<thead>\n<tr>\n<th>Column A</th>\n<th>Column B</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>(i) Caesium</td>\n<td>(A) Second long period</td>\n</tr>\n<tr>\n<td>(ii) Xenon</td>\n<td>(B) Very long period</td>\n</tr>\n<tr>\n<td>(iii) Potassium</td>\n<td>(C) Incomplete period</td>\n</tr>\n<tr>\n<td>(iv) Radium</td>\n<td>(D) Long period</td>\n</tr>\n</tbody>\n</table>"
+    },
+    {
+      "block_id": "20260312_38d2b3f5-c887-46b1-a04d-d6a1c5125108_2_block_003",
+      "coordinates": {
+        "x1": 293.0,
+        "y1": 697.0,
+        "x2": 1253.0,
+        "y2": 754.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.43793216347694397,
+      "reading_order": 4,
+      "text": "(a) (i) $\\rightarrow$ (B); (ii) $\\rightarrow$ (C); (iii) $\\rightarrow$ (D); (iv) $\\rightarrow$ (A)"
+    },
+    {
+      "block_id": "20260312_38d2b3f5-c887-46b1-a04d-d6a1c5125108_2_block_004",
+      "coordinates": {
+        "x1": 293.0,
+        "y1": 760.0,
+        "x2": 1256.0,
+        "y2": 817.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.4591495394706726,
+      "reading_order": 5,
+      "text": "(b) (i) $\\rightarrow$ (B); (ii) $\\rightarrow$ (A); (iii) $\\rightarrow$ (D); (iv) $\\rightarrow$ (C)"
+    },
+    {
+      "block_id": "20260312_38d2b3f5-c887-46b1-a04d-d6a1c5125108_2_block_005",
+      "coordinates": {
+        "x1": 292.0,
+        "y1": 823.0,
+        "x2": 1255.0,
+        "y2": 880.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.48895585536956787,
+      "reading_order": 6,
+      "text": "(c) (i) $\\rightarrow$ (D); (ii) $\\rightarrow$ (C); (iii) $\\rightarrow$ (A); (iv) $\\rightarrow$ (B)"
+    },
+    {
+      "block_id": "20260312_38d2b3f5-c887-46b1-a04d-d6a1c5125108_2_block_006",
+      "coordinates": {
+        "x1": 292.0,
+        "y1": 885.0,
+        "x2": 1254.0,
+        "y2": 942.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.49267488718032837,
+      "reading_order": 7,
+      "text": "(d) (i) $\\rightarrow$ (D); (ii) $\\rightarrow$ (A); (iii) $\\rightarrow$ (B); (iv) $\\rightarrow$ (C)"
+    },
+    {
+      "block_id": "20260312_38d2b3f5-c887-46b1-a04d-d6a1c5125108_2_block_007",
+      "coordinates": {
+        "x1": 239.0,
+        "y1": 965.0,
+        "x2": 1686.0,
+        "y2": 1397.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6700042486190796,
+      "reading_order": 8,
+      "text": "7. Assertion (A): The order of the first ionization potential (I.P.) values is\nMg > Al > Na.\nReason (R): Across the period, I.P. values generally increase.\n(a) Both A and R are true and R is the correct explanation of A.\n(b) Both A and R are true, but R is not the correct explanation of A.\n(c) A is true and R is false.\n(d) A is false and R is true."
+    },
+    {
+      "block_id": "20260312_38d2b3f5-c887-46b1-a04d-d6a1c5125108_2_block_008",
+      "coordinates": {
+        "x1": 236.0,
+        "y1": 1421.0,
+        "x2": 1696.0,
+        "y2": 1901.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8813939690589905,
+      "reading_order": 9,
+      "text": "8. Assertion (A): In a given period, halogens possess the highest electron\naffinity (E.A.) values.\nReason (R): Across the period, nuclear charge increases and hence, atomic\nsize decreases.\n(a) Both A and R are true and R is the correct explanation of A.\n(b) Both A and R are true, but R is not the correct explanation of A.\n(c) A is true and R is false.\n(d) A is false and R is true."
+    },
+    {
+      "block_id": "20260312_38d2b3f5-c887-46b1-a04d-d6a1c5125108_2_block_009",
+      "coordinates": {
+        "x1": 232.0,
+        "y1": 1924.0,
+        "x2": 1694.0,
+        "y2": 2107.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9301249384880066,
+      "reading_order": 10,
+      "text": "9. Two metals 'A' and 'B' showed drastic increase in 2nd and 4th I.P. values,\nrespectively. Identify the atomic numbers of A and B.\n(a) 19, 13 (b) 11, 20 (c) 12, 31 (d) 37, 19"
+    },
+    {
+      "block_id": "20260312_38d2b3f5-c887-46b1-a04d-d6a1c5125108_2_block_010",
+      "coordinates": {
+        "x1": 214.0,
+        "y1": 2128.0,
+        "x2": 1698.0,
+        "y2": 2374.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9508581161499023,
+      "reading_order": 11,
+      "text": "10. If the difference in the number of electrons present in the valence shell and\npenultimate shell of an element 'X' is four, then X belongs to ______.\n(a) 3rd period, V-A group (b) 4th period, III-A group\n(c) 3rd period, IV-A group (d) 5th period, III-A group"
+    },
+    {
+      "block_id": "20260312_38d2b3f5-c887-46b1-a04d-d6a1c5125108_2_block_011",
+      "coordinates": {
+        "x1": 215.0,
+        "y1": 2394.0,
+        "x2": 1698.0,
+        "y2": 2639.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9412206411361694,
+      "reading_order": 12,
+      "text": "11. The atomic numbers of five elements 'A', 'B', 'C', 'D' and 'E' are 19, 16, 11, 7\nand 38, respectively. The order of atomic volumes of the elements is ______.\n(a) D > C > B > A > E\n(b) E > A > C > B > D\n(c) E > D > C > B > A\n(d) A > E > C > B > D"
+    },
+    {
+      "block_id": "20260312_38d2b3f5-c887-46b1-a04d-d6a1c5125108_2_block_012",
+      "coordinates": {
+        "x1": 1794.0,
+        "y1": 312.0,
+        "x2": 2173.0,
+        "y2": 363.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.48594239354133606,
+      "reading_order": 13,
+      "text": "Space for rough work"
+    }
+  ]
+}

@@ -1,0 +1,346 @@
+{
+  "page_num": 9,
+  "image_width": 2402,
+  "image_height": 3001,
+  "created_at": "2026-03-12T18:58:21.580293+00:00",
+  "blocks": [
+    {
+      "block_id": "20260312_3e28735a-29a8-40c8-bd7f-dccfdb8be365_9_block_000",
+      "coordinates": {
+        "x1": 1696.0,
+        "y1": 187.0,
+        "x2": 2053.0,
+        "y2": 240.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.8676559329032898,
+      "reading_order": 1,
+      "text": "Hints and Explanations"
+    },
+    {
+      "block_id": "20260312_3e28735a-29a8-40c8-bd7f-dccfdb8be365_9_block_001",
+      "coordinates": {
+        "x1": 2093.0,
+        "y1": 184.0,
+        "x2": 2209.0,
+        "y2": 235.0
+      },
+      "layout_tag": "page-number",
+      "confidence": 0.8020250797271729,
+      "reading_order": 2,
+      "text": "A.27"
+    },
+    {
+      "block_id": "20260312_3e28735a-29a8-40c8-bd7f-dccfdb8be365_9_block_002",
+      "coordinates": {
+        "x1": 289.0,
+        "y1": 293.0,
+        "x2": 1173.0,
+        "y2": 857.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6787525415420532,
+      "reading_order": 3,
+      "text": "$\\therefore (40 \\times 5) \\text{ g} = 200 \\text{ g}$ of $\\text{NaOH}$ is present in\n$1500 \\text{ g}$ of solution.\n$\\therefore 200 \\text{ g}$ of $\\text{NaOH}$ is dissolved in $(1500 - 200) =$\n$1300 \\text{ g}$ of solvent.\nSince the solubility of the solute is $20$,\n$1300 \\text{ g}$ of solvent can dissolve $(20 \\times 13) = 260 \\text{ g}$\nof solute.\nHence, $(260 - 200)\\text{g} = 60 \\text{ g}$ solute ($\\text{NaOH}$) has\nto be added.\nHence, the correct option is (d)."
+    },
+    {
+      "block_id": "20260312_3e28735a-29a8-40c8-bd7f-dccfdb8be365_9_block_003",
+      "coordinates": {
+        "x1": 215.0,
+        "y1": 882.0,
+        "x2": 1149.0,
+        "y2": 1222.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9116912484169006,
+      "reading_order": 4,
+      "text": "13. Electrochemical equivalent = $\\frac{\\text{atomic weight}}{\\text{valency} \\times 96500}$\n$\\therefore$ Electrochemical equivalent of the metal\n$= \\frac{x}{3 \\times 96500}$\nHence, the correct option is (b)."
+    },
+    {
+      "block_id": "20260312_3e28735a-29a8-40c8-bd7f-dccfdb8be365_9_block_004",
+      "coordinates": {
+        "x1": 215.0,
+        "y1": 1250.0,
+        "x2": 1174.0,
+        "y2": 1932.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9123806953430176,
+      "reading_order": 5,
+      "text": "14. $10 \\text{ amp} \\times (30 \\times 60) \\text{ s} = 18,000 \\text{ C}$ electrical charges\ndeposit $a$ g of metal\n$\\therefore 96,500 \\text{ C}$ electric charges deposits\n$\\frac{a \\times 96,500}{1800} \\text{ g}$ of metal\nSince the metal is divalent, the atomic weight\nof the metal\n$= \\frac{a \\times 96500}{1800} \\times 2$\n$= \\frac{a \\times 965}{9} = 107.2 a$\nHence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260312_3e28735a-29a8-40c8-bd7f-dccfdb8be365_9_block_005",
+      "coordinates": {
+        "x1": 214.0,
+        "y1": 1959.0,
+        "x2": 1169.0,
+        "y2": 2140.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8574376106262207,
+      "reading_order": 6,
+      "text": "15. A pale blue tinge in milk occurs due to Tyndall effect because milk is a colloid.\nHence, the correct option is (b)."
+    },
+    {
+      "block_id": "20260312_3e28735a-29a8-40c8-bd7f-dccfdb8be365_9_block_006",
+      "coordinates": {
+        "x1": 195.0,
+        "y1": 2186.0,
+        "x2": 634.0,
+        "y2": 2239.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.8334106206893921,
+      "reading_order": 7,
+      "text": "Assessment Test II"
+    },
+    {
+      "block_id": "20260312_3e28735a-29a8-40c8-bd7f-dccfdb8be365_9_block_007",
+      "coordinates": {
+        "x1": 235.0,
+        "y1": 2279.0,
+        "x2": 1172.0,
+        "y2": 2453.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6288965344429016,
+      "reading_order": 8,
+      "text": "1. Permanent hardness can be removed by add-\ning zeolite. Zeolite replaces $\\mathrm{Ca}^{+2}$ and $\\mathrm{Mg}^{+2}$\npresent in water with $\\mathrm{Na}^{+}$."
+    },
+    {
+      "block_id": "20260312_3e28735a-29a8-40c8-bd7f-dccfdb8be365_9_block_008",
+      "coordinates": {
+        "x1": 294.0,
+        "y1": 2461.0,
+        "x2": 880.0,
+        "y2": 2514.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.32160770893096924,
+      "reading_order": 9,
+      "text": "Hence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260312_3e28735a-29a8-40c8-bd7f-dccfdb8be365_9_block_009",
+      "coordinates": {
+        "x1": 233.0,
+        "y1": 2539.0,
+        "x2": 1171.0,
+        "y2": 2829.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9252033829689026,
+      "reading_order": 10,
+      "text": "2. In graphite, one carbon atom is tightly bonded\nto three other carbon atoms and the fourth\nvalence electron of the carbon atom loosely\nbinds the two layers of hexagonal structures.\nHence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260312_3e28735a-29a8-40c8-bd7f-dccfdb8be365_9_block_010",
+      "coordinates": {
+        "x1": 1285.0,
+        "y1": 289.0,
+        "x2": 2199.0,
+        "y2": 416.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8933757543563843,
+      "reading_order": 11,
+      "text": "3. The increasing order of solubilities is ABCDE.\nHence, the correct option is (b)."
+    },
+    {
+      "block_id": "20260312_3e28735a-29a8-40c8-bd7f-dccfdb8be365_9_block_011",
+      "coordinates": {
+        "x1": 1285.0,
+        "y1": 437.0,
+        "x2": 1684.0,
+        "y2": 489.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6457877159118652,
+      "reading_order": 12,
+      "text": "4. (A) Pulverization"
+    },
+    {
+      "block_id": "20260312_3e28735a-29a8-40c8-bd7f-dccfdb8be365_9_block_012",
+      "coordinates": {
+        "x1": 1351.0,
+        "y1": 507.0,
+        "x2": 1779.0,
+        "y2": 563.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6248899102210999,
+      "reading_order": 13,
+      "text": "(B) Gravity separation"
+    },
+    {
+      "block_id": "20260312_3e28735a-29a8-40c8-bd7f-dccfdb8be365_9_block_013",
+      "coordinates": {
+        "x1": 1349.0,
+        "y1": 571.0,
+        "x2": 1598.0,
+        "y2": 628.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.638367772102356,
+      "reading_order": 14,
+      "text": "(C) Roasting"
+    },
+    {
+      "block_id": "20260312_3e28735a-29a8-40c8-bd7f-dccfdb8be365_9_block_014",
+      "coordinates": {
+        "x1": 1347.0,
+        "y1": 633.0,
+        "x2": 1602.0,
+        "y2": 689.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6224061250686646,
+      "reading_order": 15,
+      "text": "(D) Smelting"
+    },
+    {
+      "block_id": "20260312_3e28735a-29a8-40c8-bd7f-dccfdb8be365_9_block_015",
+      "coordinates": {
+        "x1": 1353.0,
+        "y1": 696.0,
+        "x2": 1641.0,
+        "y2": 749.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5839397311210632,
+      "reading_order": 16,
+      "text": "(E) Distillation"
+    },
+    {
+      "block_id": "20260312_3e28735a-29a8-40c8-bd7f-dccfdb8be365_9_block_016",
+      "coordinates": {
+        "x1": 1347.0,
+        "y1": 758.0,
+        "x2": 1933.0,
+        "y2": 811.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5764535665512085,
+      "reading_order": 17,
+      "text": "Hence, the correct option is (d)."
+    },
+    {
+      "block_id": "20260312_3e28735a-29a8-40c8-bd7f-dccfdb8be365_9_block_017",
+      "coordinates": {
+        "x1": 1288.0,
+        "y1": 821.0,
+        "x2": 1334.0,
+        "y2": 867.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.4076278507709503,
+      "reading_order": 18,
+      "text": "5."
+    },
+    {
+      "block_id": "20260312_3e28735a-29a8-40c8-bd7f-dccfdb8be365_9_block_018",
+      "coordinates": {
+        "x1": 1364.0,
+        "y1": 824.0,
+        "x2": 2152.0,
+        "y2": 1556.0
+      },
+      "layout_tag": "table",
+      "confidence": 0.9596408009529114,
+      "reading_order": 19,
+      "text": "<table>\n<tbody>\n<tr>\n<td>(i)</td>\n<td>Wood<br/>charcoal</td>\n<td>(B)</td>\n<td>Brittle grey<br/>solid</td>\n</tr>\n<tr>\n<td>(ii)</td>\n<td>Sugar<br/>charcoal</td>\n<td>(A)</td>\n<td>Thick<br/>red black<br/>substance</td>\n</tr>\n<tr>\n<td>(iii)</td>\n<td>Coke</td>\n<td>(D)</td>\n<td>Black porous<br/>solid</td>\n</tr>\n<tr>\n<td>(iv)</td>\n<td>Animal<br/>charcoal</td>\n<td>(E)</td>\n<td>Less percent-<br/>age of carbon</td>\n</tr>\n<tr>\n<td>(v)</td>\n<td>Lamp<br/>black</td>\n<td>(C)</td>\n<td>Light powdery<br/>black sub-<br/>stance having<br/>a velvet touch</td>\n</tr>\n</tbody>\n</table>"
+    },
+    {
+      "block_id": "20260312_3e28735a-29a8-40c8-bd7f-dccfdb8be365_9_block_019",
+      "coordinates": {
+        "x1": 1345.0,
+        "y1": 1575.0,
+        "x2": 1935.0,
+        "y2": 1628.0
+      },
+      "layout_tag": "footnote",
+      "confidence": 0.5165822505950928,
+      "reading_order": 20,
+      "text": "Hence, the correct option is (d)."
+    },
+    {
+      "block_id": "20260312_3e28735a-29a8-40c8-bd7f-dccfdb8be365_9_block_020",
+      "coordinates": {
+        "x1": 1286.0,
+        "y1": 1654.0,
+        "x2": 2219.0,
+        "y2": 1834.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8583378791809082,
+      "reading_order": 21,
+      "text": "6. Cinnabar is a sulphide ore and can be concen-\ntrated by froth floatation.\nHence, the correct option is (d)."
+    },
+    {
+      "block_id": "20260312_3e28735a-29a8-40c8-bd7f-dccfdb8be365_9_block_021",
+      "coordinates": {
+        "x1": 1286.0,
+        "y1": 1852.0,
+        "x2": 2221.0,
+        "y2": 2224.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.48241499066352844,
+      "reading_order": 22,
+      "text": "7. $\\mathrm{CaCO}_3 \\rightarrow \\mathrm{CaO} + \\mathrm{CO}_2$\n$\\mathrm{CO}_2 + \\mathrm{C} \\rightarrow \\mathrm{CO}$\nBoth the reactions are endothermic, and hence,\na drop in temperature is observed in the mid-\ndle region of the blast furnace.\nHence, the correct option is (d)."
+    },
+    {
+      "block_id": "20260312_3e28735a-29a8-40c8-bd7f-dccfdb8be365_9_block_022",
+      "coordinates": {
+        "x1": 1285.0,
+        "y1": 2243.0,
+        "x2": 2174.0,
+        "y2": 2369.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8796692490577698,
+      "reading_order": 23,
+      "text": "8. One of products of the given reaction is NO.\nHence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260312_3e28735a-29a8-40c8-bd7f-dccfdb8be365_9_block_023",
+      "coordinates": {
+        "x1": 1286.0,
+        "y1": 2389.0,
+        "x2": 2220.0,
+        "y2": 2550.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7917101979255676,
+      "reading_order": 24,
+      "text": "9. The given structure indicates red phosphorus. Red phosphorus is not used in strike anywhere matches."
+    },
+    {
+      "block_id": "20260312_3e28735a-29a8-40c8-bd7f-dccfdb8be365_9_block_024",
+      "coordinates": {
+        "x1": 1343.0,
+        "y1": 2568.0,
+        "x2": 1933.0,
+        "y2": 2624.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5641507506370544,
+      "reading_order": 25,
+      "text": "Hence, the correct option is (b)."
+    },
+    {
+      "block_id": "20260312_3e28735a-29a8-40c8-bd7f-dccfdb8be365_9_block_025",
+      "coordinates": {
+        "x1": 1268.0,
+        "y1": 2644.0,
+        "x2": 2219.0,
+        "y2": 2825.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8963633179664612,
+      "reading_order": 26,
+      "text": "10. Sulphur obtained in Frasch process is in a\nmolten state.\nHence, the correct option is (a)."
+    }
+  ]
+}

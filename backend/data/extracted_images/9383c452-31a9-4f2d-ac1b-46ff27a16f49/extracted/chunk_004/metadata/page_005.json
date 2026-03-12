@@ -1,0 +1,151 @@
+{
+  "page_num": 5,
+  "image_width": 2402,
+  "image_height": 3001,
+  "created_at": "2026-03-12T18:57:08.303940+00:00",
+  "blocks": [
+    {
+      "block_id": "20260312_293cc747-e839-4df7-b470-7633f0fa3e61_5_block_000",
+      "coordinates": {
+        "x1": 1752.0,
+        "y1": 186.0,
+        "x2": 2053.0,
+        "y2": 239.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.8702362179756165,
+      "reading_order": 1,
+      "text": "Assessment Test III"
+    },
+    {
+      "block_id": "20260312_293cc747-e839-4df7-b470-7633f0fa3e61_5_block_001",
+      "coordinates": {
+        "x1": 184.0,
+        "y1": 295.0,
+        "x2": 931.0,
+        "y2": 375.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.6122072339057922,
+      "reading_order": 2,
+      "text": "Assessment Test III"
+    },
+    {
+      "block_id": "20260312_293cc747-e839-4df7-b470-7633f0fa3e61_5_block_002",
+      "coordinates": {
+        "x1": 2109.0,
+        "y1": 184.0,
+        "x2": 2197.0,
+        "y2": 235.0
+      },
+      "layout_tag": "page-number",
+      "confidence": 0.7721801400184631,
+      "reading_order": 3,
+      "text": "2.7"
+    },
+    {
+      "block_id": "20260312_293cc747-e839-4df7-b470-7633f0fa3e61_5_block_003",
+      "coordinates": {
+        "x1": 177.0,
+        "y1": 450.0,
+        "x2": 1694.0,
+        "y2": 507.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.7811660170555115,
+      "reading_order": 4,
+      "text": "Directions for questions from 1 to 15: Select the correct answer from the given options."
+    },
+    {
+      "block_id": "20260312_293cc747-e839-4df7-b470-7633f0fa3e61_5_block_004",
+      "coordinates": {
+        "x1": 234.0,
+        "y1": 543.0,
+        "x2": 1697.0,
+        "y2": 909.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9343005418777466,
+      "reading_order": 5,
+      "text": "1. Arrange the elements corresponding to the following atomic numbers in the\ndecreasing order of valence electrons.\n(A) 15 (B) 30 (C) 14 (D) 35\n(E) 31\n(a) BCEAD (b) DCEAB\n(c) BAECD (d) DACEB"
+    },
+    {
+      "block_id": "20260312_293cc747-e839-4df7-b470-7633f0fa3e61_5_block_005",
+      "coordinates": {
+        "x1": 233.0,
+        "y1": 932.0,
+        "x2": 1698.0,
+        "y2": 1240.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.941975474357605,
+      "reading_order": 6,
+      "text": "2. Radius and energy of Bohr’s orbits in hydrogen atom are given below.\nArrange the values in the decreasing order of ‘$n$’ values.\n(A) 2.116 $\\text{\\AA}$ (B) 0.53 $\\text{\\AA}$\n(C) 8.464 $\\text{\\AA}$ (D) $-1.51$ eV\n(a) DBAC (b) DACB (c) CDAB (d) CBDA"
+    },
+    {
+      "block_id": "20260312_293cc747-e839-4df7-b470-7633f0fa3e61_5_block_006",
+      "coordinates": {
+        "x1": 233.0,
+        "y1": 1261.0,
+        "x2": 1698.0,
+        "y2": 1638.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9064321517944336,
+      "reading_order": 7,
+      "text": "3. Assertion (A): The source of $\\alpha$-particles is taken in a lead block.\nReason (R): Some radioactive emanations can penetrate through lead block.\n(a) Both A and R are true and R is the correct explanation of A.\n(b) Both A and R are true, but R is not the correct explanation of A.\n(c) A is true and R is false.\n(d) A is false and R is true."
+    },
+    {
+      "block_id": "20260312_293cc747-e839-4df7-b470-7633f0fa3e61_5_block_007",
+      "coordinates": {
+        "x1": 232.0,
+        "y1": 1666.0,
+        "x2": 1698.0,
+        "y2": 2141.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8010784387588501,
+      "reading_order": 8,
+      "text": "4. Assertion (A): Potential energy of an electron increases with increase in the\ndistance from the nucleus.\nReason (R): Velocity of an electron decreases with increase in the distance\nfrom the nucleus.\n(a) Both A and R are true and R is the correct explanation of A.\n(b) Both A and R are true, but R is not the correct explanation of A.\n(c) A is true and R is false.\n(d) A is false and R is true."
+    },
+    {
+      "block_id": "20260312_293cc747-e839-4df7-b470-7633f0fa3e61_5_block_008",
+      "coordinates": {
+        "x1": 235.0,
+        "y1": 2166.0,
+        "x2": 1689.0,
+        "y2": 2442.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9405498504638672,
+      "reading_order": 9,
+      "text": "5. An electron in hydrogen atom is excited to the sixth orbit. It comes back\nto the second energy level during de-excitation. Identify the difference in\nangular momentumsm experienced by the electron.\n\n(a) $\\frac{h}{2\\pi}$ (b) $\\frac{2h}{\\pi}$ (c) $\\frac{h}{\\pi}$ (d) $\\frac{h}{4\\pi}$"
+    },
+    {
+      "block_id": "20260312_293cc747-e839-4df7-b470-7633f0fa3e61_5_block_009",
+      "coordinates": {
+        "x1": 235.0,
+        "y1": 2446.0,
+        "x2": 1699.0,
+        "y2": 2627.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9316400289535522,
+      "reading_order": 10,
+      "text": "6. A dinegatively charged ion has same number of protons and neutrons. Its\nmass number is 32. The number of electrons in the ion is ______.\n(a) 18 (b) 16 (c) 14 (d) 20"
+    },
+    {
+      "block_id": "20260312_293cc747-e839-4df7-b470-7633f0fa3e61_5_block_010",
+      "coordinates": {
+        "x1": 1792.0,
+        "y1": 311.0,
+        "x2": 2174.0,
+        "y2": 364.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6655341386795044,
+      "reading_order": 11,
+      "text": "Space for rough work"
+    }
+  ]
+}

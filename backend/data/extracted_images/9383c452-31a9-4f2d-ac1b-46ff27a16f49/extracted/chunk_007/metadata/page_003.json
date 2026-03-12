@@ -1,0 +1,190 @@
+{
+  "page_num": 3,
+  "image_width": 2402,
+  "image_height": 3001,
+  "created_at": "2026-03-12T18:57:27.995393+00:00",
+  "blocks": [
+    {
+      "block_id": "20260312_6a45e4ef-ea6b-4c57-a0bb-e2a23306d763_3_block_000",
+      "coordinates": {
+        "x1": 1751.0,
+        "y1": 187.0,
+        "x2": 2056.0,
+        "y2": 238.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.8496426939964294,
+      "reading_order": 1,
+      "text": "Assessment Test IV"
+    },
+    {
+      "block_id": "20260312_6a45e4ef-ea6b-4c57-a0bb-e2a23306d763_3_block_001",
+      "coordinates": {
+        "x1": 2096.0,
+        "y1": 184.0,
+        "x2": 2208.0,
+        "y2": 235.0
+      },
+      "layout_tag": "page-number",
+      "confidence": 0.7520581483840942,
+      "reading_order": 2,
+      "text": "4.11"
+    },
+    {
+      "block_id": "20260312_6a45e4ef-ea6b-4c57-a0bb-e2a23306d763_3_block_002",
+      "coordinates": {
+        "x1": 289.0,
+        "y1": 291.0,
+        "x2": 1475.0,
+        "y2": 348.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6161393523216248,
+      "reading_order": 3,
+      "text": "(a) (i) $\\rightarrow$ (C); (ii) $\\rightarrow$ (D); (iii) $\\rightarrow$ (D); (iv) $\\rightarrow$ (B); (v) $\\rightarrow$ (D)"
+    },
+    {
+      "block_id": "20260312_6a45e4ef-ea6b-4c57-a0bb-e2a23306d763_3_block_003",
+      "coordinates": {
+        "x1": 290.0,
+        "y1": 354.0,
+        "x2": 1478.0,
+        "y2": 413.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6141231656074524,
+      "reading_order": 4,
+      "text": "(b) (i) → (D); (ii) → (A); (iii) → (D); (iv) → (B); (v) → (C)"
+    },
+    {
+      "block_id": "20260312_6a45e4ef-ea6b-4c57-a0bb-e2a23306d763_3_block_004",
+      "coordinates": {
+        "x1": 290.0,
+        "y1": 416.0,
+        "x2": 1476.0,
+        "y2": 475.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6087562441825867,
+      "reading_order": 5,
+      "text": "(c) (i) → (D); (ii) → (D); (iii) → (A); (iv) → (B); (v) → (C)"
+    },
+    {
+      "block_id": "20260312_6a45e4ef-ea6b-4c57-a0bb-e2a23306d763_3_block_005",
+      "coordinates": {
+        "x1": 290.0,
+        "y1": 480.0,
+        "x2": 1476.0,
+        "y2": 538.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6072273850440979,
+      "reading_order": 6,
+      "text": "(d) (i) $\\rightarrow$ (C); (ii) $\\rightarrow$ (D); (iii) $\\rightarrow$ (A); (iv) $\\rightarrow$ (B); (v) $\\rightarrow$ (D)"
+    },
+    {
+      "block_id": "20260312_6a45e4ef-ea6b-4c57-a0bb-e2a23306d763_3_block_006",
+      "coordinates": {
+        "x1": 232.0,
+        "y1": 599.0,
+        "x2": 1574.0,
+        "y2": 906.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7627227902412415,
+      "reading_order": 7,
+      "text": "6. Which of the following occurs due to redox reaction?\n(a) Liberation of $\\mathrm{H}_2$ gas on reaction of metal with dilute acid.\n(b) Burning of Mg ribbon in air.\n(c) Formation of ferrous sulphide when iron is heated with sulphur.\n(d) Precipitation reaction."
+    },
+    {
+      "block_id": "20260312_6a45e4ef-ea6b-4c57-a0bb-e2a23306d763_3_block_007",
+      "coordinates": {
+        "x1": 233.0,
+        "y1": 947.0,
+        "x2": 1694.0,
+        "y2": 1130.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9188847541809082,
+      "reading_order": 8,
+      "text": "7. In which of the following compounds do the metal and the non-metal pos-\nsess electrovalencies of 3 and 2, respectively?\n(a) $\\mathrm{M}_2\\mathrm{X}$ (b) $\\mathrm{M}_3\\mathrm{X}_2$ (c) $\\mathrm{M}_2\\mathrm{X}_3$ (d) $\\mathrm{MX}_3$"
+    },
+    {
+      "block_id": "20260312_6a45e4ef-ea6b-4c57-a0bb-e2a23306d763_3_block_008",
+      "coordinates": {
+        "x1": 233.0,
+        "y1": 1164.0,
+        "x2": 1701.0,
+        "y2": 1457.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9434251189231873,
+      "reading_order": 9,
+      "text": "8. A metal has 'M' shell as valence shell with one electron in it. A non-metal\nexhibits an electrovalence of 3 and has only two shells in its atom. Which\ncombination of inert gases does the ions so formed attain?\n(a) Ne, Ar (b) Ar, Ar\n(c) Ar, Kr (d) Ne, Ne"
+    },
+    {
+      "block_id": "20260312_6a45e4ef-ea6b-4c57-a0bb-e2a23306d763_3_block_009",
+      "coordinates": {
+        "x1": 230.0,
+        "y1": 1498.0,
+        "x2": 1699.0,
+        "y2": 1727.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9383954405784607,
+      "reading_order": 10,
+      "text": "9. An element has the electronic configuration 2, 7. If it forms a diatomic mole-\ncule with its own element, how many lone pairs can be present on each atom\nafter bond formation?\n(a) 0 (b) 2 (c) 3 (d) 1"
+    },
+    {
+      "block_id": "20260312_6a45e4ef-ea6b-4c57-a0bb-e2a23306d763_3_block_010",
+      "coordinates": {
+        "x1": 214.0,
+        "y1": 1767.0,
+        "x2": 1692.0,
+        "y2": 1944.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9367485642433167,
+      "reading_order": 11,
+      "text": "10. Two elements belonging to the same group form a covalent compound.\nIdentify the probable atomic numbers of the elements.\n(a) 16, 8 (b) 20, 1 (c) 16, 9 (d) 20, 9"
+    },
+    {
+      "block_id": "20260312_6a45e4ef-ea6b-4c57-a0bb-e2a23306d763_3_block_011",
+      "coordinates": {
+        "x1": 211.0,
+        "y1": 1981.0,
+        "x2": 1632.0,
+        "y2": 2288.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9397410750389099,
+      "reading_order": 12,
+      "text": "11. Iron is a hard metal whereas sodium is a soft metal. Identify the reason.\n(a) Low ionization potential value of sodium\n(b) High ionization potential value of sodium\n(c) More number of free electrons in sodium\n(d) More number of free electrons in iron"
+    },
+    {
+      "block_id": "20260312_6a45e4ef-ea6b-4c57-a0bb-e2a23306d763_3_block_012",
+      "coordinates": {
+        "x1": 210.0,
+        "y1": 2329.0,
+        "x2": 1694.0,
+        "y2": 2691.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9358168244361877,
+      "reading_order": 13,
+      "text": "12. Hydrogen bonding imparts some characteristic properties to substances.\nIdentify the property which does not come under that category.\n(a) Relatively higher boiling point of water\n(b) Dissolution of glucose in water\n(c) Existence of water in liquid state\n(d) Conduction of electricity"
+    },
+    {
+      "block_id": "20260312_6a45e4ef-ea6b-4c57-a0bb-e2a23306d763_3_block_013",
+      "coordinates": {
+        "x1": 1792.0,
+        "y1": 312.0,
+        "x2": 2175.0,
+        "y2": 364.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6544058322906494,
+      "reading_order": 14,
+      "text": "Space for rough work"
+    }
+  ]
+}

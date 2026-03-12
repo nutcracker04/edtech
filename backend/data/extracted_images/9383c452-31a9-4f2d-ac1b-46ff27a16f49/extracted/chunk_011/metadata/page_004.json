@@ -1,0 +1,424 @@
+{
+  "page_num": 4,
+  "image_width": 2402,
+  "image_height": 3001,
+  "created_at": "2026-03-12T18:58:08.240187+00:00",
+  "blocks": [
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_4_block_000",
+      "coordinates": {
+        "x1": 202.0,
+        "y1": 186.0,
+        "x2": 775.0,
+        "y2": 241.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.5951120853424072,
+      "reading_order": 1,
+      "text": "A.2 Chapter 1 Nature of Matter"
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_4_block_001",
+      "coordinates": {
+        "x1": 218.0,
+        "y1": 292.0,
+        "x2": 1171.0,
+        "y2": 508.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9068028330802917,
+      "reading_order": 2,
+      "text": "11. The amount of component that can be sep-\narated by cooling up to any temperature\ndepends upon the solubility of that substance\nat that temperature."
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_4_block_002",
+      "coordinates": {
+        "x1": 293.0,
+        "y1": 527.0,
+        "x2": 877.0,
+        "y2": 579.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6833107471466064,
+      "reading_order": 3,
+      "text": "Hence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_4_block_003",
+      "coordinates": {
+        "x1": 217.0,
+        "y1": 613.0,
+        "x2": 1169.0,
+        "y2": 966.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6649605631828308,
+      "reading_order": 4,
+      "text": "12. $\\mathrm{N}_2$ and $\\mathrm{O}_2$ can be separated by fractional evap-\noration $\\mathrm{SO}_2$ and $\\mathrm{N}_2$ can be separated by disso-\nlution in $\\mathrm{KOH}$. $\\mathrm{H}_2$ and $\\mathrm{NH}_3$ can be separated\nby preferential liquefaction. $\\mathrm{H}_2$ and Ar can be\nseparated by diffusion.$\\mathrm{NH}_3$ and $\\mathrm{O}_2$ can be sep-\narated by dissolution in water."
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_4_block_004",
+      "coordinates": {
+        "x1": 296.0,
+        "y1": 950.0,
+        "x2": 1167.0,
+        "y2": 1068.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.45959365367889404,
+      "reading_order": 5,
+      "text": "(a) $\\rightarrow$ (iv); (b) $\\rightarrow$ (v); (c) $\\rightarrow$ (i); (d) $\\rightarrow$ (ii); (e) $\\rightarrow$ (iii)\nHence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_4_block_005",
+      "coordinates": {
+        "x1": 214.0,
+        "y1": 1093.0,
+        "x2": 1169.0,
+        "y2": 1392.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7495319843292236,
+      "reading_order": 6,
+      "text": "13. $\\mathrm{NaNO}_3$ and $\\mathrm{NaCl}$ can be separated by fractional\ncrystallization. This is because the solubility of\n$\\mathrm{KNO}_3$ decreases to a large extent on cooling.\nHowever, the decrease in solubility of $\\mathrm{NaCl}$ with\nthe decrease in temperature is insignificant."
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_4_block_006",
+      "coordinates": {
+        "x1": 294.0,
+        "y1": 1379.0,
+        "x2": 884.0,
+        "y2": 1433.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.41034743189811707,
+      "reading_order": 7,
+      "text": "Hence, the correct option is (b)."
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_4_block_007",
+      "coordinates": {
+        "x1": 215.0,
+        "y1": 1459.0,
+        "x2": 1167.0,
+        "y2": 1692.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9078488945960999,
+      "reading_order": 8,
+      "text": "14. A mixture of $\\mathrm{SO}_2$ and water cannot be sepa-\nrated by heating as it forms sulphurous acid.\n$\\mathrm{SO}_2$ is highly soluble in water.\nHence, the correct option is (d)."
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_4_block_008",
+      "coordinates": {
+        "x1": 213.0,
+        "y1": 1718.0,
+        "x2": 1170.0,
+        "y2": 1953.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8637281656265259,
+      "reading_order": 9,
+      "text": "15. Refining of petroleum involves the separation\nof various components by fractional distilla-\ntion as they possess different boiling points.\nHence, the correct option is (b)."
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_4_block_009",
+      "coordinates": {
+        "x1": 195.0,
+        "y1": 1984.0,
+        "x2": 633.0,
+        "y2": 2037.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.8392465114593506,
+      "reading_order": 10,
+      "text": "Assessment Test II"
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_4_block_010",
+      "coordinates": {
+        "x1": 234.0,
+        "y1": 2081.0,
+        "x2": 1172.0,
+        "y2": 2455.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9218947291374207,
+      "reading_order": 11,
+      "text": "1. Sea water has lower freezing point than normal\nwater. Since ice is at the temperature of $0^\\circ\\mathrm{C}$,\nfurther transfer of heat from sea water to ice\nis not possible and hence, phase transition is\nnot possible. Distilled water in ice also does not\nundergo phase transition as there is no more\nheat transfer after reaching $0^\\circ\\mathrm{C}$."
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_4_block_011",
+      "coordinates": {
+        "x1": 295.0,
+        "y1": 2476.0,
+        "x2": 881.0,
+        "y2": 2529.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6240103244781494,
+      "reading_order": 12,
+      "text": "Hence, the correct option is (a)."
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_4_block_012",
+      "coordinates": {
+        "x1": 233.0,
+        "y1": 2546.0,
+        "x2": 1172.0,
+        "y2": 2709.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8253378868103027,
+      "reading_order": 13,
+      "text": "2. Evaporation is a surface phenomenon which\nleads to decrease in temperature of sur-\nroundings."
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_4_block_013",
+      "coordinates": {
+        "x1": 287.0,
+        "y1": 2725.0,
+        "x2": 877.0,
+        "y2": 2779.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5884327292442322,
+      "reading_order": 14,
+      "text": "Hence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_4_block_014",
+      "coordinates": {
+        "x1": 1287.0,
+        "y1": 292.0,
+        "x2": 2219.0,
+        "y2": 452.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8415895700454712,
+      "reading_order": 15,
+      "text": "3. Skating on ice is based on the principle of rege-\nlation, whereas all other processes are based on\ncondensation."
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_4_block_015",
+      "coordinates": {
+        "x1": 1343.0,
+        "y1": 471.0,
+        "x2": 1930.0,
+        "y2": 527.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5806707739830017,
+      "reading_order": 16,
+      "text": "Hence, the correct option is (a)."
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_4_block_016",
+      "coordinates": {
+        "x1": 1285.0,
+        "y1": 550.0,
+        "x2": 2219.0,
+        "y2": 784.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8661034107208252,
+      "reading_order": 17,
+      "text": "4. Due to the presence of dissolved salts, the\nfreezing point of water decreases and hence,\nwater freezes at below $0^{\\circ}\\mathrm{C}$.\n\nHence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_4_block_017",
+      "coordinates": {
+        "x1": 1286.0,
+        "y1": 800.0,
+        "x2": 1829.0,
+        "y2": 854.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5615527033805847,
+      "reading_order": 18,
+      "text": "5. (i) Sand + chalk powder"
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_4_block_018",
+      "coordinates": {
+        "x1": 1357.0,
+        "y1": 862.0,
+        "x2": 1545.0,
+        "y2": 914.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6036494970321655,
+      "reading_order": 19,
+      "text": "(ii) Blood"
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_4_block_019",
+      "coordinates": {
+        "x1": 1346.0,
+        "y1": 928.0,
+        "x2": 1724.0,
+        "y2": 982.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7023320198059082,
+      "reading_order": 20,
+      "text": "(iii) Water + alcohol"
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_4_block_020",
+      "coordinates": {
+        "x1": 1346.0,
+        "y1": 995.0,
+        "x2": 1705.0,
+        "y2": 1051.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7055873274803162,
+      "reading_order": 21,
+      "text": "(iv) $\\mathrm{KNO}_3 + \\mathrm{water}$"
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_4_block_021",
+      "coordinates": {
+        "x1": 1356.0,
+        "y1": 1062.0,
+        "x2": 1725.0,
+        "y2": 1116.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7435025572776794,
+      "reading_order": 22,
+      "text": "(v) Petrol + alcohol"
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_4_block_022",
+      "coordinates": {
+        "x1": 1345.0,
+        "y1": 1125.0,
+        "x2": 1930.0,
+        "y2": 1180.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7313227653503418,
+      "reading_order": 23,
+      "text": "Hence, the correct option is (a)."
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_4_block_023",
+      "coordinates": {
+        "x1": 1285.0,
+        "y1": 1203.0,
+        "x2": 2116.0,
+        "y2": 1258.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.51076340675354,
+      "reading_order": 24,
+      "text": "6. (i) Cooking in open vessel at hill station"
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_4_block_024",
+      "coordinates": {
+        "x1": 1340.0,
+        "y1": 1244.0,
+        "x2": 2217.0,
+        "y2": 1379.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.4817027747631073,
+      "reading_order": 25,
+      "text": "(ii) Cooking in a vessel covered with lid at hill\nstation"
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_4_block_025",
+      "coordinates": {
+        "x1": 1343.0,
+        "y1": 1386.0,
+        "x2": 2194.0,
+        "y2": 1569.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7370762825012207,
+      "reading_order": 26,
+      "text": "(iii) Cooking in pressure cooker at hill station\n(iv) Cooking in pressure cooker at sea level\nHence, the correct option is (d)."
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_4_block_026",
+      "coordinates": {
+        "x1": 1288.0,
+        "y1": 1593.0,
+        "x2": 2219.0,
+        "y2": 1929.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.811443567276001,
+      "reading_order": 27,
+      "text": "7. Separation of leaf pigments can be done by the\nmethod of chromatography. The terms station-\nary phase, mobile phase and adsorption are\nrelated to chromatography whereas the term\ndistillate is related to distillation.\n\nHence, the correct option is (a)."
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_4_block_027",
+      "coordinates": {
+        "x1": 1286.0,
+        "y1": 1958.0,
+        "x2": 2218.0,
+        "y2": 2120.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7025334239006042,
+      "reading_order": 28,
+      "text": "8. In the process of fractional distillation, the liq-\nuid with lower boiling point (X) is called distil-\nlate and is collected in the receiver flask."
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_4_block_028",
+      "coordinates": {
+        "x1": 1342.0,
+        "y1": 2138.0,
+        "x2": 1931.0,
+        "y2": 2193.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.47664615511894226,
+      "reading_order": 29,
+      "text": "Hence, the correct option is (a)."
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_4_block_029",
+      "coordinates": {
+        "x1": 1286.0,
+        "y1": 2220.0,
+        "x2": 2221.0,
+        "y2": 2544.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9205735921859741,
+      "reading_order": 30,
+      "text": "9. The figure represents the process of sublima-\ntion of a mixture with one sublimely compo-\nnent and another non-sublimely component.\nAmong the given mixtures, a mixture of ammo-\nnium chloride and sand can be separated by\nthis method."
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_4_block_030",
+      "coordinates": {
+        "x1": 1342.0,
+        "y1": 2562.0,
+        "x2": 1936.0,
+        "y2": 2618.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6725016236305237,
+      "reading_order": 31,
+      "text": "Hence, the correct option is (d)."
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_4_block_031",
+      "coordinates": {
+        "x1": 1263.0,
+        "y1": 2640.0,
+        "x2": 2223.0,
+        "y2": 2751.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8941758871078491,
+      "reading_order": 32,
+      "text": "10. (A) and (D) are true statements. The separation\nmethod is separation of immiscible liquids. A"
+    }
+  ]
+}

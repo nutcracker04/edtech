@@ -1,0 +1,229 @@
+{
+  "page_num": 6,
+  "image_width": 2402,
+  "image_height": 3001,
+  "created_at": "2026-03-12T18:56:56.260737+00:00",
+  "blocks": [
+    {
+      "block_id": "20260312_62a3f467-e446-41ac-9358-8844b1081240_6_block_000",
+      "coordinates": {
+        "x1": 193.0,
+        "y1": 184.0,
+        "x2": 777.0,
+        "y2": 242.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.7635629773139954,
+      "reading_order": 1,
+      "text": "1.12 Chapter 1 Nature of Matter"
+    },
+    {
+      "block_id": "20260312_62a3f467-e446-41ac-9358-8844b1081240_6_block_001",
+      "coordinates": {
+        "x1": 233.0,
+        "y1": 296.0,
+        "x2": 1699.0,
+        "y2": 542.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9184145927429199,
+      "reading_order": 2,
+      "text": "5. Which among the following possesses maximum intermolecular force of\nattraction?\n(a) Bromine (b) Air\n(c) Oxygen (d) Copper"
+    },
+    {
+      "block_id": "20260312_62a3f467-e446-41ac-9358-8844b1081240_6_block_002",
+      "coordinates": {
+        "x1": 237.0,
+        "y1": 610.0,
+        "x2": 1701.0,
+        "y2": 1027.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.596183717250824,
+      "reading_order": 3,
+      "text": "6. The steps involved in the formation of dew are given below. Arrange them\nin a proper sequence.\n(A) On further lowered in temperature, water vapour condenses.\n(B) During day time water from water bodies gets evaporated.\n(C) Temperature falls during night time, and hence the air becomes satu-\nrated with water vapour.\n(a) CBA (b) CAB (c) BCA (d) ACB"
+    },
+    {
+      "block_id": "20260312_62a3f467-e446-41ac-9358-8844b1081240_6_block_003",
+      "coordinates": {
+        "x1": 235.0,
+        "y1": 1095.0,
+        "x2": 1691.0,
+        "y2": 1506.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7354715466499329,
+      "reading_order": 4,
+      "text": "7. Pressure cooker reduces the cooking time. Choose the correct reason from\ngiven options.\n(a) Pressure inside the cooker is more, so boiling point of water decreases.\n(b) Pressure inside the cooker is less, so boiling point of water decreases.\n(c) Pressure inside the cooker is more, so boiling point of water increases.\n(d) Generally, cookers are made up of aluminium metal, which is a good\nconductor of heat."
+    },
+    {
+      "block_id": "20260312_62a3f467-e446-41ac-9358-8844b1081240_6_block_004",
+      "coordinates": {
+        "x1": 236.0,
+        "y1": 1570.0,
+        "x2": 1352.0,
+        "y2": 1878.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.728721022605896,
+      "reading_order": 5,
+      "text": "8. Maximum fluidity of gases is due to ______.\n(a) high intermolecular space.\n(b) high kinetic energy of molecules.\n(c) the presence of three types of molecular movements.\n(d) the absence of free surfaces."
+    },
+    {
+      "block_id": "20260312_62a3f467-e446-41ac-9358-8844b1081240_6_block_005",
+      "coordinates": {
+        "x1": 235.0,
+        "y1": 1945.0,
+        "x2": 1698.0,
+        "y2": 2048.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.895796000957489,
+      "reading_order": 6,
+      "text": "9. Three liquids are taken in three different types of containers. What is the correct order of the rate of evaporation?"
+    },
+    {
+      "block_id": "20260312_62a3f467-e446-41ac-9358-8844b1081240_6_block_006",
+      "coordinates": {
+        "x1": 612.0,
+        "y1": 2079.0,
+        "x2": 704.0,
+        "y2": 2356.0
+      },
+      "layout_tag": "image",
+      "confidence": 0.8285526633262634,
+      "reading_order": 7,
+      "text": "The image displays a vertical, black-and-white line drawing of a ladder or rack structure. It consists of two vertical side rails connected by a series of horizontal rungs. The top section features a single, wide horizontal rung. Below this, the structure is divided into two distinct sections: a top section containing one rung and a bottom section containing thirteen rungs. The rungs are evenly spaced, creating a grid-like pattern. There are no axes, labels, numerical values, or legends present in the image."
+    },
+    {
+      "block_id": "20260312_62a3f467-e446-41ac-9358-8844b1081240_6_block_007",
+      "coordinates": {
+        "x1": 616.0,
+        "y1": 2372.0,
+        "x2": 702.0,
+        "y2": 2449.0
+      },
+      "layout_tag": "footnote",
+      "confidence": 0.45856085419654846,
+      "reading_order": 8,
+      "text": "A\n30°C"
+    },
+    {
+      "block_id": "20260312_62a3f467-e446-41ac-9358-8844b1081240_6_block_008",
+      "coordinates": {
+        "x1": 760.0,
+        "y1": 2134.0,
+        "x2": 1043.0,
+        "y2": 2364.0
+      },
+      "layout_tag": "image",
+      "confidence": 0.8071062564849854,
+      "reading_order": 9,
+      "text": "The image displays a simple black-and-white line drawing of a rectangular grid or frame. It consists of two vertical lines on the left and right sides, connected by seven horizontal lines. The top horizontal line is positioned near the top of the rectangle, leaving a significant empty white space above it. The remaining six horizontal lines are evenly spaced, creating a uniform grid pattern. There are no axes, labels, legends, or numerical values present in the image."
+    },
+    {
+      "block_id": "20260312_62a3f467-e446-41ac-9358-8844b1081240_6_block_009",
+      "coordinates": {
+        "x1": 870.0,
+        "y1": 2403.0,
+        "x2": 957.0,
+        "y2": 2447.0
+      },
+      "layout_tag": "footnote",
+      "confidence": 0.4785524904727936,
+      "reading_order": 10,
+      "text": "30°C"
+    },
+    {
+      "block_id": "20260312_62a3f467-e446-41ac-9358-8844b1081240_6_block_010",
+      "coordinates": {
+        "x1": 1097.0,
+        "y1": 2132.0,
+        "x2": 1267.0,
+        "y2": 2357.0
+      },
+      "layout_tag": "image",
+      "confidence": 0.8529497981071472,
+      "reading_order": 11,
+      "text": "The image displays a simple black-and-white line drawing of a rectangular object, likely a stylized representation of a container, bucket, or a rack. The object is defined by a vertical outer frame with two parallel vertical lines at the left and right edges. Inside this frame, there are seven evenly spaced horizontal lines running parallel to the top and bottom edges. The space between the top horizontal line and the bottom horizontal line is empty, suggesting a container or a rack with a gap. There are no axes, labels, legends, or numerical data points present in the image."
+    },
+    {
+      "block_id": "20260312_62a3f467-e446-41ac-9358-8844b1081240_6_block_011",
+      "coordinates": {
+        "x1": 294.0,
+        "y1": 2508.0,
+        "x2": 560.0,
+        "y2": 2561.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.46021541953086853,
+      "reading_order": 12,
+      "text": "(a) A < B < C"
+    },
+    {
+      "block_id": "20260312_62a3f467-e446-41ac-9358-8844b1081240_6_block_012",
+      "coordinates": {
+        "x1": 1148.0,
+        "y1": 2400.0,
+        "x2": 1231.0,
+        "y2": 2448.0
+      },
+      "layout_tag": "footnote",
+      "confidence": 0.3620196580886841,
+      "reading_order": 13,
+      "text": "30°C"
+    },
+    {
+      "block_id": "20260312_62a3f467-e446-41ac-9358-8844b1081240_6_block_013",
+      "coordinates": {
+        "x1": 293.0,
+        "y1": 2568.0,
+        "x2": 563.0,
+        "y2": 2625.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5050811171531677,
+      "reading_order": 14,
+      "text": "(c) B > C > A"
+    },
+    {
+      "block_id": "20260312_62a3f467-e446-41ac-9358-8844b1081240_6_block_014",
+      "coordinates": {
+        "x1": 975.0,
+        "y1": 2508.0,
+        "x2": 1243.0,
+        "y2": 2561.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5233333706855774,
+      "reading_order": 15,
+      "text": "(b) A > C > B"
+    },
+    {
+      "block_id": "20260312_62a3f467-e446-41ac-9358-8844b1081240_6_block_015",
+      "coordinates": {
+        "x1": 1793.0,
+        "y1": 313.0,
+        "x2": 2173.0,
+        "y2": 363.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5108227729797363,
+      "reading_order": 16,
+      "text": "Space for rough work"
+    },
+    {
+      "block_id": "20260312_62a3f467-e446-41ac-9358-8844b1081240_6_block_016",
+      "coordinates": {
+        "x1": 976.0,
+        "y1": 2570.0,
+        "x2": 1243.0,
+        "y2": 2624.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5120293498039246,
+      "reading_order": 17,
+      "text": "(d) C < A < B"
+    }
+  ]
+}

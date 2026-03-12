@@ -1,0 +1,138 @@
+{
+  "page_num": 6,
+  "image_width": 2402,
+  "image_height": 3001,
+  "created_at": "2026-03-12T18:57:28.076742+00:00",
+  "blocks": [
+    {
+      "block_id": "20260312_6a45e4ef-ea6b-4c57-a0bb-e2a23306d763_6_block_000",
+      "coordinates": {
+        "x1": 201.0,
+        "y1": 184.0,
+        "x2": 1316.0,
+        "y2": 242.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.7609373331069946,
+      "reading_order": 1,
+      "text": "5.2 Chapter 5 Mole Concept, Stoichiometry and Behaviour of Gases"
+    },
+    {
+      "block_id": "20260312_6a45e4ef-ea6b-4c57-a0bb-e2a23306d763_6_block_001",
+      "coordinates": {
+        "x1": 231.0,
+        "y1": 290.0,
+        "x2": 1282.0,
+        "y2": 600.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8219296336174011,
+      "reading_order": 2,
+      "text": "5. Identify the incorrect formulae among the following.\n(A) $\\mathrm{Mg}_2\\mathrm{N}_3$ (B) $\\mathrm{Al}_2(\\mathrm{SO}_4)_3$\n(C) $\\mathrm{Ca}_2(\\mathrm{PO}_4)_3$ (D) $\\mathrm{NH}_4\\mathrm{HCO}_3$\n(E) $\\mathrm{NaH}_2\\mathrm{PO}_4$\n(A) DE (b) AC (c) AE"
+    },
+    {
+      "block_id": "20260312_6a45e4ef-ea6b-4c57-a0bb-e2a23306d763_6_block_002",
+      "coordinates": {
+        "x1": 233.0,
+        "y1": 657.0,
+        "x2": 1699.0,
+        "y2": 950.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.935905933380127,
+      "reading_order": 3,
+      "text": "6. A gas was transferred from one-litre cylinder into another cylinder of differ-\nent volume at the same temperature. Then, the pressure exerted by the gas\nincreased by 20%. Identify the volume of the new cylinder.\n(a) 480 mL (b) 1170 mL\n(c) 833 mL (d) 607 mL"
+    },
+    {
+      "block_id": "20260312_6a45e4ef-ea6b-4c57-a0bb-e2a23306d763_6_block_003",
+      "coordinates": {
+        "x1": 233.0,
+        "y1": 1007.0,
+        "x2": 1699.0,
+        "y2": 1310.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9410166144371033,
+      "reading_order": 4,
+      "text": "7. Arrange the following conditions of pressure and temperature in the increas-\ning order of volumes occupied by one mole of a gas.\n(A) 600 mm and 200 K (B) 400 mm and 100 K\n(C) 600 mm and 100 K (D) 400 mm and 200 K\n(a) CBAD (b) BCAD (c) CADB (d) BACD"
+    },
+    {
+      "block_id": "20260312_6a45e4ef-ea6b-4c57-a0bb-e2a23306d763_6_block_004",
+      "coordinates": {
+        "x1": 235.0,
+        "y1": 1365.0,
+        "x2": 1698.0,
+        "y2": 1530.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9231472015380859,
+      "reading_order": 5,
+      "text": "8. The following pie chart represents the percentage composition by weight of\ncalcium bicarbonate. Identify the components 'A', 'B', 'C' and 'D' indicated\nin the pie chart."
+    },
+    {
+      "block_id": "20260312_6a45e4ef-ea6b-4c57-a0bb-e2a23306d763_6_block_005",
+      "coordinates": {
+        "x1": 795.0,
+        "y1": 1556.0,
+        "x2": 1079.0,
+        "y2": 1838.0
+      },
+      "layout_tag": "image",
+      "confidence": 0.9226017594337463,
+      "reading_order": 6,
+      "text": "The image displays a simple black-and-white line drawing of a circle divided into four distinct sectors, resembling a pie chart. There are no X or Y axes, numerical values, or a legend present. The sectors are labeled with capital letters: Sector A is the largest, occupying the majority of the circle's area (visually estimated to be approximately 75%). Sector B is the second largest, located in the upper-right quadrant (visually estimated at ~12.5%). Sector C is the third largest, located in the lower-right quadrant (visually estimated at ~12.5%). Sector D is the smallest, located in the upper-left quadrant (visually estimated at ~3.1%). The sum of the labeled percentages is 92.5%, indicating that the remaining 7.5% is unlabeled."
+    },
+    {
+      "block_id": "20260312_6a45e4ef-ea6b-4c57-a0bb-e2a23306d763_6_block_006",
+      "coordinates": {
+        "x1": 288.0,
+        "y1": 1899.0,
+        "x2": 1098.0,
+        "y2": 2143.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.3205031752586365,
+      "reading_order": 7,
+      "text": "(a) A $\\rightarrow$ Ca; B $\\rightarrow$ O; C $\\rightarrow$ C; D $\\rightarrow$ H\n(b) A $\\rightarrow$ O; B $\\rightarrow$ Ca; C $\\rightarrow$ C; D $\\rightarrow$ H\n(c) A $\\rightarrow$ Ca; B $\\rightarrow$ C; C $\\rightarrow$ H; D $\\rightarrow$ O\n(d) A $\\rightarrow$ O; B $\\rightarrow$ C; C $\\rightarrow$ Ca; D $\\rightarrow$ H"
+    },
+    {
+      "block_id": "20260312_6a45e4ef-ea6b-4c57-a0bb-e2a23306d763_6_block_007",
+      "coordinates": {
+        "x1": 230.0,
+        "y1": 2207.0,
+        "x2": 1700.0,
+        "y2": 2573.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7209551334381104,
+      "reading_order": 8,
+      "text": "9. $x$ grams of a diatomic gas occupies 5.6 L volume at STP. Identify the incor-\nrect statement regarding the gas.\n(a) The sample of gas contains $1.5 \\times 10^{23}$ molecules.\n(b) The total number of atoms will be $3 \\times 10^{23}$.\n(c) If the gas is oxygen, then $x$ is equal to 8 g.\n(d) The vapour density of the gas would be $4x$."
+    },
+    {
+      "block_id": "20260312_6a45e4ef-ea6b-4c57-a0bb-e2a23306d763_6_block_008",
+      "coordinates": {
+        "x1": 213.0,
+        "y1": 2626.0,
+        "x2": 1703.0,
+        "y2": 2870.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.884004533290863,
+      "reading_order": 9,
+      "text": "10. The empirical formula mass of a compound is one-sixth of its molecular\nmass. What is the molecular formula corresponding to that substance?\n(a) $\\mathrm{C}_{12}\\mathrm{H}_{22}\\mathrm{O}_{11}$ (b) $\\mathrm{C}_6\\mathrm{H}_{12}\\mathrm{O}_6$\n(c) $\\mathrm{C}_2\\mathrm{H}_4\\mathrm{O}_3$ (d) $\\mathrm{C}_3\\mathrm{H}_6\\mathrm{O}_2$"
+    },
+    {
+      "block_id": "20260312_6a45e4ef-ea6b-4c57-a0bb-e2a23306d763_6_block_009",
+      "coordinates": {
+        "x1": 1794.0,
+        "y1": 311.0,
+        "x2": 2173.0,
+        "y2": 364.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5716685056686401,
+      "reading_order": 10,
+      "text": "Space for rough work"
+    }
+  ]
+}

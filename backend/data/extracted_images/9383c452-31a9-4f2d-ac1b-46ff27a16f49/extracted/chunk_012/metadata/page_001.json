@@ -1,0 +1,203 @@
+{
+  "page_num": 1,
+  "image_width": 2402,
+  "image_height": 3001,
+  "created_at": "2026-03-12T18:58:15.198253+00:00",
+  "blocks": [
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_1_block_000",
+      "coordinates": {
+        "x1": 1696.0,
+        "y1": 187.0,
+        "x2": 2054.0,
+        "y2": 240.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.8782651424407959,
+      "reading_order": 1,
+      "text": "Hints and Explanations"
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_1_block_001",
+      "coordinates": {
+        "x1": 2106.0,
+        "y1": 186.0,
+        "x2": 2199.0,
+        "y2": 235.0
+      },
+      "layout_tag": "page-number",
+      "confidence": 0.7805904746055603,
+      "reading_order": 2,
+      "text": "A.9"
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_1_block_002",
+      "coordinates": {
+        "x1": 236.0,
+        "y1": 292.0,
+        "x2": 1171.0,
+        "y2": 685.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9308585524559021,
+      "reading_order": 3,
+      "text": "4. With increase in the distance from the nucleus,\nvelocity of electron decreases and hence, kinetic\nenergy decreases. Potential energy in the second\norbit is more than that of the first orbit since loss\nof energy of the electron approached from the\ninfinite distance is less in the second orbit.\n\nHence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_1_block_003",
+      "coordinates": {
+        "x1": 237.0,
+        "y1": 689.0,
+        "x2": 1171.0,
+        "y2": 1031.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9307515025138855,
+      "reading_order": 4,
+      "text": "5. According to Bohr’s theory, $mvr = \\frac{nh}{2\\pi}$ where $n$\nis an integer. The value of $\\frac{3h}{4\\pi}$ is not an integral\nmultiple of $\\frac{h}{2\\pi}$.\nHence, the correct option is (d)."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_1_block_004",
+      "coordinates": {
+        "x1": 235.0,
+        "y1": 1059.0,
+        "x2": 1173.0,
+        "y2": 1537.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9366050958633423,
+      "reading_order": 5,
+      "text": "6. The number of neutrons = 26\nThe number of protons = 26\nThe number of electrons = 26\nElectronic configuration of the element is 2, 8,\n14, 2.\nThe number of electrons present in 'M' shell of\n$\\mathrm{M}^{+2}$ ion $\\rightarrow$ 2, 8, 14, $\\mathrm{M}^{+2}$ ion $\\rightarrow$ 8\nHence, the correct option is (b)."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_1_block_005",
+      "coordinates": {
+        "x1": 234.0,
+        "y1": 1560.0,
+        "x2": 1073.0,
+        "y2": 1686.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8766239881515503,
+      "reading_order": 6,
+      "text": "7. (i) $\\rightarrow$ (C); (ii) $\\rightarrow$ (D); (iii) $\\rightarrow$ (A); (iv) $\\rightarrow$ (B)\nHence, the correct option is (a)."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_1_block_006",
+      "coordinates": {
+        "x1": 235.0,
+        "y1": 1711.0,
+        "x2": 1130.0,
+        "y2": 1900.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8988791108131409,
+      "reading_order": 7,
+      "text": "8. Electronic configuration of B is 2, 8, 18, 10, 2.\nThe number of core electrons = 38\nHence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_1_block_007",
+      "coordinates": {
+        "x1": 234.0,
+        "y1": 1922.0,
+        "x2": 1157.0,
+        "y2": 2229.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9235861897468567,
+      "reading_order": 8,
+      "text": "9. The number of protons = $\\frac{14,696}{1,837} = 8$\n\nThe number of neutrons = 10\n\nThe mass number of the element = $8 + 10 = 18$.\n\nHence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_1_block_008",
+      "coordinates": {
+        "x1": 213.0,
+        "y1": 2257.0,
+        "x2": 1174.0,
+        "y2": 2708.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9344959855079651,
+      "reading_order": 9,
+      "text": "10. Energy of electron in Bohr’s orbit of ‘H’ atom =\n$\\frac{-13.6}{n^2} \\to Z^2$\nEnergy of electron in Bohr’s orbit of $\\mathrm{He}^+$ ion =\n$\\frac{-13.6}{n^2} \\to 2^2$\n\n2nd orbit of H atom $\\to \\frac{-13.6}{2^2} = - 3.4 \\text{ ev}$"
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_1_block_009",
+      "coordinates": {
+        "x1": 1343.0,
+        "y1": 301.0,
+        "x2": 2190.0,
+        "y2": 479.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8786535263061523,
+      "reading_order": 10,
+      "text": "4th orbit of He+ ion $\\rightarrow \\frac{-13.6}{4^2} \\rightarrow 22 = -3.4$ ev\n\nHence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_1_block_010",
+      "coordinates": {
+        "x1": 1260.0,
+        "y1": 506.0,
+        "x2": 2215.0,
+        "y2": 1048.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.928376317024231,
+      "reading_order": 11,
+      "text": "11. Charges on oil droplets are 0.3C, 0.12C, and\n0.18C, respectively\n$\\mathrm{HCF} = 0.06$\nThe number of electrons on A = $\\frac{0.3}{0.06} = 5$.\nThe number of electrons on B = $\\frac{0.12}{0.06} = 2$.\nThe number of electrons on C = $\\frac{0.18}{0.06} = 3$.\nHence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_1_block_011",
+      "coordinates": {
+        "x1": 1262.0,
+        "y1": 1078.0,
+        "x2": 1928.0,
+        "y2": 1352.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8779513835906982,
+      "reading_order": 12,
+      "text": "12. Average atomic mass =\n$$ \\frac{(x \\times 75.77) + [(x + 2) \\times 24.23]}{100} $$\n$= x + 0.48$\nHence, the correct option is (a)."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_1_block_012",
+      "coordinates": {
+        "x1": 1262.0,
+        "y1": 1376.0,
+        "x2": 2212.0,
+        "y2": 1988.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9241132140159607,
+      "reading_order": 13,
+      "text": "13. Deuterium nucleus has 1 proton and 1 neutron.\nTherefore, deuteron has 1 proton and 1 neu-\ntron. It has unit positive charge.\n\nThe charge on deuteron = $1.6 \\times 10^{-19}$ C.\nThe mass of deuteron = $6.7 \\times 10^{-27}$ kg + $7.2 \\times$\n$10^{-27}$ kg\n$= 13.9 \\times 10^{-27}$ kg.\nThe specific charge of deuteron = $\\frac{1.6 \\times 10^{-19}}{13.9 \\times 10^{-27}}$\n$= 1.15 \\times 10^7$ C/kg\nHence, the correct option is (b)."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_1_block_013",
+      "coordinates": {
+        "x1": 1266.0,
+        "y1": 2010.0,
+        "x2": 2221.0,
+        "y2": 2242.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8841161131858826,
+      "reading_order": 14,
+      "text": "14. Atomic number of element decreases by 2 units\nand mass number of the element decreases by\n4 units.\n\nHence, the correct option is (b)."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_1_block_014",
+      "coordinates": {
+        "x1": 1263.0,
+        "y1": 2260.0,
+        "x2": 2222.0,
+        "y2": 2717.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8302461504936218,
+      "reading_order": 15,
+      "text": "15. High voltage and low pressure are required to\nbe maintained in order to increase the kinetic\nenergy of the dislodged electrons so that the\nnumber of effective collisions (collision that\ncan dislodge electron from the atom) increases.\nFinally, a proper glow can be observed on the\nfluorescent screen.\n\nHence, the correct option is (d)."
+    }
+  ]
+}

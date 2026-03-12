@@ -1,0 +1,112 @@
+{
+  "page_num": 4,
+  "image_width": 2402,
+  "image_height": 3001,
+  "created_at": "2026-03-12T18:57:08.232556+00:00",
+  "blocks": [
+    {
+      "block_id": "20260312_293cc747-e839-4df7-b470-7633f0fa3e61_4_block_000",
+      "coordinates": {
+        "x1": 201.0,
+        "y1": 186.0,
+        "x2": 766.0,
+        "y2": 240.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.7490030527114868,
+      "reading_order": 1,
+      "text": "2.6 Chapter 2 Atomic Structure"
+    },
+    {
+      "block_id": "20260312_293cc747-e839-4df7-b470-7633f0fa3e61_4_block_001",
+      "coordinates": {
+        "x1": 215.0,
+        "y1": 292.0,
+        "x2": 1327.0,
+        "y2": 342.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.4469974935054779,
+      "reading_order": 2,
+      "text": "15. Match the values of Column A with those of Column B."
+    },
+    {
+      "block_id": "20260312_293cc747-e839-4df7-b470-7633f0fa3e61_4_block_002",
+      "coordinates": {
+        "x1": 310.0,
+        "y1": 354.0,
+        "x2": 1335.0,
+        "y2": 1087.0
+      },
+      "layout_tag": "table",
+      "confidence": 0.5021939277648926,
+      "reading_order": 3,
+      "text": "<table>\n<thead>\n<tr>\n<th>Column A<br/>(Change in angular momen-<br/>tum of electron during transi-<br/>tion in a hydrogen atom)</th>\n<th>Column B<br/>(Number of spectral<br/>lines)</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>(i) \\frac{5h}{2\\pi} to \\frac{h}{\\pi}</td>\n<td>(A) 1</td>\n</tr>\n<tr>\n<td>(ii) \\frac{3h}{2\\pi} to \\frac{h}{\\pi}</td>\n<td>(B) 3</td>\n</tr>\n<tr>\n<td>(iii) \\frac{3h}{\\pi} to \\frac{h}{2\\pi}</td>\n<td>(C) 6</td>\n</tr>\n<tr>\n<td>(iv) \\frac{2h}{\\pi} to \\frac{h}{\\pi}</td>\n<td>(D) 15</td>\n</tr>\n</tbody>\n</table>"
+    },
+    {
+      "block_id": "20260312_293cc747-e839-4df7-b470-7633f0fa3e61_4_block_003",
+      "coordinates": {
+        "x1": 295.0,
+        "y1": 1110.0,
+        "x2": 1188.0,
+        "y2": 1166.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8458874225616455,
+      "reading_order": 4,
+      "text": "(a) (i) → (C); (ii) → (A); (iii) → (D); (iv) → (B)"
+    },
+    {
+      "block_id": "20260312_293cc747-e839-4df7-b470-7633f0fa3e61_4_block_004",
+      "coordinates": {
+        "x1": 294.0,
+        "y1": 1174.0,
+        "x2": 1189.0,
+        "y2": 1229.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8473196029663086,
+      "reading_order": 5,
+      "text": "(b) (i) → (C); (ii) → (A); (iii) → (B); (iv) → (D)"
+    },
+    {
+      "block_id": "20260312_293cc747-e839-4df7-b470-7633f0fa3e61_4_block_005",
+      "coordinates": {
+        "x1": 294.0,
+        "y1": 1236.0,
+        "x2": 1190.0,
+        "y2": 1291.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8466911911964417,
+      "reading_order": 6,
+      "text": "(c) (i) → (B); (ii) → (A); (iii) → (D); (iv) → (C)"
+    },
+    {
+      "block_id": "20260312_293cc747-e839-4df7-b470-7633f0fa3e61_4_block_006",
+      "coordinates": {
+        "x1": 293.0,
+        "y1": 1299.0,
+        "x2": 1187.0,
+        "y2": 1354.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8532485365867615,
+      "reading_order": 7,
+      "text": "(d) (i) → (A); (ii) → (C); (iii) → (D); (iv) → (B)"
+    },
+    {
+      "block_id": "20260312_293cc747-e839-4df7-b470-7633f0fa3e61_4_block_007",
+      "coordinates": {
+        "x1": 1795.0,
+        "y1": 313.0,
+        "x2": 2170.0,
+        "y2": 362.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.4312397241592407,
+      "reading_order": 8,
+      "text": "Space for rough work"
+    }
+  ]
+}

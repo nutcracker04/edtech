@@ -1,0 +1,125 @@
+{
+  "page_num": 3,
+  "image_width": 2402,
+  "image_height": 3001,
+  "created_at": "2026-03-12T18:57:14.956208+00:00",
+  "blocks": [
+    {
+      "block_id": "20260312_38d2b3f5-c887-46b1-a04d-d6a1c5125108_3_block_000",
+      "coordinates": {
+        "x1": 1773.0,
+        "y1": 189.0,
+        "x2": 2054.0,
+        "y2": 237.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.8681036233901978,
+      "reading_order": 1,
+      "text": "Assessment Test I"
+    },
+    {
+      "block_id": "20260312_38d2b3f5-c887-46b1-a04d-d6a1c5125108_3_block_001",
+      "coordinates": {
+        "x1": 2107.0,
+        "y1": 187.0,
+        "x2": 2196.0,
+        "y2": 234.0
+      },
+      "layout_tag": "page-number",
+      "confidence": 0.8103196620941162,
+      "reading_order": 2,
+      "text": "3.3"
+    },
+    {
+      "block_id": "20260312_38d2b3f5-c887-46b1-a04d-d6a1c5125108_3_block_002",
+      "coordinates": {
+        "x1": 215.0,
+        "y1": 292.0,
+        "x2": 1695.0,
+        "y2": 399.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7960743308067322,
+      "reading_order": 3,
+      "text": "12. Atoms of two elements 'A' and 'B' have 56 and 37 protons, respectively.\nIdentify the incorrect statement among the following regarding A and B."
+    },
+    {
+      "block_id": "20260312_38d2b3f5-c887-46b1-a04d-d6a1c5125108_3_block_003",
+      "coordinates": {
+        "x1": 292.0,
+        "y1": 416.0,
+        "x2": 836.0,
+        "y2": 468.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6937616467475891,
+      "reading_order": 4,
+      "text": "(a) Both A and B are metals."
+    },
+    {
+      "block_id": "20260312_38d2b3f5-c887-46b1-a04d-d6a1c5125108_3_block_004",
+      "coordinates": {
+        "x1": 275.0,
+        "y1": 478.0,
+        "x2": 1438.0,
+        "y2": 648.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.29109135270118713,
+      "reading_order": 5,
+      "text": "(b) A and B belong to different groups and different periods.\n(c) A is alkali metal B is alkaline earth metal.\n(d) Both A and B can form stable cations."
+    },
+    {
+      "block_id": "20260312_38d2b3f5-c887-46b1-a04d-d6a1c5125108_3_block_005",
+      "coordinates": {
+        "x1": 212.0,
+        "y1": 682.0,
+        "x2": 1458.0,
+        "y2": 873.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8839105367660522,
+      "reading_order": 6,
+      "text": "13. The order of ionic sizes of $\\mathrm{Na}^+$, $\\mathrm{Mg}^{+2}$, $\\mathrm{F}^-$ and $\\mathrm{O}^{-2}$ is ______.\n(a) $\\mathrm{Mg}^{+2} > \\mathrm{Na}^+ > \\mathrm{O}^{-2} > \\mathrm{F}^-$ (b) $\\mathrm{O}^{-2} > \\mathrm{F}^- > \\mathrm{Mg}^{+2} > \\mathrm{Na}^+$\n(c) $\\mathrm{Mg}^{+2} > \\mathrm{O}^{-2} > \\mathrm{Na}^+ > \\mathrm{F}^-$ (d) $\\mathrm{O}^{-2} > \\mathrm{F}^- > \\mathrm{Na}^+ > \\mathrm{Mg}^{+2}$"
+    },
+    {
+      "block_id": "20260312_38d2b3f5-c887-46b1-a04d-d6a1c5125108_3_block_006",
+      "coordinates": {
+        "x1": 211.0,
+        "y1": 895.0,
+        "x2": 1704.0,
+        "y2": 1196.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9302595257759094,
+      "reading_order": 7,
+      "text": "14. The electronic configurations of three elements 'A', 'B' and 'C' are 2, 8, 3;\n2, 8, 18, 4; 2, 8, 4, respectively. The order of the non-metallic character is\n__________.\n(a) C > A > B (b) B > C > A\n(c) C > B > A (d) B > A > C"
+    },
+    {
+      "block_id": "20260312_38d2b3f5-c887-46b1-a04d-d6a1c5125108_3_block_007",
+      "coordinates": {
+        "x1": 216.0,
+        "y1": 1216.0,
+        "x2": 1698.0,
+        "y2": 1399.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9350269436836243,
+      "reading_order": 8,
+      "text": "15. Element 'X' undergoes sublimation on heating. Identify the group to which\nX belongs.\n(a) IV-A (b) V-A (c) VI-A (d) VII-A"
+    },
+    {
+      "block_id": "20260312_38d2b3f5-c887-46b1-a04d-d6a1c5125108_3_block_008",
+      "coordinates": {
+        "x1": 1791.0,
+        "y1": 313.0,
+        "x2": 2175.0,
+        "y2": 364.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7174602746963501,
+      "reading_order": 9,
+      "text": "Space for rough work"
+    }
+  ]
+}

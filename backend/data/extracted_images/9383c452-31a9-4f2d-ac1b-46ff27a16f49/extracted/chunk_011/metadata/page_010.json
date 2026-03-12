@@ -1,0 +1,229 @@
+{
+  "page_num": 10,
+  "image_width": 2402,
+  "image_height": 3001,
+  "created_at": "2026-03-12T18:58:08.117278+00:00",
+  "blocks": [
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_10_block_000",
+      "coordinates": {
+        "x1": 198.0,
+        "y1": 185.0,
+        "x2": 764.0,
+        "y2": 240.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.6664254665374756,
+      "reading_order": 1,
+      "text": "A.8 Chapter 2 Atomic Structure"
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_10_block_001",
+      "coordinates": {
+        "x1": 235.0,
+        "y1": 288.0,
+        "x2": 1172.0,
+        "y2": 578.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9199809432029724,
+      "reading_order": 2,
+      "text": "6. $\\mathrm{X}^{-2}$ ion $\\rightarrow$ Mass number = 32; protons = 16,\nneutrons = 16. Since number of protons is 16,\nnumber of electrons in neutral atom is also 16.\n$\\mathrm{X}^{-2}$ ion should have 18 electrons.\n\nHence, the correct option is (a)."
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_10_block_002",
+      "coordinates": {
+        "x1": 234.0,
+        "y1": 602.0,
+        "x2": 1171.0,
+        "y2": 785.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8635432124137878,
+      "reading_order": 3,
+      "text": "7. (i) $\\rightarrow$ (E); (ii) $\\rightarrow$ (D); (iii) $\\rightarrow$ (B); (iv) $\\rightarrow$ (A);\n(v) $\\rightarrow$ (C)\n\nHence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_10_block_003",
+      "coordinates": {
+        "x1": 235.0,
+        "y1": 807.0,
+        "x2": 882.0,
+        "y2": 932.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8373762965202332,
+      "reading_order": 4,
+      "text": "8. $X \\to 2, 8, 18, 8, Zx = 36.$\n\nHence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_10_block_004",
+      "coordinates": {
+        "x1": 235.0,
+        "y1": 949.0,
+        "x2": 1170.0,
+        "y2": 1367.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9082319140434265,
+      "reading_order": 5,
+      "text": "9. Number of protons = $\\frac{36740}{1837} = 20$\nAtomic number = 20, Electronic configuration\nis 2, 8, 8, 2.\nIt is calcium. It can form dispositive ion with\nelectronic configuration of 2, 8, 8. It possesses\nonly 8 electrons in the outermost shell.\nHence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_10_block_005",
+      "coordinates": {
+        "x1": 214.0,
+        "y1": 1396.0,
+        "x2": 1172.0,
+        "y2": 1820.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9242129921913147,
+      "reading_order": 6,
+      "text": "10. Energy of electron in Bohr’s' orbit can be given\nas\n$E = \\frac{-13.6}{n^2} \\times Z^2$, 'H' atom $Z = 1, E = \\frac{-13.6}{n^2} = \\times$\nJoules\n$\\mathrm{He}^+$ ion $Z = 2, E = \\frac{13.6}{n^2} \\therefore Z^2 = x \\times 2^2 = 4x$\nHence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_10_block_006",
+      "coordinates": {
+        "x1": 216.0,
+        "y1": 1845.0,
+        "x2": 1165.0,
+        "y2": 2417.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9275810718536377,
+      "reading_order": 7,
+      "text": "11. Charges on oil drops A, B, and C are 1.2C, 2.8C,\nand 0.72C, respectively.\n$\\mathrm{HCF} = 0.08$\nNumber of electrons on A = $\\frac{1.2}{0.08} = 15$\n\nNumber of electrons on B = $\\frac{2.8}{0.08} = 35$\n\nNumber of electrons on C = $\\frac{0.72}{0.08} = 9$.\n\nHence, the correct option is (b)."
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_10_block_007",
+      "coordinates": {
+        "x1": 215.0,
+        "y1": 2444.0,
+        "x2": 878.0,
+        "y2": 2730.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8301800489425659,
+      "reading_order": 8,
+      "text": "12. Average atomic mass =\n$$ \\frac{(16 \\times 81) + (17 \\times 9) + (18 \\times 10)}{100} $$\n$= 16.29$ amu\nHence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_10_block_008",
+      "coordinates": {
+        "x1": 214.0,
+        "y1": 2753.0,
+        "x2": 1011.0,
+        "y2": 2880.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8127889633178711,
+      "reading_order": 9,
+      "text": "13. $\\alpha$-particle has 2 protons, 2 neutrons.\nCharge on $\\alpha$-particle = $2 \\times 32 \\times 10^{-19}$ C"
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_10_block_009",
+      "coordinates": {
+        "x1": 1329.0,
+        "y1": 287.0,
+        "x2": 2221.0,
+        "y2": 758.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7713620066642761,
+      "reading_order": 10,
+      "text": "Mass of $\\alpha$-particle = $(2 \\times 8.35 \\times 10^{-28} \\text{ kg}) + (2 \\times$\n$8.6 \\times 10^{-28}) \\text{ kg}$\n\nSpecific charge (e/m) =\n$$ \\frac{2 \\times 3.2 \\times 10^{-19}}{(2 \\times 8.35 \\times 10^{-28}) + (2 \\times 8.6 \\times 10^{-28})} $$\n$$ = \\frac{6.4 \\times 10^{-19}}{33.9 \\times 10^{-28}} = 1.9 \\times 10^8 \\text{ C/kg} $$\nHence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_10_block_010",
+      "coordinates": {
+        "x1": 1265.0,
+        "y1": 784.0,
+        "x2": 1937.0,
+        "y2": 917.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7548476457595825,
+      "reading_order": 11,
+      "text": "14. ${}_{92}\\mathrm{X}^{234} \\to {}_{90}\\mathrm{Y}^{230} + {}_2\\mathrm{He}^4$\n\nHence, the correct option is (d)."
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_10_block_011",
+      "coordinates": {
+        "x1": 1269.0,
+        "y1": 939.0,
+        "x2": 2222.0,
+        "y2": 1274.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8514203429222107,
+      "reading_order": 12,
+      "text": "15. High voltage is essential to cause ionization\nin the discharge tube. Low pressure should\nbe maintained for the gas inside the discharge\ntube so that intermolecular forces of attrac-\ntion are less and ionization of gas takes place\nappreciably."
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_10_block_012",
+      "coordinates": {
+        "x1": 1338.0,
+        "y1": 1278.0,
+        "x2": 1931.0,
+        "y2": 1334.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.4079311490058899,
+      "reading_order": 13,
+      "text": "Hence, the correct option is (b)."
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_10_block_013",
+      "coordinates": {
+        "x1": 1241.0,
+        "y1": 1374.0,
+        "x2": 1701.0,
+        "y2": 1429.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.8173509240150452,
+      "reading_order": 14,
+      "text": "Assessment Test IV"
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_10_block_014",
+      "coordinates": {
+        "x1": 1282.0,
+        "y1": 1470.0,
+        "x2": 2102.0,
+        "y2": 1909.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6937338709831238,
+      "reading_order": 15,
+      "text": "1. $Z = 16; 2, 8, 6, \\text{M shell} \\to 6$ electrons\n$Z = 22; 2, 8, 10, 2, \\text{M shell} \\to 10$ electrons\n$Z = 26; 2, 8, 14, 2, \\text{M shell} \\to 14$ electrons\n$Z = 28; 2, 8, 16, 2, \\text{M shell} \\to 16$ electrons\n$Z = 33;2, 8, 18, 2, \\text{M shell} \\to 18$ electrons\nThe required order is CBADE.\nHence, the correct option is (a)."
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_10_block_015",
+      "coordinates": {
+        "x1": 1275.0,
+        "y1": 1924.0,
+        "x2": 2150.0,
+        "y2": 2460.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.4712308347225189,
+      "reading_order": 16,
+      "text": "2. (D) $n = 2, \\mathrm{Be}^{+3} \\to \\mathrm{E} = -\\frac{13.6}{2^2} \\to 4^2 = -54.4$ ev\n\n(C) $n = 2, \\mathrm{Li}^{+2} \\to \\mathrm{E} = -\\frac{13.6}{2^2} \\to 3^2 = -30.6$ ev\n\n(B) $n = 2, \\mathrm{He}^+ \\to \\mathrm{E} = -\\frac{13.6}{2^2} \\to 2^2 = -13.6$ ev\n\n(A) $n = 2, \\mathrm{H} \\to \\mathrm{E} = -\\frac{13.6}{2^2} \\to 1 = -3.4$ ev\n\nThe required order is DCBA.\nHence, the correct option is (b)."
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_10_block_016",
+      "coordinates": {
+        "x1": 1286.0,
+        "y1": 2482.0,
+        "x2": 2222.0,
+        "y2": 2882.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7439658641815186,
+      "reading_order": 17,
+      "text": "3. All the $\\alpha$-particles are held in the lead block as\nthey cannot penetrate through lead block. They\nare allowed to eject out through the perforation\non one side of the block and hit the gold foil.\n$\\alpha$-particles produce scintillations on the ZnS\nscreen due to the fluorescent nature of ZnS.\nHence, the correct option is (b)."
+    }
+  ]
+}

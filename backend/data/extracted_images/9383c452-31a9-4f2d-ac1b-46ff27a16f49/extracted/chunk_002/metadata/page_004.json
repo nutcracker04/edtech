@@ -1,0 +1,21 @@
+{
+  "page_num": 4,
+  "image_width": 2403,
+  "image_height": 3000,
+  "created_at": "2026-03-12T18:56:48.220547+00:00",
+  "blocks": [
+    {
+      "block_id": "20260312_78284854-69ed-4150-8834-5a3258ca945d_4_block_000",
+      "coordinates": {
+        "x1": 757.0,
+        "y1": 1466.0,
+        "x2": 1655.0,
+        "y2": 1543.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6331647634506226,
+      "reading_order": 1,
+      "text": "This page is intentionally left blank"
+    }
+  ]
+}

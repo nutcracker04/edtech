@@ -1,0 +1,372 @@
+{
+  "page_num": 7,
+  "image_width": 2402,
+  "image_height": 3001,
+  "created_at": "2026-03-12T18:58:15.228165+00:00",
+  "blocks": [
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_7_block_000",
+      "coordinates": {
+        "x1": 1695.0,
+        "y1": 186.0,
+        "x2": 2053.0,
+        "y2": 240.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.8649121522903442,
+      "reading_order": 1,
+      "text": "Hints and Explanations"
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_7_block_001",
+      "coordinates": {
+        "x1": 2092.0,
+        "y1": 183.0,
+        "x2": 2212.0,
+        "y2": 237.0
+      },
+      "layout_tag": "page-number",
+      "confidence": 0.7424036264419556,
+      "reading_order": 2,
+      "text": "A.15"
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_7_block_002",
+      "coordinates": {
+        "x1": 193.0,
+        "y1": 291.0,
+        "x2": 633.0,
+        "y2": 350.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.865196704864502,
+      "reading_order": 3,
+      "text": "Assessment Test II"
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_7_block_003",
+      "coordinates": {
+        "x1": 232.0,
+        "y1": 387.0,
+        "x2": 946.0,
+        "y2": 517.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8977064490318298,
+      "reading_order": 4,
+      "text": "1. KCl is an electrovalent compound.\nHence, the correct option is (d)."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_7_block_004",
+      "coordinates": {
+        "x1": 232.0,
+        "y1": 537.0,
+        "x2": 1169.0,
+        "y2": 718.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9277805685997009,
+      "reading_order": 5,
+      "text": "2. H-bonding exists in $\\mathrm{AH}_3$ where A is nitrogen\naccording to the description given.\nHence, the correct option is (d)."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_7_block_005",
+      "coordinates": {
+        "x1": 233.0,
+        "y1": 733.0,
+        "x2": 1171.0,
+        "y2": 916.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9101333618164062,
+      "reading_order": 6,
+      "text": "3. In $\\mathrm{NH}_4\\mathrm{Cl}$, dative bond is present between $\\mathrm{NH}_3$\nand $\\mathrm{H}^+$.\n\nHence, the correct option is (b)."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_7_block_006",
+      "coordinates": {
+        "x1": 234.0,
+        "y1": 937.0,
+        "x2": 1172.0,
+        "y2": 1174.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9210497736930847,
+      "reading_order": 7,
+      "text": "4. In $\\mathrm{SnCl}_4$, Sn has 8 electrons in its valence\nshell, whereas the other given atoms have 10\nelectrons.\n\nHence, the correct option is (b)."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_7_block_007",
+      "coordinates": {
+        "x1": 235.0,
+        "y1": 1195.0,
+        "x2": 1171.0,
+        "y2": 1378.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9211843013763428,
+      "reading_order": 8,
+      "text": "5. Both the atoms participating in the formation\nof covalent bond should be non-metals.\nHence, the correct option is (a)."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_7_block_008",
+      "coordinates": {
+        "x1": 236.0,
+        "y1": 1400.0,
+        "x2": 1168.0,
+        "y2": 1583.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9150977730751038,
+      "reading_order": 9,
+      "text": "6. A to $\\mathrm{A}^+$ is oxidation. All other options signify\nreduction.\nHence, the correct option is (a)."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_7_block_009",
+      "coordinates": {
+        "x1": 234.0,
+        "y1": 1601.0,
+        "x2": 1169.0,
+        "y2": 1782.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9183369874954224,
+      "reading_order": 10,
+      "text": "7. Existence of water in the liquid state is the\neffect of H-bond.\nHence, the correct option is (a)."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_7_block_010",
+      "coordinates": {
+        "x1": 232.0,
+        "y1": 1804.0,
+        "x2": 1167.0,
+        "y2": 1932.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8945146203041077,
+      "reading_order": 11,
+      "text": "8. $\\mathrm{CaO} + \\mathrm{H}_2\\mathrm{O} \\rightarrow \\mathrm{Ca}(\\mathrm{OH})_2$ is not a redox reaction.\nHence, the correct option is (a)."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_7_block_011",
+      "coordinates": {
+        "x1": 234.0,
+        "y1": 1951.0,
+        "x2": 1170.0,
+        "y2": 2186.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9233908653259277,
+      "reading_order": 12,
+      "text": "9. In HClO, polar covalent bond is present\nbetween H and Cl and dative bond is present\nbetween Cl and O.\n\nHence, the correct option is (d)."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_7_block_012",
+      "coordinates": {
+        "x1": 217.0,
+        "y1": 2205.0,
+        "x2": 1169.0,
+        "y2": 2495.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.934336245059967,
+      "reading_order": 13,
+      "text": "10. The strength of ionic bond is directly propor-\ntional to the charge possessed by the ions and\ninversely proportional to the distance between\nthem. The order is $\\mathrm{SrO} > \\mathrm{BaO} > \\mathrm{Cs}_2\\mathrm{O} > \\mathrm{CsCl}$.\nHence, the correct option is (a)."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_7_block_013",
+      "coordinates": {
+        "x1": 214.0,
+        "y1": 2520.0,
+        "x2": 1065.0,
+        "y2": 2852.0
+      },
+      "layout_tag": "table",
+      "confidence": 0.9520320892333984,
+      "reading_order": 14,
+      "text": "<table>\n<thead>\n<tr>\n<th>Molecule</th>\n<th>No. of Covalent Bonds</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>C2H2</td>\n<td>5</td>\n</tr>\n<tr>\n<td>CHCl3</td>\n<td>4</td>\n</tr>\n<tr>\n<td>NH3</td>\n<td>3</td>\n</tr>\n<tr>\n<td>Cl2</td>\n<td>1</td>\n</tr>\n</tbody>\n</table>"
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_7_block_014",
+      "coordinates": {
+        "x1": 1345.0,
+        "y1": 290.0,
+        "x2": 1721.0,
+        "y2": 342.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.34451934695243835,
+      "reading_order": 15,
+      "text": "The order is ABCD."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_7_block_015",
+      "coordinates": {
+        "x1": 1342.0,
+        "y1": 354.0,
+        "x2": 1929.0,
+        "y2": 411.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.31906580924987793,
+      "reading_order": 16,
+      "text": "Hence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_7_block_016",
+      "coordinates": {
+        "x1": 1262.0,
+        "y1": 428.0,
+        "x2": 2220.0,
+        "y2": 663.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9376370906829834,
+      "reading_order": 17,
+      "text": "12. Sodium can be cut with a knife because the size\nof $\\mathrm{Na}^+$ is bigger and it is monopositve. Hence,\nthe strength of the metallic bond is less.\nHence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_7_block_017",
+      "coordinates": {
+        "x1": 1265.0,
+        "y1": 683.0,
+        "x2": 2221.0,
+        "y2": 917.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8751076459884644,
+      "reading_order": 18,
+      "text": "13. Non-metals are good oxidizing agents because\nelectron affinity increases with the increase of\nthe non-metallic character.\n\nHence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_7_block_018",
+      "coordinates": {
+        "x1": 1265.0,
+        "y1": 935.0,
+        "x2": 2217.0,
+        "y2": 1049.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8100618124008179,
+      "reading_order": 19,
+      "text": "14. (i) A has 7 protons and B has 1 proton. → (C)\n$\\mathrm{NH}_3(\\mathrm{H}\\text{-bonding})$"
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_7_block_019",
+      "coordinates": {
+        "x1": 1356.0,
+        "y1": 1062.0,
+        "x2": 2221.0,
+        "y2": 1268.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9132764935493469,
+      "reading_order": 20,
+      "text": "(ii) Both the atoms have identical electronic\nconfigurations. $\\rightarrow$ (D) Non-polar covalent\nmolecule (Van der Waals' forces of att-\nraction)"
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_7_block_020",
+      "coordinates": {
+        "x1": 1347.0,
+        "y1": 1281.0,
+        "x2": 2219.0,
+        "y2": 1387.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8786203861236572,
+      "reading_order": 21,
+      "text": "(iii) A has 20 protons and B has 8 protons. →\n(A) Interionic attraction"
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_7_block_021",
+      "coordinates": {
+        "x1": 1347.0,
+        "y1": 1396.0,
+        "x2": 2222.0,
+        "y2": 1570.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6209230422973633,
+      "reading_order": 22,
+      "text": "(iv) A has 1 proton and B has 16 protons. $\\rightarrow$ (B)\n$\\mathrm{H}_2\\mathrm{S} \\rightarrow$ Dipole–dipole interaction\nHence, the correct option is (a)."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_7_block_022",
+      "coordinates": {
+        "x1": 1262.0,
+        "y1": 1590.0,
+        "x2": 2219.0,
+        "y2": 1773.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9036346673965454,
+      "reading_order": 23,
+      "text": "15. Polar covalent compounds ionize in water, but\nnon-polar covalent compounds do not.\nHence, the correct option is (a)."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_7_block_023",
+      "coordinates": {
+        "x1": 1242.0,
+        "y1": 1828.0,
+        "x2": 1704.0,
+        "y2": 1884.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.8233649134635925,
+      "reading_order": 24,
+      "text": "Assessment Test III"
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_7_block_024",
+      "coordinates": {
+        "x1": 1278.0,
+        "y1": 1925.0,
+        "x2": 2220.0,
+        "y2": 2160.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7906948328018188,
+      "reading_order": 25,
+      "text": "1. $\\mathrm{IF}_7$ is a stable halide of iodine. However, iodine\ndoes not attain octet configuration in this mol-\necule. It has 14 electrons around it.\nHence, the correct option is (b)."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_7_block_025",
+      "coordinates": {
+        "x1": 1286.0,
+        "y1": 2190.0,
+        "x2": 2222.0,
+        "y2": 2461.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9350042939186096,
+      "reading_order": 26,
+      "text": "2. Nitrogen and chlorine have equal electroneg-\nativity values. However, ammonia has hydro-\ngen bonding due to the small size of nitrogen\natom when compared to the size of chlorine\natom."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_7_block_026",
+      "coordinates": {
+        "x1": 1343.0,
+        "y1": 2479.0,
+        "x2": 1928.0,
+        "y2": 2535.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7906123399734497,
+      "reading_order": 27,
+      "text": "Hence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_7_block_027",
+      "coordinates": {
+        "x1": 1287.0,
+        "y1": 2570.0,
+        "x2": 2222.0,
+        "y2": 2845.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9492299556732178,
+      "reading_order": 28,
+      "text": "3. Ease of formation of ionic chlorides depends\nupon the ionization potential of the metal. The\nlower the IP value of a metal, the easier is the\ncation formation. The IP value decreases from\ntop to bottom in a group and increases from"
+    }
+  ]
+}

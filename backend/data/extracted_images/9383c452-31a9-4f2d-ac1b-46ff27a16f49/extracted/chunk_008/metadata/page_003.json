@@ -1,0 +1,125 @@
+{
+  "page_num": 3,
+  "image_width": 2402,
+  "image_height": 3001,
+  "created_at": "2026-03-12T18:57:36.146273+00:00",
+  "blocks": [
+    {
+      "block_id": "20260312_01685bfa-ccb1-4784-a0a3-3a5c2903e07f_3_block_000",
+      "coordinates": {
+        "x1": 1751.0,
+        "y1": 187.0,
+        "x2": 2054.0,
+        "y2": 238.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.8765101432800293,
+      "reading_order": 1,
+      "text": "Assessment Test III"
+    },
+    {
+      "block_id": "20260312_01685bfa-ccb1-4784-a0a3-3a5c2903e07f_3_block_001",
+      "coordinates": {
+        "x1": 2110.0,
+        "y1": 186.0,
+        "x2": 2196.0,
+        "y2": 234.0
+      },
+      "layout_tag": "page-number",
+      "confidence": 0.7970116138458252,
+      "reading_order": 2,
+      "text": "5.9"
+    },
+    {
+      "block_id": "20260312_01685bfa-ccb1-4784-a0a3-3a5c2903e07f_3_block_002",
+      "coordinates": {
+        "x1": 216.0,
+        "y1": 290.0,
+        "x2": 1699.0,
+        "y2": 465.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9329900741577148,
+      "reading_order": 3,
+      "text": "10. The volume of gaseous products obtained by the thermal decomposition of\n59.2 g of magnesium nitrate at STP is ______.\n(a) 28 L (b) 22.4 L (c) 33.6 L (d) 54 L"
+    },
+    {
+      "block_id": "20260312_01685bfa-ccb1-4784-a0a3-3a5c2903e07f_3_block_003",
+      "coordinates": {
+        "x1": 216.0,
+        "y1": 526.0,
+        "x2": 1694.0,
+        "y2": 759.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9428560137748718,
+      "reading_order": 4,
+      "text": "11. The percentage composition of a compound is 80% C, 20% H. The weight\nof $1.5 \\times 10^{23}$ molecules of the compound is 7.5 g. Determine the molecular\nformula of the compound.\n(a) $\\mathrm{C}_3\\mathrm{H}_6$ (b) $\\mathrm{C}_2\\mathrm{H}_6$ (c) $\\mathrm{C}_2\\mathrm{H}_2$ (d) $\\mathrm{C}_2\\mathrm{H}_4$"
+    },
+    {
+      "block_id": "20260312_01685bfa-ccb1-4784-a0a3-3a5c2903e07f_3_block_004",
+      "coordinates": {
+        "x1": 212.0,
+        "y1": 813.0,
+        "x2": 1625.0,
+        "y2": 1119.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9458658695220947,
+      "reading_order": 5,
+      "text": "12. In which among the following reactions is the mole ratio of reactants 1:3?\n(a) Reaction of calcium with water.\n(b) Reduction of ferric oxide with coke.\n(c) Synthesis of sulphur trioxide.\n(d) Reaction between sodium hydroxide and sulphuric acid."
+    },
+    {
+      "block_id": "20260312_01685bfa-ccb1-4784-a0a3-3a5c2903e07f_3_block_005",
+      "coordinates": {
+        "x1": 213.0,
+        "y1": 1180.0,
+        "x2": 1694.0,
+        "y2": 1354.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9268627166748047,
+      "reading_order": 6,
+      "text": "13. 175 g of calcium carbonate on thermal decomposition gives 33.6 L $\\mathrm{CO}_2$ at\nSTP. Calculate the percentage purity of calcium carbonate.\n(a) 80.7% (b) 85.7% (c) 90.7% (d) 95.7%"
+    },
+    {
+      "block_id": "20260312_01685bfa-ccb1-4784-a0a3-3a5c2903e07f_3_block_006",
+      "coordinates": {
+        "x1": 214.0,
+        "y1": 1411.0,
+        "x2": 1702.0,
+        "y2": 1704.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9477124810218811,
+      "reading_order": 7,
+      "text": "14. 96 g of 'X' contains $9 \\times 10^{23}$ molecules, and 0.32 g of gas 'Y' contains $1.2 \\times 10^{22}$\nmolecules. Compare the rate of diffusion ($r$) of X and Y at the same temper-\nature and pressure.\n(a) $r\\mathrm{Y} = 3r\\mathrm{X}$                                   (b) $r\\mathrm{Y} = 2r\\mathrm{X}$\n(c) $r\\mathrm{X} = 3r\\mathrm{Y}$                                  (d) $r\\mathrm{X} = 2r\\mathrm{Y}$"
+    },
+    {
+      "block_id": "20260312_01685bfa-ccb1-4784-a0a3-3a5c2903e07f_3_block_007",
+      "coordinates": {
+        "x1": 216.0,
+        "y1": 1762.0,
+        "x2": 1697.0,
+        "y2": 1996.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9502939581871033,
+      "reading_order": 8,
+      "text": "15. 210 g of sodium bicarbonate is subjected to thermal decomposition in an\nopen vessel and in a container fitted with a condenser separately. Calculate\nthe change of loss in weight.\n(a) 77.5 g (b) 22.5 g (c) 41 g (d) 55 g"
+    },
+    {
+      "block_id": "20260312_01685bfa-ccb1-4784-a0a3-3a5c2903e07f_3_block_008",
+      "coordinates": {
+        "x1": 1791.0,
+        "y1": 312.0,
+        "x2": 2175.0,
+        "y2": 364.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.72185218334198,
+      "reading_order": 9,
+      "text": "Space for rough work"
+    }
+  ]
+}

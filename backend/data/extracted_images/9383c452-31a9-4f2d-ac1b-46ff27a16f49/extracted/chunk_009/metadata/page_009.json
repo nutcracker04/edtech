@@ -1,0 +1,177 @@
+{
+  "page_num": 9,
+  "image_width": 2402,
+  "image_height": 3001,
+  "created_at": "2026-03-12T18:57:43.159589+00:00",
+  "blocks": [
+    {
+      "block_id": "20260312_619a7db2-27e4-4572-9311-63029574bf01_9_block_000",
+      "coordinates": {
+        "x1": 1750.0,
+        "y1": 187.0,
+        "x2": 2056.0,
+        "y2": 238.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.8157343864440918,
+      "reading_order": 1,
+      "text": "Assessment Test IV"
+    },
+    {
+      "block_id": "20260312_619a7db2-27e4-4572-9311-63029574bf01_9_block_001",
+      "coordinates": {
+        "x1": 2097.0,
+        "y1": 184.0,
+        "x2": 2211.0,
+        "y2": 237.0
+      },
+      "layout_tag": "page-number",
+      "confidence": 0.7063190340995789,
+      "reading_order": 2,
+      "text": "6.13"
+    },
+    {
+      "block_id": "20260312_619a7db2-27e4-4572-9311-63029574bf01_9_block_002",
+      "coordinates": {
+        "x1": 233.0,
+        "y1": 291.0,
+        "x2": 1694.0,
+        "y2": 534.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.925727128982544,
+      "reading_order": 3,
+      "text": "6. Calculate the molarity of $a$ g of $b\\%$ (w/w) $\\mathrm{Ca(OH)}_2$ solution. Density of solu-\ntion is $x$ g/mL.\n(a) 0.135 $ab$ M\n(c) 0.135 $ax$ M\n(b) 0.135 $bx$ M\n(d) 0.135 $abx$ M"
+    },
+    {
+      "block_id": "20260312_619a7db2-27e4-4572-9311-63029574bf01_9_block_003",
+      "coordinates": {
+        "x1": 233.0,
+        "y1": 557.0,
+        "x2": 1700.0,
+        "y2": 776.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9267228245735168,
+      "reading_order": 4,
+      "text": "7. The amounts of solutes 'A', 'B' and 'C' in 300 g of water at $25^\\circ\\mathrm{C}$, $40^\\circ\\mathrm{C}$ and\n$60^\\circ\\mathrm{C}$ in their saturated solutions are given below. Identify the correct state-\nment from the following when hot saturated solutions of A, B and C are\ncooled slowly from $60^\\circ\\mathrm{C}$ to $25^\\circ\\mathrm{C}$."
+    },
+    {
+      "block_id": "20260312_619a7db2-27e4-4572-9311-63029574bf01_9_block_004",
+      "coordinates": {
+        "x1": 305.0,
+        "y1": 796.0,
+        "x2": 861.0,
+        "y2": 1057.0
+      },
+      "layout_tag": "table",
+      "confidence": 0.9446905255317688,
+      "reading_order": 5,
+      "text": "<table>\n<thead>\n<tr>\n<th></th>\n<th>25°C</th>\n<th>40°C</th>\n<th>60°C</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>A</td>\n<td>110 g</td>\n<td>90 g</td>\n<td>105 g</td>\n</tr>\n<tr>\n<td>B</td>\n<td>140 g</td>\n<td>170 g</td>\n<td>180 g</td>\n</tr>\n<tr>\n<td>C</td>\n<td>130 g</td>\n<td>150 g</td>\n<td>140 g</td>\n</tr>\n</tbody>\n</table>"
+    },
+    {
+      "block_id": "20260312_619a7db2-27e4-4572-9311-63029574bf01_9_block_005",
+      "coordinates": {
+        "x1": 293.0,
+        "y1": 1081.0,
+        "x2": 1111.0,
+        "y2": 1325.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7966542840003967,
+      "reading_order": 6,
+      "text": "(a) 5 g of A and 40 g of B are precipitated.\n(b) 30 g of B and 10 g of C are precipitated.\n(c) 15 g of A and 20 g of C are precipitated.\n(d) 40 g of B and 10 g of C are precipitated."
+    },
+    {
+      "block_id": "20260312_619a7db2-27e4-4572-9311-63029574bf01_9_block_006",
+      "coordinates": {
+        "x1": 233.0,
+        "y1": 1346.0,
+        "x2": 1387.0,
+        "y2": 1658.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9207449555397034,
+      "reading_order": 7,
+      "text": "8. Identify the true statement from the following.\n(a) All deliquescent substances are hydrated salts.\n(b) All desiccating substances are hygroscopic substances.\n(c) All anhydrous salts are deliquescent substances.\n(d) All hydrated salts are efflorescent substances."
+    },
+    {
+      "block_id": "20260312_619a7db2-27e4-4572-9311-63029574bf01_9_block_007",
+      "coordinates": {
+        "x1": 231.0,
+        "y1": 1684.0,
+        "x2": 1698.0,
+        "y2": 1926.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9444441795349121,
+      "reading_order": 8,
+      "text": "9. Addition of potash alum results in the purification of water. The phenome-\nnon associated with this reaction is ______.\n(a) precipitation (b) crystallization\n(c) coagulation (d) sterilization"
+    },
+    {
+      "block_id": "20260312_619a7db2-27e4-4572-9311-63029574bf01_9_block_008",
+      "coordinates": {
+        "x1": 216.0,
+        "y1": 1950.0,
+        "x2": 1695.0,
+        "y2": 2192.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9463293552398682,
+      "reading_order": 9,
+      "text": "10. In foam, dispersion medium is ______ and dispersed phase is ______,\nrespectively.\n(a) liquid, gas (b) gas, liquid\n(c) liquid, solid (d) solid, liquid"
+    },
+    {
+      "block_id": "20260312_619a7db2-27e4-4572-9311-63029574bf01_9_block_009",
+      "coordinates": {
+        "x1": 214.0,
+        "y1": 2218.0,
+        "x2": 1522.0,
+        "y2": 2532.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.904918909072876,
+      "reading_order": 10,
+      "text": "11. Among the following, identify the true statement.\n(a) Wrought iron is the purest form of iron and is more malleable.\n(b) Wrought iron is the purest form of iron and is less malleable.\n(c) Cast iron is the purest form of iron and is more malleable.\n(d) Cast iron is the purest form of iron and is less malleable."
+    },
+    {
+      "block_id": "20260312_619a7db2-27e4-4572-9311-63029574bf01_9_block_010",
+      "coordinates": {
+        "x1": 215.0,
+        "y1": 2554.0,
+        "x2": 1697.0,
+        "y2": 2714.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6953220963478088,
+      "reading_order": 11,
+      "text": "12. The electronic configuration of 'X' is $a, b, (b - a - 1)$. 'A' and 'B' are two\nallotropes of X and A is a soft solid; B sublimes at 565K. Identify the true\nstatement regarding A and B."
+    },
+    {
+      "block_id": "20260312_619a7db2-27e4-4572-9311-63029574bf01_9_block_011",
+      "coordinates": {
+        "x1": 291.0,
+        "y1": 2729.0,
+        "x2": 1359.0,
+        "y2": 2852.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.27035823464393616,
+      "reading_order": 12,
+      "text": "(a) A → Red phosphorus; B → White phosphorus\n(b) A → Crystalline allotrope; B → Amorphous allotrope"
+    },
+    {
+      "block_id": "20260312_619a7db2-27e4-4572-9311-63029574bf01_9_block_012",
+      "coordinates": {
+        "x1": 1791.0,
+        "y1": 312.0,
+        "x2": 2175.0,
+        "y2": 364.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6996890306472778,
+      "reading_order": 13,
+      "text": "Space for rough work"
+    }
+  ]
+}

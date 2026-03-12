@@ -1,0 +1,307 @@
+{
+  "page_num": 2,
+  "image_width": 2402,
+  "image_height": 3001,
+  "created_at": "2026-03-12T18:57:36.184665+00:00",
+  "blocks": [
+    {
+      "block_id": "20260312_01685bfa-ccb1-4784-a0a3-3a5c2903e07f_2_block_000",
+      "coordinates": {
+        "x1": 202.0,
+        "y1": 185.0,
+        "x2": 1316.0,
+        "y2": 242.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.6066115498542786,
+      "reading_order": 1,
+      "text": "5.8 Chapter 5 Mole Concept, Stoichiometry and Behaviour of Gases"
+    },
+    {
+      "block_id": "20260312_01685bfa-ccb1-4784-a0a3-3a5c2903e07f_2_block_001",
+      "coordinates": {
+        "x1": 231.0,
+        "y1": 291.0,
+        "x2": 1334.0,
+        "y2": 342.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7075672745704651,
+      "reading_order": 2,
+      "text": "5. Match the entries of Column A with those of Column B."
+    },
+    {
+      "block_id": "20260312_01685bfa-ccb1-4784-a0a3-3a5c2903e07f_2_block_002",
+      "coordinates": {
+        "x1": 341.0,
+        "y1": 467.0,
+        "x2": 393.0,
+        "y2": 519.0
+      },
+      "layout_tag": "image-caption",
+      "confidence": 0.3352417051792145,
+      "reading_order": 3,
+      "text": "(i)"
+    },
+    {
+      "block_id": "20260312_01685bfa-ccb1-4784-a0a3-3a5c2903e07f_2_block_003",
+      "coordinates": {
+        "x1": 404.0,
+        "y1": 419.0,
+        "x2": 624.0,
+        "y2": 601.0
+      },
+      "layout_tag": "image",
+      "confidence": 0.8709186911582947,
+      "reading_order": 4,
+      "text": "The image displays a simple two-dimensional mathematical graph plotted on a Cartesian coordinate system. The vertical axis is labeled 'x' and the horizontal axis is labeled 'y →', indicating the direction of the horizontal axis. The graph features a single curve that exhibits asymptotic behavior. The curve originates from the upper-left quadrant, descending steeply as it moves toward the origin. As it approaches the x-axis (y-axis), the curve flattens out, indicating that the value of 'x' decreases towards zero but never actually reaches it. This type of curve is characteristic of a hyperbolic function, such as $y = \\frac{k}{x}$, where $k$ is a positive constant."
+    },
+    {
+      "block_id": "20260312_01685bfa-ccb1-4784-a0a3-3a5c2903e07f_2_block_004",
+      "coordinates": {
+        "x1": 735.0,
+        "y1": 441.0,
+        "x2": 1330.0,
+        "y2": 550.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.40086841583251953,
+      "reading_order": 5,
+      "text": "(A) $x \\to$ volume, $y \\to \\frac{1}{\\text{pressure}}$"
+    },
+    {
+      "block_id": "20260312_01685bfa-ccb1-4784-a0a3-3a5c2903e07f_2_block_005",
+      "coordinates": {
+        "x1": 328.0,
+        "y1": 660.0,
+        "x2": 390.0,
+        "y2": 716.0
+      },
+      "layout_tag": "image-caption",
+      "confidence": 0.44485965371131897,
+      "reading_order": 6,
+      "text": "(ii)"
+    },
+    {
+      "block_id": "20260312_01685bfa-ccb1-4784-a0a3-3a5c2903e07f_2_block_006",
+      "coordinates": {
+        "x1": 400.0,
+        "y1": 623.0,
+        "x2": 649.0,
+        "y2": 805.0
+      },
+      "layout_tag": "image",
+      "confidence": 0.886419951915741,
+      "reading_order": 7,
+      "text": "The image displays a simple two-dimensional Cartesian coordinate system. The vertical axis is labeled with an upward-pointing arrow and the letter 'x', indicating the vertical dimension. The horizontal axis is labeled with a rightward-pointing arrow and the letter 'y', indicating the horizontal dimension. A straight line originates from the origin (the intersection of the axes) and extends diagonally upwards and to the right, representing a positive linear relationship between the variables $x$ and $y$. There are no numerical values, grid lines, or data points plotted on the graph."
+    },
+    {
+      "block_id": "20260312_01685bfa-ccb1-4784-a0a3-3a5c2903e07f_2_block_007",
+      "coordinates": {
+        "x1": 742.0,
+        "y1": 658.0,
+        "x2": 1316.0,
+        "y2": 719.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.45616158843040466,
+      "reading_order": 8,
+      "text": "(B) $x \\to \\mathrm{volume}, y \\to \\mathrm{temp}(K)$"
+    },
+    {
+      "block_id": "20260312_01685bfa-ccb1-4784-a0a3-3a5c2903e07f_2_block_008",
+      "coordinates": {
+        "x1": 317.0,
+        "y1": 910.0,
+        "x2": 391.0,
+        "y2": 964.0
+      },
+      "layout_tag": "image-caption",
+      "confidence": 0.3761303424835205,
+      "reading_order": 9,
+      "text": "(iii)"
+    },
+    {
+      "block_id": "20260312_01685bfa-ccb1-4784-a0a3-3a5c2903e07f_2_block_009",
+      "coordinates": {
+        "x1": 402.0,
+        "y1": 821.0,
+        "x2": 666.0,
+        "y2": 1043.0
+      },
+      "layout_tag": "image",
+      "confidence": 0.8780246376991272,
+      "reading_order": 10,
+      "text": "The image displays a simple two-dimensional Cartesian coordinate system. The vertical axis is labeled with an upward-pointing arrow and the letter 'x'. The horizontal axis is labeled with a rightward-pointing arrow and the letter 'y' followed by a right-pointing arrow. A solid line originates from the origin (0,0) and extends upwards and to the right, indicating a positive linear relationship between the variables. A dashed line originates from the origin and extends downwards and to the left, indicating a negative linear relationship. The graph illustrates a linear function where the output increases as the input increases."
+    },
+    {
+      "block_id": "20260312_01685bfa-ccb1-4784-a0a3-3a5c2903e07f_2_block_010",
+      "coordinates": {
+        "x1": 737.0,
+        "y1": 912.0,
+        "x2": 1325.0,
+        "y2": 972.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.4470924437046051,
+      "reading_order": 11,
+      "text": "(C) $x \\rightarrow$ volume, $y \\rightarrow$ pressure"
+    },
+    {
+      "block_id": "20260312_01685bfa-ccb1-4784-a0a3-3a5c2903e07f_2_block_011",
+      "coordinates": {
+        "x1": 315.0,
+        "y1": 1136.0,
+        "x2": 392.0,
+        "y2": 1196.0
+      },
+      "layout_tag": "image-caption",
+      "confidence": 0.27397096157073975,
+      "reading_order": 12,
+      "text": "(iv)"
+    },
+    {
+      "block_id": "20260312_01685bfa-ccb1-4784-a0a3-3a5c2903e07f_2_block_012",
+      "coordinates": {
+        "x1": 399.0,
+        "y1": 1070.0,
+        "x2": 646.0,
+        "y2": 1250.0
+      },
+      "layout_tag": "image",
+      "confidence": 0.8776586651802063,
+      "reading_order": 13,
+      "text": "The image displays a simple two-dimensional Cartesian coordinate system. The vertical axis is labeled with an upward-pointing arrow and the letter 'x', indicating the vertical direction. The horizontal axis is labeled with a rightward-pointing arrow and the letter 'y', indicating the horizontal direction. A single straight line originates from the origin (0,0) and extends upwards and to the right, forming a positive slope. There are no numerical values, grid lines, or data points plotted on the axes."
+    },
+    {
+      "block_id": "20260312_01685bfa-ccb1-4784-a0a3-3a5c2903e07f_2_block_013",
+      "coordinates": {
+        "x1": 734.0,
+        "y1": 1132.0,
+        "x2": 1335.0,
+        "y2": 1197.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.45808297395706177,
+      "reading_order": 14,
+      "text": "(D) $x \\rightarrow \\mathrm{volume}, y \\rightarrow \\mathrm{temp}(^\\circ\\mathrm{C})$"
+    },
+    {
+      "block_id": "20260312_01685bfa-ccb1-4784-a0a3-3a5c2903e07f_2_block_014",
+      "coordinates": {
+        "x1": 291.0,
+        "y1": 1284.0,
+        "x2": 1242.0,
+        "y2": 1342.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6362238526344299,
+      "reading_order": 15,
+      "text": "(a) (i) $\\rightarrow$ (C); (ii) $\\rightarrow$ (A); (iii) $\\rightarrow$ (D); (iv) $\\rightarrow$ (B)"
+    },
+    {
+      "block_id": "20260312_01685bfa-ccb1-4784-a0a3-3a5c2903e07f_2_block_015",
+      "coordinates": {
+        "x1": 291.0,
+        "y1": 1348.0,
+        "x2": 1251.0,
+        "y2": 1405.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5632385015487671,
+      "reading_order": 16,
+      "text": "(b) (i) $\\rightarrow$ (B); (ii) $\\rightarrow$ (C); (ii) $\\rightarrow$ (D); (iv) $\\rightarrow$ (A)"
+    },
+    {
+      "block_id": "20260312_01685bfa-ccb1-4784-a0a3-3a5c2903e07f_2_block_016",
+      "coordinates": {
+        "x1": 291.0,
+        "y1": 1410.0,
+        "x2": 1250.0,
+        "y2": 1468.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5829632878303528,
+      "reading_order": 17,
+      "text": "(c) (i) → (C); (ii) → (D); (ii) → (B); (iv) → (A)"
+    },
+    {
+      "block_id": "20260312_01685bfa-ccb1-4784-a0a3-3a5c2903e07f_2_block_017",
+      "coordinates": {
+        "x1": 292.0,
+        "y1": 1474.0,
+        "x2": 1246.0,
+        "y2": 1532.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.4854522943496704,
+      "reading_order": 18,
+      "text": "(d) (i) $\\rightarrow$ (D); (ii) $\\rightarrow$ (A); (ii) $\\rightarrow$ (B); (iv) $\\rightarrow$ (C)"
+    },
+    {
+      "block_id": "20260312_01685bfa-ccb1-4784-a0a3-3a5c2903e07f_2_block_018",
+      "coordinates": {
+        "x1": 230.0,
+        "y1": 1592.0,
+        "x2": 1699.0,
+        "y2": 1891.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8023236393928528,
+      "reading_order": 19,
+      "text": "6. An oxyacid contains two hydrogen atoms, one sulphur atom and four oxy-\ngen atoms. Write the formula of the compound formed by the negative rad-\nical of the acid with ferric ion.\n(a) $\\mathrm{Fe}_2(\\mathrm{SO}_4)_3$ (b) $\\mathrm{FeSO}_4$\n(c) $\\mathrm{Fe}_3(\\mathrm{SO}_4)_2$ (d) $\\mathrm{Fe}(\\mathrm{SO}_4)_3$"
+    },
+    {
+      "block_id": "20260312_01685bfa-ccb1-4784-a0a3-3a5c2903e07f_2_block_019",
+      "coordinates": {
+        "x1": 233.0,
+        "y1": 1941.0,
+        "x2": 1698.0,
+        "y2": 2117.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9210956692695618,
+      "reading_order": 20,
+      "text": "7. If the volume occupied by a certain mass of gas is decreased to 70%, what\nwould be the percentage change in pressure at the same temperature?\n(a) +57% (b) +70% (c) +35% (d) +43%"
+    },
+    {
+      "block_id": "20260312_01685bfa-ccb1-4784-a0a3-3a5c2903e07f_2_block_020",
+      "coordinates": {
+        "x1": 232.0,
+        "y1": 2175.0,
+        "x2": 1662.0,
+        "y2": 2485.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9238377213478088,
+      "reading_order": 21,
+      "text": "8. Which among the following constitutes the maximum number of atoms?\n(a) $15 \\times 10^{25}$ molecules of $\\mathrm{SO}_3$\n(b) $2.5 \\times 10^{25}$ molecules of $\\mathrm{SO}_2$\n(c) $3 \\times 10^{25}$ molecules of $\\mathrm{O}_2$\n(d) $2.5 \\times 10^{25}$ molecules of $\\mathrm{N}_2\\mathrm{O}_5$"
+    },
+    {
+      "block_id": "20260312_01685bfa-ccb1-4784-a0a3-3a5c2903e07f_2_block_021",
+      "coordinates": {
+        "x1": 233.0,
+        "y1": 2540.0,
+        "x2": 1700.0,
+        "y2": 2779.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.908379852771759,
+      "reading_order": 22,
+      "text": "9. 300 mL of ethene is subjected to complete combustion. Calculate the volumes\nof $\\mathrm{O}_2$ required and $\\mathrm{CO}_2$ produced under same conditions.\n(a) 400 mL, 150 mL (b) 800 mL, 500 mL\n(c) 450 mL, 300 mL (d) 900 mL, 600 mL"
+    },
+    {
+      "block_id": "20260312_01685bfa-ccb1-4784-a0a3-3a5c2903e07f_2_block_022",
+      "coordinates": {
+        "x1": 1793.0,
+        "y1": 313.0,
+        "x2": 2173.0,
+        "y2": 363.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5933451652526855,
+      "reading_order": 23,
+      "text": "Space for rough work"
+    }
+  ]
+}

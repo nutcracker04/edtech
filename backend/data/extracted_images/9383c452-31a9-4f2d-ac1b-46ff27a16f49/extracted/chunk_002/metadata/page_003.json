@@ -1,0 +1,86 @@
+{
+  "page_num": 3,
+  "image_width": 2402,
+  "image_height": 3001,
+  "created_at": "2026-03-12T18:56:48.305534+00:00",
+  "blocks": [
+    {
+      "block_id": "20260312_78284854-69ed-4150-8834-5a3258ca945d_3_block_000",
+      "coordinates": {
+        "x1": 1643.0,
+        "y1": 184.0,
+        "x2": 2053.0,
+        "y2": 240.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.8355859518051147,
+      "reading_order": 1,
+      "text": "Course-book Chapter Flow"
+    },
+    {
+      "block_id": "20260312_78284854-69ed-4150-8834-5a3258ca945d_3_block_001",
+      "coordinates": {
+        "x1": 2124.0,
+        "y1": 189.0,
+        "x2": 2184.0,
+        "y2": 237.0
+      },
+      "layout_tag": "page-number",
+      "confidence": 0.5880133509635925,
+      "reading_order": 2,
+      "text": "xi"
+    },
+    {
+      "block_id": "20260312_78284854-69ed-4150-8834-5a3258ca945d_3_block_002",
+      "coordinates": {
+        "x1": 181.0,
+        "y1": 319.0,
+        "x2": 415.0,
+        "y2": 397.0
+      },
+      "layout_tag": "image-caption",
+      "confidence": 0.6230673789978027,
+      "reading_order": 3,
+      "text": "Class 8"
+    },
+    {
+      "block_id": "20260312_78284854-69ed-4150-8834-5a3258ca945d_3_block_003",
+      "coordinates": {
+        "x1": 173.0,
+        "y1": 486.0,
+        "x2": 2223.0,
+        "y2": 1277.0
+      },
+      "layout_tag": "image",
+      "confidence": 0.942859411239624,
+      "reading_order": 4,
+      "text": "The image displays a horizontal timeline or sequence diagram illustrating a progression of chemistry topics, likely from a curriculum or educational course. The chart is composed of two parallel horizontal blue lines. The top line represents a standard sequence of four topics, numbered 1 through 4. The bottom line represents a sequence of five topics, numbered 5 through 7. \n\nThe top sequence (1-4) begins with \"Atomic Structure\" (1), followed by \"Classification of Matter\" (2), \"Language of Chemistry and Transformation of Substances\" (3), and concludes with \"Air and Oxygen\" (4). \n\nThe bottom sequence (5-7) starts with \"Water, Solution, Solubility and Hydrogen\" (5), followed by \"Carbon and its Compounds\" (6), and concludes with \"Some Important Elements and their Compounds\" (7). \n\nThe diagram suggests a relationship between the two sequences, where the bottom topics (5-7) appear to be a subset or extension of the top topics (1-4), or a deeper dive into specific areas like elements and compounds."
+    },
+    {
+      "block_id": "20260312_78284854-69ed-4150-8834-5a3258ca945d_3_block_004",
+      "coordinates": {
+        "x1": 187.0,
+        "y1": 1537.0,
+        "x2": 463.0,
+        "y2": 1610.0
+      },
+      "layout_tag": "image-caption",
+      "confidence": 0.7655779719352722,
+      "reading_order": 5,
+      "text": "Class 10"
+    },
+    {
+      "block_id": "20260312_78284854-69ed-4150-8834-5a3258ca945d_3_block_005",
+      "coordinates": {
+        "x1": 171.0,
+        "y1": 1613.0,
+        "x2": 2224.0,
+        "y2": 2350.0
+      },
+      "layout_tag": "image",
+      "confidence": 0.9139905571937561,
+      "reading_order": 6,
+      "text": "The image displays a horizontal timeline or sequence diagram illustrating the chronological progression of topics in chemistry. The chart is divided into two parallel horizontal tracks. The top track lists six topics, numbered 1 through 6, while the bottom track lists six topics, numbered 7 through 11. The timeline flows from left to right, indicated by an arrow at the top left.\n\n**Top Track (Topics 1-6):**\n- **1:** Mole Concept, Stoichiometry and Behaviour of Gases\n- **2:** Atomic Structure\n- **3:** Periodic Table\n- **4:** Chemical Bonding\n- **5:** Acids, Bases and Salts\n- **6:** Chemical Kinetics and Equilibrium\n\n**Bottom Track (Topics 7-11):**\n- **7:** Electrochemistry\n- **8:** Metallurgy\n- **9:** Industrial Chemistry\n- **10:** Organic Chemistry–I\n- **11:** Organic Chemistry–II\n\n**Data Distribution:**\nTopics 1, 2, 3, and 4 are positioned in the upper half of the chart. Topics 5, 6, 7, 8, 9, and 10 are positioned in the lower half. There is a clear gap between Topic 6 (Chemical Kinetics and Equilibrium) and Topic 7 (Electrochemistry). The numbering suggests a sequence where the top track represents a standard curriculum or foundational topics, while the bottom track represents a more advanced or specialized sequence."
+    }
+  ]
+}

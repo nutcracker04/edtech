@@ -1,0 +1,112 @@
+{
+  "page_num": 6,
+  "image_width": 2402,
+  "image_height": 3001,
+  "created_at": "2026-03-12T18:56:48.330966+00:00",
+  "blocks": [
+    {
+      "block_id": "20260312_78284854-69ed-4150-8834-5a3258ca945d_6_block_000",
+      "coordinates": {
+        "x1": 202.0,
+        "y1": 185.0,
+        "x2": 776.0,
+        "y2": 241.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.6476480960845947,
+      "reading_order": 1,
+      "text": "1.2 Chapter 1 Nature of Matter"
+    },
+    {
+      "block_id": "20260312_78284854-69ed-4150-8834-5a3258ca945d_6_block_001",
+      "coordinates": {
+        "x1": 291.0,
+        "y1": 290.0,
+        "x2": 1698.0,
+        "y2": 593.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9365427494049072,
+      "reading_order": 2,
+      "text": "in solubility; selective solubility; and differential densities of solid and liq-\nuid particles.\n(A) Solvent extraction (B) Centrifugation\n(C) Fractional distillation (D) Fractional crystallization\n(a) ACDB (b) CADB (c) CDAB (d) DCBA"
+    },
+    {
+      "block_id": "20260312_78284854-69ed-4150-8834-5a3258ca945d_6_block_002",
+      "coordinates": {
+        "x1": 234.0,
+        "y1": 650.0,
+        "x2": 1699.0,
+        "y2": 896.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9283199310302734,
+      "reading_order": 3,
+      "text": "6. Arrange the following in the increasing order of boiling points.\n(A) Distilled water at sea level (B) Drinking water at sea level\n(C) Distilled water at hill station (D) Sea water at sea level\n(a) DBAC (b) CABD (c) BADC (d) CBAD"
+    },
+    {
+      "block_id": "20260312_78284854-69ed-4150-8834-5a3258ca945d_6_block_003",
+      "coordinates": {
+        "x1": 231.0,
+        "y1": 953.0,
+        "x2": 1494.0,
+        "y2": 1264.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.941569447517395,
+      "reading_order": 4,
+      "text": "7. Which of the following is not an application of chromatography.\n(a) Separation of components of blood.\n(b) Identification of impurity in a mixture.\n(c) Identification of food adulteration.\n(d) Doping tests conducted in sports events."
+    },
+    {
+      "block_id": "20260312_78284854-69ed-4150-8834-5a3258ca945d_6_block_004",
+      "coordinates": {
+        "x1": 233.0,
+        "y1": 1321.0,
+        "x2": 1694.0,
+        "y2": 1796.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9152592420578003,
+      "reading_order": 5,
+      "text": "8. Assertion (A): Ethyl alcohol and water can be separated by separating\nfunnel.\nReason (R): Ethyl alcohol and water differ with respect to their boiling\npoints.\n(a) Both A and R are true and R is the correct explanation of A.\n(b) Both A and R are true, but R is not the correct explanation of A.\n(c) A is true and R is false.\n(d) A is false and R is true."
+    },
+    {
+      "block_id": "20260312_78284854-69ed-4150-8834-5a3258ca945d_6_block_005",
+      "coordinates": {
+        "x1": 233.0,
+        "y1": 1854.0,
+        "x2": 1588.0,
+        "y2": 2039.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9199973940849304,
+      "reading_order": 6,
+      "text": "9. Identify the odd one among the following.\n(a) Iodine + sulphur (b) Ammonium chloride + sand\n(c) Sulphur + sand (d) Naphthalene + $\\mathrm{BaSO}_4$"
+    },
+    {
+      "block_id": "20260312_78284854-69ed-4150-8834-5a3258ca945d_6_block_006",
+      "coordinates": {
+        "x1": 214.0,
+        "y1": 2098.0,
+        "x2": 1701.0,
+        "y2": 2637.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9132921695709229,
+      "reading_order": 7,
+      "text": "10. Two liquids ‘X’ and ‘Y’ can be separated by a separating funnel. Y and water\ncan also be separated by the same method. Which of the following conclu-\nsions can be inferred on the basis of the above information?\n(i) X and Y are miscible liquids.\n(ii) A mixture of X and water can be separated by fractional distillation.\n(iii) X and Y are immiscible liquids.\n(iv) A mixture of Y and water can also be separated by fractional distillation.\n(a) (i) and (ii) (b) (iii) and (iv)\n(c) (ii) and (iii) (d) (ii), (iii) and (iv)"
+    },
+    {
+      "block_id": "20260312_78284854-69ed-4150-8834-5a3258ca945d_6_block_007",
+      "coordinates": {
+        "x1": 1792.0,
+        "y1": 312.0,
+        "x2": 2174.0,
+        "y2": 364.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.38121309876441956,
+      "reading_order": 8,
+      "text": "Space for rough work"
+    }
+  ]
+}

@@ -1,0 +1,242 @@
+{
+  "page_num": 8,
+  "image_width": 2402,
+  "image_height": 3001,
+  "created_at": "2026-03-12T18:58:15.222248+00:00",
+  "blocks": [
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_8_block_000",
+      "coordinates": {
+        "x1": 185.0,
+        "y1": 185.0,
+        "x2": 773.0,
+        "y2": 242.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.7211235761642456,
+      "reading_order": 1,
+      "text": "A.16 Chapter 4 Chemical Bonding"
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_8_block_001",
+      "coordinates": {
+        "x1": 292.0,
+        "y1": 291.0,
+        "x2": 1167.0,
+        "y2": 471.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6810227632522583,
+      "reading_order": 2,
+      "text": "left to right in a period. Therefore, the required\norder is ECDAB.\n\nHence, the correct option is (a)."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_8_block_002",
+      "coordinates": {
+        "x1": 225.0,
+        "y1": 505.0,
+        "x2": 1168.0,
+        "y2": 1211.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.3673933148384094,
+      "reading_order": 3,
+      "text": "4. The strength of an ionic bond is directly propor-\ntional to the charges of the ions and inversely\nproportional to their sizes.\nTherefore, the required order is CBAD.\nHence, the correct option is (d).\n\n5. (i) $\\rightarrow$ (C)\n(ii) $\\rightarrow$ (D)\n(iii) $\\rightarrow$ (E)\n(iv) $\\rightarrow$ (A)\n(v) $\\rightarrow$ (B)\nHence, the correct option is (d)."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_8_block_003",
+      "coordinates": {
+        "x1": 233.0,
+        "y1": 1238.0,
+        "x2": 1172.0,
+        "y2": 1473.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7808027863502502,
+      "reading_order": 4,
+      "text": "6. $\\mathrm{H}_2\\mathrm{S} + \\mathrm{SO}_2 \\rightarrow \\mathrm{H}_2\\mathrm{O} + \\mathrm{S}$ is a redox reaction, since\nit involves a change in the oxidation state of\nsulphur.\n\nHence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_8_block_004",
+      "coordinates": {
+        "x1": 238.0,
+        "y1": 1497.0,
+        "x2": 1170.0,
+        "y2": 1838.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9309609532356262,
+      "reading_order": 5,
+      "text": "7. Electrovalence of metal is 3 as it has 3 electrons\nin its valence shell and it loses them to form a\ntrivalent cation. Electrovalence of the non-metal\nis 1 as it has 7 electrons in its valence shell and\ngains one electron to form a uninegative ion.\nHence, the correct option is (b)."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_8_block_005",
+      "coordinates": {
+        "x1": 238.0,
+        "y1": 1856.0,
+        "x2": 1170.0,
+        "y2": 2195.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8862923383712769,
+      "reading_order": 6,
+      "text": "8. The electronic configurations of calcium and\nbromine are 2, 8, 8, 2 and 2, 8, 18, 7, respec-\ntively. Calcium loses 2 electrons to get argon\nconfiguration; bromine gains one electron to\nget krypton configuration.\nHence, the correct option is (d)."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_8_block_006",
+      "coordinates": {
+        "x1": 235.0,
+        "y1": 2214.0,
+        "x2": 705.0,
+        "y2": 2264.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6982847452163696,
+      "reading_order": 7,
+      "text": "9. H: H → no lone pairs"
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_8_block_007",
+      "coordinates": {
+        "x1": 366.0,
+        "y1": 2282.0,
+        "x2": 979.0,
+        "y2": 2820.0
+      },
+      "layout_tag": "image",
+      "confidence": 0.9383181929588318,
+      "reading_order": 8,
+      "text": "The image displays a vertical arrangement of three Venn diagrams, each illustrating a different molecular orbital configuration and its corresponding electron distribution. \n\n1. **Top Diagram**: Shows two overlapping circles labeled \"xx N\" and \"N:\". The left circle contains three \"x:\" orbitals. The right circle contains one \"N:\" orbital. The overlap region contains three \"x:\" orbitals. An arrow points to the right, labeled \"One lone pair\".\n\n2. **Middle Diagram**: Shows two overlapping circles labeled \"xx Cl\" and \"Cl:\". The left circle contains three \"xx\" orbitals. The right circle contains two \"Cl:\" orbitals. The overlap region contains one \"x\" orbital. An arrow points to the right, labeled \"Three lone pairs\".\n\n3. **Bottom Diagram**: Shows two overlapping circles labeled \"xx O\" and \"O:\". The left circle contains three \"xx\" orbitals. The right circle contains two \"O:\" orbitals. The overlap region contains one \"x\" orbital. An arrow points to the right, labeled \"Two lone pairs\".\n\nThe diagrams visually represent the overlap of atomic orbitals (likely from a nitrogen and chlorine molecule) to depict the electron density and lone pairs in the resulting molecular orbitals."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_8_block_008",
+      "coordinates": {
+        "x1": 297.0,
+        "y1": 2852.0,
+        "x2": 881.0,
+        "y2": 2904.0
+      },
+      "layout_tag": "footnote",
+      "confidence": 0.47888535261154175,
+      "reading_order": 9,
+      "text": "Hence, the correct option is (b)."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_8_block_009",
+      "coordinates": {
+        "x1": 1263.0,
+        "y1": 291.0,
+        "x2": 2223.0,
+        "y2": 591.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8967413306236267,
+      "reading_order": 10,
+      "text": "10. Z = 17; electronic configuration 2, 8, 7\nZ = 8; electronic configuration 2, 6\nSince both are non-metals, they are involved in\nthe formation of a covalent compound.\nHence, the correct option is (b)."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_8_block_010",
+      "coordinates": {
+        "x1": 1267.0,
+        "y1": 619.0,
+        "x2": 2223.0,
+        "y2": 957.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9158276915550232,
+      "reading_order": 11,
+      "text": "11. Malleability, metallic lustre, and thermal con-\nductivity are the characteristic properties of\nmetals and they occur due to the presence\nof metallic bonds. The reducing property of\nmetals is due to their low IP values.\nHence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_8_block_011",
+      "coordinates": {
+        "x1": 1267.0,
+        "y1": 985.0,
+        "x2": 2220.0,
+        "y2": 1326.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.852115273475647,
+      "reading_order": 12,
+      "text": "12. Ionic bond, covalent bond, and dative bonds\nare bonds formed between atoms within the\nmolecules. Hydrogen bonding is a stronger,\ndipole–dipole attraction present between the\nmolecules due to high polarity.\nHence, the correct option is (d)."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_8_block_012",
+      "coordinates": {
+        "x1": 1266.0,
+        "y1": 1350.0,
+        "x2": 2218.0,
+        "y2": 1458.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8912262320518494,
+      "reading_order": 13,
+      "text": "13. Acetylene molecule can be represented by the following Lewis dot formula."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_8_block_013",
+      "coordinates": {
+        "x1": 1532.0,
+        "y1": 1493.0,
+        "x2": 1914.0,
+        "y2": 1639.0
+      },
+      "layout_tag": "image",
+      "confidence": 0.8447530269622803,
+      "reading_order": 14,
+      "text": "The image displays a mathematical diagram consisting of two overlapping circles, arranged horizontally. The left circle is labeled \"H\" at the top and \"x\" at the bottom. The right circle is labeled \"x\" at the top and \"H\" at the bottom. The intersection of the two circles is labeled \"C\" at the top and \"x\" at the bottom. Inside the left circle, there are three additional 'x' symbols arranged vertically: one at the top, one in the middle, and one at the bottom. Inside the right circle, there are three additional 'x' symbols arranged vertically: one at the top, one in the middle, and one at the bottom. The diagram visually represents a set relationship, likely illustrating the principle of inclusion-exclusion or a specific set operation involving the variables H, x, and C."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_8_block_014",
+      "coordinates": {
+        "x1": 1344.0,
+        "y1": 1682.0,
+        "x2": 2219.0,
+        "y2": 1852.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6708307266235352,
+      "reading_order": 15,
+      "text": "Thus, there is a triple covalent bond between\nthe carbon atoms.\nHence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_8_block_015",
+      "coordinates": {
+        "x1": 1261.0,
+        "y1": 1879.0,
+        "x2": 2221.0,
+        "y2": 2365.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9208251237869263,
+      "reading_order": 16,
+      "text": "14. The element with electronic configuration 2, 3\nis boron. The element with electronic configu-\nration 2, 7 is fluorine. The compound formed\nis $\\text{BF}_3$. In $\\text{BF}_3$, the central atom possesses con-\ntracted octet. It is an electron-deficient mole-\ncule and can act as an electron acceptor. After\nbonding fluorine, it has 3 lone pairs around it.\nAlthough boron does not attain octet in this\nmolecule, it is a stable molecule."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_8_block_016",
+      "coordinates": {
+        "x1": 1344.0,
+        "y1": 2382.0,
+        "x2": 1936.0,
+        "y2": 2435.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.4300982654094696,
+      "reading_order": 17,
+      "text": "Hence, the correct option is (d)."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_8_block_017",
+      "coordinates": {
+        "x1": 1259.0,
+        "y1": 2466.0,
+        "x2": 2223.0,
+        "y2": 2902.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9473059177398682,
+      "reading_order": 18,
+      "text": "15. $\\text{NH}_3$ has covalent bonds between nitrogen and\nhydrogen. There is a dative bond between $\\text{NH}_3$\nand $\\mathrm{H}^+$. Ionic bond exists between $\\mathrm{NH}_4^+$ and\n$\\mathrm{OH}^-$. The same can be applied to ammonium\nchloride. Blue vitriol is $\\text{CuSO}_4 \\cdot 5\\text{H}_2\\text{O}$. Ionic\nbond is present between $\\mathrm{Cu}^{+2}$ and $\\mathrm{SO}_4^{-2}$. Water\nmolecules are bonded to $\\mathrm{Cu}^{+2}$ ions by dative\nbonds. Therefore, all the molecules possess all"
+    }
+  ]
+}

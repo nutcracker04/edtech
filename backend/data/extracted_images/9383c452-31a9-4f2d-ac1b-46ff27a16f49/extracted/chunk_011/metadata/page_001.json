@@ -1,0 +1,164 @@
+{
+  "page_num": 1,
+  "image_width": 2402,
+  "image_height": 3001,
+  "created_at": "2026-03-12T18:58:07.973633+00:00",
+  "blocks": [
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_1_block_000",
+      "coordinates": {
+        "x1": 1751.0,
+        "y1": 187.0,
+        "x2": 2055.0,
+        "y2": 237.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.8656095266342163,
+      "reading_order": 1,
+      "text": "Assessment Test IV"
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_1_block_001",
+      "coordinates": {
+        "x1": 2094.0,
+        "y1": 183.0,
+        "x2": 2208.0,
+        "y2": 237.0
+      },
+      "layout_tag": "page-number",
+      "confidence": 0.7754124402999878,
+      "reading_order": 2,
+      "text": "7.11"
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_1_block_002",
+      "coordinates": {
+        "x1": 288.0,
+        "y1": 291.0,
+        "x2": 1257.0,
+        "y2": 535.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.2945132553577423,
+      "reading_order": 3,
+      "text": "(a) (i) $\\rightarrow$ (D); (ii) $\\rightarrow$ (B); (iii) $\\rightarrow$ (A); (iv) $\\rightarrow$ (C)\n(b) (i) $\\rightarrow$ (B); (ii) $\\rightarrow$ (D); (iii) $\\rightarrow$ (A); (iv) $\\rightarrow$ (C)\n(c) (i) $\\rightarrow$ (D); (ii) $\\rightarrow$ (C); (iii) $\\rightarrow$ (B); (iv) $\\rightarrow$ (A)\n(d) (i) $\\rightarrow$ (B); (ii) $\\rightarrow$ (C); (iii) $\\rightarrow$ (D); (iv) $\\rightarrow$ (A)"
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_1_block_003",
+      "coordinates": {
+        "x1": 235.0,
+        "y1": 557.0,
+        "x2": 1337.0,
+        "y2": 684.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8321119546890259,
+      "reading_order": 4,
+      "text": "6. The possible chain isomers of heptyne is/are________.\n(a) 1 (b) 3 (c) 4"
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_1_block_004",
+      "coordinates": {
+        "x1": 233.0,
+        "y1": 706.0,
+        "x2": 1401.0,
+        "y2": 1021.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9100550413131714,
+      "reading_order": 5,
+      "text": "7. Identify the pair of position isomers of 2-methyl 1-pentene.\n(a) 3-methyl 1-pentene and 2-methyl 2-pentene\n(b) 3-methyl 1-pentene and 3-methyl 2-pentene\n(c) 4-methyl 1-pentene and 4-methyl 2-pentene\n(d) All of the above"
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_1_block_005",
+      "coordinates": {
+        "x1": 234.0,
+        "y1": 1044.0,
+        "x2": 1674.0,
+        "y2": 1181.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8934972882270813,
+      "reading_order": 6,
+      "text": "8. Identify the aliphatic hydrocarbon with one triple bond.\n(a) $\\mathrm{C}_3\\mathrm{H}_6$ (b) $\\mathrm{C}_4\\mathrm{H}_8$ (c) $\\mathrm{C}_5\\mathrm{H}_8$ (d) $\\mathrm{C}_2\\mathrm{H}_6$"
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_1_block_006",
+      "coordinates": {
+        "x1": 232.0,
+        "y1": 1195.0,
+        "x2": 1697.0,
+        "y2": 1495.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.941114068031311,
+      "reading_order": 7,
+      "text": "9. The vapour density of an aliphatic unsaturated hydrocarbon 'X' is 13. Deter-\nmine the number of bromine atoms required to make it saturated and iden-\ntify X.\n\n(a) 2, X → Ethane (b) 4, X → Ethene\n(c) 2, X → Ethyne (d) 4, X → Ethyne"
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_1_block_007",
+      "coordinates": {
+        "x1": 213.0,
+        "y1": 1516.0,
+        "x2": 1211.0,
+        "y2": 1831.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9365607500076294,
+      "reading_order": 8,
+      "text": "10. Identify the true statement among the following.\n(a) 1-butyne and 1-pentene are homologues\n(b) 1-butyne and 2-butyne are homologues\n(c) 1-butene and 2-butyne are homologues\n(d) 1-pentyne and 2-hexyne are homologues"
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_1_block_008",
+      "coordinates": {
+        "x1": 213.0,
+        "y1": 1855.0,
+        "x2": 1699.0,
+        "y2": 2099.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9383159875869751,
+      "reading_order": 9,
+      "text": "11. Excess of methane, on treatment with chlorine in presence of sunlight, gives\n_________ and ________.\n(a) $\\mathrm{CCl}_4$ and HCl (b) $\\mathrm{CH}_3\\mathrm{Cl}$ and HCl\n(c) $\\mathrm{CHCl}_3$ and HCl (d) $\\mathrm{CH}_2\\mathrm{Cl}_2$ and HCl"
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_1_block_009",
+      "coordinates": {
+        "x1": 213.0,
+        "y1": 2123.0,
+        "x2": 1697.0,
+        "y2": 2552.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.778708279132843,
+      "reading_order": 10,
+      "text": "12. Sodium salt of acetic acid on treatment with soda lime gives hydrocarbon\n‘X’. X can also be prepared by passing a mixture of ‘Y’ and ‘Z’ over heated\nnickel carbonate at 250°C Identify X, Y and Z.\n\n(a) $\\mathrm{X} \\rightarrow \\mathrm{CH}_4$, $\\mathrm{Y} \\rightarrow \\mathrm{CO}_2$, $\\mathrm{Z} \\rightarrow \\mathrm{H}_2$\n(b) $\\mathrm{X} \\rightarrow \\mathrm{CH}_4$, $\\mathrm{Y} \\rightarrow \\mathrm{CO}$, $\\mathrm{Z} \\rightarrow \\mathrm{H}_2\\mathrm{O}$\n(c) $\\mathrm{X} \\rightarrow \\mathrm{CH}_4$, $\\mathrm{Y} \\rightarrow \\mathrm{CO}_2$, $\\mathrm{Z} \\rightarrow \\mathrm{H}_2\\mathrm{O}$\n(d) $\\mathrm{X} \\rightarrow \\mathrm{C}_2\\mathrm{H}_4$, $\\mathrm{Y} \\rightarrow \\mathrm{CO}$, $\\mathrm{Z} \\rightarrow \\mathrm{H}_2\\mathrm{O}$"
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_1_block_010",
+      "coordinates": {
+        "x1": 215.0,
+        "y1": 2620.0,
+        "x2": 1532.0,
+        "y2": 2840.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8689664006233215,
+      "reading_order": 11,
+      "text": "13. Study the following reaction and identify the colour of 'A' and 'B'.\n$$ \\text{AgNO}_3 + \\text{NH}_4\\text{OH} \\xrightarrow{\\quad} \\text{Precipitate A} $$\n$$ \\begin{array}{c} \\text{HC} \\equiv \\text{CH} \\\\ \\text{Ethyne} \\end{array} \\xrightarrow{\\quad} \\begin{array}{l} \\text{Precipitate A} \\\\ \\text{Precipitate B} \\end{array} $$\n$$ \\text{CuCl} $$"
+    },
+    {
+      "block_id": "20260312_d1987a26-7899-4263-b724-626f89cbd9ee_1_block_011",
+      "coordinates": {
+        "x1": 1792.0,
+        "y1": 312.0,
+        "x2": 2175.0,
+        "y2": 363.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6875849962234497,
+      "reading_order": 12,
+      "text": "Space for rough work"
+    }
+  ]
+}

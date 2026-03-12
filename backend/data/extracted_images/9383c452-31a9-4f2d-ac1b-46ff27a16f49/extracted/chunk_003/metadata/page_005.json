@@ -1,0 +1,333 @@
+{
+  "page_num": 5,
+  "image_width": 2402,
+  "image_height": 3001,
+  "created_at": "2026-03-12T18:56:56.370352+00:00",
+  "blocks": [
+    {
+      "block_id": "20260312_62a3f467-e446-41ac-9358-8844b1081240_5_block_000",
+      "coordinates": {
+        "x1": 1749.0,
+        "y1": 186.0,
+        "x2": 2055.0,
+        "y2": 239.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.7408668398857117,
+      "reading_order": 1,
+      "text": "Assessment Test IV"
+    },
+    {
+      "block_id": "20260312_62a3f467-e446-41ac-9358-8844b1081240_5_block_001",
+      "coordinates": {
+        "x1": 184.0,
+        "y1": 293.0,
+        "x2": 933.0,
+        "y2": 375.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.6202653646469116,
+      "reading_order": 2,
+      "text": "Assessment Test IV"
+    },
+    {
+      "block_id": "20260312_62a3f467-e446-41ac-9358-8844b1081240_5_block_002",
+      "coordinates": {
+        "x1": 2097.0,
+        "y1": 181.0,
+        "x2": 2209.0,
+        "y2": 238.0
+      },
+      "layout_tag": "page-number",
+      "confidence": 0.6083625555038452,
+      "reading_order": 3,
+      "text": "1.11"
+    },
+    {
+      "block_id": "20260312_62a3f467-e446-41ac-9358-8844b1081240_5_block_003",
+      "coordinates": {
+        "x1": 1450.0,
+        "y1": 325.0,
+        "x2": 1693.0,
+        "y2": 373.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.7678853273391724,
+      "reading_order": 4,
+      "text": "Time: 30 min."
+    },
+    {
+      "block_id": "20260312_62a3f467-e446-41ac-9358-8844b1081240_5_block_004",
+      "coordinates": {
+        "x1": 179.0,
+        "y1": 450.0,
+        "x2": 1694.0,
+        "y2": 507.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.797726571559906,
+      "reading_order": 5,
+      "text": "Directions for questions from 1 to 15: Select the correct answer from the given options."
+    },
+    {
+      "block_id": "20260312_62a3f467-e446-41ac-9358-8844b1081240_5_block_005",
+      "coordinates": {
+        "x1": 236.0,
+        "y1": 543.0,
+        "x2": 1697.0,
+        "y2": 650.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7137974500656128,
+      "reading_order": 6,
+      "text": "1. Assertion (A): Wet cloth is placed on the forehead of a person who is run-\nning high temperature."
+    },
+    {
+      "block_id": "20260312_62a3f467-e446-41ac-9358-8844b1081240_5_block_006",
+      "coordinates": {
+        "x1": 291.0,
+        "y1": 659.0,
+        "x2": 1066.0,
+        "y2": 715.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7363349795341492,
+      "reading_order": 7,
+      "text": "Reason (R): Evaporation causes cooling."
+    },
+    {
+      "block_id": "20260312_62a3f467-e446-41ac-9358-8844b1081240_5_block_007",
+      "coordinates": {
+        "x1": 289.0,
+        "y1": 721.0,
+        "x2": 1472.0,
+        "y2": 775.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8334518074989319,
+      "reading_order": 8,
+      "text": "(a) Both A and R are true and R is the correct explanation of A."
+    },
+    {
+      "block_id": "20260312_62a3f467-e446-41ac-9358-8844b1081240_5_block_008",
+      "coordinates": {
+        "x1": 289.0,
+        "y1": 783.0,
+        "x2": 1545.0,
+        "y2": 838.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8254867792129517,
+      "reading_order": 9,
+      "text": "(b) Both A and R are true, but R is not the correct explanation of A."
+    },
+    {
+      "block_id": "20260312_62a3f467-e446-41ac-9358-8844b1081240_5_block_009",
+      "coordinates": {
+        "x1": 292.0,
+        "y1": 847.0,
+        "x2": 810.0,
+        "y2": 900.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8003403544425964,
+      "reading_order": 10,
+      "text": "(c) A is true and R is false."
+    },
+    {
+      "block_id": "20260312_62a3f467-e446-41ac-9358-8844b1081240_5_block_010",
+      "coordinates": {
+        "x1": 292.0,
+        "y1": 914.0,
+        "x2": 807.0,
+        "y2": 970.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.805756688117981,
+      "reading_order": 11,
+      "text": "(d) A is false and R is true."
+    },
+    {
+      "block_id": "20260312_62a3f467-e446-41ac-9358-8844b1081240_5_block_011",
+      "coordinates": {
+        "x1": 231.0,
+        "y1": 1038.0,
+        "x2": 1293.0,
+        "y2": 1090.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.8013132810592651,
+      "reading_order": 12,
+      "text": "2. Assertion (A): All pure substances are homogeneous."
+    },
+    {
+      "block_id": "20260312_62a3f467-e446-41ac-9358-8844b1081240_5_block_012",
+      "coordinates": {
+        "x1": 287.0,
+        "y1": 1101.0,
+        "x2": 1698.0,
+        "y2": 1204.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.875679612159729,
+      "reading_order": 13,
+      "text": "**Reason (R):** Pure substances are made up of only one kind of molecules and\nthey are uniformly distributed."
+    },
+    {
+      "block_id": "20260312_62a3f467-e446-41ac-9358-8844b1081240_5_block_013",
+      "coordinates": {
+        "x1": 290.0,
+        "y1": 1211.0,
+        "x2": 1475.0,
+        "y2": 1266.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8329281806945801,
+      "reading_order": 14,
+      "text": "(a) Both A and R are true and R is the correct explanation of A."
+    },
+    {
+      "block_id": "20260312_62a3f467-e446-41ac-9358-8844b1081240_5_block_014",
+      "coordinates": {
+        "x1": 290.0,
+        "y1": 1274.0,
+        "x2": 1543.0,
+        "y2": 1329.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.828357994556427,
+      "reading_order": 15,
+      "text": "(b) Both A and R are true, but R is not the correct explanation of A."
+    },
+    {
+      "block_id": "20260312_62a3f467-e446-41ac-9358-8844b1081240_5_block_015",
+      "coordinates": {
+        "x1": 291.0,
+        "y1": 1338.0,
+        "x2": 808.0,
+        "y2": 1390.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8110683560371399,
+      "reading_order": 16,
+      "text": "(c) A is true and R is false."
+    },
+    {
+      "block_id": "20260312_62a3f467-e446-41ac-9358-8844b1081240_5_block_016",
+      "coordinates": {
+        "x1": 292.0,
+        "y1": 1400.0,
+        "x2": 806.0,
+        "y2": 1456.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8093671202659607,
+      "reading_order": 17,
+      "text": "(d) A is false and R is true."
+    },
+    {
+      "block_id": "20260312_62a3f467-e446-41ac-9358-8844b1081240_5_block_017",
+      "coordinates": {
+        "x1": 233.0,
+        "y1": 1517.0,
+        "x2": 1476.0,
+        "y2": 1568.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.43108999729156494,
+      "reading_order": 18,
+      "text": "3. Match the statements of Column A with those of the Column B."
+    },
+    {
+      "block_id": "20260312_62a3f467-e446-41ac-9358-8844b1081240_5_block_018",
+      "coordinates": {
+        "x1": 245.0,
+        "y1": 1565.0,
+        "x2": 1555.0,
+        "y2": 2086.0
+      },
+      "layout_tag": "table",
+      "confidence": 0.9272633790969849,
+      "reading_order": 19,
+      "text": "<table>\n<thead>\n<tr>\n<th>Column A</th>\n<th>Column B</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>(i) Solvent extraction</td>\n<td>(A) Water + Alcohol</td>\n</tr>\n<tr>\n<td>(ii) Gravity method</td>\n<td>(B) Sulphur + Sand</td>\n</tr>\n<tr>\n<td>(iii) Sublimation</td>\n<td>(C) Sand + Saw dust</td>\n</tr>\n<tr>\n<td>(iv) Fractional crystallization</td>\n<td>(D) Sand + Water</td>\n</tr>\n<tr>\n<td></td>\n<td>(E) Sand + Iodine</td>\n</tr>\n<tr>\n<td></td>\n<td>(F) Potassium nitrate + Sodium<br/>chloride</td>\n</tr>\n</tbody>\n</table>"
+    },
+    {
+      "block_id": "20260312_62a3f467-e446-41ac-9358-8844b1081240_5_block_019",
+      "coordinates": {
+        "x1": 292.0,
+        "y1": 2106.0,
+        "x2": 1186.0,
+        "y2": 2165.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7919953465461731,
+      "reading_order": 20,
+      "text": "(a) (i) → (A); (ii) → (A); (iii) → (E); (iv) → (F)"
+    },
+    {
+      "block_id": "20260312_62a3f467-e446-41ac-9358-8844b1081240_5_block_020",
+      "coordinates": {
+        "x1": 292.0,
+        "y1": 2170.0,
+        "x2": 1185.0,
+        "y2": 2229.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7637363076210022,
+      "reading_order": 21,
+      "text": "(b) (i) → (D); (ii) → (F); (iii) → (E); (iv) → (A)"
+    },
+    {
+      "block_id": "20260312_62a3f467-e446-41ac-9358-8844b1081240_5_block_021",
+      "coordinates": {
+        "x1": 291.0,
+        "y1": 2232.0,
+        "x2": 1186.0,
+        "y2": 2291.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.764257550239563,
+      "reading_order": 22,
+      "text": "(c) (i) → (B); (ii) → (C); (iii) → (E); (iv) → (F)"
+    },
+    {
+      "block_id": "20260312_62a3f467-e446-41ac-9358-8844b1081240_5_block_022",
+      "coordinates": {
+        "x1": 291.0,
+        "y1": 2296.0,
+        "x2": 1186.0,
+        "y2": 2355.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7019122242927551,
+      "reading_order": 23,
+      "text": "(d) (i) → (D); (ii) → (A); (iii) → (E); (iv) → (C)"
+    },
+    {
+      "block_id": "20260312_62a3f467-e446-41ac-9358-8844b1081240_5_block_023",
+      "coordinates": {
+        "x1": 241.0,
+        "y1": 2414.0,
+        "x2": 1704.0,
+        "y2": 2845.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.28850415349006653,
+      "reading_order": 24,
+      "text": "4. Arrange the following steps in a proper sequence for the separation of a\nmixture of water and alcohol.\n(A) The mixture is heated.\n(B) The condensed liquid is collected in the receiver flask.\n(C) The mixture is taken in the distillation flask.\n(D) The component with lower boiling point vaporizes first.\n(a) ACDB (b) CADB (c) CABD (d) ACBD"
+    },
+    {
+      "block_id": "20260312_62a3f467-e446-41ac-9358-8844b1081240_5_block_024",
+      "coordinates": {
+        "x1": 1791.0,
+        "y1": 311.0,
+        "x2": 2175.0,
+        "y2": 365.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5152564644813538,
+      "reading_order": 25,
+      "text": "Space for rough work"
+    }
+  ]
+}

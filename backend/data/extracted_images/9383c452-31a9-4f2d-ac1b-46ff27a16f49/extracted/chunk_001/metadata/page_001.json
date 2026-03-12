@@ -1,0 +1,99 @@
+{
+  "page_num": 1,
+  "image_width": 2403,
+  "image_height": 3000,
+  "created_at": "2026-03-12T18:56:41.699382+00:00",
+  "blocks": [
+    {
+      "block_id": "20260312_02884a5f-6dcd-44e3-b81f-9481721c94a0_1_block_000",
+      "coordinates": {
+        "x1": 0.0,
+        "y1": 0.0,
+        "x2": 2402.0,
+        "y2": 1361.0
+      },
+      "layout_tag": "headline",
+      "confidence": 0.5501773953437805,
+      "reading_order": 1,
+      "text": "Trishna's\n\nPearson\nSUCCESS\nCOMPANION\n\n***"
+    },
+    {
+      "block_id": "20260312_02884a5f-6dcd-44e3-b81f-9481721c94a0_1_block_001",
+      "coordinates": {
+        "x1": 129.0,
+        "y1": 1401.0,
+        "x2": 1409.0,
+        "y2": 1945.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.47467538714408875,
+      "reading_order": 2,
+      "text": "Pearson IIT Foundation Seri\nChemistry\nPractice Book"
+    },
+    {
+      "block_id": "20260312_02884a5f-6dcd-44e3-b81f-9481721c94a0_1_block_002",
+      "coordinates": {
+        "x1": 0.0,
+        "y1": 1989.0,
+        "x2": 1178.0,
+        "y2": 2440.0
+      },
+      "layout_tag": "image",
+      "confidence": 0.5518074631690979,
+      "reading_order": 3,
+      "text": "The provided image is not a data chart, graph, or plot. It is a geometric abstract design composed of a tessellation of triangles. The pattern features a series of rows of triangles that decrease in size from left to right, creating a perspective effect similar to a mountain range. The triangles are colored in various shades of blue, ranging from dark azure to light sky blue, set against a white background. There are no axes, labels, legends, or numerical data points present in the image."
+    },
+    {
+      "block_id": "20260312_02884a5f-6dcd-44e3-b81f-9481721c94a0_1_block_004",
+      "coordinates": {
+        "x1": 136.0,
+        "y1": 2654.0,
+        "x2": 774.0,
+        "y2": 2850.0
+      },
+      "layout_tag": "footer",
+      "confidence": 0.3690924048423767,
+      "reading_order": 5,
+      "text": "Pearson"
+    },
+    {
+      "block_id": "20260312_02884a5f-6dcd-44e3-b81f-9481721c94a0_1_block_005",
+      "coordinates": {
+        "x1": 1551.0,
+        "y1": 2025.0,
+        "x2": 2401.0,
+        "y2": 2441.0
+      },
+      "layout_tag": "image",
+      "confidence": 0.2640657424926758,
+      "reading_order": 6,
+      "text": "The image features a graphic design primarily consisting of text and geometric shapes against a white background. The central element is the word \"CLASS\" written in a bold, black, sans-serif typeface. The letter \"C\" is positioned on the far left, followed by \"L\", \"A\", and \"S\" in sequence. The letter \"S\" is partially overlapped by a large, light gray numeral \"9\". The \"9\" is styled with a thick, rounded stroke and a circular void in the center. To the right of the \"9\", there is a cluster of geometric shapes, specifically three blue triangles arranged in a staggered formation. The triangles are arranged such that the leftmost triangle is the largest, followed by a medium-sized triangle, and a smaller triangle on the far right. The overall layout is clean and modern, likely serving as a logo or title graphic."
+    },
+    {
+      "block_id": "20260312_02884a5f-6dcd-44e3-b81f-9481721c94a0_1_block_006",
+      "coordinates": {
+        "x1": 1112.0,
+        "y1": 2489.0,
+        "x2": 2264.0,
+        "y2": 2660.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8857345581054688,
+      "reading_order": 7,
+      "text": "> Provides student-friendly content, application-based problems and hints and explanations to master the art of problem-solving"
+    },
+    {
+      "block_id": "20260312_02884a5f-6dcd-44e3-b81f-9481721c94a0_1_block_007",
+      "coordinates": {
+        "x1": 1111.0,
+        "y1": 2725.0,
+        "x2": 2173.0,
+        "y2": 2844.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8537225723266602,
+      "reading_order": 8,
+      "text": "> Uses a graded approach to generate, build and retain interest in concepts and their applications"
+    }
+  ]
+}

@@ -1,0 +1,177 @@
+{
+  "page_num": 2,
+  "image_width": 2402,
+  "image_height": 3001,
+  "created_at": "2026-03-12T18:57:43.187865+00:00",
+  "blocks": [
+    {
+      "block_id": "20260312_619a7db2-27e4-4572-9311-63029574bf01_2_block_000",
+      "coordinates": {
+        "x1": 201.0,
+        "y1": 185.0,
+        "x2": 1507.0,
+        "y2": 242.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.6434674859046936,
+      "reading_order": 1,
+      "text": "6.6 Chapter 6 Water, Solutions, Solubility and Hydrogen; Metals and Non-metals"
+    },
+    {
+      "block_id": "20260312_619a7db2-27e4-4572-9311-63029574bf01_2_block_001",
+      "coordinates": {
+        "x1": 291.0,
+        "y1": 286.0,
+        "x2": 1220.0,
+        "y2": 407.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5876274704933167,
+      "reading_order": 2,
+      "text": "(a) ACEBD (b) CEADB\n(c) AECDB (d) CAEBD"
+    },
+    {
+      "block_id": "20260312_619a7db2-27e4-4572-9311-63029574bf01_2_block_002",
+      "coordinates": {
+        "x1": 233.0,
+        "y1": 434.0,
+        "x2": 1405.0,
+        "y2": 483.0
+      },
+      "layout_tag": "image-caption",
+      "confidence": 0.6347541213035583,
+      "reading_order": 3,
+      "text": "5. Match the statements of Column A with those of Column B."
+    },
+    {
+      "block_id": "20260312_619a7db2-27e4-4572-9311-63029574bf01_2_block_003",
+      "coordinates": {
+        "x1": 278.0,
+        "y1": 506.0,
+        "x2": 1467.0,
+        "y2": 1346.0
+      },
+      "layout_tag": "table",
+      "confidence": 0.31458309292793274,
+      "reading_order": 4,
+      "text": "<table>\n<thead>\n<tr>\n<th>Column A<br/>(Substances)</th>\n<th>Column B<br/>(Properties)</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>(i) Wood charcoal</td>\n<td>(A) Thick black substance</td>\n</tr>\n<tr>\n<td>(ii) Sugar charcoal</td>\n<td>(B) Brittle grey solid</td>\n</tr>\n<tr>\n<td>(iii) Coke</td>\n<td>(C) Light powdery black substance<br/>having a velvet touch</td>\n</tr>\n<tr>\n<td>(iv) Animal charcoal</td>\n<td>(D) Black porous solid</td>\n</tr>\n<tr>\n<td>(v) Lamp black</td>\n<td>(E) Less percentage of carbon</td>\n</tr>\n</tbody>\n</table>"
+    },
+    {
+      "block_id": "20260312_619a7db2-27e4-4572-9311-63029574bf01_2_block_004",
+      "coordinates": {
+        "x1": 234.0,
+        "y1": 1279.0,
+        "x2": 1504.0,
+        "y2": 1467.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.851250171661377,
+      "reading_order": 5,
+      "text": "6. Which of the following ores can be separated by froth floatation?\n(a) Magnesite (b) Haematite\n(c) Bauxite (d) Cinnabar"
+    },
+    {
+      "block_id": "20260312_619a7db2-27e4-4572-9311-63029574bf01_2_block_005",
+      "coordinates": {
+        "x1": 232.0,
+        "y1": 1492.0,
+        "x2": 1698.0,
+        "y2": 1739.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9226210713386536,
+      "reading_order": 6,
+      "text": "7. Identify the reaction(s) responsible for the drop in temperature in the mid-\ndle region of the blast furnace.\n(a) $\\mathrm{CaCO}_3 \\rightarrow \\mathrm{CO}_2 + \\mathrm{CaO}$ (b) $\\mathrm{CO}_2 + \\mathrm{C} \\rightarrow \\mathrm{CO}$\n(c) $\\mathrm{CaO} + \\mathrm{SiO}_2 \\rightarrow \\mathrm{CaSiO}_3$ (d) Both (1) and (2)"
+    },
+    {
+      "block_id": "20260312_619a7db2-27e4-4572-9311-63029574bf01_2_block_006",
+      "coordinates": {
+        "x1": 234.0,
+        "y1": 1758.0,
+        "x2": 1694.0,
+        "y2": 1944.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9350058436393738,
+      "reading_order": 7,
+      "text": "8. A mixture of $\\mathrm{NH}_3$ and $\\mathrm{O}_2$ is passed over heated platinum. Identify one of the\nproducts of the reaction.\n(a) $\\mathrm{N}_2$ (b) $\\mathrm{N}_2\\mathrm{O}$ (c) NO (d) $\\mathrm{NO}_2$"
+    },
+    {
+      "block_id": "20260312_619a7db2-27e4-4572-9311-63029574bf01_2_block_007",
+      "coordinates": {
+        "x1": 234.0,
+        "y1": 1964.0,
+        "x2": 1698.0,
+        "y2": 2073.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9001280069351196,
+      "reading_order": 8,
+      "text": "9. Which of the following uses of phosphorus is not related to the structure given below?"
+    },
+    {
+      "block_id": "20260312_619a7db2-27e4-4572-9311-63029574bf01_2_block_008",
+      "coordinates": {
+        "x1": 535.0,
+        "y1": 2087.0,
+        "x2": 1346.0,
+        "y2": 2341.0
+      },
+      "layout_tag": "image",
+      "confidence": 0.9266040921211243,
+      "reading_order": 9,
+      "text": "The image is a chemical structure diagram, specifically a skeletal formula, rather than a data chart with axes or numerical values. It depicts a polymer chain composed of repeating units of phosphorus (P). The structure shows three distinct segments separated by vertical lines. Each segment consists of a central phosphorus atom bonded to three other phosphorus atoms, which are each bonded to two terminal hydrogen atoms (implied by the single lines extending from the outer P atoms). The central phosphorus atom in each segment is also bonded to two other phosphorus atoms, creating a tetrahedral geometry around each central atom. The diagram illustrates the connectivity and branching pattern of the molecule. The letter 'n' is positioned below the third segment, indicating that this structure represents a repeating unit in a polymer chain of indefinite length."
+    },
+    {
+      "block_id": "20260312_619a7db2-27e4-4572-9311-63029574bf01_2_block_009",
+      "coordinates": {
+        "x1": 292.0,
+        "y1": 2373.0,
+        "x2": 813.0,
+        "y2": 2494.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.2592836618423462,
+      "reading_order": 10,
+      "text": "(a) Making safety matches\n(c) Making fertilizers"
+    },
+    {
+      "block_id": "20260312_619a7db2-27e4-4572-9311-63029574bf01_2_block_010",
+      "coordinates": {
+        "x1": 972.0,
+        "y1": 2374.0,
+        "x2": 1681.0,
+        "y2": 2431.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6449667811393738,
+      "reading_order": 11,
+      "text": "(b) Making strike anywhere matches"
+    },
+    {
+      "block_id": "20260312_619a7db2-27e4-4572-9311-63029574bf01_2_block_011",
+      "coordinates": {
+        "x1": 975.0,
+        "y1": 2437.0,
+        "x2": 1543.0,
+        "y2": 2495.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6393780708312988,
+      "reading_order": 12,
+      "text": "(d) Making phosphor bronze"
+    },
+    {
+      "block_id": "20260312_619a7db2-27e4-4572-9311-63029574bf01_2_block_012",
+      "coordinates": {
+        "x1": 1794.0,
+        "y1": 313.0,
+        "x2": 2173.0,
+        "y2": 363.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.32292041182518005,
+      "reading_order": 13,
+      "text": "Space for rough work"
+    }
+  ]
+}

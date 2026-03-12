@@ -1,0 +1,320 @@
+{
+  "page_num": 10,
+  "image_width": 2402,
+  "image_height": 3001,
+  "created_at": "2026-03-12T18:57:08.373499+00:00",
+  "blocks": [
+    {
+      "block_id": "20260312_293cc747-e839-4df7-b470-7633f0fa3e61_10_block_000",
+      "coordinates": {
+        "x1": 186.0,
+        "y1": 184.0,
+        "x2": 768.0,
+        "y2": 242.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.8562150001525879,
+      "reading_order": 1,
+      "text": "2.12 Chapter 2 Atomic Structure"
+    },
+    {
+      "block_id": "20260312_293cc747-e839-4df7-b470-7633f0fa3e61_10_block_001",
+      "coordinates": {
+        "x1": 213.0,
+        "y1": 293.0,
+        "x2": 1698.0,
+        "y2": 401.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9167476892471313,
+      "reading_order": 2,
+      "text": "14. Which of the following changes occur due to the emission of $\\alpha$-particle from\nan atom of an element?"
+    },
+    {
+      "block_id": "20260312_293cc747-e839-4df7-b470-7633f0fa3e61_10_block_002",
+      "coordinates": {
+        "x1": 291.0,
+        "y1": 417.0,
+        "x2": 1696.0,
+        "y2": 525.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9130813479423523,
+      "reading_order": 3,
+      "text": "(a) Atomic number and mass number increase by 2 units and 4 units,\nrespectively."
+    },
+    {
+      "block_id": "20260312_293cc747-e839-4df7-b470-7633f0fa3e61_10_block_003",
+      "coordinates": {
+        "x1": 290.0,
+        "y1": 534.0,
+        "x2": 1697.0,
+        "y2": 641.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.905092179775238,
+      "reading_order": 4,
+      "text": "(b) Atomic number and mass number decrease by 2 units and 4 units,\nrespectively."
+    },
+    {
+      "block_id": "20260312_293cc747-e839-4df7-b470-7633f0fa3e61_10_block_004",
+      "coordinates": {
+        "x1": 291.0,
+        "y1": 650.0,
+        "x2": 1178.0,
+        "y2": 705.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8045971989631653,
+      "reading_order": 5,
+      "text": "(c) Only atomic number increases by one unit."
+    },
+    {
+      "block_id": "20260312_293cc747-e839-4df7-b470-7633f0fa3e61_10_block_005",
+      "coordinates": {
+        "x1": 291.0,
+        "y1": 718.0,
+        "x2": 1185.0,
+        "y2": 775.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8129614591598511,
+      "reading_order": 6,
+      "text": "(d) Only atomic number decreases by one unit."
+    },
+    {
+      "block_id": "20260312_293cc747-e839-4df7-b470-7633f0fa3e61_10_block_006",
+      "coordinates": {
+        "x1": 214.0,
+        "y1": 798.0,
+        "x2": 1696.0,
+        "y2": 905.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9099943041801453,
+      "reading_order": 7,
+      "text": "15. In discharge tube, why are high voltage and low pressure required to be maintained?"
+    },
+    {
+      "block_id": "20260312_293cc747-e839-4df7-b470-7633f0fa3e61_10_block_007",
+      "coordinates": {
+        "x1": 291.0,
+        "y1": 923.0,
+        "x2": 1698.0,
+        "y2": 1027.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9034159183502197,
+      "reading_order": 8,
+      "text": "(a) In order to increase the kinetic energy of the electron dislodged from the\natom"
+    },
+    {
+      "block_id": "20260312_293cc747-e839-4df7-b470-7633f0fa3e61_10_block_008",
+      "coordinates": {
+        "x1": 291.0,
+        "y1": 1040.0,
+        "x2": 1385.0,
+        "y2": 1095.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8392695784568787,
+      "reading_order": 9,
+      "text": "(b) In order to increase the number of dislodged electrons"
+    },
+    {
+      "block_id": "20260312_293cc747-e839-4df7-b470-7633f0fa3e61_10_block_009",
+      "coordinates": {
+        "x1": 289.0,
+        "y1": 1103.0,
+        "x2": 1380.0,
+        "y2": 1159.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8290360569953918,
+      "reading_order": 10,
+      "text": "(c) In order to make the fluorescent screen glow properly"
+    },
+    {
+      "block_id": "20260312_293cc747-e839-4df7-b470-7633f0fa3e61_10_block_010",
+      "coordinates": {
+        "x1": 1792.0,
+        "y1": 314.0,
+        "x2": 2172.0,
+        "y2": 367.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7649946212768555,
+      "reading_order": 11,
+      "text": "Space for rough work"
+    },
+    {
+      "block_id": "20260312_293cc747-e839-4df7-b470-7633f0fa3e61_10_block_011",
+      "coordinates": {
+        "x1": 293.0,
+        "y1": 1166.0,
+        "x2": 636.0,
+        "y2": 1220.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7443788647651672,
+      "reading_order": 12,
+      "text": "(d) All the above"
+    },
+    {
+      "block_id": "20260312_293cc747-e839-4df7-b470-7633f0fa3e61_10_block_012",
+      "coordinates": {
+        "x1": 938.0,
+        "y1": 1859.0,
+        "x2": 1462.0,
+        "y2": 1951.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.8866046667098999,
+      "reading_order": 13,
+      "text": "Answer Keys"
+    },
+    {
+      "block_id": "20260312_293cc747-e839-4df7-b470-7633f0fa3e61_10_block_013",
+      "coordinates": {
+        "x1": 222.0,
+        "y1": 1978.0,
+        "x2": 644.0,
+        "y2": 2034.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.8352805972099304,
+      "reading_order": 14,
+      "text": "Assessment Test I"
+    },
+    {
+      "block_id": "20260312_293cc747-e839-4df7-b470-7633f0fa3e61_10_block_014",
+      "coordinates": {
+        "x1": 240.0,
+        "y1": 2043.0,
+        "x2": 2186.0,
+        "y2": 2098.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.35112830996513367,
+      "reading_order": 15,
+      "text": "1. (a) 2. (b) 3. (b) 4. (b) 5. (a) 6. (d) 7. (d) 8. (b) 9. (a) 10. (b)"
+    },
+    {
+      "block_id": "20260312_293cc747-e839-4df7-b470-7633f0fa3e61_10_block_015",
+      "coordinates": {
+        "x1": 240.0,
+        "y1": 2098.0,
+        "x2": 1176.0,
+        "y2": 2151.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.34900152683258057,
+      "reading_order": 16,
+      "text": "11. (c) 12. (b) 13. (c) 14. (a) 15. (d)"
+    },
+    {
+      "block_id": "20260312_293cc747-e839-4df7-b470-7633f0fa3e61_10_block_016",
+      "coordinates": {
+        "x1": 222.0,
+        "y1": 2200.0,
+        "x2": 662.0,
+        "y2": 2253.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.8416277170181274,
+      "reading_order": 17,
+      "text": "Assessment Test II"
+    },
+    {
+      "block_id": "20260312_293cc747-e839-4df7-b470-7633f0fa3e61_10_block_017",
+      "coordinates": {
+        "x1": 239.0,
+        "y1": 2261.0,
+        "x2": 2171.0,
+        "y2": 2373.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.2922065258026123,
+      "reading_order": 18,
+      "text": "1. (a) 2. (a) 3. (b) 4. (b) 5. (b) 6. (d) 7. (c) 8. (c) 9. (a) 10. (b)\n11. (d) 12. (b) 13. (b) 14. (a) 15. (a)"
+    },
+    {
+      "block_id": "20260312_293cc747-e839-4df7-b470-7633f0fa3e61_10_block_018",
+      "coordinates": {
+        "x1": 222.0,
+        "y1": 2421.0,
+        "x2": 682.0,
+        "y2": 2475.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.8359619975090027,
+      "reading_order": 19,
+      "text": "Assessment Test III"
+    },
+    {
+      "block_id": "20260312_293cc747-e839-4df7-b470-7633f0fa3e61_10_block_019",
+      "coordinates": {
+        "x1": 247.0,
+        "y1": 2485.0,
+        "x2": 2173.0,
+        "y2": 2542.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6568055152893066,
+      "reading_order": 20,
+      "text": "1. (d) 2. (c) 3. (a) 4. (b) 5. (b) 6. (a) 7. (c) 8. (c) 9. (c) 10. (c)"
+    },
+    {
+      "block_id": "20260312_293cc747-e839-4df7-b470-7633f0fa3e61_10_block_020",
+      "coordinates": {
+        "x1": 238.0,
+        "y1": 2540.0,
+        "x2": 1177.0,
+        "y2": 2594.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.2841719686985016,
+      "reading_order": 21,
+      "text": "11. (b) 12. (c) 13. (c) 14. (d) 15. (b)"
+    },
+    {
+      "block_id": "20260312_293cc747-e839-4df7-b470-7633f0fa3e61_10_block_021",
+      "coordinates": {
+        "x1": 220.0,
+        "y1": 2643.0,
+        "x2": 680.0,
+        "y2": 2696.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.8400084376335144,
+      "reading_order": 22,
+      "text": "Assessment Test IV"
+    },
+    {
+      "block_id": "20260312_293cc747-e839-4df7-b470-7633f0fa3e61_10_block_022",
+      "coordinates": {
+        "x1": 244.0,
+        "y1": 2706.0,
+        "x2": 2172.0,
+        "y2": 2762.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7395619750022888,
+      "reading_order": 23,
+      "text": "1. (a) 2. (b) 3. (b) 4. (c) 5. (d) 6. (b) 7. (a) 8. (c) 9. (c) 10. (c)"
+    },
+    {
+      "block_id": "20260312_293cc747-e839-4df7-b470-7633f0fa3e61_10_block_023",
+      "coordinates": {
+        "x1": 239.0,
+        "y1": 2762.0,
+        "x2": 1180.0,
+        "y2": 2813.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.27140769362449646,
+      "reading_order": 24,
+      "text": "11. (c) 12. (a) 13. (b) 14. (b) 15. (d)"
+    }
+  ]
+}

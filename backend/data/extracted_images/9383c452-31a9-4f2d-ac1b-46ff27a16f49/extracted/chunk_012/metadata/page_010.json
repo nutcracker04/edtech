@@ -1,0 +1,125 @@
+{
+  "page_num": 10,
+  "image_width": 2402,
+  "image_height": 3001,
+  "created_at": "2026-03-12T18:58:15.093268+00:00",
+  "blocks": [
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_10_block_000",
+      "coordinates": {
+        "x1": 184.0,
+        "y1": 184.0,
+        "x2": 773.0,
+        "y2": 242.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.6914103627204895,
+      "reading_order": 1,
+      "text": "A.18 Chapter 4 Chemical Bonding"
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_10_block_001",
+      "coordinates": {
+        "x1": 501.0,
+        "y1": 300.0,
+        "x2": 850.0,
+        "y2": 581.0
+      },
+      "layout_tag": "image",
+      "confidence": 0.92283034324646,
+      "reading_order": 2,
+      "text": "The image is a schematic diagram representing a 2x2 grid of four circular regions. Each circle contains a letter 'H' and a dot (•). The top-left and bottom-left circles contain the letter 'H' above a dot, while the top-right and bottom-right circles contain the letter 'H' below a dot. The four circles are interconnected by thick, curved lines that form a larger, encompassing shape around the entire grid. Inside the central region, between the circles, there are four 'x' marks arranged in a 2x2 grid. The diagram likely illustrates a logical relationship, such as a Venn diagram for a 2x2 contingency table or a representation of a specific set relationship."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_10_block_002",
+      "coordinates": {
+        "x1": 295.0,
+        "y1": 649.0,
+        "x2": 1169.0,
+        "y2": 751.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8356359004974365,
+      "reading_order": 3,
+      "text": "It shows the presence of 6 bond pairs in the\nmolecule."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_10_block_003",
+      "coordinates": {
+        "x1": 295.0,
+        "y1": 762.0,
+        "x2": 884.0,
+        "y2": 816.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7281898856163025,
+      "reading_order": 4,
+      "text": "Hence, the correct option is (d)."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_10_block_004",
+      "coordinates": {
+        "x1": 212.0,
+        "y1": 841.0,
+        "x2": 1176.0,
+        "y2": 949.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8867165446281433,
+      "reading_order": 5,
+      "text": "14. The element with electronic configuration 2,\n8, 6 is sulphur. The element with electronic"
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_10_block_005",
+      "coordinates": {
+        "x1": 1342.0,
+        "y1": 291.0,
+        "x2": 2219.0,
+        "y2": 564.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8788564801216125,
+      "reading_order": 6,
+      "text": "configuration 2, 7 is fluorine. The compound\nformed is $\\mathrm{SF}_6$. Sulphur has 6 electrons in its\nvalence shell and shares six electrons from 6\nfluorine atoms. Therefore, in $\\mathrm{SF}_6$, the central\natom, sulphur acquires 12 electrons."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_10_block_006",
+      "coordinates": {
+        "x1": 1343.0,
+        "y1": 580.0,
+        "x2": 1928.0,
+        "y2": 635.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6666193008422852,
+      "reading_order": 7,
+      "text": "Hence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_10_block_007",
+      "coordinates": {
+        "x1": 1262.0,
+        "y1": 660.0,
+        "x2": 2223.0,
+        "y2": 872.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9164134860038757,
+      "reading_order": 8,
+      "text": "15. Hydronium ion possesses dative bond between\n$\\mathrm{H}_2\\mathrm{O}$ molecule and $\\mathrm{H}^+$ ion. Within $\\mathrm{H}_2\\mathrm{O}$ mole-\ncule, there are covalent bonds. It does not con-\ntain ionic bond."
+    },
+    {
+      "block_id": "20260312_53230d52-1143-496b-ac7c-3377ccdd9795_10_block_008",
+      "coordinates": {
+        "x1": 1342.0,
+        "y1": 892.0,
+        "x2": 1929.0,
+        "y2": 945.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7916751503944397,
+      "reading_order": 9,
+      "text": "Hence, the correct option is (a)."
+    }
+  ]
+}

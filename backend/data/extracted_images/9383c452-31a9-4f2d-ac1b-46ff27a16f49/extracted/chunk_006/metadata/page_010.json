@@ -1,0 +1,151 @@
+{
+  "page_num": 10,
+  "image_width": 2402,
+  "image_height": 3001,
+  "created_at": "2026-03-12T18:57:21.428515+00:00",
+  "blocks": [
+    {
+      "block_id": "20260312_cdf0d880-a229-431d-b739-af0eb2618f8d_10_block_000",
+      "coordinates": {
+        "x1": 204.0,
+        "y1": 185.0,
+        "x2": 774.0,
+        "y2": 241.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.6244588494300842,
+      "reading_order": 1,
+      "text": "4.8 Chapter 4 Chemical Bonding"
+    },
+    {
+      "block_id": "20260312_cdf0d880-a229-431d-b739-af0eb2618f8d_10_block_001",
+      "coordinates": {
+        "x1": 286.0,
+        "y1": 289.0,
+        "x2": 1478.0,
+        "y2": 533.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.26780617237091064,
+      "reading_order": 2,
+      "text": "(a) (i) $\\rightarrow$ (B); (ii) $\\rightarrow$ (E); (iii) $\\rightarrow$ (A); (iv) $\\rightarrow$ (D); (v) $\\rightarrow$ (C)\n(b) (i) $\\rightarrow$ (B); (ii) $\\rightarrow$ (D); (iii) $\\rightarrow$ (E); (iv) $\\rightarrow$ (A); (v) $\\rightarrow$ (C)\n(c) (i) $\\rightarrow$ (C); (ii) $\\rightarrow$ (A); (iii) $\\rightarrow$ (D); (iv) $\\rightarrow$ (E); (v) $\\rightarrow$ (B)\n(d) (i) $\\rightarrow$ (C); (ii) $\\rightarrow$ (D); (iii) $\\rightarrow$ (E); (iv) $\\rightarrow$ (A); (v) $\\rightarrow$ (B)"
+    },
+    {
+      "block_id": "20260312_cdf0d880-a229-431d-b739-af0eb2618f8d_10_block_002",
+      "coordinates": {
+        "x1": 234.0,
+        "y1": 598.0,
+        "x2": 1374.0,
+        "y2": 906.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.880286455154419,
+      "reading_order": 3,
+      "text": "6. Identify the redox reaction among the following.\n(a) Reaction of potassium hydroxide with sulphuric acid.\n(b) Reaction of silver nitrate with sodium chloride.\n(c) Reaction of hydrogen sulphide with sulphur dioxide.\n(d) Decomposition of ammonium chloride."
+    },
+    {
+      "block_id": "20260312_cdf0d880-a229-431d-b739-af0eb2618f8d_10_block_003",
+      "coordinates": {
+        "x1": 234.0,
+        "y1": 962.0,
+        "x2": 1700.0,
+        "y2": 1140.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9139020442962646,
+      "reading_order": 4,
+      "text": "7. A metal and a non-metal possess the electronic configurations 2, 8, 3 and 2,\n8, 7. Identify the electrovalencies of the metal and non-metal.\n(a) 3, 7 (b) 3, 1 (c) 5, 1 (d) 1, 1"
+    },
+    {
+      "block_id": "20260312_cdf0d880-a229-431d-b739-af0eb2618f8d_10_block_004",
+      "coordinates": {
+        "x1": 234.0,
+        "y1": 1198.0,
+        "x2": 1699.0,
+        "y2": 1496.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9370071291923523,
+      "reading_order": 5,
+      "text": "8. In the formation of a compound, a metal gets the configuration of argon\nand the non-metal gets the configuration of krypton. Identify the metal and\nnon-metal.\n(a) Na, $\\mathrm{Br}_2$ (b) Na, $\\mathrm{Cl}_2$\n(c) Ca, $\\mathrm{Cl}_2$ (d) Ca, $\\mathrm{Br}_2$"
+    },
+    {
+      "block_id": "20260312_cdf0d880-a229-431d-b739-af0eb2618f8d_10_block_005",
+      "coordinates": {
+        "x1": 232.0,
+        "y1": 1548.0,
+        "x2": 1189.0,
+        "y2": 1856.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9389551281929016,
+      "reading_order": 6,
+      "text": "9. Identify the incorrect pair among the following.\n(a) Hydrogen–zero lone pairs\n(b) Nitrogen–two lone pairs\n(c) Chlorine–three lone pairs\n(d) Oxygen–two lone pairs"
+    },
+    {
+      "block_id": "20260312_cdf0d880-a229-431d-b739-af0eb2618f8d_10_block_006",
+      "coordinates": {
+        "x1": 215.0,
+        "y1": 1913.0,
+        "x2": 1693.0,
+        "y2": 2090.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9314588904380798,
+      "reading_order": 7,
+      "text": "10. Which of the following pairs of atomic numbers corresponds to the forma-\ntion of covalent compound?\n(a) 13, 9 (b) 17, 8 (c) 18, 17 (d) 12, 16"
+    },
+    {
+      "block_id": "20260312_cdf0d880-a229-431d-b739-af0eb2618f8d_10_block_007",
+      "coordinates": {
+        "x1": 216.0,
+        "y1": 2148.0,
+        "x2": 1698.0,
+        "y2": 2387.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9431954622268677,
+      "reading_order": 8,
+      "text": "11. Which of the following characteristics of metals is not attributed to the pres-\nence of metallic bond?\n(a) Malleable nature (b) Metallic lustre\n(c) Reducing property (d) Thermal conductivity"
+    },
+    {
+      "block_id": "20260312_cdf0d880-a229-431d-b739-af0eb2618f8d_10_block_008",
+      "coordinates": {
+        "x1": 213.0,
+        "y1": 2443.0,
+        "x2": 1402.0,
+        "y2": 2626.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.920444667339325,
+      "reading_order": 9,
+      "text": "12. Which of the following is a non-bonded force of attraction?\n(a) Ionic bond (b) Covalent bond\n(c) Dative bond (d) Hydrogen bond"
+    },
+    {
+      "block_id": "20260312_cdf0d880-a229-431d-b739-af0eb2618f8d_10_block_009",
+      "coordinates": {
+        "x1": 215.0,
+        "y1": 2684.0,
+        "x2": 1669.0,
+        "y2": 2868.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9356805086135864,
+      "reading_order": 10,
+      "text": "13. Which of the following molecules is associated with triple covalent bond?\n(a) Ethane (b) Ethylene\n(c) Acetylene (d) Carbon dioxide"
+    },
+    {
+      "block_id": "20260312_cdf0d880-a229-431d-b739-af0eb2618f8d_10_block_010",
+      "coordinates": {
+        "x1": 1794.0,
+        "y1": 312.0,
+        "x2": 2173.0,
+        "y2": 363.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.3880547881126404,
+      "reading_order": 11,
+      "text": "Space for rough work"
+    }
+  ]
+}
