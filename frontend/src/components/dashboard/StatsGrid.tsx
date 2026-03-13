@@ -11,43 +11,35 @@ interface StatItem {
 }
 
 export function StatsGrid() {
-  const { data: overallStats } = useOverallStats();
+  const overallStats = useOverallStats();
 
-  // Format stats from real data
+  // Format stats from real data (matches getOverallStats shape)
   const stats: StatItem[] = [
     {
       label: "Questions Solved",
-      value: overallStats?.totalQuestions?.toString() || "0",
-      change: `${overallStats?.totalCorrect || 0} correct`,
+      value: overallStats.totalQuestionsAttempted.toString(),
+      change: `${overallStats.totalQuestionsCorrect} correct`,
       icon: Target,
       positive: true,
     },
     {
-      label: "Study Hours",
-      value: overallStats?.totalTimeSpent
-        ? `${(overallStats.totalTimeSpent / 3600).toFixed(1)}h`
-        : "0h",
-      change: "Total time spent",
+      label: "Topics Covered",
+      value: overallStats.totalTopicsCovered.toString(),
+      change: `${overallStats.strongTopicsCount} strong, ${overallStats.weakTopicsCount} weak`,
       icon: Clock,
       positive: true,
     },
     {
       label: "Avg. Accuracy",
-      value: overallStats?.averageAccuracy
-        ? `${overallStats.averageAccuracy.toFixed(0)}%`
-        : "0%",
-      change: overallStats?.averageAccuracy && overallStats.averageAccuracy > 70
-        ? "Great job!"
-        : "Keep practicing",
+      value: `${overallStats.overallAccuracy}%`,
+      change: overallStats.overallAccuracy > 70 ? "Great job!" : "Keep practicing",
       icon: TrendingUp,
       positive: true,
     },
     {
-      label: "Tests Completed",
-      value: overallStats?.testsCompleted?.toString() || "0",
-      change: overallStats?.averageScore
-        ? `Avg: ${overallStats.averageScore.toFixed(0)}%`
-        : "No tests yet",
+      label: "Avg. Mastery",
+      value: `${overallStats.averageMastery}%`,
+      change: "Across all topics",
       icon: Award,
       positive: true,
     },
