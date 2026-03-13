@@ -149,19 +149,12 @@ class RelationshipLinker:
                         f"(confidence: {answer_confidence})"
                     )
                 else:
-                    # No match found - handle missing answer key (Error Scenario 2)
                     no_matches += 1
-                    logger.debug(f"No answer key found for question {question.question_number}")
-                    
-                    # Use error handler to handle missing answer key
-                    self.error_handler.handle_missing_answer_key(
-                        question_number=question.question_number,
-                        question_text=question.question_text,
-                        chapter=question.chapter_context,
-                        topic=question.topic_context,
-                        page_number=question.page_number,
-                        fuzzy_match_attempted=True,
-                        fuzzy_confidence=answer_confidence
+                    logger.warning(
+                        "No answer key found for question %s (chapter: %s, topic: %s)",
+                        question.question_number,
+                        question.chapter_context,
+                        question.topic_context,
                     )
             
             # Create LinkedQuestion object

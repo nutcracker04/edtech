@@ -30,6 +30,9 @@ from .document_processor import (
 )
 from .relationship_linker import RelationshipLinker
 from .config import PDFExtractionConfig, get_config
+from .extraction_helpers import to_slug, parse_answer_key, normalize_question_number
+from .extraction_pipeline import run_extraction_pipeline
+from .database_writer import DatabaseWriter
 
 __all__ = [
     "BookMetadata",
@@ -55,4 +58,9 @@ __all__ = [
     "RelationshipLinker",
     "PDFExtractionConfig",
     "get_config",
+    "to_slug",
+    "parse_answer_key",
+    "normalize_question_number",
+    "run_extraction_pipeline",
+    "DatabaseWriter",
 ]

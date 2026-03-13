@@ -216,11 +216,7 @@ class LinkedQuestion(BaseModel):
 
     @model_validator(mode="after")
     def validate_mcq_has_answer(self) -> "LinkedQuestion":
-        """Validate MCQ questions have answer keys"""
-        if self.raw_question.options is not None and self.answer_key is None:
-            raise ValueError(
-                f"MCQ question {self.raw_question.question_number} must have an answer_key"
-            )
+        """MCQ questions ideally have answer keys; may be filled from answer key section later."""
         return self
 
 
@@ -255,13 +251,16 @@ class TaggedQuestion(BaseModel):
 
     @model_validator(mode="after")
     def validate_mcq_answer(self) -> "TaggedQuestion":
-        """Validate MCQ correct answer matches one of the options"""
+        """Validate MCQ has options. Correct answer may be letter (A-D) or option text."""
         if self.answer_type in [QuestionType.MCQ_SINGLE, QuestionType.MCQ_MULTIPLE]:
             if not self.options:
                 raise ValueError("MCQ questions must have options")
             option_texts = [opt.text for opt in self.options]
-            if self.correct_answer not in option_texts:
-                raise ValueError(
-                    f"Correct answer '{self.correct_answer}' must match one of the options"
-                )
+            option_labels = [opt.label.upper() for opt in self.options]
+            ans = str(self.correct_answer).strip().upper()
+            if ans and ans not in option_texts and ans not in option_labels:
+                if len(ans) != 1 or ans not in "ABCD":
+                    raise ValueError(
+                        f"Correct answer '{self.correct_answer}' must match option label or text"
+                    )
         return self

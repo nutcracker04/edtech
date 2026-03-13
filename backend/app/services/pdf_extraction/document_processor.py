@@ -177,12 +177,40 @@ class DocumentProcessor:
                 extracted_path=Path(extracted_path),
             )
 
+            questions_written = 0
+            try:
+                from .extraction_pipeline import run_extraction_pipeline
+
+                total_pages = self._get_pdf_page_count(str(source_pdf_path))
+                questions_written = run_extraction_pipeline(
+                    job_id=job_id,
+                    extracted_path=extracted_path,
+                    manifest_path=str(artifacts.manifest_path),
+                    metadata=metadata,
+                    source_pdf_path=str(source_pdf_path),
+                    storage_root=self.storage_root,
+                    total_pages=total_pages,
+                )
+                if questions_written > 0:
+                    self._update_job_status(
+                        job_id,
+                        ProcessingStage.COMPLETED,
+                        100.0,
+                        questions_extracted=questions_written,
+                    )
+            except Exception as pipe_exc:
+                logger.warning(
+                    "Structured extraction pipeline failed (markdown still saved): %s",
+                    pipe_exc,
+                    exc_info=True,
+                )
+
             self._update_job_status(job_id, ProcessingStage.COMPLETED, 100.0)
 
             result = ProcessingResult(
                 success=True,
                 job_id=job_id,
-                questions_written=0,
+                questions_written=questions_written,
                 success_rate=100.0,
                 failed_links=0,
                 processing_time_seconds=time.time() - start_time,
