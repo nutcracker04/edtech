@@ -9,11 +9,8 @@ export interface TestCreateRequest {
     subject_id?: string;
     duration: number;
     number_of_questions?: number;
-    chapter_ids?: string[];
-    topic_ids?: string[];
     difficulty?: string;
     schedule_at?: string;
-    source?: 'repository' | 'pyq';
 }
 
 export const testApi = {
@@ -80,17 +77,7 @@ export const testApi = {
         return response.json();
     },
 
-    getHierarchy: async () => {
-        const { data: { session } } = await supabase.auth.getSession();
-        const token = session?.access_token;
-        if (!token) throw new Error('No session');
 
-        const response = await fetch(`${API_BASE_URL}/api/analysis/hierarchy`, {
-            headers: { 'Authorization': `Bearer ${token}` }
-        });
-        if (!response.ok) throw new Error('Failed to fetch hierarchy');
-        return response.json();
-    },
 
     getTestResults: async (testId: string) => {
         const { data: { session } } = await supabase.auth.getSession();

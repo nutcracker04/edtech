@@ -62,17 +62,7 @@ export const analysisApi = {
         return response.json();
     },
 
-    getHierarchy: async () => {
-        const { data: { session } } = await supabase.auth.getSession();
-        const token = session?.access_token;
-        if (!token) throw new Error('No session');
 
-        const response = await fetch(`${API_BASE_URL}/api/analysis/hierarchy`, {
-            headers: { 'Authorization': `Bearer ${token}` }
-        });
-        if (!response.ok) throw new Error('Failed to fetch hierarchy');
-        return response.json();
-    },
 
     getRecommendations: async () => {
         const { data: { session } } = await supabase.auth.getSession();

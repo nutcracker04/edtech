@@ -19,15 +19,9 @@ import Landing from "./pages/Landing";
 import Tests from "./pages/Tests";
 import Settings from "./pages/Settings";
 import AdminDashboard from "./pages/admin/AdminDashboard";
-import HierarchyManager from "./pages/admin/HierarchyManager";
-import AdminRepository from "./pages/admin/AdminRepository";
 import TestTaking from "./pages/TestTaking";
 import TestResults from "./pages/TestResults";
 import NotFound from "./pages/NotFound";
-import AdminPyq from "./pages/admin/AdminPyq";
-import AdminPyqView from "./pages/admin/AdminPyqView";
-import { AIAssistant } from "./components/ai/AIAssistant";
-import { AIAssistantButton } from "./components/ai/AIAssistantButton";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -38,8 +32,6 @@ const queryClient = new QueryClient({
 });
 
 const App = () => {
-  const [isAIOpen, setIsAIOpen] = useState(false);
-
   return (
     <QueryClientProvider client={queryClient}>
       <AuthProvider>
@@ -108,35 +100,12 @@ const App = () => {
                     <AdminDashboard />
                   </ProtectedRoute>
                 } />
-                <Route path="/admin/hierarchy" element={
-                  <ProtectedRoute>
-                    <HierarchyManager />
-                  </ProtectedRoute>
-                } />
-                <Route path="/admin/repository" element={
-                  <ProtectedRoute>
-                    <AdminRepository />
-                  </ProtectedRoute>
-                } />
-                <Route path="/admin/pyq" element={
-                  <ProtectedRoute>
-                    <AdminPyq />
-                  </ProtectedRoute>
-                } />
-                <Route path="/admin/pyq/:id" element={
-                  <ProtectedRoute>
-                    <AdminPyqView />
-                  </ProtectedRoute>
-                } />
+
 
                 {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </BrowserRouter>
-
-            {/* AI Assistant */}
-            <AIAssistantButton onClick={() => setIsAIOpen(true)} isOpen={isAIOpen} />
-            <AIAssistant isOpen={isAIOpen} onClose={() => setIsAIOpen(false)} />
           </TooltipProvider>
         </LayoutProvider>
       </AuthProvider>

@@ -6,9 +6,6 @@ from app.routers import (
     analysis_router,
     performance_router,
     auth_router,
-    repository_router,
-    ai_router,
-    pyq_router,
     dashboard_router,
     analysis_page_router,
     pdf_processing_router
@@ -35,9 +32,6 @@ app.include_router(auth_router)
 app.include_router(tests_router)
 app.include_router(analysis_router)
 app.include_router(performance_router)
-app.include_router(repository_router)
-app.include_router(pyq_router) # Added pyq_router
-app.include_router(ai_router)
 app.include_router(dashboard_router)
 app.include_router(analysis_page_router)
 app.include_router(pdf_processing_router)

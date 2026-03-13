@@ -2,9 +2,6 @@ from .tests import router as tests_router
 from .analysis import router as analysis_router
 from .performance import router as performance_router
 from .auth import router as auth_router
-from .repository import router as repository_router
-from .ai import router as ai_router
-from .pyq import router as pyq_router
 from .dashboard import router as dashboard_router
 from .analysis_page import router as analysis_page_router
 from .pdf_processing import router as pdf_processing_router

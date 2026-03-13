@@ -5,7 +5,6 @@ import uuid
 
 from app.utils.auth import get_current_user
 from app.database import supabase
-from app.services.ocr_service import ocr_service
 from app.services.test_service import create_test
 from app.models.upload import (
     UploadResponse,
