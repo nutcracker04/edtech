@@ -112,37 +112,25 @@ class StructureAnalyzer:
         
         # Handle low structure confidence (Error Scenario 1)
         if confidence < self.config.structure_confidence_threshold:
-            logger.warning(
-                f"Low structure confidence: {confidence:.2f} "
-                f"(threshold: {self.config.structure_confidence_threshold})"
-            )
-            
-            # Prepare structure details for error handler
             structure_details = {
                 "chapter_count": len(chapters),
                 "topic_count": sum(len(ch.topics) for ch in chapters),
                 "total_pages": len(pages),
                 "chapters_with_questions": sum(
-                    1 for ch in chapters 
+                    1 for ch in chapters
                     if any(t.questions_section for t in ch.topics)
                 ),
                 "chapters_with_answers": sum(
-                    1 for ch in chapters 
+                    1 for ch in chapters
                     if any(t.answer_key_section for t in ch.topics)
-                )
+                ),
             }
-            
-            # Use error handler to handle low confidence
-            result = self.error_handler.handle_low_structure_confidence(
-                confidence, structure_details
+            logger.warning(
+                "Low structure confidence: %.2f (threshold: %.2f). Details: %s",
+                confidence,
+                self.config.structure_confidence_threshold,
+                structure_details,
             )
-            
-            # Log detailed structure analysis results
-            logger.error(
-                f"Structure analysis failed. Details: {structure_details}"
-            )
-            
-            # Raise error as processing cannot continue with low confidence
             raise ValueError(
                 f"Low structure confidence: {confidence:.2f} "
                 f"(threshold: {self.config.structure_confidence_threshold}). "
