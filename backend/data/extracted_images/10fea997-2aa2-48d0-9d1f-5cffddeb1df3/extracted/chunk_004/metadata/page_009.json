@@ -1,0 +1,177 @@
+{
+  "page_num": 9,
+  "image_width": 2398,
+  "image_height": 3003,
+  "created_at": "2026-03-14T20:50:58.760087+00:00",
+  "blocks": [
+    {
+      "block_id": "20260314_78b328a0-9dc1-4ced-9999-2f5b3b9f85e3_9_block_000",
+      "coordinates": {
+        "x1": 1747.0,
+        "y1": 186.0,
+        "x2": 2052.0,
+        "y2": 235.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.8179932832717896,
+      "reading_order": 1,
+      "text": "Assessment Test IV"
+    },
+    {
+      "block_id": "20260314_78b328a0-9dc1-4ced-9999-2f5b3b9f85e3_9_block_001",
+      "coordinates": {
+        "x1": 180.0,
+        "y1": 294.0,
+        "x2": 931.0,
+        "y2": 374.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.6511431336402893,
+      "reading_order": 2,
+      "text": "Assessment Test IV"
+    },
+    {
+      "block_id": "20260314_78b328a0-9dc1-4ced-9999-2f5b3b9f85e3_9_block_002",
+      "coordinates": {
+        "x1": 2092.0,
+        "y1": 182.0,
+        "x2": 2206.0,
+        "y2": 236.0
+      },
+      "layout_tag": "page-number",
+      "confidence": 0.6764561533927917,
+      "reading_order": 3,
+      "text": "2.11"
+    },
+    {
+      "block_id": "20260314_78b328a0-9dc1-4ced-9999-2f5b3b9f85e3_9_block_003",
+      "coordinates": {
+        "x1": 1448.0,
+        "y1": 324.0,
+        "x2": 1693.0,
+        "y2": 373.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.7600734829902649,
+      "reading_order": 4,
+      "text": "Time: 30 min."
+    },
+    {
+      "block_id": "20260314_78b328a0-9dc1-4ced-9999-2f5b3b9f85e3_9_block_004",
+      "coordinates": {
+        "x1": 176.0,
+        "y1": 449.0,
+        "x2": 1692.0,
+        "y2": 506.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.7792600989341736,
+      "reading_order": 5,
+      "text": "Directions for questions from 1 to 15: Select the correct answer from the given options."
+    },
+    {
+      "block_id": "20260314_78b328a0-9dc1-4ced-9999-2f5b3b9f85e3_9_block_005",
+      "coordinates": {
+        "x1": 230.0,
+        "y1": 542.0,
+        "x2": 1700.0,
+        "y2": 897.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8099000453948975,
+      "reading_order": 6,
+      "text": "1. If the same amount of heat is supplied to the following substances, which\nshows the least expansion?\n(a) Iron block\n(b) Water\n(c) Oil\n(d) $\\mathrm{O}_2$ gas kept in a cylinder with a movable piston"
+    },
+    {
+      "block_id": "20260314_78b328a0-9dc1-4ced-9999-2f5b3b9f85e3_9_block_006",
+      "coordinates": {
+        "x1": 231.0,
+        "y1": 961.0,
+        "x2": 1332.0,
+        "y2": 1273.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9304645657539368,
+      "reading_order": 7,
+      "text": "2. Which of the following is not a characteristic of boiling?\n(a) It is a bulk phenomenon.\n(b) It occurs at a particular temperature.\n(c) Temperature remains constant during the process.\n(d) It is a very slow process."
+    },
+    {
+      "block_id": "20260314_78b328a0-9dc1-4ced-9999-2f5b3b9f85e3_9_block_007",
+      "coordinates": {
+        "x1": 232.0,
+        "y1": 1329.0,
+        "x2": 1554.0,
+        "y2": 1511.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9288318157196045,
+      "reading_order": 8,
+      "text": "3. Which of the following liquids can conduct electricity in pure state?\n(a) Water (b) Mercury\n(c) Bromine (d) Benzene"
+    },
+    {
+      "block_id": "20260314_78b328a0-9dc1-4ced-9999-2f5b3b9f85e3_9_block_008",
+      "coordinates": {
+        "x1": 232.0,
+        "y1": 1568.0,
+        "x2": 1234.0,
+        "y2": 1756.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9205094575881958,
+      "reading_order": 9,
+      "text": "4. Which of the following is monoatomic?\n(a) Hydrogen (b) Chlorine\n(c) Helium (d) Nitrogen"
+    },
+    {
+      "block_id": "20260314_78b328a0-9dc1-4ced-9999-2f5b3b9f85e3_9_block_009",
+      "coordinates": {
+        "x1": 232.0,
+        "y1": 1812.0,
+        "x2": 1628.0,
+        "y2": 1998.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9255557656288147,
+      "reading_order": 10,
+      "text": "5. Which of the following alloys contains copper as the major component?\n(a) Stainless steel (b) Monel metal\n(c) Bell metal (d) Magnalium"
+    },
+    {
+      "block_id": "20260314_78b328a0-9dc1-4ced-9999-2f5b3b9f85e3_9_block_010",
+      "coordinates": {
+        "x1": 234.0,
+        "y1": 2056.0,
+        "x2": 1697.0,
+        "y2": 2469.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9482004642486572,
+      "reading_order": 11,
+      "text": "6. Arrange the following processes of separation in the order of the mixtures\ngiven below:\nsand + sugar; components of black ink; iron + iodine; powder of naphtha-\nlene + common salt\n(A) Magnetic separation (B) Sublimation\n(C) Chromatography (D) Solvent extraction\n(a) CDBA (b) ABCD (c) DCAB (d) BCDA"
+    },
+    {
+      "block_id": "20260314_78b328a0-9dc1-4ced-9999-2f5b3b9f85e3_9_block_011",
+      "coordinates": {
+        "x1": 232.0,
+        "y1": 2524.0,
+        "x2": 1697.0,
+        "y2": 2771.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9224183559417725,
+      "reading_order": 12,
+      "text": "7. Arrange the following in the ascending order of their densities.\n(A) Water (B) $\\mathrm{O}_2$ gas\n(C) A solid block of aluminium (D) Ice\n(a) ADCB (b) BDCA (c) ACBD (d) BDAC"
+    },
+    {
+      "block_id": "20260314_78b328a0-9dc1-4ced-9999-2f5b3b9f85e3_9_block_012",
+      "coordinates": {
+        "x1": 1788.0,
+        "y1": 311.0,
+        "x2": 2172.0,
+        "y2": 365.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5281007289886475,
+      "reading_order": 13,
+      "text": "Space for rough work"
+    }
+  ]
+}

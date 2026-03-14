@@ -1,0 +1,99 @@
+{
+  "page_num": 1,
+  "image_width": 2398,
+  "image_height": 3003,
+  "created_at": "2026-03-14T20:50:45.763075+00:00",
+  "blocks": [
+    {
+      "block_id": "20260314_f36c471b-df49-4de1-9bba-13c9405f4ae5_1_block_000",
+      "coordinates": {
+        "x1": 327.0,
+        "y1": 345.0,
+        "x2": 2067.0,
+        "y2": 458.0
+      },
+      "layout_tag": "headline",
+      "confidence": 0.6793490052223206,
+      "reading_order": 1,
+      "text": "How to Use the Practice Book"
+    },
+    {
+      "block_id": "20260314_f36c471b-df49-4de1-9bba-13c9405f4ae5_1_block_001",
+      "coordinates": {
+        "x1": 174.0,
+        "y1": 656.0,
+        "x2": 2218.0,
+        "y2": 873.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9393430948257446,
+      "reading_order": 2,
+      "text": "Many times, students face significant challenges in answering application level questions in Physics, Chemistry\nand Mathematics. These Practice Books will enhance their problem-solving skill which will definitely lead to a\nstrong subject foundation. The entire practice book series are recommended to be used alongside IIT Foundation\ncourse-books."
+    },
+    {
+      "block_id": "20260314_f36c471b-df49-4de1-9bba-13c9405f4ae5_1_block_002",
+      "coordinates": {
+        "x1": 221.0,
+        "y1": 897.0,
+        "x2": 1494.0,
+        "y2": 955.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8423913717269897,
+      "reading_order": 3,
+      "text": "Students can refer the following steps while using the practice books:"
+    },
+    {
+      "block_id": "20260314_f36c471b-df49-4de1-9bba-13c9405f4ae5_1_block_003",
+      "coordinates": {
+        "x1": 747.0,
+        "y1": 1085.0,
+        "x2": 1654.0,
+        "y2": 1959.0
+      },
+      "layout_tag": "image",
+      "confidence": 0.9573514461517334,
+      "reading_order": 4,
+      "text": "The image displays a circular flow diagram consisting of five interconnected blue nodes, illustrating a study methodology or learning cycle. There are no X or Y axes, as this is a conceptual diagram rather than a quantitative chart. The flow proceeds in a clockwise direction, indicated by blue arrows connecting the nodes. \n\nThe sequence is as follows:\n1. The top node reads \"Study chapters from IIT Foundation Course-books.\"\n2. An arrow points to the right, leading to the node \"Solve the chapter-end exercises.\"\n3. An arrow points down to the bottom node, which reads \"Solve one Assessment Test related to the chapter.\"\n4. An arrow points to the left, leading to the node \"Check self progress.\"\n5. An arrow points up to the left, completing the cycle back to the top node: \"Complete remaining Assessment Tests.\"\n\nThe diagram suggests a structured approach to learning, emphasizing the completion of exercises, self-assessment, and testing before returning to the study material."
+    },
+    {
+      "block_id": "20260314_f36c471b-df49-4de1-9bba-13c9405f4ae5_1_block_004",
+      "coordinates": {
+        "x1": 174.0,
+        "y1": 2096.0,
+        "x2": 2217.0,
+        "y2": 2258.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9426900744438171,
+      "reading_order": 5,
+      "text": "While preparing for Foundation courses, students need to learn the fundamental concepts with utmost clarity. In\norder to successfully complete the IIT Foundation course, one must prepare profoundly. Consistent hard work,\npractice and perseverance are needed throughout the year."
+    },
+    {
+      "block_id": "20260314_f36c471b-df49-4de1-9bba-13c9405f4ae5_1_block_005",
+      "coordinates": {
+        "x1": 176.0,
+        "y1": 2261.0,
+        "x2": 2220.0,
+        "y2": 2474.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9601321220397949,
+      "reading_order": 6,
+      "text": "During any competitive examination, one must exercise clinical precision with speed since the average time\navailable to respond to a question is hardly a minute. The aspirants should be conceptually excellent in the subject\nowing to the negative marking in the examination. A better practice to solve the paper would be to go for the\neasiest questions first and then gradually progress to the more complicated ones."
+    },
+    {
+      "block_id": "20260314_f36c471b-df49-4de1-9bba-13c9405f4ae5_1_block_006",
+      "coordinates": {
+        "x1": 173.0,
+        "y1": 2477.0,
+        "x2": 2218.0,
+        "y2": 2696.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.950230062007904,
+      "reading_order": 7,
+      "text": "Regular practice of MCQs will assist the aspirants in preparing for the examination. In a nutshell, hard work,\nconceptual clarity and self-assessment are the essential ingredients to achieve success in competitive examinations.\nIIT Foundation course-books play an important role in understanding the concepts. Student need to read-up on\nall concepts/theories in a regular and systematic manner."
+    }
+  ]
+}

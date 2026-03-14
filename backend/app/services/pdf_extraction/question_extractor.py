@@ -149,42 +149,19 @@ class QuestionExtractor:
                 question_number = self._extract_question_number(block)
                 
                 if not question_number:
-                    logger.warning(f"Could not extract question number from block: {block[:100]}...")
-                    
-                    # Handle malformed question block (Error Scenario 5)
-                    self.error_handler.handle_malformed_question_block(
-                        raw_block=block,
-                        chapter=context.chapter.title,
-                        topic=context.topic.title,
-                        page_number=section.page_range[0],
-                        parsing_error="Could not extract question number"
+                    logger.warning(
+                        "Could not extract question number from block: %s...",
+                        block[:100],
                     )
                     continue
                 
                 # Check for duplicates (Error Scenario 3)
                 if question_number in seen_numbers:
-                    logger.warning(f"Duplicate question number: {question_number}")
-                    
-                    # Get the first question with this number for context
-                    first_question = next((q for q in questions if q.question_number == question_number), None)
-                    first_question_text = first_question.question_text if first_question else ""
-                    
-                    # Use error handler to handle duplicate
-                    result = self.error_handler.handle_duplicate_question_number(
-                        question_number=question_number,
-                        first_question_text=first_question_text,
-                        second_question_text=question_text,
-                        chapter=context.chapter.title,
-                        topic=context.topic.title,
-                        page_number=section.page_range[0]
-                    )
-                    
-                    # Use the new question number from error handler
-                    question_number = result["new_question_number"]
-                    logger.info(f"Renamed duplicate to: {question_number}")
+                    logger.warning("Duplicate question number: %s, skipping", question_number)
+                    continue
                 
                 seen_numbers.add(question_number)
-                
+
                 # Extract question text (preserve formatting)
                 question_text = self._extract_formatted_text(block)
                 
@@ -229,17 +206,8 @@ class QuestionExtractor:
                 logger.debug(f"Extracted question {question_number}")
                 
             except Exception as e:
-                logger.error(f"Error extracting question from block: {e}")
-                logger.debug(f"Block content: {block[:200]}...")
-                
-                # Handle malformed question block (Error Scenario 5)
-                self.error_handler.handle_malformed_question_block(
-                    raw_block=block,
-                    chapter=context.chapter.title,
-                    topic=context.topic.title,
-                    page_number=section.page_range[0],
-                    parsing_error=str(e)
-                )
+                logger.error("Error extracting question from block: %s", e)
+                logger.debug("Block content: %s...", block[:200])
                 continue
         
         logger.info(f"Successfully extracted {len(questions)} questions")
@@ -799,20 +767,17 @@ Return format: {{"question_numbers": ["1", "2", "3", ...]}}
                 image_exists = os.path.exists(full_path)
             
             if not image_exists:
-                # Handle image extraction failure (Error Scenario 4)
-                result = self.error_handler.handle_image_extraction_failure(
-                    image_path=image.path,
-                    question_number=question_number,
-                    chapter=chapter,
-                    topic=topic,
-                    page_number=page_number
+                logger.warning(
+                    "Image not found: %s (question %s, %s > %s)",
+                    image.path,
+                    question_number,
+                    chapter,
+                    topic,
                 )
-                
-                # Create placeholder image reference
                 placeholder_image = ImageReference(
-                    path=result["placeholder_path"],
+                    path=f"placeholder_{image.path}",
                     alt_text=f"Missing image: {image.path}",
-                    position=image.position
+                    position=image.position,
                 )
                 validated_images.append(placeholder_image)
             else:

@@ -1,0 +1,463 @@
+{
+  "page_num": 1,
+  "image_width": 2398,
+  "image_height": 3003,
+  "created_at": "2026-03-14T20:51:05.269793+00:00",
+  "blocks": [
+    {
+      "block_id": "20260314_dd7ee58c-56f4-4233-8ffd-d1ede4567a73_1_block_000",
+      "coordinates": {
+        "x1": 1839.0,
+        "y1": 188.0,
+        "x2": 2052.0,
+        "y2": 238.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.7409842014312744,
+      "reading_order": 1,
+      "text": "Answer Keys"
+    },
+    {
+      "block_id": "20260314_dd7ee58c-56f4-4233-8ffd-d1ede4567a73_1_block_001",
+      "coordinates": {
+        "x1": 2093.0,
+        "y1": 183.0,
+        "x2": 2209.0,
+        "y2": 236.0
+      },
+      "layout_tag": "page-number",
+      "confidence": 0.5997019410133362,
+      "reading_order": 2,
+      "text": "2.13"
+    },
+    {
+      "block_id": "20260314_dd7ee58c-56f4-4233-8ffd-d1ede4567a73_1_block_002",
+      "coordinates": {
+        "x1": 209.0,
+        "y1": 289.0,
+        "x2": 1177.0,
+        "y2": 343.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.813215970993042,
+      "reading_order": 3,
+      "text": "12. Which of the following statements is incorrect?"
+    },
+    {
+      "block_id": "20260314_dd7ee58c-56f4-4233-8ffd-d1ede4567a73_1_block_003",
+      "coordinates": {
+        "x1": 286.0,
+        "y1": 352.0,
+        "x2": 1526.0,
+        "y2": 410.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8449022173881531,
+      "reading_order": 4,
+      "text": "(a) The higher the vapour pressure, the lower is the boiling point."
+    },
+    {
+      "block_id": "20260314_dd7ee58c-56f4-4233-8ffd-d1ede4567a73_1_block_004",
+      "coordinates": {
+        "x1": 287.0,
+        "y1": 414.0,
+        "x2": 1701.0,
+        "y2": 520.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9087852835655212,
+      "reading_order": 5,
+      "text": "(b) The higher the boiling point, the greater is the intermolecular force of attraction."
+    },
+    {
+      "block_id": "20260314_dd7ee58c-56f4-4233-8ffd-d1ede4567a73_1_block_005",
+      "coordinates": {
+        "x1": 287.0,
+        "y1": 530.0,
+        "x2": 1552.0,
+        "y2": 589.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8513413667678833,
+      "reading_order": 6,
+      "text": "(c) Vapour pressure and boiling point are not related to each other."
+    },
+    {
+      "block_id": "20260314_dd7ee58c-56f4-4233-8ffd-d1ede4567a73_1_block_006",
+      "coordinates": {
+        "x1": 287.0,
+        "y1": 594.0,
+        "x2": 1697.0,
+        "y2": 654.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8413075804710388,
+      "reading_order": 7,
+      "text": "(d) Boiling point of a liquid can be reduced by decreasing external pressure."
+    },
+    {
+      "block_id": "20260314_dd7ee58c-56f4-4233-8ffd-d1ede4567a73_1_block_007",
+      "coordinates": {
+        "x1": 211.0,
+        "y1": 709.0,
+        "x2": 1249.0,
+        "y2": 765.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7284543514251709,
+      "reading_order": 8,
+      "text": "13. Which of the following is a homogeneous mixture?"
+    },
+    {
+      "block_id": "20260314_dd7ee58c-56f4-4233-8ffd-d1ede4567a73_1_block_008",
+      "coordinates": {
+        "x1": 290.0,
+        "y1": 775.0,
+        "x2": 646.0,
+        "y2": 829.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7785175442695618,
+      "reading_order": 9,
+      "text": "(a) Muddy water"
+    },
+    {
+      "block_id": "20260314_dd7ee58c-56f4-4233-8ffd-d1ede4567a73_1_block_009",
+      "coordinates": {
+        "x1": 291.0,
+        "y1": 837.0,
+        "x2": 451.0,
+        "y2": 889.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7465348243713379,
+      "reading_order": 10,
+      "text": "(b) Air"
+    },
+    {
+      "block_id": "20260314_dd7ee58c-56f4-4233-8ffd-d1ede4567a73_1_block_010",
+      "coordinates": {
+        "x1": 288.0,
+        "y1": 898.0,
+        "x2": 975.0,
+        "y2": 954.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8215895295143127,
+      "reading_order": 11,
+      "text": "(c) Finely powdered chalk in water"
+    },
+    {
+      "block_id": "20260314_dd7ee58c-56f4-4233-8ffd-d1ede4567a73_1_block_011",
+      "coordinates": {
+        "x1": 288.0,
+        "y1": 961.0,
+        "x2": 1077.0,
+        "y2": 1019.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8252155184745789,
+      "reading_order": 12,
+      "text": "(d) Mixture of saw dust and iron powder"
+    },
+    {
+      "block_id": "20260314_dd7ee58c-56f4-4233-8ffd-d1ede4567a73_1_block_012",
+      "coordinates": {
+        "x1": 209.0,
+        "y1": 1076.0,
+        "x2": 1123.0,
+        "y2": 1133.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8059700727462769,
+      "reading_order": 13,
+      "text": "14. The presence of impurities ____ of a liquid."
+    },
+    {
+      "block_id": "20260314_dd7ee58c-56f4-4233-8ffd-d1ede4567a73_1_block_013",
+      "coordinates": {
+        "x1": 289.0,
+        "y1": 1139.0,
+        "x2": 873.0,
+        "y2": 1197.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7911320328712463,
+      "reading_order": 14,
+      "text": "(a) increases the boiling point"
+    },
+    {
+      "block_id": "20260314_dd7ee58c-56f4-4233-8ffd-d1ede4567a73_1_block_014",
+      "coordinates": {
+        "x1": 288.0,
+        "y1": 1201.0,
+        "x2": 883.0,
+        "y2": 1259.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7908251285552979,
+      "reading_order": 15,
+      "text": "(b) decreases the boiling point"
+    },
+    {
+      "block_id": "20260314_dd7ee58c-56f4-4233-8ffd-d1ede4567a73_1_block_015",
+      "coordinates": {
+        "x1": 288.0,
+        "y1": 1266.0,
+        "x2": 921.0,
+        "y2": 1323.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7815233469009399,
+      "reading_order": 16,
+      "text": "(c) cannot alter the boiling point"
+    },
+    {
+      "block_id": "20260314_dd7ee58c-56f4-4233-8ffd-d1ede4567a73_1_block_016",
+      "coordinates": {
+        "x1": 289.0,
+        "y1": 1328.0,
+        "x2": 897.0,
+        "y2": 1384.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7913148999214172,
+      "reading_order": 17,
+      "text": "(d) increases the freezing point"
+    },
+    {
+      "block_id": "20260314_dd7ee58c-56f4-4233-8ffd-d1ede4567a73_1_block_017",
+      "coordinates": {
+        "x1": 209.0,
+        "y1": 1443.0,
+        "x2": 1697.0,
+        "y2": 1553.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7881077527999878,
+      "reading_order": 18,
+      "text": "15. The melting point of a solid can be increased by increasing pressure on it.\nWhich of the following conclusions can be drawn from this?"
+    },
+    {
+      "block_id": "20260314_dd7ee58c-56f4-4233-8ffd-d1ede4567a73_1_block_018",
+      "coordinates": {
+        "x1": 288.0,
+        "y1": 1561.0,
+        "x2": 941.0,
+        "y2": 1619.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7938241958618164,
+      "reading_order": 19,
+      "text": "(a) The solid expands on melting."
+    },
+    {
+      "block_id": "20260314_dd7ee58c-56f4-4233-8ffd-d1ede4567a73_1_block_019",
+      "coordinates": {
+        "x1": 289.0,
+        "y1": 1624.0,
+        "x2": 952.0,
+        "y2": 1678.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8016223311424255,
+      "reading_order": 20,
+      "text": "(b) The solid contracts on melting."
+    },
+    {
+      "block_id": "20260314_dd7ee58c-56f4-4233-8ffd-d1ede4567a73_1_block_020",
+      "coordinates": {
+        "x1": 288.0,
+        "y1": 1686.0,
+        "x2": 1055.0,
+        "y2": 1743.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8131654262542725,
+      "reading_order": 21,
+      "text": "(c) The density of the solid is very high."
+    },
+    {
+      "block_id": "20260314_dd7ee58c-56f4-4233-8ffd-d1ede4567a73_1_block_021",
+      "coordinates": {
+        "x1": 289.0,
+        "y1": 1749.0,
+        "x2": 1040.0,
+        "y2": 1804.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8040019869804382,
+      "reading_order": 22,
+      "text": "(d) The solid contains some impurities."
+    },
+    {
+      "block_id": "20260314_dd7ee58c-56f4-4233-8ffd-d1ede4567a73_1_block_022",
+      "coordinates": {
+        "x1": 1789.0,
+        "y1": 312.0,
+        "x2": 2173.0,
+        "y2": 365.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7582979202270508,
+      "reading_order": 23,
+      "text": "Space for rough work"
+    },
+    {
+      "block_id": "20260314_dd7ee58c-56f4-4233-8ffd-d1ede4567a73_1_block_023",
+      "coordinates": {
+        "x1": 935.0,
+        "y1": 1899.0,
+        "x2": 1459.0,
+        "y2": 1990.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.8799128532409668,
+      "reading_order": 24,
+      "text": "Answer Keys"
+    },
+    {
+      "block_id": "20260314_dd7ee58c-56f4-4233-8ffd-d1ede4567a73_1_block_024",
+      "coordinates": {
+        "x1": 216.0,
+        "y1": 2019.0,
+        "x2": 644.0,
+        "y2": 2074.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.861824631690979,
+      "reading_order": 25,
+      "text": "Assessment Test I"
+    },
+    {
+      "block_id": "20260314_dd7ee58c-56f4-4233-8ffd-d1ede4567a73_1_block_025",
+      "coordinates": {
+        "x1": 239.0,
+        "y1": 2083.0,
+        "x2": 2173.0,
+        "y2": 2141.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5697645545005798,
+      "reading_order": 26,
+      "text": "1. (c) 2. (c) 3. (a) 4. (d) 5. (d) 6. (b) 7. (d) 8. (b) 9. (b) 10. (b)"
+    },
+    {
+      "block_id": "20260314_dd7ee58c-56f4-4233-8ffd-d1ede4567a73_1_block_026",
+      "coordinates": {
+        "x1": 231.0,
+        "y1": 2140.0,
+        "x2": 1173.0,
+        "y2": 2193.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5114997625350952,
+      "reading_order": 27,
+      "text": "11. (a) 12. (a) 13. (b) 14. (d) 15. (c)"
+    },
+    {
+      "block_id": "20260314_dd7ee58c-56f4-4233-8ffd-d1ede4567a73_1_block_027",
+      "coordinates": {
+        "x1": 218.0,
+        "y1": 2238.0,
+        "x2": 662.0,
+        "y2": 2295.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.8259139657020569,
+      "reading_order": 28,
+      "text": "Assessment Test II"
+    },
+    {
+      "block_id": "20260314_dd7ee58c-56f4-4233-8ffd-d1ede4567a73_1_block_028",
+      "coordinates": {
+        "x1": 228.0,
+        "y1": 2303.0,
+        "x2": 2175.0,
+        "y2": 2415.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.27284103631973267,
+      "reading_order": 29,
+      "text": "1. (c) 2. (b) 3. (c) 4. (a) 5. (c) 6. (a) 7. (c) 8. (c) 9. (b) 10. (d)\n11. (c) 12. (c) 13. (c) 14. (a) 15. (a)"
+    },
+    {
+      "block_id": "20260314_dd7ee58c-56f4-4233-8ffd-d1ede4567a73_1_block_029",
+      "coordinates": {
+        "x1": 218.0,
+        "y1": 2460.0,
+        "x2": 682.0,
+        "y2": 2515.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.8446735143661499,
+      "reading_order": 30,
+      "text": "Assessment Test III"
+    },
+    {
+      "block_id": "20260314_dd7ee58c-56f4-4233-8ffd-d1ede4567a73_1_block_030",
+      "coordinates": {
+        "x1": 244.0,
+        "y1": 2524.0,
+        "x2": 2172.0,
+        "y2": 2581.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7775604128837585,
+      "reading_order": 31,
+      "text": "1. (c) 2. (c) 3. (a) 4. (a) 5. (b) 6. (d) 7. (a) 8. (c) 9. (a) 10. (a)"
+    },
+    {
+      "block_id": "20260314_dd7ee58c-56f4-4233-8ffd-d1ede4567a73_1_block_031",
+      "coordinates": {
+        "x1": 231.0,
+        "y1": 2585.0,
+        "x2": 1177.0,
+        "y2": 2641.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6421497464179993,
+      "reading_order": 32,
+      "text": "11. (a) 12. (b) 13. (a) 14. (c) 15. (b)"
+    },
+    {
+      "block_id": "20260314_dd7ee58c-56f4-4233-8ffd-d1ede4567a73_1_block_032",
+      "coordinates": {
+        "x1": 217.0,
+        "y1": 2688.0,
+        "x2": 680.0,
+        "y2": 2743.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.841257631778717,
+      "reading_order": 33,
+      "text": "Assessment Test IV"
+    },
+    {
+      "block_id": "20260314_dd7ee58c-56f4-4233-8ffd-d1ede4567a73_1_block_033",
+      "coordinates": {
+        "x1": 244.0,
+        "y1": 2752.0,
+        "x2": 2173.0,
+        "y2": 2810.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7130785584449768,
+      "reading_order": 34,
+      "text": "1. (a) 2. (d) 3. (b) 4. (c) 5. (c) 6. (c) 7. (d) 8. (b) 9. (c) 10. (b)"
+    },
+    {
+      "block_id": "20260314_dd7ee58c-56f4-4233-8ffd-d1ede4567a73_1_block_034",
+      "coordinates": {
+        "x1": 231.0,
+        "y1": 2808.0,
+        "x2": 1175.0,
+        "y2": 2860.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.3696984350681305,
+      "reading_order": 35,
+      "text": "11. (c) 12. (c) 13. (b) 14. (a) 15. (a)"
+    }
+  ]
+}

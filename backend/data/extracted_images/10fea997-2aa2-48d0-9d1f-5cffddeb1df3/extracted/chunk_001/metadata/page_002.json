@@ -1,0 +1,281 @@
+{
+  "page_num": 2,
+  "image_width": 2397,
+  "image_height": 3003,
+  "created_at": "2026-03-14T20:50:38.253072+00:00",
+  "blocks": [
+    {
+      "block_id": "20260314_06b8eac8-46ad-436c-9f85-cac74928afed_2_block_000",
+      "coordinates": {
+        "x1": 230.0,
+        "y1": 232.0,
+        "x2": 1938.0,
+        "y2": 321.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.531485915184021,
+      "reading_order": 1,
+      "text": "OTHER BESTSELLING TITLES FOR CLASS"
+    },
+    {
+      "block_id": "20260314_06b8eac8-46ad-436c-9f85-cac74928afed_2_block_001",
+      "coordinates": {
+        "x1": 1968.0,
+        "y1": 198.0,
+        "x2": 2073.0,
+        "y2": 340.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.2898992896080017,
+      "reading_order": 2,
+      "text": "8"
+    },
+    {
+      "block_id": "20260314_06b8eac8-46ad-436c-9f85-cac74928afed_2_block_002",
+      "coordinates": {
+        "x1": 289.0,
+        "y1": 773.0,
+        "x2": 375.0,
+        "y2": 1368.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.3833867609500885,
+      "reading_order": 3,
+      "text": "9789352866786"
+    },
+    {
+      "block_id": "20260314_06b8eac8-46ad-436c-9f85-cac74928afed_2_block_003",
+      "coordinates": {
+        "x1": 415.0,
+        "y1": 604.0,
+        "x2": 1144.0,
+        "y2": 1029.0
+      },
+      "layout_tag": "image",
+      "confidence": 0.828764796257019,
+      "reading_order": 4,
+      "text": "The image is a graphic design, likely a cover page or a digital badge, rather than a data chart. It features a vibrant, abstract geometric pattern composed of numerous triangles in a variety of colors including red, orange, yellow, green, blue, and purple. The pattern is arranged in a dynamic, overlapping fashion. In the top-left corner, there is a green vertical section containing the text \"Trishri 2\". In the top-right corner, there is a circular emblem with a laurel wreath design, featuring the text \"BEST BANKER\" at the top and \"2024\" at the bottom. The rest of the image is white."
+    },
+    {
+      "block_id": "20260314_06b8eac8-46ad-436c-9f85-cac74928afed_2_block_005",
+      "coordinates": {
+        "x1": 416.0,
+        "y1": 1058.0,
+        "x2": 1144.0,
+        "y2": 1499.0
+      },
+      "layout_tag": "image",
+      "confidence": 0.3292376399040222,
+      "reading_order": 6,
+      "text": "The image is a cover page for an educational textbook. At the top, the text reads 'Pearson IIT Foundation Series' followed by the subject 'Physics' in a large, bold green font. Below the title is the text 'CLASS 8' with a large grey numeral '8' in the center. The background features a pattern of green triangles. In the bottom left corner, there is the 'Pearson' logo. To the right of the logo, there are two bullet points describing the book's content: the first states that it provides student-friendly content, application-based problems, hints, and solutions to help master the art of problem solving; the second states that it has a graded approach to general, solid, and advanced concepts in physics and their applications."
+    },
+    {
+      "block_id": "20260314_06b8eac8-46ad-436c-9f85-cac74928afed_2_block_007",
+      "coordinates": {
+        "x1": 289.0,
+        "y1": 1974.0,
+        "x2": 375.0,
+        "y2": 2566.0
+      },
+      "layout_tag": "sidebar",
+      "confidence": 0.4305238723754883,
+      "reading_order": 8,
+      "text": "9789352866823"
+    },
+    {
+      "block_id": "20260314_06b8eac8-46ad-436c-9f85-cac74928afed_2_block_009",
+      "coordinates": {
+        "x1": 1293.0,
+        "y1": 1246.0,
+        "x2": 1378.0,
+        "y2": 1839.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.3558316230773926,
+      "reading_order": 10,
+      "text": "9789352866748"
+    },
+    {
+      "block_id": "20260314_06b8eac8-46ad-436c-9f85-cac74928afed_2_block_010",
+      "coordinates": {
+        "x1": 416.0,
+        "y1": 1804.0,
+        "x2": 1142.0,
+        "y2": 2226.0
+      },
+      "layout_tag": "image",
+      "confidence": 0.9032558798789978,
+      "reading_order": 11,
+      "text": "The image is a graphic design featuring a vibrant, abstract background composed of numerous overlapping triangles in a multitude of colors including red, orange, yellow, green, blue, and purple. In the top-left corner, the text \"Trishna's\" is visible in white font against a green background. In the top-right corner, there is a circular emblem or seal containing text and decorative elements. The overall style is modern and colorful."
+    },
+    {
+      "block_id": "20260314_06b8eac8-46ad-436c-9f85-cac74928afed_2_block_011",
+      "coordinates": {
+        "x1": 1419.0,
+        "y1": 1074.0,
+        "x2": 2146.0,
+        "y2": 1497.0
+      },
+      "layout_tag": "image",
+      "confidence": 0.8292403817176819,
+      "reading_order": 12,
+      "text": "The image is a graphic design, likely a cover page or a digital poster, rather than a data chart. It features a vibrant, abstract background composed of numerous overlapping triangles in a multitude of colors including red, orange, yellow, green, blue, and purple. In the top-left corner, there is a green vertical strip containing the text \"Trishna 12\" in white. In the top-right corner, there is a circular emblem or seal with the text \"BUCKS\" visible inside it. The overall style is geometric and colorful."
+    },
+    {
+      "block_id": "20260314_06b8eac8-46ad-436c-9f85-cac74928afed_2_block_012",
+      "coordinates": {
+        "x1": 1449.0,
+        "y1": 1532.0,
+        "x2": 2015.0,
+        "y2": 1692.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.4595007002353668,
+      "reading_order": 13,
+      "text": "Pearson IIT Foundation Series\nChemistry"
+    },
+    {
+      "block_id": "20260314_06b8eac8-46ad-436c-9f85-cac74928afed_2_block_013",
+      "coordinates": {
+        "x1": 417.0,
+        "y1": 2419.0,
+        "x2": 770.0,
+        "y2": 2562.0
+      },
+      "layout_tag": "image",
+      "confidence": 0.42058050632476807,
+      "reading_order": 14,
+      "text": "The image displays a graphic design element rather than a data chart. It features a geometric pattern composed of green and white triangles arranged in a stepped, pyramid-like formation. The design is set against a white background with a solid yellow vertical bar on the far left edge. There are no X or Y axes, numerical labels, legends, or quantitative data points present in the image."
+    },
+    {
+      "block_id": "20260314_06b8eac8-46ad-436c-9f85-cac74928afed_2_block_014",
+      "coordinates": {
+        "x1": 453.0,
+        "y1": 2262.0,
+        "x2": 1109.0,
+        "y2": 2418.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.4766197204589844,
+      "reading_order": 15,
+      "text": "Pearson IIT Foundation Series\nMathematics"
+    },
+    {
+      "block_id": "20260314_06b8eac8-46ad-436c-9f85-cac74928afed_2_block_015",
+      "coordinates": {
+        "x1": 1421.0,
+        "y1": 1688.0,
+        "x2": 1772.0,
+        "y2": 1835.0
+      },
+      "layout_tag": "image",
+      "confidence": 0.47647321224212646,
+      "reading_order": 16,
+      "text": "The image provided is a logo or graphic design element consisting of a geometric pattern of green triangles, rather than a data chart. The design features a series of triangles arranged in a stepped, mountain-like formation. The triangles vary in shade from dark green to light green and white, creating a textured, mosaic effect. There are no X or Y axes, legends, or numerical data points present."
+    },
+    {
+      "block_id": "20260314_06b8eac8-46ad-436c-9f85-cac74928afed_2_block_016",
+      "coordinates": {
+        "x1": 1857.0,
+        "y1": 1702.0,
+        "x2": 2147.0,
+        "y2": 1835.0
+      },
+      "layout_tag": "image",
+      "confidence": 0.31298649311065674,
+      "reading_order": 17,
+      "text": "CLASS 8"
+    },
+    {
+      "block_id": "20260314_06b8eac8-46ad-436c-9f85-cac74928afed_2_block_017",
+      "coordinates": {
+        "x1": 461.0,
+        "y1": 2623.0,
+        "x2": 652.0,
+        "y2": 2690.0
+      },
+      "layout_tag": "image",
+      "confidence": 0.5397480726242065,
+      "reading_order": 18,
+      "text": "Pearson"
+    },
+    {
+      "block_id": "20260314_06b8eac8-46ad-436c-9f85-cac74928afed_2_block_018",
+      "coordinates": {
+        "x1": 1465.0,
+        "y1": 1894.0,
+        "x2": 1657.0,
+        "y2": 1962.0
+      },
+      "layout_tag": "image",
+      "confidence": 0.5437196493148804,
+      "reading_order": 19,
+      "text": "Pearson"
+    },
+    {
+      "block_id": "20260314_06b8eac8-46ad-436c-9f85-cac74928afed_2_block_019",
+      "coordinates": {
+        "x1": 782.0,
+        "y1": 2583.0,
+        "x2": 1086.0,
+        "y2": 2644.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.3922857940196991,
+      "reading_order": 20,
+      "text": "> Promote student-friendly current, application-based projects with links and solutions to stimulate the art of problem solving."
+    },
+    {
+      "block_id": "20260314_06b8eac8-46ad-436c-9f85-cac74928afed_2_block_020",
+      "coordinates": {
+        "x1": 781.0,
+        "y1": 2649.0,
+        "x2": 1098.0,
+        "y2": 2691.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.33910173177719116,
+      "reading_order": 21,
+      "text": "> Have a guided approach to parameters, build and\nmeasure (if possible) on one-to-one basis for each application"
+    },
+    {
+      "block_id": "20260314_06b8eac8-46ad-436c-9f85-cac74928afed_2_block_021",
+      "coordinates": {
+        "x1": 1783.0,
+        "y1": 1922.0,
+        "x2": 2103.0,
+        "y2": 1966.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.2645761966705322,
+      "reading_order": 22,
+      "text": "> There a general contract to persons, build work\nmost entered in contracts and from appropriated"
+    },
+    {
+      "block_id": "20260314_06b8eac8-46ad-436c-9f85-cac74928afed_2_block_022",
+      "coordinates": {
+        "x1": 1858.0,
+        "y1": 2395.0,
+        "x2": 2061.0,
+        "y2": 2520.0
+      },
+      "layout_tag": "image",
+      "confidence": 0.3025462031364441,
+      "reading_order": 23,
+      "text": "The image provided is too blurry and low-resolution to discern any text. It appears to be a graphic or icon with a yellow border and a dark blue center, but no readable characters are visible."
+    },
+    {
+      "block_id": "20260314_06b8eac8-46ad-436c-9f85-cac74928afed_2_block_023",
+      "coordinates": {
+        "x1": 1766.0,
+        "y1": 2561.0,
+        "x2": 2129.0,
+        "y2": 2809.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5082669854164124,
+      "reading_order": 24,
+      "text": "Get\nyour copy\nnow!"
+    }
+  ]
+}

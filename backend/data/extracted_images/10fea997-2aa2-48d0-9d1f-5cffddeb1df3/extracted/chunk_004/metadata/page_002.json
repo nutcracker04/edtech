@@ -1,0 +1,125 @@
+{
+  "page_num": 2,
+  "image_width": 2398,
+  "image_height": 3003,
+  "created_at": "2026-03-14T20:50:58.584355+00:00",
+  "blocks": [
+    {
+      "block_id": "20260314_78b328a0-9dc1-4ced-9999-2f5b3b9f85e3_2_block_000",
+      "coordinates": {
+        "x1": 199.0,
+        "y1": 184.0,
+        "x2": 869.0,
+        "y2": 239.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.6013437509536743,
+      "reading_order": 1,
+      "text": "2.4 Chapter 2 Classification of Matter"
+    },
+    {
+      "block_id": "20260314_78b328a0-9dc1-4ced-9999-2f5b3b9f85e3_2_block_001",
+      "coordinates": {
+        "x1": 291.0,
+        "y1": 289.0,
+        "x2": 1694.0,
+        "y2": 472.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.43883001804351807,
+      "reading_order": 2,
+      "text": "(A) Evaporation (B) Fractional crystallization\n(C) Separating funnel (D) Filtration\n(a) ACBD (b) BDAC (c) CABD (d) DCBA"
+    },
+    {
+      "block_id": "20260314_78b328a0-9dc1-4ced-9999-2f5b3b9f85e3_2_block_002",
+      "coordinates": {
+        "x1": 214.0,
+        "y1": 533.0,
+        "x2": 1404.0,
+        "y2": 586.0
+      },
+      "layout_tag": "image-caption",
+      "confidence": 0.584701657295227,
+      "reading_order": 3,
+      "text": "15. Match the statements of Column A with those of Column B."
+    },
+    {
+      "block_id": "20260314_78b328a0-9dc1-4ced-9999-2f5b3b9f85e3_2_block_003",
+      "coordinates": {
+        "x1": 307.0,
+        "y1": 594.0,
+        "x2": 1688.0,
+        "y2": 1394.0
+      },
+      "layout_tag": "table",
+      "confidence": 0.8015102744102478,
+      "reading_order": 4,
+      "text": "<table>\n<thead>\n<tr>\n<th>Column A<br/>(Mixture)</th>\n<th>Column B<br/>(Category)</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>(i) Copper sulphate crystals are dropped<br/>in water and stirred.</td>\n<td>(A) Liquid–liquid<br/>heterogeneous</td>\n</tr>\n<tr>\n<td>(ii) Some amount of benzene is poured<br/>into water and stirred well.</td>\n<td>(B) Liquid–liquid<br/>homogeneous</td>\n</tr>\n<tr>\n<td>(iii) Finely powdered sulphur is added to<br/>water and stirred well.</td>\n<td>(C) Solid–liquid<br/>homogeneous</td>\n</tr>\n<tr>\n<td>(iv) Some amount of vinegar is poured<br/>into water and stirred.</td>\n<td>(D) Solid–solid<br/>homogeneous</td>\n</tr>\n<tr>\n<td>(v) Iron is alloyed to manufacture steel.</td>\n<td>(E) Solid–liquid<br/>heterogeneous</td>\n</tr>\n</tbody>\n</table>"
+    },
+    {
+      "block_id": "20260314_78b328a0-9dc1-4ced-9999-2f5b3b9f85e3_2_block_004",
+      "coordinates": {
+        "x1": 290.0,
+        "y1": 1406.0,
+        "x2": 1464.0,
+        "y2": 1465.0
+      },
+      "layout_tag": "footnote",
+      "confidence": 0.5498363971710205,
+      "reading_order": 5,
+      "text": "(a) (i) → (E); (ii) → (D); (iii) → (A); (iv) → (B); (v) → (C)"
+    },
+    {
+      "block_id": "20260314_78b328a0-9dc1-4ced-9999-2f5b3b9f85e3_2_block_005",
+      "coordinates": {
+        "x1": 289.0,
+        "y1": 1468.0,
+        "x2": 1466.0,
+        "y2": 1528.0
+      },
+      "layout_tag": "footnote",
+      "confidence": 0.5669499635696411,
+      "reading_order": 6,
+      "text": "(b) (i) → (A); (ii) → (C); (iii) → (B); (iv) → (E); (v) → (D)"
+    },
+    {
+      "block_id": "20260314_78b328a0-9dc1-4ced-9999-2f5b3b9f85e3_2_block_006",
+      "coordinates": {
+        "x1": 289.0,
+        "y1": 1531.0,
+        "x2": 1465.0,
+        "y2": 1590.0
+      },
+      "layout_tag": "footnote",
+      "confidence": 0.5523185133934021,
+      "reading_order": 7,
+      "text": "(c) (i) $\\rightarrow$ (C); (ii) $\\rightarrow$ (A); (iii) $\\rightarrow$ (E); (iv) $\\rightarrow$ (B); (v) $\\rightarrow$ (D)"
+    },
+    {
+      "block_id": "20260314_78b328a0-9dc1-4ced-9999-2f5b3b9f85e3_2_block_007",
+      "coordinates": {
+        "x1": 290.0,
+        "y1": 1595.0,
+        "x2": 1468.0,
+        "y2": 1654.0
+      },
+      "layout_tag": "footnote",
+      "confidence": 0.5662213563919067,
+      "reading_order": 8,
+      "text": "(d) (i) $\\rightarrow$ (B); (ii) $\\rightarrow$ (E); (iii) $\\rightarrow$ (A); (iv) $\\rightarrow$ (C); (v) $\\rightarrow$ (D)"
+    },
+    {
+      "block_id": "20260314_78b328a0-9dc1-4ced-9999-2f5b3b9f85e3_2_block_008",
+      "coordinates": {
+        "x1": 1790.0,
+        "y1": 310.0,
+        "x2": 2170.0,
+        "y2": 365.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.3363800346851349,
+      "reading_order": 9,
+      "text": "Space for rough work"
+    }
+  ]
+}

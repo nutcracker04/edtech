@@ -1,0 +1,294 @@
+{
+  "page_num": 7,
+  "image_width": 2398,
+  "image_height": 3003,
+  "created_at": "2026-03-14T20:50:58.636332+00:00",
+  "blocks": [
+    {
+      "block_id": "20260314_78b328a0-9dc1-4ced-9999-2f5b3b9f85e3_7_block_000",
+      "coordinates": {
+        "x1": 1749.0,
+        "y1": 187.0,
+        "x2": 2051.0,
+        "y2": 236.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.8670911192893982,
+      "reading_order": 1,
+      "text": "Assessment Test III"
+    },
+    {
+      "block_id": "20260314_78b328a0-9dc1-4ced-9999-2f5b3b9f85e3_7_block_001",
+      "coordinates": {
+        "x1": 2107.0,
+        "y1": 185.0,
+        "x2": 2193.0,
+        "y2": 234.0
+      },
+      "layout_tag": "page-number",
+      "confidence": 0.7971761226654053,
+      "reading_order": 2,
+      "text": "2.9"
+    },
+    {
+      "block_id": "20260314_78b328a0-9dc1-4ced-9999-2f5b3b9f85e3_7_block_002",
+      "coordinates": {
+        "x1": 233.0,
+        "y1": 292.0,
+        "x2": 1695.0,
+        "y2": 399.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8370177149772644,
+      "reading_order": 3,
+      "text": "8. Assertion (A): A mixture of alcohol and water can be separated by using a separating funnel."
+    },
+    {
+      "block_id": "20260314_78b328a0-9dc1-4ced-9999-2f5b3b9f85e3_7_block_003",
+      "coordinates": {
+        "x1": 289.0,
+        "y1": 408.0,
+        "x2": 1270.0,
+        "y2": 460.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.799820065498352,
+      "reading_order": 4,
+      "text": "Reason (R): Alcohol and water are miscible liquids."
+    },
+    {
+      "block_id": "20260314_78b328a0-9dc1-4ced-9999-2f5b3b9f85e3_7_block_004",
+      "coordinates": {
+        "x1": 287.0,
+        "y1": 470.0,
+        "x2": 1468.0,
+        "y2": 524.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8222107887268066,
+      "reading_order": 5,
+      "text": "(a) Both A and R are true and R is the correct explanation of A."
+    },
+    {
+      "block_id": "20260314_78b328a0-9dc1-4ced-9999-2f5b3b9f85e3_7_block_005",
+      "coordinates": {
+        "x1": 288.0,
+        "y1": 532.0,
+        "x2": 1540.0,
+        "y2": 586.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8241379261016846,
+      "reading_order": 6,
+      "text": "(b) Both A and R are true, but R is not the correct explanation of A."
+    },
+    {
+      "block_id": "20260314_78b328a0-9dc1-4ced-9999-2f5b3b9f85e3_7_block_006",
+      "coordinates": {
+        "x1": 290.0,
+        "y1": 595.0,
+        "x2": 805.0,
+        "y2": 648.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7833635807037354,
+      "reading_order": 7,
+      "text": "(c) A is true and R is false."
+    },
+    {
+      "block_id": "20260314_78b328a0-9dc1-4ced-9999-2f5b3b9f85e3_7_block_007",
+      "coordinates": {
+        "x1": 291.0,
+        "y1": 659.0,
+        "x2": 802.0,
+        "y2": 713.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7988852858543396,
+      "reading_order": 8,
+      "text": "(d) A is false and R is true."
+    },
+    {
+      "block_id": "20260314_78b328a0-9dc1-4ced-9999-2f5b3b9f85e3_7_block_008",
+      "coordinates": {
+        "x1": 231.0,
+        "y1": 776.0,
+        "x2": 1692.0,
+        "y2": 890.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6861873865127563,
+      "reading_order": 9,
+      "text": "9. Assertion (A): Critical temperature of $\\mathrm{CO}_2$ is greater than that of $\\mathrm{O}_2$.\nReason (R): Intermolecular force of attraction of $\\mathrm{CO}_2$ is more than that of $\\mathrm{O}_2$."
+    },
+    {
+      "block_id": "20260314_78b328a0-9dc1-4ced-9999-2f5b3b9f85e3_7_block_009",
+      "coordinates": {
+        "x1": 287.0,
+        "y1": 899.0,
+        "x2": 1468.0,
+        "y2": 952.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7960934042930603,
+      "reading_order": 10,
+      "text": "(a) Both A and R are true and R is the correct explanation of A."
+    },
+    {
+      "block_id": "20260314_78b328a0-9dc1-4ced-9999-2f5b3b9f85e3_7_block_010",
+      "coordinates": {
+        "x1": 289.0,
+        "y1": 962.0,
+        "x2": 1538.0,
+        "y2": 1016.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8229069113731384,
+      "reading_order": 11,
+      "text": "(b) Both A and R are true, but R is not the correct explanation of A."
+    },
+    {
+      "block_id": "20260314_78b328a0-9dc1-4ced-9999-2f5b3b9f85e3_7_block_011",
+      "coordinates": {
+        "x1": 290.0,
+        "y1": 1024.0,
+        "x2": 806.0,
+        "y2": 1076.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7797428965568542,
+      "reading_order": 12,
+      "text": "(c) A is true and R is false."
+    },
+    {
+      "block_id": "20260314_78b328a0-9dc1-4ced-9999-2f5b3b9f85e3_7_block_012",
+      "coordinates": {
+        "x1": 290.0,
+        "y1": 1088.0,
+        "x2": 804.0,
+        "y2": 1141.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8045234084129333,
+      "reading_order": 13,
+      "text": "(d) A is false and R is true."
+    },
+    {
+      "block_id": "20260314_78b328a0-9dc1-4ced-9999-2f5b3b9f85e3_7_block_013",
+      "coordinates": {
+        "x1": 212.0,
+        "y1": 1203.0,
+        "x2": 1328.0,
+        "y2": 1255.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.49366649985313416,
+      "reading_order": 14,
+      "text": "10. Match the entries of Column A with those of Column B."
+    },
+    {
+      "block_id": "20260314_78b328a0-9dc1-4ced-9999-2f5b3b9f85e3_7_block_014",
+      "coordinates": {
+        "x1": 296.0,
+        "y1": 1274.0,
+        "x2": 1683.0,
+        "y2": 1878.0
+      },
+      "layout_tag": "table",
+      "confidence": 0.9330984354019165,
+      "reading_order": 15,
+      "text": "<table>\n<thead>\n<tr>\n<th>Column A<br/>(Mixture)</th>\n<th>Column B<br/>(Principle of Suitable Separation Process)</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>(i) NH4Cl + KNO3</td>\n<td>(A) Difference in the boiling points of compo-<br/>nents in their liquid state.</td>\n</tr>\n<tr>\n<td>(ii) Sulphur + carbon<br/>disulphide</td>\n<td>(B) Decrease in solubility of a gas in liquid<br/>with the decrease in pressure.</td>\n</tr>\n<tr>\n<td>(iii) Soda water</td>\n<td>(C) One of the components cab sublime can<br/>heating</td>\n</tr>\n<tr>\n<td>(iv) Air</td>\n<td>(D) Non-sublimable solid solute in liquid<br/>solvent.</td>\n</tr>\n</tbody>\n</table>"
+    },
+    {
+      "block_id": "20260314_78b328a0-9dc1-4ced-9999-2f5b3b9f85e3_7_block_015",
+      "coordinates": {
+        "x1": 290.0,
+        "y1": 1900.0,
+        "x2": 1240.0,
+        "y2": 1959.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.730029821395874,
+      "reading_order": 16,
+      "text": "(a) (i) $\\rightarrow$ (C); (ii) $\\rightarrow$ (D); (iii) $\\rightarrow$ (B); (iv) $\\rightarrow$ (A)"
+    },
+    {
+      "block_id": "20260314_78b328a0-9dc1-4ced-9999-2f5b3b9f85e3_7_block_016",
+      "coordinates": {
+        "x1": 290.0,
+        "y1": 1963.0,
+        "x2": 1246.0,
+        "y2": 2021.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5939924716949463,
+      "reading_order": 17,
+      "text": "(b) (i) $\\rightarrow$ (D); (ii) $\\rightarrow$ (C); (iii) $\\rightarrow$ (B); (iv) $\\rightarrow$ (A)"
+    },
+    {
+      "block_id": "20260314_78b328a0-9dc1-4ced-9999-2f5b3b9f85e3_7_block_017",
+      "coordinates": {
+        "x1": 289.0,
+        "y1": 2026.0,
+        "x2": 1244.0,
+        "y2": 2084.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6103610396385193,
+      "reading_order": 18,
+      "text": "(c) (i) $\\rightarrow$ (B); (ii) $\\rightarrow$ (D); (iii) $\\rightarrow$ (C); (iv) $\\rightarrow$ (A)"
+    },
+    {
+      "block_id": "20260314_78b328a0-9dc1-4ced-9999-2f5b3b9f85e3_7_block_018",
+      "coordinates": {
+        "x1": 289.0,
+        "y1": 2089.0,
+        "x2": 1239.0,
+        "y2": 2146.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.46407559514045715,
+      "reading_order": 19,
+      "text": "(d) (i) $\\rightarrow$ (C); (ii) $\\rightarrow$ (D); (iii) $\\rightarrow$ (A); (iv) $\\rightarrow$ (B)"
+    },
+    {
+      "block_id": "20260314_78b328a0-9dc1-4ced-9999-2f5b3b9f85e3_7_block_019",
+      "coordinates": {
+        "x1": 211.0,
+        "y1": 2205.0,
+        "x2": 1659.0,
+        "y2": 2455.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9120472073554993,
+      "reading_order": 20,
+      "text": "11. The order of critical temperature of four gases A, B, C and D is as follows:\nA >> D >> C > B\nWhich of the following has the least vapour pressure?\n(a) A (b) B (c) C (d) D"
+    },
+    {
+      "block_id": "20260314_78b328a0-9dc1-4ced-9999-2f5b3b9f85e3_7_block_020",
+      "coordinates": {
+        "x1": 214.0,
+        "y1": 2511.0,
+        "x2": 1693.0,
+        "y2": 2872.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.823663055896759,
+      "reading_order": 21,
+      "text": "12. The vapour pressure of liquid A is higher than that of liquid B at a particular\ntemperature. Which of the following statements is true?\n(a) The boiling point of A is greater than that of B.\n(b) The boiling point of B is greater than that of A.\n(c) They have the same boiling point.\n(d) The information provided is not sufficient to compare their boiling points."
+    },
+    {
+      "block_id": "20260314_78b328a0-9dc1-4ced-9999-2f5b3b9f85e3_7_block_021",
+      "coordinates": {
+        "x1": 1789.0,
+        "y1": 312.0,
+        "x2": 2172.0,
+        "y2": 365.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7116660475730896,
+      "reading_order": 22,
+      "text": "Space for rough work"
+    }
+  ]
+}

@@ -1,0 +1,294 @@
+{
+  "page_num": 5,
+  "image_width": 2398,
+  "image_height": 3003,
+  "created_at": "2026-03-14T20:50:45.884883+00:00",
+  "blocks": [
+    {
+      "block_id": "20260314_f36c471b-df49-4de1-9bba-13c9405f4ae5_5_block_000",
+      "coordinates": {
+        "x1": 1459.0,
+        "y1": 296.0,
+        "x2": 2208.0,
+        "y2": 679.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.5837845206260681,
+      "reading_order": 1,
+      "text": "1\n\n| 16 | S  | Sulfur   | 32.066 |\n|----|----|----------|--------|\n|    | Se | Selenium | 78.96  |\n| AS | As | Arsenic  | 4.92160|\n| 51 | Sb | Antimony |        |\n| 17 | Cl | Chlorine | 35.4527|\n| 34 | Se |          |        |\n| 35 | Br | Bromine  | 79.904 |\n| 52 | Te | Tellurium|        |\n| 53 | I  | Iodine   |        |"
+    },
+    {
+      "block_id": "20260314_f36c471b-df49-4de1-9bba-13c9405f4ae5_5_block_001",
+      "coordinates": {
+        "x1": 348.0,
+        "y1": 441.0,
+        "x2": 1220.0,
+        "y2": 554.0
+      },
+      "layout_tag": "headline",
+      "confidence": 0.8002980947494507,
+      "reading_order": 2,
+      "text": "Atomic Structure"
+    },
+    {
+      "block_id": "20260314_f36c471b-df49-4de1-9bba-13c9405f4ae5_5_block_002",
+      "coordinates": {
+        "x1": 176.0,
+        "y1": 709.0,
+        "x2": 2070.0,
+        "y2": 764.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.5624194145202637,
+      "reading_order": 3,
+      "text": "Reference: Coursebook - IIT Foundation Chemistry Class 8; Chapter - Atomic Structure; Page number - 1.1–1.14"
+    },
+    {
+      "block_id": "20260314_f36c471b-df49-4de1-9bba-13c9405f4ae5_5_block_003",
+      "coordinates": {
+        "x1": 180.0,
+        "y1": 789.0,
+        "x2": 867.0,
+        "y2": 871.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.7686980366706848,
+      "reading_order": 4,
+      "text": "Assessment Test I"
+    },
+    {
+      "block_id": "20260314_f36c471b-df49-4de1-9bba-13c9405f4ae5_5_block_004",
+      "coordinates": {
+        "x1": 1448.0,
+        "y1": 820.0,
+        "x2": 1691.0,
+        "y2": 870.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6857216358184814,
+      "reading_order": 5,
+      "text": "Time: 30 min."
+    },
+    {
+      "block_id": "20260314_f36c471b-df49-4de1-9bba-13c9405f4ae5_5_block_005",
+      "coordinates": {
+        "x1": 176.0,
+        "y1": 946.0,
+        "x2": 1691.0,
+        "y2": 1001.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.680048406124115,
+      "reading_order": 6,
+      "text": "Directions for questions from 1 to 15: Select the correct answer from the given options."
+    },
+    {
+      "block_id": "20260314_f36c471b-df49-4de1-9bba-13c9405f4ae5_5_block_006",
+      "coordinates": {
+        "x1": 231.0,
+        "y1": 1038.0,
+        "x2": 1560.0,
+        "y2": 1091.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7819520235061646,
+      "reading_order": 7,
+      "text": "1. Which of the following is a contradiction to Dalton's atomic theory?"
+    },
+    {
+      "block_id": "20260314_f36c471b-df49-4de1-9bba-13c9405f4ae5_5_block_007",
+      "coordinates": {
+        "x1": 289.0,
+        "y1": 1101.0,
+        "x2": 783.0,
+        "y2": 1155.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7641028165817261,
+      "reading_order": 8,
+      "text": "(a) Discovery of isotopes"
+    },
+    {
+      "block_id": "20260314_f36c471b-df49-4de1-9bba-13c9405f4ae5_5_block_008",
+      "coordinates": {
+        "x1": 290.0,
+        "y1": 1163.0,
+        "x2": 895.0,
+        "y2": 1217.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8023365139961243,
+      "reading_order": 9,
+      "text": "(b) Law of definite proportions"
+    },
+    {
+      "block_id": "20260314_f36c471b-df49-4de1-9bba-13c9405f4ae5_5_block_009",
+      "coordinates": {
+        "x1": 290.0,
+        "y1": 1227.0,
+        "x2": 910.0,
+        "y2": 1279.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7882530689239502,
+      "reading_order": 10,
+      "text": "(c) Law of conservation of mass"
+    },
+    {
+      "block_id": "20260314_f36c471b-df49-4de1-9bba-13c9405f4ae5_5_block_010",
+      "coordinates": {
+        "x1": 291.0,
+        "y1": 1288.0,
+        "x2": 773.0,
+        "y2": 1345.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8053257465362549,
+      "reading_order": 11,
+      "text": "(d) Discovery of nucleus"
+    },
+    {
+      "block_id": "20260314_f36c471b-df49-4de1-9bba-13c9405f4ae5_5_block_011",
+      "coordinates": {
+        "x1": 230.0,
+        "y1": 1403.0,
+        "x2": 1383.0,
+        "y2": 1460.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8323991298675537,
+      "reading_order": 12,
+      "text": "2. An atomic model is represented by the figure given below."
+    },
+    {
+      "block_id": "20260314_f36c471b-df49-4de1-9bba-13c9405f4ae5_5_block_012",
+      "coordinates": {
+        "x1": 632.0,
+        "y1": 1492.0,
+        "x2": 1243.0,
+        "y2": 1807.0
+      },
+      "layout_tag": "image",
+      "confidence": 0.911237359046936,
+      "reading_order": 13,
+      "text": "The image is a schematic diagram illustrating a model of a positively charged sphere. It features a large outer circle representing the sphere, filled with a pattern of short, dashed lines. Inside this sphere, there are six smaller circles, each containing a dash-minus symbol (-), representing electrons. Two arrows point to these internal circles, labeling them \"Electrons.\" A horizontal double-headed arrow spans the diameter of the sphere, pointing from left to right, and is labeled \"Positively charged sphere.\" The diagram visually represents the concept of a sphere containing a cloud of electrons, which is a common model for atoms or ions."
+    },
+    {
+      "block_id": "20260314_f36c471b-df49-4de1-9bba-13c9405f4ae5_5_block_013",
+      "coordinates": {
+        "x1": 966.0,
+        "y1": 1642.0,
+        "x2": 1244.0,
+        "y2": 1728.0
+      },
+      "layout_tag": "footnote",
+      "confidence": 0.382207453250885,
+      "reading_order": 14,
+      "text": "Positively charged\nsphere"
+    },
+    {
+      "block_id": "20260314_f36c471b-df49-4de1-9bba-13c9405f4ae5_5_block_014",
+      "coordinates": {
+        "x1": 290.0,
+        "y1": 1870.0,
+        "x2": 1693.0,
+        "y2": 1975.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8997652530670166,
+      "reading_order": 15,
+      "text": "Identify the fact (from following statements) which could be successfully\nexplained by the given atomic model."
+    },
+    {
+      "block_id": "20260314_f36c471b-df49-4de1-9bba-13c9405f4ae5_5_block_015",
+      "coordinates": {
+        "x1": 290.0,
+        "y1": 1984.0,
+        "x2": 1366.0,
+        "y2": 2039.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.818350076675415,
+      "reading_order": 16,
+      "text": "(a) Total positive charge is equal to total negative charge."
+    },
+    {
+      "block_id": "20260314_f36c471b-df49-4de1-9bba-13c9405f4ae5_5_block_016",
+      "coordinates": {
+        "x1": 292.0,
+        "y1": 2046.0,
+        "x2": 1692.0,
+        "y2": 2151.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.76806640625,
+      "reading_order": 17,
+      "text": "(b) Positively charged particles are shielded from negatively charged\nparticles."
+    },
+    {
+      "block_id": "20260314_f36c471b-df49-4de1-9bba-13c9405f4ae5_5_block_017",
+      "coordinates": {
+        "x1": 292.0,
+        "y1": 2161.0,
+        "x2": 1050.0,
+        "y2": 2216.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5748050212860107,
+      "reading_order": 18,
+      "text": "(c) The existence of nucleus in an atom."
+    },
+    {
+      "block_id": "20260314_f36c471b-df49-4de1-9bba-13c9405f4ae5_5_block_018",
+      "coordinates": {
+        "x1": 290.0,
+        "y1": 2226.0,
+        "x2": 1222.0,
+        "y2": 2279.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5615341663360596,
+      "reading_order": 19,
+      "text": "(d) Electrons are universal constituents of matter."
+    },
+    {
+      "block_id": "20260314_f36c471b-df49-4de1-9bba-13c9405f4ae5_5_block_019",
+      "coordinates": {
+        "x1": 233.0,
+        "y1": 2341.0,
+        "x2": 1695.0,
+        "y2": 2642.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9257863759994507,
+      "reading_order": 20,
+      "text": "3. Identify the sets of orbits (electronic transitions) associated with release of\nenergy.\n(A) L $\\rightarrow$ M (B) K $\\rightarrow$ M (C) L $\\rightarrow$ K\n(D) M $\\rightarrow$ L (E) M $\\rightarrow$ N (F) N $\\rightarrow$ K\n(a) ACD (b) BCE (c) CDF (d) CDE"
+    },
+    {
+      "block_id": "20260314_f36c471b-df49-4de1-9bba-13c9405f4ae5_5_block_020",
+      "coordinates": {
+        "x1": 230.0,
+        "y1": 2698.0,
+        "x2": 1696.0,
+        "y2": 2871.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8796147704124451,
+      "reading_order": 21,
+      "text": "4. Assertion (A): The orbits in which electrons are present are called station-\nary orbits.\nReason (R): Electrons remain stationary in those orbits."
+    },
+    {
+      "block_id": "20260314_f36c471b-df49-4de1-9bba-13c9405f4ae5_5_block_021",
+      "coordinates": {
+        "x1": 1791.0,
+        "y1": 970.0,
+        "x2": 2172.0,
+        "y2": 1023.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7520043849945068,
+      "reading_order": 22,
+      "text": "Space for rough work"
+    }
+  ]
+}
