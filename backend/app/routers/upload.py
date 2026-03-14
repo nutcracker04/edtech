@@ -7,10 +7,17 @@ from app.utils.auth import get_current_user
 from app.database import supabase
 from app.services.test_service import create_test
 from app.models.upload import (
-    UploadResponse,
-    UploadStatusResponse,
+    UploadResponse,  # Legacy model for backward compatibility
+    UploadStatusResponse,  # Legacy model for backward compatibility
     QuestionConfirmRequest,
-    ExtractedQuestion
+    ExtractedQuestion,  # Legacy model for backward compatibility
+    convert_extraction_job_to_upload_response,
+    convert_extraction_job_to_upload_status
+)
+from app.models.extraction import (
+    ExtractionJob,
+    RawQuestion,
+    ExtractionStage
 )
 from app.config import settings
 
@@ -27,6 +34,7 @@ async def upload_test_paper(
 ):
     """
     Upload test paper (PDF or Image) for AI processing.
+    Uses new extraction_jobs table for tracking.
     """
     user_id = current_user["user_id"]
     
@@ -52,71 +60,57 @@ async def upload_test_paper(
             settings.storage_bucket_test_papers
         ).get_public_url(file_name)
         
-        # Create upload record
-        upload_record = {
-            "user_id": user_id,
-            "test_image_url": public_url,
-            "processing_status": "pending",
-            "uploaded_at": datetime.utcnow().isoformat(),
-            "exam_type": exam_type,
-            "exam_date": exam_date,
-            "exam_session": exam_session
+        # Create extraction job record in new extraction_jobs table
+        job_id = str(uuid.uuid4())
+        extraction_job = {
+            "id": job_id,
+            "source_pdf_filename": file.filename,
+            "source_pdf_path": public_url,
+            "stage": ExtractionStage.QUEUED.value,
+            "progress": 0,
+            "pages_processed": 0,
+            "questions_extracted": 0,
+            "created_at": datetime.utcnow().isoformat()
         }
         
-        result = supabase.table("uploaded_tests").insert(upload_record).execute()
-        upload_id = result.data[0]["id"]
+        result = supabase.table("extraction_jobs").insert(extraction_job).execute()
         
-        # Start OCR processing (async in background would be better for production)
+        # Start processing (async in background would be better for production)
         try:
             # Update status to processing
-            supabase.table("uploaded_tests")\
-                .update({"processing_status": "processing"})\
-                .eq("id", upload_id)\
+            supabase.table("extraction_jobs")\
+                .update({"stage": ExtractionStage.EXTRACTION.value, "progress": 10})\
+                .eq("id", job_id)\
                 .execute()
             
-            # Extract questions using NVIDIA Service
-            # Process based on file type
-            if file.content_type == "application/pdf":
-                # images = convert_from_bytes(file_content)
-                # For now, just a placeholder or use old logic
-                # extracted_questions = await ocr_service.process_pdf(file_content)
-                pass 
-            else:
-                # extracted_questions = ocr_service.extract_questions_from_image(file_content)
-                pass
-            
-            # Placeholder to fix the break
-            extracted_questions = []
-            
-            # Update record with extracted questions
-            # Convert to list of dicts if they are objects, but nvidia_service returns dicts
-            supabase.table("uploaded_tests")\
+            # TODO: Integrate with actual extraction pipeline
+            # For now, mark as completed
+            supabase.table("extraction_jobs")\
                 .update({
-                    "extracted_questions": extracted_questions,
-                    "processing_status": "completed",
-                    "processed_at": datetime.utcnow().isoformat()
+                    "stage": ExtractionStage.COMPLETED.value,
+                    "progress": 100,
+                    "completed_at": datetime.utcnow().isoformat()
                 })\
-                .eq("id", upload_id)\
+                .eq("id", job_id)\
                 .execute()
-
         
         except Exception as e:
             # Update status to failed
-            supabase.table("uploaded_tests")\
+            supabase.table("extraction_jobs")\
                 .update({
-                    "processing_status": "failed",
-                    "error_message": str(e)
+                    "stage": ExtractionStage.FAILED.value,
+                    "error": str(e)
                 })\
-                .eq("id", upload_id)\
+                .eq("id", job_id)\
                 .execute()
             
             raise HTTPException(
                 status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-                detail=f"OCR processing failed: {str(e)}"
+                detail=f"Extraction processing failed: {str(e)}"
             )
         
         return UploadResponse(
-            id=upload_id,
+            id=job_id,
             status="completed",
             message="Test paper uploaded and processed successfully",
             uploaded_at=datetime.utcnow()
@@ -136,14 +130,14 @@ async def get_upload_status(
 ):
     """
     Get the status of an uploaded test paper.
+    Uses new extraction_jobs table.
     """
     user_id = current_user["user_id"]
     
-    # Get upload record
-    result = supabase.table("uploaded_tests")\
+    # Get extraction job record
+    result = supabase.table("extraction_jobs")\
         .select("*")\
         .eq("id", upload_id)\
-        .eq("user_id", user_id)\
         .execute()
     
     if not result.data:
@@ -152,28 +146,49 @@ async def get_upload_status(
             detail="Upload not found"
         )
     
-    record = result.data[0]
+    job = result.data[0]
     
-    # Calculate progress
+    # Calculate progress based on stage
     progress_map = {
-        "pending": 10,
-        "processing": 50,
+        "queued": 10,
+        "validation": 20,
+        "upload": 40,
+        "extraction": 70,
         "completed": 100,
         "failed": 0
     }
     
+    stage = job.get("stage", "queued")
+    progress = job.get("progress", progress_map.get(stage, 0))
+    
+    # Get extracted questions (raw_questions) if completed
     extracted_questions = None
-    if record["processing_status"] == "completed":
+    if stage == "completed":
+        raw_questions_result = supabase.table("raw_questions")\
+            .select("*")\
+            .eq("job_id", upload_id)\
+            .execute()
+        
+        # Convert to ExtractedQuestion format for backward compatibility
         extracted_questions = [
-            ExtractedQuestion(**q) for q in record["extracted_questions"]
+            ExtractedQuestion(
+                id=q.get("id"),
+                question_number=q.get("question_number", ""),
+                question_text=q.get("question_text", ""),
+                options=q.get("options", []),
+                correct_answer=None,  # Not available in raw_questions
+                subject=None,
+                topic=None
+            )
+            for q in raw_questions_result.data
         ]
     
     return UploadStatusResponse(
         id=upload_id,
-        status=record["processing_status"],
-        progress=progress_map.get(record["processing_status"], 0),
+        status=stage,
+        progress=progress,
         extracted_questions=extracted_questions,
-        error_message=record.get("error_message")
+        error_message=job.get("error")
     )
 
 
@@ -184,21 +199,21 @@ async def confirm_questions(
 ):
     """
     Confirm and save the extracted questions as a test.
+    Uses new extraction_jobs and raw_questions tables.
     User can edit questions before confirming.
     """
     user_id = current_user["user_id"]
     
-    # Verify upload belongs to user
-    upload_result = supabase.table("uploaded_tests")\
+    # Verify extraction job exists
+    job_result = supabase.table("extraction_jobs")\
         .select("*")\
         .eq("id", request.upload_id)\
-        .eq("user_id", user_id)\
         .execute()
     
-    if not upload_result.data:
+    if not job_result.data:
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,
-            detail="Upload not found"
+            detail="Extraction job not found"
         )
     
     # Create a test from the confirmed questions

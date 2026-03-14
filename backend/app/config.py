@@ -7,6 +7,7 @@ class Settings(BaseSettings):
     supabase_url: str = ""
     supabase_service_key: str = ""
     supabase_jwt_secret: str = ""
+    supabase_db_password: str = ""  # Required for migrations
     
     # Storage
     storage_bucket_test_papers: str = "test-papers"

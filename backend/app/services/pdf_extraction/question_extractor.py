@@ -73,15 +73,17 @@ class QuestionExtractor:
     and links images referenced in questions, and identifies question types.
     """
     
-    def __init__(self, config=None):
+    def __init__(self, config=None, supabase_client=None):
         """
         Initialize QuestionExtractor.
         
         Args:
             config: Configuration for PDF extraction. If None, loads from environment.
+            supabase_client: Optional Supabase client for database integration.
         """
         self.config = config or get_config()
         self.client = SarvamAI(api_subscription_key=self.config.sarvam_api_key)
+        self.supabase_client = supabase_client  # Optional Supabase client for database integration
         logger.info("QuestionExtractor initialized")
     
     def extract_questions(
@@ -1397,3 +1399,89 @@ Return format: {{"question_numbers": ["1", "2", "3", ...]}}
         logger.info(f"Successfully extracted {len(explanations)} explanations")
 
         return explanations
+
+    def write_raw_questions_to_db(
+        self,
+        questions: List[RawQuestion],
+        job_id: str
+    ) -> int:
+        """
+        Write raw_questions to database with processing_status='pending'.
+        
+        This method stores extracted questions in the raw_questions table
+        before they are tagged with metadata. It stores:
+        - question_text, options, page_number
+        - context fields (chapter_context, topic_context, sub_topic_context)
+        - raw_images, raw_tables
+        - processing_status='pending'
+        
+        Requirements: 8.1, 8.2, 23.3
+        
+        Args:
+            questions: List of RawQuestion objects to write
+            job_id: UUID of the extraction job
+        
+        Returns:
+            Number of questions written to database
+        
+        Raises:
+            Exception: If database write fails
+        """
+        if not self.supabase_client:
+            logger.warning("No Supabase client available, skipping database write")
+            return 0
+        
+        try:
+            from datetime import datetime, timezone
+            from uuid import uuid4
+            
+            questions_written = 0
+            
+            for question in questions:
+                # Prepare raw_images data
+                raw_images = None
+                if question.images:
+                    raw_images = [
+                        {
+                            "path": img.path,
+                            "alt_text": img.alt_text,
+                            "position": img.position
+                        }
+                        for img in question.images
+                    ]
+                
+                # Prepare raw_tables data
+                raw_tables = None
+                if question.tables:
+                    raw_tables = [
+                        {"markdown": table}
+                        for table in question.tables
+                    ]
+                
+                # Create raw_questions record
+                raw_question_data = {
+                    "id": str(uuid4()),
+                    "job_id": job_id,
+                    "question_number": question.question_number,
+                    "question_text": question.question_text,
+                    "options": question.options if question.options else [],
+                    "page_number": question.page_number,
+                    "chapter_context": question.chapter_context,
+                    "topic_context": question.topic_context,
+                    "sub_topic_context": question.sub_topic_context,
+                    "raw_images": raw_images,
+                    "raw_tables": raw_tables,
+                    "processing_status": "pending",
+                    "created_at": datetime.now(timezone.utc).isoformat()
+                }
+                
+                self.supabase_client.table("raw_questions").insert(raw_question_data).execute()
+                questions_written += 1
+                logger.debug(f"Wrote raw_question to database: question_number={question.question_number}")
+            
+            logger.info(f"Successfully wrote {questions_written} raw_questions to database")
+            return questions_written
+            
+        except Exception as e:
+            logger.error(f"Failed to write raw_questions to database: {e}", exc_info=True)
+            raise

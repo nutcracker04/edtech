@@ -1,6 +1,7 @@
 """
 Dashboard API endpoints
 Provides data for the Dashboard page including metrics, streaks, and recommendations
+Uses new database models: test_sessions, student_topic_mastery, daily_activity
 """
 
 from fastapi import APIRouter, Depends, HTTPException
@@ -18,8 +19,12 @@ from app.models.dashboard import (
     UpcomingTest,
     Recommendation,
 )
+from app.services.analytics_aggregator import AnalyticsAggregator
 
 router = APIRouter(prefix="/api/dashboard", tags=["dashboard"])
+
+# Initialize AnalyticsAggregator
+analytics_aggregator = AnalyticsAggregator(supabase)
 
 
 @router.get("/metrics", response_model=DashboardMetrics)
@@ -28,26 +33,27 @@ async def get_dashboard_metrics(
 ):
     """
     Get user performance metrics for the Dashboard.
+    Uses new student_topic_mastery and test_sessions tables.
     Returns: accuracy percentage, questions solved, study hours, tests completed
     """
     user_id = current_user["user_id"]
     
     # Get topic mastery data
-    mastery_result = supabase.table("topic_mastery")\
+    mastery_result = supabase.table("student_topic_mastery")\
         .select("*")\
-        .eq("user_id", user_id)\
+        .eq("student_id", user_id)\
         .execute()
     
-    # Get tests data
-    tests_result = supabase.table("tests")\
+    # Get test sessions data
+    sessions_result = supabase.table("test_sessions")\
         .select("*")\
-        .eq("user_id", user_id)\
+        .eq("student_id", user_id)\
         .execute()
     
-    # Get activity data
-    activity_result = supabase.table("user_activity")\
+    # Get daily activity data
+    activity_result = supabase.table("daily_activity")\
         .select("*")\
-        .eq("user_id", user_id)\
+        .eq("student_id", user_id)\
         .execute()
     
     # Calculate metrics
@@ -55,12 +61,12 @@ async def get_dashboard_metrics(
     total_correct = sum(t.get("questions_correct", 0) for t in mastery_result.data)
     accuracy_percentage = (total_correct / total_questions * 100) if total_questions > 0 else 0
     
-    completed_tests = [t for t in tests_result.data if t.get("status") == "completed"]
-    tests_completed = len(completed_tests)
+    completed_sessions = [s for s in sessions_result.data if s.get("status") == "submitted"]
+    tests_completed = len(completed_sessions)
     
-    # Calculate study hours from activity
-    total_time_seconds = sum(a.get("time_spent", 0) for a in activity_result.data)
-    study_hours = total_time_seconds / 3600
+    # Calculate study hours from daily activity
+    total_time_minutes = sum(a.get("time_spent_minutes", 0) for a in activity_result.data)
+    study_hours = total_time_minutes / 60
     
     return DashboardMetrics(
         accuracy_percentage=round(accuracy_percentage, 2),
@@ -76,15 +82,16 @@ async def get_streak_data(
 ):
     """
     Get current streak and milestone status.
+    Uses new daily_activity table.
     Milestones: 7, 14, 30 days
     """
     user_id = current_user["user_id"]
     
     # Get all activity records ordered by date descending
-    result = supabase.table("user_activity")\
-        .select("date, questions_solved")\
-        .eq("user_id", user_id)\
-        .order("date", desc=True)\
+    result = supabase.table("daily_activity")\
+        .select("activity_date, questions_attempted")\
+        .eq("student_id", user_id)\
+        .order("activity_date", desc=True)\
         .execute()
     
     if not result.data:
@@ -95,10 +102,10 @@ async def get_streak_data(
     today = datetime.utcnow().date()
     
     for i, record in enumerate(result.data):
-        record_date = datetime.fromisoformat(record["date"]).date()
+        record_date = datetime.fromisoformat(record["activity_date"]).date()
         expected_date = today - timedelta(days=i)
         
-        if record_date == expected_date and record.get("questions_solved", 0) > 0:
+        if record_date == expected_date and record.get("questions_attempted", 0) > 0:
             current_streak += 1
         else:
             break
@@ -120,46 +127,46 @@ async def get_subject_performance(
 ):
     """
     Get performance data for all enrolled subjects.
+    Uses new student_topic_mastery table with books join.
     Returns subject name, accuracy, questions solved, and trend.
     """
     user_id = current_user["user_id"]
     
-    result = supabase.table("topic_mastery")\
-        .select("*")\
-        .eq("user_id", user_id)\
+    result = supabase.table("student_topic_mastery")\
+        .select("*, books!inner(subject)")\
+        .eq("student_id", user_id)\
         .execute()
     
     # Aggregate by subject
     subject_data = {}
     for record in result.data:
-        subject = record.get("subject", "Unknown")
-        subject_id = record.get("subject_id", subject)
+        book = record.get("books", {})
+        subject = book.get("subject", "Unknown")
         
-        if subject_id not in subject_data:
-            subject_data[subject_id] = {
-                "subject_id": subject_id,
+        if subject not in subject_data:
+            subject_data[subject] = {
+                "subject_id": subject,
                 "subject_name": subject,
                 "total_questions": 0,
                 "total_correct": 0,
                 "topics": [],
-                "prev_accuracy": None,
             }
         
-        subject_data[subject_id]["topics"].append(record)
-        subject_data[subject_id]["total_questions"] += record.get("questions_attempted", 0)
-        subject_data[subject_id]["total_correct"] += record.get("questions_correct", 0)
+        subject_data[subject]["topics"].append(record)
+        subject_data[subject]["total_questions"] += record.get("questions_attempted", 0)
+        subject_data[subject]["total_correct"] += record.get("questions_correct", 0)
     
     # Calculate accuracy and trend
     subjects = []
     for subject_id, data in subject_data.items():
         accuracy = (data["total_correct"] / data["total_questions"] * 100) if data["total_questions"] > 0 else 0
         
-        # Determine trend (simplified: based on average mastery score)
+        # Determine trend (simplified: based on average accuracy)
         if data["topics"]:
-            avg_mastery = sum(t.get("mastery_score", 0) for t in data["topics"]) / len(data["topics"])
-            if avg_mastery >= 80:
+            avg_accuracy = sum(float(t.get("accuracy_pct", 0)) for t in data["topics"]) / len(data["topics"])
+            if avg_accuracy >= 80:
                 trend = "up"
-            elif avg_mastery >= 60:
+            elif avg_accuracy >= 60:
                 trend = "flat"
             else:
                 trend = "down"
@@ -184,31 +191,33 @@ async def get_recent_activity(
 ):
     """
     Get recent activity (last N items, default 5).
+    Uses new test_sessions table.
     Returns test completions, questions solved, and topics reviewed.
     """
     user_id = current_user["user_id"]
     
     # Get recent test completions
-    tests_result = supabase.table("tests")\
-        .select("*")\
-        .eq("user_id", user_id)\
-        .eq("status", "completed")\
-        .order("completed_at", desc=True)\
+    sessions_result = supabase.table("test_sessions")\
+        .select("*, test_papers!inner(*)")\
+        .eq("student_id", user_id)\
+        .eq("status", "submitted")\
+        .order("submitted_at", desc=True)\
         .limit(limit)\
         .execute()
     
     activities = []
-    for test in tests_result.data:
+    for session in sessions_result.data:
+        test_paper = session.get("test_papers", {})
         activities.append(ActivityItem(
-            id=test.get("id", ""),
+            id=session.get("id", ""),
             type="test_completed",
-            title=f"Completed: {test.get('title', 'Test')}",
-            score=test.get("score"),
-            timestamp=test.get("completed_at", datetime.utcnow().isoformat()),
-            link=f"/tests/{test.get('id')}"
+            title=f"Completed: {test_paper.get('title', 'Test')}",
+            score=float(session.get("total_marks_obtained", 0)) if session.get("total_marks_obtained") else None,
+            timestamp=session.get("submitted_at", datetime.utcnow().isoformat()),
+            link=f"/tests/{session.get('id')}"
         ))
     
-    # Sort by timestamp and limit to 5
+    # Sort by timestamp and limit to requested count
     activities.sort(key=lambda x: x.timestamp, reverse=True)
     return activities[:limit]
 
@@ -219,6 +228,7 @@ async def get_full_dashboard_data(
 ):
     """
     Get complete Dashboard data including all sections.
+    Uses new database models for all data.
     """
     user_id = current_user["user_id"]
     
@@ -229,24 +239,25 @@ async def get_full_dashboard_data(
         subjects = await get_subject_performance(current_user)
         activity = await get_recent_activity(5, current_user)
         
-        # Get upcoming tests
-        tests_result = supabase.table("tests")\
+        # Get upcoming tests (test papers that are published but not yet started)
+        # Note: This requires a way to track "upcoming" tests - for now, get recent unpublished test papers
+        papers_result = supabase.table("test_papers")\
             .select("*")\
-            .eq("user_id", user_id)\
-            .eq("status", "upcoming")\
-            .order("scheduled_at", desc=False)\
+            .eq("created_by", user_id)\
+            .eq("is_published", True)\
+            .order("created_at", desc=False)\
             .limit(5)\
             .execute()
         
         upcoming_tests = [
             UpcomingTest(
-                test_id=t.get("id", ""),
-                test_name=t.get("title", "Test"),
-                test_type=t.get("type", "mock"),
-                date=t.get("scheduled_at") or t.get("created_at") or datetime.utcnow().isoformat(),
-                difficulty="medium"  # Default difficulty since it's not in the tests table
+                test_id=p.get("id", ""),
+                test_name=p.get("title", "Test"),
+                test_type=p.get("paper_type", "custom"),
+                date=p.get("created_at") or datetime.utcnow().isoformat(),
+                difficulty="medium"  # Default difficulty
             )
-            for t in tests_result.data
+            for p in papers_result.data
         ]
         
         # Generate recommendation (simplified: recommend weakest subject)

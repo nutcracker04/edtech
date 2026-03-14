@@ -87,12 +87,13 @@ class MetadataTagger:
     Implements Design Component 5.
     """
     
-    def __init__(self, config=None):
+    def __init__(self, config=None, supabase_client=None):
         """
         Initialize MetadataTagger.
         
         Args:
             config: Optional configuration object
+            supabase_client: Optional Supabase client for database integration
         """
         try:
             from .document_processor import get_config
@@ -100,7 +101,19 @@ class MetadataTagger:
             from document_processor import get_config
         
         self.config = config or get_config()
-        logger.info("MetadataTagger initialized")
+        self.supabase_client = supabase_client
+        
+        # Initialize DatabaseWriter if Supabase client is available
+        self.database_writer = None
+        if supabase_client:
+            try:
+                from app.services.database_writer import DatabaseWriter
+                self.database_writer = DatabaseWriter(supabase_client)
+                logger.info("MetadataTagger initialized with DatabaseWriter")
+            except ImportError as e:
+                logger.warning(f"Could not import DatabaseWriter: {e}")
+        else:
+            logger.info("MetadataTagger initialized without database integration")
     
     def apply_metadata(
         self,
@@ -627,3 +640,88 @@ class MetadataTagger:
             raise ValueError("grade_level must be a non-empty list")
         
         logger.debug("Metadata completeness validation passed")
+
+    def write_tagged_question_to_db(
+        self,
+        tagged_question: TaggedQuestion,
+        job_id: str,
+        raw_question_id: Optional[str] = None
+    ) -> bool:
+        """
+        Write TaggedQuestion to database using DatabaseWriter.
+        
+        This method calls DatabaseWriter.write_tagged_question() after tagging
+        to persist the question with all metadata to the database. It handles
+        write errors by setting raw_questions.processing_status='error' and
+        storing error_message.
+        
+        Requirements: 16.1, 16.6, 16.7, 23.4
+        
+        Args:
+            tagged_question: TaggedQuestion object to write
+            job_id: UUID of the extraction job
+            raw_question_id: Optional UUID of the raw_question record
+        
+        Returns:
+            True if write succeeded, False otherwise
+        """
+        if not self.database_writer:
+            logger.warning("No DatabaseWriter available, skipping database write")
+            return False
+        
+        try:
+            from uuid import UUID
+            
+            # Convert job_id and raw_question_id to UUID if they're strings
+            job_uuid = UUID(job_id) if isinstance(job_id, str) else job_id
+            raw_question_uuid = UUID(raw_question_id) if raw_question_id and isinstance(raw_question_id, str) else raw_question_id
+            
+            # Write tagged question to database
+            result = self.database_writer.write_tagged_question(
+                question=tagged_question,
+                job_id=job_uuid,
+                raw_question_id=raw_question_uuid
+            )
+            
+            if result.success:
+                logger.info(
+                    f"Successfully wrote tagged question to database: "
+                    f"question_id={result.question_id}, "
+                    f"options={result.options_inserted}, "
+                    f"images={result.images_inserted}, "
+                    f"tags={result.tags_inserted}"
+                )
+                return True
+            else:
+                logger.error(f"Failed to write tagged question: {result.error}")
+                
+                # Update raw_questions with error status
+                if raw_question_uuid and self.supabase_client:
+                    try:
+                        error_data = {
+                            "processing_status": "error",
+                            "error_message": result.error
+                        }
+                        self.supabase_client.table("raw_questions").update(error_data).eq("id", str(raw_question_uuid)).execute()
+                    except Exception as update_error:
+                        logger.error(f"Failed to update raw_question error status: {update_error}")
+                
+                return False
+                
+        except Exception as e:
+            logger.error(f"Exception while writing tagged question to database: {e}", exc_info=True)
+            
+            # Update raw_questions with error status
+            if raw_question_id and self.supabase_client:
+                try:
+                    from uuid import UUID
+                    raw_question_uuid = UUID(raw_question_id) if isinstance(raw_question_id, str) else raw_question_id
+                    error_data = {
+                        "processing_status": "error",
+                        "error_message": str(e)
+                    }
+                    self.supabase_client.table("raw_questions").update(error_data).eq("id", str(raw_question_uuid)).execute()
+                except Exception as update_error:
+                    logger.error(f"Failed to update raw_question error status: {update_error}")
+            
+            return False

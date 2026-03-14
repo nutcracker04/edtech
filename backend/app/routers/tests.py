@@ -7,8 +7,13 @@ from app.utils.auth import get_current_user
 from app.database import supabase
 from app.models.test import Test, TestCreateRequest, TestSubmitRequest
 from app.services.test_service import create_test, generate_adaptive_test, generate_test, submit_test_attempts, generate_pyq_test
+from app.services.test_session_manager import TestSessionManager, TestPaperConfig
+from app.models.test_engine import TestSession, SessionStatus, PaperType
 
 router = APIRouter(prefix="/api/tests", tags=["tests"])
+
+# Initialize TestSessionManager
+test_session_manager = TestSessionManager(supabase)
 
 
 @router.get("/", response_model=List[Test])
@@ -19,24 +24,52 @@ async def get_user_tests(
     """
     Get all tests for the current user.
     Optionally filter by status.
+    Uses new test_sessions table with backward compatibility.
     """
     try:
         user_id = current_user["user_id"]
         
-        query = supabase.table("tests").select("*").eq("user_id", user_id)
+        # Query test_sessions table with test_papers join
+        query = supabase.table("test_sessions")\
+            .select("*, test_papers!inner(*)")\
+            .eq("student_id", user_id)
         
         if status_filter:
             query = query.eq("status", status_filter)
         
         result = query.order("created_at", desc=True).execute()
         
-        # Ensure questions field is always a list
-        if result.data:
-            for test in result.data:
-                if test.get("questions") is None:
-                    test["questions"] = []
+        # Transform to backward-compatible format
+        tests = []
+        for session in result.data:
+            test_paper = session.get("test_papers", {})
+            
+            # Get questions for this test paper
+            questions_result = supabase.table("test_paper_questions")\
+                .select("*, questions!inner(*)")\
+                .eq("test_paper_id", test_paper.get("id"))\
+                .order("sort_order")\
+                .execute()
+            
+            questions = [q.get("questions", {}) for q in questions_result.data]
+            
+            tests.append({
+                "id": session.get("id"),
+                "user_id": user_id,
+                "title": test_paper.get("title", ""),
+                "type": test_paper.get("paper_type", "custom"),
+                "subject": test_paper.get("subject"),
+                "status": session.get("status", "in_progress"),
+                "score": float(session.get("total_marks_obtained", 0)) if session.get("total_marks_obtained") else None,
+                "max_score": float(test_paper.get("total_marks", 0)),
+                "duration": test_paper.get("duration_minutes"),
+                "questions": questions,
+                "created_at": session.get("created_at"),
+                "started_at": session.get("started_at"),
+                "completed_at": session.get("submitted_at")
+            })
         
-        return result.data
+        return tests
     except Exception as e:
         print(f"Error in get_user_tests: {str(e)}")
         print(f"Error type: {type(e)}")
@@ -55,13 +88,15 @@ async def get_test(
 ):
     """
     Get a specific test by ID.
+    Uses new test_sessions table with backward compatibility.
     """
     user_id = current_user["user_id"]
     
-    result = supabase.table("tests")\
-        .select("*")\
+    # Query test_sessions with test_papers join
+    result = supabase.table("test_sessions")\
+        .select("*, test_papers!inner(*)")\
         .eq("id", test_id)\
-        .eq("user_id", user_id)\
+        .eq("student_id", user_id)\
         .execute()
     
     if not result.data:
@@ -70,7 +105,33 @@ async def get_test(
             detail="Test not found"
         )
     
-    return result.data[0]
+    session = result.data[0]
+    test_paper = session.get("test_papers", {})
+    
+    # Get questions for this test paper
+    questions_result = supabase.table("test_paper_questions")\
+        .select("*, questions!inner(*)")\
+        .eq("test_paper_id", test_paper.get("id"))\
+        .order("sort_order")\
+        .execute()
+    
+    questions = [q.get("questions", {}) for q in questions_result.data]
+    
+    return {
+        "id": session.get("id"),
+        "user_id": user_id,
+        "title": test_paper.get("title", ""),
+        "type": test_paper.get("paper_type", "custom"),
+        "subject": test_paper.get("subject"),
+        "status": session.get("status", "in_progress"),
+        "score": float(session.get("total_marks_obtained", 0)) if session.get("total_marks_obtained") else None,
+        "max_score": float(test_paper.get("total_marks", 0)),
+        "duration": test_paper.get("duration_minutes"),
+        "questions": questions,
+        "created_at": session.get("created_at"),
+        "started_at": session.get("started_at"),
+        "completed_at": session.get("submitted_at")
+    }
 
 
 @router.post("/create", response_model=dict)
@@ -80,6 +141,7 @@ async def create_new_test(
 ):
     """
     Create a new test based on the request parameters.
+    Uses TestSessionManager to create test paper and start session.
     """
     user_id = current_user["user_id"]
     
@@ -110,19 +172,36 @@ async def create_new_test(
             difficulty=request.difficulty
         )
     
-    # Create the test
-    test_id = await create_test(
-        user_id=user_id,
+    # Create test paper using TestSessionManager
+    from decimal import Decimal
+    config = TestPaperConfig(
         title=request.title,
-        test_type=request.type,
-        questions=[q.model_dump() for q in questions],
-        duration=request.duration,
         subject=request.subject,
-        subject_id=request.subject_id
+        grade_level=request.get("grade_level", 10),  # Default to grade 10
+        duration_minutes=request.duration,
+        total_marks=Decimal(request.number_of_questions * 4),  # 4 marks per question
+        question_count=request.number_of_questions,
+        created_by=UUID(user_id),
+        paper_type=PaperType.CUSTOM,
+        is_published=True
+    )
+    
+    result = test_session_manager.create_test_paper(config)
+    
+    if not result.success:
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"Failed to create test paper: {result.error}"
+        )
+    
+    # Start a session for this test paper
+    session = test_session_manager.start_session(
+        paper_id=result.test_paper.id,
+        student_id=UUID(user_id)
     )
     
     return {
-        "test_id": test_id,
+        "test_id": str(session.id),
         "message": "Test created successfully"
     }
 
@@ -134,29 +213,35 @@ async def submit_test(
 ):
     """
     Submit test attempts and calculate score.
+    Uses TestSessionManager to submit session and calculate score with negative marking.
     Also saves navigation log and answer changes for journey analysis.
     """
     user_id = current_user["user_id"]
     
-    # Verify test belongs to user
-    test_result = supabase.table("tests")\
+    # Verify test session belongs to user
+    session_result = supabase.table("test_sessions")\
         .select("*")\
         .eq("id", request.test_id)\
-        .eq("user_id", user_id)\
+        .eq("student_id", user_id)\
         .execute()
     
-    if not test_result.data:
+    if not session_result.data:
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,
-            detail="Test not found"
+            detail="Test session not found"
         )
     
-    # Submit attempts and calculate score
-    result = await submit_test_attempts(
-        test_id=request.test_id,
-        user_id=user_id,
+    # Submit session using TestSessionManager
+    result = test_session_manager.submit_session(
+        session_id=UUID(str(request.test_id)),
         attempts=request.attempts
     )
+    
+    if not result.success:
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"Failed to submit test: {result.error}"
+        )
     
     # Save navigation log and answer changes for time analysis
     from app.services.time_analysis_service import save_navigation_log, save_answer_changes
@@ -171,7 +256,16 @@ async def submit_test(
         # Don't fail submission if tracking fails
         print(f"Warning: Failed to save tracking data: {str(e)}")
     
-    return result
+    return {
+        "test_id": str(request.test_id),
+        "score": float(result.total_marks),
+        "max_score": float(result.max_marks),
+        "percentage": float(result.percentage),
+        "rank": result.rank,
+        "correct_count": result.correct_count,
+        "attempted_count": result.attempted_count,
+        "message": "Test submitted successfully"
+    }
 
 
 @router.patch("/{test_id}/start")
@@ -180,23 +274,24 @@ async def start_test(
     current_user: dict = Depends(get_current_user)
 ):
     """
-    Mark test as started.
+    Mark test session as started.
+    Updates test_sessions table.
     """
     user_id = current_user["user_id"]
     
-    result = supabase.table("tests")\
+    result = supabase.table("test_sessions")\
         .update({
             "status": "in_progress",
             "started_at": datetime.utcnow().isoformat()
         })\
         .eq("id", test_id)\
-        .eq("user_id", user_id)\
+        .eq("student_id", user_id)\
         .execute()
     
     if not result.data:
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,
-            detail="Test not found"
+            detail="Test session not found"
         )
     
     return {"message": "Test started"}
@@ -208,20 +303,21 @@ async def delete_test(
     current_user: dict = Depends(get_current_user)
 ):
     """
-    Delete a test.
+    Delete a test session.
+    Deletes from test_sessions table (attempts cascade delete automatically).
     """
     user_id = current_user["user_id"]
     
-    result = supabase.table("tests")\
+    result = supabase.table("test_sessions")\
         .delete()\
         .eq("id", test_id)\
-        .eq("user_id", user_id)\
+        .eq("student_id", user_id)\
         .execute()
     
     if not result.data:
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,
-            detail="Test not found"
+            detail="Test session not found"
         )
     
     return {"message": "Test deleted successfully"}
@@ -233,27 +329,28 @@ async def get_test_attempts(
     current_user: dict = Depends(get_current_user)
 ):
     """
-    Get all attempts for a specific test.
+    Get all attempts for a specific test session.
+    Uses new attempts table.
     """
     user_id = current_user["user_id"]
     
-    # Verify test belongs to user
-    test_result = supabase.table("tests")\
+    # Verify test session belongs to user
+    session_result = supabase.table("test_sessions")\
         .select("id")\
         .eq("id", test_id)\
-        .eq("user_id", user_id)\
+        .eq("student_id", user_id)\
         .execute()
     
-    if not test_result.data:
+    if not session_result.data:
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,
-            detail="Test not found"
+            detail="Test session not found"
         )
     
-    # Get attempts
-    attempts_result = supabase.table("test_attempts")\
+    # Get attempts from new attempts table
+    attempts_result = supabase.table("attempts")\
         .select("*")\
-        .eq("test_id", test_id)\
+        .eq("session_id", test_id)\
         .execute()
     
     return attempts_result.data
@@ -266,58 +363,49 @@ async def get_test_results(
 ):
     """
     Get detailed test results including question-by-question breakdown.
+    Uses new test_sessions, attempts, and questions tables.
     """
     user_id = current_user["user_id"]
     
-    # Get test details
-    test_result = supabase.table("tests")\
-        .select("*")\
+    # Get test session with test paper details
+    session_result = supabase.table("test_sessions")\
+        .select("*, test_papers!inner(*)")\
         .eq("id", test_id)\
-        .eq("user_id", user_id)\
+        .eq("student_id", user_id)\
         .execute()
     
-    if not test_result.data:
+    if not session_result.data:
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,
-            detail="Test not found"
+            detail="Test session not found"
         )
     
-    test = test_result.data[0]
+    session = session_result.data[0]
+    test_paper = session.get("test_papers", {})
     
-    # Get all attempts for this test
-    attempts_result = supabase.table("test_attempts")\
-        .select("*")\
-        .eq("test_id", test_id)\
+    # Get all attempts for this session with question details
+    attempts_result = supabase.table("attempts")\
+        .select("*, questions!inner(*)")\
+        .eq("session_id", test_id)\
         .execute()
     
     attempts = attempts_result.data
     
-    # Get question details
+    # Get topic names for questions
     question_ids = [a["question_id"] for a in attempts]
-    questions_result = supabase.table("repository_questions")\
-        .select("*")\
+    questions_result = supabase.table("questions")\
+        .select("id, topic_id, topics!inner(id, name, chapters!inner(id, name))")\
         .in_("id", question_ids)\
         .execute()
     
-    question_map = {q["id"]: q for q in questions_result.data}
-    
-    # Get topic names
-    topic_ids = list(set([q.get("topic_id") for q in questions_result.data if q.get("topic_id")]))
-    topics_result = supabase.table("topics")\
-        .select("id, name")\
-        .in_("id", topic_ids)\
-        .execute()
-    
-    topic_map = {t["id"]: t["name"] for t in topics_result.data}
-    
-    # Get subject names
-    subject_ids = list(set([q.get("subject_id") for q in questions_result.data if q.get("subject_id")]))
-    subjects_result = supabase.table("subjects")\
-        .select("id, name")\
-        .in_("id", subject_ids)\
-        .execute()
-    
-    subject_map = {s["id"]: s["name"] for s in subjects_result.data}
+    question_topic_map = {}
+    for q in questions_result.data:
+        topic = q.get("topics", {})
+        chapter = topic.get("chapters", {})
+        question_topic_map[q["id"]] = {
+            "topic": topic.get("name", "Unknown"),
+            "chapter": chapter.get("name", "Unknown")
+        }
     
     # Build detailed attempts list
     detailed_attempts = []
@@ -325,34 +413,39 @@ async def get_test_results(
     topic_stats = {}
     
     for attempt in attempts:
-        question = question_map.get(attempt["question_id"])
-        if not question:
-            continue
-        
-        topic_id = question.get("topic_id")
-        topic_name = topic_map.get(topic_id, "Unknown")
-        subject_name = subject_map.get(question.get("subject_id"), "Unknown")
+        question = attempt.get("questions", {})
+        question_id = attempt["question_id"]
+        topic_info = question_topic_map.get(question_id, {"topic": "Unknown", "chapter": "Unknown"})
+        topic_name = topic_info["topic"]
         
         # Track topic stats
         if topic_name not in topic_stats:
             topic_stats[topic_name] = {"correct": 0, "total": 0}
         
         topic_stats[topic_name]["total"] += 1
-        if attempt["is_correct"]:
+        if attempt.get("is_correct"):
             topic_stats[topic_name]["correct"] += 1
         
-        total_time += attempt.get("time_spent", 0)
+        total_time += attempt.get("time_spent_seconds", 0)
+        
+        # Get correct answer
+        answer_result = supabase.table("answers")\
+            .select("correct_answer")\
+            .eq("question_id", question_id)\
+            .execute()
+        
+        correct_answer = answer_result.data[0].get("correct_answer") if answer_result.data else None
         
         detailed_attempts.append({
-            "question_id": attempt["question_id"],
-            "question_text": question["question_text"],
-            "selected_answer": attempt["selected_answer"],
-            "correct_answer": question["correct_answer"],
-            "is_correct": attempt["is_correct"],
-            "time_spent": attempt.get("time_spent", 0),
-            "marked_for_review": attempt.get("marked_for_review", False),
+            "question_id": question_id,
+            "question_text": question.get("question_text", ""),
+            "selected_answer": attempt.get("student_answer"),
+            "correct_answer": correct_answer,
+            "is_correct": attempt.get("is_correct", False),
+            "time_spent": attempt.get("time_spent_seconds", 0),
+            "marked_for_review": attempt.get("flagged", False),
             "topic": topic_name,
-            "subject": subject_name
+            "subject": test_paper.get("subject", "Unknown")
         })
     
     # Build topic breakdown
@@ -367,12 +460,12 @@ async def get_test_results(
     ]
     
     return {
-        "test_id": test_id,
-        "title": test["title"],
-        "score": test.get("score", 0),
-        "max_score": test.get("max_score", len(attempts) * 4),
+        "test_id": str(test_id),
+        "title": test_paper.get("title", ""),
+        "score": float(session.get("total_marks_obtained", 0)),
+        "max_score": float(test_paper.get("total_marks", 0)),
         "total_questions": len(attempts),
-        "correct_answers": sum(1 for a in attempts if a["is_correct"]),
+        "correct_answers": sum(1 for a in attempts if a.get("is_correct")),
         "time_taken": total_time,
         "attempts": detailed_attempts,
         "topic_breakdown": topic_breakdown

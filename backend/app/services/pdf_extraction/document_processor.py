@@ -112,7 +112,7 @@ class ProcessingResult(BaseModel):
 class DocumentProcessor:
     """Run local PDF extraction and persist the generated artifacts on disk."""
 
-    def __init__(self, config: Optional[PDFExtractionConfig] = None):
+    def __init__(self, config: Optional[PDFExtractionConfig] = None, supabase_client=None):
         self.config = config or get_config()
         self.client = SarvamAI(api_subscription_key=self.config.sarvam_api_key)
         self.storage_root = self._resolve_storage_path(self.config.image_storage_path)
@@ -120,6 +120,7 @@ class DocumentProcessor:
         self._jobs: Dict[str, ProcessingStatus] = {}
         self._results: Dict[str, ProcessingResult] = {}
         self._progress_callbacks: Dict[str, Callable[[ProcessingStatus], None]] = {}
+        self.supabase_client = supabase_client  # Optional Supabase client for database integration
 
         logger.info("DocumentProcessor initialized for local extraction at %s", self.storage_root)
 
@@ -135,6 +136,10 @@ class DocumentProcessor:
             started_at=now,
             updated_at=now,
         )
+        
+        # Create extraction_jobs record in database if Supabase client is available
+        if self.supabase_client:
+            self._create_extraction_job_record(job_id)
 
     def process_pdf(
         self,
@@ -157,19 +162,39 @@ class DocumentProcessor:
 
         if job_id not in self._jobs:
             self.queue_job(job_id)
+        
+        # Update extraction_jobs with source PDF filename
+        if self.supabase_client:
+            try:
+                self.supabase_client.table("extraction_jobs").update({
+                    "source_pdf_filename": source_pdf_path.name,
+                    "source_pdf_path": str(source_pdf_path)
+                }).eq("id", job_id).execute()
+            except Exception as e:
+                logger.error(f"Failed to update source_pdf_filename: {e}")
 
         logger.info("Starting local PDF extraction job %s for %s", job_id, source_pdf_path)
 
         try:
             self._update_job_status(job_id, ProcessingStage.VALIDATION, 5.0)
+            self._update_extraction_job_stage(job_id, ProcessingStage.VALIDATION, 5.0)
+            
             validation = self.validate_pdf_structure(str(source_pdf_path))
             if not validation.is_valid:
                 raise ValueError(", ".join(validation.errors) or "PDF validation failed")
 
             self._update_job_status(job_id, ProcessingStage.UPLOAD, 20.0)
+            self._update_extraction_job_stage(job_id, ProcessingStage.UPLOAD, 20.0)
+            
+            # Get total pages for database tracking
+            total_pages = self._get_pdf_page_count(str(source_pdf_path))
+            self._update_extraction_job_stage(job_id, ProcessingStage.UPLOAD, 20.0, total_pages=total_pages)
+            
             extracted_path = self._extract_pdf_content(str(source_pdf_path), job_id)
 
             self._update_job_status(job_id, ProcessingStage.EXTRACTION, 85.0)
+            self._update_extraction_job_stage(job_id, ProcessingStage.EXTRACTION, 85.0)
+            
             artifacts = self._collect_artifacts(
                 job_id=job_id,
                 metadata=metadata,
@@ -178,6 +203,7 @@ class DocumentProcessor:
             )
 
             self._update_job_status(job_id, ProcessingStage.COMPLETED, 100.0)
+            self._update_extraction_job_stage(job_id, ProcessingStage.COMPLETED, 100.0)
 
             result = ProcessingResult(
                 success=True,
@@ -195,6 +221,7 @@ class DocumentProcessor:
         except Exception as exc:
             logger.error("Job %s failed: %s", job_id, exc, exc_info=True)
             self._update_job_status(job_id, ProcessingStage.FAILED, None, error=str(exc))
+            self._update_extraction_job_stage(job_id, ProcessingStage.FAILED, 0.0, error=str(exc))
 
             result = ProcessingResult(
                 success=False,
@@ -566,3 +593,151 @@ class DocumentProcessor:
             "failed_jobs": len(failed_jobs),
             "jobs": failed_jobs,
         }
+    
+    def _create_extraction_job_record(self, job_id: str) -> None:
+        """
+        Create extraction_jobs record in database.
+        
+        Requirements: 7.1, 23.1
+        """
+        try:
+            from datetime import datetime, timezone
+            from uuid import UUID
+            
+            job_data = {
+                "id": job_id,
+                "source_pdf_filename": "unknown",  # Will be updated in process_pdf
+                "stage": ProcessingStage.QUEUED.value,
+                "progress": 0.0,
+                "pages_processed": 0,
+                "questions_extracted": 0,
+                "started_at": datetime.now(timezone.utc).isoformat(),
+                "created_at": datetime.now(timezone.utc).isoformat()
+            }
+            
+            self.supabase_client.table("extraction_jobs").insert(job_data).execute()
+            logger.info(f"Created extraction_jobs record for job_id={job_id}")
+            
+        except Exception as e:
+            logger.error(f"Failed to create extraction_jobs record: {e}", exc_info=True)
+    
+    def _update_extraction_job_stage(
+        self,
+        job_id: str,
+        stage: ProcessingStage,
+        progress: float,
+        error: Optional[str] = None,
+        total_pages: Optional[int] = None,
+        pages_processed: Optional[int] = None,
+        questions_extracted: Optional[int] = None
+    ) -> None:
+        """
+        Update extraction_jobs record with current stage and progress.
+        
+        Requirements: 7.1, 23.5
+        """
+        if not self.supabase_client:
+            return
+        
+        try:
+            from datetime import datetime, timezone
+            
+            update_data = {
+                "stage": stage.value,
+                "progress": progress,
+                "updated_at": datetime.now(timezone.utc).isoformat()
+            }
+            
+            if error:
+                update_data["error"] = error
+            
+            if total_pages is not None:
+                update_data["total_pages"] = total_pages
+            
+            if pages_processed is not None:
+                update_data["pages_processed"] = pages_processed
+            
+            if questions_extracted is not None:
+                update_data["questions_extracted"] = questions_extracted
+            
+            # Set completed_at and processing_time_seconds when completed or failed
+            if stage in [ProcessingStage.COMPLETED, ProcessingStage.FAILED]:
+                update_data["completed_at"] = datetime.now(timezone.utc).isoformat()
+                
+                # Calculate processing time
+                job_record = self.supabase_client.table("extraction_jobs").select("started_at").eq("id", job_id).execute()
+                if job_record.data and len(job_record.data) > 0:
+                    started_at_str = job_record.data[0]["started_at"]
+                    if started_at_str:
+                        started_at = datetime.fromisoformat(started_at_str.replace('Z', '+00:00'))
+                        completed_at = datetime.now(timezone.utc)
+                        processing_time = (completed_at - started_at).total_seconds()
+                        update_data["processing_time_seconds"] = processing_time
+            
+            self.supabase_client.table("extraction_jobs").update(update_data).eq("id", job_id).execute()
+            logger.debug(f"Updated extraction_jobs record: job_id={job_id}, stage={stage.value}, progress={progress}")
+            
+        except Exception as e:
+            logger.error(f"Failed to update extraction_jobs record: {e}", exc_info=True)
+    
+    def _write_extraction_pages_and_blocks(
+        self,
+        job_id: str,
+        page_num: int,
+        page_data: Dict[str, Any]
+    ) -> None:
+        """
+        Write extraction_pages and extraction_blocks to database.
+        
+        Requirements: 7.2, 7.3, 23.2
+        """
+        if not self.supabase_client:
+            return
+        
+        try:
+            from datetime import datetime, timezone
+            from uuid import uuid4
+            from decimal import Decimal
+            
+            # Create extraction_pages record
+            page_id = str(uuid4())
+            page_record = {
+                "id": page_id,
+                "job_id": job_id,
+                "page_num": page_num,
+                "image_width": page_data.get("image_width"),
+                "image_height": page_data.get("image_height"),
+                "raw_json_path": page_data.get("raw_json_path"),
+                "block_count": len(page_data.get("blocks", [])),
+                "created_at": datetime.now(timezone.utc).isoformat()
+            }
+            
+            self.supabase_client.table("extraction_pages").insert(page_record).execute()
+            logger.debug(f"Created extraction_pages record: page_id={page_id}, page_num={page_num}")
+            
+            # Create extraction_blocks records
+            blocks = page_data.get("blocks", [])
+            for block_index, block in enumerate(blocks):
+                block_id = block.get("block_id", str(uuid4()))
+                block_record = {
+                    "id": block_id,
+                    "page_id": page_id,
+                    "job_id": job_id,
+                    "block_index": block_index,
+                    "layout_tag": block.get("layout_tag", "paragraph"),
+                    "confidence": float(block.get("confidence", 0.0)),
+                    "reading_order": block.get("reading_order"),
+                    "text": block.get("text"),
+                    "x1": float(block.get("x1")) if block.get("x1") is not None else None,
+                    "y1": float(block.get("y1")) if block.get("y1") is not None else None,
+                    "x2": float(block.get("x2")) if block.get("x2") is not None else None,
+                    "y2": float(block.get("y2")) if block.get("y2") is not None else None,
+                    "raw_block": block
+                }
+                
+                self.supabase_client.table("extraction_blocks").insert(block_record).execute()
+            
+            logger.debug(f"Created {len(blocks)} extraction_blocks records for page {page_num}")
+            
+        except Exception as e:
+            logger.error(f"Failed to write extraction_pages/blocks: {e}", exc_info=True)

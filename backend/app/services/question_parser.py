@@ -1,6 +1,6 @@
 from typing import List, Dict, Any
-from app.models.upload import ExtractedQuestion
-from app.models.test import Question, Option
+from app.models.upload import ExtractedQuestion  # Legacy model for backward compatibility
+from app.models.test import Question, Option  # Legacy models for backward compatibility
 import uuid
 
 
