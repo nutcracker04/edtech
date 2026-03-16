@@ -19,6 +19,8 @@ import Landing from "./pages/Landing";
 import Tests from "./pages/Tests";
 import Settings from "./pages/Settings";
 import AdminDashboard from "./pages/admin/AdminDashboard";
+import ExtractionManagement from "./pages/admin/ExtractionManagement";
+import PDFUpload from "./pages/admin/PDFUpload";
 import TestTaking from "./pages/TestTaking";
 import TestResults from "./pages/TestResults";
 import NotFound from "./pages/NotFound";
@@ -98,6 +100,18 @@ const App = () => {
                 <Route path="/admin" element={
                   <ProtectedRoute>
                     <AdminDashboard />
+                  </ProtectedRoute>
+                } />
+
+                <Route path="/admin/pdf-upload" element={
+                  <ProtectedRoute>
+                    <PDFUpload />
+                  </ProtectedRoute>
+                } />
+
+                <Route path="/admin/extractions/*" element={
+                  <ProtectedRoute>
+                    <ExtractionManagement />
                   </ProtectedRoute>
                 } />
 

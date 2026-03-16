@@ -9,11 +9,28 @@ const AdminDashboard = () => {
 
     const adminActions = [
         {
+            title: "PDF Upload & Processing",
+            description: "Upload PDF books and start extraction process.",
+            path: "/admin/pdf-upload",
+            color: "text-blue-500",
+            bgColor: "bg-blue-500/10",
+            icon: "📄",
+        },
+        {
+            title: "Extraction Management",
+            description: "Manage book extraction jobs, review extracted content, and finalize questions.",
+            path: "/admin/extractions",
+            color: "text-purple-500",
+            bgColor: "bg-purple-500/10",
+            icon: "📚",
+        },
+        {
             title: "Admin Panel",
             description: "Manage platform settings and configurations.",
             path: "/admin/settings",
-            color: "text-blue-500",
-            bgColor: "bg-blue-500/10",
+            color: "text-green-500",
+            bgColor: "bg-green-500/10",
+            icon: "⚙️",
         },
     ];
 
@@ -31,7 +48,7 @@ const AdminDashboard = () => {
                             <CardHeader className="flex flex-row items-center gap-4">
                                 <div className={`${action.bgColor} ${action.color} p-3 rounded-xl`}>
                                     <div className="h-6 w-6 flex items-center justify-center">
-                                        <span className="text-lg">⚙️</span>
+                                        <span className="text-lg">{action.icon}</span>
                                     </div>
                                 </div>
                                 <div>

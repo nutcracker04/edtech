@@ -110,7 +110,7 @@ class StructureAnalyzer:
         confidence = self._calculate_structure_confidence(chapters, pages)
         logger.info(f"Structure confidence: {confidence:.2f}")
         
-        # Handle low structure confidence (Error Scenario 1)
+        # Handle low structure confidence - allow extraction to proceed with warning
         if confidence < self.config.structure_confidence_threshold:
             structure_details = {
                 "chapter_count": len(chapters),
@@ -126,18 +126,14 @@ class StructureAnalyzer:
                 ),
             }
             logger.warning(
-                "Low structure confidence: %.2f (threshold: %.2f). Details: %s",
+                "Low structure confidence: %.2f (threshold: %.2f). Details: %s. "
+                "Proceeding with extraction anyway.",
                 confidence,
                 self.config.structure_confidence_threshold,
                 structure_details,
             )
-            raise ValueError(
-                f"Low structure confidence: {confidence:.2f} "
-                f"(threshold: {self.config.structure_confidence_threshold}). "
-                f"Manual structure annotation may be required. "
-                f"Detected: {structure_details['chapter_count']} chapters, "
-                f"{structure_details['topic_count']} topics."
-            )
+            # Don't raise error - allow extraction to proceed
+            # This allows PDFs without clear chapter markers to still be processed
         
         # Create document structure
         structure = DocumentStructure(

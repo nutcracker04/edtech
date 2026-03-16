@@ -37,6 +37,8 @@ class ExtractionJob(BaseModel):
     
     Requirements: 7.1, 7.2, 7.3, 7.4, 7.5
     """
+    model_config = {"from_attributes": True}
+    
     id: UUID
     book_id: Optional[UUID] = None
     source_pdf_filename: str
