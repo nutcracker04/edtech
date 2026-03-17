@@ -18,6 +18,12 @@ from datetime import datetime, timezone
 from app.services.pdf_extraction.document_processor import DocumentProcessor
 from app.services.pdf_extraction.models import BookMetadata
 
+try:
+    from app.database import get_supabase, MissingSupabaseConfigurationError
+except ImportError:
+    get_supabase = None
+    MissingSupabaseConfigurationError = Exception
+
 
 router = APIRouter(prefix="/api/pdf", tags=["pdf-processing"])
 BACKEND_ROOT = Path(__file__).resolve().parents[2]
@@ -28,11 +34,22 @@ DATA_ROOT = BACKEND_ROOT / "data"
 processor: Optional[DocumentProcessor] = None
 
 
+def _get_supabase_client():
+    """Get Supabase client when configured. Returns None if not available."""
+    if get_supabase is None:
+        return None
+    try:
+        return get_supabase()
+    except MissingSupabaseConfigurationError:
+        return None
+
+
 def get_processor() -> DocumentProcessor:
     global processor
     if processor is None:
         try:
-            processor = DocumentProcessor()
+            supabase_client = _get_supabase_client()
+            processor = DocumentProcessor(supabase_client=supabase_client)
         except Exception as exc:
             raise HTTPException(
                 status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
@@ -118,9 +135,30 @@ def save_upload_file(upload_file: UploadFile, destination: str) -> None:
 
 # Background task for processing PDF
 def process_pdf_background(job_id: str, pdf_path: str, metadata: BookMetadata) -> None:
-    """Background task to process PDF"""
+    """Background task to process PDF. Uploads to Supabase storage when configured."""
+    proc = get_processor()
     try:
-        get_processor().process_pdf(pdf_path, metadata, job_id=job_id)
+        # Upload PDF to Supabase storage when available (database-backed flow)
+        supabase = _get_supabase_client()
+        if supabase:
+            try:
+                from uuid import UUID
+                from app.services.storage_manager import StorageManager
+                storage = StorageManager(supabase)
+                with open(pdf_path, "rb") as f:
+                    pdf_data = f.read()
+                storage.upload_source_pdf(
+                    job_id=UUID(job_id),
+                    pdf_path=pdf_path,
+                    pdf_data=pdf_data,
+                )
+            except Exception as storage_exc:
+                import logging
+                logging.getLogger(__name__).warning(
+                    "Failed to upload PDF to Supabase storage, continuing with local: %s",
+                    storage_exc,
+                )
+        proc.process_pdf(pdf_path, metadata, job_id=job_id)
     except Exception:
         # Error is already logged and stored in the processor result.
         pass
@@ -190,7 +228,8 @@ async def upload_pdf(
     
     # Generate job ID
     job_id = str(uuid.uuid4())
-    get_processor().queue_job(job_id)
+    source_filename = file.filename or "upload.pdf"
+    get_processor().queue_job(job_id, source_filename=source_filename)
     
     # Save uploaded file
     upload_dir = DATA_ROOT / "uploads"
@@ -232,8 +271,32 @@ async def get_processing_status(job_id: str):
     
     **Progress:**
     - 0-100: Percentage of completion
-    - Progress is updated as the job moves through different stages
+    - Progress is updated in real time in the database when Supabase is configured
     """
+    # Prefer database when Supabase is configured
+    supabase = _get_supabase_client()
+    if supabase:
+        try:
+            result = supabase.table("extraction_jobs").select("*").eq("id", job_id).execute()
+            if result.data and len(result.data) > 0:
+                row = result.data[0]
+                stage = row.get("stage", "queued")
+                progress = float(row.get("progress", 0) or 0)
+                is_complete = stage in ("completed", "failed")
+                return StatusResponse(
+                    job_id=job_id,
+                    status=stage,
+                    progress=progress,
+                    current_stage=stage,
+                    is_complete=is_complete,
+                    error=row.get("error"),
+                    current_chapter=None,
+                    current_topic=None,
+                    questions_extracted=int(row.get("questions_extracted", 0) or 0),
+                )
+        except Exception:
+            pass  # Fall through to in-memory
+
     status_info = get_processor().get_processing_status(job_id)
     
     if status_info is None:
