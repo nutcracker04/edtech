@@ -1,12 +1,14 @@
 /**
  * Extraction Detail View Component
- * Displays detailed information about a specific extraction job
+ * Displays detailed information about a specific extraction job.
+ * Subscribes to Supabase Realtime for live progress updates.
  */
 
 import React, { useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useExtractionManagement } from '@/contexts/ExtractionManagementContext';
 import { adminExtractionService } from '@/services/adminExtractionService';
+import { supabase } from '@/integrations/supabase/client';
 
 export function ExtractionDetailView() {
   const { jobId } = useParams<{ jobId: string }>();
@@ -39,6 +41,37 @@ export function ExtractionDetailView() {
 
     fetchJobDetails();
   }, [jobId, setCurrentJob, setCurrentJobLoading, setCurrentJobError]);
+
+  // Real-time subscription for this job's progress updates
+  useEffect(() => {
+    if (!jobId) return;
+
+    const channel = supabase
+      .channel(`extraction-job-${jobId}`)
+      .on(
+        'postgres_changes',
+        {
+          event: 'UPDATE',
+          schema: 'public',
+          table: 'extraction_jobs',
+          filter: `id=eq.${jobId}`,
+        },
+        async () => {
+          // Refetch full job details to get latest progress/stage/statistics
+          try {
+            const jobDetail = await adminExtractionService.getJobDetails(jobId);
+            setCurrentJob(jobDetail);
+          } catch {
+            // Ignore refetch errors
+          }
+        }
+      )
+      .subscribe();
+
+    return () => {
+      supabase.removeChannel(channel);
+    };
+  }, [jobId, setCurrentJob]);
 
   useEffect(() => {
     if (!jobId) return;

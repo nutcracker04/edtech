@@ -1,17 +1,29 @@
 /**
  * Extraction List View Component
- * Displays paginated list of extraction jobs with filtering and sorting
+ * Displays paginated list of extraction jobs with filtering and sorting.
+ * Subscribes to Supabase Realtime for live progress updates.
  */
 
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useExtractionManagement } from '@/contexts/ExtractionManagementContext';
 import { adminExtractionService } from '@/services/adminExtractionService';
+import { supabase } from '@/integrations/supabase/client';
 import { ArrowLeft, Trash2 } from 'lucide-react';
+import type { ExtractionJob } from '@/types/admin';
 
 export function ExtractionListView() {
   const navigate = useNavigate();
-  const { state, setJobs, setJobsLoading, setJobsError, setJobPagination } = useExtractionManagement();
+  const {
+    state,
+    setJobs,
+    setJobsLoading,
+    setJobsError,
+    setJobPagination,
+    updateJobInList,
+    upsertJobInList,
+    removeJobFromList,
+  } = useExtractionManagement();
   const [deletingJobId, setDeletingJobId] = useState<string | null>(null);
 
   useEffect(() => {
@@ -23,10 +35,6 @@ export function ExtractionListView() {
           sort: state.jobSort,
           pagination: state.jobPagination,
         });
-        console.log('Received jobs from API:', jobs);
-        console.log('Jobs type:', typeof jobs);
-        console.log('Jobs is array:', Array.isArray(jobs));
-        console.log('Jobs length:', jobs?.length);
         setJobs(jobs);
       } catch (error) {
         console.error('Error fetching jobs:', error);
@@ -38,6 +46,34 @@ export function ExtractionListView() {
 
     fetchJobs();
   }, [state.jobFilters, state.jobSort, state.jobPagination, setJobs, setJobsLoading, setJobsError]);
+
+  // Real-time subscription for extraction job progress updates
+  useEffect(() => {
+    const channel = supabase
+      .channel('extraction-jobs-list')
+      .on(
+        'postgres_changes',
+        {
+          event: '*',
+          schema: 'public',
+          table: 'extraction_jobs',
+        },
+        (payload) => {
+          if (payload.eventType === 'INSERT' && payload.new) {
+            upsertJobInList(payload.new as ExtractionJob);
+          } else if (payload.eventType === 'UPDATE' && payload.new) {
+            updateJobInList((payload.new as ExtractionJob).id, payload.new as Partial<ExtractionJob>);
+          } else if (payload.eventType === 'DELETE' && payload.old) {
+            removeJobFromList((payload.old as ExtractionJob).id);
+          }
+        }
+      )
+      .subscribe();
+
+    return () => {
+      supabase.removeChannel(channel);
+    };
+  }, [updateJobInList, upsertJobInList, removeJobFromList]);
 
   const handleJobClick = (jobId: string) => {
     navigate(`/admin/extractions/${jobId}`);

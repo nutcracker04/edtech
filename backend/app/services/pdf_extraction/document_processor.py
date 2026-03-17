@@ -124,7 +124,7 @@ class DocumentProcessor:
 
         logger.info("DocumentProcessor initialized for local extraction at %s", self.storage_root)
 
-    def queue_job(self, job_id: str) -> None:
+    def queue_job(self, job_id: str, source_filename: str = "unknown") -> None:
         """Create a queued job entry so status polling works immediately after upload."""
 
         now = time.time()
@@ -139,7 +139,7 @@ class DocumentProcessor:
         
         # Create extraction_jobs record in database if Supabase client is available
         if self.supabase_client:
-            self._create_extraction_job_record(job_id)
+            self._create_extraction_job_record(job_id, source_filename)
 
     def process_pdf(
         self,
@@ -366,12 +366,21 @@ class DocumentProcessor:
             chunk_extract_dir.mkdir(parents=True, exist_ok=True)
 
             progress = 20.0 + (index / len(chunk_paths)) * 65.0
+            pages_in_chunk = min(max_pages_per_job, total_pages - (index - 1) * max_pages_per_job)
+            pages_processed = min(index * max_pages_per_job, total_pages)
             self._update_job_status(
                 job_id,
                 ProcessingStage.EXTRACTION,
                 progress,
                 current_chapter=f"Chunk {index}/{len(chunk_paths)}",
                 current_topic=f"Pages {self._chunk_page_label(chunk_path)}",
+            )
+            self._update_extraction_job_stage(
+                job_id,
+                ProcessingStage.EXTRACTION,
+                progress,
+                pages_processed=pages_processed,
+                total_pages=total_pages,
             )
 
             self._extract_single_pdf(
@@ -622,7 +631,7 @@ class DocumentProcessor:
             "jobs": failed_jobs,
         }
     
-    def _create_extraction_job_record(self, job_id: str) -> None:
+    def _create_extraction_job_record(self, job_id: str, source_filename: str = "unknown") -> None:
         """
         Create extraction_jobs record in database.
         
@@ -630,11 +639,11 @@ class DocumentProcessor:
         """
         try:
             from datetime import datetime, timezone
-            from uuid import UUID
             
             job_data = {
                 "id": job_id,
-                "source_pdf_filename": "unknown",  # Will be updated in process_pdf
+                "source_pdf_filename": source_filename,
+                "source_pdf_path": f"pending/{source_filename}",  # Updated in process_pdf
                 "stage": ProcessingStage.QUEUED.value,
                 "progress": 0.0,
                 "pages_processed": 0,
