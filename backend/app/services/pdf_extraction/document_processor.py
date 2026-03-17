@@ -1,14 +1,13 @@
 """
-DocumentProcessor orchestration component for local PDF extraction.
+DocumentProcessor orchestration component for PDF extraction.
 
-This implementation keeps the local flow deliberately simple:
-- validate the uploaded PDF
-- send it to Sarvam Document Intelligence
-- download the extracted markdown/images locally
-- write a manifest that points to all generated artifacts
-
-That gives a reliable local setup for verifying extraction before migrating the
-storage layer to Supabase later.
+Flow (local during processing, DB for persistence):
+1. Validate PDF, upload to Sarvam Document Intelligence API
+2. Sarvam returns a zip (download required) -> extract to local temp dir
+3. Build combined.md from chunk outputs, run structure analysis & question extraction
+4. Write raw_questions, extraction_questions, chapters, topics -> Supabase DB
+5. Upload combined.md and images -> Supabase extraction-artifacts bucket
+6. Local files remain for debugging; final data lives in Supabase
 """
 
 from __future__ import annotations
@@ -365,6 +364,12 @@ class DocumentProcessor:
                 extract_destination=extracted_dir,
                 archive_prefix="full_document",
             )
+            self._build_combined_markdown(extracted_dir)
+            self._write_extraction_pages_from_metadata(
+                job_id,
+                extracted_dir,
+                max_pages_per_chunk=max_pages_per_job,
+            )
             return str(extracted_dir)
 
         chunk_dir = job_output_dir / "chunks"
@@ -409,6 +414,11 @@ class DocumentProcessor:
             )
 
         self._build_combined_markdown(extracted_dir)
+        self._write_extraction_pages_from_metadata(
+            job_id,
+            extracted_dir,
+            max_pages_per_chunk=max_pages_per_job,
+        )
         return str(extracted_dir)
 
     def _get_pdf_page_count(self, pdf_path: str) -> int:
@@ -529,18 +539,32 @@ class DocumentProcessor:
         return chunk_path.stem
 
     def _build_combined_markdown(self, extracted_dir: Path) -> None:
-        markdown_files = sorted(
-            path for path in extracted_dir.rglob("*.md") if path.name != "combined.md"
+        max_pages = max(1, self.config.max_pages_per_job)
+        chunk_dirs = sorted(
+            d for d in extracted_dir.iterdir()
+            if d.is_dir() and d.name.startswith("chunk_")
         )
-        if not markdown_files:
-            return
 
         combined_parts = []
-        for markdown_path in markdown_files:
-            relative_path = markdown_path.relative_to(extracted_dir)
-            content = markdown_path.read_text(encoding="utf-8", errors="ignore").strip()
-            combined_parts.append(f"<!-- Source: {relative_path} -->\n\n{content}")
+        if chunk_dirs:
+            for chunk_dir in chunk_dirs:
+                try:
+                    idx = int(chunk_dir.name.split("_")[1])
+                except (IndexError, ValueError):
+                    idx = 1
+                start_page = (idx - 1) * max_pages + 1
+                doc_path = chunk_dir / "document.md"
+                if doc_path.exists():
+                    content = doc_path.read_text(encoding="utf-8", errors="ignore").strip()
+                    combined_parts.append(f"<!-- Page {start_page} -->\n\n{content}")
+        else:
+            doc_path = extracted_dir / "document.md"
+            if doc_path.exists():
+                content = doc_path.read_text(encoding="utf-8", errors="ignore").strip()
+                combined_parts.append(f"<!-- Page 1 -->\n\n{content}")
 
+        if not combined_parts:
+            return
         (extracted_dir / "combined.md").write_text(
             "\n\n".join(part for part in combined_parts if part.strip()),
             encoding="utf-8",
@@ -756,40 +780,32 @@ class DocumentProcessor:
         self,
         job_id: str,
         page_num: int,
-        page_data: Dict[str, Any]
+        page_data: Dict[str, Any],
+        raw_json_path: Optional[str] = None,
     ) -> None:
         """
-        Write extraction_pages and extraction_blocks to database.
-        
-        Requirements: 7.2, 7.3, 23.2
+        Write extraction_pages and extraction_blocks to database per schema design.
+        Sarvam metadata has coordinates in block["coordinates"]; we flatten for DB.
         """
         if not self.supabase_client:
             return
-        
+
         try:
-            from datetime import datetime, timezone
-            from uuid import uuid4
-            from decimal import Decimal
-            
-            # Create extraction_pages record
             page_id = str(uuid4())
+            blocks = page_data.get("blocks", [])
             page_record = {
                 "id": page_id,
                 "job_id": job_id,
                 "page_num": page_num,
                 "image_width": page_data.get("image_width"),
                 "image_height": page_data.get("image_height"),
-                "raw_json_path": page_data.get("raw_json_path"),
-                "block_count": len(page_data.get("blocks", [])),
-                "created_at": datetime.now(timezone.utc).isoformat()
+                "raw_json_path": raw_json_path or page_data.get("raw_json_path"),
+                "block_count": len(blocks),
             }
-            
             self.supabase_client.table("extraction_pages").insert(page_record).execute()
-            logger.debug(f"Created extraction_pages record: page_id={page_id}, page_num={page_num}")
-            
-            # Create extraction_blocks records
-            blocks = page_data.get("blocks", [])
+
             for block_index, block in enumerate(blocks):
+                coords = block.get("coordinates") or {}
                 block_id = block.get("block_id", str(uuid4()))
                 block_record = {
                     "id": block_id,
@@ -800,16 +816,78 @@ class DocumentProcessor:
                     "confidence": float(block.get("confidence", 0.0)),
                     "reading_order": block.get("reading_order"),
                     "text": block.get("text"),
-                    "x1": float(block.get("x1")) if block.get("x1") is not None else None,
-                    "y1": float(block.get("y1")) if block.get("y1") is not None else None,
-                    "x2": float(block.get("x2")) if block.get("x2") is not None else None,
-                    "y2": float(block.get("y2")) if block.get("y2") is not None else None,
-                    "raw_block": block
+                    "x1": float(coords.get("x1")) if coords.get("x1") is not None else float(block.get("x1")) if block.get("x1") is not None else None,
+                    "y1": float(coords.get("y1")) if coords.get("y1") is not None else float(block.get("y1")) if block.get("y1") is not None else None,
+                    "x2": float(coords.get("x2")) if coords.get("x2") is not None else float(block.get("x2")) if block.get("x2") is not None else None,
+                    "y2": float(coords.get("y2")) if coords.get("y2") is not None else float(block.get("y2")) if block.get("y2") is not None else None,
+                    "raw_block": block,
                 }
-                
                 self.supabase_client.table("extraction_blocks").insert(block_record).execute()
-            
-            logger.debug(f"Created {len(blocks)} extraction_blocks records for page {page_num}")
-            
+
+            logger.debug("Wrote extraction_pages (page_num=%s) and %s blocks", page_num, len(blocks))
         except Exception as e:
-            logger.error(f"Failed to write extraction_pages/blocks: {e}", exc_info=True)
+            logger.error("Failed to write extraction_pages/blocks: %s", e, exc_info=True)
+
+    def _write_extraction_pages_from_metadata(
+        self,
+        job_id: str,
+        extracted_dir: Path,
+        max_pages_per_chunk: int = 10,
+    ) -> int:
+        """
+        Iterate Sarvam metadata (chunk_XXX/metadata/page_*.json or metadata/page_*.json)
+        and write extraction_pages + extraction_blocks to DB. Returns pages written.
+        """
+        if not self.supabase_client:
+            return 0
+
+        pages_written = 0
+        chunk_dirs = sorted(
+            d for d in extracted_dir.iterdir()
+            if d.is_dir() and d.name.startswith("chunk_")
+        )
+
+        if chunk_dirs:
+            for chunk_dir in chunk_dirs:
+                try:
+                    idx = int(chunk_dir.name.split("_")[1])
+                except (IndexError, ValueError):
+                    idx = len(chunk_dirs)
+                global_page_start = (idx - 1) * max_pages_per_chunk + 1
+                meta_dir = chunk_dir / "metadata"
+                if not meta_dir.exists():
+                    continue
+                page_files = sorted(meta_dir.glob("page_*.json"))
+                for pf in page_files:
+                    try:
+                        local_num = int(pf.stem.split("_")[1])
+                    except (IndexError, ValueError):
+                        continue
+                    global_page = global_page_start + local_num - 1
+                    try:
+                        page_data = json.loads(pf.read_text(encoding="utf-8"))
+                        self._write_extraction_pages_and_blocks(
+                            job_id, global_page, page_data,
+                            raw_json_path=str(pf.relative_to(extracted_dir)),
+                        )
+                        pages_written += 1
+                    except Exception as e:
+                        logger.warning("Failed to write page %s from %s: %s", global_page, pf, e)
+        else:
+            meta_dir = extracted_dir / "metadata"
+            if meta_dir.exists():
+                for pf in sorted(meta_dir.glob("page_*.json")):
+                    try:
+                        page_num = int(pf.stem.split("_")[1])
+                        page_data = json.loads(pf.read_text(encoding="utf-8"))
+                        self._write_extraction_pages_and_blocks(
+                            job_id, page_num, page_data,
+                            raw_json_path=str(pf.relative_to(extracted_dir)),
+                        )
+                        pages_written += 1
+                    except Exception as e:
+                        logger.warning("Failed to write page from %s: %s", pf, e)
+
+        if pages_written:
+            logger.info("Wrote %s extraction_pages and blocks to DB for job %s", pages_written, job_id)
+        return pages_written

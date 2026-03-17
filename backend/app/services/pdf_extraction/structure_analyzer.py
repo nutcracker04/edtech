@@ -173,6 +173,17 @@ class StructureAnalyzer:
         default_topic.answer_key_section = self._find_answer_key_section(
             pages, 0, len(pages), start_page
         )
+        # Fallback: when answer key exists but no questions section found, treat content
+        # before the answer key as questions (common textbook layout: questions first, answers at end)
+        if default_topic.questions_section is None and default_topic.answer_key_section is not None:
+            default_topic.questions_section = self._create_questions_section_from_content_before_answer_key(
+                pages, default_topic.answer_key_section, start_page
+            )
+            if default_topic.questions_section:
+                logger.info(
+                    "Using content-before-answer-key fallback for questions section (%d chars)",
+                    len(default_topic.questions_section.content),
+                )
         
         fallback_chapter = Chapter(
             chapter_number=1,
@@ -202,11 +213,18 @@ class StructureAnalyzer:
             List of page contents
         """
         # Look for page markers in various formats
-        # Common patterns: <!-- Page X -->, <!--Page X-->, [Page X], etc.
-        page_pattern = r'<!--\s*[Pp]age\s+(\d+)\s*-->'
-        
-        # Split by page markers
-        parts = re.split(page_pattern, markdown_content)
+        # Sarvam/OCR outputs: <!-- Page X -->, [Page X], --- Page X ---, etc.
+        page_patterns = [
+            r'<!--\s*[Pp]age\s+(\d+)\s*-->',
+            r'\[\s*[Pp]age\s+(\d+)\s*\]',
+            r'---\s*[Pp]age\s+(\d+)\s*---',
+        ]
+        parts = [markdown_content]
+        for page_pattern in page_patterns:
+            trial = re.split(page_pattern, markdown_content)
+            if len(trial) > 1:
+                parts = trial
+                break
         
         # If no page markers found, treat entire content as one page
         if len(parts) <= 1:
@@ -573,6 +591,10 @@ class StructureAnalyzer:
             default_topic.answer_key_section = self._find_answer_key_section(
                 chapter_pages, 0, len(chapter_pages), start_page
             )
+            if default_topic.questions_section is None and default_topic.answer_key_section is not None:
+                default_topic.questions_section = self._create_questions_section_from_content_before_answer_key(
+                    chapter_pages, default_topic.answer_key_section, start_page
+                )
 
             return [default_topic]
 
@@ -600,6 +622,10 @@ class StructureAnalyzer:
             answer_key_section = self._find_answer_key_section(
                 topic_pages, 0, len(topic_pages), topic_start_page
             )
+            if questions_section is None and answer_key_section is not None:
+                questions_section = self._create_questions_section_from_content_before_answer_key(
+                    topic_pages, answer_key_section, topic_start_page
+                )
 
             topic = Topic(
                 title=title,
@@ -751,13 +777,17 @@ class StructureAnalyzer:
         Returns:
             Section object if found, None otherwise
         """
-        # Patterns for question section headings
+        # Patterns for question section headings (including Indian textbook formats)
         patterns = [
             r'(?i)^#{1,4}\s*(practice\s+)?questions?\s*$',
             r'(?i)^#{1,4}\s*exercises?\s*$',
             r'(?i)^#{1,4}\s*problems?\s*$',
+            r'(?i)^#{1,4}\s*(multiple\s+choice|mcq|objective)\s*(type\s+)?questions?\s*$',
+            r'(?i)^#{1,4}\s*(very\s+short|short|long)\s+answer\s*(questions?)?\s*$',
+            r'(?i)^#{1,4}\s*numerical\s*(problems?)?\s*$',
             r'(?i)\*\*(practice\s+)?questions?\*\*',
             r'(?i)\*\*exercises?\*\*',
+            r'(?i)\*\*(multiple\s+choice|mcq)\s*(questions?)?\*\*',
         ]
 
         for page_idx in range(start_idx, min(end_idx, len(pages))):
@@ -841,6 +871,42 @@ class StructureAnalyzer:
 
         return None
 
+    def _create_questions_section_from_content_before_answer_key(
+        self,
+        pages: List[str],
+        answer_key_section: Section,
+        start_page: int,
+    ) -> Optional[Section]:
+        """
+        When answer key exists but no questions section was found, treat the content
+        before the answer key as the questions section. Common textbook layout:
+        questions first, then answer key at the end.
+        """
+        full_content = "\n".join(pages)
+        answer_patterns = [
+            r"(?i)^#{1,4}\s*answer\s+keys?\s*$",
+            r"(?i)^#{1,4}\s*answers?\s*$",
+            r"(?i)^#{1,4}\s*solutions?\s*$",
+            r"(?i)\*\*answer\s+keys?\*\*",
+            r"(?i)\*\*answers?\*\*",
+            r"(?i)\*\*solutions?\*\*",
+        ]
+        match = None
+        for pattern in answer_patterns:
+            match = re.search(pattern, full_content, re.MULTILINE)
+            if match:
+                break
+        if not match:
+            return None
+        content_before = full_content[: match.start()].strip()
+        if len(content_before) < 200:
+            return None
+        return Section(
+            section_type=SectionType.QUESTIONS,
+            page_range=(start_page, start_page + len(pages) - 1),
+            content=content_before,
+            confidence=0.6,
+        )
 
     
     def classify_section(self, section_content: str, context: str = "") -> Tuple[SectionType, float]:
