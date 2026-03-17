@@ -160,25 +160,23 @@ class ExtractionService:
             
             job = ExtractionJob(**job_result.data[0])
             
-            # Get book if associated (extraction_books for extraction flow)
+            # Get book and hierarchy (extraction_books may not exist if migration 011/015 not applied)
             book = None
-            if job.book_id:
-                book_result = self.db.table("extraction_books").select("*").eq("id", str(job.book_id)).execute()
-                if book_result.data:
-                    book = Book(**book_result.data[0])
-            
-            # Get hierarchy (extraction_chapters, extraction_topics for extraction flow)
             hierarchy = []
             if job.book_id:
-                chapters_result = self.db.table("extraction_chapters").select("*").eq("book_id", str(job.book_id)).order("chapter_number").execute()
-                
-                for chapter_row in (chapters_result.data or []):
-                    chapter = Chapter(**chapter_row)
+                try:
+                    book_result = self.db.table("extraction_books").select("*").eq("id", str(job.book_id)).execute()
+                    if book_result.data:
+                        book = Book(**book_result.data[0])
                     
-                    topics_result = self.db.table("extraction_topics").select("*").eq("chapter_id", str(chapter.id)).order("topic_order").execute()
-                    topics = [Topic(**row) for row in (topics_result.data or [])]
-                    
-                    hierarchy.append(ChapterWithTopics(chapter=chapter, topics=topics))
+                    chapters_result = self.db.table("extraction_chapters").select("*").eq("book_id", str(job.book_id)).order("chapter_number").execute()
+                    for chapter_row in (chapters_result.data or []):
+                        chapter = Chapter(**chapter_row)
+                        topics_result = self.db.table("extraction_topics").select("*").eq("chapter_id", str(chapter.id)).order("topic_order").execute()
+                        topics = [Topic(**row) for row in (topics_result.data or [])]
+                        hierarchy.append(ChapterWithTopics(chapter=chapter, topics=topics))
+                except Exception as hierarchy_exc:
+                    logger.warning("Could not fetch book/hierarchy (tables may be missing): %s", hierarchy_exc)
             
             # Get statistics
             statistics = await self.get_job_statistics(job_id)
