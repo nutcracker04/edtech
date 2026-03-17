@@ -1,14 +1,13 @@
 """
-DocumentProcessor orchestration component for local PDF extraction.
+DocumentProcessor orchestration component for PDF extraction.
 
-This implementation keeps the local flow deliberately simple:
-- validate the uploaded PDF
-- send it to Sarvam Document Intelligence
-- download the extracted markdown/images locally
-- write a manifest that points to all generated artifacts
-
-That gives a reliable local setup for verifying extraction before migrating the
-storage layer to Supabase later.
+Flow (local during processing, DB for persistence):
+1. Validate PDF, upload to Sarvam Document Intelligence API
+2. Sarvam returns a zip (download required) -> extract to local temp dir
+3. Build combined.md from chunk outputs, run structure analysis & question extraction
+4. Write raw_questions, extraction_questions, chapters, topics -> Supabase DB
+5. Upload combined.md and images -> Supabase extraction-artifacts bucket
+6. Local files remain for debugging; final data lives in Supabase
 """
 
 from __future__ import annotations
