@@ -227,11 +227,11 @@ export function ExtractionDetailView() {
             </div>
             <div>
               <p className="text-sm text-muted-foreground">Finalization Rate</p>
-              <p className="text-2xl font-bold">{(statistics.finalization_rate * 100).toFixed(1)}%</p>
+              <p className="text-2xl font-bold">{(Number(statistics.finalization_rate ?? 0) * 100).toFixed(1)}%</p>
             </div>
             <div>
               <p className="text-sm text-muted-foreground">Avg Questions per Page</p>
-              <p className="font-medium">{statistics.average_questions_per_page.toFixed(2)}</p>
+              <p className="font-medium">{Number(statistics.average_questions_per_page ?? 0).toFixed(2)}</p>
             </div>
           </div>
         </div>
