@@ -129,9 +129,9 @@ class AdminExtractionService {
   }
 
   /**
-   * List raw questions for a specific extraction job
+   * List raw questions for a specific extraction job (returns questions and total for pagination)
    */
-  async listQuestions(params: ListQuestionsParams): Promise<RawQuestion[]> {
+  async listQuestions(params: ListQuestionsParams): Promise<{ questions: RawQuestion[]; total: number }> {
     const token = await this.getAuthToken();
     const headers = {
       'Content-Type': 'application/json',
@@ -154,7 +154,7 @@ class AdminExtractionService {
       headers,
     });
 
-    return this.handleResponse<RawQuestion[]>(response);
+    return this.handleResponse<{ questions: RawQuestion[]; total: number }>(response);
   }
 
   /**

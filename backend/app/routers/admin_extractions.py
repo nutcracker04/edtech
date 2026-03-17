@@ -17,6 +17,7 @@ Requirements: 8.1, 8.2, 8.3, 1.1-1.5, 2.1-2.5, 3.1-3.6, 4.1-4.5, 5.1-5.10,
 """
 
 from fastapi import APIRouter, HTTPException, Depends, Query, status
+from fastapi.responses import JSONResponse
 from typing import Optional, List
 from uuid import UUID
 import logging
@@ -38,8 +39,14 @@ from app.models.admin import (
     ValidationErrorResponse,
 )
 from app.models.extraction import ExtractionJob, RawQuestion
+from pydantic import BaseModel
 
 logger = logging.getLogger(__name__)
+
+
+class QuestionsListResponse(BaseModel):
+    questions: List[RawQuestion]
+    total: int
 
 # Create router with /extractions prefix (will be registered under /admin in main.py)
 router = APIRouter(
@@ -339,9 +346,9 @@ async def delete_extraction_job(
 
 @router.get(
     "/{job_id}/questions",
-    response_model=List[RawQuestion],
+    response_model=QuestionsListResponse,
     summary="List raw questions for a job",
-    description="Retrieve all raw questions for a specific extraction job"
+    description="Retrieve all raw questions for a specific extraction job with pagination total"
 )
 async def list_raw_questions(
     job_id: UUID,
@@ -401,7 +408,7 @@ async def list_raw_questions(
                 detail=f"Extraction job {job_id} not found"
             )
         logger.info(f"Retrieved {len(questions)} questions for job {job_id} (total: {total})")
-        return questions
+        return QuestionsListResponse(questions=questions, total=total)
     except ValueError as e:
         raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=str(e))
     except HTTPException:

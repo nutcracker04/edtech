@@ -245,14 +245,6 @@ class DocumentProcessor:
                             "manifest_path": f"{job_id}/manifest.json",
                         }).eq("id", job_id).execute()
                         logger.info("Uploaded extraction artifacts to Supabase: %s", supabase_path)
-                        # Remove local extracted files after successful upload
-                        try:
-                            job_dir = self.storage_root / job_id
-                            if job_dir.exists():
-                                shutil.rmtree(job_dir)
-                                logger.debug("Removed local extraction dir: %s", job_dir)
-                        except OSError as rm_exc:
-                            logger.warning("Could not remove local extraction dir: %s", rm_exc)
                 except Exception as upload_exc:
                     logger.warning("Failed to upload extraction artifacts to Supabase: %s", upload_exc)
 

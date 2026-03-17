@@ -27,7 +27,16 @@ export function ExtractionDetailView() {
     setQuestionsLoading,
     setQuestionsError,
     setQuestionPagination,
+    updateQuestion,
+    removeQuestion,
+    selectQuestion,
+    deselectQuestion,
+    selectAllQuestions,
+    deselectAllQuestions,
+    setOperationInProgress,
+    setOperationError,
   } = useExtractionManagement();
+  const selectedQuestionIds = state.selectedQuestionIds;
 
   useEffect(() => {
     if (!jobId) return;
@@ -84,12 +93,13 @@ export function ExtractionDetailView() {
     const fetchQuestions = async () => {
       setQuestionsLoading(true);
       try {
-        const questions = await adminExtractionService.listQuestions({
+        const { questions, total } = await adminExtractionService.listQuestions({
           jobId,
           filters: state.questionFilters,
           pagination: state.questionPagination,
         });
         setQuestions(questions);
+        setQuestionPagination({ ...state.questionPagination, total });
       } catch (error) {
         setQuestionsError(error instanceof Error ? error : new Error('Failed to fetch questions'));
       } finally {
@@ -98,7 +108,7 @@ export function ExtractionDetailView() {
     };
 
     fetchQuestions();
-  }, [jobId, state.questionFilters, state.questionPagination, setQuestions, setQuestionsLoading, setQuestionsError]);
+  }, [jobId, state.questionFilters, state.questionPagination.page, state.questionPagination.page_size, setQuestions, setQuestionsLoading, setQuestionsError, setQuestionPagination]);
 
   const handlePageChange = (page: number) => {
     setQuestionPagination({ ...state.questionPagination, page });
@@ -217,11 +227,11 @@ export function ExtractionDetailView() {
             </div>
             <div>
               <p className="text-sm text-muted-foreground">Finalization Rate</p>
-              <p className="text-2xl font-bold">{(statistics.finalization_rate * 100).toFixed(1)}%</p>
+              <p className="text-2xl font-bold">{(Number(statistics.finalization_rate ?? 0) * 100).toFixed(1)}%</p>
             </div>
             <div>
               <p className="text-sm text-muted-foreground">Avg Questions per Page</p>
-              <p className="font-medium">{statistics.average_questions_per_page.toFixed(2)}</p>
+              <p className="font-medium">{Number(statistics.average_questions_per_page ?? 0).toFixed(2)}</p>
             </div>
           </div>
         </div>
@@ -275,9 +285,69 @@ export function ExtractionDetailView() {
         ) : null}
       </div>
 
-      {/* Questions Section */}
+      {/* Questions Section with CRUD and Finalize */}
       <div className="border rounded-lg p-6">
-        <h2 className="text-lg font-semibold mb-4">Extracted Questions</h2>
+        <div className="flex flex-wrap items-center justify-between gap-4 mb-4">
+          <h2 className="text-lg font-semibold">Extracted Questions (Raw Data)</h2>
+          <div className="flex gap-2">
+            <button
+              onClick={() => selectAllQuestions(state.questions.map((q) => q.id))}
+              className="px-3 py-1.5 text-sm border rounded hover:bg-accent"
+            >
+              Select All
+            </button>
+            <button
+              onClick={() => deselectAllQuestions()}
+              className="px-3 py-1.5 text-sm border rounded hover:bg-accent"
+            >
+              Deselect All
+            </button>
+            <button
+              onClick={async () => {
+                const ids = Array.from(state.selectedQuestionIds);
+                if (ids.length === 0) {
+                  alert('Select questions to add to repository');
+                  return;
+                }
+                setOperationInProgress(true);
+                setOperationError(null);
+                try {
+                  const result = await adminExtractionService.bulkFinalizeQuestions(ids);
+                  if (result.failure_count > 0) {
+                    setOperationError(new Error(`${result.failure_count} failed: ${result.failed?.[0]?.error ?? 'Unknown'}`));
+                  }
+                  if (result.success_count > 0) {
+                    const jobDetail = await adminExtractionService.getJobDetails(jobId!);
+                    setCurrentJob(jobDetail);
+                    const { questions, total } = await adminExtractionService.listQuestions({
+                      jobId: jobId!,
+                      filters: state.questionFilters,
+                      pagination: state.questionPagination,
+                    });
+                    setQuestions(questions);
+                    setQuestionPagination({ ...state.questionPagination, total });
+                    deselectAllQuestions();
+                  }
+                } catch (e) {
+                  setOperationError(e instanceof Error ? e : new Error('Finalization failed'));
+                  alert(e instanceof Error ? e.message : 'Finalization failed');
+                } finally {
+                  setOperationInProgress(false);
+                }
+              }}
+              disabled={selectedQuestionIds.size === 0 || state.operationInProgress}
+              className="px-4 py-2 bg-primary text-primary-foreground rounded hover:bg-primary/90 disabled:opacity-50"
+            >
+              {state.operationInProgress ? 'Adding...' : `Add to Repository (${selectedQuestionIds.size})`}
+            </button>
+          </div>
+        </div>
+
+        {state.operationError && (
+          <div className="mb-4 p-4 bg-destructive/10 text-destructive rounded-lg">
+            {state.operationError.message}
+          </div>
+        )}
 
         {state.questionsLoading ? (
           <div className="text-center py-8">
@@ -296,18 +366,56 @@ export function ExtractionDetailView() {
           <>
             <div className="space-y-4">
               {state.questions.map((question) => (
-                <div key={question.id} className="p-4 border rounded bg-muted/50">
-                  <div className="flex justify-between items-start mb-2">
-                    <h3 className="font-medium flex-1">{question.question_text}</h3>
-                    <span className="text-xs px-2 py-1 rounded bg-primary/10 text-primary">
-                      {question.processing_status}
-                    </span>
-                  </div>
-                  <div className="text-sm text-muted-foreground space-y-1">
-                    <p>Options: {question.options.length}</p>
-                    {question.chapter_context && <p>Chapter: {question.chapter_context}</p>}
-                    {question.topic_context && <p>Topic: {question.topic_context}</p>}
-                    {question.page_number && <p>Page: {question.page_number}</p>}
+                <div
+                  key={question.id}
+                  className={`p-4 border rounded bg-muted/50 ${selectedQuestionIds.has(question.id) ? 'ring-2 ring-primary' : ''}`}
+                >
+                  <div className="flex justify-between items-start gap-4">
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-center gap-2 mb-2">
+                        <input
+                          type="checkbox"
+                          checked={selectedQuestionIds.has(question.id)}
+                          onChange={(e) =>
+                            e.target.checked ? selectQuestion(question.id) : deselectQuestion(question.id)
+                          }
+                          className="rounded"
+                        />
+                        <h3 className="font-medium flex-1 truncate">{question.question_text}</h3>
+                        <span className="text-xs px-2 py-1 rounded bg-primary/10 text-primary shrink-0">
+                          {question.processing_status}
+                        </span>
+                      </div>
+                      <div className="text-sm text-muted-foreground space-y-1">
+                        <p>Options: {question.options?.length ?? 0}</p>
+                        {question.chapter_context && <p>Chapter: {question.chapter_context}</p>}
+                        {question.topic_context && <p>Topic: {question.topic_context}</p>}
+                        {question.page_number && <p>Page: {question.page_number}</p>}
+                      </div>
+                    </div>
+                                <div className="flex gap-2 shrink-0">
+                      <button
+                        onClick={async () => {
+                          if (!confirm('Delete this question?')) return;
+                          setOperationInProgress(true);
+                          try {
+                            await adminExtractionService.deleteQuestion(question.id);
+                            removeQuestion(question.id);
+                            const jobDetail = await adminExtractionService.getJobDetails(jobId!);
+                            setCurrentJob(jobDetail);
+                          } catch (e) {
+                            alert(e instanceof Error ? e.message : 'Delete failed');
+                          } finally {
+                            setOperationInProgress(false);
+                          }
+                        }}
+                        disabled={!!question.question_id || state.operationInProgress}
+                        title={question.question_id ? 'Cannot delete finalized question' : 'Delete'}
+                        className="px-2 py-1 text-sm text-destructive hover:bg-destructive/10 rounded disabled:opacity-50"
+                      >
+                        Delete
+                      </button>
+                    </div>
                   </div>
                 </div>
               ))}
