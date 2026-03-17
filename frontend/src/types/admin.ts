@@ -11,6 +11,7 @@ export type ProcessingStatus = 'pending' | 'tagged' | 'error';
 export interface ExtractionJob {
   id: string;
   book_id: string | null;
+  title?: string | null;  // Admin-entered name for display in listing
   source_pdf_filename: string;
   stage: ExtractionStage;
   progress: number;

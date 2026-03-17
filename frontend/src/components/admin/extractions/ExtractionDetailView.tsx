@@ -185,9 +185,9 @@ export function ExtractionDetailView() {
       </button>
 
       <div className="mb-8">
-        <h1 className="text-3xl font-bold mb-2">{book?.title || job.source_pdf_filename}</h1>
+        <h1 className="text-3xl font-bold mb-2">{book?.title || job.title || job.source_pdf_filename}</h1>
         <p className="text-muted-foreground">
-          Extraction Management &gt; {book?.title || 'Unknown Book'}
+          Extraction Management &gt; {book?.title || job.title || 'Unknown Book'}
         </p>
       </div>
 

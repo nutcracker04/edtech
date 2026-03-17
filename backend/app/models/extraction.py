@@ -41,6 +41,7 @@ class ExtractionJob(BaseModel):
     
     id: UUID
     book_id: Optional[UUID] = None
+    title: Optional[str] = None  # Admin-entered name for display in listing
     source_pdf_filename: str
     source_pdf_path: Optional[str] = None
     stage: ExtractionStage
