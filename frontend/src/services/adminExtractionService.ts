@@ -269,6 +269,25 @@ class AdminExtractionService {
   }
 
   /**
+   * Get extracted markdown content for an extraction job (from Supabase storage)
+   */
+  async getExtractedContent(jobId: string): Promise<{ content: string; job_id: string }> {
+    const token = await this.getAuthToken();
+    const headers = {
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${token}`,
+    };
+
+    const url = `${API_BASE_URL}/admin/extractions/${jobId}/extracted-content`;
+    const response = await fetch(url, {
+      method: 'GET',
+      headers,
+    });
+
+    return this.handleResponse<{ content: string; job_id: string }>(response);
+  }
+
+  /**
    * Get statistics for an extraction job
    */
   async getJobStatistics(jobId: string): Promise<JobStatistics> {

@@ -47,6 +47,7 @@ class StorageManager:
     # Storage bucket names
     QUESTION_IMAGES_BUCKET = "question-images"
     SOURCE_PDFS_BUCKET = "source-pdfs"
+    EXTRACTION_ARTIFACTS_BUCKET = "extraction-artifacts"
     
     # Retry configuration
     MAX_RETRIES = 3
@@ -283,6 +284,83 @@ class StorageManager:
             # Save to local storage
             local_path = self._save_to_local_storage(storage_path, pdf_data)
             return local_path
+    
+    def upload_extraction_artifacts(
+        self,
+        job_id: str,
+        extracted_dir_path: str,
+    ) -> Optional[str]:
+        """
+        Upload extracted markdown and images to Supabase extraction-artifacts bucket.
+        Stores combined.md and all image files. Returns Supabase storage path prefix.
+        """
+        import os
+        from pathlib import Path
+        
+        extracted_dir = Path(extracted_dir_path)
+        if not extracted_dir.exists():
+            logger.error(f"Extraction dir not found: {extracted_dir_path}")
+            return None
+        
+        prefix = f"{job_id}"
+        uploaded_count = 0
+        
+        try:
+            # Upload combined.md
+            combined_path = extracted_dir / "combined.md"
+            if combined_path.exists():
+                content = combined_path.read_bytes()
+                storage_path = f"{prefix}/combined.md"
+                self._upload_to_supabase(
+                    bucket=self.EXTRACTION_ARTIFACTS_BUCKET,
+                    storage_path=storage_path,
+                    file_data=content,
+                    content_type="text/markdown",
+                )
+                uploaded_count += 1
+                logger.info(f"Uploaded combined.md to {storage_path}")
+            
+            # Upload all images (png, jpg, etc.)
+            image_suffixes = {".png", ".jpg", ".jpeg", ".gif", ".webp", ".bmp", ".tif", ".tiff", ".svg"}
+            for file_path in extracted_dir.rglob("*"):
+                if file_path.is_file() and file_path.suffix.lower() in image_suffixes:
+                    rel = file_path.relative_to(extracted_dir)
+                    storage_path = f"{prefix}/{rel.as_posix()}"
+                    content = file_path.read_bytes()
+                    content_type = "image/png" if file_path.suffix.lower() == ".png" else "image/jpeg"
+                    self._upload_to_supabase(
+                        bucket=self.EXTRACTION_ARTIFACTS_BUCKET,
+                        storage_path=storage_path,
+                        file_data=content,
+                        content_type=content_type,
+                    )
+                    uploaded_count += 1
+            
+            logger.info(f"Uploaded {uploaded_count} extraction artifacts for job {job_id}")
+            return f"{prefix}/combined.md" if (extracted_dir / "combined.md").exists() else prefix
+        except Exception as e:
+            logger.error(f"Failed to upload extraction artifacts: {e}", exc_info=True)
+            return None
+    
+    def get_extracted_content(
+        self,
+        storage_path: str,
+        expiration_seconds: Optional[int] = None,
+    ) -> Optional[str]:
+        """
+        Download extracted markdown content from Supabase storage.
+        Returns file content as string, or None if not found.
+        """
+        try:
+            response = self.client.storage.from_(self.EXTRACTION_ARTIFACTS_BUCKET).download(
+                storage_path
+            )
+            if isinstance(response, bytes):
+                return response.decode("utf-8", errors="replace")
+            return str(response) if response else None
+        except Exception as e:
+            logger.error(f"Failed to get extracted content {storage_path}: {e}")
+            return None
     
     def get_image_url(
         self,

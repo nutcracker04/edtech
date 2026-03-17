@@ -426,16 +426,24 @@ class DatabaseWriter:
         question_text = tagged.question
         image_records: list[dict] = []
 
-        # Extract and save images (use pre-generated id for path consistency)
+        # Extract and save images (upload to Supabase when available)
         question_id_pre = str(uuid4())
         storage_root = Path(self.storage_root)
         if storage_root.is_relative():
             storage_root = Path.cwd() / storage_root
+        storage_manager = None
+        if client:
+            try:
+                from app.services.storage_manager import StorageManager
+                storage_manager = StorageManager(client)
+            except Exception:
+                pass
         image_records = extract_and_save_images(
             question_text,
             question_id_pre,
             self._book_id,
             storage_root,
+            storage_manager=storage_manager,
         )
         if image_records:
             question_text = replace_images_in_text(question_text, list(image_records))

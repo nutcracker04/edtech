@@ -193,6 +193,61 @@ async def get_extraction_job_details(
 
 
 @router.get(
+    "/{job_id}/extracted-content",
+    summary="Get extracted markdown content",
+    description="Retrieve the extracted markdown content from Supabase storage for a completed job",
+)
+async def get_extracted_content(
+    job_id: UUID,
+    _admin: bool = Depends(verify_admin_token),
+    db_client=Depends(get_supabase),
+):
+    """
+    Get the extracted markdown content (combined.md) for an extraction job.
+    Content is stored in Supabase extraction-artifacts bucket.
+    """
+    try:
+        job_result = db_client.table("extraction_jobs").select("extracted_path, stage").eq("id", str(job_id)).execute()
+        if not job_result.data:
+            raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Job not found")
+        
+        extracted_path = job_result.data[0].get("extracted_path")
+        if not extracted_path:
+            raise HTTPException(
+                status_code=status.HTTP_404_NOT_FOUND,
+                detail="No extracted content found. Content may still be processing or was not uploaded.",
+            )
+        
+        # Supabase path format: job_id/combined.md (no leading slash, no absolute path)
+        if extracted_path.startswith("/") or "\\" in extracted_path:
+            raise HTTPException(
+                status_code=status.HTTP_404_NOT_FOUND,
+                detail="Extracted content is stored locally. Re-run extraction to store in Supabase.",
+            )
+        storage_path = extracted_path if extracted_path.endswith(".md") else f"{extracted_path}/combined.md"
+        
+        from app.services.storage_manager import StorageManager
+        storage = StorageManager(db_client)
+        content = storage.get_extracted_content(storage_path)
+        
+        if content is None:
+            raise HTTPException(
+                status_code=status.HTTP_404_NOT_FOUND,
+                detail="Extracted content not found in storage",
+            )
+        
+        return {"content": content, "job_id": str(job_id)}
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Error getting extracted content for {job_id}: {str(e)}", exc_info=True)
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail="Failed to retrieve extracted content",
+        )
+
+
+@router.get(
     "/{job_id}/stats",
     summary="Get extraction job statistics",
     description="Retrieve statistics for a specific extraction job"

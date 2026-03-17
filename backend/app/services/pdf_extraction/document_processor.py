@@ -233,6 +233,29 @@ class DocumentProcessor:
             self._update_job_status(job_id, ProcessingStage.COMPLETED, 100.0)
             self._update_extraction_job_stage(job_id, ProcessingStage.COMPLETED, 100.0)
 
+            # Upload extracted content to Supabase storage (persistent storage in DB, not local)
+            if self.supabase_client:
+                try:
+                    from app.services.storage_manager import StorageManager
+                    storage = StorageManager(self.supabase_client)
+                    supabase_path = storage.upload_extraction_artifacts(job_id, extracted_path)
+                    if supabase_path:
+                        self.supabase_client.table("extraction_jobs").update({
+                            "extracted_path": supabase_path,
+                            "manifest_path": f"{job_id}/manifest.json",
+                        }).eq("id", job_id).execute()
+                        logger.info("Uploaded extraction artifacts to Supabase: %s", supabase_path)
+                        # Remove local extracted files after successful upload
+                        try:
+                            job_dir = self.storage_root / job_id
+                            if job_dir.exists():
+                                shutil.rmtree(job_dir)
+                                logger.debug("Removed local extraction dir: %s", job_dir)
+                        except OSError as rm_exc:
+                            logger.warning("Could not remove local extraction dir: %s", rm_exc)
+                except Exception as upload_exc:
+                    logger.warning("Failed to upload extraction artifacts to Supabase: %s", upload_exc)
+
             result = ProcessingResult(
                 success=True,
                 job_id=job_id,
@@ -495,8 +518,14 @@ class DocumentProcessor:
         )
 
     def _is_non_retryable_error(self, exc: Exception) -> bool:
+        """Don't retry on 400 (bad request) or 429 (insufficient credits) - retries waste credits."""
         error_text = str(exc).lower()
-        return "status_code: 400" in error_text or "invalid_request_error" in error_text
+        return (
+            "status_code: 400" in error_text
+            or "invalid_request_error" in error_text
+            or "status_code: 429" in error_text
+            or "insufficient_quota" in error_text
+        )
 
     def _chunk_page_label(self, chunk_path: Path) -> str:
         stem_parts = chunk_path.stem.split("_")
