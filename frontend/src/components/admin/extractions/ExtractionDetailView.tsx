@@ -2,9 +2,10 @@
  * Extraction Detail View Component
  * Displays detailed information about a specific extraction job.
  * Subscribes to Supabase Realtime for live progress updates.
+ * Shows extracted content from Supabase storage.
  */
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useExtractionManagement } from '@/contexts/ExtractionManagementContext';
 import { adminExtractionService } from '@/services/adminExtractionService';
@@ -13,6 +14,10 @@ import { supabase } from '@/integrations/supabase/client';
 export function ExtractionDetailView() {
   const { jobId } = useParams<{ jobId: string }>();
   const navigate = useNavigate();
+  const [extractedContent, setExtractedContent] = useState<string | null>(null);
+  const [extractedContentLoading, setExtractedContentLoading] = useState(false);
+  const [extractedContentError, setExtractedContentError] = useState<string | null>(null);
+  const [showExtractedContent, setShowExtractedContent] = useState(false);
   const {
     state,
     setCurrentJob,
@@ -97,6 +102,22 @@ export function ExtractionDetailView() {
 
   const handlePageChange = (page: number) => {
     setQuestionPagination({ ...state.questionPagination, page });
+  };
+
+  const handleViewExtractedContent = async () => {
+    if (!jobId) return;
+    setShowExtractedContent(true);
+    if (extractedContent !== null) return; // Already loaded
+    setExtractedContentLoading(true);
+    setExtractedContentError(null);
+    try {
+      const { content } = await adminExtractionService.getExtractedContent(jobId);
+      setExtractedContent(content);
+    } catch (error) {
+      setExtractedContentError(error instanceof Error ? error.message : 'Failed to load extracted content');
+    } finally {
+      setExtractedContentLoading(false);
+    }
   };
 
   if (state.currentJobLoading) {
@@ -204,6 +225,54 @@ export function ExtractionDetailView() {
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Extracted Content Section (from Supabase) */}
+      <div className="border rounded-lg p-6 mb-8">
+        <h2 className="text-lg font-semibold mb-4">Extracted Content</h2>
+        <p className="text-sm text-muted-foreground mb-4">
+          Raw markdown extracted from the PDF, stored in Supabase.
+        </p>
+        {!showExtractedContent ? (
+          <button
+            onClick={handleViewExtractedContent}
+            className="px-4 py-2 bg-primary text-primary-foreground rounded hover:bg-primary/90"
+          >
+            View Extracted Markdown
+          </button>
+        ) : extractedContentLoading ? (
+          <div className="text-center py-8">
+            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary mx-auto mb-2"></div>
+            <p className="text-muted-foreground">Loading extracted content...</p>
+          </div>
+        ) : extractedContentError ? (
+          <div className="text-center py-8">
+            <p className="text-destructive mb-4">{extractedContentError}</p>
+            <button
+              onClick={handleViewExtractedContent}
+              className="px-4 py-2 border rounded hover:bg-accent"
+            >
+              Retry
+            </button>
+          </div>
+        ) : extractedContent ? (
+          <div className="space-y-4">
+            <div className="flex justify-between items-center">
+              <span className="text-sm text-muted-foreground">
+                {extractedContent.length.toLocaleString()} characters
+              </span>
+              <button
+                onClick={() => setShowExtractedContent(false)}
+                className="text-sm text-muted-foreground hover:text-foreground"
+              >
+                Collapse
+              </button>
+            </div>
+            <pre className="p-4 bg-muted rounded-lg overflow-auto max-h-96 text-sm whitespace-pre-wrap font-mono">
+              {extractedContent}
+            </pre>
+          </div>
+        ) : null}
       </div>
 
       {/* Questions Section */}
