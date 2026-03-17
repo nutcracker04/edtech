@@ -537,37 +537,12 @@ class DatabaseWriter:
             question_id = question_id_map.get(qnum)
             if not question_id:
                 continue
-            expl_text = explanation_map.get(qnum)
-            answer, source = validate_answer(answer_letter, expl_text)
-            if source == "conflict":
-                logger.warning("Answer conflict for question %s: key=%s vs explanation", qnum, answer_letter)
-
-            try:
-                client.table("extraction_answers").upsert(
-                    {
-                        "question_id": question_id,
-                        "correct_answer": answer.lower(),
-                        "correct_option_ids": [],
-                        "answer_source": source,
-                        "page_number": None,
-                    },
-                    on_conflict="question_id",
-                ).execute()
-
-                # Update options SET is_correct = true WHERE label = answer
-                opts = (
-                    client.table("extraction_options")
-                    .select("id")
-                    .eq("question_id", question_id)
-                    .eq("label", answer.upper())
-                    .execute()
-                )
-                if opts.data:
-                    client.table("extraction_options").update(
-                        {"is_correct": True}
-                    ).eq("id", opts.data[0]["id"]).execute()
-            except Exception as e:
-                logger.error("Failed to write answer for question %s: %s", qnum, e)
+            self.write_answer(
+                question_id=question_id,
+                answer_text=answer_letter,
+                explanation_text=explanation_map.get(qnum),
+                question_ref=qnum,
+            )
 
     def write_hints(
         self,
@@ -582,17 +557,7 @@ class DatabaseWriter:
             question_id = question_id_map.get(qnum)
             if not question_id or not hint_text:
                 continue
-            try:
-                client.table("extraction_hints").upsert(
-                    {
-                        "question_id": question_id,
-                        "hint_text": hint_text,
-                        "sort_order": 0,
-                    },
-                    on_conflict="question_id",
-                ).execute()
-            except Exception as e:
-                logger.error("Failed to write hint for question %s: %s", qnum, e)
+            self.write_hint(question_id=question_id, hint_text=hint_text, question_ref=qnum)
 
     def write_explanations(
         self,
@@ -607,13 +572,89 @@ class DatabaseWriter:
             question_id = question_id_map.get(qnum)
             if not question_id or not explanation_text:
                 continue
-            try:
-                client.table("extraction_explanations").upsert(
-                    {
-                        "question_id": question_id,
-                        "explanation_text": explanation_text,
-                    },
-                    on_conflict="question_id",
-                ).execute()
-            except Exception as e:
-                logger.error("Failed to write explanation for question %s: %s", qnum, e)
+            self.write_explanation(
+                question_id=question_id,
+                explanation_text=explanation_text,
+                question_ref=qnum,
+            )
+
+    def write_answer(
+        self,
+        question_id: str,
+        answer_text: Optional[str],
+        explanation_text: Optional[str] = None,
+        question_ref: str = "",
+    ) -> None:
+        """Write a single extraction_answers record and mark the matching option correct."""
+        client = self._get_client()
+        if not client or not question_id or not answer_text:
+            return
+
+        answer, source = validate_answer(answer_text, explanation_text)
+        if source == "conflict":
+            logger.warning("Answer conflict for question %s: key=%s vs explanation", question_ref or question_id, answer_text)
+
+        try:
+            client.table("extraction_answers").upsert(
+                {
+                    "question_id": question_id,
+                    "correct_answer": answer.lower(),
+                    "correct_option_ids": [],
+                    "answer_source": source,
+                    "page_number": None,
+                },
+                on_conflict="question_id",
+            ).execute()
+
+            options_query = client.table("extraction_options").select("id").eq("question_id", question_id)
+            if len(answer) == 1 and answer.upper() in {"A", "B", "C", "D"}:
+                opts = options_query.eq("label", answer.upper()).execute()
+            else:
+                opts = options_query.eq("text", answer).execute()
+
+            if opts.data:
+                client.table("extraction_options").update(
+                    {"is_correct": True}
+                ).eq("id", opts.data[0]["id"]).execute()
+        except Exception as e:
+            logger.error("Failed to write answer for question %s: %s", question_ref or question_id, e)
+
+    def write_hint(self, question_id: str, hint_text: Optional[str], question_ref: str = "") -> None:
+        """Write a single extraction_hints record."""
+        client = self._get_client()
+        if not client or not question_id or not hint_text:
+            return
+
+        try:
+            client.table("extraction_hints").upsert(
+                {
+                    "question_id": question_id,
+                    "hint_text": hint_text,
+                    "sort_order": 0,
+                },
+                on_conflict="question_id",
+            ).execute()
+        except Exception as e:
+            logger.error("Failed to write hint for question %s: %s", question_ref or question_id, e)
+
+    def write_explanation(
+        self,
+        question_id: str,
+        explanation_text: Optional[str],
+        question_ref: str = "",
+    ) -> None:
+        """Write a single extraction_explanations record."""
+        client = self._get_client()
+        if not client or not question_id or not explanation_text:
+            return
+
+        try:
+            client.table("extraction_explanations").upsert(
+                {
+                    "question_id": question_id,
+                    "explanation_text": explanation_text,
+                },
+                on_conflict="question_id",
+            ).execute()
+        except Exception as e:
+            logger.error("Failed to write explanation for question %s: %s", question_ref or question_id, e)

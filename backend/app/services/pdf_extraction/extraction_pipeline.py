@@ -13,9 +13,9 @@ from pathlib import Path
 from typing import Optional
 
 from .database_writer import DatabaseWriter
-from .extraction_helpers import normalize_question_number, parse_answer_key, to_slug
+from .extraction_helpers import normalize_question_number, parse_answer_key
 from .metadata_tagger import DocumentContext, MetadataTagger
-from .models import BookMetadata, DocumentStructure
+from .models import AnswerKey, BookMetadata
 from .question_extractor import ExtractionContext, QuestionExtractor
 from .relationship_linker import RelationshipLinker
 from .structure_analyzer import StructureAnalyzer
@@ -85,98 +85,108 @@ def run_extraction_pipeline(
             if not book_id:
                 logger.warning("Phase 1 write failed, continuing without DB")
 
-        # 3. Collect answer keys, hints, explanations from all sections
-        all_answer_keys: list = []
-        all_hints: list = []
-        all_explanations: list = []
+        # 3. Collect section content scoped to the chapter/topic where it belongs.
         raw_questions_by_topic: dict[tuple[str, str], list] = {}
-        answer_key_map: dict[str, str] = {}
-        hint_map: dict[str, str] = {}
-        explanation_map: dict[str, str] = {}
+        answer_keys_by_topic: dict[tuple[str, str], list[AnswerKey]] = {}
+        hints_by_chapter: dict[str, list] = {}
+        explanations_by_chapter: dict[str, list] = {}
 
         for chapter in structure.chapters:
+            chapter_hints = []
+            chapter_explanations = []
+
+            if chapter.hints_section:
+                chapter_hints = question_extractor.extract_hints(chapter.hints_section)
+            if chapter.explanations_section:
+                chapter_explanations = question_extractor.extract_explanations(
+                    chapter.explanations_section,
+                )
+
+            hints_by_chapter[chapter.title] = chapter_hints
+            explanations_by_chapter[chapter.title] = chapter_explanations
+
             for topic in chapter.topics:
+                topic_key = (chapter.title, topic.title)
                 if topic.questions_section:
                     ext_ctx = ExtractionContext(chapter, topic)
                     raw_questions = question_extractor.extract_questions(
                         topic.questions_section,
                         ext_ctx,
                     )
-                    raw_questions_by_topic[(chapter.title, topic.title)] = raw_questions
+                    raw_questions_by_topic[topic_key] = raw_questions
 
                 if topic.answer_key_section:
                     keys = question_extractor.extract_answer_keys(topic.answer_key_section)
-                    all_answer_keys.extend(keys)
-                    for ak in keys:
-                        answer_key_map[ak.question_number] = ak.answer
-
-            if chapter.hints_section:
-                hints = question_extractor.extract_hints(chapter.hints_section)
-                all_hints.extend(hints)
-                for h in hints:
-                    hint_map[h.question_number] = h.hint_text
-            if chapter.explanations_section:
-                explanations = question_extractor.extract_explanations(
-                    chapter.explanations_section,
-                )
-                all_explanations.extend(explanations)
-                for ex in explanations:
-                    explanation_map[ex.question_number] = ex.explanation_text
-
-        # 4. Link answers, hints, explanations for each topic's questions
-        all_linked: list = []
-        for (_, _), raw_questions in raw_questions_by_topic.items():
-            linked = relationship_linker.link_answers(raw_questions, all_answer_keys)
-            linked = relationship_linker.link_hints(linked, all_hints)
-            linked = relationship_linker.link_explanations(linked, all_explanations)
-            all_linked.extend(linked)
-
-        # 5. Supplement answer_key_map from parse_answer_key for any missing
-        for chapter in structure.chapters:
-            for topic in chapter.topics:
-                if topic.answer_key_section:
+                    topic_answer_map = {
+                        normalize_question_number(ak.question_number): ak for ak in keys
+                    }
                     parsed = parse_answer_key(topic.answer_key_section.content)
-                    for k, v in parsed.items():
-                        if k not in answer_key_map:
-                            answer_key_map[k] = v
+                    for qnum, answer in parsed.items():
+                        normalized_qnum = normalize_question_number(qnum)
+                        topic_answer_map[normalized_qnum] = AnswerKey(
+                            question_number=normalized_qnum,
+                            answer=answer.upper(),
+                            page_number=topic.answer_key_section.page_range[0],
+                        )
+                    answer_keys_by_topic[topic_key] = list(topic_answer_map.values())
+                else:
+                    answer_keys_by_topic[topic_key] = []
 
-        # 6. Apply metadata and write to DB
-        question_id_map: dict[str, str] = {}
-        for linked in all_linked:
-            try:
-                tagged = metadata_tagger.apply_metadata(linked, context)
-            except ValueError as e:
-                logger.warning("Metadata tagging failed for question %s: %s", linked.raw_question.question_number, e)
-                continue
-
-            raw = linked.raw_question
-            qnum = normalize_question_number(raw.question_number)
-
-            if db_writer.is_available():
-                raw_id = db_writer.write_raw_question(job_id, raw)
-                q_id = db_writer.write_question(
-                    tagged=tagged,
-                    raw_question_id=raw_id,
-                    job_id=job_id,
-                    question_number=raw.question_number,
-                    page_number=raw.page_number,
-                )
-                if q_id:
-                    question_id_map[qnum] = q_id
-                    questions_written += 1
-
-        # 7. Write answers, hints, explanations
-        if db_writer.is_available() and question_id_map:
-            db_writer.write_answers(
-                answer_key_map=answer_key_map,
-                question_id_map=question_id_map,
-                explanation_map=explanation_map,
+        # 4. Link and write questions using topic-scoped answer keys.
+        for (chapter_title, topic_title), raw_questions in raw_questions_by_topic.items():
+            linked = relationship_linker.link_answers(
+                raw_questions,
+                answer_keys_by_topic.get((chapter_title, topic_title), []),
             )
-            db_writer.write_hints(hint_map=hint_map, question_id_map=question_id_map)
-            db_writer.write_explanations(
-                explanation_map=explanation_map,
-                question_id_map=question_id_map,
+            linked = relationship_linker.link_hints(
+                linked,
+                hints_by_chapter.get(chapter_title, []),
             )
+            linked = relationship_linker.link_explanations(
+                linked,
+                explanations_by_chapter.get(chapter_title, []),
+            )
+
+            for linked_question in linked:
+                try:
+                    tagged = metadata_tagger.apply_metadata(linked_question, context)
+                except ValueError as e:
+                    logger.warning(
+                        "Metadata tagging failed for question %s: %s",
+                        linked_question.raw_question.question_number,
+                        e,
+                    )
+                    continue
+
+                raw = linked_question.raw_question
+
+                if db_writer.is_available():
+                    raw_id = db_writer.write_raw_question(job_id, raw)
+                    q_id = db_writer.write_question(
+                        tagged=tagged,
+                        raw_question_id=raw_id,
+                        job_id=job_id,
+                        question_number=raw.question_number,
+                        page_number=raw.page_number,
+                    )
+                    if q_id:
+                        db_writer.write_answer(
+                            question_id=q_id,
+                            answer_text=linked_question.answer_key,
+                            explanation_text=linked_question.explanation,
+                            question_ref=f"{chapter_title} > {topic_title} > {raw.question_number}",
+                        )
+                        db_writer.write_hint(
+                            question_id=q_id,
+                            hint_text=linked_question.hint,
+                            question_ref=f"{chapter_title} > {topic_title} > {raw.question_number}",
+                        )
+                        db_writer.write_explanation(
+                            question_id=q_id,
+                            explanation_text=linked_question.explanation,
+                            question_ref=f"{chapter_title} > {topic_title} > {raw.question_number}",
+                        )
+                        questions_written += 1
 
         return questions_written
 
