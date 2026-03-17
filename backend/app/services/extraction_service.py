@@ -13,7 +13,7 @@ Requirements: 1.1, 1.2, 1.3, 1.4, 1.5, 2.1, 2.2, 2.3, 2.4, 2.5, 3.1, 3.2, 4.1, 4
 
 from typing import Optional, List, Dict, Any, Tuple
 from uuid import UUID
-from datetime import datetime
+from datetime import datetime, timezone
 from decimal import Decimal
 import logging
 
@@ -160,23 +160,23 @@ class ExtractionService:
             
             job = ExtractionJob(**job_result.data[0])
             
-            # Get book if associated
+            # Get book if associated (extraction_books for extraction flow)
             book = None
             if job.book_id:
-                book_result = self.db.table("books").select("*").eq("id", str(job.book_id)).execute()
+                book_result = self.db.table("extraction_books").select("*").eq("id", str(job.book_id)).execute()
                 if book_result.data:
                     book = Book(**book_result.data[0])
             
-            # Get hierarchy (chapters and topics)
+            # Get hierarchy (extraction_chapters, extraction_topics for extraction flow)
             hierarchy = []
             if job.book_id:
-                chapters_result = self.db.table("chapters").select("*").eq("book_id", str(job.book_id)).order("chapter_number").execute()
+                chapters_result = self.db.table("extraction_chapters").select("*").eq("book_id", str(job.book_id)).order("chapter_number").execute()
                 
-                for chapter_row in chapters_result.data:
+                for chapter_row in (chapters_result.data or []):
                     chapter = Chapter(**chapter_row)
                     
-                    topics_result = self.db.table("topics").select("*").eq("chapter_id", str(chapter.id)).order("topic_order").execute()
-                    topics = [Topic(**row) for row in topics_result.data]
+                    topics_result = self.db.table("extraction_topics").select("*").eq("chapter_id", str(chapter.id)).order("topic_order").execute()
+                    topics = [Topic(**row) for row in (topics_result.data or [])]
                     
                     hierarchy.append(ChapterWithTopics(chapter=chapter, topics=topics))
             
@@ -323,57 +323,34 @@ class ExtractionService:
             raise ValueError(f"Validation failed: {error_messages}")
         
         try:
-            # Get current question
-            current_result = await self.db.execute(
-                "SELECT * FROM raw_question WHERE id = %s",
-                [str(question_id)]
-            )
-            if not current_result:
+            # Get current question using Supabase table API
+            current_result = self.db.table("raw_questions").select("*").eq("id", str(question_id)).execute()
+            if not current_result.data:
                 return None
             
-            current_question = RawQuestion(**current_result[0])
+            current_question = RawQuestion(**current_result.data[0])
             
-            # Build update query
-            update_fields = []
-            params = []
-            
+            # Build update payload
+            update_data = {"updated_at": datetime.now(timezone.utc).isoformat()}
             if updates.question_text is not None:
-                update_fields.append("question_text = %s")
-                params.append(updates.question_text)
-            
+                update_data["question_text"] = updates.question_text
             if updates.options is not None:
-                update_fields.append("options = %s")
-                params.append(updates.options)
-            
+                update_data["options"] = updates.options
             if updates.chapter_context is not None:
-                update_fields.append("chapter_context = %s")
-                params.append(updates.chapter_context)
-            
+                update_data["chapter_context"] = updates.chapter_context
             if updates.topic_context is not None:
-                update_fields.append("topic_context = %s")
-                params.append(updates.topic_context)
-            
+                update_data["topic_context"] = updates.topic_context
             if updates.sub_topic_context is not None:
-                update_fields.append("sub_topic_context = %s")
-                params.append(updates.sub_topic_context)
-            
+                update_data["sub_topic_context"] = updates.sub_topic_context
             if updates.page_number is not None:
-                update_fields.append("page_number = %s")
-                params.append(updates.page_number)
+                update_data["page_number"] = updates.page_number
             
-            # Always update updated_at
-            update_fields.append("updated_at = NOW()")
-            
-            if not update_fields:
+            if len(update_data) <= 1:  # Only updated_at
                 return current_question
             
-            # Execute update
-            query = f"UPDATE raw_question SET {', '.join(update_fields)} WHERE id = %s RETURNING *"
-            params.append(str(question_id))
-            
-            result = await self.db.execute(query, params)
-            if result:
-                return RawQuestion(**result[0])
+            result = self.db.table("raw_questions").update(update_data).eq("id", str(question_id)).execute()
+            if result.data and len(result.data) > 0:
+                return RawQuestion(**result.data[0])
             
             return None
         except Exception as e:
@@ -400,25 +377,19 @@ class ExtractionService:
             ValueError: If question is already finalized
         """
         try:
-            # Get question
-            result = await self.db.execute(
-                "SELECT * FROM raw_question WHERE id = %s",
-                [str(question_id)]
-            )
-            if not result:
+            # Get question using Supabase table API
+            result = self.db.table("raw_questions").select("*").eq("id", str(question_id)).execute()
+            if not result.data:
                 return False
             
-            question = RawQuestion(**result[0])
+            question = RawQuestion(**result.data[0])
             
             # Check if already finalized
             if question.question_id is not None:
                 raise ValueError("Cannot delete a question that has already been finalized")
             
-            # Delete associated data (cascade handled by database triggers)
-            await self.db.execute(
-                "DELETE FROM raw_question WHERE id = %s",
-                [str(question_id)]
-            )
+            # Delete using Supabase table API
+            self.db.table("raw_questions").delete().eq("id", str(question_id)).execute()
             
             return True
         except Exception as e:
@@ -427,11 +398,10 @@ class ExtractionService:
     
     async def bulk_delete_questions(self, question_ids: List[UUID]) -> BulkOperationResult:
         """
-        Delete multiple raw questions in a transaction.
+        Delete multiple raw questions.
         
         Validates:
         - None of the questions are already finalized (Requirement 9.6)
-        - Uses transaction for all-or-nothing semantics (Requirement 9.2)
         - Returns detailed status for each question (Requirement 9.4)
         
         Requirements: 9.5, 9.6, 9.2, 9.3, 9.4
@@ -446,25 +416,19 @@ class ExtractionService:
         failed = []
         
         try:
-            # Start transaction
-            await self.db.execute("BEGIN")
-            
             for question_id in question_ids:
                 try:
-                    # Get question
-                    result = await self.db.execute(
-                        "SELECT * FROM raw_question WHERE id = %s",
-                        [str(question_id)]
-                    )
+                    # Get question using Supabase table API
+                    result = self.db.table("raw_questions").select("*").eq("id", str(question_id)).execute()
                     
-                    if not result:
+                    if not result.data:
                         failed.append({
                             "id": str(question_id),
                             "error": "Question not found"
                         })
                         continue
                     
-                    question = RawQuestion(**result[0])
+                    question = RawQuestion(**result.data[0])
                     
                     # Check if already finalized
                     if question.question_id is not None:
@@ -474,11 +438,8 @@ class ExtractionService:
                         })
                         continue
                     
-                    # Delete question
-                    await self.db.execute(
-                        "DELETE FROM raw_question WHERE id = %s",
-                        [str(question_id)]
-                    )
+                    # Delete question using Supabase table API
+                    self.db.table("raw_questions").delete().eq("id", str(question_id)).execute()
                     
                     successful.append(question_id)
                 except Exception as e:
@@ -486,9 +447,6 @@ class ExtractionService:
                         "id": str(question_id),
                         "error": str(e)
                     })
-            
-            # Commit transaction
-            await self.db.execute("COMMIT")
             
             return BulkOperationResult(
                 successful=successful,
@@ -498,12 +456,6 @@ class ExtractionService:
                 failure_count=len(failed)
             )
         except Exception as e:
-            # Rollback on error
-            try:
-                await self.db.execute("ROLLBACK")
-            except:
-                pass
-            
             logger.error(f"Error in bulk delete: {str(e)}")
             raise
     
@@ -527,61 +479,38 @@ class ExtractionService:
             JobStatistics with calculated values
         """
         try:
-            # Get total questions
-            total_result = await self.db.execute(
-                "SELECT COUNT(*) as count FROM raw_question WHERE job_id = %s",
-                [str(job_id)]
-            )
-            total_questions = total_result[0]['count'] if total_result else 0
+            job_id_str = str(job_id)
             
-            # Get questions by status
-            status_result = await self.db.execute(
-                """
-                SELECT processing_status, COUNT(*) as count 
-                FROM raw_question 
-                WHERE job_id = %s 
-                GROUP BY processing_status
-                """,
-                [str(job_id)]
-            )
-            questions_by_status = {
-                row['processing_status']: row['count'] 
-                for row in status_result
-            }
+            # Get all raw questions for this job to compute stats
+            questions_result = self.db.table("raw_questions").select(
+                "processing_status", "chapter_context", "question_id"
+            ).eq("job_id", job_id_str).execute()
             
-            # Get questions by chapter
-            chapter_result = await self.db.execute(
-                """
-                SELECT chapter_context, COUNT(*) as count 
-                FROM raw_question 
-                WHERE job_id = %s AND chapter_context IS NOT NULL
-                GROUP BY chapter_context
-                """,
-                [str(job_id)]
-            )
-            questions_by_chapter = {
-                row['chapter_context']: row['count'] 
-                for row in chapter_result
-            }
+            questions = questions_result.data or []
+            total_questions = len(questions)
             
-            # Calculate finalization rate
-            finalized_result = await self.db.execute(
-                "SELECT COUNT(*) as count FROM raw_question WHERE job_id = %s AND question_id IS NOT NULL",
-                [str(job_id)]
-            )
-            finalized_count = finalized_result[0]['count'] if finalized_result else 0
+            questions_by_status: Dict[str, int] = {}
+            for q in questions:
+                status = q.get("processing_status") or "pending"
+                questions_by_status[status] = questions_by_status.get(status, 0) + 1
+            
+            questions_by_chapter: Dict[str, int] = {}
+            for q in questions:
+                ch = q.get("chapter_context")
+                if ch:
+                    questions_by_chapter[ch] = questions_by_chapter.get(ch, 0) + 1
+            
+            finalized_count = sum(1 for q in questions if q.get("question_id"))
             finalization_rate = Decimal(0)
             if total_questions > 0:
                 finalization_rate = Decimal(finalized_count) / Decimal(total_questions) * Decimal(100)
             
             # Get job for total_pages
-            job_result = await self.db.execute(
-                "SELECT total_pages FROM extraction_job WHERE id = %s",
-                [str(job_id)]
-            )
-            total_pages = job_result[0]['total_pages'] if job_result and job_result[0]['total_pages'] else 1
+            job_result = self.db.table("extraction_jobs").select("total_pages").eq("id", job_id_str).execute()
+            total_pages = 1
+            if job_result.data and job_result.data[0].get("total_pages"):
+                total_pages = job_result.data[0]["total_pages"]
             
-            # Calculate average questions per page
             average_questions_per_page = Decimal(0)
             if total_pages > 0:
                 average_questions_per_page = Decimal(total_questions) / Decimal(total_pages)
@@ -595,7 +524,6 @@ class ExtractionService:
             )
         except Exception as e:
             logger.error(f"Error calculating statistics for job {job_id}: {str(e)}")
-            # Return empty statistics on error
             return JobStatistics()
     
     async def delete_job(self, job_id: UUID) -> bool:
