@@ -126,19 +126,20 @@ def extract_and_save_images(
     question_id: str,
     book_id: str,
     storage_root: Path,
+    storage_manager=None,
 ) -> list[dict[str, Any]]:
     """
     Extract base64 images from question text, save to storage, return records.
 
-    Replaces inline base64 with storage path. Records include storage_path,
-    sort_order, position_in_question. Alt text comes from italicised line
-    below image blocks (handled separately if available).
+    When storage_manager is provided, uploads to Supabase instead of local disk.
+    Records include storage_path, sort_order, position_in_question.
 
     Args:
         question_text: Markdown with possible ![Image](data:image/...;base64,...)
         question_id: UUID of the question (for path)
         book_id: UUID of the book (for path)
-        storage_root: Root path for storage (e.g. backend/data/...)
+        storage_root: Root path for local storage (used when storage_manager is None)
+        storage_manager: Optional StorageManager - when provided, upload to Supabase
 
     Returns:
         List of dicts for question_images table inserts.
@@ -147,10 +148,32 @@ def extract_and_save_images(
     for i, match in enumerate(BASE64_RE.finditer(question_text)):
         fmt, data = match.group(1), match.group(2)
         ext = "jpg" if fmt.lower() in ("jpeg", "jpg") else fmt.lower()
-        rel_path = f"books/{book_id}/questions/{question_id}/img_{i:03d}.{ext}"
-        full_path = storage_root / rel_path
-        full_path.parent.mkdir(parents=True, exist_ok=True)
-        full_path.write_bytes(base64.b64decode(data))
+        filename = f"img_{i:03d}.{ext}"
+        image_data = base64.b64decode(data)
+        rel_path = f"books/{book_id}/questions/{question_id}/{filename}"
+
+        if storage_manager:
+            try:
+                from uuid import UUID
+                storage_path = storage_manager.upload_question_image(
+                    book_id=UUID(book_id),
+                    question_id=UUID(question_id),
+                    image_data=image_data,
+                    image_filename=filename,
+                )
+                if storage_path.startswith("local://"):
+                    rel_path = storage_path.replace("local://", "")
+                else:
+                    rel_path = storage_path
+            except Exception:
+                full_path = storage_root / rel_path
+                full_path.parent.mkdir(parents=True, exist_ok=True)
+                full_path.write_bytes(image_data)
+        else:
+            full_path = storage_root / rel_path
+            full_path.parent.mkdir(parents=True, exist_ok=True)
+            full_path.write_bytes(image_data)
+
         records.append(
             {
                 "id": str(uuid.uuid4()),
