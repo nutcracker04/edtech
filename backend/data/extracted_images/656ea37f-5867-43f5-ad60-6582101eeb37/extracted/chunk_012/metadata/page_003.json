@@ -1,0 +1,424 @@
+{
+  "page_num": 3,
+  "image_width": 2398,
+  "image_height": 3003,
+  "created_at": "2026-03-17T19:10:27.637783+00:00",
+  "blocks": [
+    {
+      "block_id": "20260317_fac1ab83-81e6-422f-84cf-3b23b86ae39a_3_block_000",
+      "coordinates": {
+        "x1": 1696.0,
+        "y1": 187.0,
+        "x2": 2050.0,
+        "y2": 238.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.8650597333908081,
+      "reading_order": 1,
+      "text": "Hints and Explanations"
+    },
+    {
+      "block_id": "20260317_fac1ab83-81e6-422f-84cf-3b23b86ae39a_3_block_001",
+      "coordinates": {
+        "x1": 2104.0,
+        "y1": 186.0,
+        "x2": 2195.0,
+        "y2": 234.0
+      },
+      "layout_tag": "page-number",
+      "confidence": 0.7887178063392639,
+      "reading_order": 2,
+      "text": "A.7"
+    },
+    {
+      "block_id": "20260317_fac1ab83-81e6-422f-84cf-3b23b86ae39a_3_block_002",
+      "coordinates": {
+        "x1": 233.0,
+        "y1": 290.0,
+        "x2": 1168.0,
+        "y2": 471.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9168453812599182,
+      "reading_order": 3,
+      "text": "2. Cooking gas (LPG) is liquefied by the applica-\ntion of pressure.\n\nHence, the correct option is (b)."
+    },
+    {
+      "block_id": "20260317_fac1ab83-81e6-422f-84cf-3b23b86ae39a_3_block_003",
+      "coordinates": {
+        "x1": 235.0,
+        "y1": 495.0,
+        "x2": 1168.0,
+        "y2": 676.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9210958480834961,
+      "reading_order": 4,
+      "text": "3. It is graphite, and so the constituent atoms are\ncarbon.\n\nHence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260317_fac1ab83-81e6-422f-84cf-3b23b86ae39a_3_block_004",
+      "coordinates": {
+        "x1": 234.0,
+        "y1": 698.0,
+        "x2": 1169.0,
+        "y2": 880.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9225072860717773,
+      "reading_order": 5,
+      "text": "4. Brass, being an alloy of copper, is a homogene-\nous mixture.\n\nHence, the correct option is (a)."
+    },
+    {
+      "block_id": "20260317_fac1ab83-81e6-422f-84cf-3b23b86ae39a_3_block_005",
+      "coordinates": {
+        "x1": 234.0,
+        "y1": 902.0,
+        "x2": 1169.0,
+        "y2": 1083.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9297521710395813,
+      "reading_order": 6,
+      "text": "5. Among the given substances only gas carbon is\na good conductor of electricity.\nHence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260317_fac1ab83-81e6-422f-84cf-3b23b86ae39a_3_block_006",
+      "coordinates": {
+        "x1": 235.0,
+        "y1": 1112.0,
+        "x2": 1169.0,
+        "y2": 1413.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9184754490852356,
+      "reading_order": 7,
+      "text": "6. At first, charcoal should be separated by fil-\ntration. Then coconut oil can be separated by\nusing separating funnel and glucose can be\nobtained by evaporation.\nHence, the correct option is (a)."
+    },
+    {
+      "block_id": "20260317_fac1ab83-81e6-422f-84cf-3b23b86ae39a_3_block_007",
+      "coordinates": {
+        "x1": 234.0,
+        "y1": 1436.0,
+        "x2": 1169.0,
+        "y2": 1618.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9285594820976257,
+      "reading_order": 8,
+      "text": "7. We blow air to cool a hot liquid in order to pro-\nvide fresh air above the surface of the liquid.\nHence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260317_fac1ab83-81e6-422f-84cf-3b23b86ae39a_3_block_008",
+      "coordinates": {
+        "x1": 234.0,
+        "y1": 1640.0,
+        "x2": 1165.0,
+        "y2": 1822.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9239117503166199,
+      "reading_order": 9,
+      "text": "8. Critical temperature of C is the highest because\nit can only be liquefied at that temperature.\nHence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260317_fac1ab83-81e6-422f-84cf-3b23b86ae39a_3_block_009",
+      "coordinates": {
+        "x1": 231.0,
+        "y1": 1843.0,
+        "x2": 924.0,
+        "y2": 1972.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8911038041114807,
+      "reading_order": 10,
+      "text": "9. A cup of hot tea at $60^{\\circ}\\mathrm{C}$ gets cold.\nHence, the correct option is (b)."
+    },
+    {
+      "block_id": "20260317_fac1ab83-81e6-422f-84cf-3b23b86ae39a_3_block_010",
+      "coordinates": {
+        "x1": 216.0,
+        "y1": 1995.0,
+        "x2": 1168.0,
+        "y2": 2213.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.705515444278717,
+      "reading_order": 11,
+      "text": "10. During skating, pressure is applied on ice and it melts, and during filling up of cooking gas cylinder also, pressure is applied to liquefy the cooking gas."
+    },
+    {
+      "block_id": "20260317_fac1ab83-81e6-422f-84cf-3b23b86ae39a_3_block_011",
+      "coordinates": {
+        "x1": 290.0,
+        "y1": 2228.0,
+        "x2": 885.0,
+        "y2": 2285.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.3795461356639862,
+      "reading_order": 12,
+      "text": "Hence, the correct option is (d)."
+    },
+    {
+      "block_id": "20260317_fac1ab83-81e6-422f-84cf-3b23b86ae39a_3_block_012",
+      "coordinates": {
+        "x1": 214.0,
+        "y1": 2310.0,
+        "x2": 1166.0,
+        "y2": 2596.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5762755870819092,
+      "reading_order": 13,
+      "text": "11. Metals are good conductors of electricity\nbecause of the presence of free electrons. Metal\natoms have generally 1 or 2 or 3 electrons in\ntheir valence shell.\nHence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260317_fac1ab83-81e6-422f-84cf-3b23b86ae39a_3_block_013",
+      "coordinates": {
+        "x1": 286.0,
+        "y1": 2559.0,
+        "x2": 877.0,
+        "y2": 2614.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.33846381306648254,
+      "reading_order": 14,
+      "text": "Hence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260317_fac1ab83-81e6-422f-84cf-3b23b86ae39a_3_block_014",
+      "coordinates": {
+        "x1": 213.0,
+        "y1": 2639.0,
+        "x2": 1171.0,
+        "y2": 2752.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9008262157440186,
+      "reading_order": 15,
+      "text": "12. Duralumin is as strong as steel because it is an alloy of aluminium, and alloying improves"
+    },
+    {
+      "block_id": "20260317_fac1ab83-81e6-422f-84cf-3b23b86ae39a_3_block_015",
+      "coordinates": {
+        "x1": 1337.0,
+        "y1": 291.0,
+        "x2": 2219.0,
+        "y2": 398.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6049875020980835,
+      "reading_order": 16,
+      "text": "the mechanical properties of metal. Alloying\nreduces the malleability of the metal."
+    },
+    {
+      "block_id": "20260317_fac1ab83-81e6-422f-84cf-3b23b86ae39a_3_block_016",
+      "coordinates": {
+        "x1": 1341.0,
+        "y1": 416.0,
+        "x2": 1928.0,
+        "y2": 472.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.4729240834712982,
+      "reading_order": 17,
+      "text": "Hence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260317_fac1ab83-81e6-422f-84cf-3b23b86ae39a_3_block_017",
+      "coordinates": {
+        "x1": 1264.0,
+        "y1": 496.0,
+        "x2": 2218.0,
+        "y2": 904.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9352728128433228,
+      "reading_order": 18,
+      "text": "13. Chromatogram (a) contains A, B, and two\nother components. Chromatogram (b) contains\nA, C, and another component. Chromatogram\n(c) contains A, B, and C. Chromatogram (d)\ncontains A and C.\n\n$\\therefore$ The order is BCAD.\nHence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260317_fac1ab83-81e6-422f-84cf-3b23b86ae39a_3_block_018",
+      "coordinates": {
+        "x1": 1264.0,
+        "y1": 924.0,
+        "x2": 2218.0,
+        "y2": 1247.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8825986981391907,
+      "reading_order": 19,
+      "text": "14. At first, gravity separation can be carried out to\nseparate sawdust. Then filtration can be done\nto remove coarsely ground chalk, followed by\nfractional distillation for removing vinegar.\nThen evaporation can be done to obtain the\ncommon salt."
+    },
+    {
+      "block_id": "20260317_fac1ab83-81e6-422f-84cf-3b23b86ae39a_3_block_019",
+      "coordinates": {
+        "x1": 1334.0,
+        "y1": 1266.0,
+        "x2": 1920.0,
+        "y2": 1383.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.329967200756073,
+      "reading_order": 20,
+      "text": "$\\therefore$ The order is DBAC.\nHence, the correct option is (a)."
+    },
+    {
+      "block_id": "20260317_fac1ab83-81e6-422f-84cf-3b23b86ae39a_3_block_020",
+      "coordinates": {
+        "x1": 1262.0,
+        "y1": 1399.0,
+        "x2": 2219.0,
+        "y2": 1453.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.59563809633255,
+      "reading_order": 21,
+      "text": "15. (i) Solid–solid homogeneous mixture → Bronze"
+    },
+    {
+      "block_id": "20260317_fac1ab83-81e6-422f-84cf-3b23b86ae39a_3_block_021",
+      "coordinates": {
+        "x1": 1351.0,
+        "y1": 1469.0,
+        "x2": 2217.0,
+        "y2": 1571.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7604497075080872,
+      "reading_order": 22,
+      "text": "(ii) Solid–liquid homogeneous mixture → Saline water"
+    },
+    {
+      "block_id": "20260317_fac1ab83-81e6-422f-84cf-3b23b86ae39a_3_block_022",
+      "coordinates": {
+        "x1": 1344.0,
+        "y1": 1585.0,
+        "x2": 2217.0,
+        "y2": 1689.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8744804263114929,
+      "reading_order": 23,
+      "text": "(iii) Liquid–liquid heterogeneous mixture → Coconut oil and water"
+    },
+    {
+      "block_id": "20260317_fac1ab83-81e6-422f-84cf-3b23b86ae39a_3_block_023",
+      "coordinates": {
+        "x1": 1346.0,
+        "y1": 1703.0,
+        "x2": 2216.0,
+        "y2": 1805.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8789395689964294,
+      "reading_order": 24,
+      "text": "(iv) Liquid–liquid homogeneous mixture → Petrol and diesel"
+    },
+    {
+      "block_id": "20260317_fac1ab83-81e6-422f-84cf-3b23b86ae39a_3_block_024",
+      "coordinates": {
+        "x1": 1355.0,
+        "y1": 1819.0,
+        "x2": 2216.0,
+        "y2": 1925.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8561107516288757,
+      "reading_order": 25,
+      "text": "(v) Solid–liquid heterogeneous mixture → Finely powdered charcoal in water."
+    },
+    {
+      "block_id": "20260317_fac1ab83-81e6-422f-84cf-3b23b86ae39a_3_block_025",
+      "coordinates": {
+        "x1": 1342.0,
+        "y1": 1943.0,
+        "x2": 1931.0,
+        "y2": 2000.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7516778111457825,
+      "reading_order": 26,
+      "text": "Hence, the correct option is (a)."
+    },
+    {
+      "block_id": "20260317_fac1ab83-81e6-422f-84cf-3b23b86ae39a_3_block_026",
+      "coordinates": {
+        "x1": 1238.0,
+        "y1": 2051.0,
+        "x2": 1700.0,
+        "y2": 2106.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.8231194019317627,
+      "reading_order": 27,
+      "text": "Assessment Test III"
+    },
+    {
+      "block_id": "20260317_fac1ab83-81e6-422f-84cf-3b23b86ae39a_3_block_027",
+      "coordinates": {
+        "x1": 1281.0,
+        "y1": 2154.0,
+        "x2": 2189.0,
+        "y2": 2281.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8879402875900269,
+      "reading_order": 28,
+      "text": "1. The thermal expansion is maximum in gases.\nHence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260317_fac1ab83-81e6-422f-84cf-3b23b86ae39a_3_block_028",
+      "coordinates": {
+        "x1": 1283.0,
+        "y1": 2304.0,
+        "x2": 2216.0,
+        "y2": 2414.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7808845639228821,
+      "reading_order": 29,
+      "text": "2. In both evaporation and boiling, liquid changes to its gaseous state."
+    },
+    {
+      "block_id": "20260317_fac1ab83-81e6-422f-84cf-3b23b86ae39a_3_block_029",
+      "coordinates": {
+        "x1": 1340.0,
+        "y1": 2434.0,
+        "x2": 1929.0,
+        "y2": 2491.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.48423609137535095,
+      "reading_order": 30,
+      "text": "Hence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260317_fac1ab83-81e6-422f-84cf-3b23b86ae39a_3_block_030",
+      "coordinates": {
+        "x1": 1283.0,
+        "y1": 2509.0,
+        "x2": 2219.0,
+        "y2": 2705.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5763360261917114,
+      "reading_order": 31,
+      "text": "3. Good conductance of electricity is the charac-\nteristic of a metal. Non-metals are generally\npoor conductors of electricity."
+    },
+    {
+      "block_id": "20260317_fac1ab83-81e6-422f-84cf-3b23b86ae39a_3_block_031",
+      "coordinates": {
+        "x1": 1313.0,
+        "y1": 2693.0,
+        "x2": 1930.0,
+        "y2": 2748.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.3731705844402313,
+      "reading_order": 32,
+      "text": "Hence, the correct option is (a)."
+    }
+  ]
+}

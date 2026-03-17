@@ -1,0 +1,164 @@
+{
+  "page_num": 7,
+  "image_width": 2398,
+  "image_height": 3003,
+  "created_at": "2026-03-17T19:09:22.063338+00:00",
+  "blocks": [
+    {
+      "block_id": "20260317_4c23c5f9-000a-496f-93a5-dce491a9753e_7_block_000",
+      "coordinates": {
+        "x1": 1749.0,
+        "y1": 186.0,
+        "x2": 2052.0,
+        "y2": 235.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.8561260104179382,
+      "reading_order": 1,
+      "text": "Assessment Test IV"
+    },
+    {
+      "block_id": "20260317_4c23c5f9-000a-496f-93a5-dce491a9753e_7_block_001",
+      "coordinates": {
+        "x1": 2094.0,
+        "y1": 182.0,
+        "x2": 2208.0,
+        "y2": 235.0
+      },
+      "layout_tag": "page-number",
+      "confidence": 0.7962363362312317,
+      "reading_order": 2,
+      "text": "1.13"
+    },
+    {
+      "block_id": "20260317_4c23c5f9-000a-496f-93a5-dce491a9753e_7_block_002",
+      "coordinates": {
+        "x1": 233.0,
+        "y1": 292.0,
+        "x2": 1600.0,
+        "y2": 414.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8978803753852844,
+      "reading_order": 3,
+      "text": "6. How many fundamental particles are present in an $\\alpha$-particle?\n(a) 2 (b) 4 (c) 6 (d) 3"
+    },
+    {
+      "block_id": "20260317_4c23c5f9-000a-496f-93a5-dce491a9753e_7_block_003",
+      "coordinates": {
+        "x1": 232.0,
+        "y1": 470.0,
+        "x2": 1698.0,
+        "y2": 656.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9316756129264832,
+      "reading_order": 4,
+      "text": "7. Name the scientist who first established the presence of nucleus in an atom.\n(a) J. J. Thomson (b) Rutherford\n(c) Bohr (d) Dalton"
+    },
+    {
+      "block_id": "20260317_4c23c5f9-000a-496f-93a5-dce491a9753e_7_block_004",
+      "coordinates": {
+        "x1": 233.0,
+        "y1": 712.0,
+        "x2": 1698.0,
+        "y2": 952.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9386758208274841,
+      "reading_order": 5,
+      "text": "8. Which of the following metals can be considered the best substitute of gold\nin $\\alpha$-ray scattering experiment?\n(a) Aluminium (b) Iron\n(c) Platinum (d) Copper"
+    },
+    {
+      "block_id": "20260317_4c23c5f9-000a-496f-93a5-dce491a9753e_7_block_005",
+      "coordinates": {
+        "x1": 232.0,
+        "y1": 1010.0,
+        "x2": 1698.0,
+        "y2": 1249.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9372797608375549,
+      "reading_order": 6,
+      "text": "9. Which of the following atomic numbers corresponds to the formation of\ntrinegative ion?\n(a) 7 (b) 15\n(c) 18 (d) Both (a) and (b)"
+    },
+    {
+      "block_id": "20260317_4c23c5f9-000a-496f-93a5-dce491a9753e_7_block_006",
+      "coordinates": {
+        "x1": 216.0,
+        "y1": 1304.0,
+        "x2": 1601.0,
+        "y2": 1426.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9107609391212463,
+      "reading_order": 7,
+      "text": "10. The number of valence electrons present in noble gases is ____.\n(a) 6 (b) 18 (c) 8 (d) 4"
+    },
+    {
+      "block_id": "20260317_4c23c5f9-000a-496f-93a5-dce491a9753e_7_block_007",
+      "coordinates": {
+        "x1": 215.0,
+        "y1": 1485.0,
+        "x2": 1691.0,
+        "y2": 1659.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9347337484359741,
+      "reading_order": 8,
+      "text": "11. An atom of an element 'X' has the electronic configuration $a, a + b, 2(b - 1)$,\nand $a$. Identify the atomic number of the element.\n(a) 20 (b) 22 (c) 24 (d) 26"
+    },
+    {
+      "block_id": "20260317_4c23c5f9-000a-496f-93a5-dce491a9753e_7_block_008",
+      "coordinates": {
+        "x1": 212.0,
+        "y1": 1718.0,
+        "x2": 1541.0,
+        "y2": 2027.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9480316638946533,
+      "reading_order": 9,
+      "text": "12. Identify the false statement according to Bohr’s theory.\n(a) Electron absorbs energy when it moves from M shell to L shell.\n(b) Electron releases energy when it jumps from M shell to K shell.\n(c) Electron revolving in K shell does not lose energy at all.\n(d) Energy of electron in a given orbit is constant."
+    },
+    {
+      "block_id": "20260317_4c23c5f9-000a-496f-93a5-dce491a9753e_7_block_009",
+      "coordinates": {
+        "x1": 209.0,
+        "y1": 2086.0,
+        "x2": 1689.0,
+        "y2": 2450.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.94985032081604,
+      "reading_order": 10,
+      "text": "13. What was the expected observation of $\\alpha$-ray scattering experiment if Thom-\nson’s atomic model would be correct?\n(a) All the $\\alpha$-particles would be completely rebounded.\n(b) All the $\\alpha$-particles would be deflected at very large angles.\n(c) Absence of scintillations on ZnS screen.\n(d) All the $\\alpha$-particles would pass straight through the gold foil."
+    },
+    {
+      "block_id": "20260317_4c23c5f9-000a-496f-93a5-dce491a9753e_7_block_010",
+      "coordinates": {
+        "x1": 212.0,
+        "y1": 2506.0,
+        "x2": 1700.0,
+        "y2": 2679.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9275357127189636,
+      "reading_order": 11,
+      "text": "14. Total number of electrons present in the antepenultimate shell of an atom of\nan element with atomic number 24 is ______.\n(a) 2 (b) 8 (c) 13 (d) 1"
+    },
+    {
+      "block_id": "20260317_4c23c5f9-000a-496f-93a5-dce491a9753e_7_block_011",
+      "coordinates": {
+        "x1": 1790.0,
+        "y1": 310.0,
+        "x2": 2173.0,
+        "y2": 365.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6751655340194702,
+      "reading_order": 12,
+      "text": "Space for rough work"
+    }
+  ]
+}

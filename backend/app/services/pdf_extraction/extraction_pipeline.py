@@ -60,6 +60,7 @@ def run_extraction_pipeline(
             source_filename = Path(source_pdf_path).name if source_pdf_path else "source.pdf"
             db_writer.write_extraction_job(
                 job_id=job_id,
+                title=metadata.title or "",
                 source_pdf_filename=source_filename,
                 source_pdf_path=source_pdf_path or "",
                 total_pages=total_pages,

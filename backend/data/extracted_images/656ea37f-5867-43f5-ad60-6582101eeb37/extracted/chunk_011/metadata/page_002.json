@@ -1,0 +1,164 @@
+{
+  "page_num": 2,
+  "image_width": 2398,
+  "image_height": 3003,
+  "created_at": "2026-03-17T19:10:15.773454+00:00",
+  "blocks": [
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_2_block_000",
+      "coordinates": {
+        "x1": 182.0,
+        "y1": 183.0,
+        "x2": 1221.0,
+        "y2": 241.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.5977783203125,
+      "reading_order": 1,
+      "text": "7.10 Chapter 7 Some Important Elements and their Compounds"
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_2_block_001",
+      "coordinates": {
+        "x1": 286.0,
+        "y1": 292.0,
+        "x2": 1702.0,
+        "y2": 598.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6881974339485168,
+      "reading_order": 2,
+      "text": "(A) Dissolution of an oxide in an acid\n(B) Hydrolysis (reaction with water) of an acid\n(C) Combustion of a substance\n(D) A reversible redox reaction\n(a) DCAB (b) BCAD (c) CDAB (d) ACBD"
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_2_block_002",
+      "coordinates": {
+        "x1": 234.0,
+        "y1": 619.0,
+        "x2": 1622.0,
+        "y2": 748.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8738961815834045,
+      "reading_order": 3,
+      "text": "8. Which of the following elements is not present in bleaching powder?\n(a) Ca (b) O (c) H (d) Cl"
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_2_block_003",
+      "coordinates": {
+        "x1": 231.0,
+        "y1": 770.0,
+        "x2": 1700.0,
+        "y2": 1017.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9349529147148132,
+      "reading_order": 4,
+      "text": "9. The coefficient of thermal expansion of which of the following types of\nglasses is low?\n(a) Borosilicate glass (b) Lead glass\n(c) Optical glass (d) Alkali silicate glass"
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_2_block_004",
+      "coordinates": {
+        "x1": 214.0,
+        "y1": 1037.0,
+        "x2": 1661.0,
+        "y2": 1227.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9282865524291992,
+      "reading_order": 5,
+      "text": "10. Which of the following fertilizers cannot replenish the soil with nitrogen?\n(a) Ammonium sulphate (b) Urea\n(c) Superphosphate (d) Ammonium phosphate"
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_2_block_005",
+      "coordinates": {
+        "x1": 214.0,
+        "y1": 1247.0,
+        "x2": 1664.0,
+        "y2": 1440.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9266637563705444,
+      "reading_order": 6,
+      "text": "11. Which of the following processed glasses is used for reinforcing purpose?\n(a) Laminated glass (b) Fibre glass\n(c) Foam glass (d) Opaque glass"
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_2_block_006",
+      "coordinates": {
+        "x1": 213.0,
+        "y1": 1462.0,
+        "x2": 1663.0,
+        "y2": 1650.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9234563112258911,
+      "reading_order": 7,
+      "text": "12. Which of the following polymers contains cross-linked polymeric chains?\n(a) Polyethylene (b) PVC\n(c) Teflon (d) Melamine"
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_2_block_007",
+      "coordinates": {
+        "x1": 212.0,
+        "y1": 1672.0,
+        "x2": 1562.0,
+        "y2": 1862.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9248349070549011,
+      "reading_order": 8,
+      "text": "13. Which of the following fibres does not originate from living beings?\n(a) Silk (b) Wool\n(c) Cotton (d) Acrylic"
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_2_block_008",
+      "coordinates": {
+        "x1": 215.0,
+        "y1": 1886.0,
+        "x2": 1625.0,
+        "y2": 2020.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8931452035903931,
+      "reading_order": 9,
+      "text": "14. Which of the following gases is widely used as an analytical reagent?\n(a) $\\mathrm{Cl}_2$ (b) $\\mathrm{H}_2\\mathrm{S}$ (c) $\\mathrm{SO}_2$ (d) $\\mathrm{O}_2$"
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_2_block_009",
+      "coordinates": {
+        "x1": 214.0,
+        "y1": 2037.0,
+        "x2": 1330.0,
+        "y2": 2088.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.4451143443584442,
+      "reading_order": 10,
+      "text": "15. Match the entries of Column A with those of Column B."
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_2_block_010",
+      "coordinates": {
+        "x1": 289.0,
+        "y1": 2117.0,
+        "x2": 1508.0,
+        "y2": 2812.0
+      },
+      "layout_tag": "table",
+      "confidence": 0.32930609583854675,
+      "reading_order": 11,
+      "text": "<table>\n<thead>\n<tr>\n<th>Column A<br/>(Compounds)</th>\n<th>Column B<br/>(Uses)</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>(i) NH4Cl</td>\n<td>(A) Dehydrating agent</td>\n</tr>\n<tr>\n<td>(ii) P2O5</td>\n<td>(B) Flux in the extraction of metals like iron</td>\n</tr>\n<tr>\n<td>(iii) CaO</td>\n<td>(C) Preparation of soaps and detergents</td>\n</tr>\n<tr>\n<td>(iv) CaOCl2</td>\n<td>(D) Electrolyte in dry cell</td>\n</tr>\n<tr>\n<td>(v) NaOH</td>\n<td>(E) In the manufacture of chloroform</td>\n</tr>\n</tbody>\n</table>"
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_2_block_011",
+      "coordinates": {
+        "x1": 1791.0,
+        "y1": 312.0,
+        "x2": 2170.0,
+        "y2": 364.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.38776591420173645,
+      "reading_order": 12,
+      "text": "Space for rough work"
+    }
+  ]
+}

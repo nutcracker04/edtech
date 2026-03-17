@@ -1,0 +1,47 @@
+{
+  "page_num": 7,
+  "image_width": 2398,
+  "image_height": 3003,
+  "created_at": "2026-03-17T19:09:08.130573+00:00",
+  "blocks": [
+    {
+      "block_id": "20260317_d100afe8-1ac9-4c46-b856-3c6c70f9d473_7_block_000",
+      "coordinates": {
+        "x1": 974.0,
+        "y1": 352.0,
+        "x2": 1481.0,
+        "y2": 460.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.8616341948509216,
+      "reading_order": 1,
+      "text": "Contents"
+    },
+    {
+      "block_id": "20260317_d100afe8-1ac9-4c46-b856-3c6c70f9d473_7_block_001",
+      "coordinates": {
+        "x1": 174.0,
+        "y1": 635.0,
+        "x2": 1193.0,
+        "y2": 2630.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9642278552055359,
+      "reading_order": 2,
+      "text": "Preface vii\nHow to Use the Practice Book ix\nSeries Chapter Flow x\n\nCHAPTER 1 ATOMIC STRUCTURE 1.1\nAssessment Test I 1.1\nAssessment Test II 1.5\nAssessment Test III 1.9\nAssessment Test IV 1.12\nAnswer Keys 1.14\n\nCHAPTER 2 CLASSIFICATION OF MATTER 2.1\nAssessment Test I 2.1\nAssessment Test II 2.5\nAssessment Test III 2.8\nAssessment Test IV 2.11\nAnswer Keys 2.13\n\nCHAPTER 3 LANGUAGE OF CHEMISTRY AND TRANSFORMATION OF SUBSTANCES 3.1\nAssessment Test I 3.1\nAssessment Test II 3.4\nAssessment Test III 3.7\nAssessment Test IV 3.10\nAnswer Keys 3.12\n\nCHAPTER 4 AIR AND OXYGEN 4.1\nAssessment Test I 4.1\nAssessment Test II 4.4"
+    },
+    {
+      "block_id": "20260317_d100afe8-1ac9-4c46-b856-3c6c70f9d473_7_block_002",
+      "coordinates": {
+        "x1": 1214.0,
+        "y1": 635.0,
+        "x2": 2220.0,
+        "y2": 2638.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9697456359863281,
+      "reading_order": 3,
+      "text": "Assessment Test III 4.7\nAssessment Test IV 4.10\nAnswer Keys 4.12\n\nCHAPTER 5 WATER, SOLUTION, SOLUBILITY AND HYDROGEN 5.1\nAssessment Test I 5.1\nAssessment Test II 5.5\nAssessment Test III 5.9\nAssessment Test IV 5.12\nAnswer Keys 5.14\n\nCHAPTER 6 CARBON AND ITS COMPOUNDS 6.1\nAssessment Test I 6.1\nAssessment Test II 6.4\nAssessment Test III 6.7\nAssessment Test IV 6.9\nAnswer Keys 6.11\n\nCHAPTER 7 SOME IMPORTANT ELEMENTS AND THEIR COMPOUNDS 7.1\nAssessment Test I 7.1\nAssessment Test II 7.5\nAssessment Test III 7.9\nAssessment Test IV 7.11\nAnswer Keys 7.13\n\nHINTS AND EXPLANATIONS A.1"
+    }
+  ]
+}

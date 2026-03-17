@@ -1,0 +1,255 @@
+{
+  "page_num": 4,
+  "image_width": 2398,
+  "image_height": 3003,
+  "created_at": "2026-03-17T19:10:34.189039+00:00",
+  "blocks": [
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_4_block_000",
+      "coordinates": {
+        "x1": 182.0,
+        "y1": 183.0,
+        "x2": 1121.0,
+        "y2": 241.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.868896484375,
+      "reading_order": 1,
+      "text": "A.18 Chapter 5 Water, Solution, Solubility and Hydrogen"
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_4_block_001",
+      "coordinates": {
+        "x1": 1010.0,
+        "y1": 306.0,
+        "x2": 1385.0,
+        "y2": 368.0
+      },
+      "layout_tag": "headline",
+      "confidence": 0.7422415018081665,
+      "reading_order": 2,
+      "text": "CHAPTER 5"
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_4_block_002",
+      "coordinates": {
+        "x1": 814.0,
+        "y1": 398.0,
+        "x2": 1583.0,
+        "y2": 563.0
+      },
+      "layout_tag": "headline",
+      "confidence": 0.8310741186141968,
+      "reading_order": 3,
+      "text": "Water, Solution, Solubility and Hydrogen"
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_4_block_003",
+      "coordinates": {
+        "x1": 192.0,
+        "y1": 612.0,
+        "x2": 602.0,
+        "y2": 665.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.8205917477607727,
+      "reading_order": 4,
+      "text": "Assessment Test I"
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_4_block_004",
+      "coordinates": {
+        "x1": 227.0,
+        "y1": 708.0,
+        "x2": 1133.0,
+        "y2": 1031.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.4587099254131317,
+      "reading_order": 5,
+      "text": "1. (A) 100 g ice $\\rightarrow$ water at $0^\\circ\\mathrm{C}$\n$$ q_1 = 100 \\times 80 = 8000 \\text{ cal} $$\nWater at $0^\\circ\\mathrm{C} \\rightarrow$ water at $30^\\circ\\mathrm{C}$\n$$ q_2 = 100 \\times 1 \\times 30 = 3000 \\text{ cal} $$\n$$ Q = q_1 + q_2 = 8000 + 3000 = 11000 \\text{ cal} $$"
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_4_block_005",
+      "coordinates": {
+        "x1": 287.0,
+        "y1": 1031.0,
+        "x2": 1175.0,
+        "y2": 1825.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6162169575691223,
+      "reading_order": 6,
+      "text": "(B) 50 g boiling water $\\rightarrow$ water vapour at $100^\\circ\\mathrm{C}$\n$\\mathrm{q}_1 = 50 \\times 540 = 27,000$ cal\nWater vapour at $100^\\circ\\mathrm{C} \\rightarrow$ water vapour at\n$120^\\circ\\mathrm{C}$\n$\\mathrm{q}_2 = 50 \\times 0.9 \\times 20 = 900$ cal\n$\\mathrm{Q} = \\mathrm{q}_1 + \\mathrm{q}_2 = 27,000 + 900 = 27,900$ cal\n(C) 100 g boiling water $\\rightarrow$ water vapour at\n$100^\\circ\\mathrm{C}$\n$\\mathrm{q} = 100 \\times 540 = 54,000$ cal\n(D) 50 g ice $\\rightarrow$ water at $0^\\circ\\mathrm{C}$\n$\\mathrm{q} = 50 \\times 80 = 4000$ cal\nIncreasing order of heat required is DABC.\nHence, the correct option is (b)."
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_4_block_006",
+      "coordinates": {
+        "x1": 234.0,
+        "y1": 1851.0,
+        "x2": 1169.0,
+        "y2": 2127.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5484707355499268,
+      "reading_order": 7,
+      "text": "2. Due to the high value of dielectric constant of\nwater, water can break the forces of attraction\nbetween the oppositely charged ions. There-\nfore, many ionic compounds are highly soluble\nin water."
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_4_block_007",
+      "coordinates": {
+        "x1": 290.0,
+        "y1": 2141.0,
+        "x2": 879.0,
+        "y2": 2195.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.32822954654693604,
+      "reading_order": 8,
+      "text": "Hence, the correct option is (a)."
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_4_block_008",
+      "coordinates": {
+        "x1": 235.0,
+        "y1": 2220.0,
+        "x2": 1169.0,
+        "y2": 2438.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5452680587768555,
+      "reading_order": 9,
+      "text": "3. The formulae of blue vitriol and washing\nsoda are $\\mathrm{CuSO}_4 \\cdot 5\\mathrm{H}_2\\mathrm{O}$ and $\\mathrm{Na}_2\\mathrm{CO}_3 \\cdot 10\\mathrm{H}_2\\mathrm{O}$,\nrespectively. Both of them possess water of\ncrystallization."
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_4_block_009",
+      "coordinates": {
+        "x1": 288.0,
+        "y1": 2453.0,
+        "x2": 877.0,
+        "y2": 2507.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.2943854033946991,
+      "reading_order": 10,
+      "text": "Hence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_4_block_010",
+      "coordinates": {
+        "x1": 232.0,
+        "y1": 2534.0,
+        "x2": 1168.0,
+        "y2": 2696.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.4515502452850342,
+      "reading_order": 11,
+      "text": "4. At 40°C, the order of solubility of substances according to the solubility curve is B < A < D < C < E."
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_4_block_011",
+      "coordinates": {
+        "x1": 286.0,
+        "y1": 2716.0,
+        "x2": 880.0,
+        "y2": 2769.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.3057245910167694,
+      "reading_order": 12,
+      "text": "Hence, the correct option is (a)."
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_4_block_012",
+      "coordinates": {
+        "x1": 1281.0,
+        "y1": 708.0,
+        "x2": 2037.0,
+        "y2": 1076.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8122899532318115,
+      "reading_order": 13,
+      "text": "5. Solubility = 40\n\nMass of saturated solution = 210 g\n140 g of solution $\\rightarrow$ 40 g of substance\n210 g of solution $\\rightarrow \\frac{40 \\times 210}{140} = 60$ g\nHence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_4_block_013",
+      "coordinates": {
+        "x1": 1286.0,
+        "y1": 1102.0,
+        "x2": 2220.0,
+        "y2": 1393.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7571641802787781,
+      "reading_order": 14,
+      "text": "6. Solubility of calcium sulphate first increases\nand then decreases with temperature. There-\nfore, it shows the same solubility at two differ-\nent temperatures.\nHence, the correct option is (b)."
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_4_block_014",
+      "coordinates": {
+        "x1": 1284.0,
+        "y1": 1424.0,
+        "x2": 2219.0,
+        "y2": 1768.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9095041751861572,
+      "reading_order": 15,
+      "text": "7. Moisture catalyses the reaction between hydro-\ngen and chlorine to form hydrogen chloride.\nTherefore, no reaction takes place between dry\nhydrogen and chlorine even in the presence of\ndiffuse or intense sunlight\nHence, the correct option is (a)."
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_4_block_015",
+      "coordinates": {
+        "x1": 1283.0,
+        "y1": 1797.0,
+        "x2": 2221.0,
+        "y2": 2339.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9326704740524292,
+      "reading_order": 16,
+      "text": "8. Solubility of a gas in a liquid is proportional\nto the external pressure and inversely propor-\ntional to the external temperature. As atmos-\npheric pressure is the least at hill stations, sol-\nubility is also the least. The solubility is greater\nin winter than in summer. The solubility of\noxygen in water is maximum in deep sea in\nwinter. The correct order is deep sea in winter\n> sea level in winter > sea level in summer >\nhill station in summer."
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_4_block_016",
+      "coordinates": {
+        "x1": 1343.0,
+        "y1": 2357.0,
+        "x2": 1930.0,
+        "y2": 2411.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.4180256724357605,
+      "reading_order": 17,
+      "text": "Hence, the correct option is (b)."
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_4_block_017",
+      "coordinates": {
+        "x1": 1279.0,
+        "y1": 2428.0,
+        "x2": 2221.0,
+        "y2": 2716.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7507947087287903,
+      "reading_order": 18,
+      "text": "9. 1 g of water requires 4.2 J of heat for rise in the\ntemperature by $1^{\\circ}\\mathrm{C}$. 10 g of water requires 42\nJ of heat for the same rise in temperature. For\nreaching the boiling point ($100^{\\circ}\\mathrm{C}$), 4200 J or\n4.2 kJ of heat is required."
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_4_block_018",
+      "coordinates": {
+        "x1": 1334.0,
+        "y1": 2716.0,
+        "x2": 1924.0,
+        "y2": 2770.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.31666064262390137,
+      "reading_order": 19,
+      "text": "Hence, the correct option is (c)."
+    }
+  ]
+}

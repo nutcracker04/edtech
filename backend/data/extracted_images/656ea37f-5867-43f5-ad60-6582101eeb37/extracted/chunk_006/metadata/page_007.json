@@ -1,0 +1,151 @@
+{
+  "page_num": 7,
+  "image_width": 2398,
+  "image_height": 3003,
+  "created_at": "2026-03-17T19:09:41.249062+00:00",
+  "blocks": [
+    {
+      "block_id": "20260317_7a70d7d4-ac87-41eb-bd89-ed309e85319a_7_block_000",
+      "coordinates": {
+        "x1": 1771.0,
+        "y1": 189.0,
+        "x2": 2052.0,
+        "y2": 235.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.8457227349281311,
+      "reading_order": 1,
+      "text": "Assessment Test I"
+    },
+    {
+      "block_id": "20260317_7a70d7d4-ac87-41eb-bd89-ed309e85319a_7_block_001",
+      "coordinates": {
+        "x1": 2109.0,
+        "y1": 187.0,
+        "x2": 2194.0,
+        "y2": 232.0
+      },
+      "layout_tag": "page-number",
+      "confidence": 0.7755093574523926,
+      "reading_order": 2,
+      "text": "4.3"
+    },
+    {
+      "block_id": "20260317_7a70d7d4-ac87-41eb-bd89-ed309e85319a_7_block_002",
+      "coordinates": {
+        "x1": 292.0,
+        "y1": 290.0,
+        "x2": 1698.0,
+        "y2": 460.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8735090494155884,
+      "reading_order": 3,
+      "text": "(Suspended particulate matter, CFCs, oxides of sulphur and excess $\\mathrm{CO}_2$ in\natmosphere)\n(a) DACB (b) BCDA (c) DCBA (d) DCAB"
+    },
+    {
+      "block_id": "20260317_7a70d7d4-ac87-41eb-bd89-ed309e85319a_7_block_003",
+      "coordinates": {
+        "x1": 226.0,
+        "y1": 522.0,
+        "x2": 1706.0,
+        "y2": 1069.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.35413432121276855,
+      "reading_order": 4,
+      "text": "14. Arrange the following products of oxidation of non-metals in the order of\ntheir description given below.\n(A) $\\text{P}_2\\text{O}_5$ (B) $\\text{NO}_2$ (C) $\\text{CO}_2$ (D) NO\nDescription:\n(i) The gas produces a brown coloured gas on oxidation.\n(ii) The gas used in fire extinguishers.\n(iii) A brown coloured gas\n(iv) A dense white fume\n(a) DACB (b) DCBA (c) BDCA (d) CDBA"
+    },
+    {
+      "block_id": "20260317_7a70d7d4-ac87-41eb-bd89-ed309e85319a_7_block_004",
+      "coordinates": {
+        "x1": 214.0,
+        "y1": 1129.0,
+        "x2": 1330.0,
+        "y2": 1179.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.42139360308647156,
+      "reading_order": 5,
+      "text": "15. Match the entries of Column A with those of Column B."
+    },
+    {
+      "block_id": "20260317_7a70d7d4-ac87-41eb-bd89-ed309e85319a_7_block_005",
+      "coordinates": {
+        "x1": 274.0,
+        "y1": 1168.0,
+        "x2": 1412.0,
+        "y2": 1923.0
+      },
+      "layout_tag": "table",
+      "confidence": 0.44418302178382874,
+      "reading_order": 6,
+      "text": "<table>\n<thead>\n<tr>\n<th>Column A<br/>(Formation of O2 From<br/>Different Metallic<br/>Oxides by Heating)</th>\n<th>Column B<br/>(Observation)</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>(i) PbO2</td>\n<td>(A) Reddish brown residue<br/>turns yellow on cooling.</td>\n</tr>\n<tr>\n<td>(ii) HgO</td>\n<td>(B) Silvery white globules are<br/>formed.</td>\n</tr>\n<tr>\n<td>(iii) Pb3O4</td>\n<td>(C) Mirror like surface near the<br/>cooler parts of the test tube.</td>\n</tr>\n<tr>\n<td>(iv) Ag2O</td>\n<td>(D) Chocolate brown coloured<br/>substance turns yellow.</td>\n</tr>\n</tbody>\n</table>"
+    },
+    {
+      "block_id": "20260317_7a70d7d4-ac87-41eb-bd89-ed309e85319a_7_block_006",
+      "coordinates": {
+        "x1": 291.0,
+        "y1": 1968.0,
+        "x2": 1257.0,
+        "y2": 2024.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7577115297317505,
+      "reading_order": 7,
+      "text": "(a) (i) → (D); (ii) → (B); (iii) → (C); (iv) → (A)"
+    },
+    {
+      "block_id": "20260317_7a70d7d4-ac87-41eb-bd89-ed309e85319a_7_block_007",
+      "coordinates": {
+        "x1": 290.0,
+        "y1": 2032.0,
+        "x2": 1258.0,
+        "y2": 2087.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7759350538253784,
+      "reading_order": 8,
+      "text": "(b) (i) → (D); (ii) → (C); (iii) → (B); (iv) → (A)"
+    },
+    {
+      "block_id": "20260317_7a70d7d4-ac87-41eb-bd89-ed309e85319a_7_block_008",
+      "coordinates": {
+        "x1": 290.0,
+        "y1": 2094.0,
+        "x2": 1254.0,
+        "y2": 2150.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7581073641777039,
+      "reading_order": 9,
+      "text": "(c) (i) → (D); (ii) → (A); (iii) → (B); (iv) → (C)"
+    },
+    {
+      "block_id": "20260317_7a70d7d4-ac87-41eb-bd89-ed309e85319a_7_block_009",
+      "coordinates": {
+        "x1": 292.0,
+        "y1": 2156.0,
+        "x2": 1245.0,
+        "y2": 2214.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7322976589202881,
+      "reading_order": 10,
+      "text": "(d) (i) $\\rightarrow$ (D); (ii) $\\rightarrow$ (C); (iii) $\\rightarrow$ (A); (iv) $\\rightarrow$ (B)"
+    },
+    {
+      "block_id": "20260317_7a70d7d4-ac87-41eb-bd89-ed309e85319a_7_block_010",
+      "coordinates": {
+        "x1": 1790.0,
+        "y1": 313.0,
+        "x2": 2171.0,
+        "y2": 364.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.4939972758293152,
+      "reading_order": 11,
+      "text": "Space for rough work"
+    }
+  ]
+}

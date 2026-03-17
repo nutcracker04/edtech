@@ -1,0 +1,138 @@
+{
+  "page_num": 8,
+  "image_width": 2397,
+  "image_height": 3003,
+  "created_at": "2026-03-17T19:10:46.266840+00:00",
+  "blocks": [
+    {
+      "block_id": "20260317_aeb16d09-16a7-49ae-8af0-96e8e0334bce_8_block_000",
+      "coordinates": {
+        "x1": 0.0,
+        "y1": 0.0,
+        "x2": 2396.0,
+        "y2": 452.0
+      },
+      "layout_tag": "headline",
+      "confidence": 0.6365121006965637,
+      "reading_order": 1,
+      "text": "The provided image contains a decorative geometric pattern consisting of green triangles on a white background. It does not contain any text or mathematical expressions to transcribe."
+    },
+    {
+      "block_id": "20260317_aeb16d09-16a7-49ae-8af0-96e8e0334bce_8_block_002",
+      "coordinates": {
+        "x1": 1793.0,
+        "y1": 455.0,
+        "x2": 2237.0,
+        "y2": 714.0
+      },
+      "layout_tag": "image",
+      "confidence": 0.2561478614807129,
+      "reading_order": 3,
+      "text": "CLASS 8"
+    },
+    {
+      "block_id": "20260317_aeb16d09-16a7-49ae-8af0-96e8e0334bce_8_block_003",
+      "coordinates": {
+        "x1": 120.0,
+        "y1": 583.0,
+        "x2": 1151.0,
+        "y2": 664.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7425335645675659,
+      "reading_order": 4,
+      "text": "Pearson IIT Foundation Series"
+    },
+    {
+      "block_id": "20260317_aeb16d09-16a7-49ae-8af0-96e8e0334bce_8_block_004",
+      "coordinates": {
+        "x1": 121.0,
+        "y1": 708.0,
+        "x2": 1758.0,
+        "y2": 857.0
+      },
+      "layout_tag": "headline",
+      "confidence": 0.8478452563285828,
+      "reading_order": 5,
+      "text": "Chemistry Practice Book"
+    },
+    {
+      "block_id": "20260317_aeb16d09-16a7-49ae-8af0-96e8e0334bce_8_block_005",
+      "coordinates": {
+        "x1": 114.0,
+        "y1": 955.0,
+        "x2": 2134.0,
+        "y2": 1384.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9574693441390991,
+      "reading_order": 6,
+      "text": "**Pearson IIT Foundation Practice Book Series** is designed to accompany the\ncourse-books available in this series. Developed by a team of experienced faculties, this\nworkbook series connects the subjective knowledge to its real world applications through\nvarious text and chapter-level problems. Each chapter has a set of assessment tests\nwhich are mapped to chapters covered in the course-book. These assessment tests will\nguide students step-by-step towards understanding the central concept of that particular\nchapter. These tests are recommended (after class material) for further practice."
+    },
+    {
+      "block_id": "20260317_aeb16d09-16a7-49ae-8af0-96e8e0334bce_8_block_006",
+      "coordinates": {
+        "x1": 677.0,
+        "y1": 1564.0,
+        "x2": 1687.0,
+        "y2": 1647.0
+      },
+      "layout_tag": "headline",
+      "confidence": 0.573127269744873,
+      "reading_order": 7,
+      "text": "THE COMPLETE SERIES"
+    },
+    {
+      "block_id": "20260317_aeb16d09-16a7-49ae-8af0-96e8e0334bce_8_block_007",
+      "coordinates": {
+        "x1": 2.0,
+        "y1": 1662.0,
+        "x2": 2397.0,
+        "y2": 2442.0
+      },
+      "layout_tag": "image",
+      "confidence": 0.2615543305873871,
+      "reading_order": 8,
+      "text": "The image is a graphical infographic illustrating the curriculum structure for a four-year academic program, likely for Indian students transitioning from Class 7 to Class 10. The layout is divided into four vertical columns, each representing a specific grade level: Class 7, Class 8, Class 9, and Class 10. Each column features a light green background with a stack of three book covers. The top book in each stack is labeled 'Chemistry Practice Book', the middle is 'Physics Practice Book', and the bottom is 'Mathematics Practice Book'. The book covers feature a geometric, particle-like design. The progression of colors on the covers follows a color-coded scheme: Class 7 uses orange and white, Class 8 uses green and white, Class 9 uses blue and white, and Class 10 uses red and white. The text 'Cover image: Maya2008.shutterstock.com' is visible vertically on the right side. There are no numerical axes or quantitative data points; the chart serves to visualize the subject distribution and grade-level alignment of the textbooks."
+    },
+    {
+      "block_id": "20260317_aeb16d09-16a7-49ae-8af0-96e8e0334bce_8_block_009",
+      "coordinates": {
+        "x1": 2051.0,
+        "y1": 2539.0,
+        "x2": 2246.0,
+        "y2": 2574.0
+      },
+      "layout_tag": "footnote",
+      "confidence": 0.3891729712486267,
+      "reading_order": 10,
+      "text": "in.pearson.com"
+    },
+    {
+      "block_id": "20260317_aeb16d09-16a7-49ae-8af0-96e8e0334bce_8_block_010",
+      "coordinates": {
+        "x1": 122.0,
+        "y1": 2804.0,
+        "x2": 561.0,
+        "y2": 2865.0
+      },
+      "layout_tag": "footer",
+      "confidence": 0.5148093104362488,
+      "reading_order": 11,
+      "text": "f ツ /PearsonIN"
+    },
+    {
+      "block_id": "20260317_aeb16d09-16a7-49ae-8af0-96e8e0334bce_8_block_011",
+      "coordinates": {
+        "x1": 1910.0,
+        "y1": 2584.0,
+        "x2": 2244.0,
+        "y2": 2858.0
+      },
+      "layout_tag": "image",
+      "confidence": 0.5512852072715759,
+      "reading_order": 12,
+      "text": "The image displays a standard Universal Product Code (UPC) barcode used for retail identification. Above the barcode, the text \"ISBN 978-93-528-6768-4\" is printed, indicating the book's International Standard Book Number. Below the barcode, the 13-digit EAN-13 number is printed in reverse order as \"9 789352 867684\". The barcode itself consists of a series of vertical black bars of varying widths separated by white spaces, which encode the numerical data corresponding to the ISBN."
+    }
+  ]
+}

@@ -1,0 +1,346 @@
+{
+  "page_num": 5,
+  "image_width": 2398,
+  "image_height": 3003,
+  "created_at": "2026-03-17T19:10:46.320879+00:00",
+  "blocks": [
+    {
+      "block_id": "20260317_aeb16d09-16a7-49ae-8af0-96e8e0334bce_5_block_000",
+      "coordinates": {
+        "x1": 1696.0,
+        "y1": 187.0,
+        "x2": 2050.0,
+        "y2": 238.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.8713008761405945,
+      "reading_order": 1,
+      "text": "Hints and Explanations"
+    },
+    {
+      "block_id": "20260317_aeb16d09-16a7-49ae-8af0-96e8e0334bce_5_block_001",
+      "coordinates": {
+        "x1": 2091.0,
+        "y1": 184.0,
+        "x2": 2207.0,
+        "y2": 235.0
+      },
+      "layout_tag": "page-number",
+      "confidence": 0.7942244410514832,
+      "reading_order": 2,
+      "text": "A.29"
+    },
+    {
+      "block_id": "20260317_aeb16d09-16a7-49ae-8af0-96e8e0334bce_5_block_002",
+      "coordinates": {
+        "x1": 292.0,
+        "y1": 291.0,
+        "x2": 1167.0,
+        "y2": 508.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.924180269241333,
+      "reading_order": 3,
+      "text": "Since X is soluble in water, it cannot be col-\nlected by either upward or by downward dis-\nplacement of water.\nHence, the correct option is (b)."
+    },
+    {
+      "block_id": "20260317_aeb16d09-16a7-49ae-8af0-96e8e0334bce_5_block_003",
+      "coordinates": {
+        "x1": 211.0,
+        "y1": 533.0,
+        "x2": 1082.0,
+        "y2": 858.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.891140341758728,
+      "reading_order": 4,
+      "text": "**13.** $\\mathrm{NaCl} + \\mathrm{H}_2\\mathrm{SO}_4 \\xrightarrow{< 200^\\circ \\mathrm{C}} \\mathrm{NaHSO}_4 + \\mathrm{HCl}$\n$2\\mathrm{NaCl} + \\mathrm{H}_2\\mathrm{SO}_4 \\xrightarrow{>200^\\circ \\mathrm{C}} \\mathrm{Na}_2\\mathrm{SO}_4 + 2\\mathrm{HCl}$\n$\\mathrm{NaHSO}_4 + \\mathrm{NaCl} \\xrightarrow{>200^\\circ \\mathrm{C}} \\mathrm{Na}_2\\mathrm{SO}_4 + \\mathrm{HCl}$\nHence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260317_aeb16d09-16a7-49ae-8af0-96e8e0334bce_5_block_004",
+      "coordinates": {
+        "x1": 215.0,
+        "y1": 884.0,
+        "x2": 1169.0,
+        "y2": 1116.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9408544898033142,
+      "reading_order": 5,
+      "text": "14. Bakelite is a thermosetting plastic and is heat\nresistant due to cross-linked polymeric struc-\nture. Therefore, it cannot be remoulded.\nHence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260317_aeb16d09-16a7-49ae-8af0-96e8e0334bce_5_block_005",
+      "coordinates": {
+        "x1": 215.0,
+        "y1": 1140.0,
+        "x2": 1170.0,
+        "y2": 1376.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9251900911331177,
+      "reading_order": 6,
+      "text": "15. As Y is used in the match industry, it is red\nphosphorus and X is white phosphorus. In Y,\neach $\\mathrm{P}_4$ units are linked by P-P bonds.\nHence, the correct option is (c)"
+    },
+    {
+      "block_id": "20260317_aeb16d09-16a7-49ae-8af0-96e8e0334bce_5_block_006",
+      "coordinates": {
+        "x1": 190.0,
+        "y1": 1416.0,
+        "x2": 649.0,
+        "y2": 1471.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.8474705815315247,
+      "reading_order": 7,
+      "text": "Assessment Test III"
+    },
+    {
+      "block_id": "20260317_aeb16d09-16a7-49ae-8af0-96e8e0334bce_5_block_007",
+      "coordinates": {
+        "x1": 235.0,
+        "y1": 1512.0,
+        "x2": 1166.0,
+        "y2": 1691.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.921599805355072,
+      "reading_order": 8,
+      "text": "1. An electrostatic precipitator removes dust par-\nticles from air.\nHence, the correct option is (a)."
+    },
+    {
+      "block_id": "20260317_aeb16d09-16a7-49ae-8af0-96e8e0334bce_5_block_008",
+      "coordinates": {
+        "x1": 232.0,
+        "y1": 1715.0,
+        "x2": 1168.0,
+        "y2": 1895.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9144442677497864,
+      "reading_order": 9,
+      "text": "2. Fractional distillation is used to isolate nitro-\ngen from liquid air.\nHence, the correct option is (d)."
+    },
+    {
+      "block_id": "20260317_aeb16d09-16a7-49ae-8af0-96e8e0334bce_5_block_009",
+      "coordinates": {
+        "x1": 234.0,
+        "y1": 1919.0,
+        "x2": 1133.0,
+        "y2": 2046.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9008467793464661,
+      "reading_order": 10,
+      "text": "3. Nitrogen is evolved by heating $(\\mathrm{NH}_4)_2\\mathrm{Cr}_2\\mathrm{O}_7$.\nHence, the correct option is (a)."
+    },
+    {
+      "block_id": "20260317_aeb16d09-16a7-49ae-8af0-96e8e0334bce_5_block_010",
+      "coordinates": {
+        "x1": 233.0,
+        "y1": 2071.0,
+        "x2": 1167.0,
+        "y2": 2359.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9368892908096313,
+      "reading_order": 11,
+      "text": "4. Red phosphorus is made up of chains of tetrahe-\ndral units of 4 phosphorus atoms, whereas white\nphosphorus is made up of discrete tetrahedral\nunits. Hence, red phosphorus is less reactive.\nHence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260317_aeb16d09-16a7-49ae-8af0-96e8e0334bce_5_block_011",
+      "coordinates": {
+        "x1": 233.0,
+        "y1": 2384.0,
+        "x2": 1166.0,
+        "y2": 2561.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9114915728569031,
+      "reading_order": 12,
+      "text": "5. $\\mathrm{MnO}_2$ is one of the reactants in the laboratory\npreparation of chlorine.\nHence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260317_aeb16d09-16a7-49ae-8af0-96e8e0334bce_5_block_012",
+      "coordinates": {
+        "x1": 234.0,
+        "y1": 2587.0,
+        "x2": 880.0,
+        "y2": 2713.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.892288088798523,
+      "reading_order": 13,
+      "text": "6. The correct order is BCDAE.\nHence, the correct option is (a)."
+    },
+    {
+      "block_id": "20260317_aeb16d09-16a7-49ae-8af0-96e8e0334bce_5_block_013",
+      "coordinates": {
+        "x1": 232.0,
+        "y1": 2737.0,
+        "x2": 878.0,
+        "y2": 2863.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.902163028717041,
+      "reading_order": 14,
+      "text": "7. The correct order is CDAB.\nHence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260317_aeb16d09-16a7-49ae-8af0-96e8e0334bce_5_block_014",
+      "coordinates": {
+        "x1": 1285.0,
+        "y1": 290.0,
+        "x2": 2218.0,
+        "y2": 528.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9270190000534058,
+      "reading_order": 15,
+      "text": "8. Hydrogen is not present in bleaching powder.\nFormula of bleaching powder is $\\mathrm{CaOCl}_2$. So, it\nhas calcium, oxygen, and chlorine.\nHence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260317_aeb16d09-16a7-49ae-8af0-96e8e0334bce_5_block_015",
+      "coordinates": {
+        "x1": 1280.0,
+        "y1": 552.0,
+        "x2": 2217.0,
+        "y2": 732.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9065662622451782,
+      "reading_order": 16,
+      "text": "9. Borosilicate glass has low coefficient of thermal\nexpansion.\nHence, the correct option is (a)."
+    },
+    {
+      "block_id": "20260317_aeb16d09-16a7-49ae-8af0-96e8e0334bce_5_block_016",
+      "coordinates": {
+        "x1": 1264.0,
+        "y1": 757.0,
+        "x2": 2149.0,
+        "y2": 883.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8830413818359375,
+      "reading_order": 17,
+      "text": "10. Superphosphate does not contain nitrogen.\nHence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260317_aeb16d09-16a7-49ae-8af0-96e8e0334bce_5_block_017",
+      "coordinates": {
+        "x1": 1263.0,
+        "y1": 906.0,
+        "x2": 2143.0,
+        "y2": 1032.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8810580968856812,
+      "reading_order": 18,
+      "text": "11. Fibre glass is used for reinforcing purpose.\nHence, the correct option is (b)."
+    },
+    {
+      "block_id": "20260317_aeb16d09-16a7-49ae-8af0-96e8e0334bce_5_block_018",
+      "coordinates": {
+        "x1": 1265.0,
+        "y1": 1057.0,
+        "x2": 2217.0,
+        "y2": 1238.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9143428206443787,
+      "reading_order": 19,
+      "text": "12. Melamine, being a thermosetting plastic, con-\ntains cross-linked polymeric chains.\nHence, the correct option is (d)."
+    },
+    {
+      "block_id": "20260317_aeb16d09-16a7-49ae-8af0-96e8e0334bce_5_block_019",
+      "coordinates": {
+        "x1": 1262.0,
+        "y1": 1261.0,
+        "x2": 2218.0,
+        "y2": 1441.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9153306484222412,
+      "reading_order": 20,
+      "text": "13. Acrylic is a synthetic fibre. Hence, it does not\noriginate from living beings.\nHence, the correct option is (d)."
+    },
+    {
+      "block_id": "20260317_aeb16d09-16a7-49ae-8af0-96e8e0334bce_5_block_020",
+      "coordinates": {
+        "x1": 1260.0,
+        "y1": 1464.0,
+        "x2": 2159.0,
+        "y2": 1592.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.896440327167511,
+      "reading_order": 21,
+      "text": "14. $\\mathrm{H}_2\\mathrm{S}$ is widely used as an analytical reagent.\nHence, the correct option is (b)."
+    },
+    {
+      "block_id": "20260317_aeb16d09-16a7-49ae-8af0-96e8e0334bce_5_block_021",
+      "coordinates": {
+        "x1": 1258.0,
+        "y1": 1618.0,
+        "x2": 1928.0,
+        "y2": 2078.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8450790643692017,
+      "reading_order": 22,
+      "text": "15. The correct matching is:\n(i) $\\rightarrow$ (D)\n(ii) $\\rightarrow$ (A)\n(iii) $\\rightarrow$ (B)\n(iv) $\\rightarrow$ (E)\n(v) $\\rightarrow$ (C)\nHence, the correct option is (a)."
+    },
+    {
+      "block_id": "20260317_aeb16d09-16a7-49ae-8af0-96e8e0334bce_5_block_022",
+      "coordinates": {
+        "x1": 1239.0,
+        "y1": 2119.0,
+        "x2": 1700.0,
+        "y2": 2175.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.802625834941864,
+      "reading_order": 23,
+      "text": "Assessment Test IV"
+    },
+    {
+      "block_id": "20260317_aeb16d09-16a7-49ae-8af0-96e8e0334bce_5_block_023",
+      "coordinates": {
+        "x1": 1278.0,
+        "y1": 2215.0,
+        "x2": 2216.0,
+        "y2": 2397.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8372044563293457,
+      "reading_order": 24,
+      "text": "1. By passing through a strong alkaline solution,\n$\\mathrm{CO}_2$ can be removed.\nHence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260317_aeb16d09-16a7-49ae-8af0-96e8e0334bce_5_block_024",
+      "coordinates": {
+        "x1": 1283.0,
+        "y1": 2420.0,
+        "x2": 2218.0,
+        "y2": 2660.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8990186452865601,
+      "reading_order": 25,
+      "text": "2. Difference in the boiling point of liquid nitro-\ngen and liquid oxygen is used to separate\nnitrogen from liquid air.\nHence, the correct option is (d)."
+    },
+    {
+      "block_id": "20260317_aeb16d09-16a7-49ae-8af0-96e8e0334bce_5_block_025",
+      "coordinates": {
+        "x1": 1280.0,
+        "y1": 2681.0,
+        "x2": 2221.0,
+        "y2": 2865.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8407874703407288,
+      "reading_order": 26,
+      "text": "3. Nitrogen and $\\mathrm{NH}_4\\mathrm{Cl}$ are formed, when excess\nof $\\mathrm{NH}_3$ reacts with chlorine.\nHence, the correct option is (c)."
+    }
+  ]
+}

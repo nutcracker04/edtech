@@ -229,7 +229,7 @@ async def upload_pdf(
     # Generate job ID
     job_id = str(uuid.uuid4())
     source_filename = file.filename or "upload.pdf"
-    get_processor().queue_job(job_id, source_filename=source_filename)
+    get_processor().queue_job(job_id, source_filename=source_filename, title=title)
     
     # Save uploaded file
     upload_dir = DATA_ROOT / "uploads"

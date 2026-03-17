@@ -1,0 +1,346 @@
+{
+  "page_num": 7,
+  "image_width": 2398,
+  "image_height": 3003,
+  "created_at": "2026-03-17T19:10:15.659526+00:00",
+  "blocks": [
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_7_block_000",
+      "coordinates": {
+        "x1": 622.0,
+        "y1": 434.0,
+        "x2": 1780.0,
+        "y2": 553.0
+      },
+      "layout_tag": "headline",
+      "confidence": 0.9124160408973694,
+      "reading_order": 1,
+      "text": "Hints and Explanations"
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_7_block_001",
+      "coordinates": {
+        "x1": 1013.0,
+        "y1": 739.0,
+        "x2": 1382.0,
+        "y2": 805.0
+      },
+      "layout_tag": "headline",
+      "confidence": 0.8518522381782532,
+      "reading_order": 2,
+      "text": "CHAPTER 1"
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_7_block_002",
+      "coordinates": {
+        "x1": 949.0,
+        "y1": 833.0,
+        "x2": 1448.0,
+        "y2": 899.0
+      },
+      "layout_tag": "headline",
+      "confidence": 0.849521815776825,
+      "reading_order": 3,
+      "text": "Atomic Structure"
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_7_block_003",
+      "coordinates": {
+        "x1": 191.0,
+        "y1": 953.0,
+        "x2": 607.0,
+        "y2": 1006.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.8310956954956055,
+      "reading_order": 4,
+      "text": "Assessment Test I"
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_7_block_004",
+      "coordinates": {
+        "x1": 236.0,
+        "y1": 1046.0,
+        "x2": 1170.0,
+        "y2": 1210.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6884311437606812,
+      "reading_order": 5,
+      "text": "1. Discovery of isotopes led to contradiction of the\npostulate of Dalton’s atomic theory that atoms\nof the same element are alike in all aspects."
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_7_block_005",
+      "coordinates": {
+        "x1": 290.0,
+        "y1": 1227.0,
+        "x2": 880.0,
+        "y2": 1282.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.4378890097141266,
+      "reading_order": 6,
+      "text": "Hence, the correct option is (a)."
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_7_block_006",
+      "coordinates": {
+        "x1": 234.0,
+        "y1": 1306.0,
+        "x2": 1169.0,
+        "y2": 1520.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7899107933044434,
+      "reading_order": 7,
+      "text": "2. The figure represents Thomson’s atomic model. From Thomson’s experiment, it can be con- cluded that electrons are the universal constitu- ent of matter."
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_7_block_007",
+      "coordinates": {
+        "x1": 292.0,
+        "y1": 1540.0,
+        "x2": 883.0,
+        "y2": 1594.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5237067341804504,
+      "reading_order": 8,
+      "text": "Hence, the correct option is (d)."
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_7_block_008",
+      "coordinates": {
+        "x1": 236.0,
+        "y1": 1619.0,
+        "x2": 1168.0,
+        "y2": 1998.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9356362819671631,
+      "reading_order": 9,
+      "text": "3. The energy of orbits increases with distance\nfrom the nucleus in the order K < L < M < N.\nEnergy is released when an electron jumps\nfrom a higher energy orbit to a lower energy\norbit. Among the given transitions, such transi-\ntions from higher orbit to lower orbit are $\\mathrm{L} \\rightarrow \\mathrm{K}$,\n$\\mathrm{M} \\rightarrow \\mathrm{L}$, and $\\mathrm{N} \\rightarrow \\mathrm{K}$."
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_7_block_009",
+      "coordinates": {
+        "x1": 293.0,
+        "y1": 2015.0,
+        "x2": 877.0,
+        "y2": 2069.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7721574902534485,
+      "reading_order": 10,
+      "text": "Hence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_7_block_010",
+      "coordinates": {
+        "x1": 234.0,
+        "y1": 2094.0,
+        "x2": 1169.0,
+        "y2": 2416.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9391432404518127,
+      "reading_order": 11,
+      "text": "4. The orbits in which electrons revolve around\nthe nucleus are called stationary orbits since\nthe energy of electrons remains constant in\nthose orbits. The electrons are in continuous\nmotion around the nucleus in those orbits and\nnever remain stationary."
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_7_block_011",
+      "coordinates": {
+        "x1": 290.0,
+        "y1": 2436.0,
+        "x2": 877.0,
+        "y2": 2488.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7000882625579834,
+      "reading_order": 12,
+      "text": "Hence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_7_block_012",
+      "coordinates": {
+        "x1": 233.0,
+        "y1": 2516.0,
+        "x2": 691.0,
+        "y2": 2566.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7628039717674255,
+      "reading_order": 13,
+      "text": "5. Mass of electron = m"
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_7_block_013",
+      "coordinates": {
+        "x1": 292.0,
+        "y1": 2584.0,
+        "x2": 793.0,
+        "y2": 2639.0
+      },
+      "layout_tag": "formula",
+      "confidence": 0.5903353691101074,
+      "reading_order": 14,
+      "text": "$$ \\text{Mass of proton} = 1837 \\times m $$"
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_7_block_014",
+      "coordinates": {
+        "x1": 294.0,
+        "y1": 2644.0,
+        "x2": 848.0,
+        "y2": 2738.0
+      },
+      "layout_tag": "formula",
+      "confidence": 0.8339787125587463,
+      "reading_order": 15,
+      "text": "$$ \\text{No. of protons} = \\frac{36,740}{1837} = 20 $$"
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_7_block_015",
+      "coordinates": {
+        "x1": 293.0,
+        "y1": 2744.0,
+        "x2": 689.0,
+        "y2": 2794.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.4785759747028351,
+      "reading_order": 16,
+      "text": "No. of neutrons = 19"
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_7_block_016",
+      "coordinates": {
+        "x1": 1341.0,
+        "y1": 1043.0,
+        "x2": 1698.0,
+        "y2": 1093.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8125057220458984,
+      "reading_order": 17,
+      "text": "Mass number = 39"
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_7_block_017",
+      "coordinates": {
+        "x1": 1343.0,
+        "y1": 1105.0,
+        "x2": 1739.0,
+        "y2": 1158.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7672129273414612,
+      "reading_order": 18,
+      "text": "Atomic number = 20"
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_7_block_018",
+      "coordinates": {
+        "x1": 1341.0,
+        "y1": 1170.0,
+        "x2": 2205.0,
+        "y2": 1291.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8486981391906738,
+      "reading_order": 19,
+      "text": "Representation of the atom or nuclide $\\rightarrow_{20}X^{39}$.\nHence, the correct option is (d)."
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_7_block_019",
+      "coordinates": {
+        "x1": 1288.0,
+        "y1": 1317.0,
+        "x2": 2145.0,
+        "y2": 1691.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.4509545564651489,
+      "reading_order": 20,
+      "text": "6. No. of electrons in a dispositive ion = $a$\nNo. of electrons in neutral atom = $a + 2$\nAtomic number = No. of protons = $a + 2 = b$\nNo. of neutrons = $a + 2 + 3 = a + 5$\nMass number = $(a + 2) + (a + 5) = 2a + 7$\nHence, the correct option is (b)."
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_7_block_020",
+      "coordinates": {
+        "x1": 1284.0,
+        "y1": 1713.0,
+        "x2": 2217.0,
+        "y2": 1949.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8615638613700867,
+      "reading_order": 21,
+      "text": "7. $\\mathrm{O}^{-2}$ ion is formed by the gain of two electrons\nby neutral atom and $\\mathrm{K}^{+}$ ion is formed by the\nloss of one electron by neutral atom.\nHence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_7_block_021",
+      "coordinates": {
+        "x1": 1281.0,
+        "y1": 1979.0,
+        "x2": 2216.0,
+        "y2": 2086.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8552276492118835,
+      "reading_order": 22,
+      "text": "8. (i) The sum of the number of protons and neu-\ntrons is called mass number."
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_7_block_022",
+      "coordinates": {
+        "x1": 1352.0,
+        "y1": 2105.0,
+        "x2": 2201.0,
+        "y2": 2207.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8017724752426147,
+      "reading_order": 23,
+      "text": "(ii) Rutherford’s theory proposed the concept of nucleus."
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_7_block_023",
+      "coordinates": {
+        "x1": 1341.0,
+        "y1": 2218.0,
+        "x2": 2206.0,
+        "y2": 2401.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.4900784492492676,
+      "reading_order": 24,
+      "text": "(iii) Isotopes differ in the number of neutrons.\n(iv) Isobars possess same number of nucleons.\nHence, the correct option is (b)."
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_7_block_024",
+      "coordinates": {
+        "x1": 1285.0,
+        "y1": 2432.0,
+        "x2": 2218.0,
+        "y2": 2703.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8790915608406067,
+      "reading_order": 25,
+      "text": "9. A few of the $\\alpha$ particles in the experiment were\ncompletely rebounded because they hit the\nnucleus that is a positively small central part\nand experience repulsion from the positively\nthe $\\alpha$ particles charged nucleus."
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_7_block_025",
+      "coordinates": {
+        "x1": 1328.0,
+        "y1": 2718.0,
+        "x2": 1935.0,
+        "y2": 2773.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5094460844993591,
+      "reading_order": 26,
+      "text": "Hence, the correct option is (d)."
+    }
+  ]
+}

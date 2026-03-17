@@ -166,7 +166,7 @@ export function ExtractionListView() {
             >
               <div onClick={() => handleJobClick(job.id)} className="flex justify-between items-start">
                 <div>
-                  <h3 className="font-semibold text-lg">{job.source_pdf_filename}</h3>
+                  <h3 className="font-semibold text-lg">{job.title || job.source_pdf_filename}</h3>
                   <p className="text-sm text-muted-foreground">
                     Stage: <span className="font-medium">{job.stage}</span>
                   </p>

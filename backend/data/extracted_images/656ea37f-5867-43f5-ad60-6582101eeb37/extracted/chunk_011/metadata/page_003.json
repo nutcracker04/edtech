@@ -1,0 +1,398 @@
+{
+  "page_num": 3,
+  "image_width": 2398,
+  "image_height": 3003,
+  "created_at": "2026-03-17T19:10:15.650489+00:00",
+  "blocks": [
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_3_block_000",
+      "coordinates": {
+        "x1": 180.0,
+        "y1": 295.0,
+        "x2": 931.0,
+        "y2": 373.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.6413041353225708,
+      "reading_order": 1,
+      "text": "Assessment Test IV"
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_3_block_001",
+      "coordinates": {
+        "x1": 1748.0,
+        "y1": 187.0,
+        "x2": 2051.0,
+        "y2": 235.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.8342361450195312,
+      "reading_order": 2,
+      "text": "Assessment Test IV"
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_3_block_002",
+      "coordinates": {
+        "x1": 1449.0,
+        "y1": 325.0,
+        "x2": 1691.0,
+        "y2": 372.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.7230512499809265,
+      "reading_order": 3,
+      "text": "Time: 30 min."
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_3_block_003",
+      "coordinates": {
+        "x1": 2092.0,
+        "y1": 181.0,
+        "x2": 2205.0,
+        "y2": 236.0
+      },
+      "layout_tag": "page-number",
+      "confidence": 0.6648812890052795,
+      "reading_order": 4,
+      "text": "7.11"
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_3_block_004",
+      "coordinates": {
+        "x1": 177.0,
+        "y1": 450.0,
+        "x2": 1687.0,
+        "y2": 504.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.7968296408653259,
+      "reading_order": 5,
+      "text": "Directions for questions from 1 to 15: Select the correct answer from the given options."
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_3_block_005",
+      "coordinates": {
+        "x1": 231.0,
+        "y1": 542.0,
+        "x2": 1451.0,
+        "y2": 596.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8324585556983948,
+      "reading_order": 6,
+      "text": "1. In which of the following ways can CO₂ be removed from air?"
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_3_block_006",
+      "coordinates": {
+        "x1": 289.0,
+        "y1": 614.0,
+        "x2": 1063.0,
+        "y2": 668.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8260523080825806,
+      "reading_order": 7,
+      "text": "(a) By using an electrostatic precipitator."
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_3_block_007",
+      "coordinates": {
+        "x1": 289.0,
+        "y1": 675.0,
+        "x2": 1250.0,
+        "y2": 729.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8455860018730164,
+      "reading_order": 8,
+      "text": "(b) By passing air through a strong acidic solution."
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_3_block_008",
+      "coordinates": {
+        "x1": 289.0,
+        "y1": 738.0,
+        "x2": 1285.0,
+        "y2": 792.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8313961029052734,
+      "reading_order": 9,
+      "text": "(c) By passing air through a strong alkaline solution."
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_3_block_009",
+      "coordinates": {
+        "x1": 291.0,
+        "y1": 801.0,
+        "x2": 906.0,
+        "y2": 858.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8350587487220764,
+      "reading_order": 10,
+      "text": "(d) By passing air through $\\mathrm{P}_2\\mathrm{O}_5$."
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_3_block_010",
+      "coordinates": {
+        "x1": 232.0,
+        "y1": 880.0,
+        "x2": 1695.0,
+        "y2": 986.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8627192974090576,
+      "reading_order": 11,
+      "text": "2. Which of the following principles is used to separate nitrogen from liquid air?"
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_3_block_011",
+      "coordinates": {
+        "x1": 290.0,
+        "y1": 1004.0,
+        "x2": 1346.0,
+        "y2": 1059.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8310576677322388,
+      "reading_order": 12,
+      "text": "(a) Difference in freezing points of nitrogen and oxygen"
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_3_block_012",
+      "coordinates": {
+        "x1": 290.0,
+        "y1": 1067.0,
+        "x2": 1160.0,
+        "y2": 1121.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8428923487663269,
+      "reading_order": 13,
+      "text": "(b) Difference in rates of diffusion of nitrogen"
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_3_block_013",
+      "coordinates": {
+        "x1": 289.0,
+        "y1": 1129.0,
+        "x2": 1434.0,
+        "y2": 1183.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8352205157279968,
+      "reading_order": 14,
+      "text": "(c) Difference in solubilities of nitrogen and oxygen in water"
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_3_block_014",
+      "coordinates": {
+        "x1": 290.0,
+        "y1": 1191.0,
+        "x2": 1636.0,
+        "y2": 1250.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.841073215007782,
+      "reading_order": 15,
+      "text": "(d) Difference in the boiling points of liquid nitrogen and liquid oxygen"
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_3_block_015",
+      "coordinates": {
+        "x1": 231.0,
+        "y1": 1273.0,
+        "x2": 1699.0,
+        "y2": 1523.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5313770174980164,
+      "reading_order": 16,
+      "text": "3. When excess of ammonia gas is made to react with chlorine, ______ and\n_______ are formed.\n(a) $\\mathrm{NCl}_3$, $\\mathrm{H}_2$ (b) $\\mathrm{N}_2$, HCl\n(c) $\\mathrm{N}_2$, $\\mathrm{NH}_4\\mathrm{Cl}$ (d) $\\mathrm{N}_2$, $\\mathrm{H}_2$, $\\mathrm{Cl}_2$"
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_3_block_016",
+      "coordinates": {
+        "x1": 232.0,
+        "y1": 1539.0,
+        "x2": 1693.0,
+        "y2": 1647.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.888788104057312,
+      "reading_order": 17,
+      "text": "4. Assertion (A): Monoclinic sulphur is less dense than its allotrope rhombic sulphur."
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_3_block_017",
+      "coordinates": {
+        "x1": 289.0,
+        "y1": 1668.0,
+        "x2": 1694.0,
+        "y2": 1771.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9108074903488159,
+      "reading_order": 18,
+      "text": "**Reason (R):** The shapes of crystals of monoclinic sulphur and rhombic sul-\nphur are needle-shaped and octahedral, respectively."
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_3_block_018",
+      "coordinates": {
+        "x1": 290.0,
+        "y1": 1782.0,
+        "x2": 1465.0,
+        "y2": 1833.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8504661917686462,
+      "reading_order": 19,
+      "text": "(a) Both A and R are true and R is the correct explanation of A."
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_3_block_019",
+      "coordinates": {
+        "x1": 290.0,
+        "y1": 1843.0,
+        "x2": 1536.0,
+        "y2": 1895.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8363784551620483,
+      "reading_order": 20,
+      "text": "(b) Both A and R are true, but R is not the correct explanation of A."
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_3_block_020",
+      "coordinates": {
+        "x1": 291.0,
+        "y1": 1907.0,
+        "x2": 802.0,
+        "y2": 1957.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8153902292251587,
+      "reading_order": 21,
+      "text": "(c) A is true and R is false."
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_3_block_021",
+      "coordinates": {
+        "x1": 292.0,
+        "y1": 1969.0,
+        "x2": 801.0,
+        "y2": 2019.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.83183354139328,
+      "reading_order": 22,
+      "text": "(d) A is false and R is true."
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_3_block_022",
+      "coordinates": {
+        "x1": 234.0,
+        "y1": 2046.0,
+        "x2": 1692.0,
+        "y2": 2155.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8830544352531433,
+      "reading_order": 23,
+      "text": "5. Assertion (A): HCl gets oxidized to form $\\mathrm{MnCl}_2$ during the laboratory preparation of chlorine."
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_3_block_023",
+      "coordinates": {
+        "x1": 289.0,
+        "y1": 2171.0,
+        "x2": 1694.0,
+        "y2": 2272.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9109768271446228,
+      "reading_order": 24,
+      "text": "**Reason (R):** $\\mathrm{MnO}_2$ acts as an oxidizing agent in the laboratory preparation\nof chlorine."
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_3_block_024",
+      "coordinates": {
+        "x1": 289.0,
+        "y1": 2285.0,
+        "x2": 1468.0,
+        "y2": 2337.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8705053925514221,
+      "reading_order": 25,
+      "text": "(a) Both A and R are true and R is the correct explanation of A."
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_3_block_025",
+      "coordinates": {
+        "x1": 290.0,
+        "y1": 2346.0,
+        "x2": 1538.0,
+        "y2": 2398.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8527514338493347,
+      "reading_order": 26,
+      "text": "(b) Both A and R are true, but R is not the correct explanation of A."
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_3_block_026",
+      "coordinates": {
+        "x1": 290.0,
+        "y1": 2410.0,
+        "x2": 803.0,
+        "y2": 2460.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8407774567604065,
+      "reading_order": 27,
+      "text": "(c) A is true and R is false."
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_3_block_027",
+      "coordinates": {
+        "x1": 292.0,
+        "y1": 2473.0,
+        "x2": 801.0,
+        "y2": 2524.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.84483402967453,
+      "reading_order": 28,
+      "text": "(d) A is false and R is true."
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_3_block_028",
+      "coordinates": {
+        "x1": 232.0,
+        "y1": 2550.0,
+        "x2": 1692.0,
+        "y2": 2661.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8974107503890991,
+      "reading_order": 29,
+      "text": "6. Arrange the following forms of sulphur (represented diagrammatically)\nobtained during the heating of sulphur from room temperature."
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_3_block_029",
+      "coordinates": {
+        "x1": 1790.0,
+        "y1": 312.0,
+        "x2": 2170.0,
+        "y2": 364.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6311159729957581,
+      "reading_order": 30,
+      "text": "Space for rough work"
+    }
+  ]
+}

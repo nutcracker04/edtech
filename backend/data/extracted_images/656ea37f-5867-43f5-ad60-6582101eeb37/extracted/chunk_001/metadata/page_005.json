@@ -1,0 +1,99 @@
+{
+  "page_num": 5,
+  "image_width": 2398,
+  "image_height": 3003,
+  "created_at": "2026-03-17T19:09:07.915382+00:00",
+  "blocks": [
+    {
+      "block_id": "20260317_d100afe8-1ac9-4c46-b856-3c6c70f9d473_5_block_000",
+      "coordinates": {
+        "x1": 961.0,
+        "y1": 324.0,
+        "x2": 1421.0,
+        "y2": 449.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.33326855301856995,
+      "reading_order": 1,
+      "text": "CLASS"
+    },
+    {
+      "block_id": "20260317_d100afe8-1ac9-4c46-b856-3c6c70f9d473_5_block_001",
+      "coordinates": {
+        "x1": 1050.0,
+        "y1": 494.0,
+        "x2": 1333.0,
+        "y2": 932.0
+      },
+      "layout_tag": "image",
+      "confidence": 0.45470988750457764,
+      "reading_order": 2,
+      "text": "The image features a bold, black numeral \"8\" centered on a solid, light blue background. The number is presented in a large, sans-serif font with thick, uniform strokes. The top and bottom loops of the \"8\" are perfectly circular, and the vertical stroke connecting them is straight and centered. The contrast between the black figure and the pale blue field is high, making the number stand out clearly. There are no other graphical elements, text, or markings visible in the image."
+    },
+    {
+      "block_id": "20260317_d100afe8-1ac9-4c46-b856-3c6c70f9d473_5_block_002",
+      "coordinates": {
+        "x1": 385.0,
+        "y1": 1116.0,
+        "x2": 2007.0,
+        "y2": 1395.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.5720659494400024,
+      "reading_order": 3,
+      "text": "Pearson IIT Foundation Series\nChemistry Practice Book"
+    },
+    {
+      "block_id": "20260317_d100afe8-1ac9-4c46-b856-3c6c70f9d473_5_block_003",
+      "coordinates": {
+        "x1": 1027.0,
+        "y1": 1446.0,
+        "x2": 1376.0,
+        "y2": 1511.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7806777954101562,
+      "reading_order": 4,
+      "text": "First Edition"
+    },
+    {
+      "block_id": "20260317_d100afe8-1ac9-4c46-b856-3c6c70f9d473_5_block_004",
+      "coordinates": {
+        "x1": 720.0,
+        "y1": 1816.0,
+        "x2": 1681.0,
+        "y2": 1901.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.4774324893951416,
+      "reading_order": 5,
+      "text": "Trishna Knowledge Systems"
+    },
+    {
+      "block_id": "20260317_d100afe8-1ac9-4c46-b856-3c6c70f9d473_5_block_005",
+      "coordinates": {
+        "x1": 189.0,
+        "y1": 2610.0,
+        "x2": 365.0,
+        "y2": 2809.0
+      },
+      "layout_tag": "image",
+      "confidence": 0.35113587975502014,
+      "reading_order": 6,
+      "text": "The image displays a simple, high-contrast graphic consisting of a white question mark (?) centered within a solid black circle. The question mark is stylized with a thick, rounded vertical stem and a curved top loop. A small white dot is positioned directly below the stem, serving as the dot of the question mark. The entire icon is set against a plain white background."
+    },
+    {
+      "block_id": "20260317_d100afe8-1ac9-4c46-b856-3c6c70f9d473_5_block_006",
+      "coordinates": {
+        "x1": 183.0,
+        "y1": 2611.0,
+        "x2": 806.0,
+        "y2": 2809.0
+      },
+      "layout_tag": "footer",
+      "confidence": 0.4747743308544159,
+      "reading_order": 7,
+      "text": "Pearson"
+    }
+  ]
+}

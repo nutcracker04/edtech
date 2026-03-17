@@ -1,0 +1,268 @@
+{
+  "page_num": 9,
+  "image_width": 2398,
+  "image_height": 3003,
+  "created_at": "2026-03-17T19:10:34.328618+00:00",
+  "blocks": [
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_9_block_000",
+      "coordinates": {
+        "x1": 1697.0,
+        "y1": 187.0,
+        "x2": 2050.0,
+        "y2": 238.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.8621066212654114,
+      "reading_order": 1,
+      "text": "Hints and Explanations"
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_9_block_001",
+      "coordinates": {
+        "x1": 2091.0,
+        "y1": 184.0,
+        "x2": 2207.0,
+        "y2": 235.0
+      },
+      "layout_tag": "page-number",
+      "confidence": 0.7125938534736633,
+      "reading_order": 2,
+      "text": "A.23"
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_9_block_002",
+      "coordinates": {
+        "x1": 1013.0,
+        "y1": 312.0,
+        "x2": 1385.0,
+        "y2": 378.0
+      },
+      "layout_tag": "headline",
+      "confidence": 0.8634236454963684,
+      "reading_order": 3,
+      "text": "CHAPTER 6"
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_9_block_003",
+      "coordinates": {
+        "x1": 795.0,
+        "y1": 409.0,
+        "x2": 1600.0,
+        "y2": 477.0
+      },
+      "layout_tag": "headline",
+      "confidence": 0.8610408902168274,
+      "reading_order": 4,
+      "text": "Carbon and Its Compounds"
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_9_block_004",
+      "coordinates": {
+        "x1": 195.0,
+        "y1": 529.0,
+        "x2": 595.0,
+        "y2": 582.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.828586220741272,
+      "reading_order": 5,
+      "text": "Assessment Test I"
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_9_block_005",
+      "coordinates": {
+        "x1": 236.0,
+        "y1": 624.0,
+        "x2": 1171.0,
+        "y2": 844.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7205454111099243,
+      "reading_order": 6,
+      "text": "1. Diamond is a good thermal conductor because of the compact three-dimensional structure. Mere tetravalency of carbon does not make it a good thermal conductor."
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_9_block_006",
+      "coordinates": {
+        "x1": 295.0,
+        "y1": 867.0,
+        "x2": 883.0,
+        "y2": 923.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.36402544379234314,
+      "reading_order": 7,
+      "text": "Hence, the correct option is (b)."
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_9_block_007",
+      "coordinates": {
+        "x1": 235.0,
+        "y1": 952.0,
+        "x2": 1171.0,
+        "y2": 1241.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8952507376670837,
+      "reading_order": 8,
+      "text": "2. Dry ice undergoes sublimation by taking heat\nfrom the surroundings, thereby causing cool-\ning, which results in the condensation of water\nvapour and ultimately results in rain.\nHence, the correct option is (a)."
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_9_block_008",
+      "coordinates": {
+        "x1": 246.0,
+        "y1": 1270.0,
+        "x2": 962.0,
+        "y2": 1644.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.31829598546028137,
+      "reading_order": 9,
+      "text": "3. (i) $\\rightarrow$ (C)\n(ii) $\\rightarrow$ (D)\n(iii) $\\rightarrow$ (E)\n(iv) $\\rightarrow$ (A)\n(v) $\\rightarrow$ (B)\nHence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_9_block_009",
+      "coordinates": {
+        "x1": 237.0,
+        "y1": 1673.0,
+        "x2": 1170.0,
+        "y2": 2175.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5105506181716919,
+      "reading_order": 10,
+      "text": "4. (i) Extraction of yellow phosphorus $\\rightarrow$ Bone\ncharcoal\n(ii) Preparation of artificial diamonds $\\rightarrow$ Sugar\ncharcoal\n(iii) Gas masks $\\rightarrow$ Wood charcoal\n(iv) Moderator in nuclear reactors $\\rightarrow$ Graphite\n(v) Abrasive for cutting glass $\\rightarrow$ Diamond\nHence, the correct option is (b)."
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_9_block_010",
+      "coordinates": {
+        "x1": 244.0,
+        "y1": 2204.0,
+        "x2": 1171.0,
+        "y2": 2665.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.27705565094947815,
+      "reading_order": 11,
+      "text": "5. (i) Passing CO gas over finely divided iron $\\rightarrow$\n$\\mathrm{M}(\\mathrm{CO})_5$ or $\\mathrm{Fe}(\\mathrm{CO})_5$\n(ii) Passing $\\mathrm{CO}_2$ gas through powdered mag-\nnesium $\\rightarrow$ MO or MgO\n(iii) Heating $\\mathrm{M}_2\\mathrm{O}_3$ with CO $\\rightarrow$ M or Fe\n(iv) Passing $\\mathrm{CO}_2$ through sodium $\\rightarrow$ $\\mathrm{M}_2\\mathrm{CO}_3$ or\n$\\mathrm{Na}_2\\mathrm{CO}_3$\n\nHence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_9_block_011",
+      "coordinates": {
+        "x1": 1285.0,
+        "y1": 630.0,
+        "x2": 2219.0,
+        "y2": 866.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9234753251075745,
+      "reading_order": 12,
+      "text": "6. Except sodium and potassium carbonates, all\nother carbonates, on heating, decompose to\nproduce $\\mathrm{CO}_2$.\nHence, the correct option is (a)."
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_9_block_012",
+      "coordinates": {
+        "x1": 1285.0,
+        "y1": 904.0,
+        "x2": 2217.0,
+        "y2": 1138.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9012473225593567,
+      "reading_order": 13,
+      "text": "7. Baking powder contains sodium bicarbonate\nas a major component, which, on heating,\ndecomposes to release $\\mathrm{CO}_2$.\nHence, the correct option is (b)."
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_9_block_013",
+      "coordinates": {
+        "x1": 1286.0,
+        "y1": 1171.0,
+        "x2": 2219.0,
+        "y2": 1459.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8879165649414062,
+      "reading_order": 14,
+      "text": "8. A liquid $\\mathrm{CO}_2$ fire extinguisher works on the\nprinciple of evaporation of liquid $\\mathrm{CO}_2$ to gase-\nous state, thereby reducing the temperature of\nthe combustible substance.\nHence, the correct option is (d)."
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_9_block_014",
+      "coordinates": {
+        "x1": 1287.0,
+        "y1": 1493.0,
+        "x2": 2217.0,
+        "y2": 1717.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7894964218139648,
+      "reading_order": 15,
+      "text": "9. Usage of graphite as a material of refractory\ncrucibles is due to the high melting point and\nthermal resistance of graphite and not due to\nits layer lattice structure."
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_9_block_015",
+      "coordinates": {
+        "x1": 1340.0,
+        "y1": 1738.0,
+        "x2": 1928.0,
+        "y2": 1792.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.38601937890052795,
+      "reading_order": 16,
+      "text": "Hence, the correct option is (a)."
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_9_block_016",
+      "coordinates": {
+        "x1": 1266.0,
+        "y1": 1826.0,
+        "x2": 2218.0,
+        "y2": 2204.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9238408803939819,
+      "reading_order": 17,
+      "text": "**10.** Reaction of carbonic acid with $\\text{NaOH}$ results\nin the formation of $\\text{Na}_2\\text{CO}_3$ which is highly\nsoluble in water. Therefore, it does not involve\nthe formation of white precipitate, whereas all\nother reactions result in the formation of insol-\nuble carbonates, which are obtained as white\nprecipitates."
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_9_block_017",
+      "coordinates": {
+        "x1": 1343.0,
+        "y1": 2221.0,
+        "x2": 1929.0,
+        "y2": 2276.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5967066287994385,
+      "reading_order": 18,
+      "text": "Hence, the correct option is (a)."
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_9_block_018",
+      "coordinates": {
+        "x1": 1266.0,
+        "y1": 2320.0,
+        "x2": 2219.0,
+        "y2": 2595.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9093879461288452,
+      "reading_order": 19,
+      "text": "11. Coal, on destructive distillation, gives various\nproducts. X should be coke since it can reduce\niron oxide to iron, whereas Y should be coal tar\nsince it gives benzene as the final product on\nfractional distillation."
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_9_block_019",
+      "coordinates": {
+        "x1": 1338.0,
+        "y1": 2615.0,
+        "x2": 1929.0,
+        "y2": 2670.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5186339020729065,
+      "reading_order": 20,
+      "text": "Hence, the correct option is (c)."
+    }
+  ]
+}

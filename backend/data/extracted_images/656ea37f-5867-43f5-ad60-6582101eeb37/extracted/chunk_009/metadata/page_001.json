@@ -1,0 +1,333 @@
+{
+  "page_num": 1,
+  "image_width": 2398,
+  "image_height": 3003,
+  "created_at": "2026-03-17T19:10:02.200528+00:00",
+  "blocks": [
+    {
+      "block_id": "20260317_d05caa04-bd91-4466-a2be-2396f2383528_1_block_000",
+      "coordinates": {
+        "x1": 411.0,
+        "y1": 372.0,
+        "x2": 1164.0,
+        "y2": 619.0
+      },
+      "layout_tag": "headline",
+      "confidence": 0.8418662548065186,
+      "reading_order": 1,
+      "text": "Carbon and Its\nCompounds"
+    },
+    {
+      "block_id": "20260317_d05caa04-bd91-4466-a2be-2396f2383528_1_block_001",
+      "coordinates": {
+        "x1": 1452.0,
+        "y1": 299.0,
+        "x2": 2210.0,
+        "y2": 677.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.8037459254264832,
+      "reading_order": 2,
+      "text": "6\n\n<table>\n<tbody>\n<tr>\n<td>16</td>\n<td>S<br/>Sulfur<br/>32.066</td>\n<td>17</td>\n<td>Cl<br/>Chlorine<br/>35.4527</td>\n</tr>\n<tr>\n<td>34</td>\n<td>Se<br/>Selenium<br/>78.96</td>\n<td>35</td>\n<td>Br<br/>Bromine<br/>79.904</td>\n</tr>\n<tr>\n<td>As<br/>Arsenic<br/>4.92160</td>\n<td>Te<br/>Tellurium</td>\n<td>51</td>\n<td>Sb<br/>Antimony<br/>121.76</td>\n</tr>\n<tr>\n<td>52</td>\n<td>I<br/>Iodine</td>\n<td>53</td>\n<td></td>\n</tr>\n</tbody>\n</table>"
+    },
+    {
+      "block_id": "20260317_d05caa04-bd91-4466-a2be-2396f2383528_1_block_002",
+      "coordinates": {
+        "x1": 179.0,
+        "y1": 706.0,
+        "x2": 2209.0,
+        "y2": 760.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.6397645473480225,
+      "reading_order": 3,
+      "text": "Reference: Coursebook - IIT Foundation Chemistry Class 8; Chapter - Carbon and its Compounds; Page number - 6.1–6.20"
+    },
+    {
+      "block_id": "20260317_d05caa04-bd91-4466-a2be-2396f2383528_1_block_003",
+      "coordinates": {
+        "x1": 180.0,
+        "y1": 789.0,
+        "x2": 868.0,
+        "y2": 871.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.74068683385849,
+      "reading_order": 4,
+      "text": "Assessment Test I"
+    },
+    {
+      "block_id": "20260317_d05caa04-bd91-4466-a2be-2396f2383528_1_block_004",
+      "coordinates": {
+        "x1": 1449.0,
+        "y1": 820.0,
+        "x2": 1692.0,
+        "y2": 870.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6957232356071472,
+      "reading_order": 5,
+      "text": "Time: 30 min."
+    },
+    {
+      "block_id": "20260317_d05caa04-bd91-4466-a2be-2396f2383528_1_block_005",
+      "coordinates": {
+        "x1": 178.0,
+        "y1": 946.0,
+        "x2": 1690.0,
+        "y2": 1001.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.8237116932868958,
+      "reading_order": 6,
+      "text": "Directions for questions from 1 to 15: Select the correct answer from the given options."
+    },
+    {
+      "block_id": "20260317_d05caa04-bd91-4466-a2be-2396f2383528_1_block_006",
+      "coordinates": {
+        "x1": 233.0,
+        "y1": 1038.0,
+        "x2": 1282.0,
+        "y2": 1091.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.6549341082572937,
+      "reading_order": 7,
+      "text": "1. Assertion (A): Diamond is a good thermal conductor."
+    },
+    {
+      "block_id": "20260317_d05caa04-bd91-4466-a2be-2396f2383528_1_block_007",
+      "coordinates": {
+        "x1": 285.0,
+        "y1": 1110.0,
+        "x2": 1696.0,
+        "y2": 1210.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8967243432998657,
+      "reading_order": 8,
+      "text": "**Reason (R):** Diamond is a crystalline allotrope of carbon in which carbon exhibits tetravalency."
+    },
+    {
+      "block_id": "20260317_d05caa04-bd91-4466-a2be-2396f2383528_1_block_008",
+      "coordinates": {
+        "x1": 289.0,
+        "y1": 1221.0,
+        "x2": 1467.0,
+        "y2": 1274.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.837627649307251,
+      "reading_order": 9,
+      "text": "(a) Both A and R are true and R is the correct explanation of A."
+    },
+    {
+      "block_id": "20260317_d05caa04-bd91-4466-a2be-2396f2383528_1_block_009",
+      "coordinates": {
+        "x1": 289.0,
+        "y1": 1283.0,
+        "x2": 1534.0,
+        "y2": 1337.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8324759602546692,
+      "reading_order": 10,
+      "text": "(b) Both A and R are true, but R is not the correct explanation of A."
+    },
+    {
+      "block_id": "20260317_d05caa04-bd91-4466-a2be-2396f2383528_1_block_010",
+      "coordinates": {
+        "x1": 290.0,
+        "y1": 1346.0,
+        "x2": 802.0,
+        "y2": 1398.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8133784532546997,
+      "reading_order": 11,
+      "text": "(c) A is true and R is false."
+    },
+    {
+      "block_id": "20260317_d05caa04-bd91-4466-a2be-2396f2383528_1_block_011",
+      "coordinates": {
+        "x1": 292.0,
+        "y1": 1409.0,
+        "x2": 802.0,
+        "y2": 1464.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8245484232902527,
+      "reading_order": 12,
+      "text": "(d) A is false and R is true."
+    },
+    {
+      "block_id": "20260317_d05caa04-bd91-4466-a2be-2396f2383528_1_block_012",
+      "coordinates": {
+        "x1": 233.0,
+        "y1": 1488.0,
+        "x2": 1193.0,
+        "y2": 1542.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.6979590654373169,
+      "reading_order": 13,
+      "text": "2. Assertion (A): Dry ice is used for cloud seeding."
+    },
+    {
+      "block_id": "20260317_d05caa04-bd91-4466-a2be-2396f2383528_1_block_013",
+      "coordinates": {
+        "x1": 290.0,
+        "y1": 1560.0,
+        "x2": 856.0,
+        "y2": 1611.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7385646104812622,
+      "reading_order": 14,
+      "text": "Reason (R): Dry ice sublimes."
+    },
+    {
+      "block_id": "20260317_d05caa04-bd91-4466-a2be-2396f2383528_1_block_014",
+      "coordinates": {
+        "x1": 288.0,
+        "y1": 1620.0,
+        "x2": 1467.0,
+        "y2": 1674.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8384977579116821,
+      "reading_order": 15,
+      "text": "(a) Both A and R are true and R is the correct explanation of A."
+    },
+    {
+      "block_id": "20260317_d05caa04-bd91-4466-a2be-2396f2383528_1_block_015",
+      "coordinates": {
+        "x1": 289.0,
+        "y1": 1683.0,
+        "x2": 1540.0,
+        "y2": 1738.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8398906588554382,
+      "reading_order": 16,
+      "text": "(b) Both A and R are true, but R is not the correct explanation of A."
+    },
+    {
+      "block_id": "20260317_d05caa04-bd91-4466-a2be-2396f2383528_1_block_016",
+      "coordinates": {
+        "x1": 290.0,
+        "y1": 1747.0,
+        "x2": 805.0,
+        "y2": 1800.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8081729412078857,
+      "reading_order": 17,
+      "text": "(c) A is true and R is false."
+    },
+    {
+      "block_id": "20260317_d05caa04-bd91-4466-a2be-2396f2383528_1_block_017",
+      "coordinates": {
+        "x1": 292.0,
+        "y1": 1810.0,
+        "x2": 803.0,
+        "y2": 1863.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8108648061752319,
+      "reading_order": 18,
+      "text": "(d) A is false and R is true."
+    },
+    {
+      "block_id": "20260317_d05caa04-bd91-4466-a2be-2396f2383528_1_block_018",
+      "coordinates": {
+        "x1": 233.0,
+        "y1": 1887.0,
+        "x2": 1403.0,
+        "y2": 1940.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5331710577011108,
+      "reading_order": 19,
+      "text": "3. Match the statements of Column A with those of Column B."
+    },
+    {
+      "block_id": "20260317_d05caa04-bd91-4466-a2be-2396f2383528_1_block_019",
+      "coordinates": {
+        "x1": 294.0,
+        "y1": 1960.0,
+        "x2": 1386.0,
+        "y2": 2489.0
+      },
+      "layout_tag": "table",
+      "confidence": 0.9564903974533081,
+      "reading_order": 20,
+      "text": "<table>\n<thead>\n<tr>\n<th>Column A</th>\n<th>Column B</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>(i) Layer lattice structure</td>\n<td>(A) Gas carbon</td>\n</tr>\n<tr>\n<td>(ii) Spherical cage molecules</td>\n<td>(B) Lamp black</td>\n</tr>\n<tr>\n<td>(iii) Rigid three-dimensional<br/>structure</td>\n<td>(C) Graphite</td>\n</tr>\n<tr>\n<td>(iv) Amorphous grey solid</td>\n<td>(D) Fullerene</td>\n</tr>\n<tr>\n<td>(v) Powdery black substance with<br/>velvet touch</td>\n<td>(E) Diamond</td>\n</tr>\n</tbody>\n</table>"
+    },
+    {
+      "block_id": "20260317_d05caa04-bd91-4466-a2be-2396f2383528_1_block_020",
+      "coordinates": {
+        "x1": 287.0,
+        "y1": 2521.0,
+        "x2": 1458.0,
+        "y2": 2580.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8380478024482727,
+      "reading_order": 21,
+      "text": "(a) (i) $\\rightarrow$ (C); (ii) $\\rightarrow$ (A); (iii) $\\rightarrow$ (E); (iv) $\\rightarrow$ (B); (v) $\\rightarrow$ (D)"
+    },
+    {
+      "block_id": "20260317_d05caa04-bd91-4466-a2be-2396f2383528_1_block_021",
+      "coordinates": {
+        "x1": 288.0,
+        "y1": 2586.0,
+        "x2": 1457.0,
+        "y2": 2643.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8301738500595093,
+      "reading_order": 22,
+      "text": "(b) (i) $\\rightarrow$ (D); (ii) $\\rightarrow$ (A); (iii) $\\rightarrow$ (C); (iv) $\\rightarrow$ (B); (v) $\\rightarrow$ (D)"
+    },
+    {
+      "block_id": "20260317_d05caa04-bd91-4466-a2be-2396f2383528_1_block_022",
+      "coordinates": {
+        "x1": 289.0,
+        "y1": 2649.0,
+        "x2": 1452.0,
+        "y2": 2705.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8368886113166809,
+      "reading_order": 23,
+      "text": "(c) (i) → (C); (ii) → (D); (iii) → (E); (iv) → (A); (v) → (B)"
+    },
+    {
+      "block_id": "20260317_d05caa04-bd91-4466-a2be-2396f2383528_1_block_023",
+      "coordinates": {
+        "x1": 290.0,
+        "y1": 2711.0,
+        "x2": 1456.0,
+        "y2": 2768.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8406301736831665,
+      "reading_order": 24,
+      "text": "(d) (i) → (E); (ii) → (D); (iii) → (B); (iv) → (C); (v) → (C)"
+    },
+    {
+      "block_id": "20260317_d05caa04-bd91-4466-a2be-2396f2383528_1_block_024",
+      "coordinates": {
+        "x1": 1790.0,
+        "y1": 970.0,
+        "x2": 2172.0,
+        "y2": 1025.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6909562349319458,
+      "reading_order": 25,
+      "text": "Space for rough work"
+    }
+  ]
+}

@@ -1,0 +1,320 @@
+{
+  "page_num": 1,
+  "image_width": 2398,
+  "image_height": 3003,
+  "created_at": "2026-03-17T19:10:34.367562+00:00",
+  "blocks": [
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_1_block_000",
+      "coordinates": {
+        "x1": 1696.0,
+        "y1": 187.0,
+        "x2": 2050.0,
+        "y2": 237.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.8677350282669067,
+      "reading_order": 1,
+      "text": "Hints and Explanations"
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_1_block_001",
+      "coordinates": {
+        "x1": 2091.0,
+        "y1": 183.0,
+        "x2": 2210.0,
+        "y2": 235.0
+      },
+      "layout_tag": "page-number",
+      "confidence": 0.8004341125488281,
+      "reading_order": 2,
+      "text": "A.15"
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_1_block_002",
+      "coordinates": {
+        "x1": 293.0,
+        "y1": 307.0,
+        "x2": 945.0,
+        "y2": 474.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.46985530853271484,
+      "reading_order": 3,
+      "text": "$$ 2\\mathrm{Ag}_2\\mathrm{O} \\xrightarrow{\\Delta} 4\\mathrm{Ag} + \\mathrm{O}_2 $$\nSilver-white\nglobules are formed."
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_1_block_003",
+      "coordinates": {
+        "x1": 290.0,
+        "y1": 502.0,
+        "x2": 883.0,
+        "y2": 556.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.41363081336021423,
+      "reading_order": 4,
+      "text": "Hence, the correct option is (d)."
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_1_block_004",
+      "coordinates": {
+        "x1": 191.0,
+        "y1": 603.0,
+        "x2": 631.0,
+        "y2": 657.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.8448905944824219,
+      "reading_order": 5,
+      "text": "Assessment Test II"
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_1_block_005",
+      "coordinates": {
+        "x1": 233.0,
+        "y1": 698.0,
+        "x2": 987.0,
+        "y2": 821.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6595537662506104,
+      "reading_order": 6,
+      "text": "1. Thermosphere exists in plasma state.\nHence, the correct option is (d)."
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_1_block_006",
+      "coordinates": {
+        "x1": 231.0,
+        "y1": 833.0,
+        "x2": 890.0,
+        "y2": 1088.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6014999747276306,
+      "reading_order": 7,
+      "text": "2. $1 \\text{ atm} \\to 76 \\text{ cm}$\n$0.05 \\text{ atm}$?\n$= 76 \\times 0.05 \\text{ cm} = 3.8 \\text{ cm}$\nHence, the correct option is (a)."
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_1_block_007",
+      "coordinates": {
+        "x1": 235.0,
+        "y1": 1107.0,
+        "x2": 1171.0,
+        "y2": 1337.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8615599870681763,
+      "reading_order": 8,
+      "text": "3. The quantity of water vapour in the atmos-\nphere differs from place to place and with\nchange of season.\n\nHence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_1_block_008",
+      "coordinates": {
+        "x1": 232.0,
+        "y1": 1356.0,
+        "x2": 1163.0,
+        "y2": 1479.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.750535249710083,
+      "reading_order": 9,
+      "text": "4. Combustion consumes but does not produce $\\mathrm{O}_2$.\nHence, the correct option is (d)."
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_1_block_009",
+      "coordinates": {
+        "x1": 234.0,
+        "y1": 1507.0,
+        "x2": 930.0,
+        "y2": 1629.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7242814898490906,
+      "reading_order": 10,
+      "text": "5. Respiration is a slow combustion.\nHence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_1_block_010",
+      "coordinates": {
+        "x1": 235.0,
+        "y1": 1657.0,
+        "x2": 1168.0,
+        "y2": 1835.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8643593788146973,
+      "reading_order": 11,
+      "text": "6. Carbon particle burns with yellow flame in the\nmiddle zone of the candle flame.\nHence, the correct option is (b)."
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_1_block_011",
+      "coordinates": {
+        "x1": 233.0,
+        "y1": 1859.0,
+        "x2": 1169.0,
+        "y2": 2039.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8185568451881409,
+      "reading_order": 12,
+      "text": "7. A protective layer of $\\mathrm{Al}_2\\mathrm{O}_3$ is formed on Al\nupon reaction with $\\mathrm{O}_2$.\nHence, the correct option is (b)."
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_1_block_012",
+      "coordinates": {
+        "x1": 235.0,
+        "y1": 2061.0,
+        "x2": 1171.0,
+        "y2": 2238.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7902474403381348,
+      "reading_order": 13,
+      "text": "8. When ammonia is burnt in limited supply of\n$\\mathrm{O}_2$, $\\mathrm{N}_2$ and $\\mathrm{H}_2\\mathrm{O}$ are produced.\nHence, the correct option is (d)."
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_1_block_013",
+      "coordinates": {
+        "x1": 232.0,
+        "y1": 2263.0,
+        "x2": 884.0,
+        "y2": 2390.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8091611266136169,
+      "reading_order": 14,
+      "text": "9. $\\mathrm{FeS}_2 + \\mathrm{O}_2 \\rightarrow \\mathrm{Fe}_2\\mathrm{O}_3 + \\mathrm{SO}_2$\nHence, the correct option is (d)."
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_1_block_014",
+      "coordinates": {
+        "x1": 215.0,
+        "y1": 2408.0,
+        "x2": 1167.0,
+        "y2": 2586.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8301785588264465,
+      "reading_order": 15,
+      "text": "10. Tin-coated iron containers are used for storage\nof edible food stuffs.\n\nHence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_1_block_015",
+      "coordinates": {
+        "x1": 215.0,
+        "y1": 2604.0,
+        "x2": 1172.0,
+        "y2": 2838.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8658856153488159,
+      "reading_order": 16,
+      "text": "11. Combustion is an exothermic reaction and rapid\ncombustion produces a lot of heat. Hence oxya-\ncetylene flame is used for welding purpose.\nHence, the correct option is (a)."
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_1_block_016",
+      "coordinates": {
+        "x1": 1263.0,
+        "y1": 293.0,
+        "x2": 2221.0,
+        "y2": 526.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9096410870552063,
+      "reading_order": 17,
+      "text": "12. When air is passed through lime water, it turns\nmilky because $\\mathrm{CO}_2$ is present in air and it\nretains its property.\nHence, the correct option is (a)."
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_1_block_017",
+      "coordinates": {
+        "x1": 1261.0,
+        "y1": 562.0,
+        "x2": 1926.0,
+        "y2": 935.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.890018880367279,
+      "reading_order": 18,
+      "text": "13. The required order is CDAB.\n(C) $\\mathrm{SO}_2$\n(D) Ozone\n(A) Fly ash\n(B) CFCs\nHence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_1_block_018",
+      "coordinates": {
+        "x1": 1261.0,
+        "y1": 968.0,
+        "x2": 1924.0,
+        "y2": 1343.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8681464195251465,
+      "reading_order": 19,
+      "text": "14. The required order is BADC.\n(B) CuO\n(A) $\\text{Al}_2\\text{O}_3$\n(D) $\\text{Fe}_3\\text{O}_4$\n(C) CaO\nHence, the correct option is (a)."
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_1_block_019",
+      "coordinates": {
+        "x1": 1256.0,
+        "y1": 1370.0,
+        "x2": 2214.0,
+        "y2": 2014.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9167319536209106,
+      "reading_order": 20,
+      "text": "15. (i) $\\rightarrow$ (C); (ii) $\\rightarrow$ (D); (iii) $\\rightarrow$ (A); (iv) $\\rightarrow$ (B)\n\n$\\mathrm{H}_2\\mathrm{O}_2 \\rightarrow$ Heating is not required.\n\n$3\\mathrm{KMnO}_4 \\xrightarrow{\\Delta} \\mathrm{MnO}_2 + \\mathrm{O}_2 + \\mathrm{K}_2\\mathrm{MnO}_4$\n\n$\\mathrm{KClO}_3 \\xrightarrow{\\mathrm{MnO}_2 \\atop \\Delta} 2\\mathrm{KCl} + 3\\mathrm{O}_2$\n\n$\\mathrm{MnO}_2$ reduces the melting point as well as\ndecomposition temperature of $\\mathrm{KClO}_3$.\n\n$2\\mathrm{NaNO}_3 \\xrightarrow{\\Delta} 2\\mathrm{NaNO}_2 + \\mathrm{O}_2$\n\nHence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_1_block_020",
+      "coordinates": {
+        "x1": 1240.0,
+        "y1": 2085.0,
+        "x2": 1700.0,
+        "y2": 2138.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.8075248003005981,
+      "reading_order": 21,
+      "text": "Assessment Test III"
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_1_block_021",
+      "coordinates": {
+        "x1": 1281.0,
+        "y1": 2180.0,
+        "x2": 2219.0,
+        "y2": 2425.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7222564816474915,
+      "reading_order": 22,
+      "text": "1. With increase in altitude, atmospheric pressure\ndecreases; hence, the height of the mercury col-\numn decreases in barometer.\nHence, the correct option is (a)."
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_1_block_022",
+      "coordinates": {
+        "x1": 1279.0,
+        "y1": 2443.0,
+        "x2": 2219.0,
+        "y2": 2685.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8987054228782654,
+      "reading_order": 23,
+      "text": "2. $\\mathrm{MnO}_2$ acts as a positive catalyst and decreases\nthe melting point of $\\mathrm{KClO}_3$ during the prepara-\ntion of $\\mathrm{O}_2$ from $\\mathrm{KClO}_3$.\nHence, the correct option is (a)."
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_1_block_023",
+      "coordinates": {
+        "x1": 1280.0,
+        "y1": 2710.0,
+        "x2": 1932.0,
+        "y2": 2835.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8835467100143433,
+      "reading_order": 24,
+      "text": "3. The correct order is DABC.\nHence, the correct option is (b)."
+    }
+  ]
+}

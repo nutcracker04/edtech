@@ -1,0 +1,112 @@
+{
+  "page_num": 4,
+  "image_width": 2398,
+  "image_height": 3003,
+  "created_at": "2026-03-17T19:09:54.688537+00:00",
+  "blocks": [
+    {
+      "block_id": "20260317_d97068a5-f3db-4561-afbe-2c642cb2cfff_4_block_000",
+      "coordinates": {
+        "x1": 200.0,
+        "y1": 185.0,
+        "x2": 1122.0,
+        "y2": 241.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.8097248077392578,
+      "reading_order": 1,
+      "text": "5.8 Chapter 5 Water, Solution, Solubility and Hydrogen"
+    },
+    {
+      "block_id": "20260317_d97068a5-f3db-4561-afbe-2c642cb2cfff_4_block_001",
+      "coordinates": {
+        "x1": 288.0,
+        "y1": 292.0,
+        "x2": 1692.0,
+        "y2": 392.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8846677541732788,
+      "reading_order": 2,
+      "text": "Which of the following statements regarding the status of the two solutions\nat $45^{\\circ}\\mathrm{C}$ is true?"
+    },
+    {
+      "block_id": "20260317_d97068a5-f3db-4561-afbe-2c642cb2cfff_4_block_002",
+      "coordinates": {
+        "x1": 288.0,
+        "y1": 404.0,
+        "x2": 1042.0,
+        "y2": 458.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8185315728187561,
+      "reading_order": 3,
+      "text": "(a) X and Y possess the same solubility."
+    },
+    {
+      "block_id": "20260317_d97068a5-f3db-4561-afbe-2c642cb2cfff_4_block_003",
+      "coordinates": {
+        "x1": 288.0,
+        "y1": 466.0,
+        "x2": 1624.0,
+        "y2": 521.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8122403025627136,
+      "reading_order": 4,
+      "text": "(b) The same amounts of X and Y get precipitated till that temperature."
+    },
+    {
+      "block_id": "20260317_d97068a5-f3db-4561-afbe-2c642cb2cfff_4_block_004",
+      "coordinates": {
+        "x1": 287.0,
+        "y1": 529.0,
+        "x2": 1693.0,
+        "y2": 583.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7866950631141663,
+      "reading_order": 5,
+      "text": "(c) The same amounts of X and Y would be precipitated on further cooling."
+    },
+    {
+      "block_id": "20260317_d97068a5-f3db-4561-afbe-2c642cb2cfff_4_block_005",
+      "coordinates": {
+        "x1": 291.0,
+        "y1": 591.0,
+        "x2": 673.0,
+        "y2": 646.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6569759845733643,
+      "reading_order": 6,
+      "text": "(d) Both (a) and (b)"
+    },
+    {
+      "block_id": "20260317_d97068a5-f3db-4561-afbe-2c642cb2cfff_4_block_006",
+      "coordinates": {
+        "x1": 211.0,
+        "y1": 671.0,
+        "x2": 1697.0,
+        "y2": 921.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8045081496238708,
+      "reading_order": 7,
+      "text": "15. Identify the amounts of 'X' and 'Y' precipitated when the solutions are\ncooled up to 60°C.\n(a) 10 g, 20 g (b) 20 g, 10 g\n(c) 60 g, 50 g (d) 50 g, 60 g"
+    },
+    {
+      "block_id": "20260317_d97068a5-f3db-4561-afbe-2c642cb2cfff_4_block_007",
+      "coordinates": {
+        "x1": 1789.0,
+        "y1": 312.0,
+        "x2": 2170.0,
+        "y2": 364.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5708070993423462,
+      "reading_order": 8,
+      "text": "Space for rough work"
+    }
+  ]
+}

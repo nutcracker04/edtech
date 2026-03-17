@@ -1,0 +1,177 @@
+{
+  "page_num": 3,
+  "image_width": 2398,
+  "image_height": 3003,
+  "created_at": "2026-03-17T19:09:41.295006+00:00",
+  "blocks": [
+    {
+      "block_id": "20260317_7a70d7d4-ac87-41eb-bd89-ed309e85319a_3_block_000",
+      "coordinates": {
+        "x1": 1749.0,
+        "y1": 186.0,
+        "x2": 2052.0,
+        "y2": 235.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.8325133919715881,
+      "reading_order": 1,
+      "text": "Assessment Test IV"
+    },
+    {
+      "block_id": "20260317_7a70d7d4-ac87-41eb-bd89-ed309e85319a_3_block_001",
+      "coordinates": {
+        "x1": 2093.0,
+        "y1": 182.0,
+        "x2": 2205.0,
+        "y2": 236.0
+      },
+      "layout_tag": "page-number",
+      "confidence": 0.7431466579437256,
+      "reading_order": 2,
+      "text": "3.11"
+    },
+    {
+      "block_id": "20260317_7a70d7d4-ac87-41eb-bd89-ed309e85319a_3_block_002",
+      "coordinates": {
+        "x1": 230.0,
+        "y1": 290.0,
+        "x2": 1330.0,
+        "y2": 344.0
+      },
+      "layout_tag": "image-caption",
+      "confidence": 0.4773333668708801,
+      "reading_order": 3,
+      "text": "5. Match the entries of Column A with those of Column B."
+    },
+    {
+      "block_id": "20260317_7a70d7d4-ac87-41eb-bd89-ed309e85319a_3_block_003",
+      "coordinates": {
+        "x1": 296.0,
+        "y1": 370.0,
+        "x2": 1356.0,
+        "y2": 868.0
+      },
+      "layout_tag": "table",
+      "confidence": 0.7873725295066833,
+      "reading_order": 4,
+      "text": "<table>\n<thead>\n<tr>\n<th>Column A<br/>(Formula)</th>\n<th>Column B<br/>(Total Positive Charge)</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>(i) Zinc nitride</td>\n<td>(A) 2</td>\n</tr>\n<tr>\n<td>(ii) Plumbic chloride</td>\n<td>(B) 3</td>\n</tr>\n<tr>\n<td>(iii) Sodium phosphate</td>\n<td>(C) 5</td>\n</tr>\n<tr>\n<td>(iv) Calcium nitrate</td>\n<td>(D) 4</td>\n</tr>\n<tr>\n<td></td>\n<td>(E) 1</td>\n</tr>\n<tr>\n<td></td>\n<td>(F) 6</td>\n</tr>\n</tbody>\n</table>"
+    },
+    {
+      "block_id": "20260317_7a70d7d4-ac87-41eb-bd89-ed309e85319a_3_block_004",
+      "coordinates": {
+        "x1": 288.0,
+        "y1": 890.0,
+        "x2": 1262.0,
+        "y2": 1142.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.33323001861572266,
+      "reading_order": 5,
+      "text": "(a) (i) $\\rightarrow$ (D); (ii) $\\rightarrow$ (F); (iii) $\\rightarrow$ (B); (iv) $\\rightarrow$ (A)\n(b) (i) $\\rightarrow$ (D); (ii) $\\rightarrow$ (F); (iii) $\\rightarrow$ (A); (iv) $\\rightarrow$ (B)\n(c) (i) $\\rightarrow$ (F); (ii) $\\rightarrow$ (D); (iii) $\\rightarrow$ (A); (iv) $\\rightarrow$ (B)\n(d) (i) $\\rightarrow$ (F); (ii) $\\rightarrow$ (D); (iii) $\\rightarrow$ (B); (iv) $\\rightarrow$ (A)"
+    },
+    {
+      "block_id": "20260317_7a70d7d4-ac87-41eb-bd89-ed309e85319a_3_block_005",
+      "coordinates": {
+        "x1": 232.0,
+        "y1": 1198.0,
+        "x2": 1698.0,
+        "y2": 1438.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.885458767414093,
+      "reading_order": 6,
+      "text": "6. Identify $a$ and $b$ from the following equation: $a \\mathrm{HNO}_3 + \\mathrm{S} \\rightarrow \\mathrm{H}_2\\mathrm{SO}_4 + 6\\mathrm{NO}_2$\n$+ b \\mathrm{H}_2\\mathrm{O}$.\n(a) $a = 6, b = 2$\n(c) $a = 6, b = 4$\n(b) $a = 6, b = 3$\n(d) $a = 4, b = 2$"
+    },
+    {
+      "block_id": "20260317_7a70d7d4-ac87-41eb-bd89-ed309e85319a_3_block_006",
+      "coordinates": {
+        "x1": 233.0,
+        "y1": 1494.0,
+        "x2": 1697.0,
+        "y2": 1672.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8752519488334656,
+      "reading_order": 7,
+      "text": "7. Molecular mass of phosphate of divalent metal is 262. Find the atomic mass\nof the metal.\n(a) 24 (b) 27 (c) 40 (d) 23"
+    },
+    {
+      "block_id": "20260317_7a70d7d4-ac87-41eb-bd89-ed309e85319a_3_block_007",
+      "coordinates": {
+        "x1": 231.0,
+        "y1": 1727.0,
+        "x2": 1451.0,
+        "y2": 1916.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8556473851203918,
+      "reading_order": 8,
+      "text": "8. Which among the following is an analysis reaction?\n(a) $2\\mathrm{Na} + \\mathrm{Cl}_2 \\rightarrow 2\\mathrm{NaCl}$ (b) $2\\mathrm{NaCl} \\rightarrow 2\\mathrm{Na} + \\mathrm{Cl}_2$\n(c) $\\mathrm{CaCO}_3 \\rightarrow \\mathrm{CaO} + \\mathrm{CO}_2$ (d) $2\\mathrm{HOCl} \\rightarrow 2\\mathrm{HCl} + \\mathrm{O}_2$"
+    },
+    {
+      "block_id": "20260317_7a70d7d4-ac87-41eb-bd89-ed309e85319a_3_block_008",
+      "coordinates": {
+        "x1": 230.0,
+        "y1": 1969.0,
+        "x2": 1694.0,
+        "y2": 2220.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9170602560043335,
+      "reading_order": 9,
+      "text": "9. 40 g of sulphur on treatment with sufficient amount of oxygen gives how\nmany grams of $\\mathrm{SO}_3$?\n$[\\mathrm{S} + \\mathrm{O}_2 \\rightarrow \\mathrm{SO}_3]$\n(a) 100 g (b) 140 g (c) 75 g (d) 85 g"
+    },
+    {
+      "block_id": "20260317_7a70d7d4-ac87-41eb-bd89-ed309e85319a_3_block_009",
+      "coordinates": {
+        "x1": 213.0,
+        "y1": 2269.0,
+        "x2": 1624.0,
+        "y2": 2393.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8827123641967773,
+      "reading_order": 10,
+      "text": "10. Which among the following metals shows variable valency?\n(a) Fe (b) Mg (c) Zn (d) Al"
+    },
+    {
+      "block_id": "20260317_7a70d7d4-ac87-41eb-bd89-ed309e85319a_3_block_010",
+      "coordinates": {
+        "x1": 211.0,
+        "y1": 2449.0,
+        "x2": 1695.0,
+        "y2": 2626.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9048751592636108,
+      "reading_order": 11,
+      "text": "11. The ratio of weight of nitrogen combining with fixed weight of oxygen in\n$\\mathrm{N}_2\\mathrm{O}$, $\\mathrm{NO}$, and $\\mathrm{N}_2\\mathrm{O}_5$ is __________.\n(a) 10:5:4 (b) 10:5:2 (c) 10:5:1 (d) 10:5:3"
+    },
+    {
+      "block_id": "20260317_7a70d7d4-ac87-41eb-bd89-ed309e85319a_3_block_011",
+      "coordinates": {
+        "x1": 213.0,
+        "y1": 2684.0,
+        "x2": 1628.0,
+        "y2": 2804.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.886326789855957,
+      "reading_order": 12,
+      "text": "12. The atomic mass of an element is 24. What is the element?\n(a) Mg (b) S (c) Na (d) Cr"
+    },
+    {
+      "block_id": "20260317_7a70d7d4-ac87-41eb-bd89-ed309e85319a_3_block_012",
+      "coordinates": {
+        "x1": 1790.0,
+        "y1": 310.0,
+        "x2": 2172.0,
+        "y2": 365.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5489634871482849,
+      "reading_order": 13,
+      "text": "Space for rough work"
+    }
+  ]
+}

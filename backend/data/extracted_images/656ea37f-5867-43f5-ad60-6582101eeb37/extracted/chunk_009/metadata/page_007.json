@@ -1,0 +1,190 @@
+{
+  "page_num": 7,
+  "image_width": 2398,
+  "image_height": 3003,
+  "created_at": "2026-03-17T19:10:02.078955+00:00",
+  "blocks": [
+    {
+      "block_id": "20260317_d05caa04-bd91-4466-a2be-2396f2383528_7_block_000",
+      "coordinates": {
+        "x1": 180.0,
+        "y1": 295.0,
+        "x2": 930.0,
+        "y2": 374.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.6768180727958679,
+      "reading_order": 1,
+      "text": "Assessment Test III"
+    },
+    {
+      "block_id": "20260317_d05caa04-bd91-4466-a2be-2396f2383528_7_block_001",
+      "coordinates": {
+        "x1": 1749.0,
+        "y1": 187.0,
+        "x2": 2051.0,
+        "y2": 236.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.8538129329681396,
+      "reading_order": 2,
+      "text": "Assessment Test III"
+    },
+    {
+      "block_id": "20260317_d05caa04-bd91-4466-a2be-2396f2383528_7_block_002",
+      "coordinates": {
+        "x1": 1448.0,
+        "y1": 325.0,
+        "x2": 1693.0,
+        "y2": 373.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.8171103000640869,
+      "reading_order": 3,
+      "text": "Time: 30 min."
+    },
+    {
+      "block_id": "20260317_d05caa04-bd91-4466-a2be-2396f2383528_7_block_003",
+      "coordinates": {
+        "x1": 2108.0,
+        "y1": 185.0,
+        "x2": 2194.0,
+        "y2": 233.0
+      },
+      "layout_tag": "page-number",
+      "confidence": 0.7529184222221375,
+      "reading_order": 4,
+      "text": "6.7"
+    },
+    {
+      "block_id": "20260317_d05caa04-bd91-4466-a2be-2396f2383528_7_block_004",
+      "coordinates": {
+        "x1": 173.0,
+        "y1": 449.0,
+        "x2": 1691.0,
+        "y2": 506.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.831508994102478,
+      "reading_order": 5,
+      "text": "Directions for questions from 1 to 15: Select the correct answer from the given options."
+    },
+    {
+      "block_id": "20260317_d05caa04-bd91-4466-a2be-2396f2383528_7_block_005",
+      "coordinates": {
+        "x1": 231.0,
+        "y1": 540.0,
+        "x2": 1438.0,
+        "y2": 730.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9284870028495789,
+      "reading_order": 6,
+      "text": "1. Identify the allotrope of carbon that exists in crystalline form.\n(a) Graphite (b) Coal\n(c) Coke (d) Lamp black"
+    },
+    {
+      "block_id": "20260317_d05caa04-bd91-4466-a2be-2396f2383528_7_block_006",
+      "coordinates": {
+        "x1": 230.0,
+        "y1": 754.0,
+        "x2": 1699.0,
+        "y2": 998.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9458299875259399,
+      "reading_order": 7,
+      "text": "2. Which of the following is the raw material for the manufacture of graphite\nin Acheson process?\n(a) Silicon carbide (b) Silicon\n(c) Silicone (d) Sand"
+    },
+    {
+      "block_id": "20260317_d05caa04-bd91-4466-a2be-2396f2383528_7_block_007",
+      "coordinates": {
+        "x1": 231.0,
+        "y1": 1019.0,
+        "x2": 1451.0,
+        "y2": 1337.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9475037455558777,
+      "reading_order": 8,
+      "text": "3. In which of the following purposes can diamond be not used?\n(a) Tip of deep boring drills\n(b) For cutting glasses\n(c) As solid lubricant\n(d) Generating laser beam in electronics"
+    },
+    {
+      "block_id": "20260317_d05caa04-bd91-4466-a2be-2396f2383528_7_block_008",
+      "coordinates": {
+        "x1": 231.0,
+        "y1": 1358.0,
+        "x2": 1620.0,
+        "y2": 1547.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9369000792503357,
+      "reading_order": 9,
+      "text": "4. Which of the following can be used to extract metals from their oxides?\n(a) Sugar charcoal (b) Bone charcoal\n(c) Graphite (d) Fullerene"
+    },
+    {
+      "block_id": "20260317_d05caa04-bd91-4466-a2be-2396f2383528_7_block_009",
+      "coordinates": {
+        "x1": 233.0,
+        "y1": 1570.0,
+        "x2": 1544.0,
+        "y2": 1765.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9270607829093933,
+      "reading_order": 10,
+      "text": "5. Which of the reactions do not produce CO?\n(a) $\\mathrm{C} + \\mathrm{CO}_2 \\rightarrow$ (b) $\\mathrm{H}_2\\mathrm{C}_2\\mathrm{O}_4 + \\text{Conc.} \\mathrm{H}_2\\mathrm{SO}_4 \\rightarrow$\n(c) $\\mathrm{HCOOH} + \\text{Conc.} \\mathrm{H}_2\\mathrm{SO}_4 \\rightarrow$ (d) $\\mathrm{CaCO}_3 + \\mathrm{HCl} \\rightarrow$"
+    },
+    {
+      "block_id": "20260317_d05caa04-bd91-4466-a2be-2396f2383528_7_block_010",
+      "coordinates": {
+        "x1": 232.0,
+        "y1": 1785.0,
+        "x2": 1687.0,
+        "y2": 2215.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9436161518096924,
+      "reading_order": 11,
+      "text": "6. Assertion (A): CO is collected in the laboratory by downward displacement\nof water.\nReason (R): CO is a neutral oxide.\n(a) Both A and R are true and R is the correct explanation of A.\n(b) Both A and R are true, but R is not the correct explanation of A.\n(c) A is true and R is false.\n(d) A is false and R is true."
+    },
+    {
+      "block_id": "20260317_d05caa04-bd91-4466-a2be-2396f2383528_7_block_011",
+      "coordinates": {
+        "x1": 231.0,
+        "y1": 2240.0,
+        "x2": 1693.0,
+        "y2": 2670.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9519108533859253,
+      "reading_order": 12,
+      "text": "7. Assertion (A): CO is one of the components of coal gas, water gas and pro-\nducer gas.\nReason (R): The combustion of CO is highly exothermic.\n(a) Both A and R are true and R is the correct explanation of A.\n(b) Both A and R are true, but R is not the correct explanation of A.\n(c) A is true and R is false.\n(d) A is false and R is true."
+    },
+    {
+      "block_id": "20260317_d05caa04-bd91-4466-a2be-2396f2383528_7_block_012",
+      "coordinates": {
+        "x1": 232.0,
+        "y1": 2692.0,
+        "x2": 1694.0,
+        "y2": 2882.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9334232211112976,
+      "reading_order": 13,
+      "text": "8. Arrange the following fuels in the ascending order of their calorific values.\n(A) Hydrogen (B) LPG (C) Petrol (D) Wood\n(a) ABCD (b) BCDA (c) CDBA (d) DCBA"
+    },
+    {
+      "block_id": "20260317_d05caa04-bd91-4466-a2be-2396f2383528_7_block_013",
+      "coordinates": {
+        "x1": 1789.0,
+        "y1": 312.0,
+        "x2": 2172.0,
+        "y2": 365.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6297296285629272,
+      "reading_order": 14,
+      "text": "Space for rough work"
+    }
+  ]
+}

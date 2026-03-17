@@ -1,0 +1,138 @@
+{
+  "page_num": 6,
+  "image_width": 2398,
+  "image_height": 3003,
+  "created_at": "2026-03-17T19:09:54.676097+00:00",
+  "blocks": [
+    {
+      "block_id": "20260317_d97068a5-f3db-4561-afbe-2c642cb2cfff_6_block_000",
+      "coordinates": {
+        "x1": 184.0,
+        "y1": 183.0,
+        "x2": 1122.0,
+        "y2": 243.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.8254416584968567,
+      "reading_order": 1,
+      "text": "5.10 Chapter 5 Water, Solution, Solubility and Hydrogen"
+    },
+    {
+      "block_id": "20260317_d97068a5-f3db-4561-afbe-2c642cb2cfff_6_block_001",
+      "coordinates": {
+        "x1": 230.0,
+        "y1": 291.0,
+        "x2": 1692.0,
+        "y2": 662.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9425019025802612,
+      "reading_order": 2,
+      "text": "9. Arrange the following compartments involved in the purification of water\nin a proper order.\n(A) Loading tank (B) Filtration tank\n(C) Chlorination tank (D) Sedimentation tank\n(a) BCDA (b) CDBA\n(c) DABC (d) ADBC"
+    },
+    {
+      "block_id": "20260317_d97068a5-f3db-4561-afbe-2c642cb2cfff_6_block_002",
+      "coordinates": {
+        "x1": 217.0,
+        "y1": 682.0,
+        "x2": 1696.0,
+        "y2": 866.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9376410245895386,
+      "reading_order": 3,
+      "text": "10. Calculate the solubility of the salt A if 25 g of A is present in 225 g of the\nsaturated solution at a given temperature.\n(a) 12 (b) 12.5 (c) 1.2 (d) 11.5"
+    },
+    {
+      "block_id": "20260317_d97068a5-f3db-4561-afbe-2c642cb2cfff_6_block_003",
+      "coordinates": {
+        "x1": 216.0,
+        "y1": 889.0,
+        "x2": 1695.0,
+        "y2": 994.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9141385555267334,
+      "reading_order": 4,
+      "text": "11. From the graph given below, identify the amount of salt which is maximum\nin the same mass of their (A, B, C and D) saturated solutions at 40°C."
+    },
+    {
+      "block_id": "20260317_d97068a5-f3db-4561-afbe-2c642cb2cfff_6_block_004",
+      "coordinates": {
+        "x1": 602.0,
+        "y1": 1038.0,
+        "x2": 1267.0,
+        "y2": 1598.0
+      },
+      "layout_tag": "chart",
+      "confidence": 0.9483586549758911,
+      "reading_order": 5,
+      "text": "| Temp (°C) | Line A (Solubility ~%) | Line B (~% at 40°C, Intersecting D/C base line %) | Line C (% > Base % of others as temp increases from <40°) | Line D (%) [Base] | Note: Y-axis values are relative percentages based on visual slope and position; specific numerical labels not provided in the image legend.|\n| :--- | :--- | :--- | :--- | :--- | :--- |\n| **~15** | Low (<2), rising slowly to Medium (>6). Intersection with other lines occurs between X=38 & X=42 range but is below their starting points here due to lower initial value than all three intersecting baselines combined initially before intersection point around x = -7 or so if extrapolated linearly down past origin which isn't shown clearly enough for exact numbers just visually estimated by eye placement against axis ticks given above.) | High(est>9)| N/A / Not plotted yet since it starts higher up then intersects later after crossing over baseline formed earlier when plotting these four together assuming they start near zero common y intercept area where no data exists there otherwise would be an error in calculation because we can only see one set of linear equations being drawn out across each variable independently without any shared vertical scale reference like temperature itself does however that doesn't mean its absolute magnitude matters more than comparing slopes directly seen here versus how much change happens per unit increase along horizontal axis alone regardless what else may happen elsewhere too even though those aren't visible either except maybe some small detail about 'D'. |\n| ... | continues increasing faster until roughly max observed level... | rises steadily through middle section.. eventually crosses back under again somewhere mid way further right side towards end.... | keeps climbing highest among them consistently throughout entire span displayed... | stays lowest overall remaining flatly low compared rest despite having same general upward trend pattern... |\n\n*Note:* The \"N/A\" entry indicates missing text such as precise percentage markers needed beyond simple estimation methods used previously."
+    },
+    {
+      "block_id": "20260317_d97068a5-f3db-4561-afbe-2c642cb2cfff_6_block_005",
+      "coordinates": {
+        "x1": 294.0,
+        "y1": 1654.0,
+        "x2": 1612.0,
+        "y2": 1718.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5803024768829346,
+      "reading_order": 6,
+      "text": "(a) A (b) B (c) C (d) D"
+    },
+    {
+      "block_id": "20260317_d97068a5-f3db-4561-afbe-2c642cb2cfff_6_block_006",
+      "coordinates": {
+        "x1": 211.0,
+        "y1": 1740.0,
+        "x2": 1218.0,
+        "y2": 2054.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9259054660797119,
+      "reading_order": 7,
+      "text": "12. Efflorescent salts are the salts which __________.\n(a) absorb water at room temperature\n(b) release water at room temperature\n(c) absorb water on heating\n(d) release water on heating"
+    },
+    {
+      "block_id": "20260317_d97068a5-f3db-4561-afbe-2c642cb2cfff_6_block_007",
+      "coordinates": {
+        "x1": 211.0,
+        "y1": 2077.0,
+        "x2": 1087.0,
+        "y2": 2391.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9432136416435242,
+      "reading_order": 8,
+      "text": "13. Solubility of a gas in a liquid __________.\n(a) increases with increase in temperature\n(b) increases with increase in pressure\n(c) does not alter with temperature\n(d) does not alter with pressure"
+    },
+    {
+      "block_id": "20260317_d97068a5-f3db-4561-afbe-2c642cb2cfff_6_block_008",
+      "coordinates": {
+        "x1": 214.0,
+        "y1": 2415.0,
+        "x2": 1401.0,
+        "y2": 2611.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9319233298301697,
+      "reading_order": 9,
+      "text": "14. Identify the composition of water gas among the following.\n(a) $\\mathrm{C} + \\mathrm{H}_2\\mathrm{O}$ (b) $\\mathrm{CO} + \\mathrm{H}_2\\mathrm{O}$\n(c) $\\mathrm{CO} + \\mathrm{H}_2$ (d) $\\mathrm{CO}_2 + \\mathrm{H}_2$"
+    },
+    {
+      "block_id": "20260317_d97068a5-f3db-4561-afbe-2c642cb2cfff_6_block_009",
+      "coordinates": {
+        "x1": 1790.0,
+        "y1": 311.0,
+        "x2": 2170.0,
+        "y2": 364.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.652944803237915,
+      "reading_order": 10,
+      "text": "Space for rough work"
+    }
+  ]
+}

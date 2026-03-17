@@ -91,6 +91,7 @@ class DatabaseWriter:
         job_id: str,
         source_pdf_filename: str,
         source_pdf_path: str,
+        title: str = "",
         total_pages: int = 0,
         extracted_path: str = "",
         manifest_path: str = "",
@@ -103,6 +104,7 @@ class DatabaseWriter:
         try:
             data: dict[str, Any] = {
                 "id": job_id,
+                "title": title or None,
                 "source_pdf_filename": source_pdf_filename,
                 "source_pdf_path": source_pdf_path,
                 "stage": "queued",

@@ -1,0 +1,177 @@
+{
+  "page_num": 8,
+  "image_width": 2398,
+  "image_height": 3003,
+  "created_at": "2026-03-17T19:09:28.156017+00:00",
+  "blocks": [
+    {
+      "block_id": "20260317_948c6372-4ab4-407a-ae4e-06112d9bd3e8_8_block_000",
+      "coordinates": {
+        "x1": 185.0,
+        "y1": 183.0,
+        "x2": 867.0,
+        "y2": 239.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.7882967591285706,
+      "reading_order": 1,
+      "text": "2.10 Chapter 2 Classification of Matter"
+    },
+    {
+      "block_id": "20260317_948c6372-4ab4-407a-ae4e-06112d9bd3e8_8_block_001",
+      "coordinates": {
+        "x1": 215.0,
+        "y1": 292.0,
+        "x2": 1465.0,
+        "y2": 477.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.31055015325546265,
+      "reading_order": 2,
+      "text": "13. Which of the following is a heterogeneous mixture?\n(a) Milk (b) Soda water\n(c) Solution of sugar (d) Mixture of $\\mathrm{O}_2$ and $\\mathrm{H}_2$"
+    },
+    {
+      "block_id": "20260317_948c6372-4ab4-407a-ae4e-06112d9bd3e8_8_block_002",
+      "coordinates": {
+        "x1": 216.0,
+        "y1": 532.0,
+        "x2": 1696.0,
+        "y2": 639.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7290184497833252,
+      "reading_order": 3,
+      "text": "14. The boiling point of which of the following is the maximum under normal atmospheric pressure?"
+    },
+    {
+      "block_id": "20260317_948c6372-4ab4-407a-ae4e-06112d9bd3e8_8_block_003",
+      "coordinates": {
+        "x1": 291.0,
+        "y1": 649.0,
+        "x2": 660.0,
+        "y2": 700.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7767669558525085,
+      "reading_order": 4,
+      "text": "(a) Distilled water"
+    },
+    {
+      "block_id": "20260317_948c6372-4ab4-407a-ae4e-06112d9bd3e8_8_block_004",
+      "coordinates": {
+        "x1": 291.0,
+        "y1": 712.0,
+        "x2": 570.0,
+        "y2": 766.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7553500533103943,
+      "reading_order": 5,
+      "text": "(b) Tap water"
+    },
+    {
+      "block_id": "20260317_948c6372-4ab4-407a-ae4e-06112d9bd3e8_8_block_005",
+      "coordinates": {
+        "x1": 292.0,
+        "y1": 776.0,
+        "x2": 567.0,
+        "y2": 827.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7420210242271423,
+      "reading_order": 6,
+      "text": "(c) Sea water"
+    },
+    {
+      "block_id": "20260317_948c6372-4ab4-407a-ae4e-06112d9bd3e8_8_block_006",
+      "coordinates": {
+        "x1": 292.0,
+        "y1": 838.0,
+        "x2": 587.0,
+        "y2": 891.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7883070111274719,
+      "reading_order": 7,
+      "text": "(d) Rain water"
+    },
+    {
+      "block_id": "20260317_948c6372-4ab4-407a-ae4e-06112d9bd3e8_8_block_007",
+      "coordinates": {
+        "x1": 209.0,
+        "y1": 955.0,
+        "x2": 1253.0,
+        "y2": 1006.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8276574611663818,
+      "reading_order": 8,
+      "text": "15. Skating on ice is possible because __________."
+    },
+    {
+      "block_id": "20260317_948c6372-4ab4-407a-ae4e-06112d9bd3e8_8_block_008",
+      "coordinates": {
+        "x1": 289.0,
+        "y1": 1017.0,
+        "x2": 1365.0,
+        "y2": 1070.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8288408517837524,
+      "reading_order": 9,
+      "text": "(a) increase in pressure increases the melting point of ice"
+    },
+    {
+      "block_id": "20260317_948c6372-4ab4-407a-ae4e-06112d9bd3e8_8_block_009",
+      "coordinates": {
+        "x1": 289.0,
+        "y1": 1080.0,
+        "x2": 1374.0,
+        "y2": 1134.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8330978751182556,
+      "reading_order": 10,
+      "text": "(b) increase in pressure decreases the melting point of ice"
+    },
+    {
+      "block_id": "20260317_948c6372-4ab4-407a-ae4e-06112d9bd3e8_8_block_010",
+      "coordinates": {
+        "x1": 289.0,
+        "y1": 1141.0,
+        "x2": 1129.0,
+        "y2": 1194.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8490381240844727,
+      "reading_order": 11,
+      "text": "(c) the volume of ice expands when it melts"
+    },
+    {
+      "block_id": "20260317_948c6372-4ab4-407a-ae4e-06112d9bd3e8_8_block_011",
+      "coordinates": {
+        "x1": 290.0,
+        "y1": 1204.0,
+        "x2": 1442.0,
+        "y2": 1259.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8571207523345947,
+      "reading_order": 12,
+      "text": "(d) the density of ice decreases on the application of pressure"
+    },
+    {
+      "block_id": "20260317_948c6372-4ab4-407a-ae4e-06112d9bd3e8_8_block_012",
+      "coordinates": {
+        "x1": 1792.0,
+        "y1": 313.0,
+        "x2": 2168.0,
+        "y2": 363.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.43904179334640503,
+      "reading_order": 13,
+      "text": "Space for rough work"
+    }
+  ]
+}

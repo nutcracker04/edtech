@@ -1,0 +1,203 @@
+{
+  "page_num": 3,
+  "image_width": 2398,
+  "image_height": 3003,
+  "created_at": "2026-03-17T19:10:09.073534+00:00",
+  "blocks": [
+    {
+      "block_id": "20260317_6153f658-b2a4-4999-8bb7-be917337210d_3_block_000",
+      "coordinates": {
+        "x1": 229.0,
+        "y1": 367.0,
+        "x2": 1394.0,
+        "y2": 588.0
+      },
+      "layout_tag": "headline",
+      "confidence": 0.9137376546859741,
+      "reading_order": 1,
+      "text": "Some Important Elements and their Compounds"
+    },
+    {
+      "block_id": "20260317_6153f658-b2a4-4999-8bb7-be917337210d_3_block_001",
+      "coordinates": {
+        "x1": 1443.0,
+        "y1": 296.0,
+        "x2": 2208.0,
+        "y2": 676.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.3628412187099457,
+      "reading_order": 2,
+      "text": "7\n\n| 16 | S  | Sulfur   | 32.066 |\n|----|----|----------|--------|\n|    | Se | Selenium | 78.96  |\n| 34 | As | Arsenic  | 4.92160|\n| 51 | Sb | Antimony |        |\n| 17 | Cl | Chlorine | 35.4527|\n| 35 | Br | Bromine  | 79.904 |\n| 52 | Te | Tellurium|        |\n| 53 | I  | Iodine   |        |"
+    },
+    {
+      "block_id": "20260317_6153f658-b2a4-4999-8bb7-be917337210d_3_block_002",
+      "coordinates": {
+        "x1": 179.0,
+        "y1": 710.0,
+        "x2": 2217.0,
+        "y2": 815.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.6925544738769531,
+      "reading_order": 3,
+      "text": "Reference: Coursebook - IIT Foundation Chemistry Class 8; Chapter - Some Important Elements and their Compounds;\nPage number - 7.1–7.36"
+    },
+    {
+      "block_id": "20260317_6153f658-b2a4-4999-8bb7-be917337210d_3_block_003",
+      "coordinates": {
+        "x1": 182.0,
+        "y1": 844.0,
+        "x2": 865.0,
+        "y2": 924.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.8424612283706665,
+      "reading_order": 4,
+      "text": "Assessment Test I"
+    },
+    {
+      "block_id": "20260317_6153f658-b2a4-4999-8bb7-be917337210d_3_block_004",
+      "coordinates": {
+        "x1": 1448.0,
+        "y1": 872.0,
+        "x2": 1692.0,
+        "y2": 923.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7622327208518982,
+      "reading_order": 5,
+      "text": "Time: 30 min."
+    },
+    {
+      "block_id": "20260317_6153f658-b2a4-4999-8bb7-be917337210d_3_block_005",
+      "coordinates": {
+        "x1": 177.0,
+        "y1": 1001.0,
+        "x2": 1690.0,
+        "y2": 1055.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.8143488764762878,
+      "reading_order": 6,
+      "text": "Directions for questions from 1 to 15: Select the correct answer from the given options."
+    },
+    {
+      "block_id": "20260317_6153f658-b2a4-4999-8bb7-be917337210d_3_block_006",
+      "coordinates": {
+        "x1": 237.0,
+        "y1": 1090.0,
+        "x2": 1698.0,
+        "y2": 1517.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9194091558456421,
+      "reading_order": 7,
+      "text": "1. Arrange the following in the increasing order of temperature range in which\nthey are obtained during heating of sulphur.\n(A) Less viscous mobile liquid (B) Monoclinic sulphur\n(C) Sulphur vapour (D) Viscous liquid\n(E) Pale yellow mobile liquid\n(a) BEADC (b) BECDA\n(c) BEDAC (d) BECAD"
+    },
+    {
+      "block_id": "20260317_6153f658-b2a4-4999-8bb7-be917337210d_3_block_007",
+      "coordinates": {
+        "x1": 231.0,
+        "y1": 1575.0,
+        "x2": 1697.0,
+        "y2": 1877.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9164257049560547,
+      "reading_order": 8,
+      "text": "2. Arrange the following reactions in the order of formation of $\\mathrm{NO}_2$, $\\mathrm{NO}$, $\\mathrm{N}_2\\mathrm{O}$,\nand $\\mathrm{H}_2$.\n(A) $\\mathrm{Zn} + \\mathrm{HNO}_3$ (dil.) (B) $\\mathrm{Cu} + \\mathrm{HNO}_3$ (dil.)\n(C) $\\mathrm{Cu} + \\mathrm{HNO}_3$ (conc.) (D) $\\mathrm{Mg} + \\mathrm{HNO}_3$ (dil.)\n(a) CBAD (b) CBDA (c) BCAD (d) BCDA"
+    },
+    {
+      "block_id": "20260317_6153f658-b2a4-4999-8bb7-be917337210d_3_block_008",
+      "coordinates": {
+        "x1": 230.0,
+        "y1": 1935.0,
+        "x2": 1541.0,
+        "y2": 2308.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8528386354446411,
+      "reading_order": 9,
+      "text": "3. Assertion (A): Bleaching action of $\\mathrm{SO}_2$ is temporary.\nReason (R): In bleaching action, $\\mathrm{SO}_2$ acts as a reducing agent.\n(a) Both A and R are true and R is the correct explanation of A.\n(b) Both A and R are true, but R is not the correct explanation of A.\n(c) A is true and R is false.\n(d) A is false and R is true."
+    },
+    {
+      "block_id": "20260317_6153f658-b2a4-4999-8bb7-be917337210d_3_block_009",
+      "coordinates": {
+        "x1": 229.0,
+        "y1": 2369.0,
+        "x2": 1431.0,
+        "y2": 2487.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.45411181449890137,
+      "reading_order": 10,
+      "text": "4. Assertion (A): Nitric acid is used in the purification of gold.\nReason (R): $\\mathrm{HNO}_3$ is strong reducing agent."
+    },
+    {
+      "block_id": "20260317_6153f658-b2a4-4999-8bb7-be917337210d_3_block_010",
+      "coordinates": {
+        "x1": 289.0,
+        "y1": 2496.0,
+        "x2": 1465.0,
+        "y2": 2548.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6230031251907349,
+      "reading_order": 11,
+      "text": "(a) Both A and R are true and R is the correct explanation of A."
+    },
+    {
+      "block_id": "20260317_6153f658-b2a4-4999-8bb7-be917337210d_3_block_011",
+      "coordinates": {
+        "x1": 289.0,
+        "y1": 2559.0,
+        "x2": 1536.0,
+        "y2": 2610.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5970275402069092,
+      "reading_order": 12,
+      "text": "(b) Both A and R are true, but R is not the correct explanation of A."
+    },
+    {
+      "block_id": "20260317_6153f658-b2a4-4999-8bb7-be917337210d_3_block_012",
+      "coordinates": {
+        "x1": 290.0,
+        "y1": 2623.0,
+        "x2": 804.0,
+        "y2": 2674.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5084707140922546,
+      "reading_order": 13,
+      "text": "(c) A is true and R is false."
+    },
+    {
+      "block_id": "20260317_6153f658-b2a4-4999-8bb7-be917337210d_3_block_013",
+      "coordinates": {
+        "x1": 290.0,
+        "y1": 2685.0,
+        "x2": 802.0,
+        "y2": 2737.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5521966218948364,
+      "reading_order": 14,
+      "text": "(d) A is false and R is true."
+    },
+    {
+      "block_id": "20260317_6153f658-b2a4-4999-8bb7-be917337210d_3_block_014",
+      "coordinates": {
+        "x1": 1792.0,
+        "y1": 1011.0,
+        "x2": 2171.0,
+        "y2": 1063.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5994858145713806,
+      "reading_order": 15,
+      "text": "Space for rough work"
+    }
+  ]
+}

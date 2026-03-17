@@ -1,0 +1,190 @@
+{
+  "page_num": 8,
+  "image_width": 2398,
+  "image_height": 3003,
+  "created_at": "2026-03-17T19:10:02.102863+00:00",
+  "blocks": [
+    {
+      "block_id": "20260317_d05caa04-bd91-4466-a2be-2396f2383528_8_block_000",
+      "coordinates": {
+        "x1": 196.0,
+        "y1": 184.0,
+        "x2": 912.0,
+        "y2": 240.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.7370956540107727,
+      "reading_order": 1,
+      "text": "6.8 Chapter 6 Carbon and Its Compounds"
+    },
+    {
+      "block_id": "20260317_d05caa04-bd91-4466-a2be-2396f2383528_8_block_001",
+      "coordinates": {
+        "x1": 228.0,
+        "y1": 292.0,
+        "x2": 1691.0,
+        "y2": 660.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8504970669746399,
+      "reading_order": 2,
+      "text": "9. Arrange the following compounds in the order of their formation during\nchlorination of methane.\n(A) Chloroform (B) Dichloromethane\n(C) Methyl chloride (D) Carbon tetrachloride\n(a) BADC (b) CDAB\n(c) DBCA (d) CBAD"
+    },
+    {
+      "block_id": "20260317_d05caa04-bd91-4466-a2be-2396f2383528_8_block_002",
+      "coordinates": {
+        "x1": 212.0,
+        "y1": 684.0,
+        "x2": 1161.0,
+        "y2": 877.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.846074104309082,
+      "reading_order": 3,
+      "text": "10. Hydrolysis of calcium carbide liberates ____.\n(a) CO (b) $\\mathrm{C}_2\\mathrm{H}_2$\n(c) $\\mathrm{CO}_2$ (d) $\\mathrm{CH}_4$"
+    },
+    {
+      "block_id": "20260317_d05caa04-bd91-4466-a2be-2396f2383528_8_block_003",
+      "coordinates": {
+        "x1": 212.0,
+        "y1": 896.0,
+        "x2": 1576.0,
+        "y2": 1151.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8902091383934021,
+      "reading_order": 4,
+      "text": "11. The reaction given below is associated with ______.\n$\\mathrm{Al}_2(\\mathrm{SO}_4)_3 + 6\\mathrm{NaHCO}_3 \\rightarrow 3\\mathrm{Na}_2\\mathrm{SO}_4 + 2\\mathrm{Al}(\\mathrm{OH})_3 + 6\\mathrm{CO}_2$\n(a) dry powder fire extinguisher (b) soda-acid fire extinguisher\n(c) foam-type extinguisher (d) liquid $\\mathrm{CO}_2$ fire extinguisher"
+    },
+    {
+      "block_id": "20260317_d05caa04-bd91-4466-a2be-2396f2383528_8_block_004",
+      "coordinates": {
+        "x1": 211.0,
+        "y1": 1168.0,
+        "x2": 1232.0,
+        "y2": 1363.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.866719126701355,
+      "reading_order": 5,
+      "text": "12. Which of the following makes lime water milky?\n(a) $\\mathrm{Ca}(\\mathrm{HCO}_3)_2$ (b) $\\mathrm{CaCO}_3$\n(c) $\\mathrm{CaC}_2$ (d) $\\mathrm{NaHCO}_3$"
+    },
+    {
+      "block_id": "20260317_d05caa04-bd91-4466-a2be-2396f2383528_8_block_005",
+      "coordinates": {
+        "x1": 210.0,
+        "y1": 1383.0,
+        "x2": 1700.0,
+        "y2": 1628.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9177572727203369,
+      "reading_order": 6,
+      "text": "13. Which of the following types of coal contains the highest percentage of\ncarbon?\n(a) Anthracite (b) Bituminous\n(c) Lignite (d) Peat"
+    },
+    {
+      "block_id": "20260317_d05caa04-bd91-4466-a2be-2396f2383528_8_block_006",
+      "coordinates": {
+        "x1": 209.0,
+        "y1": 1649.0,
+        "x2": 1678.0,
+        "y2": 1841.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8578280806541443,
+      "reading_order": 7,
+      "text": "14. In which of the following ways is atmospheric $\\mathrm{CO}_2$ trapped?\n(a) Respiration (b) Photosynthesis\n(c) Consumption of fossil fuel (d) Decomposition of organic matter"
+    },
+    {
+      "block_id": "20260317_d05caa04-bd91-4466-a2be-2396f2383528_8_block_007",
+      "coordinates": {
+        "x1": 213.0,
+        "y1": 1861.0,
+        "x2": 1404.0,
+        "y2": 1914.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.4460756480693817,
+      "reading_order": 8,
+      "text": "15. Match the statements of Column A with those of Column B."
+    },
+    {
+      "block_id": "20260317_d05caa04-bd91-4466-a2be-2396f2383528_8_block_008",
+      "coordinates": {
+        "x1": 287.0,
+        "y1": 1937.0,
+        "x2": 1633.0,
+        "y2": 2474.0
+      },
+      "layout_tag": "table",
+      "confidence": 0.5512077212333679,
+      "reading_order": 9,
+      "text": "<table>\n<thead>\n<tr>\n<th>Column A</th>\n<th>Column B</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>(i) Lamp black</td>\n<td>(A) Destructive distillation of coal</td>\n</tr>\n<tr>\n<td>(ii) Coke</td>\n<td>(B) Heating wood saving in absence of air</td>\n</tr>\n<tr>\n<td>(iii) Gas carbon</td>\n<td>(C) Burning mustard oil in inadequate<br/>supply of air</td>\n</tr>\n<tr>\n<td>(iv) Wood charcoal</td>\n<td>(D) Destructive distillation of animal bones</td>\n</tr>\n<tr>\n<td>(v) Bone charcoal</td>\n<td>(E) Thermal vaporization of coal followed<br/>by condensation</td>\n</tr>\n</tbody>\n</table>"
+    },
+    {
+      "block_id": "20260317_d05caa04-bd91-4466-a2be-2396f2383528_8_block_009",
+      "coordinates": {
+        "x1": 291.0,
+        "y1": 2478.0,
+        "x2": 1473.0,
+        "y2": 2536.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.25546666979789734,
+      "reading_order": 10,
+      "text": "(a) (i) → (C); (ii) → (A); (iii) → (E); (iv) → (B); (v) → (D)"
+    },
+    {
+      "block_id": "20260317_d05caa04-bd91-4466-a2be-2396f2383528_8_block_010",
+      "coordinates": {
+        "x1": 365.0,
+        "y1": 2542.0,
+        "x2": 1472.0,
+        "y2": 2598.0
+      },
+      "layout_tag": "formula",
+      "confidence": 0.2921169400215149,
+      "reading_order": 11,
+      "text": "$$ (\\mathrm{i}) \\to (\\mathrm{A}); \\quad (\\mathrm{ii}) \\to (\\mathrm{C}); \\quad (\\mathrm{iii}) \\to (\\mathrm{D}); \\quad (\\mathrm{iv}) \\to (\\mathrm{E}); \\quad (\\mathrm{v}) \\to (\\mathrm{B}) $$"
+    },
+    {
+      "block_id": "20260317_d05caa04-bd91-4466-a2be-2396f2383528_8_block_011",
+      "coordinates": {
+        "x1": 291.0,
+        "y1": 2602.0,
+        "x2": 1471.0,
+        "y2": 2663.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.3074943721294403,
+      "reading_order": 12,
+      "text": "(c) (i) → (C); (ii) → (A); (iii) → (E); (iv) → (D); (v) → (B)"
+    },
+    {
+      "block_id": "20260317_d05caa04-bd91-4466-a2be-2396f2383528_8_block_012",
+      "coordinates": {
+        "x1": 1789.0,
+        "y1": 310.0,
+        "x2": 2171.0,
+        "y2": 364.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.433610200881958,
+      "reading_order": 13,
+      "text": "Space for rough work"
+    },
+    {
+      "block_id": "20260317_d05caa04-bd91-4466-a2be-2396f2383528_8_block_013",
+      "coordinates": {
+        "x1": 363.0,
+        "y1": 2667.0,
+        "x2": 1468.0,
+        "y2": 2726.0
+      },
+      "layout_tag": "formula",
+      "confidence": 0.30057960748672485,
+      "reading_order": 14,
+      "text": "$$ (\\mathrm{i}) \\to (\\mathrm{A}); \\quad (\\mathrm{ii}) \\to (\\mathrm{D}); \\quad (\\mathrm{iii}) \\to (\\mathrm{C}); \\quad (\\mathrm{iv}) \\to (\\mathrm{E}); \\quad (\\mathrm{v}) \\to (\\mathrm{B}) $$"
+    }
+  ]
+}

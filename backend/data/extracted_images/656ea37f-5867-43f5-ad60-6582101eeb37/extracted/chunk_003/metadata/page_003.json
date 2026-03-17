@@ -1,0 +1,164 @@
+{
+  "page_num": 3,
+  "image_width": 2398,
+  "image_height": 3003,
+  "created_at": "2026-03-17T19:09:21.948708+00:00",
+  "blocks": [
+    {
+      "block_id": "20260317_4c23c5f9-000a-496f-93a5-dce491a9753e_3_block_000",
+      "coordinates": {
+        "x1": 1750.0,
+        "y1": 186.0,
+        "x2": 2051.0,
+        "y2": 236.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.8648978471755981,
+      "reading_order": 1,
+      "text": "Assessment Test III"
+    },
+    {
+      "block_id": "20260317_4c23c5f9-000a-496f-93a5-dce491a9753e_3_block_001",
+      "coordinates": {
+        "x1": 180.0,
+        "y1": 295.0,
+        "x2": 930.0,
+        "y2": 374.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.5124751925468445,
+      "reading_order": 2,
+      "text": "Assessment Test III"
+    },
+    {
+      "block_id": "20260317_4c23c5f9-000a-496f-93a5-dce491a9753e_3_block_002",
+      "coordinates": {
+        "x1": 2112.0,
+        "y1": 184.0,
+        "x2": 2195.0,
+        "y2": 234.0
+      },
+      "layout_tag": "page-number",
+      "confidence": 0.7782308459281921,
+      "reading_order": 3,
+      "text": "1.9"
+    },
+    {
+      "block_id": "20260317_4c23c5f9-000a-496f-93a5-dce491a9753e_3_block_003",
+      "coordinates": {
+        "x1": 1448.0,
+        "y1": 324.0,
+        "x2": 1692.0,
+        "y2": 373.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5748061537742615,
+      "reading_order": 4,
+      "text": "Time: 30 min."
+    },
+    {
+      "block_id": "20260317_4c23c5f9-000a-496f-93a5-dce491a9753e_3_block_004",
+      "coordinates": {
+        "x1": 177.0,
+        "y1": 450.0,
+        "x2": 1691.0,
+        "y2": 505.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.7335525751113892,
+      "reading_order": 5,
+      "text": "Directions for questions from 1 to 15: Select the correct answer from the given options."
+    },
+    {
+      "block_id": "20260317_4c23c5f9-000a-496f-93a5-dce491a9753e_3_block_005",
+      "coordinates": {
+        "x1": 227.0,
+        "y1": 531.0,
+        "x2": 1691.0,
+        "y2": 956.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7585886716842651,
+      "reading_order": 6,
+      "text": "1. Arrange the following elements in the increasing order of the number of\nneutrons.\n(A) $^{58}\\mathrm{Ce}^{140}$ (B) $^{92}\\mathrm{U}^{238}$\n(C) $^{79}\\mathrm{Au}^{197}$ (D) $^{90}\\mathrm{Th}^{232}$\n(E) $^{78}\\mathrm{Pt}^{195}$\n(a) BECDA (b) BDCEA\n(c) AECDB (d) ADCEB"
+    },
+    {
+      "block_id": "20260317_4c23c5f9-000a-496f-93a5-dce491a9753e_3_block_006",
+      "coordinates": {
+        "x1": 232.0,
+        "y1": 1012.0,
+        "x2": 1697.0,
+        "y2": 1252.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9187494516372681,
+      "reading_order": 7,
+      "text": "2. Ions named as 'A', 'B', 'C', 'D' are given below. All of them contain 10 elec-\ntrons each. Arrange the ions in the increasing order of the atomic numbers.\n(A) $\\mathrm{A}^+$ (B) $\\mathrm{B}^{+2}$ (C) $\\mathrm{C}^-$ (D) $\\mathrm{D}^{-2}$\n(a) DCAB (b) DACB (c) BCAD (d) BACD"
+    },
+    {
+      "block_id": "20260317_4c23c5f9-000a-496f-93a5-dce491a9753e_3_block_007",
+      "coordinates": {
+        "x1": 234.0,
+        "y1": 1310.0,
+        "x2": 1699.0,
+        "y2": 1736.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8865569233894348,
+      "reading_order": 8,
+      "text": "3. Assertion (A): Eight electrons are present in the antepenultimate shell of\nAl.\nReason (R): The electronic arrangement of Al is 2, 8, 3\n(a) Both A and R are true and R is the correct explanation of A.\n(b) Both A and R are true, but R is not the correct explanation of A.\n(c) A is true and R is false.\n(d) A is false and R is true."
+    },
+    {
+      "block_id": "20260317_4c23c5f9-000a-496f-93a5-dce491a9753e_3_block_008",
+      "coordinates": {
+        "x1": 231.0,
+        "y1": 1794.0,
+        "x2": 1696.0,
+        "y2": 2220.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9042247533798218,
+      "reading_order": 9,
+      "text": "4. Assertion(A): Atoms of the same element possess the same number of total\nfundamental particles.\nReason(R): Atomic number is the characteristic of an element.\n(a) Both A and R are true and R is the correct explanation of A.\n(b) Both A and R are true, but R is not the correct explanation of A.\n(c) A is true and R is false.\n(d) A is false and R is true."
+    },
+    {
+      "block_id": "20260317_4c23c5f9-000a-496f-93a5-dce491a9753e_3_block_009",
+      "coordinates": {
+        "x1": 233.0,
+        "y1": 2274.0,
+        "x2": 1694.0,
+        "y2": 2452.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9248097538948059,
+      "reading_order": 10,
+      "text": "5. Mass of total positive charge present in an atom is 23,881 times to that of the\nmass of an electron. Identify the atomic number.\n(a) 6 (b) 12 (c) 13 (d) 14"
+    },
+    {
+      "block_id": "20260317_4c23c5f9-000a-496f-93a5-dce491a9753e_3_block_010",
+      "coordinates": {
+        "x1": 234.0,
+        "y1": 2510.0,
+        "x2": 1697.0,
+        "y2": 2686.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9328621625900269,
+      "reading_order": 11,
+      "text": "6. If the mass of a proton is $m$, what should be the approximate mass of an\n$\\alpha$-particle?\n(a) $m$ (b) $2m$ (c) $4m$ (d) $6m$"
+    },
+    {
+      "block_id": "20260317_4c23c5f9-000a-496f-93a5-dce491a9753e_3_block_011",
+      "coordinates": {
+        "x1": 1789.0,
+        "y1": 309.0,
+        "x2": 2172.0,
+        "y2": 365.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7058497667312622,
+      "reading_order": 12,
+      "text": "Space for rough work"
+    }
+  ]
+}

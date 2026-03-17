@@ -1,0 +1,86 @@
+{
+  "page_num": 3,
+  "image_width": 2398,
+  "image_height": 3003,
+  "created_at": "2026-03-17T19:09:14.629898+00:00",
+  "blocks": [
+    {
+      "block_id": "20260317_f5445719-297d-4e67-82ef-80a3da6e332e_3_block_000",
+      "coordinates": {
+        "x1": 1641.0,
+        "y1": 184.0,
+        "x2": 2051.0,
+        "y2": 238.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.8416833877563477,
+      "reading_order": 1,
+      "text": "Course-book Chapter Flow"
+    },
+    {
+      "block_id": "20260317_f5445719-297d-4e67-82ef-80a3da6e332e_3_block_001",
+      "coordinates": {
+        "x1": 2122.0,
+        "y1": 186.0,
+        "x2": 2182.0,
+        "y2": 235.0
+      },
+      "layout_tag": "page-number",
+      "confidence": 0.6572164297103882,
+      "reading_order": 2,
+      "text": "xi"
+    },
+    {
+      "block_id": "20260317_f5445719-297d-4e67-82ef-80a3da6e332e_3_block_002",
+      "coordinates": {
+        "x1": 180.0,
+        "y1": 320.0,
+        "x2": 412.0,
+        "y2": 396.0
+      },
+      "layout_tag": "image-caption",
+      "confidence": 0.6092227101325989,
+      "reading_order": 3,
+      "text": "Class 8"
+    },
+    {
+      "block_id": "20260317_f5445719-297d-4e67-82ef-80a3da6e332e_3_block_003",
+      "coordinates": {
+        "x1": 171.0,
+        "y1": 486.0,
+        "x2": 2220.0,
+        "y2": 1277.0
+      },
+      "layout_tag": "image",
+      "confidence": 0.9434316158294678,
+      "reading_order": 4,
+      "text": "The image displays a horizontal timeline or sequence diagram illustrating a progression of topics in chemistry, arranged chronologically or logically from left to right. The timeline is marked with numbered milestones (1 through 7) and specific topic labels. \n\nThe sequence begins at milestone 1 with \"Atomic Structure.\" It progresses to milestone 2, \"Classification of Matter.\" A significant gap exists between milestones 2 and 3, where the label \"Carbon and its Compounds\" is placed, suggesting a sub-topic or a specific focus area within that interval. The sequence resumes at milestone 3 with \"Language of Chemistry and Transformation of Substances.\" \n\nA long gap follows between milestones 3 and 5, where the label \"Water, Solution, Solubility and Hydrogen\" appears. The sequence concludes at milestone 7 with \"Some Important Elements and their Compounds.\" The visual style uses a blue horizontal bar to represent the timeline, with blue dots marking the specific points and blue text labeling the topics."
+    },
+    {
+      "block_id": "20260317_f5445719-297d-4e67-82ef-80a3da6e332e_3_block_004",
+      "coordinates": {
+        "x1": 185.0,
+        "y1": 1536.0,
+        "x2": 461.0,
+        "y2": 1609.0
+      },
+      "layout_tag": "image-caption",
+      "confidence": 0.7716898322105408,
+      "reading_order": 5,
+      "text": "Class 10"
+    },
+    {
+      "block_id": "20260317_f5445719-297d-4e67-82ef-80a3da6e332e_3_block_005",
+      "coordinates": {
+        "x1": 164.0,
+        "y1": 1612.0,
+        "x2": 2222.0,
+        "y2": 2350.0
+      },
+      "layout_tag": "image",
+      "confidence": 0.9111213684082031,
+      "reading_order": 6,
+      "text": "The image displays a horizontal timeline or course outline diagram, likely representing a curriculum structure. The diagram consists of two parallel horizontal lines, one at the top and one at the bottom, connected by vertical lines at specific points. The top line represents a sequence of six topics, numbered 1 through 6 from left to right. The bottom line represents a sequence of six topics, numbered 11 through 7 from left to right. \n\nThe top-line topics are: \n1. Mole Concept, Stoichiometry and Behaviour of Gases\n2. Atomic Structure\n3. Periodic Table\n4. Chemical Bonding\n5. Acids, Bases and Salts\n6. Chemical Kinetics and Equilibrium\n\nThe bottom-line topics are:\n11. Organic Chemistry–II\n10. Organic Chemistry–I\n9. Industrial Chemistry\n8. Metallurgy\n7. Electrochemistry\n\nThe diagram illustrates a progression of topics, with the top line generally covering foundational or introductory concepts (e.g., Atomic Structure, Periodic Table) and the bottom line covering more specialized or advanced topics (e.g., Organic Chemistry–II, Electrochemistry). The numbering suggests a specific sequence or order in which these topics are taught."
+    }
+  ]
+}

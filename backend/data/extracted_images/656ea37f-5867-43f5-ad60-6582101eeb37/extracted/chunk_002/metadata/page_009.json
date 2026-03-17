@@ -1,0 +1,320 @@
+{
+  "page_num": 9,
+  "image_width": 2398,
+  "image_height": 3003,
+  "created_at": "2026-03-17T19:09:14.744602+00:00",
+  "blocks": [
+    {
+      "block_id": "20260317_f5445719-297d-4e67-82ef-80a3da6e332e_9_block_000",
+      "coordinates": {
+        "x1": 1760.0,
+        "y1": 188.0,
+        "x2": 2051.0,
+        "y2": 236.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.839504599571228,
+      "reading_order": 1,
+      "text": "Assessment Test II"
+    },
+    {
+      "block_id": "20260317_f5445719-297d-4e67-82ef-80a3da6e332e_9_block_001",
+      "coordinates": {
+        "x1": 181.0,
+        "y1": 296.0,
+        "x2": 897.0,
+        "y2": 374.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.599528968334198,
+      "reading_order": 2,
+      "text": "Assessment Test II"
+    },
+    {
+      "block_id": "20260317_f5445719-297d-4e67-82ef-80a3da6e332e_9_block_002",
+      "coordinates": {
+        "x1": 1449.0,
+        "y1": 325.0,
+        "x2": 1691.0,
+        "y2": 372.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.817253589630127,
+      "reading_order": 3,
+      "text": "Time: 30 min."
+    },
+    {
+      "block_id": "20260317_f5445719-297d-4e67-82ef-80a3da6e332e_9_block_003",
+      "coordinates": {
+        "x1": 2113.0,
+        "y1": 185.0,
+        "x2": 2192.0,
+        "y2": 235.0
+      },
+      "layout_tag": "page-number",
+      "confidence": 0.6882852911949158,
+      "reading_order": 4,
+      "text": "1.5"
+    },
+    {
+      "block_id": "20260317_f5445719-297d-4e67-82ef-80a3da6e332e_9_block_004",
+      "coordinates": {
+        "x1": 178.0,
+        "y1": 450.0,
+        "x2": 1689.0,
+        "y2": 505.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.5250394344329834,
+      "reading_order": 5,
+      "text": "Directions for questions from 1 to 15: Select the correct answer from the given options."
+    },
+    {
+      "block_id": "20260317_f5445719-297d-4e67-82ef-80a3da6e332e_9_block_005",
+      "coordinates": {
+        "x1": 232.0,
+        "y1": 543.0,
+        "x2": 1695.0,
+        "y2": 647.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8937464952468872,
+      "reading_order": 6,
+      "text": "1. Identify the factor which provided the experimental basis for the postulates of Dalton’s atomic theory."
+    },
+    {
+      "block_id": "20260317_f5445719-297d-4e67-82ef-80a3da6e332e_9_block_006",
+      "coordinates": {
+        "x1": 291.0,
+        "y1": 660.0,
+        "x2": 760.0,
+        "y2": 713.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8111476302146912,
+      "reading_order": 7,
+      "text": "(a) Discovery of isobars"
+    },
+    {
+      "block_id": "20260317_f5445719-297d-4e67-82ef-80a3da6e332e_9_block_007",
+      "coordinates": {
+        "x1": 290.0,
+        "y1": 720.0,
+        "x2": 985.0,
+        "y2": 776.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8356612324714661,
+      "reading_order": 8,
+      "text": "(b) Discovery of subatomic particles"
+    },
+    {
+      "block_id": "20260317_f5445719-297d-4e67-82ef-80a3da6e332e_9_block_008",
+      "coordinates": {
+        "x1": 290.0,
+        "y1": 783.0,
+        "x2": 893.0,
+        "y2": 838.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8462532162666321,
+      "reading_order": 9,
+      "text": "(c) Law of definite proportions"
+    },
+    {
+      "block_id": "20260317_f5445719-297d-4e67-82ef-80a3da6e332e_9_block_009",
+      "coordinates": {
+        "x1": 290.0,
+        "y1": 847.0,
+        "x2": 1441.0,
+        "y2": 904.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8422206044197083,
+      "reading_order": 10,
+      "text": "(d) Discovery of atomic number as the fundamental property"
+    },
+    {
+      "block_id": "20260317_f5445719-297d-4e67-82ef-80a3da6e332e_9_block_010",
+      "coordinates": {
+        "x1": 231.0,
+        "y1": 962.0,
+        "x2": 1263.0,
+        "y2": 1018.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7436126470565796,
+      "reading_order": 11,
+      "text": "2. The figure given below represents an atomic model:"
+    },
+    {
+      "block_id": "20260317_f5445719-297d-4e67-82ef-80a3da6e332e_9_block_011",
+      "coordinates": {
+        "x1": 796.0,
+        "y1": 1044.0,
+        "x2": 1078.0,
+        "y2": 1324.0
+      },
+      "layout_tag": "image",
+      "confidence": 0.9437769055366516,
+      "reading_order": 12,
+      "text": "The image provided is not a data chart, graph, or plot. It is a schematic diagram, specifically an orbital diagram, representing the electron configuration of a chemical element. The diagram consists of three concentric circles. The innermost circle contains a single solid black dot, representing the nucleus. The middle circle contains three smaller, hollow circles (orbitals) arranged in a triangular formation. The outermost circle contains six hollow circles (orbitals) arranged in a hexagonal formation. This structure is characteristic of the electron configuration of an element with an atomic number of 18, such as Argon. There are no axes, numerical values, or legends present."
+    },
+    {
+      "block_id": "20260317_f5445719-297d-4e67-82ef-80a3da6e332e_9_block_012",
+      "coordinates": {
+        "x1": 291.0,
+        "y1": 1380.0,
+        "x2": 1693.0,
+        "y2": 1438.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8093780875205994,
+      "reading_order": 13,
+      "text": "Which among the following was not supported by the given atomic model?"
+    },
+    {
+      "block_id": "20260317_f5445719-297d-4e67-82ef-80a3da6e332e_9_block_013",
+      "coordinates": {
+        "x1": 289.0,
+        "y1": 1444.0,
+        "x2": 1175.0,
+        "y2": 1498.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8163553476333618,
+      "reading_order": 14,
+      "text": "(a) Revolution of electrons in stationary orbits."
+    },
+    {
+      "block_id": "20260317_f5445719-297d-4e67-82ef-80a3da6e332e_9_block_014",
+      "coordinates": {
+        "x1": 288.0,
+        "y1": 1507.0,
+        "x2": 1646.0,
+        "y2": 1562.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8269669413566589,
+      "reading_order": 15,
+      "text": "(b) Relatively small size of nucleus in comparison to the size of an atom."
+    },
+    {
+      "block_id": "20260317_f5445719-297d-4e67-82ef-80a3da6e332e_9_block_015",
+      "coordinates": {
+        "x1": 288.0,
+        "y1": 1570.0,
+        "x2": 1538.0,
+        "y2": 1623.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.835491955280304,
+      "reading_order": 16,
+      "text": "(c) Increase in energy of the orbits with distance from the nucleus."
+    },
+    {
+      "block_id": "20260317_f5445719-297d-4e67-82ef-80a3da6e332e_9_block_016",
+      "coordinates": {
+        "x1": 290.0,
+        "y1": 1632.0,
+        "x2": 1326.0,
+        "y2": 1688.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8293873071670532,
+      "reading_order": 17,
+      "text": "(d) Uniform distribution of positive charge in an atom."
+    },
+    {
+      "block_id": "20260317_f5445719-297d-4e67-82ef-80a3da6e332e_9_block_017",
+      "coordinates": {
+        "x1": 652.0,
+        "y1": 1890.0,
+        "x2": 1224.0,
+        "y2": 2473.0
+      },
+      "layout_tag": "image",
+      "confidence": 0.9576197266578674,
+      "reading_order": 18,
+      "text": "The image is a schematic diagram of an atom, illustrating the Bohr model of atomic structure. It features a central nucleus containing a positive charge (+) and a proton labeled 'P'. Surrounding the nucleus are four concentric circular orbits, each labeled with a principal quantum number 'n'. The orbits are arranged in ascending order of energy from the center outward: the innermost orbit is labeled 'n = 1', followed by 'n = 2', 'n = 3', and 'n = 4'. The outermost visible orbit is labeled 'n = 5', with a sixth orbit labeled 'n = 6' located at the top. Along the right side of the diagram, the chemical symbols for the elements corresponding to the electron shells are listed: 'N' (Nitrogen) is positioned on the n=2 orbit, 'O' (Oxygen) on the n=3 orbit, 'MLK' (representing the noble gas Helium) on the n=1 orbit, and 'N' (Nitrogen) again on the n=4 orbit. The diagram is monochromatic, using black lines on a white background."
+    },
+    {
+      "block_id": "20260317_f5445719-297d-4e67-82ef-80a3da6e332e_9_block_018",
+      "coordinates": {
+        "x1": 233.0,
+        "y1": 1748.0,
+        "x2": 1693.0,
+        "y2": 1855.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8378835916519165,
+      "reading_order": 19,
+      "text": "3. Observe the following figure and identify the one which is in contradiction to the established facts."
+    },
+    {
+      "block_id": "20260317_f5445719-297d-4e67-82ef-80a3da6e332e_9_block_019",
+      "coordinates": {
+        "x1": 289.0,
+        "y1": 2541.0,
+        "x2": 1176.0,
+        "y2": 2596.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6606427431106567,
+      "reading_order": 20,
+      "text": "(a) Distance between the orbits is not uniform."
+    },
+    {
+      "block_id": "20260317_f5445719-297d-4e67-82ef-80a3da6e332e_9_block_020",
+      "coordinates": {
+        "x1": 288.0,
+        "y1": 2603.0,
+        "x2": 1521.0,
+        "y2": 2659.0
+      },
+      "layout_tag": "footnote",
+      "confidence": 0.6247690320014954,
+      "reading_order": 21,
+      "text": "(b) Size of the nucleus is not in proportion to the size of the atom."
+    },
+    {
+      "block_id": "20260317_f5445719-297d-4e67-82ef-80a3da6e332e_9_block_021",
+      "coordinates": {
+        "x1": 290.0,
+        "y1": 2667.0,
+        "x2": 1116.0,
+        "y2": 2723.0
+      },
+      "layout_tag": "footnote",
+      "confidence": 0.6023403406143188,
+      "reading_order": 22,
+      "text": "(c) Naming of orbits is in the reverse order."
+    },
+    {
+      "block_id": "20260317_f5445719-297d-4e67-82ef-80a3da6e332e_9_block_022",
+      "coordinates": {
+        "x1": 1790.0,
+        "y1": 312.0,
+        "x2": 2170.0,
+        "y2": 365.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5006211996078491,
+      "reading_order": 23,
+      "text": "Space for rough work"
+    },
+    {
+      "block_id": "20260317_f5445719-297d-4e67-82ef-80a3da6e332e_9_block_023",
+      "coordinates": {
+        "x1": 293.0,
+        "y1": 2731.0,
+        "x2": 824.0,
+        "y2": 2786.0
+      },
+      "layout_tag": "footnote",
+      "confidence": 0.5730607509613037,
+      "reading_order": 24,
+      "text": "(d) Nucleus is at the centre."
+    }
+  ]
+}

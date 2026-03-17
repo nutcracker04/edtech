@@ -1,0 +1,177 @@
+{
+  "page_num": 1,
+  "image_width": 2398,
+  "image_height": 3003,
+  "created_at": "2026-03-17T19:10:15.747460+00:00",
+  "blocks": [
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_1_block_000",
+      "coordinates": {
+        "x1": 181.0,
+        "y1": 295.0,
+        "x2": 930.0,
+        "y2": 374.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.6973543763160706,
+      "reading_order": 1,
+      "text": "Assessment Test III"
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_1_block_001",
+      "coordinates": {
+        "x1": 1749.0,
+        "y1": 186.0,
+        "x2": 2051.0,
+        "y2": 236.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.8580402135848999,
+      "reading_order": 2,
+      "text": "Assessment Test III"
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_1_block_002",
+      "coordinates": {
+        "x1": 1448.0,
+        "y1": 324.0,
+        "x2": 1692.0,
+        "y2": 373.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.8075423836708069,
+      "reading_order": 3,
+      "text": "Time: 30 min."
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_1_block_003",
+      "coordinates": {
+        "x1": 2105.0,
+        "y1": 184.0,
+        "x2": 2194.0,
+        "y2": 234.0
+      },
+      "layout_tag": "page-number",
+      "confidence": 0.7663036584854126,
+      "reading_order": 4,
+      "text": "7.9"
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_1_block_004",
+      "coordinates": {
+        "x1": 177.0,
+        "y1": 449.0,
+        "x2": 1691.0,
+        "y2": 505.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.6732855439186096,
+      "reading_order": 5,
+      "text": "Directions for questions from 1 to 15: Select the correct answer from the given options."
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_1_block_005",
+      "coordinates": {
+        "x1": 232.0,
+        "y1": 556.0,
+        "x2": 1699.0,
+        "y2": 927.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7011761665344238,
+      "reading_order": 6,
+      "text": "1. Which of the following methods can be adopted for the removal of dust\nparticles from air?\n(a) By using an electrostatic precipitator.\n(b) By passing air through a strong acidic solution.\n(c) By passing air through a strong alkaline solution.\n(d) By passing air through $\\mathrm{P}_2\\mathrm{O}_5$."
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_1_block_006",
+      "coordinates": {
+        "x1": 230.0,
+        "y1": 945.0,
+        "x2": 1697.0,
+        "y2": 1261.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9403563737869263,
+      "reading_order": 7,
+      "text": "2. By which of the following processes can nitrogen be isolated from liquid air?\n(a) By fractional crystallization\n(b) By evaporation\n(c) By dissolving liquid air in water\n(d) By fractional distillation"
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_1_block_007",
+      "coordinates": {
+        "x1": 231.0,
+        "y1": 1282.0,
+        "x2": 1657.0,
+        "y2": 1415.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9065729379653931,
+      "reading_order": 8,
+      "text": "3. Which of the following gases is evolved when $(\\mathrm{NH}_4)_2\\mathrm{Cr}_2\\mathrm{O}_7$ is heated?\n(a) $\\mathrm{N}_2$ (b) $\\mathrm{O}_2$ (c) NO (d) $\\mathrm{NO}_2$"
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_1_block_008",
+      "coordinates": {
+        "x1": 231.0,
+        "y1": 1434.0,
+        "x2": 1575.0,
+        "y2": 1813.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9145669341087341,
+      "reading_order": 9,
+      "text": "4. Assertion (A): Red phosphorus is less reactive than white phosphoru\nReason (R): Red phosphorus exists in the form of puckered rings.\n(a) Both A and R are true and R is the correct explanation of A.\n(b) Both A and R are true, but R is not the correct explanation of A\n(c) A is true and R is false.\n(d) A is false and R is true."
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_1_block_009",
+      "coordinates": {
+        "x1": 231.0,
+        "y1": 1838.0,
+        "x2": 1694.0,
+        "y2": 2273.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8842542767524719,
+      "reading_order": 10,
+      "text": "5. Assertion(A): In the laboratory preparation of chlorine, $\\mathrm{MnO}_2$ is used.\nReason(R): $\\mathrm{MnO}_2$ is used as a catalyst in the laboratory preparation of\nchlorine.\n(a) Both A and R are true and R is the correct explanation of A.\n(b) Both A and R are true, but R is not the correct explanation of A.\n(c) A is true and R is false.\n(d) A is false and R is true."
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_1_block_010",
+      "coordinates": {
+        "x1": 231.0,
+        "y1": 2292.0,
+        "x2": 1696.0,
+        "y2": 2725.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9433821439743042,
+      "reading_order": 11,
+      "text": "6. Arrange the following forms of sulphur in the ascending order of tempera-\nture at which they exist.\n(A) $\\mu$ sulphur (B) Rhombic sulphur\n(C) Monoclinic sulphur (D) Lambda sulphur\n(E) Flower of sulphur\n(a) BCDAE (b) CDBAE\n(c) ACBDE (d) EDBAC"
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_1_block_011",
+      "coordinates": {
+        "x1": 232.0,
+        "y1": 2747.0,
+        "x2": 1697.0,
+        "y2": 2855.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8798995018005371,
+      "reading_order": 12,
+      "text": "7. Arrange the following processes involved in contact process in a proper\nsequence."
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_1_block_012",
+      "coordinates": {
+        "x1": 1789.0,
+        "y1": 310.0,
+        "x2": 2172.0,
+        "y2": 365.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6212211847305298,
+      "reading_order": 13,
+      "text": "Space for rough work"
+    }
+  ]
+}

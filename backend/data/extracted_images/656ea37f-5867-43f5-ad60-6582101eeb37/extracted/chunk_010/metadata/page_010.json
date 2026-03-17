@@ -1,0 +1,151 @@
+{
+  "page_num": 10,
+  "image_width": 2398,
+  "image_height": 3003,
+  "created_at": "2026-03-17T19:10:08.941549+00:00",
+  "blocks": [
+    {
+      "block_id": "20260317_6153f658-b2a4-4999-8bb7-be917337210d_10_block_000",
+      "coordinates": {
+        "x1": 197.0,
+        "y1": 185.0,
+        "x2": 1220.0,
+        "y2": 239.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.7782564759254456,
+      "reading_order": 1,
+      "text": "7.8 Chapter 7 Some Important Elements and their Compounds"
+    },
+    {
+      "block_id": "20260317_6153f658-b2a4-4999-8bb7-be917337210d_10_block_001",
+      "coordinates": {
+        "x1": 288.0,
+        "y1": 291.0,
+        "x2": 1468.0,
+        "y2": 343.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8331745266914368,
+      "reading_order": 2,
+      "text": "(a) Both A and R are true and R is the correct explanation of A."
+    },
+    {
+      "block_id": "20260317_6153f658-b2a4-4999-8bb7-be917337210d_10_block_002",
+      "coordinates": {
+        "x1": 288.0,
+        "y1": 354.0,
+        "x2": 1538.0,
+        "y2": 407.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8329017758369446,
+      "reading_order": 3,
+      "text": "(b) Both A and R are true, but R is not the correct explanation of A."
+    },
+    {
+      "block_id": "20260317_6153f658-b2a4-4999-8bb7-be917337210d_10_block_003",
+      "coordinates": {
+        "x1": 290.0,
+        "y1": 416.0,
+        "x2": 803.0,
+        "y2": 468.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8073092699050903,
+      "reading_order": 4,
+      "text": "(c) A is true and R is false."
+    },
+    {
+      "block_id": "20260317_6153f658-b2a4-4999-8bb7-be917337210d_10_block_004",
+      "coordinates": {
+        "x1": 291.0,
+        "y1": 479.0,
+        "x2": 800.0,
+        "y2": 532.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8185088038444519,
+      "reading_order": 5,
+      "text": "(d) A is false and R is true."
+    },
+    {
+      "block_id": "20260317_6153f658-b2a4-4999-8bb7-be917337210d_10_block_005",
+      "coordinates": {
+        "x1": 215.0,
+        "y1": 557.0,
+        "x2": 1694.0,
+        "y2": 720.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9065670371055603,
+      "reading_order": 6,
+      "text": "15. 'X' and 'Y' are two allotropic forms of phosphorus and Y is used preferably\nin match industry. Which of the following statements is true regarding the\ntwo samples X and Y?"
+    },
+    {
+      "block_id": "20260317_6153f658-b2a4-4999-8bb7-be917337210d_10_block_006",
+      "coordinates": {
+        "x1": 291.0,
+        "y1": 737.0,
+        "x2": 955.0,
+        "y2": 790.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8340725302696228,
+      "reading_order": 7,
+      "text": "(a) 'X' has greater density than 'Y'."
+    },
+    {
+      "block_id": "20260317_6153f658-b2a4-4999-8bb7-be917337210d_10_block_007",
+      "coordinates": {
+        "x1": 290.0,
+        "y1": 798.0,
+        "x2": 1080.0,
+        "y2": 853.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8481535911560059,
+      "reading_order": 8,
+      "text": "(b) In X, P₄ units are linked by P-P bonds."
+    },
+    {
+      "block_id": "20260317_6153f658-b2a4-4999-8bb7-be917337210d_10_block_008",
+      "coordinates": {
+        "x1": 290.0,
+        "y1": 861.0,
+        "x2": 1076.0,
+        "y2": 916.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8425397276878357,
+      "reading_order": 9,
+      "text": "(c) In Y, P₄ units are linked by P-P bonds."
+    },
+    {
+      "block_id": "20260317_6153f658-b2a4-4999-8bb7-be917337210d_10_block_009",
+      "coordinates": {
+        "x1": 291.0,
+        "y1": 925.0,
+        "x2": 1029.0,
+        "y2": 979.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8251749277114868,
+      "reading_order": 10,
+      "text": "(d) Both of them undergo sublimation."
+    },
+    {
+      "block_id": "20260317_6153f658-b2a4-4999-8bb7-be917337210d_10_block_010",
+      "coordinates": {
+        "x1": 1792.0,
+        "y1": 313.0,
+        "x2": 2169.0,
+        "y2": 363.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5728213787078857,
+      "reading_order": 11,
+      "text": "Space for rough work"
+    }
+  ]
+}

@@ -1,0 +1,151 @@
+{
+  "page_num": 6,
+  "image_width": 2398,
+  "image_height": 3003,
+  "created_at": "2026-03-17T19:09:34.930340+00:00",
+  "blocks": [
+    {
+      "block_id": "20260317_4727bd55-8af6-4d15-a02f-1df09d43b2da_6_block_000",
+      "coordinates": {
+        "x1": 199.0,
+        "y1": 184.0,
+        "x2": 1368.0,
+        "y2": 240.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.641130268573761,
+      "reading_order": 1,
+      "text": "3.4 Chapter 3 Language of Chemistry and Transformation of Substances"
+    },
+    {
+      "block_id": "20260317_4727bd55-8af6-4d15-a02f-1df09d43b2da_6_block_001",
+      "coordinates": {
+        "x1": 180.0,
+        "y1": 296.0,
+        "x2": 896.0,
+        "y2": 373.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.8209953904151917,
+      "reading_order": 2,
+      "text": "Assessment Test II"
+    },
+    {
+      "block_id": "20260317_4727bd55-8af6-4d15-a02f-1df09d43b2da_6_block_002",
+      "coordinates": {
+        "x1": 1448.0,
+        "y1": 324.0,
+        "x2": 1691.0,
+        "y2": 373.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6688365340232849,
+      "reading_order": 3,
+      "text": "Time: 30 min."
+    },
+    {
+      "block_id": "20260317_4727bd55-8af6-4d15-a02f-1df09d43b2da_6_block_003",
+      "coordinates": {
+        "x1": 177.0,
+        "y1": 451.0,
+        "x2": 1688.0,
+        "y2": 504.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.7928534746170044,
+      "reading_order": 4,
+      "text": "Directions for questions from 1 to 15: Select the correct answer from the given options."
+    },
+    {
+      "block_id": "20260317_4727bd55-8af6-4d15-a02f-1df09d43b2da_6_block_004",
+      "coordinates": {
+        "x1": 246.0,
+        "y1": 543.0,
+        "x2": 1692.0,
+        "y2": 895.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.27377453446388245,
+      "reading_order": 5,
+      "text": "1. Bivalent metal hydroxide reacts with perchloric acid to form corresponding\nsalt and water. Identify the balanced chemical equation.\n(a) $\\mathrm{M}(\\mathrm{OH})_2 + 2\\mathrm{HClO}_4 \\rightarrow \\mathrm{M}(\\mathrm{ClO}_4)_2 + 2\\mathrm{H}_2\\mathrm{O}$\n(b) $\\mathrm{M}(\\mathrm{OH})_2 + 2\\mathrm{HClO}_3 \\rightarrow \\mathrm{M}(\\mathrm{ClO}_3)_2 + 2\\mathrm{H}_2\\mathrm{O}$\n(c) $\\mathrm{M}(\\mathrm{OH})_3 + 3\\mathrm{HClO}_4 \\rightarrow \\mathrm{M}(\\mathrm{ClO}_4)_3 + 3\\mathrm{H}_2\\mathrm{O}$\n(d) $\\mathrm{M}(\\mathrm{OH})_3 + 3\\mathrm{HClO}_3 \\rightarrow \\mathrm{M}(\\mathrm{ClO}_3)_3 + 3\\mathrm{H}_2\\mathrm{O}$"
+    },
+    {
+      "block_id": "20260317_4727bd55-8af6-4d15-a02f-1df09d43b2da_6_block_005",
+      "coordinates": {
+        "x1": 230.0,
+        "y1": 963.0,
+        "x2": 1696.0,
+        "y2": 1315.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7048503756523132,
+      "reading_order": 6,
+      "text": "2. The formula of hydride of non-metal Y is $\\mathrm{H}_2\\mathrm{Y}$. Y can form different oxides in\nwhich Y shows valencies which differ by two units. The difference in valen-\ncies of Y in its lower oxide and hydride is also 2. Then, the formulae of the\ntwo oxides are ______ and ______.\n(a) YO, $\\mathrm{YO}_2$ (b) $\\mathrm{YO}_2$, $\\mathrm{YO}_3$\n(c) $\\mathrm{Y}_2\\mathrm{O}_3$, $\\mathrm{Y}_2\\mathrm{O}_5$ (d) $\\mathrm{YO}_2$, $\\mathrm{Y}_2\\mathrm{O}_3$"
+    },
+    {
+      "block_id": "20260317_4727bd55-8af6-4d15-a02f-1df09d43b2da_6_block_006",
+      "coordinates": {
+        "x1": 232.0,
+        "y1": 1368.0,
+        "x2": 1698.0,
+        "y2": 1666.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5593684315681458,
+      "reading_order": 7,
+      "text": "3. The monovalent positive radical has four hydrogen atoms and a bivalent\nnegative radical has four oxygen atoms. What could be the formula of the\nsalt formed by these two radicals?\n(a) $\\mathrm{AH}_4(\\mathrm{BO}_3)_2$ (b) $(\\mathrm{AH}_4)_3\\mathrm{BO}_4$\n(c) $\\mathrm{AH}_3\\mathrm{BO}_4$ (d) $(\\mathrm{AH}_4)_2\\mathrm{BO}_4$"
+    },
+    {
+      "block_id": "20260317_4727bd55-8af6-4d15-a02f-1df09d43b2da_6_block_007",
+      "coordinates": {
+        "x1": 230.0,
+        "y1": 1720.0,
+        "x2": 1696.0,
+        "y2": 2019.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8013427257537842,
+      "reading_order": 8,
+      "text": "4. An acid contains three hydrogen atoms, one non-metal 'X', and four oxygen\natoms. What could be the formula of the salt formed when the acid is treated\nwith bivalent metal hydroxide?\n(a) $\\mathrm{M}_2(\\mathrm{XO}_4)_3$ (b) $\\mathrm{MXO}_4$\n(c) $\\mathrm{M}_3(\\mathrm{XO}_4)_2$ (d) $\\mathrm{M}(\\mathrm{XO}_4)_2$"
+    },
+    {
+      "block_id": "20260317_4727bd55-8af6-4d15-a02f-1df09d43b2da_6_block_008",
+      "coordinates": {
+        "x1": 233.0,
+        "y1": 2066.0,
+        "x2": 1694.0,
+        "y2": 2243.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9192630648612976,
+      "reading_order": 9,
+      "text": "5. Both metals 'A' and 'B' can form two oxides, and their valencies differ by\none unit. What could be A and B?\n(a) Cu, Hg (b) Sn, Cu (c) Pb, Hg (d) Pb, Sn"
+    },
+    {
+      "block_id": "20260317_4727bd55-8af6-4d15-a02f-1df09d43b2da_6_block_009",
+      "coordinates": {
+        "x1": 233.0,
+        "y1": 2300.0,
+        "x2": 1701.0,
+        "y2": 2593.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9380427002906799,
+      "reading_order": 10,
+      "text": "6. Non-metal A forms four oxides P, Q, R and S in which the valencies of A are\n3, 2, 5 and 1, respectively. Arrange P, Q, R and S in the descending order of\nnumber of oxygen atoms which combine with one atom of non-metal A.\n(a) R, P, Q, S (b) P, R, Q, S\n(c) R, P, S, Q (d) P, R, S, Q"
+    },
+    {
+      "block_id": "20260317_4727bd55-8af6-4d15-a02f-1df09d43b2da_6_block_010",
+      "coordinates": {
+        "x1": 1789.0,
+        "y1": 310.0,
+        "x2": 2170.0,
+        "y2": 364.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7163313031196594,
+      "reading_order": 11,
+      "text": "Space for rough work"
+    }
+  ]
+}

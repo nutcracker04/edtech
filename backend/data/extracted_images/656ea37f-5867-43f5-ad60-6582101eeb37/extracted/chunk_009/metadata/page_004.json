@@ -1,0 +1,255 @@
+{
+  "page_num": 4,
+  "image_width": 2398,
+  "image_height": 3003,
+  "created_at": "2026-03-17T19:10:02.110598+00:00",
+  "blocks": [
+    {
+      "block_id": "20260317_d05caa04-bd91-4466-a2be-2396f2383528_4_block_000",
+      "coordinates": {
+        "x1": 198.0,
+        "y1": 183.0,
+        "x2": 911.0,
+        "y2": 240.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.7490045428276062,
+      "reading_order": 1,
+      "text": "6.4 Chapter 6 Carbon and Its Compounds"
+    },
+    {
+      "block_id": "20260317_d05caa04-bd91-4466-a2be-2396f2383528_4_block_001",
+      "coordinates": {
+        "x1": 1448.0,
+        "y1": 324.0,
+        "x2": 1691.0,
+        "y2": 373.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.7178308963775635,
+      "reading_order": 2,
+      "text": "Time: 30 min."
+    },
+    {
+      "block_id": "20260317_d05caa04-bd91-4466-a2be-2396f2383528_4_block_002",
+      "coordinates": {
+        "x1": 179.0,
+        "y1": 295.0,
+        "x2": 899.0,
+        "y2": 375.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.7987291216850281,
+      "reading_order": 3,
+      "text": "Assessment Test II"
+    },
+    {
+      "block_id": "20260317_d05caa04-bd91-4466-a2be-2396f2383528_4_block_003",
+      "coordinates": {
+        "x1": 174.0,
+        "y1": 449.0,
+        "x2": 1631.0,
+        "y2": 505.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.6733464002609253,
+      "reading_order": 4,
+      "text": "Directions for questions 1 to 15: Select the correct answer from the given options."
+    },
+    {
+      "block_id": "20260317_d05caa04-bd91-4466-a2be-2396f2383528_4_block_004",
+      "coordinates": {
+        "x1": 228.0,
+        "y1": 542.0,
+        "x2": 1302.0,
+        "y2": 596.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.3919157087802887,
+      "reading_order": 5,
+      "text": "1. Assertion (A): Graphite is a good electrical conductor."
+    },
+    {
+      "block_id": "20260317_d05caa04-bd91-4466-a2be-2396f2383528_4_block_005",
+      "coordinates": {
+        "x1": 288.0,
+        "y1": 612.0,
+        "x2": 1390.0,
+        "y2": 667.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5915181636810303,
+      "reading_order": 6,
+      "text": "Reason (R): Carbon exhibits a valency of three in graphite."
+    },
+    {
+      "block_id": "20260317_d05caa04-bd91-4466-a2be-2396f2383528_4_block_006",
+      "coordinates": {
+        "x1": 288.0,
+        "y1": 673.0,
+        "x2": 1470.0,
+        "y2": 728.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6926096677780151,
+      "reading_order": 7,
+      "text": "(a) Both A and R are true and R is the correct explanation of A."
+    },
+    {
+      "block_id": "20260317_d05caa04-bd91-4466-a2be-2396f2383528_4_block_007",
+      "coordinates": {
+        "x1": 288.0,
+        "y1": 735.0,
+        "x2": 1542.0,
+        "y2": 793.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6256395578384399,
+      "reading_order": 8,
+      "text": "(b) Both A and R are true, but R is not the correct explanation of A."
+    },
+    {
+      "block_id": "20260317_d05caa04-bd91-4466-a2be-2396f2383528_4_block_008",
+      "coordinates": {
+        "x1": 290.0,
+        "y1": 863.0,
+        "x2": 804.0,
+        "y2": 917.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6096384525299072,
+      "reading_order": 9,
+      "text": "(d) A is false and R is true."
+    },
+    {
+      "block_id": "20260317_d05caa04-bd91-4466-a2be-2396f2383528_4_block_009",
+      "coordinates": {
+        "x1": 234.0,
+        "y1": 941.0,
+        "x2": 1677.0,
+        "y2": 995.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.5344461798667908,
+      "reading_order": 10,
+      "text": "2. Assertion (A): A sealed bottle containing dry ice explodes after some time."
+    },
+    {
+      "block_id": "20260317_d05caa04-bd91-4466-a2be-2396f2383528_4_block_010",
+      "coordinates": {
+        "x1": 238.0,
+        "y1": 946.0,
+        "x2": 1667.0,
+        "y2": 1317.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.2513446509838104,
+      "reading_order": 11,
+      "text": "2. Assertion (A): A sealed bottle containing dry ice explodes after some time.\nReason (R): Dry ice produces very low temperature.\n(a) Both A and R are true and R is the correct explanation of A.\n(b) Both A and R are true, but R is not the correct explanation of A.\n(c) A is true and R is false.\n(d) A is false and R is true."
+    },
+    {
+      "block_id": "20260317_d05caa04-bd91-4466-a2be-2396f2383528_4_block_011",
+      "coordinates": {
+        "x1": 232.0,
+        "y1": 1342.0,
+        "x2": 1406.0,
+        "y2": 1394.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5361526012420654,
+      "reading_order": 12,
+      "text": "3. Match the statements of Column A with those of Column B."
+    },
+    {
+      "block_id": "20260317_d05caa04-bd91-4466-a2be-2396f2383528_4_block_012",
+      "coordinates": {
+        "x1": 296.0,
+        "y1": 1403.0,
+        "x2": 1522.0,
+        "y2": 1990.0
+      },
+      "layout_tag": "table",
+      "confidence": 0.9369199872016907,
+      "reading_order": 13,
+      "text": "<table>\n<thead>\n<tr>\n<th>Column A<br/>(Characteristic Feature)</th>\n<th>Column B<br/>(Allotrope)</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>(i) Bucky balls</td>\n<td>(A) Coke</td>\n</tr>\n<tr>\n<td>(ii) Calcium phosphate is in major<br/>proportion</td>\n<td>(B) Graphite</td>\n</tr>\n<tr>\n<td>(iii) Purest amorphous form of<br/>carbon</td>\n<td>(C) Diamond</td>\n</tr>\n<tr>\n<td>(iv) Hexagonal rings</td>\n<td>(D) Animal charcoal</td>\n</tr>\n<tr>\n<td>(v) Tetrahedral units</td>\n<td>(E) Fullerene</td>\n</tr>\n</tbody>\n</table>"
+    },
+    {
+      "block_id": "20260317_d05caa04-bd91-4466-a2be-2396f2383528_4_block_013",
+      "coordinates": {
+        "x1": 288.0,
+        "y1": 2014.0,
+        "x2": 1466.0,
+        "y2": 2074.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7958253026008606,
+      "reading_order": 14,
+      "text": "(a) (i) $\\rightarrow$ (E); (ii) $\\rightarrow$ (A); (iii) $\\rightarrow$ (D); (iv) $\\rightarrow$ (B); (v) $\\rightarrow$ (C)"
+    },
+    {
+      "block_id": "20260317_d05caa04-bd91-4466-a2be-2396f2383528_4_block_014",
+      "coordinates": {
+        "x1": 288.0,
+        "y1": 2079.0,
+        "x2": 1462.0,
+        "y2": 2137.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7792311310768127,
+      "reading_order": 15,
+      "text": "(b) (i) $\\rightarrow$ (C); (ii) $\\rightarrow$ (A); (iii) $\\rightarrow$ (D); (iv) $\\rightarrow$ (E); (v) $\\rightarrow$ (B)"
+    },
+    {
+      "block_id": "20260317_d05caa04-bd91-4466-a2be-2396f2383528_4_block_015",
+      "coordinates": {
+        "x1": 288.0,
+        "y1": 2142.0,
+        "x2": 1462.0,
+        "y2": 2199.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7769432663917542,
+      "reading_order": 16,
+      "text": "(c) (i) $\\rightarrow$ (C); (ii) $\\rightarrow$ (D); (iii) $\\rightarrow$ (A); (iv) $\\rightarrow$ (E); (v) $\\rightarrow$ (B)"
+    },
+    {
+      "block_id": "20260317_d05caa04-bd91-4466-a2be-2396f2383528_4_block_016",
+      "coordinates": {
+        "x1": 288.0,
+        "y1": 2204.0,
+        "x2": 1466.0,
+        "y2": 2262.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7097275257110596,
+      "reading_order": 17,
+      "text": "(d) (i) $\\rightarrow$ (E); (ii) $\\rightarrow$ (D); (iii) $\\rightarrow$ (A); (iv) $\\rightarrow$ (B); (v) $\\rightarrow$ (C)"
+    },
+    {
+      "block_id": "20260317_d05caa04-bd91-4466-a2be-2396f2383528_4_block_017",
+      "coordinates": {
+        "x1": 237.0,
+        "y1": 2288.0,
+        "x2": 1693.0,
+        "y2": 2905.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7653540372848511,
+      "reading_order": 18,
+      "text": "4. Arrange the following allotropes in the order of the raw material used for\ntheir preparation, given below.\n(i) Sugar and molten iron (ii) Coke and silicon dioxide\n(iii) Graphite (iv) Coal\n(v) Mustard oil\n(A) Coke (B) Fullerene\n(C) Lamp black (D) Diamond\n(E) Graphite\n(a) DEBAC (b) BECAD\n(c) DABEC (d) BACED"
+    },
+    {
+      "block_id": "20260317_d05caa04-bd91-4466-a2be-2396f2383528_4_block_018",
+      "coordinates": {
+        "x1": 1790.0,
+        "y1": 311.0,
+        "x2": 2170.0,
+        "y2": 365.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.3610115647315979,
+      "reading_order": 19,
+      "text": "Space for rough work"
+    }
+  ]
+}

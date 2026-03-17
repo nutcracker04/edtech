@@ -1,0 +1,385 @@
+{
+  "page_num": 6,
+  "image_width": 2398,
+  "image_height": 3003,
+  "created_at": "2026-03-17T19:10:34.339771+00:00",
+  "blocks": [
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_6_block_000",
+      "coordinates": {
+        "x1": 183.0,
+        "y1": 182.0,
+        "x2": 1122.0,
+        "y2": 242.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.7206152677536011,
+      "reading_order": 1,
+      "text": "A.20 Chapter 5 Water, Solution, Solubility and Hydrogen"
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_6_block_001",
+      "coordinates": {
+        "x1": 231.0,
+        "y1": 297.0,
+        "x2": 1175.0,
+        "y2": 877.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8960705399513245,
+      "reading_order": 2,
+      "text": "5. Mass of the solution = 80 g\nMass of solute = 16 g\nMass of solvent = $80 - 16 = 64$ g\nAmount of substance dissolved in 64 g water\n= 16 g\nAmount of substance dissolved in 100 g =\n$\\frac{1600}{64} = 25$ g\nSolubility of the substance = 25\nHence, the correct option is (d)."
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_6_block_002",
+      "coordinates": {
+        "x1": 228.0,
+        "y1": 912.0,
+        "x2": 1168.0,
+        "y2": 1331.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9306895136833191,
+      "reading_order": 3,
+      "text": "6. Glauber’s salt is $\\text{Na}_2\\text{SO}_4 \\cdot 10\\text{H}_2\\text{O}$. Its solubil-\nity increases with increase in temperature. At\n$32.6^\\circ\\text{C}$, it changes to anhydrous $\\text{Na}_2\\text{SO}_4$. Its\nsolubility decreases with increase in tempera-\nture. Change in water of crystallization is not\nthe reason for change in the trend of solubility.\nHence, the correct option is (b)."
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_6_block_003",
+      "coordinates": {
+        "x1": 233.0,
+        "y1": 1354.0,
+        "x2": 1170.0,
+        "y2": 1625.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8202776312828064,
+      "reading_order": 4,
+      "text": "7. Red phosphorus burns in oxygen in the pres-\nence of moisture which catalyses the reaction.\nAnhydrous $\\mathrm{CaCl}_2$ absorbs moisture from the\nair in contact with phosphorus. Therefore, no\nreaction occurs in the test tube."
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_6_block_004",
+      "coordinates": {
+        "x1": 290.0,
+        "y1": 1643.0,
+        "x2": 885.0,
+        "y2": 1698.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5273978114128113,
+      "reading_order": 5,
+      "text": "Hence, the correct option is (d)."
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_6_block_005",
+      "coordinates": {
+        "x1": 232.0,
+        "y1": 1721.0,
+        "x2": 1169.0,
+        "y2": 1884.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6154417991638184,
+      "reading_order": 6,
+      "text": "8. Collection of hydrogen by downward displace-\nment of water is due to the insoluble nature of\nhydrogen in water."
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_6_block_006",
+      "coordinates": {
+        "x1": 284.0,
+        "y1": 1901.0,
+        "x2": 884.0,
+        "y2": 1957.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.3861169219017029,
+      "reading_order": 7,
+      "text": "Hence, the correct option is (d)."
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_6_block_007",
+      "coordinates": {
+        "x1": 231.0,
+        "y1": 1978.0,
+        "x2": 1172.0,
+        "y2": 2140.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6820195913314819,
+      "reading_order": 8,
+      "text": "9. 4.2 J of heat is required for 1 g of water for 1°C\nrise in temperature. 100 g of water requires 420\nJ of heat."
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_6_block_008",
+      "coordinates": {
+        "x1": 291.0,
+        "y1": 2162.0,
+        "x2": 662.0,
+        "y2": 2216.0
+      },
+      "layout_tag": "formula",
+      "confidence": 0.4517457187175751,
+      "reading_order": 9,
+      "text": "420 J of heat → 1°C"
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_6_block_009",
+      "coordinates": {
+        "x1": 291.0,
+        "y1": 2225.0,
+        "x2": 1000.0,
+        "y2": 2331.0
+      },
+      "layout_tag": "formula",
+      "confidence": 0.7861989736557007,
+      "reading_order": 10,
+      "text": "$$ 2.1 \\rightarrow 10^3 \\text{ J of heat} \\rightarrow \\frac{2.1 \\times 10^3}{420} = 5^\\circ\\mathrm{C} $$"
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_6_block_010",
+      "coordinates": {
+        "x1": 289.0,
+        "y1": 2351.0,
+        "x2": 883.0,
+        "y2": 2406.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.42913708090782166,
+      "reading_order": 11,
+      "text": "Hence, the correct option is (d)."
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_6_block_011",
+      "coordinates": {
+        "x1": 212.0,
+        "y1": 2430.0,
+        "x2": 1170.0,
+        "y2": 2646.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.716646134853363,
+      "reading_order": 12,
+      "text": "10. As brine solution is a saturated solution of sodium chloride, it contains maximum amount of dissolved salt and hence, freezes at the low-est temperature."
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_6_block_012",
+      "coordinates": {
+        "x1": 287.0,
+        "y1": 2665.0,
+        "x2": 880.0,
+        "y2": 2719.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.4664273262023926,
+      "reading_order": 13,
+      "text": "Hence, the correct option is (a)."
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_6_block_013",
+      "coordinates": {
+        "x1": 214.0,
+        "y1": 2746.0,
+        "x2": 1169.0,
+        "y2": 2854.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8834407329559326,
+      "reading_order": 14,
+      "text": "11. (i) → (C); Reaction of potassium with water is\nvigorous and exothermic."
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_6_block_014",
+      "coordinates": {
+        "x1": 1351.0,
+        "y1": 296.0,
+        "x2": 2216.0,
+        "y2": 399.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8877760171890259,
+      "reading_order": 15,
+      "text": "(ii) $\\rightarrow$ (D); The reaction becomes reversible\nwhen carried out in a closed container."
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_6_block_015",
+      "coordinates": {
+        "x1": 1343.0,
+        "y1": 412.0,
+        "x2": 2216.0,
+        "y2": 564.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8965426683425903,
+      "reading_order": 16,
+      "text": "(iii) → (B); A milky alkaline solution of Ca(OH)$_2$\nis formed by the reaction of calcium with\nwater."
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_6_block_016",
+      "coordinates": {
+        "x1": 1342.0,
+        "y1": 583.0,
+        "x2": 2217.0,
+        "y2": 684.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7671442627906799,
+      "reading_order": 17,
+      "text": "(iv) → (A); Magnesium reacts only with boiling water."
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_6_block_017",
+      "coordinates": {
+        "x1": 1341.0,
+        "y1": 697.0,
+        "x2": 1933.0,
+        "y2": 753.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5432379245758057,
+      "reading_order": 18,
+      "text": "Hence, the correct option is (d)."
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_6_block_018",
+      "coordinates": {
+        "x1": 1263.0,
+        "y1": 793.0,
+        "x2": 2217.0,
+        "y2": 1061.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8659573793411255,
+      "reading_order": 19,
+      "text": "12. When iron is taken in place of zinc for the lab-\noratory preparation of hydrogen, the reaction\nbecomes slow and yields only lesser volume\nof hydrogen as the reaction of iron with acid\nbecomes reversible."
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_6_block_019",
+      "coordinates": {
+        "x1": 1338.0,
+        "y1": 1079.0,
+        "x2": 1934.0,
+        "y2": 1135.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.4878532886505127,
+      "reading_order": 20,
+      "text": "Hence, the correct option is (d)."
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_6_block_020",
+      "coordinates": {
+        "x1": 1263.0,
+        "y1": 1163.0,
+        "x2": 2218.0,
+        "y2": 1437.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8705512881278992,
+      "reading_order": 21,
+      "text": "13. Floating of dead body in the water in the Dead\nSea is due to the greater density of water in\ndead sea due to the very high salinity of that\nwater. This is not a consequence of anomalous\nexpansion of water."
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_6_block_021",
+      "coordinates": {
+        "x1": 1337.0,
+        "y1": 1451.0,
+        "x2": 1927.0,
+        "y2": 1506.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.48264214396476746,
+      "reading_order": 22,
+      "text": "Hence, the correct option is (a)."
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_6_block_022",
+      "coordinates": {
+        "x1": 1259.0,
+        "y1": 1537.0,
+        "x2": 2111.0,
+        "y2": 1665.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8519017100334167,
+      "reading_order": 23,
+      "text": "14. At 35°C, X and Y possess same solubility.\nHence, the correct option is (a)."
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_6_block_023",
+      "coordinates": {
+        "x1": 1263.0,
+        "y1": 1696.0,
+        "x2": 2220.0,
+        "y2": 1968.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.870581328868866,
+      "reading_order": 24,
+      "text": "15. The solution of X and Y contain 90 g and 70 g of\nsolutes at $80^\\circ\\mathrm{C}$ as they are saturated solutions.\nWhen they are cooled up to $60^\\circ\\mathrm{C}$, 20 g of X and\n10 g of Y are precipitated since their solubilities\nare 70 and 50 at $60^\\circ\\mathrm{C}$."
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_6_block_024",
+      "coordinates": {
+        "x1": 1341.0,
+        "y1": 1983.0,
+        "x2": 1931.0,
+        "y2": 2040.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5530110001564026,
+      "reading_order": 25,
+      "text": "Hence, the correct option is (b)."
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_6_block_025",
+      "coordinates": {
+        "x1": 1238.0,
+        "y1": 2088.0,
+        "x2": 1703.0,
+        "y2": 2144.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.7820477485656738,
+      "reading_order": 26,
+      "text": "Assessment Test III"
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_6_block_026",
+      "coordinates": {
+        "x1": 1283.0,
+        "y1": 2184.0,
+        "x2": 2216.0,
+        "y2": 2366.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8829737901687622,
+      "reading_order": 27,
+      "text": "1. During the formation of snow, water vapour\ndirectly gets converted to ice.\nHence, the correct option is (d)."
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_6_block_027",
+      "coordinates": {
+        "x1": 1281.0,
+        "y1": 2396.0,
+        "x2": 2217.0,
+        "y2": 2633.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8106403946876526,
+      "reading_order": 28,
+      "text": "2. Density of water is less than 1 g/cc above (or)\nbelow $4^\\circ\\mathrm{C}$. Hence, the density of water at $2^\\circ\\mathrm{C}$\ncould be $^\\circ 0.95$ g/cc\nHence, the correct option is (a)."
+    },
+    {
+      "block_id": "20260317_a57b6c3c-dc4a-4dc6-aed6-d51df3870e67_6_block_028",
+      "coordinates": {
+        "x1": 1281.0,
+        "y1": 2662.0,
+        "x2": 2217.0,
+        "y2": 2846.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8595818877220154,
+      "reading_order": 29,
+      "text": "3. Distilled water is a bad conductor of electricity\nsince it is devoid of any dissolved salts.\nHence, the correct option is (d)."
+    }
+  ]
+}

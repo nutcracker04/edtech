@@ -124,7 +124,7 @@ class DocumentProcessor:
 
         logger.info("DocumentProcessor initialized for local extraction at %s", self.storage_root)
 
-    def queue_job(self, job_id: str, source_filename: str = "unknown") -> None:
+    def queue_job(self, job_id: str, source_filename: str = "unknown", title: Optional[str] = None) -> None:
         """Create a queued job entry so status polling works immediately after upload."""
 
         now = time.time()
@@ -139,7 +139,7 @@ class DocumentProcessor:
         
         # Create extraction_jobs record in database if Supabase client is available
         if self.supabase_client:
-            self._create_extraction_job_record(job_id, source_filename)
+            self._create_extraction_job_record(job_id, source_filename, title)
 
     def process_pdf(
         self,
@@ -163,15 +163,18 @@ class DocumentProcessor:
         if job_id not in self._jobs:
             self.queue_job(job_id)
         
-        # Update extraction_jobs with source PDF filename
+        # Update extraction_jobs with source PDF path and title (admin-entered name for display)
         if self.supabase_client:
             try:
-                self.supabase_client.table("extraction_jobs").update({
+                update_data = {
                     "source_pdf_filename": source_pdf_path.name,
-                    "source_pdf_path": str(source_pdf_path)
-                }).eq("id", job_id).execute()
+                    "source_pdf_path": str(source_pdf_path),
+                }
+                if metadata.title:
+                    update_data["title"] = metadata.title
+                self.supabase_client.table("extraction_jobs").update(update_data).eq("id", job_id).execute()
             except Exception as e:
-                logger.error(f"Failed to update source_pdf_filename: {e}")
+                logger.error(f"Failed to update extraction_jobs: {e}")
 
         logger.info("Starting local PDF extraction job %s for %s", job_id, source_pdf_path)
 
@@ -652,7 +655,7 @@ class DocumentProcessor:
             "jobs": failed_jobs,
         }
     
-    def _create_extraction_job_record(self, job_id: str, source_filename: str = "unknown") -> None:
+    def _create_extraction_job_record(self, job_id: str, source_filename: str = "unknown", title: Optional[str] = None) -> None:
         """
         Create extraction_jobs record in database.
         
@@ -672,6 +675,8 @@ class DocumentProcessor:
                 "started_at": datetime.now(timezone.utc).isoformat(),
                 "created_at": datetime.now(timezone.utc).isoformat()
             }
+            if title:
+                job_data["title"] = title
             
             self.supabase_client.table("extraction_jobs").insert(job_data).execute()
             logger.info(f"Created extraction_jobs record for job_id={job_id}")

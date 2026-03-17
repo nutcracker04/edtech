@@ -1,0 +1,177 @@
+{
+  "page_num": 5,
+  "image_width": 2398,
+  "image_height": 3003,
+  "created_at": "2026-03-17T19:09:28.213797+00:00",
+  "blocks": [
+    {
+      "block_id": "20260317_948c6372-4ab4-407a-ae4e-06112d9bd3e8_5_block_000",
+      "coordinates": {
+        "x1": 1761.0,
+        "y1": 187.0,
+        "x2": 2051.0,
+        "y2": 235.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.8548972010612488,
+      "reading_order": 1,
+      "text": "Assessment Test II"
+    },
+    {
+      "block_id": "20260317_948c6372-4ab4-407a-ae4e-06112d9bd3e8_5_block_001",
+      "coordinates": {
+        "x1": 2108.0,
+        "y1": 185.0,
+        "x2": 2192.0,
+        "y2": 233.0
+      },
+      "layout_tag": "page-number",
+      "confidence": 0.780059278011322,
+      "reading_order": 2,
+      "text": "2.7"
+    },
+    {
+      "block_id": "20260317_948c6372-4ab4-407a-ae4e-06112d9bd3e8_5_block_002",
+      "coordinates": {
+        "x1": 697.0,
+        "y1": 295.0,
+        "x2": 1184.0,
+        "y2": 957.0
+      },
+      "layout_tag": "image",
+      "confidence": 0.40458253026008606,
+      "reading_order": 3,
+      "text": "The image presents a schematic diagram, likely from a physics or mathematics textbook, illustrating the concept of symmetry operations, specifically translations, on a rectangular grid. The diagram is divided into two sections. The top section features a large rectangle containing three black dots arranged in a vertical line: one at the top, one in the middle, and one at the bottom. Below this rectangle, three letters—A, B, and C—are aligned horizontally, indicating the three distinct translation vectors or symmetries applied to the grid. The bottom section displays four vertically oriented rectangles, each containing four black dots arranged in a 2x2 grid. These rectangles represent the result of applying the translations labeled A, B, and C to the original grid. Specifically, the dot positions in the bottom rectangles correspond to the original positions in the top rectangle: the top-left dot in the bottom rectangle is the original top dot, the top-right dot is the original middle dot, and the bottom-left and bottom-right dots are the original bottom dot. The diagram visually demonstrates how a 2D grid is transformed by shifting it along its own axes."
+    },
+    {
+      "block_id": "20260317_948c6372-4ab4-407a-ae4e-06112d9bd3e8_5_block_003",
+      "coordinates": {
+        "x1": 722.0,
+        "y1": 950.0,
+        "x2": 769.0,
+        "y2": 991.0
+      },
+      "layout_tag": "image-caption",
+      "confidence": 0.7313477993011475,
+      "reading_order": 4,
+      "text": "(A)"
+    },
+    {
+      "block_id": "20260317_948c6372-4ab4-407a-ae4e-06112d9bd3e8_5_block_004",
+      "coordinates": {
+        "x1": 853.0,
+        "y1": 951.0,
+        "x2": 899.0,
+        "y2": 991.0
+      },
+      "layout_tag": "image-caption",
+      "confidence": 0.705240786075592,
+      "reading_order": 5,
+      "text": "(B)"
+    },
+    {
+      "block_id": "20260317_948c6372-4ab4-407a-ae4e-06112d9bd3e8_5_block_005",
+      "coordinates": {
+        "x1": 981.0,
+        "y1": 951.0,
+        "x2": 1028.0,
+        "y2": 991.0
+      },
+      "layout_tag": "image-caption",
+      "confidence": 0.7040550112724304,
+      "reading_order": 6,
+      "text": "(C)"
+    },
+    {
+      "block_id": "20260317_948c6372-4ab4-407a-ae4e-06112d9bd3e8_5_block_006",
+      "coordinates": {
+        "x1": 1112.0,
+        "y1": 950.0,
+        "x2": 1159.0,
+        "y2": 991.0
+      },
+      "layout_tag": "image-caption",
+      "confidence": 0.7083790898323059,
+      "reading_order": 7,
+      "text": "(D)"
+    },
+    {
+      "block_id": "20260317_948c6372-4ab4-407a-ae4e-06112d9bd3e8_5_block_007",
+      "coordinates": {
+        "x1": 293.0,
+        "y1": 1011.0,
+        "x2": 1697.0,
+        "y2": 1371.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.46817877888679504,
+      "reading_order": 8,
+      "text": "(i) This food colour is constituted of A and C along with another component.\n(ii) This food colour is constituted of all three components—A, B and C.\n(iii) The food colour is constituted of A and B, but it contains two other com-\nponents as well.\n(iv) This food colour is constituted of A and C only.\n(a) ACBD (b) CDBA (c) BCAD (d) DBAC"
+    },
+    {
+      "block_id": "20260317_948c6372-4ab4-407a-ae4e-06112d9bd3e8_5_block_008",
+      "coordinates": {
+        "x1": 218.0,
+        "y1": 1433.0,
+        "x2": 1697.0,
+        "y2": 1895.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9452806115150452,
+      "reading_order": 9,
+      "text": "14. A solution of common salt is taken in a beaker. Some amount of vinegar\nis poured into it. Then, a mixture of sawdust and coarsely ground chalk is\nadded to it. Four processes given below are carried out to separate the con-\nstituents of the above mixture. Arrange the processes in proper sequence in\norder to separate the components one by one.\n(a) Fractional distillation (b) Filtration\n(c) Evaporation (d) Gravity separation\n(a) DBAC (b) BDAC (c) CABD (d) ABCD"
+    },
+    {
+      "block_id": "20260317_948c6372-4ab4-407a-ae4e-06112d9bd3e8_5_block_009",
+      "coordinates": {
+        "x1": 215.0,
+        "y1": 1953.0,
+        "x2": 1403.0,
+        "y2": 2003.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6054184436798096,
+      "reading_order": 10,
+      "text": "15. Match the statements of Column A with those of Column B."
+    },
+    {
+      "block_id": "20260317_948c6372-4ab4-407a-ae4e-06112d9bd3e8_5_block_010",
+      "coordinates": {
+        "x1": 307.0,
+        "y1": 2023.0,
+        "x2": 1676.0,
+        "y2": 2590.0
+      },
+      "layout_tag": "table",
+      "confidence": 0.8775094747543335,
+      "reading_order": 11,
+      "text": "<table>\n<thead>\n<tr>\n<th>Column A<br/>(Types of Mixtures)</th>\n<th>Column B<br/>(Examples)</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>(i) Solid–solid homogeneous mixture</td>\n<td>(A) Coconut oil and water</td>\n</tr>\n<tr>\n<td>(ii) Solid–liquid homogeneous mixture</td>\n<td>(B) Petrol and diesel</td>\n</tr>\n<tr>\n<td>(iii) Liquid–liquid heterogeneous mixture</td>\n<td>(C) Bronze</td>\n</tr>\n<tr>\n<td>(iv) Liquid–liquid homogeneous mixture</td>\n<td>(D) Finely powdered char-<br/>coal in water</td>\n</tr>\n<tr>\n<td>(v) Solid–liquid heterogeneous mixture</td>\n<td>(E) Saline water</td>\n</tr>\n</tbody>\n</table>"
+    },
+    {
+      "block_id": "20260317_948c6372-4ab4-407a-ae4e-06112d9bd3e8_5_block_011",
+      "coordinates": {
+        "x1": 1791.0,
+        "y1": 312.0,
+        "x2": 2169.0,
+        "y2": 364.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6433963179588318,
+      "reading_order": 12,
+      "text": "Space for rough work"
+    },
+    {
+      "block_id": "20260317_948c6372-4ab4-407a-ae4e-06112d9bd3e8_5_block_012",
+      "coordinates": {
+        "x1": 292.0,
+        "y1": 2630.0,
+        "x2": 1461.0,
+        "y2": 2877.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.2794070541858673,
+      "reading_order": 13,
+      "text": "(a) (i) $\\rightarrow$ (C); (ii) $\\rightarrow$ (E); (iii) $\\rightarrow$ (A); (iv) $\\rightarrow$ (B); (v) $\\rightarrow$ (D)\n(b) (i) $\\rightarrow$ (B); (ii) $\\rightarrow$ (C); (iii) $\\rightarrow$ (A); (iv) $\\rightarrow$ (D); (v) $\\rightarrow$ (E)\n(c) (i) $\\rightarrow$ (E); (ii) $\\rightarrow$ (A); (iii) $\\rightarrow$ (B); (iv) $\\rightarrow$ (C); (v) $\\rightarrow$ (D)\n(d) (i) $\\rightarrow$ (D); (ii) $\\rightarrow$ (B); (iii) $\\rightarrow$ (A); (iv) $\\rightarrow$ (E); (v) $\\rightarrow$ (C)"
+    }
+  ]
+}

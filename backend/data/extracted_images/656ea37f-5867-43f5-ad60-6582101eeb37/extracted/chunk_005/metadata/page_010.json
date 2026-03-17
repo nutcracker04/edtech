@@ -1,0 +1,203 @@
+{
+  "page_num": 10,
+  "image_width": 2398,
+  "image_height": 3003,
+  "created_at": "2026-03-17T19:09:34.891011+00:00",
+  "blocks": [
+    {
+      "block_id": "20260317_4727bd55-8af6-4d15-a02f-1df09d43b2da_10_block_000",
+      "coordinates": {
+        "x1": 200.0,
+        "y1": 184.0,
+        "x2": 1368.0,
+        "y2": 240.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.637690544128418,
+      "reading_order": 1,
+      "text": "3.8 Chapter 3 Language of Chemistry and Transformation of Substances"
+    },
+    {
+      "block_id": "20260317_4727bd55-8af6-4d15-a02f-1df09d43b2da_10_block_001",
+      "coordinates": {
+        "x1": 228.0,
+        "y1": 291.0,
+        "x2": 1331.0,
+        "y2": 343.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.47703081369400024,
+      "reading_order": 2,
+      "text": "5. Match the entries of Column A with those of Column B."
+    },
+    {
+      "block_id": "20260317_4727bd55-8af6-4d15-a02f-1df09d43b2da_10_block_002",
+      "coordinates": {
+        "x1": 282.0,
+        "y1": 379.0,
+        "x2": 1020.0,
+        "y2": 818.0
+      },
+      "layout_tag": "table",
+      "confidence": 0.6460604667663574,
+      "reading_order": 3,
+      "text": "<table>\n<thead>\n<tr>\n<th>Column A</th>\n<th>Column B</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>(i) Sodium chlorate</td>\n<td>(A) NaNO3</td>\n</tr>\n<tr>\n<td>(ii) Sodium chlorite</td>\n<td>(B) NaNO2</td>\n</tr>\n<tr>\n<td>(iii) Sodium nitrate</td>\n<td>(C) NaClO4</td>\n</tr>\n<tr>\n<td>(iv) Sodium nitrite</td>\n<td>(D) NaClO3</td>\n</tr>\n<tr>\n<td></td>\n<td>(E) Na(NO3)2</td>\n</tr>\n<tr>\n<td></td>\n<td>(F) NaClO2</td>\n</tr>\n</tbody>\n</table>"
+    },
+    {
+      "block_id": "20260317_4727bd55-8af6-4d15-a02f-1df09d43b2da_10_block_003",
+      "coordinates": {
+        "x1": 288.0,
+        "y1": 845.0,
+        "x2": 1244.0,
+        "y2": 899.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5712774395942688,
+      "reading_order": 4,
+      "text": "(a) (i) → (D); (ii) → (F); (iii) → (B); (iv) → (A)"
+    },
+    {
+      "block_id": "20260317_4727bd55-8af6-4d15-a02f-1df09d43b2da_10_block_004",
+      "coordinates": {
+        "x1": 293.0,
+        "y1": 908.0,
+        "x2": 1241.0,
+        "y2": 963.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.4716493487358093,
+      "reading_order": 5,
+      "text": "(b) (i) $\\rightarrow$ (D); (ii) $\\rightarrow$ (F); (iii) $\\rightarrow$ (A); (iv) $\\rightarrow$ (B)"
+    },
+    {
+      "block_id": "20260317_4727bd55-8af6-4d15-a02f-1df09d43b2da_10_block_005",
+      "coordinates": {
+        "x1": 293.0,
+        "y1": 970.0,
+        "x2": 1240.0,
+        "y2": 1027.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5512765049934387,
+      "reading_order": 6,
+      "text": "(c) (i) $\\rightarrow$ (F); (ii) $\\rightarrow$ (D); (iii) $\\rightarrow$ (A); (iv) $\\rightarrow$ (B)"
+    },
+    {
+      "block_id": "20260317_4727bd55-8af6-4d15-a02f-1df09d43b2da_10_block_006",
+      "coordinates": {
+        "x1": 292.0,
+        "y1": 1033.0,
+        "x2": 1244.0,
+        "y2": 1089.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.4944370985031128,
+      "reading_order": 7,
+      "text": "(d) (i) $\\rightarrow$ (F); (ii) $\\rightarrow$ (D); (iii) $\\rightarrow$ (B); (iv) $\\rightarrow$ (A)"
+    },
+    {
+      "block_id": "20260317_4727bd55-8af6-4d15-a02f-1df09d43b2da_10_block_007",
+      "coordinates": {
+        "x1": 239.0,
+        "y1": 1150.0,
+        "x2": 1442.0,
+        "y2": 1463.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6088309288024902,
+      "reading_order": 8,
+      "text": "6. Which among the following is a balanced chemical equation?\n(a) $3\\mathrm{CuO} + 2\\mathrm{NH}_3 \\rightarrow \\mathrm{Cu} + \\mathrm{N}_2 + 3\\mathrm{H}_2\\mathrm{O}$\n(b) $2\\mathrm{NH}_3 + \\mathrm{O}_2 \\rightarrow 2\\mathrm{NO} + 3\\mathrm{H}_2\\mathrm{O}$\n(c) $2\\mathrm{Ca}_3(\\mathrm{PO}_4)_2 + 2\\mathrm{SiO}_2 \\rightarrow 6\\mathrm{CaSiO}_3 + \\mathrm{P}_4\\mathrm{O}_{10}$\n(d) $\\mathrm{S} + 2\\mathrm{H}_2\\mathrm{SO}_4 \\rightarrow 3\\mathrm{SO}_2 + 2\\mathrm{H}_2\\mathrm{O}$"
+    },
+    {
+      "block_id": "20260317_4727bd55-8af6-4d15-a02f-1df09d43b2da_10_block_008",
+      "coordinates": {
+        "x1": 233.0,
+        "y1": 1516.0,
+        "x2": 1696.0,
+        "y2": 1692.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8772836327552795,
+      "reading_order": 9,
+      "text": "7. The atomic weight of a trivalent metal is 27. Calculate the molecular mass of\nits sulphate.\n(a) 294 (b) 342 (c) 318 (d) 366"
+    },
+    {
+      "block_id": "20260317_4727bd55-8af6-4d15-a02f-1df09d43b2da_10_block_009",
+      "coordinates": {
+        "x1": 232.0,
+        "y1": 1746.0,
+        "x2": 1515.0,
+        "y2": 1935.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8390767574310303,
+      "reading_order": 10,
+      "text": "8. $\\mathrm{H}_2 + \\mathrm{Cl}_2 \\rightarrow 2\\mathrm{HCl}$. The reaction is ______ as well as ______.\n(a) synthesis, displacement (b) analysis, combination\n(c) synthesis, combination (d) analysis, displacement"
+    },
+    {
+      "block_id": "20260317_4727bd55-8af6-4d15-a02f-1df09d43b2da_10_block_010",
+      "coordinates": {
+        "x1": 233.0,
+        "y1": 1989.0,
+        "x2": 1692.0,
+        "y2": 2235.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9277476668357849,
+      "reading_order": 11,
+      "text": "9. Study the reaction given below and calculate the weight of oxygen required\nto produce 45 g of NO?\n$\\mathrm{N}_2 + \\mathrm{O}_2 \\rightarrow \\mathrm{NO}$.\n(a) 32 g (b) 24 g (c) 48 g (d) 56 g"
+    },
+    {
+      "block_id": "20260317_4727bd55-8af6-4d15-a02f-1df09d43b2da_10_block_011",
+      "coordinates": {
+        "x1": 214.0,
+        "y1": 2287.0,
+        "x2": 1687.0,
+        "y2": 2467.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9106488823890686,
+      "reading_order": 12,
+      "text": "10. In which among the following compounds, the metal shows maximum\nvalency?\n(a) $\\mathrm{Na}_2\\mathrm{O}$ (b) ZnO (c) $\\mathrm{Fe}_2\\mathrm{O}_3$ (d) $\\mathrm{PbO}_2$"
+    },
+    {
+      "block_id": "20260317_4727bd55-8af6-4d15-a02f-1df09d43b2da_10_block_012",
+      "coordinates": {
+        "x1": 211.0,
+        "y1": 2519.0,
+        "x2": 1694.0,
+        "y2": 2695.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9100964069366455,
+      "reading_order": 13,
+      "text": "11. The ratio of weight of oxygen combining with fixed weight of sulphur in\n$\\mathrm{SO}_2$ and $\\mathrm{SO}_3$ is __________.\n(a) 3:2 (b) 2:3 (c) 2:1 (d) 1:2"
+    },
+    {
+      "block_id": "20260317_4727bd55-8af6-4d15-a02f-1df09d43b2da_10_block_013",
+      "coordinates": {
+        "x1": 214.0,
+        "y1": 2753.0,
+        "x2": 1645.0,
+        "y2": 2874.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8994413018226624,
+      "reading_order": 14,
+      "text": "12. Which among the following elements possesses maximum atomic mass?\n(a) Al (b) S (c) Ca (d) O"
+    },
+    {
+      "block_id": "20260317_4727bd55-8af6-4d15-a02f-1df09d43b2da_10_block_014",
+      "coordinates": {
+        "x1": 1790.0,
+        "y1": 311.0,
+        "x2": 2170.0,
+        "y2": 363.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5476974844932556,
+      "reading_order": 15,
+      "text": "Space for rough work"
+    }
+  ]
+}

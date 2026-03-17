@@ -1,0 +1,125 @@
+{
+  "page_num": 10,
+  "image_width": 2398,
+  "image_height": 3003,
+  "created_at": "2026-03-17T19:10:02.095363+00:00",
+  "blocks": [
+    {
+      "block_id": "20260317_d05caa04-bd91-4466-a2be-2396f2383528_10_block_000",
+      "coordinates": {
+        "x1": 184.0,
+        "y1": 184.0,
+        "x2": 910.0,
+        "y2": 240.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.7225446701049805,
+      "reading_order": 1,
+      "text": "6.10 Chapter 6 Carbon and Its Compounds"
+    },
+    {
+      "block_id": "20260317_d05caa04-bd91-4466-a2be-2396f2383528_10_block_001",
+      "coordinates": {
+        "x1": 234.0,
+        "y1": 291.0,
+        "x2": 1695.0,
+        "y2": 543.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9322569966316223,
+      "reading_order": 2,
+      "text": "8. Arrange the following fuels in the descending order of the ignition temperature.\n(A) Charcoal (B) Petroleum gas\n(C) Natural gas (D) Gasoline\n(a) DBCA (b) ADBC (c) CDBA (d) DCBA"
+    },
+    {
+      "block_id": "20260317_d05caa04-bd91-4466-a2be-2396f2383528_10_block_002",
+      "coordinates": {
+        "x1": 232.0,
+        "y1": 567.0,
+        "x2": 1696.0,
+        "y2": 1061.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9450284242630005,
+      "reading_order": 3,
+      "text": "9. Arrange the following reactants associated with methane in the order of\ntheir categories given below.\n(Substitution reaction, combustion reaction, cracking and manufacture)\n(A) Heating of $\\mathrm{CH}_4$ in absence of air.\n(B) Reaction between $\\mathrm{CH}_4$ and $\\mathrm{Cl}_2$ in the presence of sunlight.\n(C) Heating anhydrous sodium acetate with soda lime.\n(D) Reaction between $\\mathrm{CH}_4$ and $\\mathrm{O}_2$.\n(a) CDBA (b) ACBD (c) BDAC (d) BDCA"
+    },
+    {
+      "block_id": "20260317_d05caa04-bd91-4466-a2be-2396f2383528_10_block_003",
+      "coordinates": {
+        "x1": 214.0,
+        "y1": 1083.0,
+        "x2": 1700.0,
+        "y2": 1325.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9466423988342285,
+      "reading_order": 4,
+      "text": "10. The nature of the product which is not a gas obtained during hydrolysis of\ncalcium carbide is ______.\n(a) basic (b) strongly acidic\n(c) neutral (d) weakly acidic"
+    },
+    {
+      "block_id": "20260317_d05caa04-bd91-4466-a2be-2396f2383528_10_block_004",
+      "coordinates": {
+        "x1": 212.0,
+        "y1": 1350.0,
+        "x2": 1676.0,
+        "y2": 1663.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9425417184829712,
+      "reading_order": 5,
+      "text": "11. Thermal decomposition of sodium bicarbonate is associated with ______.\n(a) dry powder fire extinguisher\n(b) liquid $\\text{CO}_2$ fire extinguisher\n(c) soda-acid fire extinguisher\n(d) foam-type of fire extinguisher"
+    },
+    {
+      "block_id": "20260317_d05caa04-bd91-4466-a2be-2396f2383528_10_block_005",
+      "coordinates": {
+        "x1": 211.0,
+        "y1": 1688.0,
+        "x2": 1690.0,
+        "y2": 1933.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9444169402122498,
+      "reading_order": 6,
+      "text": "12. Passing excess $\\mathrm{CO}_2$ through milky lime water makes it clear due to the for-\nmation of ______.\n(a) $\\mathrm{CaCO}_3$ (b) $\\mathrm{Na_2CO}_3$\n(c) $\\mathrm{NaHCO}_3$ (d) $\\mathrm{Ca}(\\mathrm{HCO}_3)_2$"
+    },
+    {
+      "block_id": "20260317_d05caa04-bd91-4466-a2be-2396f2383528_10_block_006",
+      "coordinates": {
+        "x1": 213.0,
+        "y1": 1955.0,
+        "x2": 1697.0,
+        "y2": 2197.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9440295696258545,
+      "reading_order": 7,
+      "text": "13. Which of the following types of coal, on destructive distillation, gives rise to\nthe minimum yield of coke?\n(a) Peat (b) Bituminous\n(c) Lignite (d) Anthracite"
+    },
+    {
+      "block_id": "20260317_d05caa04-bd91-4466-a2be-2396f2383528_10_block_007",
+      "coordinates": {
+        "x1": 211.0,
+        "y1": 2220.0,
+        "x2": 1335.0,
+        "y2": 2536.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9384320974349976,
+      "reading_order": 8,
+      "text": "14. Identify the process of releasing $\\mathrm{CO}_2$ in the atmosphere.\n(a) Dissolution of $\\mathrm{CO}_2$ in water bodies\n(b) Formation of fossil fuel from dead remains\n(c) Respiration\n(d) Afforestation"
+    },
+    {
+      "block_id": "20260317_d05caa04-bd91-4466-a2be-2396f2383528_10_block_008",
+      "coordinates": {
+        "x1": 1790.0,
+        "y1": 312.0,
+        "x2": 2170.0,
+        "y2": 363.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5082327723503113,
+      "reading_order": 9,
+      "text": "Space for rough work"
+    }
+  ]
+}

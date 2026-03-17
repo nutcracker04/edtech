@@ -1,0 +1,177 @@
+{
+  "page_num": 5,
+  "image_width": 2398,
+  "image_height": 3003,
+  "created_at": "2026-03-17T19:10:15.617985+00:00",
+  "blocks": [
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_5_block_000",
+      "coordinates": {
+        "x1": 1840.0,
+        "y1": 188.0,
+        "x2": 2051.0,
+        "y2": 238.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.8122625946998596,
+      "reading_order": 1,
+      "text": "Answer Keys"
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_5_block_001",
+      "coordinates": {
+        "x1": 2092.0,
+        "y1": 183.0,
+        "x2": 2208.0,
+        "y2": 235.0
+      },
+      "layout_tag": "page-number",
+      "confidence": 0.7128438949584961,
+      "reading_order": 2,
+      "text": "7.13"
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_5_block_002",
+      "coordinates": {
+        "x1": 210.0,
+        "y1": 288.0,
+        "x2": 1688.0,
+        "y2": 479.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.48474371433258057,
+      "reading_order": 3,
+      "text": "14. Which of the following gases is a reducing agent and is used to identify cer-\ntain metals present in the given salt?\n(a) $\\mathrm{Cl}_2$ (b) $\\mathrm{H}_2\\mathrm{S}$ (c) $\\mathrm{SO}_2$ (d) $\\mathrm{O}_2$"
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_5_block_003",
+      "coordinates": {
+        "x1": 213.0,
+        "y1": 494.0,
+        "x2": 1332.0,
+        "y2": 546.0
+      },
+      "layout_tag": "image-caption",
+      "confidence": 0.7599169015884399,
+      "reading_order": 4,
+      "text": "15. Match the entries of Column A with those of Column B."
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_5_block_004",
+      "coordinates": {
+        "x1": 299.0,
+        "y1": 568.0,
+        "x2": 1653.0,
+        "y2": 1087.0
+      },
+      "layout_tag": "table",
+      "confidence": 0.9021183252334595,
+      "reading_order": 5,
+      "text": "<table>\n<thead>\n<tr>\n<th>Column A</th>\n<th>Column B</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>(i) Electrolysis of saturated brine solution</td>\n<td>(A) CaOCl2</td>\n</tr>\n<tr>\n<td>(ii) Thermal decomposition of limestone</td>\n<td>(B) NH4Cl</td>\n</tr>\n<tr>\n<td>(iii) On decomposition produces two gases</td>\n<td>(C) CaO</td>\n</tr>\n<tr>\n<td>(iv) Produces nascent oxygen</td>\n<td>(D) Conc. H2SO4</td>\n</tr>\n<tr>\n<td>(v) Removes hydrogen and oxygen in the form<br/>of a water molecule from a compound</td>\n<td>(E) NaOH</td>\n</tr>\n</tbody>\n</table>"
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_5_block_005",
+      "coordinates": {
+        "x1": 287.0,
+        "y1": 1125.0,
+        "x2": 1474.0,
+        "y2": 1183.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6466401815414429,
+      "reading_order": 6,
+      "text": "(a) (i) → (E); (ii) → (C); (iii) → (B); (iv) → (A); (v) → (D)"
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_5_block_006",
+      "coordinates": {
+        "x1": 288.0,
+        "y1": 1188.0,
+        "x2": 1473.0,
+        "y2": 1245.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6689335107803345,
+      "reading_order": 7,
+      "text": "(b) (i) $\\rightarrow$ (E); (ii) $\\rightarrow$ (C); (iii) $\\rightarrow$ (B); (iv) $\\rightarrow$ (D); (v) $\\rightarrow$ (A)"
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_5_block_007",
+      "coordinates": {
+        "x1": 287.0,
+        "y1": 1251.0,
+        "x2": 1464.0,
+        "y2": 1307.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6946921944618225,
+      "reading_order": 8,
+      "text": "(c) (i) $\\rightarrow$ (B); (ii) $\\rightarrow$ (C); (iii) $\\rightarrow$ (D); (iv) $\\rightarrow$ (A); (v) $\\rightarrow$ (E)"
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_5_block_008",
+      "coordinates": {
+        "x1": 289.0,
+        "y1": 1314.0,
+        "x2": 1473.0,
+        "y2": 1371.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6701252460479736,
+      "reading_order": 9,
+      "text": "(d) (i) $\\rightarrow$ (B); (ii) $\\rightarrow$ (C); (iii) $\\rightarrow$ (D); (iv) $\\rightarrow$ (E); (v) $\\rightarrow$ (A)"
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_5_block_009",
+      "coordinates": {
+        "x1": 1787.0,
+        "y1": 312.0,
+        "x2": 2172.0,
+        "y2": 365.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5999006628990173,
+      "reading_order": 10,
+      "text": "Space for rough work"
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_5_block_010",
+      "coordinates": {
+        "x1": 934.0,
+        "y1": 1887.0,
+        "x2": 1459.0,
+        "y2": 1978.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.8717454671859741,
+      "reading_order": 11,
+      "text": "Answer Keys"
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_5_block_011",
+      "coordinates": {
+        "x1": 217.0,
+        "y1": 2008.0,
+        "x2": 642.0,
+        "y2": 2062.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.8119192123413086,
+      "reading_order": 12,
+      "text": "Assessment Test I"
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_5_block_012",
+      "coordinates": {
+        "x1": 220.0,
+        "y1": 2008.0,
+        "x2": 2190.0,
+        "y2": 2849.0
+      },
+      "layout_tag": "table",
+      "confidence": 0.2725003957748413,
+      "reading_order": 13,
+      "text": "<table>\n<thead>\n<tr>\n<th colspan=\"9\">Assessment Test I</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>1. (c)</td>\n<td>2. (a)</td>\n<td>3. (a)</td>\n<td>4. (c)</td>\n<td>5. (a)</td>\n<td>6. (a)</td>\n<td>7. (c)</td>\n<td>8. (b)</td>\n<td>9. (c)</td>\n<td>10. (c)</td>\n</tr>\n<tr>\n<td>11. (a)</td>\n<td>12. (a)</td>\n<td>13. (a)</td>\n<td>14. (a)</td>\n<td>15. (b)</td>\n<td></td>\n<td></td>\n<td></td>\n<td></td>\n<td></td>\n</tr>\n</tbody>\n<thead>\n<tr>\n<th colspan=\"9\">Assessment Test II</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>1. (b)</td>\n<td>2. (a)</td>\n<td>3. (a)</td>\n<td>4. (a)</td>\n<td>5. (c)</td>\n<td>6. (b)</td>\n<td>7. (b)</td>\n<td>8. (c)</td>\n<td>9. (b)</td>\n<td>10. (b)</td>\n</tr>\n<tr>\n<td>11. (c)</td>\n<td>12. (b)</td>\n<td>13. (c)</td>\n<td>14. (c)</td>\n<td>15. (c)</td>\n<td></td>\n<td></td>\n<td></td>\n<td></td>\n<td></td>\n</tr>\n</tbody>\n<thead>\n<tr>\n<th colspan=\"9\">Assessment Test III</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>1. (a)</td>\n<td>2. (d)</td>\n<td>3. (a)</td>\n<td>4. (c)</td>\n<td>5. (c)</td>\n<td>6. (a)</td>\n<td>7. (c)</td>\n<td>8. (c)</td>\n<td>9. (a)</td>\n<td>10. (c)</td>\n</tr>\n<tr>\n<td>11. (b)</td>\n<td>12. (d)</td>\n<td>13. (d)</td>\n<td>14. (b)</td>\n<td>15. (a)</td>\n<td></td>\n<td></td>\n<td></td>\n<td></td>\n<td></td>\n</tr>\n</tbody>\n<thead>\n<tr>\n<th colspan=\"9\">Assessment Test IV</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>1. (c)</td>\n<td>2. (d)</td>\n<td>3. (c)</td>\n<td>4. (b)</td>\n<td>5. (d)</td>\n<td>6. (b)</td>\n<td>7. (b)</td>\n<td>8. (a)</td>\n<td>9. (d)</td>\n<td>10. (d)</td>\n</tr>\n<tr>\n<td>11. (c)</td>\n<td>12. (a)</td>\n<td>13. (d)</td>\n<td>14. (b)</td>\n<td>15. (a)</td>\n<td></td>\n<td></td>\n<td></td>\n<td></td>\n<td></td>\n</tr>\n</tbody>\n</table>"
+    }
+  ]
+}

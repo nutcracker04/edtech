@@ -1,0 +1,294 @@
+{
+  "page_num": 10,
+  "image_width": 2398,
+  "image_height": 3003,
+  "created_at": "2026-03-17T19:10:27.723121+00:00",
+  "blocks": [
+    {
+      "block_id": "20260317_fac1ab83-81e6-422f-84cf-3b23b86ae39a_10_block_000",
+      "coordinates": {
+        "x1": 183.0,
+        "y1": 183.0,
+        "x2": 747.0,
+        "y2": 239.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.837666928768158,
+      "reading_order": 1,
+      "text": "A.14 Chapter 4 Air and Oxygen"
+    },
+    {
+      "block_id": "20260317_fac1ab83-81e6-422f-84cf-3b23b86ae39a_10_block_001",
+      "coordinates": {
+        "x1": 969.0,
+        "y1": 315.0,
+        "x2": 1439.0,
+        "y2": 465.0
+      },
+      "layout_tag": "headline",
+      "confidence": 0.5206522345542908,
+      "reading_order": 2,
+      "text": "CHAPTER 4\nAir and Oxygen"
+    },
+    {
+      "block_id": "20260317_fac1ab83-81e6-422f-84cf-3b23b86ae39a_10_block_002",
+      "coordinates": {
+        "x1": 189.0,
+        "y1": 516.0,
+        "x2": 603.0,
+        "y2": 570.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.8505904674530029,
+      "reading_order": 3,
+      "text": "Assessment Test I"
+    },
+    {
+      "block_id": "20260317_fac1ab83-81e6-422f-84cf-3b23b86ae39a_10_block_003",
+      "coordinates": {
+        "x1": 233.0,
+        "y1": 611.0,
+        "x2": 1169.0,
+        "y2": 785.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9229928851127625,
+      "reading_order": 4,
+      "text": "1. In stratosphere, the temperature increases due\nto the increase in altitude.\nHence, the correct option is (b)."
+    },
+    {
+      "block_id": "20260317_fac1ab83-81e6-422f-84cf-3b23b86ae39a_10_block_004",
+      "coordinates": {
+        "x1": 229.0,
+        "y1": 808.0,
+        "x2": 998.0,
+        "y2": 1101.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9256574511528015,
+      "reading_order": 5,
+      "text": "2. 76 cm of Hg $\\rightarrow$ 101292 Pascal\n$\\therefore$ 19 cm Hg $\\rightarrow$?\n$= \\frac{1,01,292 \\times 19}{76}$ Pascal = 25,323 Pascal\nHence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260317_fac1ab83-81e6-422f-84cf-3b23b86ae39a_10_block_005",
+      "coordinates": {
+        "x1": 235.0,
+        "y1": 1129.0,
+        "x2": 1169.0,
+        "y2": 1354.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9324013590812683,
+      "reading_order": 6,
+      "text": "3. Since water occupies one-fifth of the volume of\nthe inverted jar, it can be concluded that one-\nfifth of the volume of air is oxygen.\nHence, the correct option is (d)."
+    },
+    {
+      "block_id": "20260317_fac1ab83-81e6-422f-84cf-3b23b86ae39a_10_block_006",
+      "coordinates": {
+        "x1": 234.0,
+        "y1": 1381.0,
+        "x2": 996.0,
+        "y2": 1505.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9038406014442444,
+      "reading_order": 7,
+      "text": "4. Photosynthesis does not consume $\\mathrm{O}_2$.\nHence, the correct option is (a)."
+    },
+    {
+      "block_id": "20260317_fac1ab83-81e6-422f-84cf-3b23b86ae39a_10_block_007",
+      "coordinates": {
+        "x1": 235.0,
+        "y1": 1529.0,
+        "x2": 1168.0,
+        "y2": 1706.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9194319248199463,
+      "reading_order": 8,
+      "text": "5. Burning of petrol is an example of rapid com-\nbustion.\nHence, the correct option is (b)."
+    },
+    {
+      "block_id": "20260317_fac1ab83-81e6-422f-84cf-3b23b86ae39a_10_block_008",
+      "coordinates": {
+        "x1": 233.0,
+        "y1": 1731.0,
+        "x2": 1168.0,
+        "y2": 1905.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9097495079040527,
+      "reading_order": 9,
+      "text": "6. The innermost zone of a candle flame is the\ncoldest zone.\nHence, the correct option is (a)."
+    },
+    {
+      "block_id": "20260317_fac1ab83-81e6-422f-84cf-3b23b86ae39a_10_block_009",
+      "coordinates": {
+        "x1": 235.0,
+        "y1": 1928.0,
+        "x2": 1169.0,
+        "y2": 2105.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.900947630405426,
+      "reading_order": 10,
+      "text": "7. Fe forms a mixed oxide, i.e., $\\mathrm{Fe}_3\\mathrm{O}_4$ (FeO +\n$\\mathrm{Fe}_2\\mathrm{O}_3$) on reaction with $\\mathrm{O}_2$.\nHence, the correct option is (d)."
+    },
+    {
+      "block_id": "20260317_fac1ab83-81e6-422f-84cf-3b23b86ae39a_10_block_010",
+      "coordinates": {
+        "x1": 233.0,
+        "y1": 2130.0,
+        "x2": 1168.0,
+        "y2": 2359.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9019370675086975,
+      "reading_order": 11,
+      "text": "8. When a mixture of $\\mathrm{NH}_3$ and $\\mathrm{O}_2$ in 4:5 ratio is\npassed over platinum gauze at $800^\\circ\\mathrm{C}$, NO and\n$\\mathrm{H}_2\\mathrm{O}$ are formed.\nHence, the correct option is (a)."
+    },
+    {
+      "block_id": "20260317_fac1ab83-81e6-422f-84cf-3b23b86ae39a_10_block_011",
+      "coordinates": {
+        "x1": 231.0,
+        "y1": 2387.0,
+        "x2": 879.0,
+        "y2": 2510.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8519086241722107,
+      "reading_order": 12,
+      "text": "9. $\\mathrm{H}_2\\mathrm{S} + \\mathrm{O}_2 \\rightarrow \\mathrm{H}_2\\mathrm{O} + \\mathrm{SO}_2$\nHence, the correct option is (a)."
+    },
+    {
+      "block_id": "20260317_fac1ab83-81e6-422f-84cf-3b23b86ae39a_10_block_012",
+      "coordinates": {
+        "x1": 214.0,
+        "y1": 2536.0,
+        "x2": 1170.0,
+        "y2": 2710.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9180075526237488,
+      "reading_order": 13,
+      "text": "10. Surgical instruments are manufactured from\nstainless steel which is an alloy of iron.\nHence, the correct option is (d)."
+    },
+    {
+      "block_id": "20260317_fac1ab83-81e6-422f-84cf-3b23b86ae39a_10_block_013",
+      "coordinates": {
+        "x1": 214.0,
+        "y1": 2736.0,
+        "x2": 1171.0,
+        "y2": 2844.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9025983214378357,
+      "reading_order": 14,
+      "text": "11. Since combustion is an exothermic reaction, oxygen is used for the combustion of fuel"
+    },
+    {
+      "block_id": "20260317_fac1ab83-81e6-422f-84cf-3b23b86ae39a_10_block_014",
+      "coordinates": {
+        "x1": 1336.0,
+        "y1": 608.0,
+        "x2": 2192.0,
+        "y2": 733.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8998920321464539,
+      "reading_order": 15,
+      "text": "because it is a good supporter of combustion.\nHence, the correct option is (b)."
+    },
+    {
+      "block_id": "20260317_fac1ab83-81e6-422f-84cf-3b23b86ae39a_10_block_015",
+      "coordinates": {
+        "x1": 1262.0,
+        "y1": 765.0,
+        "x2": 2219.0,
+        "y2": 997.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8813722133636475,
+      "reading_order": 16,
+      "text": "12. Since air is a mixture of different gases and one\nof the components of air is oxygen, air sup-\nports combustion.\nHence, the correct option is (a)."
+    },
+    {
+      "block_id": "20260317_fac1ab83-81e6-422f-84cf-3b23b86ae39a_10_block_016",
+      "coordinates": {
+        "x1": 1262.0,
+        "y1": 1030.0,
+        "x2": 1964.0,
+        "y2": 1083.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5712599158287048,
+      "reading_order": 17,
+      "text": "13. The order of pollutants is DCAB."
+    },
+    {
+      "block_id": "20260317_fac1ab83-81e6-422f-84cf-3b23b86ae39a_10_block_017",
+      "coordinates": {
+        "x1": 1342.0,
+        "y1": 1105.0,
+        "x2": 2218.0,
+        "y2": 1207.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5596784353256226,
+      "reading_order": 18,
+      "text": "(D) Usage of electrostatic precipitators in industries."
+    },
+    {
+      "block_id": "20260317_fac1ab83-81e6-422f-84cf-3b23b86ae39a_10_block_018",
+      "coordinates": {
+        "x1": 1336.0,
+        "y1": 1221.0,
+        "x2": 2214.0,
+        "y2": 1523.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.4966758191585541,
+      "reading_order": 19,
+      "text": "(C) Developing a suitable substituent for the\nrefrigerant used in A/C, refrigerator, etc.\n(A) Usage of scrubber in industries\n(B) Controlling deforestation\nHence, the correct option is (d)."
+    },
+    {
+      "block_id": "20260317_fac1ab83-81e6-422f-84cf-3b23b86ae39a_10_block_019",
+      "coordinates": {
+        "x1": 1261.0,
+        "y1": 1557.0,
+        "x2": 1933.0,
+        "y2": 1935.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8953552842140198,
+      "reading_order": 20,
+      "text": "14. The required order is DCBA.\n(D) NO\n(C) $\\mathrm{CO}_2$\n(B) $\\mathrm{NO}_2$\n(A) $\\mathrm{P}_2\\mathrm{O}_5$\nHence, the correct option is (b)."
+    },
+    {
+      "block_id": "20260317_fac1ab83-81e6-422f-84cf-3b23b86ae39a_10_block_020",
+      "coordinates": {
+        "x1": 1265.0,
+        "y1": 1968.0,
+        "x2": 2123.0,
+        "y2": 2488.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.3830895721912384,
+      "reading_order": 21,
+      "text": "15. (i) → (D); (ii) → (C); (iii) → (A); (iv) → (B)\n\n$2\\mathrm{PbO}_2 \\xrightarrow{\\Delta} 2\\mathrm{PbO} + \\mathrm{O}_2$\nChocolate          Yellow\nbrown              litharge\n\n$2\\mathrm{HgO} \\xrightarrow{\\Delta} 2\\mathrm{Hg} + \\mathrm{O}_2$\n                      Mirror-like\n                      surface near\n                      the cooler parts of\n                      the test tube"
+    },
+    {
+      "block_id": "20260317_fac1ab83-81e6-422f-84cf-3b23b86ae39a_10_block_021",
+      "coordinates": {
+        "x1": 1340.0,
+        "y1": 2552.0,
+        "x2": 2058.0,
+        "y2": 2785.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5040827393531799,
+      "reading_order": 22,
+      "text": "$$ 2\\mathrm{Pb}_3\\mathrm{O}_4 \\xrightarrow{\\Delta} 6\\mathrm{PbO} + \\mathrm{O}_2 $$\n\nReddish brown residue\nwhich turns yellow on\ncooling"
+    }
+  ]
+}

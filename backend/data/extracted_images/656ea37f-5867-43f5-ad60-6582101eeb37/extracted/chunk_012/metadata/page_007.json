@@ -1,0 +1,307 @@
+{
+  "page_num": 7,
+  "image_width": 2398,
+  "image_height": 3003,
+  "created_at": "2026-03-17T19:10:27.677672+00:00",
+  "blocks": [
+    {
+      "block_id": "20260317_fac1ab83-81e6-422f-84cf-3b23b86ae39a_7_block_000",
+      "coordinates": {
+        "x1": 1696.0,
+        "y1": 186.0,
+        "x2": 2050.0,
+        "y2": 238.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.8778347373008728,
+      "reading_order": 1,
+      "text": "Hints and Explanations"
+    },
+    {
+      "block_id": "20260317_fac1ab83-81e6-422f-84cf-3b23b86ae39a_7_block_001",
+      "coordinates": {
+        "x1": 2091.0,
+        "y1": 184.0,
+        "x2": 2206.0,
+        "y2": 235.0
+      },
+      "layout_tag": "page-number",
+      "confidence": 0.795704185962677,
+      "reading_order": 2,
+      "text": "A.11"
+    },
+    {
+      "block_id": "20260317_fac1ab83-81e6-422f-84cf-3b23b86ae39a_7_block_002",
+      "coordinates": {
+        "x1": 298.0,
+        "y1": 302.0,
+        "x2": 1104.0,
+        "y2": 437.0
+      },
+      "layout_tag": "table",
+      "confidence": 0.7485924959182739,
+      "reading_order": 3,
+      "text": "<table>\n<tbody>\n<tr>\n<td>BaSO4</td>\n<td>Ba+2</td>\n<td>O2-2</td>\n</tr>\n<tr>\n<td>Pb3(PO4)4</td>\n<td>Pb+4</td>\n<td>PO4-3</td>\n</tr>\n</tbody>\n</table>"
+    },
+    {
+      "block_id": "20260317_fac1ab83-81e6-422f-84cf-3b23b86ae39a_7_block_003",
+      "coordinates": {
+        "x1": 289.0,
+        "y1": 447.0,
+        "x2": 887.0,
+        "y2": 501.0
+      },
+      "layout_tag": "footnote",
+      "confidence": 0.3330901265144348,
+      "reading_order": 4,
+      "text": "Hence, the correct option is (d)."
+    },
+    {
+      "block_id": "20260317_fac1ab83-81e6-422f-84cf-3b23b86ae39a_7_block_004",
+      "coordinates": {
+        "x1": 211.0,
+        "y1": 525.0,
+        "x2": 1171.0,
+        "y2": 1090.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9320817589759827,
+      "reading_order": 5,
+      "text": "12. Given that 100 g of metal oxide contains 60 g of\nmetal.\n$\\therefore$ 40 g of metal oxide contains ? g of metal.\n$= \\frac{40 \\times 60}{100} = 24$ g of metal\n$\\therefore$ Atomic weight of metal is 24 and the metal\nis Mg.\n$\\therefore$ Molecular weight of $\\mathrm{Mg}(\\mathrm{ClO}_4)_2 = 24 + 71 +$\n$128 = 223$\nHence, the correct option is (b)."
+    },
+    {
+      "block_id": "20260317_fac1ab83-81e6-422f-84cf-3b23b86ae39a_7_block_005",
+      "coordinates": {
+        "x1": 214.0,
+        "y1": 1121.0,
+        "x2": 1169.0,
+        "y2": 1355.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8969602584838867,
+      "reading_order": 6,
+      "text": "13. The ratio by weight of oxygen that combine\nwith fixed weight of nitrogen in NO, $\\mathrm{NO}_2$, and\n$\\mathrm{N}_2\\mathrm{O}_3$ is $1:2:3/2 = \\underline{2:4:3}$.\nHence, the correct option is (a)."
+    },
+    {
+      "block_id": "20260317_fac1ab83-81e6-422f-84cf-3b23b86ae39a_7_block_006",
+      "coordinates": {
+        "x1": 212.0,
+        "y1": 1380.0,
+        "x2": 1171.0,
+        "y2": 1734.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8825743794441223,
+      "reading_order": 7,
+      "text": "14. Formula of ferric hydrogen phosphate is\n$\\mathrm{Fe}_2(\\mathrm{HPO}_4)_3$.\n\n$$ \\therefore \\text{Ratio} = \\frac{2}{2 + 3 + 3 + 12} = \\frac{2}{20} = \\frac{1}{10} = 1:10 $$\n\nThe valency of $\\mathrm{HPO}_4 - 2$ is 2.\nHence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260317_fac1ab83-81e6-422f-84cf-3b23b86ae39a_7_block_007",
+      "coordinates": {
+        "x1": 213.0,
+        "y1": 1764.0,
+        "x2": 1169.0,
+        "y2": 2017.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8994618654251099,
+      "reading_order": 8,
+      "text": "15. More reactive metal displaces less reactive\nmetal from its aqueous solution. The order of\nreactivity of Zn, Fe, and Ni is Zn > Fe > Ni.\n\nHence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260317_fac1ab83-81e6-422f-84cf-3b23b86ae39a_7_block_008",
+      "coordinates": {
+        "x1": 193.0,
+        "y1": 2059.0,
+        "x2": 632.0,
+        "y2": 2113.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.8140527009963989,
+      "reading_order": 9,
+      "text": "Assessment Test II"
+    },
+    {
+      "block_id": "20260317_fac1ab83-81e6-422f-84cf-3b23b86ae39a_7_block_009",
+      "coordinates": {
+        "x1": 231.0,
+        "y1": 2158.0,
+        "x2": 1083.0,
+        "y2": 2425.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8890062570571899,
+      "reading_order": 10,
+      "text": "1. $\\mathrm{M(OH)_2 + 2HClO_4 \\rightarrow M(ClO_4)_2 + 2H_2O}$\n$\\downarrow$ $\\downarrow$ $\\downarrow$ $\\downarrow$\nBivalent metal Perchloric Salt Water\nhydroxide acid\n\nHence, the correct option is (a)."
+    },
+    {
+      "block_id": "20260317_fac1ab83-81e6-422f-84cf-3b23b86ae39a_7_block_010",
+      "coordinates": {
+        "x1": 234.0,
+        "y1": 2450.0,
+        "x2": 1167.0,
+        "y2": 2686.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8890815377235413,
+      "reading_order": 11,
+      "text": "2. Valency of Y in $\\mathrm{H}_2\\mathrm{Y}$ with respect to hydrogen\nis 2. The oxides of Y in which the valencies of Y\ndiffer by two units are $\\mathrm{YO}_2$ and $\\mathrm{YO}_3$.\nHence, the correct option is (b)."
+    },
+    {
+      "block_id": "20260317_fac1ab83-81e6-422f-84cf-3b23b86ae39a_7_block_011",
+      "coordinates": {
+        "x1": 234.0,
+        "y1": 2709.0,
+        "x2": 1170.0,
+        "y2": 2875.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9128377437591553,
+      "reading_order": 12,
+      "text": "3. The monovalent +ve radical with four hydro-\ngen is $\\mathrm{AH}_4^{+1}$ and bivalent –ve radical with four\noxygen atoms $\\mathrm{BO}_4^{-2}$."
+    },
+    {
+      "block_id": "20260317_fac1ab83-81e6-422f-84cf-3b23b86ae39a_7_block_012",
+      "coordinates": {
+        "x1": 1346.0,
+        "y1": 288.0,
+        "x2": 2216.0,
+        "y2": 460.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8746790885925293,
+      "reading_order": 13,
+      "text": "$\\therefore$ The formula of the salt is $\\mathrm{AH}_4^{+1}$, $\\mathrm{BO}_4^{-2} =$ $(\\mathrm{AH}_4)_2\\mathrm{BO}_4$.\nHence, the correct option is (d)."
+    },
+    {
+      "block_id": "20260317_fac1ab83-81e6-422f-84cf-3b23b86ae39a_7_block_013",
+      "coordinates": {
+        "x1": 1282.0,
+        "y1": 501.0,
+        "x2": 2037.0,
+        "y2": 682.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8704515695571899,
+      "reading_order": 14,
+      "text": "4. The formula of acid is $\\mathrm{H}_3\\mathrm{XO}_4$.\n$\\mathrm{H}_3\\mathrm{XO}_4 + \\mathrm{M}(\\mathrm{OH})_2 \\rightarrow \\mathrm{M}_3(\\mathrm{XO}_4)_2 + \\mathrm{H}_2\\mathrm{O}$\nHence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260317_fac1ab83-81e6-422f-84cf-3b23b86ae39a_7_block_014",
+      "coordinates": {
+        "x1": 1282.0,
+        "y1": 716.0,
+        "x2": 2223.0,
+        "y2": 1010.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8190835118293762,
+      "reading_order": 15,
+      "text": "5. Copper can form two oxides $\\mathrm{Cu}_2\\mathrm{O}$ and $\\mathrm{CuO}$\nin which the valency of Cu is 1 and 2, respec-\ntively. Similarly Hg can form two oxides $\\mathrm{Hg}_2\\mathrm{O}$\nand $\\mathrm{HgO}$ in which the valency of Hg is 1 and\n+2, respectively."
+    },
+    {
+      "block_id": "20260317_fac1ab83-81e6-422f-84cf-3b23b86ae39a_7_block_015",
+      "coordinates": {
+        "x1": 1282.0,
+        "y1": 1088.0,
+        "x2": 2146.0,
+        "y2": 1217.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.810041606426239,
+      "reading_order": 16,
+      "text": "6. P is $\\mathrm{A}_2\\mathrm{O}_3$, Q is AO, R is $\\mathrm{A}_2\\mathrm{O}_5$, and S is $\\mathrm{A}_2\\mathrm{O}$.\nHence, the correct option is (a)."
+    },
+    {
+      "block_id": "20260317_fac1ab83-81e6-422f-84cf-3b23b86ae39a_7_block_016",
+      "coordinates": {
+        "x1": 1282.0,
+        "y1": 1239.0,
+        "x2": 2220.0,
+        "y2": 1419.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8776280879974365,
+      "reading_order": 17,
+      "text": "7. Carbonate $\\rightarrow \\mathrm{CO}_3^{-2}$, sulphate $\\mathrm{SO}_4^{-2}$, chlorite $\\rightarrow$\n$\\mathrm{ClO}_2^{-1}$, and Hydroxide $\\rightarrow \\mathrm{OH}^-$\nHence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260317_fac1ab83-81e6-422f-84cf-3b23b86ae39a_7_block_017",
+      "coordinates": {
+        "x1": 1281.0,
+        "y1": 1442.0,
+        "x2": 1960.0,
+        "y2": 1570.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.833102285861969,
+      "reading_order": 18,
+      "text": "8. $\\mathrm{Ca(OH)}_2 + \\mathrm{CO}_2 \\rightarrow \\mathrm{CaCO}_3 + \\mathrm{H}_2\\mathrm{O}$\nHence, the correct option is (a)."
+    },
+    {
+      "block_id": "20260317_fac1ab83-81e6-422f-84cf-3b23b86ae39a_7_block_018",
+      "coordinates": {
+        "x1": 1281.0,
+        "y1": 1601.0,
+        "x2": 2214.0,
+        "y2": 1837.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8814666867256165,
+      "reading_order": 19,
+      "text": "9. Valency of X in $\\mathrm{XH}_2$ is 2 and X can form is $\\mathrm{X}^{+2}$. Y\nis P and it can form $\\mathrm{P}^{-3}$ ion. The formula is $\\mathrm{X}^{+2}$,\n$\\mathrm{P}^{-3} \\rightarrow \\mathrm{X}_3\\mathrm{P}_2$.\nHence, the correct option is (b)."
+    },
+    {
+      "block_id": "20260317_fac1ab83-81e6-422f-84cf-3b23b86ae39a_7_block_019",
+      "coordinates": {
+        "x1": 1262.0,
+        "y1": 1867.0,
+        "x2": 2181.0,
+        "y2": 2119.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9017422795295715,
+      "reading_order": 20,
+      "text": "10. Cations formed by metal M are $\\mathrm{M}^{+1}$ and $\\mathrm{M}^{+2}$.\nFormulae of nitrates are $\\mathrm{MnO}_3$, $\\mathrm{M}(\\mathrm{NO}_3)_2$.\nFormulae of nitrides are $\\mathrm{M}_3\\mathrm{N}$, $\\mathrm{M}_3\\mathrm{N}_2$.\nHence, the correct option is (a)."
+    },
+    {
+      "block_id": "20260317_fac1ab83-81e6-422f-84cf-3b23b86ae39a_7_block_020",
+      "coordinates": {
+        "x1": 1264.0,
+        "y1": 2145.0,
+        "x2": 1971.0,
+        "y2": 2469.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8602643609046936,
+      "reading_order": 21,
+      "text": "11. Mercuric oxide ($\\mathrm{HgO}$) $\\rightarrow$ 2\nSodium peroxide ($\\mathrm{Na}_2\\mathrm{O}_2$) $\\rightarrow$ 4\nFerrous sulphate ($\\mathrm{FeSO}_4$) $\\rightarrow$ 6\nSodium phosphate ($\\mathrm{Na}_3\\mathrm{PO}_4$) $\\rightarrow$ 8\nHence, the correct option is (d)."
+    },
+    {
+      "block_id": "20260317_fac1ab83-81e6-422f-84cf-3b23b86ae39a_7_block_021",
+      "coordinates": {
+        "x1": 1264.0,
+        "y1": 2494.0,
+        "x2": 2072.0,
+        "y2": 2620.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8507463335990906,
+      "reading_order": 22,
+      "text": "12. The molecular weight of $\\mathrm{CaCO}_3$ is 100.\nHence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260317_fac1ab83-81e6-422f-84cf-3b23b86ae39a_7_block_022",
+      "coordinates": {
+        "x1": 1264.0,
+        "y1": 2644.0,
+        "x2": 2222.0,
+        "y2": 2878.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8868433833122253,
+      "reading_order": 23,
+      "text": "13. In $\\mathrm{N}_2\\mathrm{O}$, $\\mathrm{N}_2\\mathrm{O}_5$, and $\\mathrm{NO}$, the ratio by weight\nof oxygen that combine with fixed weight of\nnitrogen is 1:5:2.\n\nHence, the correct option is (d)."
+    }
+  ]
+}

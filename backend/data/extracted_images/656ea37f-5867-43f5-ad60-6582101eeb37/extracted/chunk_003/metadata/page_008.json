@@ -1,0 +1,242 @@
+{
+  "page_num": 8,
+  "image_width": 2398,
+  "image_height": 3003,
+  "created_at": "2026-03-17T19:09:21.980012+00:00",
+  "blocks": [
+    {
+      "block_id": "20260317_4c23c5f9-000a-496f-93a5-dce491a9753e_8_block_000",
+      "coordinates": {
+        "x1": 191.0,
+        "y1": 184.0,
+        "x2": 766.0,
+        "y2": 239.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.7897051572799683,
+      "reading_order": 1,
+      "text": "1.14 Chapter 1 Atomic Structure"
+    },
+    {
+      "block_id": "20260317_4c23c5f9-000a-496f-93a5-dce491a9753e_8_block_001",
+      "coordinates": {
+        "x1": 212.0,
+        "y1": 291.0,
+        "x2": 1330.0,
+        "y2": 342.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.45203202962875366,
+      "reading_order": 2,
+      "text": "15. Match the entries of Column A with those of Column B."
+    },
+    {
+      "block_id": "20260317_4c23c5f9-000a-496f-93a5-dce491a9753e_8_block_002",
+      "coordinates": {
+        "x1": 297.0,
+        "y1": 357.0,
+        "x2": 1253.0,
+        "y2": 748.0
+      },
+      "layout_tag": "table",
+      "confidence": 0.9182674288749695,
+      "reading_order": 3,
+      "text": "<table>\n<thead>\n<tr>\n<th>Column A<br/>(Element)</th>\n<th>Column B<br/>(Number of Electrons in<br/>Penultimate Shell)</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>(i) Chlorine</td>\n<td>(A) 9</td>\n</tr>\n<tr>\n<td>(ii) Oxygen</td>\n<td>(B) 18</td>\n</tr>\n<tr>\n<td>(iii) Zinc</td>\n<td>(C) 2</td>\n</tr>\n<tr>\n<td>(iv) Scandium</td>\n<td>(D) 8</td>\n</tr>\n</tbody>\n</table>"
+    },
+    {
+      "block_id": "20260317_4c23c5f9-000a-496f-93a5-dce491a9753e_8_block_003",
+      "coordinates": {
+        "x1": 290.0,
+        "y1": 766.0,
+        "x2": 1247.0,
+        "y2": 822.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7520909905433655,
+      "reading_order": 4,
+      "text": "(a) (i) → (B); (ii) → (C); (iii) → (D); (iv) → (A)"
+    },
+    {
+      "block_id": "20260317_4c23c5f9-000a-496f-93a5-dce491a9753e_8_block_004",
+      "coordinates": {
+        "x1": 1790.0,
+        "y1": 312.0,
+        "x2": 2169.0,
+        "y2": 364.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.652690589427948,
+      "reading_order": 5,
+      "text": "Space for rough work"
+    },
+    {
+      "block_id": "20260317_4c23c5f9-000a-496f-93a5-dce491a9753e_8_block_005",
+      "coordinates": {
+        "x1": 289.0,
+        "y1": 827.0,
+        "x2": 1247.0,
+        "y2": 884.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7790824174880981,
+      "reading_order": 6,
+      "text": "(b) (i) $\\rightarrow$ (B); (ii) $\\rightarrow$ (A); (iii) $\\rightarrow$ (D); (iv) $\\rightarrow$ (C)"
+    },
+    {
+      "block_id": "20260317_4c23c5f9-000a-496f-93a5-dce491a9753e_8_block_006",
+      "coordinates": {
+        "x1": 289.0,
+        "y1": 890.0,
+        "x2": 1247.0,
+        "y2": 947.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7895641922950745,
+      "reading_order": 7,
+      "text": "(c) (i) $\\rightarrow$ (B); (ii) $\\rightarrow$ (D); (iii) $\\rightarrow$ (A); (iv) $\\rightarrow$ (C)"
+    },
+    {
+      "block_id": "20260317_4c23c5f9-000a-496f-93a5-dce491a9753e_8_block_007",
+      "coordinates": {
+        "x1": 291.0,
+        "y1": 954.0,
+        "x2": 1241.0,
+        "y2": 1012.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8000136613845825,
+      "reading_order": 8,
+      "text": "(d) (i) $\\rightarrow$ (D); (ii) $\\rightarrow$ (C); (iii) $\\rightarrow$ (B); (iv) $\\rightarrow$ (A)"
+    },
+    {
+      "block_id": "20260317_4c23c5f9-000a-496f-93a5-dce491a9753e_8_block_008",
+      "coordinates": {
+        "x1": 935.0,
+        "y1": 1853.0,
+        "x2": 1460.0,
+        "y2": 1945.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.8733706474304199,
+      "reading_order": 9,
+      "text": "Answer Keys"
+    },
+    {
+      "block_id": "20260317_4c23c5f9-000a-496f-93a5-dce491a9753e_8_block_009",
+      "coordinates": {
+        "x1": 218.0,
+        "y1": 1971.0,
+        "x2": 643.0,
+        "y2": 2027.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.8049253225326538,
+      "reading_order": 10,
+      "text": "Assessment Test I"
+    },
+    {
+      "block_id": "20260317_4c23c5f9-000a-496f-93a5-dce491a9753e_8_block_010",
+      "coordinates": {
+        "x1": 241.0,
+        "y1": 2033.0,
+        "x2": 2174.0,
+        "y2": 2098.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.30227863788604736,
+      "reading_order": 11,
+      "text": "1. (a) 2. (d) 3. (c) 4. (c) 5. (d) 6. (b) 7. (c) 8. (b) 9. (d) 10. (c)"
+    },
+    {
+      "block_id": "20260317_4c23c5f9-000a-496f-93a5-dce491a9753e_8_block_011",
+      "coordinates": {
+        "x1": 232.0,
+        "y1": 2092.0,
+        "x2": 1172.0,
+        "y2": 2145.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.34141167998313904,
+      "reading_order": 12,
+      "text": "11. (a) 12. (a) 13. (c) 14. (b) 15. (a)"
+    },
+    {
+      "block_id": "20260317_4c23c5f9-000a-496f-93a5-dce491a9753e_8_block_012",
+      "coordinates": {
+        "x1": 218.0,
+        "y1": 2194.0,
+        "x2": 660.0,
+        "y2": 2247.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.7900508046150208,
+      "reading_order": 13,
+      "text": "Assessment Test II"
+    },
+    {
+      "block_id": "20260317_4c23c5f9-000a-496f-93a5-dce491a9753e_8_block_013",
+      "coordinates": {
+        "x1": 231.0,
+        "y1": 2257.0,
+        "x2": 2174.0,
+        "y2": 2365.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.41968339681625366,
+      "reading_order": 14,
+      "text": "1. (c) 2. (d) 3. (c) 4. (b) 5. (d) 6. (c) 7. (b) 8. (c) 9. (a) 10. (b)\n11. (d) 12. (b) 13. (a) 14. (c) 15. (a)"
+    },
+    {
+      "block_id": "20260317_4c23c5f9-000a-496f-93a5-dce491a9753e_8_block_014",
+      "coordinates": {
+        "x1": 218.0,
+        "y1": 2414.0,
+        "x2": 683.0,
+        "y2": 2469.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.8182201981544495,
+      "reading_order": 15,
+      "text": "Assessment Test III"
+    },
+    {
+      "block_id": "20260317_4c23c5f9-000a-496f-93a5-dce491a9753e_8_block_015",
+      "coordinates": {
+        "x1": 228.0,
+        "y1": 2475.0,
+        "x2": 2170.0,
+        "y2": 2597.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.3322521448135376,
+      "reading_order": 16,
+      "text": "1. (c) 2. (a) 3. (d) 4. (d) 5. (c) 6. (c) 7. (c) 8. (a) 9. (d) 10. (c)\n11. (c) 12. (b) 13. (c) 14. (b) 15. (b)"
+    },
+    {
+      "block_id": "20260317_4c23c5f9-000a-496f-93a5-dce491a9753e_8_block_016",
+      "coordinates": {
+        "x1": 219.0,
+        "y1": 2640.0,
+        "x2": 682.0,
+        "y2": 2695.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.8029057383537292,
+      "reading_order": 17,
+      "text": "Assessment Test IV"
+    },
+    {
+      "block_id": "20260317_4c23c5f9-000a-496f-93a5-dce491a9753e_8_block_017",
+      "coordinates": {
+        "x1": 233.0,
+        "y1": 2703.0,
+        "x2": 2167.0,
+        "y2": 2812.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.513779878616333,
+      "reading_order": 18,
+      "text": "1. (d) 2. (d) 3. (c) 4. (a) 5. (b) 6. (b) 7. (a) 8. (c) 9. (d) 10. (c)\n11. (b) 12. (a) 13. (d) 14. (b) 15. (d)"
+    }
+  ]
+}

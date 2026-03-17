@@ -1,0 +1,541 @@
+{
+  "page_num": 8,
+  "image_width": 2398,
+  "image_height": 3003,
+  "created_at": "2026-03-17T19:10:15.780366+00:00",
+  "blocks": [
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_8_block_000",
+      "coordinates": {
+        "x1": 202.0,
+        "y1": 186.0,
+        "x2": 763.0,
+        "y2": 239.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.39960959553718567,
+      "reading_order": 1,
+      "text": "A.2 Chapter 1 Atomic Structure"
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_8_block_001",
+      "coordinates": {
+        "x1": 211.0,
+        "y1": 291.0,
+        "x2": 1167.0,
+        "y2": 395.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8924063444137573,
+      "reading_order": 2,
+      "text": "10. (i) Combination of atoms in a simple numeri-\ncal ratio."
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_8_block_002",
+      "coordinates": {
+        "x1": 303.0,
+        "y1": 411.0,
+        "x2": 909.0,
+        "y2": 464.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8148513436317444,
+      "reading_order": 3,
+      "text": "(ii) Electrical neutrality of atom."
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_8_block_003",
+      "coordinates": {
+        "x1": 293.0,
+        "y1": 469.0,
+        "x2": 1169.0,
+        "y2": 571.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8924276828765869,
+      "reading_order": 4,
+      "text": "(iii) The diameter of nucleus as $10^{-5}$ times that\nof an atom."
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_8_block_004",
+      "coordinates": {
+        "x1": 291.0,
+        "y1": 578.0,
+        "x2": 1164.0,
+        "y2": 691.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8168712854385376,
+      "reading_order": 5,
+      "text": "(iv) Presence of electrons in K, L, M, and N shells.\nHence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_8_block_005",
+      "coordinates": {
+        "x1": 213.0,
+        "y1": 706.0,
+        "x2": 830.0,
+        "y2": 765.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7679181694984436,
+      "reading_order": 6,
+      "text": "11. (E) ${}_{12}\\mathrm{X}^{24} \\& {}_{20}\\mathrm{Y}^{40} \\rightarrow\\mathrm{Metals}$"
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_8_block_006",
+      "coordinates": {
+        "x1": 292.0,
+        "y1": 778.0,
+        "x2": 906.0,
+        "y2": 840.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7981321811676025,
+      "reading_order": 7,
+      "text": "(D) $_8X^{16} \\& {}_{16}Y^{32} \\rightarrow$ Non-metals"
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_8_block_007",
+      "coordinates": {
+        "x1": 298.0,
+        "y1": 845.0,
+        "x2": 928.0,
+        "y2": 906.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.808689534664154,
+      "reading_order": 8,
+      "text": "(B) ${}_{10}\\mathrm{X}^{20} \\& {}_{18}\\mathrm{Y}^{36} \\to$ Noble gases"
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_8_block_008",
+      "coordinates": {
+        "x1": 296.0,
+        "y1": 912.0,
+        "x2": 864.0,
+        "y2": 974.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8303099274635315,
+      "reading_order": 9,
+      "text": "(C) ${}_Z\\mathrm{A}^X \\& {}_Z\\mathrm{A}^{X+2} \\to$ Isotopes"
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_8_block_009",
+      "coordinates": {
+        "x1": 293.0,
+        "y1": 978.0,
+        "x2": 845.0,
+        "y2": 1041.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.807384192943573,
+      "reading_order": 10,
+      "text": "$$ (\\mathrm{A})_Z \\mathrm{A}^X \\&_{Z+2} \\mathrm{B}^X \\to \\mathrm{Isobars} $$"
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_8_block_010",
+      "coordinates": {
+        "x1": 290.0,
+        "y1": 1049.0,
+        "x2": 881.0,
+        "y2": 1104.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8119867444038391,
+      "reading_order": 11,
+      "text": "Hence, the correct option is (a)."
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_8_block_011",
+      "coordinates": {
+        "x1": 213.0,
+        "y1": 1120.0,
+        "x2": 495.0,
+        "y2": 1174.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.472196102142334,
+      "reading_order": 12,
+      "text": "12. (i) → (C)"
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_8_block_012",
+      "coordinates": {
+        "x1": 315.0,
+        "y1": 1187.0,
+        "x2": 1167.0,
+        "y2": 1339.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8244643211364746,
+      "reading_order": 13,
+      "text": "$Z = 21$ corresponds to electronic configura-\ntion 2, 8, 9, and 2. The ratio of electrons in\npenultimate shell to valence shell is 9:2."
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_8_block_013",
+      "coordinates": {
+        "x1": 306.0,
+        "y1": 1350.0,
+        "x2": 490.0,
+        "y2": 1402.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5089365243911743,
+      "reading_order": 14,
+      "text": "(ii) → (E)"
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_8_block_014",
+      "coordinates": {
+        "x1": 320.0,
+        "y1": 1407.0,
+        "x2": 1168.0,
+        "y2": 1561.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8697448968887329,
+      "reading_order": 15,
+      "text": "$Z = 30$ corresponds to electronic configura-\ntion 2, 8, 18, and 2. The ratio of electrons in\npenultimate shell to valence shell is 9:1."
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_8_block_015",
+      "coordinates": {
+        "x1": 295.0,
+        "y1": 1571.0,
+        "x2": 489.0,
+        "y2": 1624.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5900593400001526,
+      "reading_order": 16,
+      "text": "(iii) → (B)"
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_8_block_016",
+      "coordinates": {
+        "x1": 320.0,
+        "y1": 1631.0,
+        "x2": 1168.0,
+        "y2": 1786.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8797178864479065,
+      "reading_order": 17,
+      "text": "$Z = 20$ corresponds to electronic configura-\ntion 2, 8, 8, and 2. The ratio of electrons in\npenultimate shell to valence shell is 4:1."
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_8_block_017",
+      "coordinates": {
+        "x1": 296.0,
+        "y1": 1795.0,
+        "x2": 496.0,
+        "y2": 1849.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.4349437952041626,
+      "reading_order": 18,
+      "text": "(iv) → (A)"
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_8_block_018",
+      "coordinates": {
+        "x1": 316.0,
+        "y1": 1856.0,
+        "x2": 1168.0,
+        "y2": 2011.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8738127946853638,
+      "reading_order": 19,
+      "text": "$Z = 19$ corresponds to electronic configura-\ntion 2, 8, 8 and 1. The ratio of electrons in\npenultimate shell to valence shell is 8:1."
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_8_block_019",
+      "coordinates": {
+        "x1": 302.0,
+        "y1": 2021.0,
+        "x2": 496.0,
+        "y2": 2075.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.39067065715789795,
+      "reading_order": 20,
+      "text": "(V) → (D)"
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_8_block_020",
+      "coordinates": {
+        "x1": 323.0,
+        "y1": 2078.0,
+        "x2": 1167.0,
+        "y2": 2231.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.813575029373169,
+      "reading_order": 21,
+      "text": "$Z = 18$ corresponds to electronic configura-\ntion 2, 8 and 8. The ratio of electrons in penul-\ntimate shell to valence shell is 1:1."
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_8_block_021",
+      "coordinates": {
+        "x1": 293.0,
+        "y1": 2242.0,
+        "x2": 879.0,
+        "y2": 2297.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7077726721763611,
+      "reading_order": 22,
+      "text": "Hence, the correct option is (a)."
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_8_block_022",
+      "coordinates": {
+        "x1": 215.0,
+        "y1": 2319.0,
+        "x2": 1169.0,
+        "y2": 2537.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8969044089317322,
+      "reading_order": 23,
+      "text": "13. The anion formed from the given neutral atom\nis a dinegative ion which has the configuration\nof argon the electronic configuration of the ele-\nment is 2, 8 and 6."
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_8_block_023",
+      "coordinates": {
+        "x1": 284.0,
+        "y1": 2549.0,
+        "x2": 877.0,
+        "y2": 2605.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7600261569023132,
+      "reading_order": 24,
+      "text": "Hence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_8_block_024",
+      "coordinates": {
+        "x1": 213.0,
+        "y1": 2624.0,
+        "x2": 1170.0,
+        "y2": 2784.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8885936737060547,
+      "reading_order": 25,
+      "text": "14. The electrons number 36 does not correspond\nto $2n^2$ which gives the maximum number of\nelectrons in Bohr’s orbit."
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_8_block_025",
+      "coordinates": {
+        "x1": 276.0,
+        "y1": 2799.0,
+        "x2": 882.0,
+        "y2": 2854.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7218683362007141,
+      "reading_order": 26,
+      "text": "Hence, the correct option is (b)."
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_8_block_026",
+      "coordinates": {
+        "x1": 1261.0,
+        "y1": 291.0,
+        "x2": 2219.0,
+        "y2": 776.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9418801665306091,
+      "reading_order": 27,
+      "text": "15. Y can have an atomic number 30. The elec-\ntronic configuration for $Z = 30$ is 2, 8, 18,\nand 2. On losing two electrons, the result-\nant dipositive ion gets the configuration of\n2, 8, and 18, and does not have an octet. X is\nK(19) and its electronic configuration is 2, 8,\n8, and 1. On losing one electron, the resultant\nmono positive ion gets the configuration of 2,\n8, and 8."
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_8_block_027",
+      "coordinates": {
+        "x1": 1341.0,
+        "y1": 794.0,
+        "x2": 1929.0,
+        "y2": 850.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8094186186790466,
+      "reading_order": 28,
+      "text": "Hence, the correct option is (a)."
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_8_block_028",
+      "coordinates": {
+        "x1": 1240.0,
+        "y1": 902.0,
+        "x2": 1683.0,
+        "y2": 959.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.8206283450126648,
+      "reading_order": 29,
+      "text": "Assessment Test II"
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_8_block_029",
+      "coordinates": {
+        "x1": 1281.0,
+        "y1": 1004.0,
+        "x2": 2217.0,
+        "y2": 1223.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8672560453414917,
+      "reading_order": 30,
+      "text": "1. Law of definite proportions provided exper-\nimental basis for the postulate of Dalton’s\natomic theory that atoms of different elements\ncombine in a simple whole number ratio."
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_8_block_030",
+      "coordinates": {
+        "x1": 1336.0,
+        "y1": 1237.0,
+        "x2": 1928.0,
+        "y2": 1293.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.560294508934021,
+      "reading_order": 31,
+      "text": "Hence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_8_block_031",
+      "coordinates": {
+        "x1": 1281.0,
+        "y1": 1319.0,
+        "x2": 2220.0,
+        "y2": 1609.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9297312498092651,
+      "reading_order": 32,
+      "text": "2. The given atomic model is Bohr’s atomic\nmodel, which supported the presence of a\nnucleus at the centre of an atom. Thus, it con-\ntradicted the idea of uniform distribution of\npositive charge in an atom."
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_8_block_032",
+      "coordinates": {
+        "x1": 1340.0,
+        "y1": 1624.0,
+        "x2": 1933.0,
+        "y2": 1680.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7256602048873901,
+      "reading_order": 33,
+      "text": "Hence, the correct option is (d)."
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_8_block_033",
+      "coordinates": {
+        "x1": 1285.0,
+        "y1": 1706.0,
+        "x2": 2218.0,
+        "y2": 2037.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8359202742576599,
+      "reading_order": 34,
+      "text": "3. In the given figure, the naming of orbits is in\nthe order M, N, L, and K, whereas the usual\norder is K, L, M, and N, which corresponds to\n1, 2, 3, and 4. All the other aspects are in accord-\nance with the established facts.\nHence, the correct option is (c)."
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_8_block_034",
+      "coordinates": {
+        "x1": 1284.0,
+        "y1": 2074.0,
+        "x2": 2218.0,
+        "y2": 2399.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9222723245620728,
+      "reading_order": 35,
+      "text": "4. The energy of orbits increases with increase in\ndistance because the nuclear force of attraction\ndecreases with increase in distance. Since the\nfirst orbit is associated with the lowest energy,\nelectrons in that orbit do not lose energy at all.\nBoth the statements are correct."
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_8_block_035",
+      "coordinates": {
+        "x1": 1340.0,
+        "y1": 2416.0,
+        "x2": 1933.0,
+        "y2": 2471.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7591736912727356,
+      "reading_order": 36,
+      "text": "Hence, the correct option is (b)."
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_8_block_036",
+      "coordinates": {
+        "x1": 1282.0,
+        "y1": 2491.0,
+        "x2": 1883.0,
+        "y2": 2596.0
+      },
+      "layout_tag": "formula",
+      "confidence": 0.7461948990821838,
+      "reading_order": 37,
+      "text": "5. No. of protons = $\\frac{18370}{1837} = 10$"
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_8_block_037",
+      "coordinates": {
+        "x1": 1343.0,
+        "y1": 2612.0,
+        "x2": 1743.0,
+        "y2": 2664.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7006159424781799,
+      "reading_order": 38,
+      "text": "Atomic number = 10"
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_8_block_038",
+      "coordinates": {
+        "x1": 1342.0,
+        "y1": 2672.0,
+        "x2": 1851.0,
+        "y2": 2726.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.739947497844696,
+      "reading_order": 39,
+      "text": "Mass number = 20 + 2 = 22"
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_8_block_039",
+      "coordinates": {
+        "x1": 1342.0,
+        "y1": 2735.0,
+        "x2": 1915.0,
+        "y2": 2790.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7381283044815063,
+      "reading_order": 40,
+      "text": "No. of neutrons = 22 - 10 = 12."
+    },
+    {
+      "block_id": "20260317_18da70d8-38fc-4407-831c-8d2ad06d65ae_8_block_040",
+      "coordinates": {
+        "x1": 1341.0,
+        "y1": 2799.0,
+        "x2": 1933.0,
+        "y2": 2854.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7903826832771301,
+      "reading_order": 41,
+      "text": "Hence, the correct option is (d)."
+    }
+  ]
+}
