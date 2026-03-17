@@ -67,7 +67,10 @@ type Action =
   | { type: 'SET_OPERATION_ERROR'; payload: Error | null }
   | { type: 'UPDATE_QUESTION'; payload: RawQuestion }
   | { type: 'REMOVE_QUESTION'; payload: string }
-  | { type: 'RESET_STATE' };
+  | { type: 'RESET_STATE' }
+  | { type: 'UPDATE_JOB_IN_LIST'; payload: { id: string; updates: Partial<ExtractionJob> } }
+  | { type: 'UPSERT_JOB_IN_LIST'; payload: ExtractionJob }
+  | { type: 'REMOVE_JOB_FROM_LIST'; payload: string };
 
 const initialState: ExtractionManagementState = {
   jobs: [],
@@ -159,6 +162,25 @@ function extractionManagementReducer(
       };
     case 'RESET_STATE':
       return initialState;
+    case 'UPDATE_JOB_IN_LIST':
+      return {
+        ...state,
+        jobs: state.jobs.map((j) =>
+          j.id === action.payload.id ? { ...j, ...action.payload.updates } : j
+        ),
+      };
+    case 'UPSERT_JOB_IN_LIST':
+      return {
+        ...state,
+        jobs: state.jobs.some((j) => j.id === action.payload.id)
+          ? state.jobs.map((j) => (j.id === action.payload.id ? action.payload : j))
+          : [action.payload, ...state.jobs],
+      };
+    case 'REMOVE_JOB_FROM_LIST':
+      return {
+        ...state,
+        jobs: state.jobs.filter((j) => j.id !== action.payload),
+      };
     default:
       return state;
   }
@@ -189,6 +211,9 @@ interface ExtractionManagementContextType {
   updateQuestion: (question: RawQuestion) => void;
   removeQuestion: (questionId: string) => void;
   resetState: () => void;
+  updateJobInList: (jobId: string, updates: Partial<ExtractionJob>) => void;
+  upsertJobInList: (job: ExtractionJob) => void;
+  removeJobFromList: (jobId: string) => void;
 }
 
 const ExtractionManagementContext = createContext<ExtractionManagementContextType | undefined>(undefined);
@@ -288,6 +313,18 @@ export function ExtractionManagementProvider({ children }: { children: React.Rea
     dispatch({ type: 'RESET_STATE' });
   }, []);
 
+  const updateJobInList = useCallback((jobId: string, updates: Partial<ExtractionJob>) => {
+    dispatch({ type: 'UPDATE_JOB_IN_LIST', payload: { id: jobId, updates } });
+  }, []);
+
+  const upsertJobInList = useCallback((job: ExtractionJob) => {
+    dispatch({ type: 'UPSERT_JOB_IN_LIST', payload: job });
+  }, []);
+
+  const removeJobFromList = useCallback((jobId: string) => {
+    dispatch({ type: 'REMOVE_JOB_FROM_LIST', payload: jobId });
+  }, []);
+
   const value: ExtractionManagementContextType = {
     state,
     setJobs,
@@ -313,6 +350,9 @@ export function ExtractionManagementProvider({ children }: { children: React.Rea
     updateQuestion,
     removeQuestion,
     resetState,
+    updateJobInList,
+    upsertJobInList,
+    removeJobFromList,
   };
 
   return (
