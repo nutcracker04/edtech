@@ -22,7 +22,7 @@ from datetime import datetime, timezone
 from enum import Enum
 from pathlib import Path
 from typing import Any, Callable, Dict, List, Optional
-from uuid import uuid4
+from uuid import NAMESPACE_URL, UUID, uuid4, uuid5
 
 from dotenv import load_dotenv
 from pydantic import BaseModel, Field
@@ -751,6 +751,24 @@ class DocumentProcessor:
             
         except Exception as e:
             logger.error(f"Failed to update extraction_jobs record: {e}", exc_info=True)
+
+    @staticmethod
+    def _normalize_block_id(job_id: str, page_num: int, block_index: int, block: Dict[str, Any]) -> str:
+        """
+        Return a UUID-safe block ID for extraction_blocks.id.
+
+        Upstream block identifiers are not guaranteed to be UUIDs, while the
+        backend schema expects this column to be UUID-typed.
+        """
+        source_block_id = block.get("block_id")
+        if not source_block_id:
+            return str(uuid4())
+
+        try:
+            return str(UUID(str(source_block_id)))
+        except (TypeError, ValueError, AttributeError):
+            stable_key = f"{job_id}:{page_num}:{block_index}:{source_block_id}"
+            return str(uuid5(NAMESPACE_URL, stable_key))
     
     def _write_extraction_pages_and_blocks(
         self,
@@ -768,8 +786,6 @@ class DocumentProcessor:
         
         try:
             from datetime import datetime, timezone
-            from uuid import uuid4
-            from decimal import Decimal
             
             # Create extraction_pages record
             page_id = str(uuid4())
@@ -790,7 +806,12 @@ class DocumentProcessor:
             # Create extraction_blocks records
             blocks = page_data.get("blocks", [])
             for block_index, block in enumerate(blocks):
-                block_id = block.get("block_id", str(uuid4()))
+                block_id = self._normalize_block_id(job_id, page_num, block_index, block)
+                raw_block = dict(block)
+                source_block_id = raw_block.get("block_id")
+                if source_block_id and source_block_id != block_id:
+                    raw_block["source_block_id"] = source_block_id
+                    raw_block["block_id"] = block_id
                 block_record = {
                     "id": block_id,
                     "page_id": page_id,
@@ -804,7 +825,7 @@ class DocumentProcessor:
                     "y1": float(block.get("y1")) if block.get("y1") is not None else None,
                     "x2": float(block.get("x2")) if block.get("x2") is not None else None,
                     "y2": float(block.get("y2")) if block.get("y2") is not None else None,
-                    "raw_block": block
+                    "raw_block": raw_block
                 }
                 
                 self.supabase_client.table("extraction_blocks").insert(block_record).execute()

@@ -86,6 +86,12 @@ class DatabaseWriter:
     def is_available(self) -> bool:
         return self._get_client() is not None
 
+    def _resolve_storage_root(self) -> Path:
+        storage_root = Path(self.storage_root).expanduser()
+        if not storage_root.is_absolute():
+            storage_root = Path.cwd() / storage_root
+        return storage_root
+
     def write_extraction_job(
         self,
         job_id: str,
@@ -430,9 +436,7 @@ class DatabaseWriter:
 
         # Extract and save images (upload to Supabase when available)
         question_id_pre = str(uuid4())
-        storage_root = Path(self.storage_root)
-        if storage_root.is_relative():
-            storage_root = Path.cwd() / storage_root
+        storage_root = self._resolve_storage_root()
         storage_manager = None
         if client:
             try:
