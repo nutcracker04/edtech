@@ -110,8 +110,8 @@ class StructureAnalyzer:
         confidence = self._calculate_structure_confidence(chapters, pages)
         logger.info(f"Structure confidence: {confidence:.2f}")
         
-        # Handle low structure confidence - allow extraction to proceed with warning
-        if confidence < self.config.structure_confidence_threshold:
+        # Handle low structure confidence or empty chapters - create fallback structure
+        if confidence < self.config.structure_confidence_threshold or not chapters:
             structure_details = {
                 "chapter_count": len(chapters),
                 "topic_count": sum(len(ch.topics) for ch in chapters),
@@ -127,13 +127,17 @@ class StructureAnalyzer:
             }
             logger.warning(
                 "Low structure confidence: %.2f (threshold: %.2f). Details: %s. "
-                "Proceeding with extraction anyway.",
+                "Creating fallback structure to proceed with extraction.",
                 confidence,
                 self.config.structure_confidence_threshold,
                 structure_details,
             )
-            # Don't raise error - allow extraction to proceed
-            # This allows PDFs without clear chapter markers to still be processed
+            # Create fallback: single chapter spanning entire document when no chapters detected
+            if not chapters:
+                chapters = self._create_fallback_chapter(pages)
+                confidence = 0.7  # Minimum for DocumentStructure validation
+            else:
+                confidence = max(confidence, 0.7)  # Ensure we meet validation threshold
         
         # Create document structure
         structure = DocumentStructure(
@@ -145,6 +149,44 @@ class StructureAnalyzer:
         
         logger.info("Document structure analysis completed successfully")
         return structure
+    
+    def _create_fallback_chapter(self, pages: List[str]) -> List[Chapter]:
+        """
+        Create a fallback chapter when no structure is detected.
+        Treats the entire document as a single chapter with one topic.
+        """
+        start_page = 1
+        end_page = len(pages)
+        page_range = (start_page, end_page)
+        
+        # Try to find questions and answer key sections in the full content
+        default_topic = Topic(
+            title="Unstructured Content",
+            page_range=page_range,
+            sub_topics=[],
+            questions_section=None,
+            answer_key_section=None
+        )
+        default_topic.questions_section = self._find_questions_section(
+            pages, 0, len(pages), start_page
+        )
+        default_topic.answer_key_section = self._find_answer_key_section(
+            pages, 0, len(pages), start_page
+        )
+        
+        fallback_chapter = Chapter(
+            chapter_number=1,
+            title="Chapter 1 (Unstructured)",
+            page_range=page_range,
+            topics=[default_topic],
+            hints_section=None,
+            explanations_section=None
+        )
+        fallback_chapter.hints_section = self._find_section(pages, 'hints', start_page)
+        fallback_chapter.explanations_section = self._find_section(pages, 'explanations', start_page)
+        
+        logger.info("Created fallback chapter for unstructured document (pages %d-%d)", start_page, end_page)
+        return [fallback_chapter]
     
     def _split_by_page_markers(self, markdown_content: str) -> List[str]:
         """

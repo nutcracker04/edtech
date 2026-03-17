@@ -682,7 +682,7 @@ class DocumentProcessor:
             update_data = {
                 "stage": stage.value,
                 "progress": progress,
-                "updated_at": datetime.now(timezone.utc).isoformat()
+                "updated_at": datetime.now(timezone.utc).isoformat(),
             }
             
             if error:
@@ -711,7 +711,16 @@ class DocumentProcessor:
                         processing_time = (completed_at - started_at).total_seconds()
                         update_data["processing_time_seconds"] = processing_time
             
-            self.supabase_client.table("extraction_jobs").update(update_data).eq("id", job_id).execute()
+            try:
+                self.supabase_client.table("extraction_jobs").update(update_data).eq("id", job_id).execute()
+            except Exception as update_err:
+                # Retry without updated_at if schema lacks it (backend migration 001, fix via migration 013)
+                err_msg = str(update_err).lower()
+                if "updated_at" in err_msg and ("schema" in err_msg or "pgrst204" in err_msg):
+                    update_data.pop("updated_at", None)
+                    self.supabase_client.table("extraction_jobs").update(update_data).eq("id", job_id).execute()
+                else:
+                    raise update_err
             logger.debug(f"Updated extraction_jobs record: job_id={job_id}, stage={stage.value}, progress={progress}")
             
         except Exception as e:
