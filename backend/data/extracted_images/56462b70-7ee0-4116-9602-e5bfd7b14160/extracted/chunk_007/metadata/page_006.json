@@ -1,0 +1,320 @@
+{
+  "page_num": 6,
+  "image_width": 2398,
+  "image_height": 3003,
+  "created_at": "2026-03-17T19:54:30.363167+00:00",
+  "blocks": [
+    {
+      "block_id": "20260317_08b0f778-335e-4e5a-b95a-772c98e1be2f_6_block_000",
+      "coordinates": {
+        "x1": 184.0,
+        "y1": 184.0,
+        "x2": 750.0,
+        "y2": 241.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.8263933062553406,
+      "reading_order": 1,
+      "text": "4.12 Chapter 4 Air and Oxygen"
+    },
+    {
+      "block_id": "20260317_08b0f778-335e-4e5a-b95a-772c98e1be2f_6_block_001",
+      "coordinates": {
+        "x1": 209.0,
+        "y1": 291.0,
+        "x2": 1692.0,
+        "y2": 393.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8439077138900757,
+      "reading_order": 2,
+      "text": "13. Oxygen turns a colourless gas 'X' to reddish brown colour gas 'Y'. Identify X and Y."
+    },
+    {
+      "block_id": "20260317_08b0f778-335e-4e5a-b95a-772c98e1be2f_6_block_002",
+      "coordinates": {
+        "x1": 289.0,
+        "y1": 414.0,
+        "x2": 725.0,
+        "y2": 470.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6721971035003662,
+      "reading_order": 3,
+      "text": "(a) X → CO, Y → CO₂"
+    },
+    {
+      "block_id": "20260317_08b0f778-335e-4e5a-b95a-772c98e1be2f_6_block_003",
+      "coordinates": {
+        "x1": 969.0,
+        "y1": 415.0,
+        "x2": 1406.0,
+        "y2": 473.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6517232656478882,
+      "reading_order": 4,
+      "text": "(b) $X \\to SO_2, Y \\to SO_3$"
+    },
+    {
+      "block_id": "20260317_08b0f778-335e-4e5a-b95a-772c98e1be2f_6_block_004",
+      "coordinates": {
+        "x1": 288.0,
+        "y1": 478.0,
+        "x2": 733.0,
+        "y2": 535.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6537821292877197,
+      "reading_order": 5,
+      "text": "(c) X → NO, Y → NO₂"
+    },
+    {
+      "block_id": "20260317_08b0f778-335e-4e5a-b95a-772c98e1be2f_6_block_005",
+      "coordinates": {
+        "x1": 971.0,
+        "y1": 479.0,
+        "x2": 1388.0,
+        "y2": 534.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6540379524230957,
+      "reading_order": 6,
+      "text": "(d) X → N₂, Y → NO"
+    },
+    {
+      "block_id": "20260317_08b0f778-335e-4e5a-b95a-772c98e1be2f_6_block_006",
+      "coordinates": {
+        "x1": 211.0,
+        "y1": 557.0,
+        "x2": 1682.0,
+        "y2": 747.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.2975924611091614,
+      "reading_order": 7,
+      "text": "14. Which zone of candle flame produces soot due to incomplete combustion?\n(a) Innermost zone (b) Non-luminous zone\n(c) Outermost zone (d) Luminous zone"
+    },
+    {
+      "block_id": "20260317_08b0f778-335e-4e5a-b95a-772c98e1be2f_6_block_007",
+      "coordinates": {
+        "x1": 210.0,
+        "y1": 769.0,
+        "x2": 1474.0,
+        "y2": 826.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7728432416915894,
+      "reading_order": 8,
+      "text": "15. Which among the following is not an effect of global warming?"
+    },
+    {
+      "block_id": "20260317_08b0f778-335e-4e5a-b95a-772c98e1be2f_6_block_008",
+      "coordinates": {
+        "x1": 288.0,
+        "y1": 841.0,
+        "x2": 1210.0,
+        "y2": 895.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7679942846298218,
+      "reading_order": 9,
+      "text": "(a) Corrosion of monuments made up of marble"
+    },
+    {
+      "block_id": "20260317_08b0f778-335e-4e5a-b95a-772c98e1be2f_6_block_009",
+      "coordinates": {
+        "x1": 288.0,
+        "y1": 904.0,
+        "x2": 951.0,
+        "y2": 957.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7689119577407837,
+      "reading_order": 10,
+      "text": "(b) Increase in frequency of floods"
+    },
+    {
+      "block_id": "20260317_08b0f778-335e-4e5a-b95a-772c98e1be2f_6_block_010",
+      "coordinates": {
+        "x1": 1788.0,
+        "y1": 313.0,
+        "x2": 2169.0,
+        "y2": 364.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7950364947319031,
+      "reading_order": 11,
+      "text": "Space for rough work"
+    },
+    {
+      "block_id": "20260317_08b0f778-335e-4e5a-b95a-772c98e1be2f_6_block_011",
+      "coordinates": {
+        "x1": 290.0,
+        "y1": 968.0,
+        "x2": 703.0,
+        "y2": 1019.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7247654795646667,
+      "reading_order": 12,
+      "text": "(c) Unseasonal rains"
+    },
+    {
+      "block_id": "20260317_08b0f778-335e-4e5a-b95a-772c98e1be2f_6_block_012",
+      "coordinates": {
+        "x1": 291.0,
+        "y1": 1030.0,
+        "x2": 792.0,
+        "y2": 1086.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7739728093147278,
+      "reading_order": 13,
+      "text": "(d) Damage of vegetation"
+    },
+    {
+      "block_id": "20260317_08b0f778-335e-4e5a-b95a-772c98e1be2f_6_block_013",
+      "coordinates": {
+        "x1": 935.0,
+        "y1": 1847.0,
+        "x2": 1460.0,
+        "y2": 1937.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.8866653442382812,
+      "reading_order": 14,
+      "text": "Answer Keys"
+    },
+    {
+      "block_id": "20260317_08b0f778-335e-4e5a-b95a-772c98e1be2f_6_block_014",
+      "coordinates": {
+        "x1": 218.0,
+        "y1": 1965.0,
+        "x2": 643.0,
+        "y2": 2021.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.8565787672996521,
+      "reading_order": 15,
+      "text": "Assessment Test I"
+    },
+    {
+      "block_id": "20260317_08b0f778-335e-4e5a-b95a-772c98e1be2f_6_block_015",
+      "coordinates": {
+        "x1": 239.0,
+        "y1": 2030.0,
+        "x2": 2183.0,
+        "y2": 2089.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.3661595284938812,
+      "reading_order": 16,
+      "text": "1. (b) 2. (c) 3. (d) 4. (a) 5. (b) 6. (a) 7. (d) 8. (a) 9. (a) 10. (d)"
+    },
+    {
+      "block_id": "20260317_08b0f778-335e-4e5a-b95a-772c98e1be2f_6_block_016",
+      "coordinates": {
+        "x1": 233.0,
+        "y1": 2086.0,
+        "x2": 1177.0,
+        "y2": 2140.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.4612806439399719,
+      "reading_order": 17,
+      "text": "11. (b) 12. (a) 13. (d) 14. (b) 15. (d)"
+    },
+    {
+      "block_id": "20260317_08b0f778-335e-4e5a-b95a-772c98e1be2f_6_block_017",
+      "coordinates": {
+        "x1": 220.0,
+        "y1": 2187.0,
+        "x2": 659.0,
+        "y2": 2241.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.8342947959899902,
+      "reading_order": 18,
+      "text": "Assessment Test II"
+    },
+    {
+      "block_id": "20260317_08b0f778-335e-4e5a-b95a-772c98e1be2f_6_block_018",
+      "coordinates": {
+        "x1": 237.0,
+        "y1": 2251.0,
+        "x2": 2169.0,
+        "y2": 2361.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5228652954101562,
+      "reading_order": 19,
+      "text": "1. (d) 2. (a) 3. (c) 4. (d) 5. (c) 6. (b) 7. (b) 8. (d) 9. (d) 10. (c)\n11. (a) 12. (a) 13. (c) 14. (a) 15. (c)"
+    },
+    {
+      "block_id": "20260317_08b0f778-335e-4e5a-b95a-772c98e1be2f_6_block_019",
+      "coordinates": {
+        "x1": 219.0,
+        "y1": 2408.0,
+        "x2": 681.0,
+        "y2": 2462.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.8540727496147156,
+      "reading_order": 20,
+      "text": "Assessment Test III"
+    },
+    {
+      "block_id": "20260317_08b0f778-335e-4e5a-b95a-772c98e1be2f_6_block_020",
+      "coordinates": {
+        "x1": 227.0,
+        "y1": 2469.0,
+        "x2": 2172.0,
+        "y2": 2589.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.32354944944381714,
+      "reading_order": 21,
+      "text": "1. (a) 2. (a) 3. (b) 4. (b) 5. (b) 6. (a) 7. (c) 8. (d) 9. (b) 10. (d)\n11. (b) 12. (b) 13. (a) 14. (c) 15. (b)"
+    },
+    {
+      "block_id": "20260317_08b0f778-335e-4e5a-b95a-772c98e1be2f_6_block_021",
+      "coordinates": {
+        "x1": 217.0,
+        "y1": 2636.0,
+        "x2": 679.0,
+        "y2": 2689.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.842388391494751,
+      "reading_order": 22,
+      "text": "Assessment Test IV"
+    },
+    {
+      "block_id": "20260317_08b0f778-335e-4e5a-b95a-772c98e1be2f_6_block_022",
+      "coordinates": {
+        "x1": 241.0,
+        "y1": 2701.0,
+        "x2": 2165.0,
+        "y2": 2758.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6048130393028259,
+      "reading_order": 23,
+      "text": "1. (c) 2. (b) 3. (a) 4. (a) 5. (b) 6. (c) 7. (c) 8. (a) 9. (c) 10. (c)"
+    },
+    {
+      "block_id": "20260317_08b0f778-335e-4e5a-b95a-772c98e1be2f_6_block_023",
+      "coordinates": {
+        "x1": 236.0,
+        "y1": 2754.0,
+        "x2": 1176.0,
+        "y2": 2807.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.2766026556491852,
+      "reading_order": 24,
+      "text": "11. (c) 12. (a) 13. (c) 14. (d) 15. (a)"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "page_num": 2,
+  "image_width": 2398,
+  "image_height": 3003,
+  "created_at": "2026-03-17T19:53:56.252759+00:00",
+  "blocks": [
+    {
+      "block_id": "20260317_ff87d572-8963-4241-8a4a-4f5459841c6a_2_block_000",
+      "coordinates": {
+        "x1": 455.0,
+        "y1": 350.0,
+        "x2": 2000.0,
+        "y2": 473.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.8286389708518982,
+      "reading_order": 1,
+      "text": "Course-book Chapter Flow"
+    },
+    {
+      "block_id": "20260317_ff87d572-8963-4241-8a4a-4f5459841c6a_2_block_001",
+      "coordinates": {
+        "x1": 180.0,
+        "y1": 665.0,
+        "x2": 414.0,
+        "y2": 739.0
+      },
+      "layout_tag": "image-caption",
+      "confidence": 0.424012154340744,
+      "reading_order": 2,
+      "text": "Class 7"
+    },
+    {
+      "block_id": "20260317_ff87d572-8963-4241-8a4a-4f5459841c6a_2_block_002",
+      "coordinates": {
+        "x1": 154.0,
+        "y1": 701.0,
+        "x2": 2263.0,
+        "y2": 2403.0
+      },
+      "layout_tag": "image",
+      "confidence": 0.2928958237171173,
+      "reading_order": 3,
+      "text": "The image displays two horizontal timelines, labeled \"Class 7\" and \"Class 9,\" illustrating the progression of topics within a chemistry curriculum. Both timelines use a blue arrow pointing right to indicate the sequence of learning, marked by numbered milestones (1 through 9).\n\n**Class 7 Timeline:**\n- **Milestone 1:** \"Classification of Matter\"\n- **Milestone 2:** \"Atomic Structure and Transformation of Matter\"\n- **Milestone 3:** \"Acids, Bases and Salts\"\n- **Milestone 4:** \"Air and Oxygen\"\n- **Milestone 5:** \"Water\"\n- **Milestone 6:** \"Chemistry in Daily Life\"\n\n**Class 9 Timeline:**\n- **Milestone 1:** \"Nature of Matter\"\n- **Milestone 2:** \"Metals and Non-Metals\"\n- **Milestone 3:** \"Periodic Classification of Elements\"\n- **Milestone 4:** \"Chemical Bonding\"\n- **Milestone 5:** \"Mole Concept, Stoichiometry and Behaviour of Gases\"\n- **Milestone 6:** \"Water, Solution, Solubility and Hydrogen\"\n- **Milestone 7:** \"Periodic Classification of Elements\"\n- **Milestone 8:** \"Metals and Non-Metals\"\n- **Milestone 9:** \"Organic Chemistry\"\n\nThe structure suggests a non-linear or spiraling curriculum where topics are revisited at different levels of complexity."
+    }
+  ]
+}

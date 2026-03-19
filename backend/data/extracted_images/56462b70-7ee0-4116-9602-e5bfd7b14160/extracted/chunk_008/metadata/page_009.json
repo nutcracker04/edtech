@@ -1,0 +1,177 @@
+{
+  "page_num": 9,
+  "image_width": 2398,
+  "image_height": 3003,
+  "created_at": "2026-03-17T19:54:36.925355+00:00",
+  "blocks": [
+    {
+      "block_id": "20260317_96cdd42a-568b-49d1-8e0c-59656d8ce331_9_block_000",
+      "coordinates": {
+        "x1": 1750.0,
+        "y1": 187.0,
+        "x2": 2052.0,
+        "y2": 235.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.8531675934791565,
+      "reading_order": 1,
+      "text": "Assessment Test IV"
+    },
+    {
+      "block_id": "20260317_96cdd42a-568b-49d1-8e0c-59656d8ce331_9_block_001",
+      "coordinates": {
+        "x1": 2095.0,
+        "y1": 183.0,
+        "x2": 2207.0,
+        "y2": 235.0
+      },
+      "layout_tag": "page-number",
+      "confidence": 0.7721329927444458,
+      "reading_order": 2,
+      "text": "5.13"
+    },
+    {
+      "block_id": "20260317_96cdd42a-568b-49d1-8e0c-59656d8ce331_9_block_002",
+      "coordinates": {
+        "x1": 290.0,
+        "y1": 292.0,
+        "x2": 1543.0,
+        "y2": 533.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9049210548400879,
+      "reading_order": 3,
+      "text": "(a) Both A and R are true and R is the correct explanation of A.\n(b) Both A and R are true, but R is not the correct explanation of A.\n(c) A is true and R is false.\n(d) A is false and R is true."
+    },
+    {
+      "block_id": "20260317_96cdd42a-568b-49d1-8e0c-59656d8ce331_9_block_003",
+      "coordinates": {
+        "x1": 235.0,
+        "y1": 558.0,
+        "x2": 1691.0,
+        "y2": 803.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9426246285438538,
+      "reading_order": 4,
+      "text": "8. Arrange the following metals in descending order of the number of mole-\ncules of water/steam with which one molecule/atom of the metal reacts.\n(A) K (B) Fe (C) Al\n(a) CAB (b) BCA (c) ACD (d) CBA"
+    },
+    {
+      "block_id": "20260317_96cdd42a-568b-49d1-8e0c-59656d8ce331_9_block_004",
+      "coordinates": {
+        "x1": 233.0,
+        "y1": 826.0,
+        "x2": 1695.0,
+        "y2": 1194.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9491257667541504,
+      "reading_order": 5,
+      "text": "9. Arrange the following processes involved in the purification of water in\nwater works in proper order.\n(A) Fine sand and gravel are used.\n(B) Suspended impurities are allowed to settle.\n(C) Chlorine gas is passed through the water.\n(a) CAB (b) BAC (c) BCA (d) CBA"
+    },
+    {
+      "block_id": "20260317_96cdd42a-568b-49d1-8e0c-59656d8ce331_9_block_005",
+      "coordinates": {
+        "x1": 217.0,
+        "y1": 1215.0,
+        "x2": 1692.0,
+        "y2": 1403.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.937073826789856,
+      "reading_order": 6,
+      "text": "10. The solubility of the salt B is 30 at 25°C. Calculate the amount of B present in\n390 g of the saturated solution of B at 25°C.\n(a) 90 g (b) 30 g (c) 100 g (d) 130 g"
+    },
+    {
+      "block_id": "20260317_96cdd42a-568b-49d1-8e0c-59656d8ce331_9_block_006",
+      "coordinates": {
+        "x1": 216.0,
+        "y1": 1418.0,
+        "x2": 1696.0,
+        "y2": 1592.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8355774879455566,
+      "reading_order": 7,
+      "text": "11. Solubilities of four different salts is given in the table below. 150 g of each\nsalt is mixed in 750 g of water separately at 25°C.\nIdentify the incorrect statements."
+    },
+    {
+      "block_id": "20260317_96cdd42a-568b-49d1-8e0c-59656d8ce331_9_block_007",
+      "coordinates": {
+        "x1": 303.0,
+        "y1": 1629.0,
+        "x2": 1027.0,
+        "y2": 1948.0
+      },
+      "layout_tag": "table",
+      "confidence": 0.8868201375007629,
+      "reading_order": 8,
+      "text": "<table>\n<thead>\n<tr>\n<th>Name of the salt</th>\n<th>Solubility at 25°C</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>M</td>\n<td>25</td>\n</tr>\n<tr>\n<td>N</td>\n<td>30</td>\n</tr>\n<tr>\n<td>O</td>\n<td>20</td>\n</tr>\n<tr>\n<td>P</td>\n<td>15</td>\n</tr>\n</tbody>\n</table>"
+    },
+    {
+      "block_id": "20260317_96cdd42a-568b-49d1-8e0c-59656d8ce331_9_block_008",
+      "coordinates": {
+        "x1": 292.0,
+        "y1": 1984.0,
+        "x2": 1425.0,
+        "y2": 2107.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5095866918563843,
+      "reading_order": 9,
+      "text": "(a) O is saturated. (b) P is supersaturated.\n(c) N supersaturated. (d) M is unsaturated."
+    },
+    {
+      "block_id": "20260317_96cdd42a-568b-49d1-8e0c-59656d8ce331_9_block_009",
+      "coordinates": {
+        "x1": 214.0,
+        "y1": 2130.0,
+        "x2": 1564.0,
+        "y2": 2319.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9289456605911255,
+      "reading_order": 10,
+      "text": "12. Which among the following is a deliquescent salt?\n(a) Glauber’s salt (b) Blue vitriol\n(c) Washing soda (d) Hydrated calcium chloride"
+    },
+    {
+      "block_id": "20260317_96cdd42a-568b-49d1-8e0c-59656d8ce331_9_block_010",
+      "coordinates": {
+        "x1": 213.0,
+        "y1": 2342.0,
+        "x2": 1695.0,
+        "y2": 2712.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9440409541130066,
+      "reading_order": 11,
+      "text": "13. Dissolved gases in water can be expelled by boiling since solubility of a gas\nin a liquid is ______.\n(a) proportional to temperature\n(b) inversely proportional to temperature\n(c) proportional to pressure\n(d) independent of temperature and pressure"
+    },
+    {
+      "block_id": "20260317_96cdd42a-568b-49d1-8e0c-59656d8ce331_9_block_011",
+      "coordinates": {
+        "x1": 214.0,
+        "y1": 2735.0,
+        "x2": 1697.0,
+        "y2": 2841.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8960666060447693,
+      "reading_order": 12,
+      "text": "14. Which of the following chemical reaction is involved in the Bosch process for the manufacture of hydrogen?"
+    },
+    {
+      "block_id": "20260317_96cdd42a-568b-49d1-8e0c-59656d8ce331_9_block_012",
+      "coordinates": {
+        "x1": 1791.0,
+        "y1": 311.0,
+        "x2": 2171.0,
+        "y2": 364.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6578489542007446,
+      "reading_order": 13,
+      "text": "Space for rough work"
+    }
+  ]
+}

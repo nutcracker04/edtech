@@ -1,0 +1,281 @@
+{
+  "page_num": 6,
+  "image_width": 2398,
+  "image_height": 3003,
+  "created_at": "2026-03-17T19:53:56.349711+00:00",
+  "blocks": [
+    {
+      "block_id": "20260317_ff87d572-8963-4241-8a4a-4f5459841c6a_6_block_000",
+      "coordinates": {
+        "x1": 205.0,
+        "y1": 185.0,
+        "x2": 763.0,
+        "y2": 239.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.6102660298347473,
+      "reading_order": 1,
+      "text": "1.2 Chapter 1 Atomic Structure"
+    },
+    {
+      "block_id": "20260317_ff87d572-8963-4241-8a4a-4f5459841c6a_6_block_001",
+      "coordinates": {
+        "x1": 287.0,
+        "y1": 290.0,
+        "x2": 1468.0,
+        "y2": 344.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7766151428222656,
+      "reading_order": 2,
+      "text": "(a) Both A and R are true and R is the correct explanation of A."
+    },
+    {
+      "block_id": "20260317_ff87d572-8963-4241-8a4a-4f5459841c6a_6_block_002",
+      "coordinates": {
+        "x1": 289.0,
+        "y1": 353.0,
+        "x2": 1536.0,
+        "y2": 408.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7877815365791321,
+      "reading_order": 3,
+      "text": "(b) Both A and R are true, but R is not the correct explanation of A."
+    },
+    {
+      "block_id": "20260317_ff87d572-8963-4241-8a4a-4f5459841c6a_6_block_003",
+      "coordinates": {
+        "x1": 291.0,
+        "y1": 415.0,
+        "x2": 803.0,
+        "y2": 468.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7288257479667664,
+      "reading_order": 4,
+      "text": "(c) A is true and R is false."
+    },
+    {
+      "block_id": "20260317_ff87d572-8963-4241-8a4a-4f5459841c6a_6_block_004",
+      "coordinates": {
+        "x1": 292.0,
+        "y1": 479.0,
+        "x2": 801.0,
+        "y2": 533.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7792584896087646,
+      "reading_order": 5,
+      "text": "(d) A is false and R is true."
+    },
+    {
+      "block_id": "20260317_ff87d572-8963-4241-8a4a-4f5459841c6a_6_block_005",
+      "coordinates": {
+        "x1": 233.0,
+        "y1": 595.0,
+        "x2": 1691.0,
+        "y2": 832.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9324730038642883,
+      "reading_order": 6,
+      "text": "5. An atom 'X' has a mass of protons 36,740 times that of electrons. Identify\nthe correct representation of the atom. The number of neutrons is 1 unit less\nthan the protons.\n(a) ${}_{10}X^{20}$ (b) ${}_{10}X^{22}$ (c) ${}_{20}X^{40}$ (d) ${}_{20}X^{39}$"
+    },
+    {
+      "block_id": "20260317_ff87d572-8963-4241-8a4a-4f5459841c6a_6_block_006",
+      "coordinates": {
+        "x1": 232.0,
+        "y1": 884.0,
+        "x2": 1694.0,
+        "y2": 1176.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9393510818481445,
+      "reading_order": 7,
+      "text": "6. If '$a$' is the number of electrons in a dispositive ion and it has three neutrons\nmore than the number of protons, identify the atomic number and mass\nnumber.\n(a) $a + 2, a + 5$ (b) $a + 2, 2a + 7$\n(c) $a + 5, 2a + 7$ (d) $a + 5, 2a + 5$"
+    },
+    {
+      "block_id": "20260317_ff87d572-8963-4241-8a4a-4f5459841c6a_6_block_007",
+      "coordinates": {
+        "x1": 232.0,
+        "y1": 1232.0,
+        "x2": 1686.0,
+        "y2": 1594.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.872917115688324,
+      "reading_order": 8,
+      "text": "7. Which of the following corresponds to the incorrect match with respect to\ntheir formation?\n(A) $\\mathrm{O}^{-2}$ ion – Loss of two electrons (B) $\\mathrm{N}^{-3}$ ion – Gain of three electrons\n(C) $\\mathrm{Mg}^{+2}$ ion – Loss of two electrons (D) $\\mathrm{K}^{+}$ ion – Gain of one electron\n(a) A and B (b) B and C\n(c) A and D (d) C and D"
+    },
+    {
+      "block_id": "20260317_ff87d572-8963-4241-8a4a-4f5459841c6a_6_block_008",
+      "coordinates": {
+        "x1": 232.0,
+        "y1": 1654.0,
+        "x2": 1695.0,
+        "y2": 1758.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6599578261375427,
+      "reading_order": 9,
+      "text": "8. Correct the given statements by replacing the underlined words and choose the correct option."
+    },
+    {
+      "block_id": "20260317_ff87d572-8963-4241-8a4a-4f5459841c6a_6_block_009",
+      "coordinates": {
+        "x1": 309.0,
+        "y1": 1770.0,
+        "x2": 1585.0,
+        "y2": 1824.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6785937547683716,
+      "reading_order": 10,
+      "text": "(i) Protons and neutrons together correspond to subatomic particles."
+    },
+    {
+      "block_id": "20260317_ff87d572-8963-4241-8a4a-4f5459841c6a_6_block_010",
+      "coordinates": {
+        "x1": 298.0,
+        "y1": 1833.0,
+        "x2": 1523.0,
+        "y2": 1888.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7403810620307922,
+      "reading_order": 11,
+      "text": "(ii) Rutherford’s theory proposed the concept of stationary orbits."
+    },
+    {
+      "block_id": "20260317_ff87d572-8963-4241-8a4a-4f5459841c6a_6_block_011",
+      "coordinates": {
+        "x1": 292.0,
+        "y1": 1895.0,
+        "x2": 1129.0,
+        "y2": 1950.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7478352785110474,
+      "reading_order": 12,
+      "text": "(iii) Isotopes differ in the number of protons."
+    },
+    {
+      "block_id": "20260317_ff87d572-8963-4241-8a4a-4f5459841c6a_6_block_012",
+      "coordinates": {
+        "x1": 294.0,
+        "y1": 1960.0,
+        "x2": 1224.0,
+        "y2": 2011.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8033130764961243,
+      "reading_order": 13,
+      "text": "(iv) Isobars possess the same number of neutrons."
+    },
+    {
+      "block_id": "20260317_ff87d572-8963-4241-8a4a-4f5459841c6a_6_block_013",
+      "coordinates": {
+        "x1": 302.0,
+        "y1": 2019.0,
+        "x2": 1407.0,
+        "y2": 2318.0
+      },
+      "layout_tag": "table",
+      "confidence": 0.9514544010162354,
+      "reading_order": 14,
+      "text": "<table>\n<thead>\n<tr>\n<th>(i)</th>\n<th>(ii)</th>\n<th>(iii)</th>\n<th>(iv)</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>(a) Nucleons</td>\n<td>Protons</td>\n<td>Neutrons</td>\n<td>Electrons</td>\n</tr>\n<tr>\n<td>(b) Mass number</td>\n<td>Nucleus</td>\n<td>Neutrons</td>\n<td>Nucleons</td>\n</tr>\n<tr>\n<td>(c) Atomic number</td>\n<td>Protons</td>\n<td>Electrons</td>\n<td>Electrons</td>\n</tr>\n<tr>\n<td>(d) Nucleons</td>\n<td>Nucleus</td>\n<td>Electrons</td>\n<td>Protons</td>\n</tr>\n</tbody>\n</table>"
+    },
+    {
+      "block_id": "20260317_ff87d572-8963-4241-8a4a-4f5459841c6a_6_block_014",
+      "coordinates": {
+        "x1": 236.0,
+        "y1": 2379.0,
+        "x2": 1692.0,
+        "y2": 2484.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8166313767433167,
+      "reading_order": 15,
+      "text": "9. Assertion (A): In $\\alpha$-ray scattering experiment, most of the $\\alpha$ particles were\ncompletely rebounded."
+    },
+    {
+      "block_id": "20260317_ff87d572-8963-4241-8a4a-4f5459841c6a_6_block_015",
+      "coordinates": {
+        "x1": 268.0,
+        "y1": 2495.0,
+        "x2": 1696.0,
+        "y2": 2597.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8249488472938538,
+      "reading_order": 16,
+      "text": "**Reason (R):** The entire positive charge is concentrated in the small central\npart known as nucleus."
+    },
+    {
+      "block_id": "20260317_ff87d572-8963-4241-8a4a-4f5459841c6a_6_block_016",
+      "coordinates": {
+        "x1": 290.0,
+        "y1": 2607.0,
+        "x2": 1470.0,
+        "y2": 2660.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8320267200469971,
+      "reading_order": 17,
+      "text": "(a) Both A and R are true and R is the correct explanation of A."
+    },
+    {
+      "block_id": "20260317_ff87d572-8963-4241-8a4a-4f5459841c6a_6_block_017",
+      "coordinates": {
+        "x1": 290.0,
+        "y1": 2670.0,
+        "x2": 1538.0,
+        "y2": 2724.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8294310569763184,
+      "reading_order": 18,
+      "text": "(b) Both A and R are true, but R is not the correct explanation of A."
+    },
+    {
+      "block_id": "20260317_ff87d572-8963-4241-8a4a-4f5459841c6a_6_block_018",
+      "coordinates": {
+        "x1": 291.0,
+        "y1": 2733.0,
+        "x2": 802.0,
+        "y2": 2786.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7855333685874939,
+      "reading_order": 19,
+      "text": "(c) A is true and R is false."
+    },
+    {
+      "block_id": "20260317_ff87d572-8963-4241-8a4a-4f5459841c6a_6_block_019",
+      "coordinates": {
+        "x1": 292.0,
+        "y1": 2796.0,
+        "x2": 801.0,
+        "y2": 2848.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8105888962745667,
+      "reading_order": 20,
+      "text": "(d) A is false and R is true."
+    },
+    {
+      "block_id": "20260317_ff87d572-8963-4241-8a4a-4f5459841c6a_6_block_020",
+      "coordinates": {
+        "x1": 1792.0,
+        "y1": 312.0,
+        "x2": 2169.0,
+        "y2": 364.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6040927767753601,
+      "reading_order": 21,
+      "text": "Space for rough work"
+    }
+  ]
+}

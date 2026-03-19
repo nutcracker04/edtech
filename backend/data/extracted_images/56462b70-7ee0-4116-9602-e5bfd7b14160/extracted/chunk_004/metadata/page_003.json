@@ -1,0 +1,190 @@
+{
+  "page_num": 3,
+  "image_width": 2398,
+  "image_height": 3003,
+  "created_at": "2026-03-17T19:54:09.899431+00:00",
+  "blocks": [
+    {
+      "block_id": "20260317_54539651-4111-4c96-afd8-57d8028207a8_3_block_000",
+      "coordinates": {
+        "x1": 1760.0,
+        "y1": 187.0,
+        "x2": 2052.0,
+        "y2": 236.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.8411243557929993,
+      "reading_order": 1,
+      "text": "Assessment Test II"
+    },
+    {
+      "block_id": "20260317_54539651-4111-4c96-afd8-57d8028207a8_3_block_001",
+      "coordinates": {
+        "x1": 180.0,
+        "y1": 296.0,
+        "x2": 897.0,
+        "y2": 374.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.5020543336868286,
+      "reading_order": 2,
+      "text": "Assessment Test II"
+    },
+    {
+      "block_id": "20260317_54539651-4111-4c96-afd8-57d8028207a8_3_block_002",
+      "coordinates": {
+        "x1": 1448.0,
+        "y1": 325.0,
+        "x2": 1694.0,
+        "y2": 372.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.7877030968666077,
+      "reading_order": 3,
+      "text": "Time: 30 min."
+    },
+    {
+      "block_id": "20260317_54539651-4111-4c96-afd8-57d8028207a8_3_block_003",
+      "coordinates": {
+        "x1": 2106.0,
+        "y1": 185.0,
+        "x2": 2193.0,
+        "y2": 234.0
+      },
+      "layout_tag": "page-number",
+      "confidence": 0.74488765001297,
+      "reading_order": 4,
+      "text": "2.5"
+    },
+    {
+      "block_id": "20260317_54539651-4111-4c96-afd8-57d8028207a8_3_block_004",
+      "coordinates": {
+        "x1": 176.0,
+        "y1": 450.0,
+        "x2": 1690.0,
+        "y2": 505.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.8490573763847351,
+      "reading_order": 5,
+      "text": "Directions for questions from 1 to 15: Select the correct answer from the given options."
+    },
+    {
+      "block_id": "20260317_54539651-4111-4c96-afd8-57d8028207a8_3_block_005",
+      "coordinates": {
+        "x1": 232.0,
+        "y1": 543.0,
+        "x2": 1654.0,
+        "y2": 663.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9094310998916626,
+      "reading_order": 6,
+      "text": "1. Ice is kept in a vacuum chamber. In which state will it exist?\n(a) Solid (b) Liquid (c) Vapour (d) Gas"
+    },
+    {
+      "block_id": "20260317_54539651-4111-4c96-afd8-57d8028207a8_3_block_006",
+      "coordinates": {
+        "x1": 232.0,
+        "y1": 721.0,
+        "x2": 1698.0,
+        "y2": 956.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9445823431015015,
+      "reading_order": 7,
+      "text": "2. Which of the following interconversions of states of matter is involved in\nfilling up of LPG cylinder?\n(a) Sublimation (b) Liquefaction\n(c) Condensation (d) Evaporation"
+    },
+    {
+      "block_id": "20260317_54539651-4111-4c96-afd8-57d8028207a8_3_block_007",
+      "coordinates": {
+        "x1": 232.0,
+        "y1": 1018.0,
+        "x2": 1697.0,
+        "y2": 1246.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9429288506507874,
+      "reading_order": 8,
+      "text": "3. An element is a good conductor of electricity, lustrous, and it is used as an\nelectrode in electrometallurgical processes due to its high resistance to heat\nand chemicals. The constituent atom of the element is _____.\n(a) Cu (b) Fe (c) C (d) Si"
+    },
+    {
+      "block_id": "20260317_54539651-4111-4c96-afd8-57d8028207a8_3_block_008",
+      "coordinates": {
+        "x1": 233.0,
+        "y1": 1305.0,
+        "x2": 1323.0,
+        "y2": 1489.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9305973052978516,
+      "reading_order": 9,
+      "text": "4. Which of the following is a homogeneous mixture?\n(a) Brass (b) Milk\n(c) Gun powder (d) Muddy water"
+    },
+    {
+      "block_id": "20260317_54539651-4111-4c96-afd8-57d8028207a8_3_block_009",
+      "coordinates": {
+        "x1": 233.0,
+        "y1": 1546.0,
+        "x2": 1507.0,
+        "y2": 1729.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9318413138389587,
+      "reading_order": 10,
+      "text": "5. Find the odd one out with respect to the conduction of electricity.\n(a) Red phosphorus (b) Rhombic sulphur\n(c) Gas carbon (d) Diamond"
+    },
+    {
+      "block_id": "20260317_54539651-4111-4c96-afd8-57d8028207a8_3_block_010",
+      "coordinates": {
+        "x1": 232.0,
+        "y1": 1791.0,
+        "x2": 1693.0,
+        "y2": 2151.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.95421302318573,
+      "reading_order": 11,
+      "text": "6. Finely powdered charcoal is added to coconut oil. This mixture is added to\nglucose solution. How will you separate them?\n(a) Filtration, separating funnel and evaporation\n(b) Evaporation, separating funnel and filtration\n(c) Filtration, followed by evaporation\n(d) Separating funnel, followed by filtration"
+    },
+    {
+      "block_id": "20260317_54539651-4111-4c96-afd8-57d8028207a8_3_block_011",
+      "coordinates": {
+        "x1": 231.0,
+        "y1": 2210.0,
+        "x2": 1325.0,
+        "y2": 2517.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9395739436149597,
+      "reading_order": 12,
+      "text": "7. We blow air to cool a hot liquid in order to ______.\n(a) create turbulence in the hot liquid\n(b) provide a larger surface area for the liquid\n(c) provide fresh air above the surface of the liquid\n(d) saturate the air above the liquid with water vapour"
+    },
+    {
+      "block_id": "20260317_54539651-4111-4c96-afd8-57d8028207a8_3_block_012",
+      "coordinates": {
+        "x1": 233.0,
+        "y1": 2575.0,
+        "x2": 1699.0,
+        "y2": 2849.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9492074847221375,
+      "reading_order": 13,
+      "text": "8. The same amount of three gases 'A', 'B' and 'C' is taken in three different\ncylinders. All the cylinders are fitted with movable pistons and the gases are\nkept at room temperature and normal pressure. Then, external pressure is\napplied on each piston. The changes in the volumes are shown in the figures\ngiven below."
+    },
+    {
+      "block_id": "20260317_54539651-4111-4c96-afd8-57d8028207a8_3_block_013",
+      "coordinates": {
+        "x1": 1789.0,
+        "y1": 312.0,
+        "x2": 2172.0,
+        "y2": 365.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6140126585960388,
+      "reading_order": 14,
+      "text": "Space for rough work"
+    }
+  ]
+}

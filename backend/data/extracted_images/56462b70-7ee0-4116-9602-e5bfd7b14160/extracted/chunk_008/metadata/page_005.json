@@ -1,0 +1,190 @@
+{
+  "page_num": 5,
+  "image_width": 2398,
+  "image_height": 3003,
+  "created_at": "2026-03-17T19:54:36.931256+00:00",
+  "blocks": [
+    {
+      "block_id": "20260317_96cdd42a-568b-49d1-8e0c-59656d8ce331_5_block_000",
+      "coordinates": {
+        "x1": 180.0,
+        "y1": 295.0,
+        "x2": 930.0,
+        "y2": 374.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.6196029782295227,
+      "reading_order": 1,
+      "text": "Assessment Test III"
+    },
+    {
+      "block_id": "20260317_96cdd42a-568b-49d1-8e0c-59656d8ce331_5_block_001",
+      "coordinates": {
+        "x1": 1749.0,
+        "y1": 187.0,
+        "x2": 2051.0,
+        "y2": 237.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.8578346371650696,
+      "reading_order": 2,
+      "text": "Assessment Test III"
+    },
+    {
+      "block_id": "20260317_96cdd42a-568b-49d1-8e0c-59656d8ce331_5_block_002",
+      "coordinates": {
+        "x1": 1450.0,
+        "y1": 325.0,
+        "x2": 1693.0,
+        "y2": 373.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.7915101051330566,
+      "reading_order": 3,
+      "text": "Time: 30 min."
+    },
+    {
+      "block_id": "20260317_96cdd42a-568b-49d1-8e0c-59656d8ce331_5_block_003",
+      "coordinates": {
+        "x1": 2107.0,
+        "y1": 185.0,
+        "x2": 2194.0,
+        "y2": 235.0
+      },
+      "layout_tag": "page-number",
+      "confidence": 0.7651994824409485,
+      "reading_order": 4,
+      "text": "5.9"
+    },
+    {
+      "block_id": "20260317_96cdd42a-568b-49d1-8e0c-59656d8ce331_5_block_004",
+      "coordinates": {
+        "x1": 177.0,
+        "y1": 449.0,
+        "x2": 1691.0,
+        "y2": 505.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.7213788628578186,
+      "reading_order": 5,
+      "text": "Directions for questions from 1 to 15: Select the correct answer from the given options."
+    },
+    {
+      "block_id": "20260317_96cdd42a-568b-49d1-8e0c-59656d8ce331_5_block_005",
+      "coordinates": {
+        "x1": 234.0,
+        "y1": 553.0,
+        "x2": 1696.0,
+        "y2": 739.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9264364838600159,
+      "reading_order": 6,
+      "text": "1. Which of the following forms represents direct conversion of water vapour\ninto ice?\n(a) Cloud (b) Fog (c) Mist (d) Snow"
+    },
+    {
+      "block_id": "20260317_96cdd42a-568b-49d1-8e0c-59656d8ce331_5_block_006",
+      "coordinates": {
+        "x1": 230.0,
+        "y1": 758.0,
+        "x2": 1218.0,
+        "y2": 951.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.914422333240509,
+      "reading_order": 7,
+      "text": "2. What could be the density of water at 2°C?\n(a) 0.95 g/cc (b) 1 g/cc\n(c) 1.1 g/cc (d) 1.5 g/cc"
+    },
+    {
+      "block_id": "20260317_96cdd42a-568b-49d1-8e0c-59656d8ce331_5_block_007",
+      "coordinates": {
+        "x1": 231.0,
+        "y1": 969.0,
+        "x2": 1682.0,
+        "y2": 1161.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9283119440078735,
+      "reading_order": 8,
+      "text": "3. Which of the following samples of water is a bad conductor of electricity?\n(a) Tap water (b) Saline water\n(c) Mineral water (d) Distilled water (freshly prepared)"
+    },
+    {
+      "block_id": "20260317_96cdd42a-568b-49d1-8e0c-59656d8ce331_5_block_008",
+      "coordinates": {
+        "x1": 231.0,
+        "y1": 1183.0,
+        "x2": 1694.0,
+        "y2": 1369.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9243654608726501,
+      "reading_order": 9,
+      "text": "4. Heat released during the condensation of 1 g of steam at $100^\\circ\\mathrm{C}$, to water at\n$100^\\circ\\mathrm{C}$, is utilized to melt $x$ g of ice at $0^\\circ\\mathrm{C}$ to water at $0^\\circ\\mathrm{C}$. Identify $x$.\n(a) 6.75 g (b) 5 g (c) 5.75 g (d) 6 g"
+    },
+    {
+      "block_id": "20260317_96cdd42a-568b-49d1-8e0c-59656d8ce331_5_block_009",
+      "coordinates": {
+        "x1": 233.0,
+        "y1": 1388.0,
+        "x2": 1692.0,
+        "y2": 1570.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9256041646003723,
+      "reading_order": 10,
+      "text": "5. Calculate the amount of heat released (in joules) when 10 g of water is cooled\nfrom $50^\\circ\\mathrm{C}$ to $30^\\circ\\mathrm{C}$\n(a) 840 (b) 420 (c) 540 (d) 320"
+    },
+    {
+      "block_id": "20260317_96cdd42a-568b-49d1-8e0c-59656d8ce331_5_block_010",
+      "coordinates": {
+        "x1": 230.0,
+        "y1": 1593.0,
+        "x2": 1686.0,
+        "y2": 1967.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9426472783088684,
+      "reading_order": 11,
+      "text": "6. Assertion (A): Water can dissolve many inorganic salts in it.\nReason (R): Dielectric constant of water is relatively lower than other liquids.\n(a) Both A and R are true and R is the correct explanation of A\n(b) Both A and R are true, but R is not the correct explanation of A.\n(c) A is true and R is false.\n(d) A is false and R is true."
+    },
+    {
+      "block_id": "20260317_96cdd42a-568b-49d1-8e0c-59656d8ce331_5_block_011",
+      "coordinates": {
+        "x1": 229.0,
+        "y1": 2007.0,
+        "x2": 1546.0,
+        "y2": 2369.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8714549541473389,
+      "reading_order": 12,
+      "text": "7. Assertion (A): $\\mathrm{SO}_2$ is a basic oxide.\nReason (R): $\\mathrm{SO}_2$ forms $\\mathrm{H}_2\\mathrm{SO}_3$ when it is dissolved in water.\n(a) Both A and R are true and R is the correct explanation of A\n(b) Both A and R are true, but R is not the correct explanation of A.\n(c) A is true and R is false.\n(d) A is false and R is true."
+    },
+    {
+      "block_id": "20260317_96cdd42a-568b-49d1-8e0c-59656d8ce331_5_block_012",
+      "coordinates": {
+        "x1": 233.0,
+        "y1": 2395.0,
+        "x2": 1696.0,
+        "y2": 2754.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9326870441436768,
+      "reading_order": 13,
+      "text": "8. Arrange the following metals in the increasing order of the number of $\\mathrm{H}_2$\nmolecules liberated when 1 molecule/atom of the metal reacts with water/\nsteam.\n(A) Na (B) Ca (C) Al (D) Fe\n(a) ABDC (b) CDBA\n(c) DCBA (d) BCDA"
+    },
+    {
+      "block_id": "20260317_96cdd42a-568b-49d1-8e0c-59656d8ce331_5_block_013",
+      "coordinates": {
+        "x1": 1789.0,
+        "y1": 310.0,
+        "x2": 2173.0,
+        "y2": 365.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6199870705604553,
+      "reading_order": 14,
+      "text": "Space for rough work"
+    }
+  ]
+}

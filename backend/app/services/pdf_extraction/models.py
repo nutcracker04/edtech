@@ -4,6 +4,7 @@ Data models for structured PDF question extraction.
 This module defines all Pydantic models used throughout the extraction pipeline.
 """
 
+import re
 from enum import Enum
 from typing import List, Optional, Dict, Tuple
 from pydantic import BaseModel, Field, field_validator, model_validator
@@ -255,9 +256,16 @@ class TaggedQuestion(BaseModel):
         if self.answer_type in [QuestionType.MCQ_SINGLE, QuestionType.MCQ_MULTIPLE]:
             if not self.options:
                 raise ValueError("MCQ questions must have options")
-            option_texts = [opt.text for opt in self.options]
+            option_texts = [opt.text.strip().upper() for opt in self.options]
             option_labels = [opt.label.upper() for opt in self.options]
             ans = str(self.correct_answer).strip().upper()
+            embedded_label = re.search(
+                r"(?:CORRECT\s+(?:ANSWER|OPTION)\s+IS|OPTION\s+IS)\s+\(?([A-D])\)?",
+                ans,
+            )
+            if embedded_label:
+                ans = embedded_label.group(1)
+                self.correct_answer = ans
             if ans and ans not in option_texts and ans not in option_labels:
                 if len(ans) != 1 or ans not in "ABCD":
                     raise ValueError(

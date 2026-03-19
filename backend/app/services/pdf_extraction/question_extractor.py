@@ -1125,22 +1125,23 @@ Return format: {{"question_numbers": ["1", "2", "3", ...]}}
         if match:
             cleaned = match.group(1).upper()
 
-        # Pattern 5: "A)" or "A." -> "A" (only if followed by nothing or description)
+        # Pattern 5: "A)" or "A." -> "A"
         match = re.match(r'^([A-Da-d])[.)](?:\s+(.+))?$', cleaned, re.IGNORECASE)
         if match:
-            # If there's additional text after the option letter, keep it
-            # Otherwise just return the letter
-            option_letter = match.group(1).upper()
-            additional_text = match.group(2)
-            if additional_text:
-                # Keep the full answer with description
-                cleaned = f"{option_letter}) {additional_text}"
-            else:
-                cleaned = option_letter
+            cleaned = match.group(1).upper()
 
         # Pattern 6: Just a single letter "A", "B", "C", "D" -> uppercase
         if re.match(r'^[A-Da-d]$', cleaned, re.IGNORECASE):
             cleaned = cleaned.upper()
+
+        # Pattern 7: Explanatory text that still contains the final option label
+        match = re.search(
+            r'(?:correct\s+(?:answer|option)\s+is|option\s+is)\s+\(?([A-Da-d])\)?',
+            cleaned,
+            re.IGNORECASE,
+        )
+        if match:
+            cleaned = match.group(1).upper()
 
         return cleaned.strip()
 

@@ -1,0 +1,151 @@
+{
+  "page_num": 5,
+  "image_width": 2398,
+  "image_height": 3003,
+  "created_at": "2026-03-17T19:54:03.159634+00:00",
+  "blocks": [
+    {
+      "block_id": "20260317_43a438f9-7aa4-4f9e-9549-d86612968256_5_block_000",
+      "coordinates": {
+        "x1": 1752.0,
+        "y1": 189.0,
+        "x2": 2050.0,
+        "y2": 235.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.8482496738433838,
+      "reading_order": 1,
+      "text": "Assessment Test III"
+    },
+    {
+      "block_id": "20260317_43a438f9-7aa4-4f9e-9549-d86612968256_5_block_001",
+      "coordinates": {
+        "x1": 2095.0,
+        "y1": 184.0,
+        "x2": 2203.0,
+        "y2": 234.0
+      },
+      "layout_tag": "page-number",
+      "confidence": 0.7802118062973022,
+      "reading_order": 2,
+      "text": "1.11"
+    },
+    {
+      "block_id": "20260317_43a438f9-7aa4-4f9e-9549-d86612968256_5_block_002",
+      "coordinates": {
+        "x1": 291.0,
+        "y1": 291.0,
+        "x2": 1170.0,
+        "y2": 411.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.39315348863601685,
+      "reading_order": 3,
+      "text": "(c) Revolution of electrons around the nucleus\n(d) Presence of large empty space in the atom"
+    },
+    {
+      "block_id": "20260317_43a438f9-7aa4-4f9e-9549-d86612968256_5_block_003",
+      "coordinates": {
+        "x1": 212.0,
+        "y1": 470.0,
+        "x2": 1694.0,
+        "y2": 716.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5275467038154602,
+      "reading_order": 4,
+      "text": "14. Among the following sets of elements, which set contains the same number\nof valence electrons?\n(a) $^{12}\\mathrm{A}^{24}, ^{19}\\mathrm{B}^{39}$ (b) $^{14}\\mathrm{A}^{28}, {}_6\\mathrm{B}^{12}$\n(c) $^{12}\\mathrm{A}^{24}, ^{14}\\mathrm{B}^{28}$ (d) $^{15}\\mathrm{A}^{30}, {}_8\\mathrm{B}^{16}$"
+    },
+    {
+      "block_id": "20260317_43a438f9-7aa4-4f9e-9549-d86612968256_5_block_004",
+      "coordinates": {
+        "x1": 215.0,
+        "y1": 766.0,
+        "x2": 1330.0,
+        "y2": 818.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.41911765933036804,
+      "reading_order": 5,
+      "text": "15. Match the entries of Column A with those of Column B."
+    },
+    {
+      "block_id": "20260317_43a438f9-7aa4-4f9e-9549-d86612968256_5_block_005",
+      "coordinates": {
+        "x1": 299.0,
+        "y1": 834.0,
+        "x2": 1231.0,
+        "y2": 1235.0
+      },
+      "layout_tag": "table",
+      "confidence": 0.9525993466377258,
+      "reading_order": 6,
+      "text": "<table>\n<thead>\n<tr>\n<th>Column A<br/>(Element)</th>\n<th>Column B<br/>(Number of Core Electrons)</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>(i) Potassium</td>\n<td>(A) 2</td>\n</tr>\n<tr>\n<td>(ii) Carbon</td>\n<td>(B) 10</td>\n</tr>\n<tr>\n<td>(iii) Sulphur</td>\n<td>(C) 18</td>\n</tr>\n<tr>\n<td>(iv) Titanium</td>\n<td>(D) 20<br/>(E) 28</td>\n</tr>\n</tbody>\n</table>"
+    },
+    {
+      "block_id": "20260317_43a438f9-7aa4-4f9e-9549-d86612968256_5_block_006",
+      "coordinates": {
+        "x1": 293.0,
+        "y1": 1257.0,
+        "x2": 1248.0,
+        "y2": 1315.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7499572038650513,
+      "reading_order": 7,
+      "text": "(a) (i) → (D); (ii) → (C); (iii) → (B); (iv) → (A)"
+    },
+    {
+      "block_id": "20260317_43a438f9-7aa4-4f9e-9549-d86612968256_5_block_007",
+      "coordinates": {
+        "x1": 291.0,
+        "y1": 1320.0,
+        "x2": 1248.0,
+        "y2": 1377.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7469437122344971,
+      "reading_order": 8,
+      "text": "(b) (i) $\\rightarrow$ (C); (ii) $\\rightarrow$ (A); (iii) $\\rightarrow$ (B); (iv) $\\rightarrow$ (D)"
+    },
+    {
+      "block_id": "20260317_43a438f9-7aa4-4f9e-9549-d86612968256_5_block_008",
+      "coordinates": {
+        "x1": 291.0,
+        "y1": 1383.0,
+        "x2": 1244.0,
+        "y2": 1439.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.756956160068512,
+      "reading_order": 9,
+      "text": "(c) (i) $\\rightarrow$ (C); (ii) $\\rightarrow$ (D); (iii) $\\rightarrow$ (A); (iv) $\\rightarrow$ (B)"
+    },
+    {
+      "block_id": "20260317_43a438f9-7aa4-4f9e-9549-d86612968256_5_block_009",
+      "coordinates": {
+        "x1": 291.0,
+        "y1": 1446.0,
+        "x2": 1248.0,
+        "y2": 1502.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7746071815490723,
+      "reading_order": 10,
+      "text": "(d) (i) $\\rightarrow$ (B); (ii) $\\rightarrow$ (A); (iii) $\\rightarrow$ (C); (iv) $\\rightarrow$ (D)"
+    },
+    {
+      "block_id": "20260317_43a438f9-7aa4-4f9e-9549-d86612968256_5_block_010",
+      "coordinates": {
+        "x1": 1792.0,
+        "y1": 313.0,
+        "x2": 2168.0,
+        "y2": 363.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5555171370506287,
+      "reading_order": 11,
+      "text": "Space for rough work"
+    }
+  ]
+}

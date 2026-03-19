@@ -1,0 +1,177 @@
+{
+  "page_num": 2,
+  "image_width": 2398,
+  "image_height": 3003,
+  "created_at": "2026-03-17T19:54:30.444648+00:00",
+  "blocks": [
+    {
+      "block_id": "20260317_08b0f778-335e-4e5a-b95a-772c98e1be2f_2_block_000",
+      "coordinates": {
+        "x1": 199.0,
+        "y1": 184.0,
+        "x2": 749.0,
+        "y2": 241.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.747296154499054,
+      "reading_order": 1,
+      "text": "4.8 Chapter 4 Air and Oxygen"
+    },
+    {
+      "block_id": "20260317_08b0f778-335e-4e5a-b95a-772c98e1be2f_2_block_001",
+      "coordinates": {
+        "x1": 230.0,
+        "y1": 291.0,
+        "x2": 1405.0,
+        "y2": 344.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5433930158615112,
+      "reading_order": 2,
+      "text": "5. Match the statements of Column A with those of Column B."
+    },
+    {
+      "block_id": "20260317_08b0f778-335e-4e5a-b95a-772c98e1be2f_2_block_002",
+      "coordinates": {
+        "x1": 299.0,
+        "y1": 366.0,
+        "x2": 1565.0,
+        "y2": 901.0
+      },
+      "layout_tag": "table",
+      "confidence": 0.41668224334716797,
+      "reading_order": 3,
+      "text": "<table>\n<thead>\n<tr>\n<th>Column A</th>\n<th>Column B</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>(i) Rapid combustion</td>\n<td>(A) Substance burns to produce excess<br/>amount of gas with the liberation of<br/>heat.</td>\n</tr>\n<tr>\n<td>(ii) Spontaneous<br/>combustion</td>\n<td>(B) Substance burns rapidly as long<br/>as the combustible substance is<br/>available.</td>\n</tr>\n<tr>\n<td>(iii) Explosion</td>\n<td>(C) Substance burns in air at room<br/>temperature.</td>\n</tr>\n</tbody>\n</table>"
+    },
+    {
+      "block_id": "20260317_08b0f778-335e-4e5a-b95a-772c98e1be2f_2_block_003",
+      "coordinates": {
+        "x1": 290.0,
+        "y1": 924.0,
+        "x2": 1008.0,
+        "y2": 982.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7160547375679016,
+      "reading_order": 4,
+      "text": "(a) (i) → (C); (ii) → (A); (iii) → (B)"
+    },
+    {
+      "block_id": "20260317_08b0f778-335e-4e5a-b95a-772c98e1be2f_2_block_004",
+      "coordinates": {
+        "x1": 290.0,
+        "y1": 987.0,
+        "x2": 1012.0,
+        "y2": 1046.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6715353727340698,
+      "reading_order": 5,
+      "text": "(b) (i) → (B); (ii) → (C); (iii) → (A)"
+    },
+    {
+      "block_id": "20260317_08b0f778-335e-4e5a-b95a-772c98e1be2f_2_block_005",
+      "coordinates": {
+        "x1": 290.0,
+        "y1": 1050.0,
+        "x2": 1009.0,
+        "y2": 1109.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6523853540420532,
+      "reading_order": 6,
+      "text": "(c) (i) → (A); (ii) → (C); (iii) → (B)"
+    },
+    {
+      "block_id": "20260317_08b0f778-335e-4e5a-b95a-772c98e1be2f_2_block_006",
+      "coordinates": {
+        "x1": 291.0,
+        "y1": 1112.0,
+        "x2": 1011.0,
+        "y2": 1170.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6703868508338928,
+      "reading_order": 7,
+      "text": "(d) (i) → (C); (ii) → (B); (iii) → (A)"
+    },
+    {
+      "block_id": "20260317_08b0f778-335e-4e5a-b95a-772c98e1be2f_2_block_007",
+      "coordinates": {
+        "x1": 233.0,
+        "y1": 1192.0,
+        "x2": 1692.0,
+        "y2": 1563.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9168573021888733,
+      "reading_order": 8,
+      "text": "6. In the process of laboratory preparation of oxygen, oxygen gas is collected\nby the ______.\n(a) downward displacement of water\n(b) downward displacement of air\n(c) upward displacement of water\n(d) upward displacement of air"
+    },
+    {
+      "block_id": "20260317_08b0f778-335e-4e5a-b95a-772c98e1be2f_2_block_008",
+      "coordinates": {
+        "x1": 231.0,
+        "y1": 1583.0,
+        "x2": 1697.0,
+        "y2": 2007.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.854081928730011,
+      "reading_order": 9,
+      "text": "7. Identify the true statement among the following regarding LPG and kero-\nsene stove.\n(a) Both can be lighted by automatic gas lighter.\n(b) Both cannot be lighted by automatic gas lighter.\n(c) LPG stove can be lighted by automatic gas lighter but not kerosene stove.\n(d) Kerosene stove can be lighted by automatic gas lighter but not LPG\nstove."
+    },
+    {
+      "block_id": "20260317_08b0f778-335e-4e5a-b95a-772c98e1be2f_2_block_009",
+      "coordinates": {
+        "x1": 234.0,
+        "y1": 2030.0,
+        "x2": 1693.0,
+        "y2": 2277.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9408161044120789,
+      "reading_order": 10,
+      "text": "8. Which of the following methods is used to prevent corrosion of containers\nthat are used for storing edible materials?\n(a) Galvanization (b) Electroplating\n(c) Painting (d) Tinning"
+    },
+    {
+      "block_id": "20260317_08b0f778-335e-4e5a-b95a-772c98e1be2f_2_block_010",
+      "coordinates": {
+        "x1": 232.0,
+        "y1": 2298.0,
+        "x2": 1435.0,
+        "y2": 2486.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9301057457923889,
+      "reading_order": 11,
+      "text": "9. The major source of most of the air pollutants is __________.\n(a) industries (b) automobiles\n(c) thermal power (d) deforestation"
+    },
+    {
+      "block_id": "20260317_08b0f778-335e-4e5a-b95a-772c98e1be2f_2_block_011",
+      "coordinates": {
+        "x1": 216.0,
+        "y1": 2510.0,
+        "x2": 1698.0,
+        "y2": 2756.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9437554478645325,
+      "reading_order": 12,
+      "text": "10. Reaction between oxygen and hydrogen produces a lot of heat energy. This\nis exploited in which of the following uses of $\\mathrm{O}_2$?\n(a) Stimulation for breathing (b) As anaesthetic\n(c) Respiration (d) Welding"
+    },
+    {
+      "block_id": "20260317_08b0f778-335e-4e5a-b95a-772c98e1be2f_2_block_012",
+      "coordinates": {
+        "x1": 1791.0,
+        "y1": 312.0,
+        "x2": 2169.0,
+        "y2": 364.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.42240679264068604,
+      "reading_order": 13,
+      "text": "Space for rough work"
+    }
+  ]
+}
