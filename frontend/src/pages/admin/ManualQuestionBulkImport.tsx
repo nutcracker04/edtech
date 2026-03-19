@@ -4,7 +4,6 @@
 
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { MainLayout } from '@/components/layout/MainLayout';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -20,15 +19,7 @@ import {
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { ScrollArea } from '@/components/ui/scroll-area';
-import {
-  ArrowLeft,
-  BookOpen,
-  ClipboardCopy,
-  Loader2,
-  Upload,
-  ListTree,
-  FileJson,
-} from 'lucide-react';
+import { BookOpen, ClipboardCopy, Loader2, Upload, ListTree, FileJson } from 'lucide-react';
 import { toast } from 'sonner';
 import { adminExtractionService } from '@/services/adminExtractionService';
 
@@ -212,7 +203,7 @@ export default function ManualQuestionBulkImport() {
         questions: parsed as Record<string, unknown>[],
       });
       toast.success(`Imported ${result.questions_created} questions`);
-      navigate(`/admin/extractions/${result.job_id}`);
+      navigate(`/admin/questions/jobs/${result.job_id}`);
     } catch (e) {
       toast.error(e instanceof Error ? e.message : 'Import failed');
     } finally {
@@ -221,22 +212,15 @@ export default function ManualQuestionBulkImport() {
   };
 
   return (
-    <MainLayout>
-      <div className="container max-w-5xl py-8">
-        <Button variant="ghost" className="mb-4 gap-2 -ml-2" onClick={() => navigate('/admin')}>
-          <ArrowLeft className="h-4 w-4" />
-          Admin dashboard
-        </Button>
-
+    <div className="container max-w-5xl py-8">
         <div className="mb-8">
           <h1 className="text-3xl font-bold tracking-tight flex items-center gap-2">
             <Upload className="h-8 w-8 text-primary" />
-            Bulk question import
+            Import a question batch
           </h1>
           <p className="text-muted-foreground mt-2 max-w-2xl">
-            Create a completed import job and load every field for each question as JSON. Then use{' '}
-            <strong>Extraction management</strong> to review, edit, delete, and finalize into the repository — same
-            as before, without any PDF pipeline.
+            Paste JSON or use the form builder, then submit. You’ll jump to that batch to review, edit, reject, or
+            approve questions into the bank. Use the <strong>All batches</strong> tab anytime to see every import.
           </p>
         </div>
 
@@ -381,8 +365,8 @@ export default function ManualQuestionBulkImport() {
                       </>
                     )}
                   </Button>
-                  <Button type="button" variant="outline" onClick={() => navigate('/admin/extractions')}>
-                    Open extraction management
+                  <Button type="button" variant="outline" onClick={() => navigate('/admin/questions')}>
+                    View all batches
                   </Button>
                 </div>
               </TabsContent>
@@ -481,7 +465,6 @@ export default function ManualQuestionBulkImport() {
             </Tabs>
           </CardContent>
         </Card>
-      </div>
-    </MainLayout>
+    </div>
   );
 }

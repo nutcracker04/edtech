@@ -1,9 +1,8 @@
-import { useState } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate, useParams } from "react-router-dom";
 import { AuthProvider } from "./contexts/AuthContext";
 import { LayoutProvider } from "./contexts/LayoutContext";
 import { ProtectedRoute } from "./components/auth/ProtectedRoute";
@@ -19,11 +18,16 @@ import Landing from "./pages/Landing";
 import Tests from "./pages/Tests";
 import Settings from "./pages/Settings";
 import AdminDashboard from "./pages/admin/AdminDashboard";
-import ExtractionManagement from "./pages/admin/ExtractionManagement";
-import ManualQuestionBulkImport from "./pages/admin/ManualQuestionBulkImport";
+import QuestionStaging from "./pages/admin/QuestionStaging";
 import TestTaking from "./pages/TestTaking";
 import TestResults from "./pages/TestResults";
 import NotFound from "./pages/NotFound";
+
+function LegacyExtractionJobRedirect() {
+  const { jobId } = useParams<{ jobId: string }>();
+  if (!jobId) return <Navigate to="/admin/questions" replace />;
+  return <Navigate to={`/admin/questions/jobs/${jobId}`} replace />;
+}
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -103,16 +107,21 @@ const App = () => {
                   </ProtectedRoute>
                 } />
 
-                <Route path="/admin/pdf-upload" element={<Navigate to="/admin/question-import" replace />} />
-                <Route path="/admin/question-import" element={
-                  <ProtectedRoute>
-                    <ManualQuestionBulkImport />
-                  </ProtectedRoute>
-                } />
+                <Route path="/admin/pdf-upload" element={<Navigate to="/admin/questions/import" replace />} />
+                <Route path="/admin/question-import" element={<Navigate to="/admin/questions/import" replace />} />
+                <Route
+                  path="/admin/extractions/:jobId"
+                  element={
+                    <ProtectedRoute>
+                      <LegacyExtractionJobRedirect />
+                    </ProtectedRoute>
+                  }
+                />
+                <Route path="/admin/extractions/*" element={<Navigate to="/admin/questions" replace />} />
 
-                <Route path="/admin/extractions/*" element={
+                <Route path="/admin/questions/*" element={
                   <ProtectedRoute>
-                    <ExtractionManagement />
+                    <QuestionStaging />
                   </ProtectedRoute>
                 } />
 

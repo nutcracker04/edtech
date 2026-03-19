@@ -182,10 +182,10 @@ export function ExtractionDetailView() {
         <div className="text-center">
           <p className="text-destructive mb-4">Error: {state.currentJobError.message}</p>
           <button
-            onClick={() => navigate('/admin/extractions')}
+            onClick={() => navigate('/admin/questions')}
             className="px-4 py-2 bg-primary text-primary-foreground rounded hover:bg-primary/90"
           >
-            Back to List
+            Back to batches
           </button>
         </div>
       </div>
@@ -198,10 +198,10 @@ export function ExtractionDetailView() {
         <div className="text-center">
           <p className="text-muted-foreground mb-4">Job not found</p>
           <button
-            onClick={() => navigate('/admin/extractions')}
+            onClick={() => navigate('/admin/questions')}
             className="px-4 py-2 bg-primary text-primary-foreground rounded hover:bg-primary/90"
           >
-            Back to List
+            Back to batches
           </button>
         </div>
       </div>
@@ -214,16 +214,16 @@ export function ExtractionDetailView() {
   return (
     <div className="container mx-auto py-8">
       <button
-        onClick={() => navigate('/admin/extractions')}
+        onClick={() => navigate('/admin/questions')}
         className="mb-6 px-4 py-2 border rounded hover:bg-accent"
       >
-        ← Back to List
+        ← All batches
       </button>
 
       <div className="mb-8">
         <h1 className="text-3xl font-bold mb-2">{book?.title || job.title || job.source_pdf_filename}</h1>
         <p className="text-muted-foreground">
-          Question imports &gt; {book?.title || job.title || 'Unknown book'}
+          Questions · Batch · {book?.title || job.title || 'Unknown book'}
         </p>
       </div>
 

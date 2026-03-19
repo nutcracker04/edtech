@@ -9,27 +9,20 @@ const AdminDashboard = () => {
 
     const adminActions = [
         {
-            title: "Question import",
-            description: "Paste JSON to load full raw question rows for a book — no PDF extraction.",
-            path: "/admin/question-import",
-            color: "text-blue-500",
-            bgColor: "bg-blue-500/10",
-            icon: "📥",
+            title: "Questions",
+            description:
+                "Import batches (JSON or form), open any batch, then edit, delete, reject, or approve into the question bank — one flow.",
+            path: "/admin/questions",
+            color: "text-primary",
+            bgColor: "bg-primary/10",
+            icon: "📋",
         },
         {
-            title: "Extraction management",
-            description: "Review imported questions, edit fields, delete, and finalize into the repository.",
-            path: "/admin/extractions",
-            color: "text-purple-500",
-            bgColor: "bg-purple-500/10",
-            icon: "📚",
-        },
-        {
-            title: "Admin Panel",
-            description: "Manage platform settings and configurations.",
-            path: "/admin/settings",
-            color: "text-green-500",
-            bgColor: "bg-green-500/10",
+            title: "Settings",
+            description: "Your profile and application preferences.",
+            path: "/settings",
+            color: "text-muted-foreground",
+            bgColor: "bg-muted",
             icon: "⚙️",
         },
     ];
@@ -38,18 +31,18 @@ const AdminDashboard = () => {
         <MainLayout>
             <div className="container py-8">
                 <div className="mb-8">
-                    <h1 className="text-3xl font-bold mb-2">Admin Dashboard</h1>
-                    <p className="text-muted-foreground">Manage platform settings and configurations.</p>
+                    <h1 className="text-3xl font-bold mb-2">Admin</h1>
+                    <p className="text-muted-foreground">
+                        Tools for managing content. Start with <strong>Questions</strong> to dump and review data.
+                    </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl">
                     {adminActions.map((action) => (
-                        <Card key={action.title} className="hover:shadow-lg transition-shadow border-2 border-border/50">
+                        <Card key={action.title} className="hover:shadow-md transition-shadow border-2 border-border/50">
                             <CardHeader className="flex flex-row items-center gap-4">
                                 <div className={`${action.bgColor} ${action.color} p-3 rounded-xl`}>
-                                    <div className="h-6 w-6 flex items-center justify-center">
-                                        <span className="text-lg">{action.icon}</span>
-                                    </div>
+                                    <span className="text-lg">{action.icon}</span>
                                 </div>
                                 <div>
                                     <CardTitle>{action.title}</CardTitle>
@@ -59,9 +52,10 @@ const AdminDashboard = () => {
                             <CardContent>
                                 <Button
                                     className="w-full justify-between"
+                                    variant={action.title === "Questions" ? "default" : "outline"}
                                     onClick={() => navigate(action.path)}
                                 >
-                                    Manage {action.title}
+                                    Open
                                     <ArrowRight className="h-4 w-4 ml-2" />
                                 </Button>
                             </CardContent>
