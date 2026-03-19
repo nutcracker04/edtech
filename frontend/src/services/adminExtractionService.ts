@@ -247,6 +247,34 @@ class AdminExtractionService {
     return this.handleResponse<BulkOperationResult>(response);
   }
 
+  async bulkRejectQuestions(questionIds: string[]): Promise<BulkOperationResult> {
+    const token = await this.getAuthToken();
+    const headers = {
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${token}`,
+    };
+    const response = await fetch(`${API_BASE_URL}/admin/extractions/questions/reject-batch`, {
+      method: 'POST',
+      headers,
+      body: JSON.stringify({ question_ids: questionIds }),
+    });
+    return this.handleResponse<BulkOperationResult>(response);
+  }
+
+  async bulkReinstateQuestions(questionIds: string[]): Promise<BulkOperationResult> {
+    const token = await this.getAuthToken();
+    const headers = {
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${token}`,
+    };
+    const response = await fetch(`${API_BASE_URL}/admin/extractions/questions/reinstate-batch`, {
+      method: 'POST',
+      headers,
+      body: JSON.stringify({ question_ids: questionIds }),
+    });
+    return this.handleResponse<BulkOperationResult>(response);
+  }
+
   /**
    * Delete multiple raw questions in bulk
    */

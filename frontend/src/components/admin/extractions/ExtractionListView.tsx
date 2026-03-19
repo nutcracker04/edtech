@@ -149,9 +149,10 @@ export function ExtractionListView() {
           <ArrowLeft className="h-4 w-4" />
           Back to Admin Dashboard
         </button>
-        <h1 className="text-3xl font-bold mb-2">Question imports</h1>
+        <h1 className="text-3xl font-bold mb-2">Question staging</h1>
         <p className="text-muted-foreground">
-          Review and manage batches of raw questions (manual import or legacy jobs), then finalize into the repository.
+          Each job is a batch of raw questions. Open one to view, edit, delete, reject, reinstate, and approve into the
+          question bank.
         </p>
       </div>
 

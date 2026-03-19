@@ -10,6 +10,13 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { useExtractionManagement } from '@/contexts/ExtractionManagementContext';
 import { adminExtractionService } from '@/services/adminExtractionService';
 import { supabase } from '@/integrations/supabase/client';
+import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Button } from '@/components/ui/button';
+import { Pencil, Ban, RotateCcw } from 'lucide-react';
+import type { ProcessingStatus, RawQuestion } from '@/types/admin';
+import { RawQuestionEditorDialog } from '@/components/admin/staging/RawQuestionEditorDialog';
+
+type ReviewTab = 'all' | ProcessingStatus;
 
 export function ExtractionDetailView() {
   const { jobId } = useParams<{ jobId: string }>();
@@ -18,6 +25,9 @@ export function ExtractionDetailView() {
   const [extractedContentLoading, setExtractedContentLoading] = useState(false);
   const [extractedContentError, setExtractedContentError] = useState<string | null>(null);
   const [showExtractedContent, setShowExtractedContent] = useState(false);
+  const [reviewTab, setReviewTab] = useState<ReviewTab>('pending');
+  const [editorOpen, setEditorOpen] = useState(false);
+  const [editingQuestion, setEditingQuestion] = useState<RawQuestion | null>(null);
   const {
     state,
     setCurrentJob,
@@ -26,8 +36,8 @@ export function ExtractionDetailView() {
     setQuestions,
     setQuestionsLoading,
     setQuestionsError,
+    setQuestionFilters,
     setQuestionPagination,
-    updateQuestion,
     removeQuestion,
     selectQuestion,
     deselectQuestion,
@@ -37,6 +47,25 @@ export function ExtractionDetailView() {
     setOperationError,
   } = useExtractionManagement();
   const selectedQuestionIds = state.selectedQuestionIds;
+
+  const applyReviewTab = (t: ReviewTab) => {
+    setReviewTab(t);
+    setQuestionFilters(t === 'all' ? {} : { processing_status: t });
+    setQuestionPagination({ ...state.questionPagination, page: 1 });
+    deselectAllQuestions();
+  };
+
+  const refreshQuestions = async () => {
+    if (!jobId) return;
+    const filters = reviewTab === 'all' ? {} : { processing_status: reviewTab };
+    const { questions, total } = await adminExtractionService.listQuestions({
+      jobId,
+      filters,
+      pagination: state.questionPagination,
+    });
+    setQuestions(questions);
+    setQuestionPagination({ ...state.questionPagination, total });
+  };
 
   useEffect(() => {
     if (!jobId) return;
@@ -55,6 +84,12 @@ export function ExtractionDetailView() {
 
     fetchJobDetails();
   }, [jobId, setCurrentJob, setCurrentJobLoading, setCurrentJobError]);
+
+  useEffect(() => {
+    if (!jobId) return;
+    setReviewTab('pending');
+    setQuestionFilters({ processing_status: 'pending' });
+  }, [jobId, setQuestionFilters]);
 
   // Real-time subscription for this job's progress updates
   useEffect(() => {
@@ -290,28 +325,45 @@ export function ExtractionDetailView() {
         </div>
       )}
 
-      {/* Questions Section with CRUD and Finalize */}
+      {/* Staging workspace: filter, edit, reject, approve */}
       <div className="border rounded-lg p-6">
-        <div className="flex flex-wrap items-center justify-between gap-4 mb-4">
-          <h2 className="text-lg font-semibold">Raw questions (staging)</h2>
-          <div className="flex gap-2">
-            <button
+        <div className="flex flex-col gap-4 mb-4">
+          <div className="flex flex-wrap items-center justify-between gap-3">
+            <h2 className="text-lg font-semibold">Staging questions</h2>
+            <Tabs
+              value={reviewTab}
+              onValueChange={(v) => applyReviewTab(v as ReviewTab)}
+              className="w-full sm:w-auto"
+            >
+              <TabsList className="flex-wrap h-auto gap-1">
+                <TabsTrigger value="all">All</TabsTrigger>
+                <TabsTrigger value="pending">Pending review</TabsTrigger>
+                <TabsTrigger value="rejected">Rejected</TabsTrigger>
+                <TabsTrigger value="tagged">Approved</TabsTrigger>
+                <TabsTrigger value="failed">Failed / error</TabsTrigger>
+              </TabsList>
+            </Tabs>
+          </div>
+          <p className="text-sm text-muted-foreground">
+            One place to review imports: edit every field, delete bad rows, reject, reinstate, or approve into the question bank.
+          </p>
+          <div className="flex flex-wrap gap-2">
+            <Button
+              variant="outline"
+              size="sm"
               onClick={() => selectAllQuestions(state.questions.map((q) => q.id))}
-              className="px-3 py-1.5 text-sm border rounded hover:bg-accent"
             >
-              Select All
-            </button>
-            <button
-              onClick={() => deselectAllQuestions()}
-              className="px-3 py-1.5 text-sm border rounded hover:bg-accent"
-            >
-              Deselect All
-            </button>
-            <button
+              Select all (page)
+            </Button>
+            <Button variant="outline" size="sm" onClick={() => deselectAllQuestions()}>
+              Deselect all
+            </Button>
+            <Button
+              size="sm"
               onClick={async () => {
                 const ids = Array.from(state.selectedQuestionIds);
                 if (ids.length === 0) {
-                  alert('Select questions to add to repository');
+                  alert('Select questions to approve');
                   return;
                 }
                 setOperationInProgress(true);
@@ -319,32 +371,81 @@ export function ExtractionDetailView() {
                 try {
                   const result = await adminExtractionService.bulkFinalizeQuestions(ids);
                   if (result.failure_count > 0) {
-                    setOperationError(new Error(`${result.failure_count} failed: ${result.failed?.[0]?.error ?? 'Unknown'}`));
+                    setOperationError(
+                      new Error(`${result.failure_count} failed: ${result.failed?.[0]?.error ?? 'Unknown'}`)
+                    );
                   }
                   if (result.success_count > 0) {
                     const jobDetail = await adminExtractionService.getJobDetails(jobId!);
                     setCurrentJob(jobDetail);
-                    const { questions, total } = await adminExtractionService.listQuestions({
-                      jobId: jobId!,
-                      filters: state.questionFilters,
-                      pagination: state.questionPagination,
-                    });
-                    setQuestions(questions);
-                    setQuestionPagination({ ...state.questionPagination, total });
+                    await refreshQuestions();
                     deselectAllQuestions();
                   }
                 } catch (e) {
-                  setOperationError(e instanceof Error ? e : new Error('Finalization failed'));
-                  alert(e instanceof Error ? e.message : 'Finalization failed');
+                  setOperationError(e instanceof Error ? e : new Error('Approve failed'));
+                  alert(e instanceof Error ? e.message : 'Approve failed');
                 } finally {
                   setOperationInProgress(false);
                 }
               }}
               disabled={selectedQuestionIds.size === 0 || state.operationInProgress}
-              className="px-4 py-2 bg-primary text-primary-foreground rounded hover:bg-primary/90 disabled:opacity-50"
             >
-              {state.operationInProgress ? 'Adding...' : `Add to Repository (${selectedQuestionIds.size})`}
-            </button>
+              {state.operationInProgress ? 'Approving…' : `Approve (${selectedQuestionIds.size})`}
+            </Button>
+            <Button
+              variant="secondary"
+              size="sm"
+              onClick={async () => {
+                const ids = Array.from(state.selectedQuestionIds);
+                if (ids.length === 0) {
+                  alert('Select questions to reject');
+                  return;
+                }
+                setOperationInProgress(true);
+                try {
+                  await adminExtractionService.bulkRejectQuestions(ids);
+                  const jobDetail = await adminExtractionService.getJobDetails(jobId!);
+                  setCurrentJob(jobDetail);
+                  await refreshQuestions();
+                  deselectAllQuestions();
+                } catch (e) {
+                  alert(e instanceof Error ? e.message : 'Reject failed');
+                } finally {
+                  setOperationInProgress(false);
+                }
+              }}
+              disabled={selectedQuestionIds.size === 0 || state.operationInProgress}
+            >
+              <Ban className="h-3.5 w-3.5 mr-1" />
+              Reject ({selectedQuestionIds.size})
+            </Button>
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={async () => {
+                const ids = Array.from(state.selectedQuestionIds);
+                if (ids.length === 0) {
+                  alert('Select rejected questions to reinstate');
+                  return;
+                }
+                setOperationInProgress(true);
+                try {
+                  await adminExtractionService.bulkReinstateQuestions(ids);
+                  const jobDetail = await adminExtractionService.getJobDetails(jobId!);
+                  setCurrentJob(jobDetail);
+                  await refreshQuestions();
+                  deselectAllQuestions();
+                } catch (e) {
+                  alert(e instanceof Error ? e.message : 'Reinstate failed');
+                } finally {
+                  setOperationInProgress(false);
+                }
+              }}
+              disabled={selectedQuestionIds.size === 0 || state.operationInProgress}
+            >
+              <RotateCcw className="h-3.5 w-3.5 mr-1" />
+              Reinstate ({selectedQuestionIds.size})
+            </Button>
           </div>
         </div>
 
@@ -392,13 +493,35 @@ export function ExtractionDetailView() {
                         </span>
                       </div>
                       <div className="text-sm text-muted-foreground space-y-1">
-                        <p>Options: {question.options?.length ?? 0}</p>
+                        <p>
+                          #{question.question_number} · type: {question.answer_type ?? '—'} · options:{' '}
+                          {question.options?.length ?? 0}
+                        </p>
+                        {question.correct_answer != null && question.correct_answer !== '' && (
+                          <p>Correct: {question.correct_answer}</p>
+                        )}
                         {question.chapter_context && <p>Chapter: {question.chapter_context}</p>}
                         {question.topic_context && <p>Topic: {question.topic_context}</p>}
-                        {question.page_number && <p>Page: {question.page_number}</p>}
+                        {question.page_number != null && <p>Page: {question.page_number}</p>}
+                        {(question.marks != null || question.negative_marks != null) && (
+                          <p>
+                            Marks: {question.marks ?? '—'} / neg: {question.negative_marks ?? '—'}
+                          </p>
+                        )}
                       </div>
                     </div>
-                                <div className="flex gap-2 shrink-0">
+                    <div className="flex gap-2 shrink-0">
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        onClick={() => {
+                          setEditingQuestion(question);
+                          setEditorOpen(true);
+                        }}
+                        disabled={state.operationInProgress}
+                      >
+                        <Pencil className="h-4 w-4" />
+                      </Button>
                       <button
                         onClick={async () => {
                           if (!confirm('Delete this question?')) return;
@@ -454,6 +577,26 @@ export function ExtractionDetailView() {
           </>
         )}
       </div>
+
+      <RawQuestionEditorDialog
+        open={editorOpen}
+        onOpenChange={(o) => {
+          setEditorOpen(o);
+          if (!o) setEditingQuestion(null);
+        }}
+        question={editingQuestion}
+        onSaved={async () => {
+          if (jobId) {
+            try {
+              const jobDetail = await adminExtractionService.getJobDetails(jobId);
+              setCurrentJob(jobDetail);
+            } catch {
+              /* ignore */
+            }
+          }
+          await refreshQuestions();
+        }}
+      />
     </div>
   );
 }

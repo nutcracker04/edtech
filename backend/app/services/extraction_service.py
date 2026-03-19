@@ -350,10 +350,26 @@ class ExtractionService:
             
             # Build update payload
             update_data = {"updated_at": datetime.now(timezone.utc).isoformat()}
+            if updates.question_number is not None:
+                update_data["question_number"] = updates.question_number
             if updates.question_text is not None:
                 update_data["question_text"] = updates.question_text
             if updates.options is not None:
                 update_data["options"] = updates.options
+            if updates.correct_answer is not None:
+                update_data["correct_answer"] = updates.correct_answer
+            if updates.answer_type is not None:
+                update_data["answer_type"] = updates.answer_type
+            if updates.marks is not None:
+                update_data["marks"] = float(updates.marks)
+            if updates.negative_marks is not None:
+                update_data["negative_marks"] = float(updates.negative_marks)
+            if updates.bloom_level is not None:
+                update_data["bloom_level"] = updates.bloom_level
+            if updates.raw_images is not None:
+                update_data["raw_images"] = updates.raw_images
+            if updates.raw_tables is not None:
+                update_data["raw_tables"] = updates.raw_tables
             if updates.chapter_context is not None:
                 update_data["chapter_context"] = updates.chapter_context
             if updates.topic_context is not None:
@@ -705,7 +721,7 @@ class ExtractionService:
         batch_size = 50
         for item in items:
             page_num = item.page_number if item.page_number is not None else 1
-            batch.append({
+            row: Dict[str, Any] = {
                 "id": str(uuid4()),
                 "job_id": job_id_str,
                 "question_number": item.question_number.strip(),
@@ -717,9 +733,17 @@ class ExtractionService:
                 "sub_topic_context": item.sub_topic_context,
                 "raw_images": item.raw_images if item.raw_images is not None else [],
                 "raw_tables": item.raw_tables if item.raw_tables is not None else [],
+                "correct_answer": item.correct_answer,
+                "answer_type": item.answer_type,
+                "bloom_level": item.bloom_level,
                 "processing_status": ProcessingStatus.PENDING.value,
                 "created_at": now,
-            })
+            }
+            if item.marks is not None:
+                row["marks"] = float(item.marks)
+            if item.negative_marks is not None:
+                row["negative_marks"] = float(item.negative_marks)
+            batch.append(row)
             if len(batch) >= batch_size:
                 self.db.table("raw_questions").insert(batch).execute()
                 batch = []
@@ -727,3 +751,71 @@ class ExtractionService:
             self.db.table("raw_questions").insert(batch).execute()
 
         return job_uuid, len(items)
+
+    async def set_raw_question_review_status(
+        self,
+        question_id: UUID,
+        target: ProcessingStatus,
+    ) -> Optional[RawQuestion]:
+        """
+        Mark a staging row as rejected, or reinstate rejected → pending.
+        Finalized rows (question_id set) cannot be changed.
+        """
+        if target not in (ProcessingStatus.REJECTED, ProcessingStatus.PENDING):
+            raise ValueError("target must be rejected or pending")
+
+        result = self.db.table("raw_questions").select("*").eq("id", str(question_id)).execute()
+        if not result.data:
+            return None
+
+        q = RawQuestion(**result.data[0])
+        if q.question_id is not None:
+            raise ValueError("Cannot change review status of an approved question")
+
+        now = datetime.now(timezone.utc).isoformat()
+
+        if target == ProcessingStatus.REJECTED:
+            if q.processing_status == ProcessingStatus.REJECTED:
+                return q
+            update_data = {
+                "processing_status": ProcessingStatus.REJECTED.value,
+                "error_message": None,
+                "updated_at": now,
+            }
+        else:
+            if q.processing_status != ProcessingStatus.REJECTED:
+                raise ValueError("Only rejected questions can be reinstated to pending")
+            update_data = {
+                "processing_status": ProcessingStatus.PENDING.value,
+                "error_message": None,
+                "updated_at": now,
+            }
+
+        upd = self.db.table("raw_questions").update(update_data).eq("id", str(question_id)).execute()
+        if upd.data:
+            return RawQuestion(**upd.data[0])
+        return None
+
+    async def bulk_set_review_status(
+        self,
+        question_ids: List[UUID],
+        target: ProcessingStatus,
+    ) -> BulkOperationResult:
+        successful: List[UUID] = []
+        failed: List[Dict[str, Any]] = []
+        for qid in question_ids:
+            try:
+                updated = await self.set_raw_question_review_status(qid, target)
+                if updated:
+                    successful.append(qid)
+                else:
+                    failed.append({"id": str(qid), "error": "Question not found"})
+            except ValueError as e:
+                failed.append({"id": str(qid), "error": str(e)})
+        return BulkOperationResult(
+            successful=successful,
+            failed=failed,
+            total=len(question_ids),
+            success_count=len(successful),
+            failure_count=len(failed),
+        )

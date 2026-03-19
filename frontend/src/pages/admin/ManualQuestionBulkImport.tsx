@@ -36,11 +36,16 @@ const JSON_TEMPLATE = `[
   {
     "question_number": "1",
     "question_text": "Your question text here",
+    "answer_type": "mcq_single",
     "options": ["Option A", "Option B", "Option C", "Option D"],
+    "correct_answer": "A",
     "page_number": 1,
     "chapter_context": "Exact chapter title (or slug) from the book",
     "topic_context": "Exact topic title (or slug) from the chapter",
     "sub_topic_context": "",
+    "marks": null,
+    "negative_marks": null,
+    "bloom_level": null,
     "raw_images": [],
     "raw_tables": []
   }
@@ -58,6 +63,19 @@ export default function ManualQuestionBulkImport() {
   const [loadingBooks, setLoadingBooks] = useState(true);
   const [loadingOutline, setLoadingOutline] = useState(false);
   const [submitting, setSubmitting] = useState(false);
+
+  const [formQn, setFormQn] = useState('1');
+  const [formText, setFormText] = useState('');
+  const [formAnswerType, setFormAnswerType] = useState('mcq_single');
+  const [formOptions, setFormOptions] = useState('Opt A\nOpt B\nOpt C\nOpt D');
+  const [formCorrect, setFormCorrect] = useState('A');
+  const [formPage, setFormPage] = useState('1');
+  const [formChapter, setFormChapter] = useState('');
+  const [formTopic, setFormTopic] = useState('');
+  const [formSubtopic, setFormSubtopic] = useState('');
+  const [formMarks, setFormMarks] = useState('');
+  const [formNeg, setFormNeg] = useState('');
+  const [formBloom, setFormBloom] = useState('');
 
   useEffect(() => {
     let cancelled = false;
@@ -115,6 +133,58 @@ export default function ManualQuestionBulkImport() {
   const handlePasteTemplate = () => {
     setJsonText(JSON.stringify(JSON.parse(JSON_TEMPLATE), null, 2));
     toast.message('Template applied');
+  };
+
+  const appendFormRowToJson = () => {
+    if (!formText.trim()) {
+      toast.error('Question text is required');
+      return;
+    }
+    const opts = formOptions
+      .split('\n')
+      .map((s) => s.trim())
+      .filter(Boolean);
+    const intLike = formAnswerType === 'integer' || formAnswerType === 'numerical' || formAnswerType === 'subjective';
+    if (!intLike && opts.length < 2) {
+      toast.error('Add at least two options (one per line) for MCQ');
+      return;
+    }
+    if (!intLike && !formCorrect.trim()) {
+      toast.error('Correct answer is required for MCQ');
+      return;
+    }
+    if (intLike && !formCorrect.trim()) {
+      toast.error('Correct answer is required');
+      return;
+    }
+    const row: Record<string, unknown> = {
+      question_number: formQn.trim() || '1',
+      question_text: formText.trim(),
+      answer_type: formAnswerType,
+      options: intLike ? [] : opts,
+      correct_answer: formCorrect.trim(),
+      page_number: formPage.trim() ? parseInt(formPage, 10) : 1,
+      chapter_context: formChapter.trim() || null,
+      topic_context: formTopic.trim() || null,
+      sub_topic_context: formSubtopic.trim() || null,
+      marks: formMarks.trim() ? parseFloat(formMarks) : null,
+      negative_marks: formNeg.trim() ? parseFloat(formNeg) : null,
+      bloom_level: formBloom.trim() || null,
+      raw_images: [],
+      raw_tables: [],
+    };
+    let arr: unknown[];
+    try {
+      const parsed = JSON.parse(jsonText);
+      if (!Array.isArray(parsed)) throw new Error('not array');
+      arr = parsed;
+    } catch {
+      toast.error('Fix JSON array first, or reset to template');
+      return;
+    }
+    arr.push(row);
+    setJsonText(JSON.stringify(arr, null, 2));
+    toast.success('Appended to JSON payload');
   };
 
   const handleSubmit = async () => {
@@ -270,9 +340,10 @@ export default function ManualQuestionBulkImport() {
                   Question payload (JSON array)
                 </CardTitle>
                 <CardDescription className="mt-1 max-w-3xl">
-                  Each object maps to one <code className="text-xs">raw_questions</code> row:{' '}
-                  <code className="text-xs">question_number</code>, <code className="text-xs">question_text</code>,{' '}
-                  <code className="text-xs">options</code>, <code className="text-xs">page_number</code>, contexts,{' '}
+                  Full staging row: <code className="text-xs">question_number</code>,{' '}
+                  <code className="text-xs">question_text</code>, <code className="text-xs">answer_type</code>,{' '}
+                  <code className="text-xs">options</code>, <code className="text-xs">correct_answer</code>,{' '}
+                  <code className="text-xs">page_number</code>, chapter/topic contexts, marks, bloom,{' '}
                   <code className="text-xs">raw_images</code>, <code className="text-xs">raw_tables</code>.
                 </CardDescription>
               </div>
@@ -284,8 +355,9 @@ export default function ManualQuestionBulkImport() {
           </CardHeader>
           <CardContent>
             <Tabs defaultValue="editor">
-              <TabsList className="mb-4">
-                <TabsTrigger value="editor">Editor</TabsTrigger>
+              <TabsList className="mb-4 flex-wrap h-auto gap-1">
+                <TabsTrigger value="editor">JSON editor</TabsTrigger>
+                <TabsTrigger value="form">Form builder</TabsTrigger>
                 <TabsTrigger value="hints">Field hints</TabsTrigger>
               </TabsList>
               <TabsContent value="editor" className="space-y-4">
@@ -314,19 +386,96 @@ export default function ManualQuestionBulkImport() {
                   </Button>
                 </div>
               </TabsContent>
+              <TabsContent value="form" className="space-y-4">
+                <p className="text-sm text-muted-foreground">
+                  Fill one question, then <strong>Append to JSON array</strong>. Repeat for the whole book, then import once.
+                </p>
+                <div className="grid gap-3 sm:grid-cols-2">
+                  <div className="space-y-2">
+                    <Label>Question #</Label>
+                    <Input value={formQn} onChange={(e) => setFormQn(e.target.value)} className="font-mono" />
+                  </div>
+                  <div className="space-y-2">
+                    <Label>Answer type</Label>
+                    <Select value={formAnswerType} onValueChange={setFormAnswerType}>
+                      <SelectTrigger>
+                        <SelectValue />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="mcq_single">mcq_single</SelectItem>
+                        <SelectItem value="mcq_multiple">mcq_multiple</SelectItem>
+                        <SelectItem value="integer">integer</SelectItem>
+                        <SelectItem value="numerical">numerical</SelectItem>
+                        <SelectItem value="subjective">subjective</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div>
+                  <div className="space-y-2 sm:col-span-2">
+                    <Label>Question text</Label>
+                    <Textarea value={formText} onChange={(e) => setFormText(e.target.value)} rows={3} className="font-mono text-sm" />
+                  </div>
+                  <div className="space-y-2 sm:col-span-2">
+                    <Label>Options (one per line; leave empty for integer/numerical/subjective)</Label>
+                    <Textarea value={formOptions} onChange={(e) => setFormOptions(e.target.value)} rows={5} className="font-mono text-sm" />
+                  </div>
+                  <div className="space-y-2">
+                    <Label>Correct answer</Label>
+                    <Input
+                      value={formCorrect}
+                      onChange={(e) => setFormCorrect(e.target.value)}
+                      placeholder="A or A,C / numeric / rubric text"
+                      className="font-mono"
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <Label>Page</Label>
+                    <Input value={formPage} onChange={(e) => setFormPage(e.target.value)} type="number" min={1} />
+                  </div>
+                  <div className="space-y-2">
+                    <Label>Chapter context</Label>
+                    <Input value={formChapter} onChange={(e) => setFormChapter(e.target.value)} />
+                  </div>
+                  <div className="space-y-2">
+                    <Label>Topic context</Label>
+                    <Input value={formTopic} onChange={(e) => setFormTopic(e.target.value)} />
+                  </div>
+                  <div className="space-y-2 sm:col-span-2">
+                    <Label>Sub-topic</Label>
+                    <Input value={formSubtopic} onChange={(e) => setFormSubtopic(e.target.value)} />
+                  </div>
+                  <div className="space-y-2">
+                    <Label>Marks</Label>
+                    <Input value={formMarks} onChange={(e) => setFormMarks(e.target.value)} />
+                  </div>
+                  <div className="space-y-2">
+                    <Label>Negative marks</Label>
+                    <Input value={formNeg} onChange={(e) => setFormNeg(e.target.value)} />
+                  </div>
+                  <div className="space-y-2 sm:col-span-2">
+                    <Label>Bloom level</Label>
+                    <Input value={formBloom} onChange={(e) => setFormBloom(e.target.value)} />
+                  </div>
+                </div>
+                <Button type="button" variant="secondary" onClick={appendFormRowToJson}>
+                  Append to JSON array
+                </Button>
+              </TabsContent>
               <TabsContent value="hints">
                 <ul className="list-disc pl-5 space-y-2 text-sm text-muted-foreground">
                   <li>
-                    <strong className="text-foreground">options</strong>: list of strings; use at least two for MCQ
-                    finalization.
+                    <strong className="text-foreground">correct_answer</strong>: MCQ uses labels (A, B, …); multiple
+                    correct: <code className="text-xs">A,C</code>. Integer/numerical/subjective use free text.
+                  </li>
+                  <li>
+                    <strong className="text-foreground">answer_type</strong> drives validation and approval into{' '}
+                    <code className="text-xs">questions.answer_type</code>.
                   </li>
                   <li>
                     <strong className="text-foreground">raw_images</strong> / <strong className="text-foreground">raw_tables</strong>:
-                    JSON arrays; use <code className="text-xs">[]</code> if none.
+                    JSON arrays; use <code className="text-xs">[]</code> if none. Images often use{' '}
+                    <code className="text-xs">{`{"url":"..."}`}</code> or <code className="text-xs">path</code>.
                   </li>
-                  <li>
-                    After import, open the job to edit rows, delete bad lines, or bulk finalize — unchanged workflow.
-                  </li>
+                  <li>After import, use <strong>Staging questions</strong> on the job to review, reject, reinstate, or approve.</li>
                 </ul>
               </TabsContent>
             </Tabs>

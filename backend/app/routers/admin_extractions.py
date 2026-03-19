@@ -24,7 +24,7 @@ import logging
 
 from app.database import get_supabase
 from app.services.extraction_service import ExtractionService
-from app.services.finalization_service import FinalizationService
+from app.services.staging_finalization_service import StagingFinalizationService
 from app.services.validation import QuestionValidator
 from app.models.admin import (
     JobListFilters,
@@ -34,6 +34,7 @@ from app.models.admin import (
     FinalizeRequest,
     BulkOperationResult,
     BulkDeleteRequest,
+    ReviewStatusBatchRequest,
     QuestionFilters,
     ExtractionJobDetail,
     RawQuestionResponse,
@@ -41,7 +42,7 @@ from app.models.admin import (
     ManualImportRequest,
     ManualImportResponse,
 )
-from app.models.extraction import ExtractionJob, RawQuestion
+from app.models.extraction import ExtractionJob, RawQuestion, ProcessingStatus
 from pydantic import BaseModel
 
 logger = logging.getLogger(__name__)
@@ -89,13 +90,9 @@ async def get_extraction_service(db_client=Depends(get_supabase)):
     return ExtractionService(db_client)
 
 
-async def get_finalization_service(db_client=Depends(get_supabase)):
-    """
-    Dependency injection for FinalizationService.
-    
-    Requirements: 8.3
-    """
-    return FinalizationService(db_client)
+async def get_staging_finalization_service(db_client=Depends(get_supabase)):
+    """Finalize staging rows into canonical questions via Supabase."""
+    return StagingFinalizationService(db_client)
 
 
 # ============================================================================
@@ -595,6 +592,78 @@ async def delete_raw_question(
         )
 
 
+@router.post(
+    "/questions/reject-batch",
+    response_model=BulkOperationResult,
+    summary="Reject staging questions (bulk)",
+)
+async def reject_questions_batch(
+    body: ReviewStatusBatchRequest,
+    _admin: bool = Depends(verify_admin_token),
+    service: ExtractionService = Depends(get_extraction_service),
+):
+    try:
+        return await service.bulk_set_review_status(body.question_ids, ProcessingStatus.REJECTED)
+    except Exception as e:
+        logger.error("reject batch: %s", e, exc_info=True)
+        raise HTTPException(status_code=500, detail="Failed to reject questions")
+
+
+@router.post(
+    "/questions/reinstate-batch",
+    response_model=BulkOperationResult,
+    summary="Reinstate rejected staging questions (bulk)",
+)
+async def reinstate_questions_batch(
+    body: ReviewStatusBatchRequest,
+    _admin: bool = Depends(verify_admin_token),
+    service: ExtractionService = Depends(get_extraction_service),
+):
+    try:
+        return await service.bulk_set_review_status(body.question_ids, ProcessingStatus.PENDING)
+    except Exception as e:
+        logger.error("reinstate batch: %s", e, exc_info=True)
+        raise HTTPException(status_code=500, detail="Failed to reinstate questions")
+
+
+@router.post(
+    "/questions/{question_id}/reject",
+    response_model=RawQuestion,
+    summary="Reject one staging question",
+)
+async def reject_one_question(
+    question_id: UUID,
+    _admin: bool = Depends(verify_admin_token),
+    service: ExtractionService = Depends(get_extraction_service),
+):
+    try:
+        q = await service.set_raw_question_review_status(question_id, ProcessingStatus.REJECTED)
+        if not q:
+            raise HTTPException(status_code=404, detail="Question not found")
+        return q
+    except ValueError as e:
+        raise HTTPException(status_code=400, detail=str(e))
+
+
+@router.post(
+    "/questions/{question_id}/reinstate",
+    response_model=RawQuestion,
+    summary="Reinstate one rejected question to pending",
+)
+async def reinstate_one_question(
+    question_id: UUID,
+    _admin: bool = Depends(verify_admin_token),
+    service: ExtractionService = Depends(get_extraction_service),
+):
+    try:
+        q = await service.set_raw_question_review_status(question_id, ProcessingStatus.PENDING)
+        if not q:
+            raise HTTPException(status_code=404, detail="Question not found")
+        return q
+    except ValueError as e:
+        raise HTTPException(status_code=400, detail=str(e))
+
+
 # ============================================================================
 # Finalization and Bulk Operation Endpoints (4.4)
 # ============================================================================
@@ -608,7 +677,7 @@ async def delete_raw_question(
 async def finalize_questions(
     request: FinalizeRequest,
     _admin: bool = Depends(verify_admin_token),
-    service: FinalizationService = Depends(get_finalization_service),
+    service: StagingFinalizationService = Depends(get_staging_finalization_service),
 ):
     """
     Finalize one or more raw questions into the main question repository.
@@ -633,7 +702,7 @@ async def finalize_questions(
                 detail="At least one question ID is required"
             )
         
-        result = await service.bulk_finalize_questions(request.question_ids)
+        result = service.bulk_finalize_questions(request.question_ids)
         return result
     except HTTPException:
         raise
