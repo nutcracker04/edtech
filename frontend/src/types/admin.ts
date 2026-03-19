@@ -13,6 +13,8 @@ export interface ExtractionJob {
   book_id: string | null;
   title?: string | null;  // Admin-entered name for display in listing
   source_pdf_filename: string;
+  source_pdf_path?: string | null;
+  extracted_path?: string | null;
   stage: ExtractionStage;
   progress: number;
   questions_extracted: number;

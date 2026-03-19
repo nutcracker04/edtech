@@ -9,16 +9,16 @@ const AdminDashboard = () => {
 
     const adminActions = [
         {
-            title: "PDF Upload & Processing",
-            description: "Upload PDF books and start extraction process.",
-            path: "/admin/pdf-upload",
+            title: "Bulk question import",
+            description: "Paste JSON to load full raw question rows for a book — no PDF extraction.",
+            path: "/admin/question-import",
             color: "text-blue-500",
             bgColor: "bg-blue-500/10",
-            icon: "📄",
+            icon: "📥",
         },
         {
-            title: "Extraction Management",
-            description: "Manage book extraction jobs, review extracted content, and finalize questions.",
+            title: "Extraction management",
+            description: "Review imported questions, edit fields, delete, and finalize into the repository.",
             path: "/admin/extractions",
             color: "text-purple-500",
             bgColor: "bg-purple-500/10",

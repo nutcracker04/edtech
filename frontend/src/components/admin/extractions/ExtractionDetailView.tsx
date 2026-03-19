@@ -174,6 +174,7 @@ export function ExtractionDetailView() {
   }
 
   const { job, book, statistics } = state.currentJob;
+  const isManualImport = job.source_pdf_filename === 'manual-import';
 
   return (
     <div className="container mx-auto py-8">
@@ -187,7 +188,7 @@ export function ExtractionDetailView() {
       <div className="mb-8">
         <h1 className="text-3xl font-bold mb-2">{book?.title || job.title || job.source_pdf_filename}</h1>
         <p className="text-muted-foreground">
-          Extraction Management &gt; {book?.title || job.title || 'Unknown Book'}
+          Question imports &gt; {book?.title || job.title || 'Unknown book'}
         </p>
       </div>
 
@@ -197,8 +198,10 @@ export function ExtractionDetailView() {
           <h2 className="text-lg font-semibold mb-4">Job Information</h2>
           <div className="space-y-3">
             <div>
-              <p className="text-sm text-muted-foreground">Filename</p>
-              <p className="font-medium">{job.source_pdf_filename}</p>
+              <p className="text-sm text-muted-foreground">{isManualImport ? 'Source' : 'Filename'}</p>
+              <p className="font-medium">
+                {isManualImport ? 'Manual bulk import' : job.source_pdf_filename}
+              </p>
             </div>
             <div>
               <p className="text-sm text-muted-foreground">Stage</p>
@@ -237,58 +240,60 @@ export function ExtractionDetailView() {
         </div>
       </div>
 
-      {/* Extracted Content Section (from Supabase) */}
-      <div className="border rounded-lg p-6 mb-8">
-        <h2 className="text-lg font-semibold mb-4">Extracted Content</h2>
-        <p className="text-sm text-muted-foreground mb-4">
-          Raw markdown extracted from the PDF, stored in Supabase.
-        </p>
-        {!showExtractedContent ? (
-          <button
-            onClick={handleViewExtractedContent}
-            className="px-4 py-2 bg-primary text-primary-foreground rounded hover:bg-primary/90"
-          >
-            View Extracted Markdown
-          </button>
-        ) : extractedContentLoading ? (
-          <div className="text-center py-8">
-            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary mx-auto mb-2"></div>
-            <p className="text-muted-foreground">Loading extracted content...</p>
-          </div>
-        ) : extractedContentError ? (
-          <div className="text-center py-8">
-            <p className="text-destructive mb-4">{extractedContentError}</p>
+      {/* Legacy PDF markdown (hidden for manual imports) */}
+      {!isManualImport && (
+        <div className="border rounded-lg p-6 mb-8">
+          <h2 className="text-lg font-semibold mb-4">Extracted content (PDF jobs)</h2>
+          <p className="text-sm text-muted-foreground mb-4">
+            Raw markdown from automated PDF extraction, if stored in Supabase.
+          </p>
+          {!showExtractedContent ? (
             <button
               onClick={handleViewExtractedContent}
-              className="px-4 py-2 border rounded hover:bg-accent"
+              className="px-4 py-2 bg-primary text-primary-foreground rounded hover:bg-primary/90"
             >
-              Retry
+              View extracted markdown
             </button>
-          </div>
-        ) : extractedContent ? (
-          <div className="space-y-4">
-            <div className="flex justify-between items-center">
-              <span className="text-sm text-muted-foreground">
-                {extractedContent.length.toLocaleString()} characters
-              </span>
+          ) : extractedContentLoading ? (
+            <div className="text-center py-8">
+              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary mx-auto mb-2"></div>
+              <p className="text-muted-foreground">Loading extracted content...</p>
+            </div>
+          ) : extractedContentError ? (
+            <div className="text-center py-8">
+              <p className="text-destructive mb-4">{extractedContentError}</p>
               <button
-                onClick={() => setShowExtractedContent(false)}
-                className="text-sm text-muted-foreground hover:text-foreground"
+                onClick={handleViewExtractedContent}
+                className="px-4 py-2 border rounded hover:bg-accent"
               >
-                Collapse
+                Retry
               </button>
             </div>
-            <pre className="p-4 bg-muted rounded-lg overflow-auto max-h-96 text-sm whitespace-pre-wrap font-mono">
-              {extractedContent}
-            </pre>
-          </div>
-        ) : null}
-      </div>
+          ) : extractedContent ? (
+            <div className="space-y-4">
+              <div className="flex justify-between items-center">
+                <span className="text-sm text-muted-foreground">
+                  {extractedContent.length.toLocaleString()} characters
+                </span>
+                <button
+                  onClick={() => setShowExtractedContent(false)}
+                  className="text-sm text-muted-foreground hover:text-foreground"
+                >
+                  Collapse
+                </button>
+              </div>
+              <pre className="p-4 bg-muted rounded-lg overflow-auto max-h-96 text-sm whitespace-pre-wrap font-mono">
+                {extractedContent}
+              </pre>
+            </div>
+          ) : null}
+        </div>
+      )}
 
       {/* Questions Section with CRUD and Finalize */}
       <div className="border rounded-lg p-6">
         <div className="flex flex-wrap items-center justify-between gap-4 mb-4">
-          <h2 className="text-lg font-semibold">Extracted Questions (Raw Data)</h2>
+          <h2 className="text-lg font-semibold">Raw questions (staging)</h2>
           <div className="flex gap-2">
             <button
               onClick={() => selectAllQuestions(state.questions.map((q) => q.id))}

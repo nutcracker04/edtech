@@ -258,9 +258,9 @@ class AdminExtractionService {
     };
 
     const request: BulkDeleteRequest = { question_ids: questionIds };
-    const url = `${API_BASE_URL}/admin/extractions/questions/bulk`;
+    const url = `${API_BASE_URL}/admin/extractions/questions/bulk-delete`;
     const response = await fetch(url, {
-      method: 'DELETE',
+      method: 'POST',
       headers,
       body: JSON.stringify(request),
     });
@@ -386,6 +386,51 @@ class AdminExtractionService {
     }
 
     return response.blob();
+  }
+
+  /** Books to attach manual imports (extraction_books or canonical books). */
+  async listImportBooks(): Promise<{ id: string; title: string; subject: string; grade_level: number }[]> {
+    const token = await this.getAuthToken();
+    const response = await fetch(`${API_BASE_URL}/admin/extractions/import/books`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${token}`,
+      },
+    });
+    return this.handleResponse(response);
+  }
+
+  async getImportBookOutline(bookId: string): Promise<{
+    source: string;
+    chapters: { title: string; slug: string; topics: { title: string; slug: string }[] }[];
+  }> {
+    const token = await this.getAuthToken();
+    const response = await fetch(`${API_BASE_URL}/admin/extractions/import/books/${bookId}/outline`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${token}`,
+      },
+    });
+    return this.handleResponse(response);
+  }
+
+  async createManualImport(body: {
+    book_id: string;
+    job_title?: string | null;
+    questions: Record<string, unknown>[];
+  }): Promise<{ job_id: string; questions_created: number }> {
+    const token = await this.getAuthToken();
+    const response = await fetch(`${API_BASE_URL}/admin/extractions/import/manual`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${token}`,
+      },
+      body: JSON.stringify(body),
+    });
+    return this.handleResponse(response);
   }
 }
 

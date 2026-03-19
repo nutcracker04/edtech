@@ -82,7 +82,7 @@ export function ExtractionListView() {
   const handleDeleteJob = async (jobId: string, event: React.MouseEvent) => {
     event.stopPropagation(); // Prevent navigation when clicking delete
     
-    if (!confirm('Are you sure you want to delete this extraction job? This action cannot be undone.')) {
+    if (!confirm('Delete this import job and all its raw questions? This cannot be undone.')) {
       return;
     }
 
@@ -98,7 +98,7 @@ export function ExtractionListView() {
       setJobs(jobs);
     } catch (error) {
       console.error('Error deleting job:', error);
-      alert('Failed to delete extraction job');
+      alert('Failed to delete import job');
     } finally {
       setDeletingJobId(null);
     }
@@ -117,7 +117,7 @@ export function ExtractionListView() {
       <div className="flex items-center justify-center min-h-screen">
         <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
-          <p className="text-muted-foreground">Loading extraction jobs...</p>
+          <p className="text-muted-foreground">Loading import jobs...</p>
         </div>
       </div>
     );
@@ -149,13 +149,15 @@ export function ExtractionListView() {
           <ArrowLeft className="h-4 w-4" />
           Back to Admin Dashboard
         </button>
-        <h1 className="text-3xl font-bold mb-2">Extraction Management</h1>
-        <p className="text-muted-foreground">Manage book extraction jobs and review extracted content</p>
+        <h1 className="text-3xl font-bold mb-2">Question imports</h1>
+        <p className="text-muted-foreground">
+          Review and manage batches of raw questions (manual import or legacy jobs), then finalize into the repository.
+        </p>
       </div>
 
       {state.jobs.length === 0 ? (
         <div className="text-center py-12">
-          <p className="text-muted-foreground">No extraction jobs found</p>
+          <p className="text-muted-foreground">No import jobs found</p>
         </div>
       ) : (
         <div className="space-y-4">
