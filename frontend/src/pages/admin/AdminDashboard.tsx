@@ -9,7 +9,7 @@ const AdminDashboard = () => {
 
     const adminActions = [
         {
-            title: "Bulk question import",
+            title: "Question import",
             description: "Paste JSON to load full raw question rows for a book — no PDF extraction.",
             path: "/admin/question-import",
             color: "text-blue-500",
