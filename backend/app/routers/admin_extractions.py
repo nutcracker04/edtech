@@ -33,10 +33,13 @@ from app.models.admin import (
     QuestionUpdateRequest,
     FinalizeRequest,
     BulkOperationResult,
+    BulkDeleteRequest,
     QuestionFilters,
     ExtractionJobDetail,
     RawQuestionResponse,
     ValidationErrorResponse,
+    ManualImportRequest,
+    ManualImportResponse,
 )
 from app.models.extraction import ExtractionJob, RawQuestion
 from pydantic import BaseModel
@@ -93,6 +96,70 @@ async def get_finalization_service(db_client=Depends(get_supabase)):
     Requirements: 8.3
     """
     return FinalizationService(db_client)
+
+
+# ============================================================================
+# Manual import (no PDF) — register before /{job_id} routes
+# ============================================================================
+
+@router.get(
+    "/import/books",
+    summary="List books for manual question import",
+    description="Returns extraction_books if present, otherwise canonical books.",
+)
+async def list_books_for_import(
+    _admin: bool = Depends(verify_admin_token),
+    service: ExtractionService = Depends(get_extraction_service),
+):
+    try:
+        return service.list_books_for_manual_import()
+    except Exception as e:
+        logger.error("list_books_for_import: %s", e, exc_info=True)
+        raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail="Failed to list books")
+
+
+@router.get(
+    "/import/books/{book_id}/outline",
+    summary="Chapter and topic titles for import JSON",
+)
+async def get_book_outline_for_import(
+    book_id: UUID,
+    _admin: bool = Depends(verify_admin_token),
+    service: ExtractionService = Depends(get_extraction_service),
+):
+    try:
+        return service.get_book_outline_for_import(book_id)
+    except Exception as e:
+        logger.error("get_book_outline_for_import: %s", e, exc_info=True)
+        raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail="Failed to load outline")
+
+
+@router.post(
+    "/import/manual",
+    response_model=ManualImportResponse,
+    summary="Bulk-create raw questions from manual data",
+    description="Creates a completed extraction job linked to the book and inserts all raw_questions.",
+)
+async def create_manual_import(
+    body: ManualImportRequest,
+    _admin: bool = Depends(verify_admin_token),
+    service: ExtractionService = Depends(get_extraction_service),
+):
+    try:
+        job_id, n = await service.create_manual_import_job(
+            body.book_id,
+            body.job_title,
+            body.questions,
+        )
+        return ManualImportResponse(job_id=job_id, questions_created=n)
+    except ValueError as e:
+        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=str(e))
+    except Exception as e:
+        logger.error("create_manual_import: %s", e, exc_info=True)
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail="Failed to create manual import",
+        )
 
 
 # ============================================================================
@@ -578,11 +645,37 @@ async def finalize_questions(
         )
 
 
+@router.post(
+    "/questions/bulk-delete",
+    response_model=BulkOperationResult,
+    summary="Bulk delete raw questions (JSON body)",
+    description="Preferred: JSON body with question_ids. DELETE with query params is deprecated.",
+)
+async def bulk_delete_questions_body(
+    request: BulkDeleteRequest,
+    _admin: bool = Depends(verify_admin_token),
+    service: ExtractionService = Depends(get_extraction_service),
+):
+    if not request.question_ids:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="At least one question ID is required",
+        )
+    try:
+        return await service.bulk_delete_questions(request.question_ids)
+    except Exception as e:
+        logger.error(f"Error bulk deleting questions: {str(e)}", exc_info=True)
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail="Failed to delete questions",
+        )
+
+
 @router.delete(
     "/questions/bulk",
     response_model=BulkOperationResult,
-    summary="Bulk delete raw questions",
-    description="Delete multiple raw questions in a single operation"
+    summary="Bulk delete raw questions (query params)",
+    description="Delete multiple raw questions. Prefer POST /questions/bulk-delete with JSON body.",
 )
 async def bulk_delete_questions(
     question_ids: List[UUID] = Query(..., description="List of question IDs to delete"),

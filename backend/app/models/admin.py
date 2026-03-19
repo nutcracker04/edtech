@@ -115,6 +115,33 @@ class QuestionUpdateRequest(BaseModel):
         return v
 
 
+class ManualRawQuestionItem(BaseModel):
+    """One raw question row for manual bulk import (matches raw_questions shape)."""
+
+    question_number: str = Field(..., min_length=1)
+    question_text: str = Field(..., min_length=1)
+    options: List[str] = Field(default_factory=list)
+    page_number: Optional[int] = Field(default=None, ge=1)
+    chapter_context: Optional[str] = None
+    topic_context: Optional[str] = None
+    sub_topic_context: Optional[str] = None
+    raw_images: Optional[List[Dict[str, Any]]] = None
+    raw_tables: Optional[List[Dict[str, Any]]] = None
+
+
+class ManualImportRequest(BaseModel):
+    """Create a completed extraction job and bulk-insert raw_questions (no PDF pipeline)."""
+
+    book_id: UUID
+    job_title: Optional[str] = Field(None, description="Display name in job list")
+    questions: List[ManualRawQuestionItem] = Field(..., min_length=1, max_length=10000)
+
+
+class ManualImportResponse(BaseModel):
+    job_id: UUID
+    questions_created: int
+
+
 class FinalizeRequest(BaseModel):
     """
     Request model for finalizing one or more raw questions.
@@ -122,6 +149,12 @@ class FinalizeRequest(BaseModel):
     Requirements: 5.1, 9.1
     """
     question_ids: List[UUID] = Field(..., min_items=1, description="List of raw question IDs to finalize")
+
+
+class BulkDeleteRequest(BaseModel):
+    """Bulk delete raw questions by id."""
+
+    question_ids: List[UUID] = Field(..., min_length=1)
 
 
 class BulkOperationResult(BaseModel):
