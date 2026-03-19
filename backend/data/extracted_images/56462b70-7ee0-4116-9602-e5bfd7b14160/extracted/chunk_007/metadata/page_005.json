@@ -1,0 +1,177 @@
+{
+  "page_num": 5,
+  "image_width": 2398,
+  "image_height": 3003,
+  "created_at": "2026-03-17T19:54:30.336860+00:00",
+  "blocks": [
+    {
+      "block_id": "20260317_08b0f778-335e-4e5a-b95a-772c98e1be2f_5_block_000",
+      "coordinates": {
+        "x1": 1749.0,
+        "y1": 187.0,
+        "x2": 2051.0,
+        "y2": 234.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.835383951663971,
+      "reading_order": 1,
+      "text": "Assessment Test IV"
+    },
+    {
+      "block_id": "20260317_08b0f778-335e-4e5a-b95a-772c98e1be2f_5_block_001",
+      "coordinates": {
+        "x1": 2093.0,
+        "y1": 185.0,
+        "x2": 2204.0,
+        "y2": 234.0
+      },
+      "layout_tag": "page-number",
+      "confidence": 0.7315830588340759,
+      "reading_order": 2,
+      "text": "4.11"
+    },
+    {
+      "block_id": "20260317_08b0f778-335e-4e5a-b95a-772c98e1be2f_5_block_002",
+      "coordinates": {
+        "x1": 229.0,
+        "y1": 291.0,
+        "x2": 1403.0,
+        "y2": 343.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.3615095913410187,
+      "reading_order": 3,
+      "text": "5. Match the statements of Column A with those of Column B."
+    },
+    {
+      "block_id": "20260317_08b0f778-335e-4e5a-b95a-772c98e1be2f_5_block_003",
+      "coordinates": {
+        "x1": 293.0,
+        "y1": 368.0,
+        "x2": 1593.0,
+        "y2": 623.0
+      },
+      "layout_tag": "table",
+      "confidence": 0.49511635303497314,
+      "reading_order": 4,
+      "text": "<table>\n<thead>\n<tr>\n<th>Column A</th>\n<th>Column B</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>(i) Rapid combustion</td>\n<td>(A) Burning of sodium in moist air</td>\n</tr>\n<tr>\n<td>(ii) Explosion</td>\n<td>(B) Burning of fuel gas</td>\n</tr>\n<tr>\n<td>(iii) Spontaneous combustion</td>\n<td>(C) Burning of crackers</td>\n</tr>\n</tbody>\n</table>"
+    },
+    {
+      "block_id": "20260317_08b0f778-335e-4e5a-b95a-772c98e1be2f_5_block_004",
+      "coordinates": {
+        "x1": 289.0,
+        "y1": 649.0,
+        "x2": 1020.0,
+        "y2": 898.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.37921708822250366,
+      "reading_order": 5,
+      "text": "(a) (i) $\\rightarrow$ (C); (ii) $\\rightarrow$ (A); (iii) $\\rightarrow$ (B)\n(b) (i) $\\rightarrow$ (B); (ii) $\\rightarrow$ (C); (iii) $\\rightarrow$ (A)\n(c) (i) $\\rightarrow$ (A); (ii) $\\rightarrow$ (C); (iii) $\\rightarrow$ (B)\n(d) (i) $\\rightarrow$ (C); (ii) $\\rightarrow$ (B); (iii) $\\rightarrow$ (A)"
+    },
+    {
+      "block_id": "20260317_08b0f778-335e-4e5a-b95a-772c98e1be2f_5_block_005",
+      "coordinates": {
+        "x1": 232.0,
+        "y1": 924.0,
+        "x2": 1150.0,
+        "y2": 1239.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8837578296661377,
+      "reading_order": 6,
+      "text": "6. Identify the true statement regarding oxygen.\n(a) $\\mathrm{O}_2$ is highly soluble in water.\n(b) $\\mathrm{O}_2$ is insoluble in water.\n(c) $\\mathrm{O}_2$ is slightly soluble in water.\n(d) $\\mathrm{O}_2$ is lighter than air."
+    },
+    {
+      "block_id": "20260317_08b0f778-335e-4e5a-b95a-772c98e1be2f_5_block_006",
+      "coordinates": {
+        "x1": 233.0,
+        "y1": 1258.0,
+        "x2": 1474.0,
+        "y2": 1448.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9095268249511719,
+      "reading_order": 7,
+      "text": "7. Which among the following has the least ignition temperature?\n(a) Kerosene (b) LPG\n(c) CNG (d) Petrol"
+    },
+    {
+      "block_id": "20260317_08b0f778-335e-4e5a-b95a-772c98e1be2f_5_block_007",
+      "coordinates": {
+        "x1": 232.0,
+        "y1": 1471.0,
+        "x2": 1699.0,
+        "y2": 1717.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9235556721687317,
+      "reading_order": 8,
+      "text": "8. Surgical instruments and utensils do not get corroded since the material\nused to manufacture them is ______ for prevention of corrosion.\n(a) alloyed (b) tinned\n(c) galvanized (d) electroplated"
+    },
+    {
+      "block_id": "20260317_08b0f778-335e-4e5a-b95a-772c98e1be2f_5_block_008",
+      "coordinates": {
+        "x1": 230.0,
+        "y1": 1739.0,
+        "x2": 1694.0,
+        "y2": 1985.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9223287105560303,
+      "reading_order": 9,
+      "text": "9. Which among the following pairs of pollutants are not produced by\nautomobiles?\n(a) CFC, $\\mathrm{SO}_2$ (b) Fly ash, $\\mathrm{SO}_2$\n(c) CFC, Fly ash (d) $\\mathrm{SO}_2$, $\\mathrm{CO}_2$"
+    },
+    {
+      "block_id": "20260317_08b0f778-335e-4e5a-b95a-772c98e1be2f_5_block_009",
+      "coordinates": {
+        "x1": 211.0,
+        "y1": 2006.0,
+        "x2": 1525.0,
+        "y2": 2194.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9221506714820862,
+      "reading_order": 10,
+      "text": "10. Which of the following does not involve the usage of oxygen?\n(a) Combustion (b) Respiration\n(c) Photosynthesis (d) Manufacture of oxyacids"
+    },
+    {
+      "block_id": "20260317_08b0f778-335e-4e5a-b95a-772c98e1be2f_5_block_010",
+      "coordinates": {
+        "x1": 210.0,
+        "y1": 2217.0,
+        "x2": 1355.0,
+        "y2": 2473.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9163689613342285,
+      "reading_order": 11,
+      "text": "11. Identify the colour change in the given reaction.\n$\\mathrm{PbO}_2 \\rightarrow \\mathrm{PbO} + \\mathrm{O}_2$\n(a) Yellow to brown (b) Black to yellow\n(c) Brown to yellow (d) Yellow to black"
+    },
+    {
+      "block_id": "20260317_08b0f778-335e-4e5a-b95a-772c98e1be2f_5_block_011",
+      "coordinates": {
+        "x1": 208.0,
+        "y1": 2527.0,
+        "x2": 1442.0,
+        "y2": 2784.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.885532796382904,
+      "reading_order": 12,
+      "text": "12. What could be 'X' and 'Y' in the following reaction?\n$\\mathrm{X} + \\mathrm{O}_2 \\xrightarrow{\\frac{\\mathrm{V}_2\\mathrm{O}_5}{\\mathrm{Pt}}} \\mathrm{Y}$.\n(a) $\\mathrm{X} \\rightarrow \\mathrm{SO}_2, \\mathrm{Y} \\rightarrow \\mathrm{SO}_3$ (b) $\\mathrm{X} \\rightarrow \\mathrm{CO}, \\mathrm{Y} \\rightarrow \\mathrm{CO}_2$\n(c) $\\mathrm{X} \\rightarrow \\mathrm{NO}, \\mathrm{Y} \\rightarrow \\mathrm{NO}_2$ (d) $\\mathrm{X} \\rightarrow \\mathrm{P}_2\\mathrm{O}_3, \\mathrm{Y} \\rightarrow \\mathrm{P}_2\\mathrm{O}_5$"
+    },
+    {
+      "block_id": "20260317_08b0f778-335e-4e5a-b95a-772c98e1be2f_5_block_012",
+      "coordinates": {
+        "x1": 1789.0,
+        "y1": 312.0,
+        "x2": 2171.0,
+        "y2": 363.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5356829762458801,
+      "reading_order": 13,
+      "text": "Space for rough work"
+    }
+  ]
+}

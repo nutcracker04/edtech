@@ -1,0 +1,190 @@
+{
+  "page_num": 2,
+  "image_width": 2398,
+  "image_height": 3003,
+  "created_at": "2026-03-17T19:54:37.032816+00:00",
+  "blocks": [
+    {
+      "block_id": "20260317_96cdd42a-568b-49d1-8e0c-59656d8ce331_2_block_000",
+      "coordinates": {
+        "x1": 199.0,
+        "y1": 184.0,
+        "x2": 1122.0,
+        "y2": 241.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.6827601790428162,
+      "reading_order": 1,
+      "text": "5.6 Chapter 5 Water, Solution, Solubility and Hydrogen"
+    },
+    {
+      "block_id": "20260317_96cdd42a-568b-49d1-8e0c-59656d8ce331_2_block_001",
+      "coordinates": {
+        "x1": 288.0,
+        "y1": 289.0,
+        "x2": 1221.0,
+        "y2": 472.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7203288674354553,
+      "reading_order": 2,
+      "text": "(E) E at 60°C\n(a) EBCDA (b) ADCBE\n(c) ECDBA (d) ADBCE"
+    },
+    {
+      "block_id": "20260317_96cdd42a-568b-49d1-8e0c-59656d8ce331_2_block_002",
+      "coordinates": {
+        "x1": 233.0,
+        "y1": 495.0,
+        "x2": 1691.0,
+        "y2": 678.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.920619547367096,
+      "reading_order": 3,
+      "text": "5. 80 g of a saturated solution of a substance contains 16 g of the substance.\nWhat is the solubility of the substance at that temperature?\n(a) 32 (b) 20 (c) 18 (d) 25"
+    },
+    {
+      "block_id": "20260317_96cdd42a-568b-49d1-8e0c-59656d8ce331_2_block_003",
+      "coordinates": {
+        "x1": 247.0,
+        "y1": 704.0,
+        "x2": 1550.0,
+        "y2": 1118.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.29379305243492126,
+      "reading_order": 4,
+      "text": "6. Assertion (A): Glauber’s salt shows same solubility at two different\ntemperatures.\nReason (R): Glauber’s salt is a hydrated salt.\n(a) Both A and R are true and R is the correct explanation of A.\n(b) Both A and R are true, but R is not the correct explanation of A.\n(c) A is true and R is false.\n(d) A is false and R is true."
+    },
+    {
+      "block_id": "20260317_96cdd42a-568b-49d1-8e0c-59656d8ce331_2_block_004",
+      "coordinates": {
+        "x1": 232.0,
+        "y1": 1154.0,
+        "x2": 1431.0,
+        "y2": 1207.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8423276543617249,
+      "reading_order": 5,
+      "text": "7. What would be the observation of the following experiment?"
+    },
+    {
+      "block_id": "20260317_96cdd42a-568b-49d1-8e0c-59656d8ce331_2_block_005",
+      "coordinates": {
+        "x1": 620.0,
+        "y1": 1228.0,
+        "x2": 1250.0,
+        "y2": 1725.0
+      },
+      "layout_tag": "image",
+      "confidence": 0.9567203521728516,
+      "reading_order": 6,
+      "text": "The image is a schematic diagram illustrating the experimental setup for a combustion or oxidation reaction. It does not contain numerical data, axes, or a coordinate system. The diagram depicts a vertical glass tube labeled \"Air tight\" at the top. Inside the tube, at the bottom, is a burner. The burner is positioned above a layer of \"Anhydrous CaCl2\" (Calcium Chloride), which is depicted as a bed of granules. A solid black circle labeled \"Red phosphorus\" is shown floating above the anhydrous calcium chloride layer. The entire assembly is mounted on a stand with a horizontal support arm."
+    },
+    {
+      "block_id": "20260317_96cdd42a-568b-49d1-8e0c-59656d8ce331_2_block_006",
+      "coordinates": {
+        "x1": 289.0,
+        "y1": 1769.0,
+        "x2": 1104.0,
+        "y2": 1824.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8163419961929321,
+      "reading_order": 7,
+      "text": "(a) White dense fumes of $\\mathrm{P}_2\\mathrm{O}_5$ are formed."
+    },
+    {
+      "block_id": "20260317_96cdd42a-568b-49d1-8e0c-59656d8ce331_2_block_007",
+      "coordinates": {
+        "x1": 291.0,
+        "y1": 1833.0,
+        "x2": 1106.0,
+        "y2": 1888.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8069489598274231,
+      "reading_order": 8,
+      "text": "(b) Colourless vapours of $\\mathrm{P}_2\\mathrm{O}_3$ are formed."
+    },
+    {
+      "block_id": "20260317_96cdd42a-568b-49d1-8e0c-59656d8ce331_2_block_008",
+      "coordinates": {
+        "x1": 289.0,
+        "y1": 1897.0,
+        "x2": 1691.0,
+        "y2": 1952.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.732210636138916,
+      "reading_order": 9,
+      "text": "(c) Vapours of $\\mathrm{P}_2\\mathrm{O}_5$ get condensed on the side of test tube to form fine particles."
+    },
+    {
+      "block_id": "20260317_96cdd42a-568b-49d1-8e0c-59656d8ce331_2_block_009",
+      "coordinates": {
+        "x1": 293.0,
+        "y1": 1959.0,
+        "x2": 753.0,
+        "y2": 2012.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5505976676940918,
+      "reading_order": 10,
+      "text": "(d) There is no reaction."
+    },
+    {
+      "block_id": "20260317_96cdd42a-568b-49d1-8e0c-59656d8ce331_2_block_010",
+      "coordinates": {
+        "x1": 239.0,
+        "y1": 2039.0,
+        "x2": 1699.0,
+        "y2": 2410.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6115278601646423,
+      "reading_order": 11,
+      "text": "8. Which of the following applications is not related to the effect of pressure on\nsolubility of gases?\n(a) Usage of helium-oxygen mixture by deep sea divers\n(b) Preparation of soda water\n(c) Difficulty in breathing experienced at higher altitudes\n(d) Collection of hydrogen by downward displacement of water"
+    },
+    {
+      "block_id": "20260317_96cdd42a-568b-49d1-8e0c-59656d8ce331_2_block_011",
+      "coordinates": {
+        "x1": 232.0,
+        "y1": 2428.0,
+        "x2": 1691.0,
+        "y2": 2612.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9321519732475281,
+      "reading_order": 12,
+      "text": "9. 2.1 kJ of heat is supplied to 100 g of water. What would be the expected\nincrease in the temperature of water?\n(a) $1^\\circ\\mathrm{C}$ (b) $0.5^\\circ\\mathrm{C}$ (c) $10^\\circ\\mathrm{C}$ (d) $5^\\circ\\mathrm{C}$"
+    },
+    {
+      "block_id": "20260317_96cdd42a-568b-49d1-8e0c-59656d8ce331_2_block_012",
+      "coordinates": {
+        "x1": 214.0,
+        "y1": 2634.0,
+        "x2": 1697.0,
+        "y2": 2878.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9421289563179016,
+      "reading_order": 13,
+      "text": "10. Which of the following samples when taken in equal volumes freezes at the\nlowest temperature?\n(a) Brine solution (b) Saline water\n(c) Mineral water (d) Demineralized water"
+    },
+    {
+      "block_id": "20260317_96cdd42a-568b-49d1-8e0c-59656d8ce331_2_block_013",
+      "coordinates": {
+        "x1": 1791.0,
+        "y1": 312.0,
+        "x2": 2169.0,
+        "y2": 364.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.3738139867782593,
+      "reading_order": 14,
+      "text": "Space for rough work"
+    }
+  ]
+}

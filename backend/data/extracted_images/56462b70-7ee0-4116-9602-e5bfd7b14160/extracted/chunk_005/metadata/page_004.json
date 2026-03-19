@@ -1,0 +1,125 @@
+{
+  "page_num": 4,
+  "image_width": 2398,
+  "image_height": 3003,
+  "created_at": "2026-03-17T19:54:17.002435+00:00",
+  "blocks": [
+    {
+      "block_id": "20260317_cd16b3e7-4653-411a-a8e5-286487505d05_4_block_000",
+      "coordinates": {
+        "x1": 200.0,
+        "y1": 185.0,
+        "x2": 1369.0,
+        "y2": 239.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.7956743240356445,
+      "reading_order": 1,
+      "text": "3.2 Chapter 3 Language of Chemistry and Transformation of Substances"
+    },
+    {
+      "block_id": "20260317_cd16b3e7-4653-411a-a8e5-286487505d05_4_block_001",
+      "coordinates": {
+        "x1": 235.0,
+        "y1": 292.0,
+        "x2": 1696.0,
+        "y2": 574.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9255284667015076,
+      "reading_order": 2,
+      "text": "6. A, B, C and D are four elements which have 1, 2, 3, and 6 electrons in valence\nM shell. The four elements combine with oxygen to form compounds P, Q, R,\nand S, respectively. Arrange P, Q, R and S in the decreasing order of number of\noxygen atoms which combine with one atom of the corresponding element.\n(a) SRQP (b) SRPQ (c) RSQP (d) RSPQ"
+    },
+    {
+      "block_id": "20260317_cd16b3e7-4653-411a-a8e5-286487505d05_4_block_002",
+      "coordinates": {
+        "x1": 249.0,
+        "y1": 636.0,
+        "x2": 1671.0,
+        "y2": 1201.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.3894793689250946,
+      "reading_order": 3,
+      "text": "7. $\\mathrm{NaOH} + \\mathrm{HClO}_4 \\rightarrow$ salt 1\n$\\mathrm{Ca(OH)}_2 + 2\\mathrm{HClO}_3 \\rightarrow$ salt 2\n$\\mathrm{Pb(OH)}_4 + 4\\mathrm{HClO}_2 \\rightarrow$ salt 3\n$\\mathrm{Fe(OH)}_3 + \\mathrm{HOCl} \\rightarrow$ salt 4\nArrange the salts in the correct order of their number of oxygen atoms.\n(a) Salt 3 > salt 2 > salt 1 > salt 4\n(b) Salt 3 > salt 2 > salt 4 > salt 1\n(c) Salt 2 > salt 3 > salt 1 > salt 4\n(d) Salt 2 > salt 3 > salt 4 > salt 1"
+    },
+    {
+      "block_id": "20260317_cd16b3e7-4653-411a-a8e5-286487505d05_4_block_003",
+      "coordinates": {
+        "x1": 238.0,
+        "y1": 1265.0,
+        "x2": 1699.0,
+        "y2": 1622.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.4290996789932251,
+      "reading_order": 4,
+      "text": "8. Limestone on heating gives solid 'X' which on dissolution in water forms\n'Y'. Formation of X and Y are ______ and ______ reactions, respectively.\n(a) endothermic, compound–compound combination\n(b) exothermic, compound–compound combination\n(c) combination, exothermic\n(d) endothermic, displacement"
+    },
+    {
+      "block_id": "20260317_cd16b3e7-4653-411a-a8e5-286487505d05_4_block_004",
+      "coordinates": {
+        "x1": 235.0,
+        "y1": 1685.0,
+        "x2": 1683.0,
+        "y2": 1859.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9034014344215393,
+      "reading_order": 5,
+      "text": "9. Metal M forms an oxide with formula $\\mathrm{M}_2\\mathrm{O}$. What is the formula of the com-\npound formed between M and a non-metal A with six electrons in its M shell?\n(a) $\\mathrm{M}_3\\mathrm{A}_2$ (b) $\\mathrm{M}_2\\mathrm{A}$ (c) $\\mathrm{MA}_2$ (d) $\\mathrm{M}_2\\mathrm{A}_3$"
+    },
+    {
+      "block_id": "20260317_cd16b3e7-4653-411a-a8e5-286487505d05_4_block_005",
+      "coordinates": {
+        "x1": 212.0,
+        "y1": 1918.0,
+        "x2": 1690.0,
+        "y2": 2213.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9386678338050842,
+      "reading_order": 6,
+      "text": "10. Metal with electronic configuration 2, 8, 14, 2 can form two different hydrox-\nides A and B. Both the hydroxides on reaction with sulphuric acid give two\nsalts 'X' and 'Y'. The two salts X and Y are ______ and ______, respectively.\n(a) $\\mathrm{MSO}_3$, $\\mathrm{M}_2(\\mathrm{SO}_3)_3$ (b) $\\mathrm{MSO}_4$, $\\mathrm{M}_2(\\mathrm{SO}_4)_3$\n(c) $\\mathrm{M}_2\\mathrm{SO}_4$, $\\mathrm{MSO}_4$ (d) $\\mathrm{M}_2\\mathrm{SO}_4$, $\\mathrm{M}_2(\\mathrm{SO}_4)_3$"
+    },
+    {
+      "block_id": "20260317_cd16b3e7-4653-411a-a8e5-286487505d05_4_block_006",
+      "coordinates": {
+        "x1": 216.0,
+        "y1": 2268.0,
+        "x2": 1329.0,
+        "y2": 2316.0
+      },
+      "layout_tag": "image-caption",
+      "confidence": 0.4612497389316559,
+      "reading_order": 7,
+      "text": "11. Match the entries of Column A with those of Column B."
+    },
+    {
+      "block_id": "20260317_cd16b3e7-4653-411a-a8e5-286487505d05_4_block_007",
+      "coordinates": {
+        "x1": 300.0,
+        "y1": 2335.0,
+        "x2": 1528.0,
+        "y2": 2796.0
+      },
+      "layout_tag": "table",
+      "confidence": 0.9532427787780762,
+      "reading_order": 8,
+      "text": "<table>\n<thead>\n<tr>\n<th rowspan=\"2\">Column A<br/>(Compound)</th>\n<th colspan=\"2\">Column B<br/>Valency of</th>\n</tr>\n<tr>\n<th>+ve radical</th>\n<th>–ve radical</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>(i) Cupric phosphate</td>\n<td>(A)</td>\n<td>2</td>\n<td>2</td>\n</tr>\n<tr>\n<td>(ii) Stannic sulphite</td>\n<td>(B)</td>\n<td>4</td>\n<td>3</td>\n</tr>\n<tr>\n<td>(iii) Barium sulphate</td>\n<td>(C)</td>\n<td>2</td>\n<td>3</td>\n</tr>\n<tr>\n<td>(iv) Plumbic phosphate</td>\n<td>(D)</td>\n<td>4</td>\n<td>2</td>\n</tr>\n</tbody>\n</table>"
+    },
+    {
+      "block_id": "20260317_cd16b3e7-4653-411a-a8e5-286487505d05_4_block_008",
+      "coordinates": {
+        "x1": 1790.0,
+        "y1": 312.0,
+        "x2": 2170.0,
+        "y2": 363.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6638315320014954,
+      "reading_order": 9,
+      "text": "Space for rough work"
+    }
+  ]
+}

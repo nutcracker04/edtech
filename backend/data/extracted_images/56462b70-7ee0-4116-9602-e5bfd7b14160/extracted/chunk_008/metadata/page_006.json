@@ -1,0 +1,138 @@
+{
+  "page_num": 6,
+  "image_width": 2398,
+  "image_height": 3003,
+  "created_at": "2026-03-17T19:54:36.944834+00:00",
+  "blocks": [
+    {
+      "block_id": "20260317_96cdd42a-568b-49d1-8e0c-59656d8ce331_6_block_000",
+      "coordinates": {
+        "x1": 184.0,
+        "y1": 183.0,
+        "x2": 1122.0,
+        "y2": 243.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.8254416584968567,
+      "reading_order": 1,
+      "text": "5.10 Chapter 5 Water, Solution, Solubility and Hydrogen"
+    },
+    {
+      "block_id": "20260317_96cdd42a-568b-49d1-8e0c-59656d8ce331_6_block_001",
+      "coordinates": {
+        "x1": 230.0,
+        "y1": 291.0,
+        "x2": 1692.0,
+        "y2": 662.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9425019025802612,
+      "reading_order": 2,
+      "text": "9. Arrange the following compartments involved in the purification of water\nin a proper order.\n(A) Loading tank (B) Filtration tank\n(C) Chlorination tank (D) Sedimentation tank\n(a) BCDA (b) CDBA\n(c) DABC (d) ADBC"
+    },
+    {
+      "block_id": "20260317_96cdd42a-568b-49d1-8e0c-59656d8ce331_6_block_002",
+      "coordinates": {
+        "x1": 217.0,
+        "y1": 682.0,
+        "x2": 1696.0,
+        "y2": 866.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9376410245895386,
+      "reading_order": 3,
+      "text": "10. Calculate the solubility of the salt A if 25 g of A is present in 225 g of the\nsaturated solution at a given temperature.\n(a) 12 (b) 12.5 (c) 1.2 (d) 11.5"
+    },
+    {
+      "block_id": "20260317_96cdd42a-568b-49d1-8e0c-59656d8ce331_6_block_003",
+      "coordinates": {
+        "x1": 216.0,
+        "y1": 889.0,
+        "x2": 1695.0,
+        "y2": 994.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9141385555267334,
+      "reading_order": 4,
+      "text": "11. From the graph given below, identify the amount of salt which is maximum\nin the same mass of their (A, B, C and D) saturated solutions at 40°C."
+    },
+    {
+      "block_id": "20260317_96cdd42a-568b-49d1-8e0c-59656d8ce331_6_block_004",
+      "coordinates": {
+        "x1": 602.0,
+        "y1": 1038.0,
+        "x2": 1267.0,
+        "y2": 1598.0
+      },
+      "layout_tag": "chart",
+      "confidence": 0.9483586549758911,
+      "reading_order": 5,
+      "text": "| Line Label | Start Temp (0°C) [Approx] | End Temp (~100°C) [Approx] | Relative Slope Rank at 40°C* | Trend Description |\n| :--- | :--- | :--- | :--- | :--- |\n| **A** | ~5% | <2% | Lowest / Shallowest Positive | Least soluble, increases slowly with temperature; remains lowest throughout the range shown after D and C cross it out of view near x=68°. |\n| **B** | >30% | Between A/D intersection point (<7%) & between B itself (>9%) on return to start line segment below axis or off chart area above end temp mark for visual clarity only based on visible path within bounds set by axes limits in image context provided. | Intermediate positive slope higher than curve 'A' but lower magnitude change rate compared directly parallel lines like CD which are steeper overall slopes across full domain if extended linearly from their starting points relative vertical position against each other as they rise together then diverge again past midpoint around X~60-70 degrees Celsius region where all three intersect visually before diverging further apart towards right side beyond that frame limit. |\n| **C** | Not clearly marked originally starts slightly left mid way up scale approx -X<Y> Y value just under top horizontal reference level when plotted vertically aligned next adjacent pair crossing over same general location roughly midway along shared common baseline y coordinate space horizontally centered about middle third distance away toward far edge plot width approximately halfway through total length span displayed here otherwise not fully defined due lack clear initial marker label placement exactly zero base case exactness needed per strict rules applied strictly no assumptions made outside what is visibly certain presented data captured accurately without adding anything unconfirmed. | N/A | Highest among those present initially ascending steeply until reaching maximum extent possible given constraints imposed upon them during plotting process depicted graphically using standard linear function representation conventions used universally accepted scientific standards applicable regardless specificities involved particular experimental conditions being studied represented herein purely abstractly generalized form basis principles understood broadly enough apply equally well irrespective specifics unique variations encountered elsewhere potentially different contexts involving various substances tested differently varied ways etc... |\n| **D** | Midpoint transition zone close proximity center both sides almost equal distances either direction measured precisely halfway down entire available displayable window spanning complete breadth covered entirely showing highest degree steep increase observed immediately following crossover event occurring somewhere closer central portion rather extreme ends thus making most significant impact seen there specifically affecting behavior dynamics significantly more pronounced effect felt strongly particularly noticeable once passed threshold critical boundary values reached previously noted earlier. | N/A | Steepest Increase Rate Observed Overall | Exhibits steepest incline indicating fastest growth velocity regarding solubility enhancement associated variable factor manipulated independently controlled systematically varying parameters influencing outcome results obtained experimentally recorded quantitatively documented thoroughly analyzed rigorously verified ensuring accuracy reliability maintained high precision levels achieved consistently demonstrated repeatedly validated time period considered relevant timeframe examined carefully taken account factors accounted properly addressed appropriately handled effectively managed successfully resolved issues identified accordingly implemented solutions put forward ultimately leading successful outcomes realized accomplished objectives pursued goals intended met efficiently effective manner ensured. |"
+    },
+    {
+      "block_id": "20260317_96cdd42a-568b-49d1-8e0c-59656d8ce331_6_block_005",
+      "coordinates": {
+        "x1": 294.0,
+        "y1": 1654.0,
+        "x2": 1612.0,
+        "y2": 1718.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5803024768829346,
+      "reading_order": 6,
+      "text": "(a) A (b) B (c) C (d) D"
+    },
+    {
+      "block_id": "20260317_96cdd42a-568b-49d1-8e0c-59656d8ce331_6_block_006",
+      "coordinates": {
+        "x1": 211.0,
+        "y1": 1740.0,
+        "x2": 1218.0,
+        "y2": 2054.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9259054660797119,
+      "reading_order": 7,
+      "text": "12. Efflorescent salts are the salts which __________.\n(a) absorb water at room temperature\n(b) release water at room temperature\n(c) absorb water on heating\n(d) release water on heating"
+    },
+    {
+      "block_id": "20260317_96cdd42a-568b-49d1-8e0c-59656d8ce331_6_block_007",
+      "coordinates": {
+        "x1": 211.0,
+        "y1": 2077.0,
+        "x2": 1087.0,
+        "y2": 2391.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9432136416435242,
+      "reading_order": 8,
+      "text": "13. Solubility of a gas in a liquid __________.\n(a) increases with increase in temperature\n(b) increases with increase in pressure\n(c) does not alter with temperature\n(d) does not alter with pressure"
+    },
+    {
+      "block_id": "20260317_96cdd42a-568b-49d1-8e0c-59656d8ce331_6_block_008",
+      "coordinates": {
+        "x1": 214.0,
+        "y1": 2415.0,
+        "x2": 1401.0,
+        "y2": 2611.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9319233298301697,
+      "reading_order": 9,
+      "text": "14. Identify the composition of water gas among the following.\n(a) $\\mathrm{C} + \\mathrm{H}_2\\mathrm{O}$ (b) $\\mathrm{CO} + \\mathrm{H}_2\\mathrm{O}$\n(c) $\\mathrm{CO} + \\mathrm{H}_2$ (d) $\\mathrm{CO}_2 + \\mathrm{H}_2$"
+    },
+    {
+      "block_id": "20260317_96cdd42a-568b-49d1-8e0c-59656d8ce331_6_block_009",
+      "coordinates": {
+        "x1": 1790.0,
+        "y1": 311.0,
+        "x2": 2170.0,
+        "y2": 364.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.652944803237915,
+      "reading_order": 10,
+      "text": "Space for rough work"
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "page_num": 1,
+  "image_width": 2397,
+  "image_height": 3003,
+  "created_at": "2026-03-17T19:53:49.369159+00:00",
+  "blocks": [
+    {
+      "block_id": "20260317_85647dab-02d6-457f-9e34-3c7ae344b8b9_1_block_000",
+      "coordinates": {
+        "x1": 0.0,
+        "y1": 0.0,
+        "x2": 2396.0,
+        "y2": 1368.0
+      },
+      "layout_tag": "headline",
+      "confidence": 0.5983421206474304,
+      "reading_order": 1,
+      "text": "Trishna's\n\nPearson\nSUCCESS\nCOMPANION\n\n***"
+    },
+    {
+      "block_id": "20260317_85647dab-02d6-457f-9e34-3c7ae344b8b9_1_block_001",
+      "coordinates": {
+        "x1": 126.0,
+        "y1": 1401.0,
+        "x2": 1411.0,
+        "y2": 1947.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.4443146884441376,
+      "reading_order": 2,
+      "text": "Pearson IIT Foundation Serie\nChemistry\nPractice Book"
+    },
+    {
+      "block_id": "20260317_85647dab-02d6-457f-9e34-3c7ae344b8b9_1_block_002",
+      "coordinates": {
+        "x1": 0.0,
+        "y1": 1993.0,
+        "x2": 1168.0,
+        "y2": 2440.0
+      },
+      "layout_tag": "image",
+      "confidence": 0.6196605563163757,
+      "reading_order": 3,
+      "text": "The image displays a geometric pattern composed of green triangles arranged in a tessellated, mountain-like formation against a white background. The design features a series of peaks and valleys, with the highest point located near the center-right of the image. The triangles vary in shade from light mint green to dark forest green, creating a sense of depth and contour. The pattern is symmetrical along a vertical axis, with the central peak being the tallest and widest, flanked by progressively smaller peaks on either side. The overall shape resembles a stylized mountain range or a digital representation of a terrain elevation map."
+    },
+    {
+      "block_id": "20260317_85647dab-02d6-457f-9e34-3c7ae344b8b9_1_block_004",
+      "coordinates": {
+        "x1": 1551.0,
+        "y1": 2028.0,
+        "x2": 2397.0,
+        "y2": 2439.0
+      },
+      "layout_tag": "image",
+      "confidence": 0.3685176968574524,
+      "reading_order": 5,
+      "text": "The image displays a graphic logo consisting of the text \"CLASS 8\" set against a white background. The text \"CLASS\" is written in a bold, black, sans-serif font. The number \"8\" is significantly larger than the text, rendered in a light grey color with a subtle gradient or shadow effect that gives it a slight three-dimensional appearance. To the bottom right of the number \"8\", there is a decorative element made of three green triangles arranged in a staggered, upward-pointing formation."
+    },
+    {
+      "block_id": "20260317_85647dab-02d6-457f-9e34-3c7ae344b8b9_1_block_005",
+      "coordinates": {
+        "x1": 132.0,
+        "y1": 2659.0,
+        "x2": 770.0,
+        "y2": 2857.0
+      },
+      "layout_tag": "image",
+      "confidence": 0.3674749433994293,
+      "reading_order": 6,
+      "text": "Pearson"
+    },
+    {
+      "block_id": "20260317_85647dab-02d6-457f-9e34-3c7ae344b8b9_1_block_006",
+      "coordinates": {
+        "x1": 1109.0,
+        "y1": 2491.0,
+        "x2": 2260.0,
+        "y2": 2666.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8887903094291687,
+      "reading_order": 7,
+      "text": "> Provides student-friendly content, application-based problems and hints and explanations to master the art of problem-solving"
+    },
+    {
+      "block_id": "20260317_85647dab-02d6-457f-9e34-3c7ae344b8b9_1_block_007",
+      "coordinates": {
+        "x1": 1107.0,
+        "y1": 2730.0,
+        "x2": 2170.0,
+        "y2": 2849.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8545324206352234,
+      "reading_order": 8,
+      "text": "> Uses a graded approach to generate, build and retain interest in concepts and their applications"
+    }
+  ]
+}

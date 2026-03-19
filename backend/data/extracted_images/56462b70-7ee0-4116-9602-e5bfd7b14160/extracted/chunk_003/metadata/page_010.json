@@ -1,0 +1,229 @@
+{
+  "page_num": 10,
+  "image_width": 2398,
+  "image_height": 3003,
+  "created_at": "2026-03-17T19:54:03.228195+00:00",
+  "blocks": [
+    {
+      "block_id": "20260317_43a438f9-7aa4-4f9e-9549-d86612968256_10_block_000",
+      "coordinates": {
+        "x1": 200.0,
+        "y1": 183.0,
+        "x2": 867.0,
+        "y2": 239.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.6962174773216248,
+      "reading_order": 1,
+      "text": "2.2 Chapter 2 Classification of Matter"
+    },
+    {
+      "block_id": "20260317_43a438f9-7aa4-4f9e-9549-d86612968256_10_block_001",
+      "coordinates": {
+        "x1": 289.0,
+        "y1": 290.0,
+        "x2": 1434.0,
+        "y2": 345.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7721606492996216,
+      "reading_order": 2,
+      "text": "(c) Evaporation, separating funnel and fractional distillation"
+    },
+    {
+      "block_id": "20260317_43a438f9-7aa4-4f9e-9549-d86612968256_10_block_002",
+      "coordinates": {
+        "x1": 289.0,
+        "y1": 354.0,
+        "x2": 1437.0,
+        "y2": 412.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7980836629867554,
+      "reading_order": 3,
+      "text": "(d) Fractional distillation, separating funnel and evaporation"
+    },
+    {
+      "block_id": "20260317_43a438f9-7aa4-4f9e-9549-d86612968256_10_block_003",
+      "coordinates": {
+        "x1": 234.0,
+        "y1": 470.0,
+        "x2": 1696.0,
+        "y2": 633.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9301016330718994,
+      "reading_order": 4,
+      "text": "7. The same fabric is kept for drying in two different ways as shown in the\nfigures given below. In position A, the cloth dries up faster because the rate\nof evaporation is ______."
+    },
+    {
+      "block_id": "20260317_43a438f9-7aa4-4f9e-9549-d86612968256_10_block_004",
+      "coordinates": {
+        "x1": 590.0,
+        "y1": 649.0,
+        "x2": 899.0,
+        "y2": 1035.0
+      },
+      "layout_tag": "image",
+      "confidence": 0.8992844223976135,
+      "reading_order": 5,
+      "text": "The image displays a hand-drawn sketch of a rectangular frame containing a 3x3 grid of abstract, curved line segments. The lines are irregular, resembling scribbles or stylized representations of curves rather than standard mathematical notation. There are no axes, labels, legends, or numerical values present. The visual resembles a simplified diagram of a matrix or a grid of curves, but it lacks the structural context of a coordinate system or data table."
+    },
+    {
+      "block_id": "20260317_43a438f9-7aa4-4f9e-9549-d86612968256_10_block_005",
+      "coordinates": {
+        "x1": 621.0,
+        "y1": 1047.0,
+        "x2": 868.0,
+        "y2": 1090.0
+      },
+      "layout_tag": "footnote",
+      "confidence": 0.7767455577850342,
+      "reading_order": 6,
+      "text": "Position A (Day)"
+    },
+    {
+      "block_id": "20260317_43a438f9-7aa4-4f9e-9549-d86612968256_10_block_006",
+      "coordinates": {
+        "x1": 973.0,
+        "y1": 646.0,
+        "x2": 1219.0,
+        "y2": 1016.0
+      },
+      "layout_tag": "image",
+      "confidence": 0.8912914395332336,
+      "reading_order": 7,
+      "text": "The image is a simple black-and-white line drawing of a vertical rectangular object, resembling a wooden plank or a vertical beam. The object is enclosed by a thin outer border and a thicker inner border. Inside, there are wavy, curved lines running vertically, creating a pattern that mimics the grain or texture of wood. There are no axes, labels, numerical values, or legends present in the image. Therefore, it is a qualitative illustration rather than a quantitative data chart."
+    },
+    {
+      "block_id": "20260317_43a438f9-7aa4-4f9e-9549-d86612968256_10_block_007",
+      "coordinates": {
+        "x1": 1009.0,
+        "y1": 1046.0,
+        "x2": 1277.0,
+        "y2": 1089.0
+      },
+      "layout_tag": "footnote",
+      "confidence": 0.8225715756416321,
+      "reading_order": 8,
+      "text": "Position B (Night)"
+    },
+    {
+      "block_id": "20260317_43a438f9-7aa4-4f9e-9549-d86612968256_10_block_008",
+      "coordinates": {
+        "x1": 289.0,
+        "y1": 1110.0,
+        "x2": 1049.0,
+        "y2": 1352.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.44986286759376526,
+      "reading_order": 9,
+      "text": "(a) directly proportional to temperature\n(b) directly proportional to surface area\n(c) inversely proportional to humidity\n(d) Both (a) and (b)."
+    },
+    {
+      "block_id": "20260317_43a438f9-7aa4-4f9e-9549-d86612968256_10_block_009",
+      "coordinates": {
+        "x1": 241.0,
+        "y1": 1419.0,
+        "x2": 1694.0,
+        "y2": 1830.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.3162690997123718,
+      "reading_order": 10,
+      "text": "8. A and B are two gases taken in two different cylinders at $45^\\circ\\mathrm{C}$. Their critical\ntemperatures are $40^\\circ\\mathrm{C}$ and $50^\\circ\\mathrm{C}$, respectively. Which of the following state-\nments is correct?\n(a) Only gas A can be liquefied by applying pressure at that temperature.\n(b) Only gas B can be liquefied by applying pressure at that temperature.\n(c) Both the gases can be liquefied by applying pressure at that temperature.\n(d) None of the gases can be liquefied by applying pressure at that temperature."
+    },
+    {
+      "block_id": "20260317_43a438f9-7aa4-4f9e-9549-d86612968256_10_block_010",
+      "coordinates": {
+        "x1": 231.0,
+        "y1": 1891.0,
+        "x2": 1698.0,
+        "y2": 2376.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9460947513580322,
+      "reading_order": 11,
+      "text": "9. From the description given below, identify the processes in which the poten-\ntial energy decreases.\nA: Formation of ice\nB: Melting of ice\nC: Condensation of water vapour\nD: Boiling of water\n(a) A and B (b) A and C\n(c) B and D (d) C and D"
+    },
+    {
+      "block_id": "20260317_43a438f9-7aa4-4f9e-9549-d86612968256_10_block_011",
+      "coordinates": {
+        "x1": 215.0,
+        "y1": 2435.0,
+        "x2": 1690.0,
+        "y2": 2540.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8498712182044983,
+      "reading_order": 12,
+      "text": "10. The boiling point of water is directly proportional to the external pressure. Which of the following statements supports the given statement?"
+    },
+    {
+      "block_id": "20260317_43a438f9-7aa4-4f9e-9549-d86612968256_10_block_012",
+      "coordinates": {
+        "x1": 289.0,
+        "y1": 2551.0,
+        "x2": 1646.0,
+        "y2": 2607.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7551069855690002,
+      "reading_order": 13,
+      "text": "(a) Addition of a pinch of salt to water makes the cooking of food faster."
+    },
+    {
+      "block_id": "20260317_43a438f9-7aa4-4f9e-9549-d86612968256_10_block_013",
+      "coordinates": {
+        "x1": 291.0,
+        "y1": 2614.0,
+        "x2": 1192.0,
+        "y2": 2669.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.709260880947113,
+      "reading_order": 14,
+      "text": "(b) Pressure cooker decreases the cooking time."
+    },
+    {
+      "block_id": "20260317_43a438f9-7aa4-4f9e-9549-d86612968256_10_block_014",
+      "coordinates": {
+        "x1": 291.0,
+        "y1": 2679.0,
+        "x2": 1693.0,
+        "y2": 2784.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9067338109016418,
+      "reading_order": 15,
+      "text": "(c) Sea water takes more time to be boiled than same mass of normal tap\nwater, if the rate of supply of heat is same."
+    },
+    {
+      "block_id": "20260317_43a438f9-7aa4-4f9e-9549-d86612968256_10_block_015",
+      "coordinates": {
+        "x1": 291.0,
+        "y1": 2793.0,
+        "x2": 1698.0,
+        "y2": 2900.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9016996026039124,
+      "reading_order": 16,
+      "text": "(d) The same amount of water kept in a wide container and in a narrow\nvessel evaporates at different rates."
+    },
+    {
+      "block_id": "20260317_43a438f9-7aa4-4f9e-9549-d86612968256_10_block_016",
+      "coordinates": {
+        "x1": 1791.0,
+        "y1": 312.0,
+        "x2": 2169.0,
+        "y2": 364.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5786066651344299,
+      "reading_order": 17,
+      "text": "Space for rough work"
+    }
+  ]
+}

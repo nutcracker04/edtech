@@ -1,0 +1,112 @@
+{
+  "page_num": 10,
+  "image_width": 2398,
+  "image_height": 3003,
+  "created_at": "2026-03-17T19:54:23.435316+00:00",
+  "blocks": [
+    {
+      "block_id": "20260317_78fef408-2204-4bff-a20e-e3c42fc275a0_10_block_000",
+      "coordinates": {
+        "x1": 199.0,
+        "y1": 185.0,
+        "x2": 749.0,
+        "y2": 240.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.755725622177124,
+      "reading_order": 1,
+      "text": "4.6 Chapter 4 Air and Oxygen"
+    },
+    {
+      "block_id": "20260317_78fef408-2204-4bff-a20e-e3c42fc275a0_10_block_001",
+      "coordinates": {
+        "x1": 214.0,
+        "y1": 292.0,
+        "x2": 1329.0,
+        "y2": 342.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.411671906709671,
+      "reading_order": 2,
+      "text": "15. Match the entries of Column A with those of Column B."
+    },
+    {
+      "block_id": "20260317_78fef408-2204-4bff-a20e-e3c42fc275a0_10_block_002",
+      "coordinates": {
+        "x1": 296.0,
+        "y1": 348.0,
+        "x2": 1426.0,
+        "y2": 1056.0
+      },
+      "layout_tag": "table",
+      "confidence": 0.8870800137519836,
+      "reading_order": 3,
+      "text": "<table>\n<thead>\n<tr>\n<th>Column A<br/>(Compounds Used for the<br/>Formation of O2)</th>\n<th>Column B<br/>(Related Features of the<br/>Reaction Involved)</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>(i) H2O2</td>\n<td>(A) MnO2 reduces the melting<br/>point as well as decompo-<br/>sition temperature of the<br/>reactant.</td>\n</tr>\n<tr>\n<td>(ii) KMnO4</td>\n<td>(B) Metallic nitrite is the solid<br/>product.</td>\n</tr>\n<tr>\n<td>(iii) KClO3</td>\n<td>(C) No heating is required.</td>\n</tr>\n<tr>\n<td>(iv) NaNO3</td>\n<td>(D) MnO2 is one of the solid<br/>products.</td>\n</tr>\n</tbody>\n</table>"
+    },
+    {
+      "block_id": "20260317_78fef408-2204-4bff-a20e-e3c42fc275a0_10_block_003",
+      "coordinates": {
+        "x1": 289.0,
+        "y1": 1086.0,
+        "x2": 1239.0,
+        "y2": 1141.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5941279530525208,
+      "reading_order": 4,
+      "text": "(a) (i) $\\rightarrow$ (C); (ii) $\\rightarrow$ (A); (iii) $\\rightarrow$ (D); (iv) $\\rightarrow$ (B)"
+    },
+    {
+      "block_id": "20260317_78fef408-2204-4bff-a20e-e3c42fc275a0_10_block_004",
+      "coordinates": {
+        "x1": 291.0,
+        "y1": 1148.0,
+        "x2": 1247.0,
+        "y2": 1203.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5261335372924805,
+      "reading_order": 5,
+      "text": "(b) (i) $\\rightarrow$ (C); (ii) $\\rightarrow$ (B); (iii) $\\rightarrow$ (A); (iv) $\\rightarrow$ (D)"
+    },
+    {
+      "block_id": "20260317_78fef408-2204-4bff-a20e-e3c42fc275a0_10_block_005",
+      "coordinates": {
+        "x1": 291.0,
+        "y1": 1211.0,
+        "x2": 1241.0,
+        "y2": 1265.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5133817195892334,
+      "reading_order": 6,
+      "text": "(c) (i) → (C); (ii) → (D); (iii) → (A); (iv) → (B)"
+    },
+    {
+      "block_id": "20260317_78fef408-2204-4bff-a20e-e3c42fc275a0_10_block_006",
+      "coordinates": {
+        "x1": 292.0,
+        "y1": 1274.0,
+        "x2": 1246.0,
+        "y2": 1329.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5513234734535217,
+      "reading_order": 7,
+      "text": "(d) (i) $\\rightarrow$ (C); (ii) $\\rightarrow$ (D); (iii) $\\rightarrow$ (B); (iv) $\\rightarrow$ (A)"
+    },
+    {
+      "block_id": "20260317_78fef408-2204-4bff-a20e-e3c42fc275a0_10_block_007",
+      "coordinates": {
+        "x1": 1792.0,
+        "y1": 313.0,
+        "x2": 2167.0,
+        "y2": 362.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.4025234580039978,
+      "reading_order": 8,
+      "text": "Space for rough work"
+    }
+  ]
+}

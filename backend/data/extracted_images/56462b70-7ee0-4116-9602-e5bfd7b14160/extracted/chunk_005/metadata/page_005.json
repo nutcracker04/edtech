@@ -1,0 +1,281 @@
+{
+  "page_num": 5,
+  "image_width": 2398,
+  "image_height": 3003,
+  "created_at": "2026-03-17T19:54:16.818716+00:00",
+  "blocks": [
+    {
+      "block_id": "20260317_cd16b3e7-4653-411a-a8e5-286487505d05_5_block_000",
+      "coordinates": {
+        "x1": 1772.0,
+        "y1": 189.0,
+        "x2": 2051.0,
+        "y2": 235.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.8600015044212341,
+      "reading_order": 1,
+      "text": "Assessment Test I"
+    },
+    {
+      "block_id": "20260317_cd16b3e7-4653-411a-a8e5-286487505d05_5_block_001",
+      "coordinates": {
+        "x1": 2108.0,
+        "y1": 186.0,
+        "x2": 2193.0,
+        "y2": 233.0
+      },
+      "layout_tag": "page-number",
+      "confidence": 0.7897448539733887,
+      "reading_order": 2,
+      "text": "3.3"
+    },
+    {
+      "block_id": "20260317_cd16b3e7-4653-411a-a8e5-286487505d05_5_block_002",
+      "coordinates": {
+        "x1": 289.0,
+        "y1": 292.0,
+        "x2": 1243.0,
+        "y2": 349.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8020575046539307,
+      "reading_order": 3,
+      "text": "(a) (i) $\\rightarrow$ (D); (ii) $\\rightarrow$ (C); (iii) $\\rightarrow$ (B); (iv) $\\rightarrow$ (A)"
+    },
+    {
+      "block_id": "20260317_cd16b3e7-4653-411a-a8e5-286487505d05_5_block_003",
+      "coordinates": {
+        "x1": 290.0,
+        "y1": 355.0,
+        "x2": 1245.0,
+        "y2": 413.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.80401611328125,
+      "reading_order": 4,
+      "text": "(b) (i) $\\rightarrow$ (B); (ii) $\\rightarrow$ (C); (iii) $\\rightarrow$ (D); (iv) $\\rightarrow$ (A)"
+    },
+    {
+      "block_id": "20260317_cd16b3e7-4653-411a-a8e5-286487505d05_5_block_004",
+      "coordinates": {
+        "x1": 289.0,
+        "y1": 417.0,
+        "x2": 1245.0,
+        "y2": 475.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7984879612922668,
+      "reading_order": 5,
+      "text": "(c) (i) $\\rightarrow$ (C); (ii) $\\rightarrow$ (D); (iii) $\\rightarrow$ (B); (iv) $\\rightarrow$ (A)"
+    },
+    {
+      "block_id": "20260317_cd16b3e7-4653-411a-a8e5-286487505d05_5_block_005",
+      "coordinates": {
+        "x1": 290.0,
+        "y1": 481.0,
+        "x2": 1239.0,
+        "y2": 538.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.833588182926178,
+      "reading_order": 6,
+      "text": "(d) (i) $\\rightarrow$ (C); (ii) $\\rightarrow$ (D); (iii) $\\rightarrow$ (A); (iv) $\\rightarrow$ (B)"
+    },
+    {
+      "block_id": "20260317_cd16b3e7-4653-411a-a8e5-286487505d05_5_block_006",
+      "coordinates": {
+        "x1": 212.0,
+        "y1": 595.0,
+        "x2": 1695.0,
+        "y2": 775.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9138974547386169,
+      "reading_order": 7,
+      "text": "12. The molecular mass of oxide of a metal M is 40 and percentage of metal is\n60%. What is the molecular mass of perchlorate of the metal?\n(a) 191 (b) 223 (c) 159 (d) 255"
+    },
+    {
+      "block_id": "20260317_cd16b3e7-4653-411a-a8e5-286487505d05_5_block_007",
+      "coordinates": {
+        "x1": 215.0,
+        "y1": 830.0,
+        "x2": 1694.0,
+        "y2": 1007.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9229884147644043,
+      "reading_order": 8,
+      "text": "13. The ratio by weight of oxygen that combines with fixed weight of nitrogen\nin NO, $\\mathrm{NO}_2$, and $\\mathrm{N}_2\\mathrm{O}_3$ is _____.\n(a) 2:4:3 (b) 1:2:3 (c) 2:3:4 (d) 2:1:3"
+    },
+    {
+      "block_id": "20260317_cd16b3e7-4653-411a-a8e5-286487505d05_5_block_008",
+      "coordinates": {
+        "x1": 215.0,
+        "y1": 1065.0,
+        "x2": 1696.0,
+        "y2": 1171.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.42206305265426636,
+      "reading_order": 9,
+      "text": "14. Assertion (A): The ratio of number of metal atoms to total number of atoms\nin ferric hydrogen phosphate is 1:10."
+    },
+    {
+      "block_id": "20260317_cd16b3e7-4653-411a-a8e5-286487505d05_5_block_009",
+      "coordinates": {
+        "x1": 227.0,
+        "y1": 1180.0,
+        "x2": 1693.0,
+        "y2": 1282.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6192548871040344,
+      "reading_order": 10,
+      "text": "**Reason (R):** Ferric hydrogen phosphate contains trivalent positive and\nmonovalent –ve ion."
+    },
+    {
+      "block_id": "20260317_cd16b3e7-4653-411a-a8e5-286487505d05_5_block_010",
+      "coordinates": {
+        "x1": 288.0,
+        "y1": 1294.0,
+        "x2": 1468.0,
+        "y2": 1347.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8126507997512817,
+      "reading_order": 11,
+      "text": "(a) Both A and R are true and R is the correct explanation of A."
+    },
+    {
+      "block_id": "20260317_cd16b3e7-4653-411a-a8e5-286487505d05_5_block_011",
+      "coordinates": {
+        "x1": 289.0,
+        "y1": 1357.0,
+        "x2": 1537.0,
+        "y2": 1411.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8268826007843018,
+      "reading_order": 12,
+      "text": "(b) Both A and R are true, but R is not the correct explanation of A."
+    },
+    {
+      "block_id": "20260317_cd16b3e7-4653-411a-a8e5-286487505d05_5_block_012",
+      "coordinates": {
+        "x1": 291.0,
+        "y1": 1420.0,
+        "x2": 804.0,
+        "y2": 1471.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7925546765327454,
+      "reading_order": 13,
+      "text": "(c) A is true and R is false."
+    },
+    {
+      "block_id": "20260317_cd16b3e7-4653-411a-a8e5-286487505d05_5_block_013",
+      "coordinates": {
+        "x1": 291.0,
+        "y1": 1482.0,
+        "x2": 801.0,
+        "y2": 1535.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7997158765792847,
+      "reading_order": 14,
+      "text": "(d) A is false and R is true."
+    },
+    {
+      "block_id": "20260317_cd16b3e7-4653-411a-a8e5-286487505d05_5_block_014",
+      "coordinates": {
+        "x1": 214.0,
+        "y1": 1598.0,
+        "x2": 1695.0,
+        "y2": 1706.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.3673393428325653,
+      "reading_order": 15,
+      "text": "15. Assertion (A): Green colour of $\\mathrm{FeSO}_4$ solution fades away when Zn rod is dipped in it but not Ni rod."
+    },
+    {
+      "block_id": "20260317_cd16b3e7-4653-411a-a8e5-286487505d05_5_block_015",
+      "coordinates": {
+        "x1": 284.0,
+        "y1": 1715.0,
+        "x2": 1239.0,
+        "y2": 1767.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.689118504524231,
+      "reading_order": 16,
+      "text": "Reason (R): The order of reactivity is Ni > Zn > Fe."
+    },
+    {
+      "block_id": "20260317_cd16b3e7-4653-411a-a8e5-286487505d05_5_block_016",
+      "coordinates": {
+        "x1": 290.0,
+        "y1": 1777.0,
+        "x2": 1469.0,
+        "y2": 1831.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8617817759513855,
+      "reading_order": 17,
+      "text": "(a) Both A and R are true and R is the correct explanation of A."
+    },
+    {
+      "block_id": "20260317_cd16b3e7-4653-411a-a8e5-286487505d05_5_block_017",
+      "coordinates": {
+        "x1": 290.0,
+        "y1": 1839.0,
+        "x2": 1539.0,
+        "y2": 1892.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8664044737815857,
+      "reading_order": 18,
+      "text": "(b) Both A and R are true, but R is not the correct explanation of A."
+    },
+    {
+      "block_id": "20260317_cd16b3e7-4653-411a-a8e5-286487505d05_5_block_018",
+      "coordinates": {
+        "x1": 291.0,
+        "y1": 1902.0,
+        "x2": 804.0,
+        "y2": 1955.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8291304707527161,
+      "reading_order": 19,
+      "text": "(c) A is true and R is false."
+    },
+    {
+      "block_id": "20260317_cd16b3e7-4653-411a-a8e5-286487505d05_5_block_019",
+      "coordinates": {
+        "x1": 291.0,
+        "y1": 1965.0,
+        "x2": 803.0,
+        "y2": 2019.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8306199908256531,
+      "reading_order": 20,
+      "text": "(d) A is false and R is true."
+    },
+    {
+      "block_id": "20260317_cd16b3e7-4653-411a-a8e5-286487505d05_5_block_020",
+      "coordinates": {
+        "x1": 1790.0,
+        "y1": 312.0,
+        "x2": 2171.0,
+        "y2": 365.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6029520034790039,
+      "reading_order": 21,
+      "text": "Space for rough work"
+    }
+  ]
+}

@@ -8,7 +8,6 @@ from app.routers import (
     auth_router,
     dashboard_router,
     analysis_page_router,
-    pdf_processing_router,
     admin_extractions_router,
 )
 
@@ -35,7 +34,6 @@ app.include_router(analysis_router)
 app.include_router(performance_router)
 app.include_router(dashboard_router)
 app.include_router(analysis_page_router)
-app.include_router(pdf_processing_router)
 app.include_router(admin_extractions_router, prefix="/admin")
 
 

@@ -1,0 +1,190 @@
+{
+  "page_num": 4,
+  "image_width": 2398,
+  "image_height": 3003,
+  "created_at": "2026-03-17T19:54:03.233867+00:00",
+  "blocks": [
+    {
+      "block_id": "20260317_43a438f9-7aa4-4f9e-9549-d86612968256_4_block_000",
+      "coordinates": {
+        "x1": 191.0,
+        "y1": 183.0,
+        "x2": 764.0,
+        "y2": 240.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.7540985345840454,
+      "reading_order": 1,
+      "text": "1.10 Chapter 1 Atomic Structure"
+    },
+    {
+      "block_id": "20260317_43a438f9-7aa4-4f9e-9549-d86612968256_4_block_001",
+      "coordinates": {
+        "x1": 231.0,
+        "y1": 290.0,
+        "x2": 1250.0,
+        "y2": 344.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7613515853881836,
+      "reading_order": 2,
+      "text": "7. Identify the drawback of Thomson’s atomic model."
+    },
+    {
+      "block_id": "20260317_43a438f9-7aa4-4f9e-9549-d86612968256_4_block_002",
+      "coordinates": {
+        "x1": 290.0,
+        "y1": 354.0,
+        "x2": 772.0,
+        "y2": 408.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6648417711257935,
+      "reading_order": 3,
+      "text": "(a) Presence of electrons"
+    },
+    {
+      "block_id": "20260317_43a438f9-7aa4-4f9e-9549-d86612968256_4_block_003",
+      "coordinates": {
+        "x1": 290.0,
+        "y1": 415.0,
+        "x2": 1693.0,
+        "y2": 523.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8111689686775208,
+      "reading_order": 4,
+      "text": "(b) Cancellation of positive and negative charges in order to maintain the neutrality of the atom"
+    },
+    {
+      "block_id": "20260317_43a438f9-7aa4-4f9e-9549-d86612968256_4_block_004",
+      "coordinates": {
+        "x1": 291.0,
+        "y1": 531.0,
+        "x2": 1190.0,
+        "y2": 588.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7510222792625427,
+      "reading_order": 5,
+      "text": "(c) Coexistence of opposite charges in the atom"
+    },
+    {
+      "block_id": "20260317_43a438f9-7aa4-4f9e-9549-d86612968256_4_block_005",
+      "coordinates": {
+        "x1": 293.0,
+        "y1": 595.0,
+        "x2": 670.0,
+        "y2": 652.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7423882484436035,
+      "reading_order": 6,
+      "text": "(d) Both (b) and (c)"
+    },
+    {
+      "block_id": "20260317_43a438f9-7aa4-4f9e-9549-d86612968256_4_block_006",
+      "coordinates": {
+        "x1": 234.0,
+        "y1": 712.0,
+        "x2": 1696.0,
+        "y2": 946.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9272767305374146,
+      "reading_order": 7,
+      "text": "8. An element 'X' has the same number of protons, electrons and neutrons, and\nits atomic mass is double the atomic number. If the number of neutrons is 20,\nthen the element 'X' is\n(a) Ca (b) Mg (c) Zn (d) Mg"
+    },
+    {
+      "block_id": "20260317_43a438f9-7aa4-4f9e-9549-d86612968256_4_block_007",
+      "coordinates": {
+        "x1": 233.0,
+        "y1": 998.0,
+        "x2": 1698.0,
+        "y2": 1175.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9195250272750854,
+      "reading_order": 8,
+      "text": "9. Which of the following atomic numbers corresponds to the formation of\ntripositive ion?\n(a) 10 (b) 11 (c) 12 (d) 13"
+    },
+    {
+      "block_id": "20260317_43a438f9-7aa4-4f9e-9549-d86612968256_4_block_008",
+      "coordinates": {
+        "x1": 211.0,
+        "y1": 1233.0,
+        "x2": 1690.0,
+        "y2": 1596.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9403796792030334,
+      "reading_order": 9,
+      "text": "10. An atom of an element has the electronic configuration 2, 8, 18, and 8. Iden-\ntify the false statement regarding this element.\n(a) The atom has one incomplete shell.\n(b) The atom cannot form any ion.\n(c) The next electron enters the fourth shell.\n(d) The given element is krypton."
+    },
+    {
+      "block_id": "20260317_43a438f9-7aa4-4f9e-9549-d86612968256_4_block_009",
+      "coordinates": {
+        "x1": 206.0,
+        "y1": 1659.0,
+        "x2": 1694.0,
+        "y2": 2087.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.3636986017227173,
+      "reading_order": 10,
+      "text": "11. An atom A of an element with atomic number Z has the electronic configu-\nration $a, a + b, 2b,$ and $a.$ Which of the following statements is false regarding\nthe element?\n(a) The element has 2 incomplete shells.\n(b) The element can have more electrons in its penultimate shell.\n(c) The element with $Z + 6$ atomic number has 3 electrons in its valence\nshell.\n(d) Atomic number of the atom is 24."
+    },
+    {
+      "block_id": "20260317_43a438f9-7aa4-4f9e-9549-d86612968256_4_block_010",
+      "coordinates": {
+        "x1": 292.0,
+        "y1": 2065.0,
+        "x2": 998.0,
+        "y2": 2123.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7449782490730286,
+      "reading_order": 11,
+      "text": "(d) Atomic number of the atom is 24."
+    },
+    {
+      "block_id": "20260317_43a438f9-7aa4-4f9e-9549-d86612968256_4_block_011",
+      "coordinates": {
+        "x1": 212.0,
+        "y1": 2184.0,
+        "x2": 1695.0,
+        "y2": 2547.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7081819176673889,
+      "reading_order": 12,
+      "text": "12. The velocity of an electron decreases with an increase in the distance from\nthe nucleus. Identify the reason.\n(a) Increase in nuclear force of attraction\n(b) Decrease in nuclear force of attraction\n(c) Increase in kinetic energy of electron\n(d) Increase in radius of the orbit"
+    },
+    {
+      "block_id": "20260317_43a438f9-7aa4-4f9e-9549-d86612968256_4_block_012",
+      "coordinates": {
+        "x1": 217.0,
+        "y1": 2603.0,
+        "x2": 1699.0,
+        "y2": 2841.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7381997108459473,
+      "reading_order": 13,
+      "text": "13. Which postulate of Rutherford’s theory was not based on the experimental\nresults of $\\alpha$-ray scattering experiment?\n(a) Presence of small central nucleus\n(b) Presence of electrons outside the nucleus"
+    },
+    {
+      "block_id": "20260317_43a438f9-7aa4-4f9e-9549-d86612968256_4_block_013",
+      "coordinates": {
+        "x1": 1791.0,
+        "y1": 311.0,
+        "x2": 2169.0,
+        "y2": 364.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5222837924957275,
+      "reading_order": 14,
+      "text": "Space for rough work"
+    }
+  ]
+}

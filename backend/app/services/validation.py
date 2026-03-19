@@ -76,6 +76,14 @@ class QuestionValidator:
         """
         result = ValidationResult(is_valid=True)
         
+        if updates.question_number is not None:
+            if not updates.question_number.strip():
+                result.add_error(
+                    field="question_number",
+                    message="question_number cannot be empty",
+                    code="empty_question_number",
+                )
+
         # Validate question_text
         if updates.question_text is not None:
             if not updates.question_text or not updates.question_text.strip():
@@ -85,23 +93,29 @@ class QuestionValidator:
                     code="empty_question_text"
                 )
         
-        # Validate options
+        # Validate options (integer/numerical may have zero options)
         if updates.options is not None:
-            if len(updates.options) < 2:
+            at = (updates.answer_type or "mcq_single").strip().lower() if updates.answer_type else "mcq_single"
+            if len(updates.options) == 0 and at not in ("integer", "numerical", "subjective"):
                 result.add_error(
                     field="options",
-                    message="At least 2 options are required",
-                    code="insufficient_options"
+                    message="Use answer_type integer/numerical/subjective for questions with no options, or add at least 2 options",
+                    code="insufficient_options",
                 )
-            
+            if at not in ("integer", "numerical", "subjective") and len(updates.options) > 0 and len(updates.options) < 2:
+                result.add_error(
+                    field="options",
+                    message="At least 2 options are required for non-integer questions",
+                    code="insufficient_options",
+                )
             for i, option in enumerate(updates.options):
-                if not option or not isinstance(option, str) or not option.strip():
+                if not isinstance(option, str) or not option.strip():
                     result.add_error(
                         field=f"options[{i}]",
                         message="Option text cannot be empty",
-                        code="empty_option"
+                        code="empty_option",
                     )
-        
+
         result.is_valid = len(result.errors) == 0
         return result
     
@@ -143,20 +157,41 @@ class QuestionValidator:
                 code="empty_question_text"
             )
         
-        # Check options
-        if not raw_question.options or len(raw_question.options) < 2:
+        at = (raw_question.answer_type or "mcq_single").strip().lower()
+
+        if raw_question.processing_status == ProcessingStatus.REJECTED:
             result.add_error(
-                field="options",
-                message="At least 2 options are required for MCQ questions",
-                code="insufficient_options"
+                field="processing_status",
+                message="Rejected questions cannot be finalized — reinstate first",
+                code="rejected",
             )
-        
-        for i, option in enumerate(raw_question.options or []):
-            if not option or not isinstance(option, str) or not option.strip():
+
+        if at in ("integer", "numerical", "subjective"):
+            if not raw_question.correct_answer or not str(raw_question.correct_answer).strip():
                 result.add_error(
-                    field=f"options[{i}]",
-                    message="Option text cannot be empty",
-                    code="empty_option"
+                    field="correct_answer",
+                    message="correct_answer is required for integer/numerical/subjective questions",
+                    code="missing_correct_answer",
+                )
+        else:
+            if not raw_question.options or len(raw_question.options) < 2:
+                result.add_error(
+                    field="options",
+                    message="At least 2 options are required for MCQ questions",
+                    code="insufficient_options",
+                )
+            for i, option in enumerate(raw_question.options or []):
+                if not option or not isinstance(option, str) or not option.strip():
+                    result.add_error(
+                        field=f"options[{i}]",
+                        message="Option text cannot be empty",
+                        code="empty_option",
+                    )
+            if not raw_question.correct_answer or not str(raw_question.correct_answer).strip():
+                result.add_error(
+                    field="correct_answer",
+                    message="correct_answer is required for MCQ (e.g. A or A,C)",
+                    code="missing_correct_answer",
                 )
         
         # Check chapter_context

@@ -1,0 +1,177 @@
+{
+  "page_num": 5,
+  "image_width": 2398,
+  "image_height": 3003,
+  "created_at": "2026-03-17T19:54:23.475997+00:00",
+  "blocks": [
+    {
+      "block_id": "20260317_78fef408-2204-4bff-a20e-e3c42fc275a0_5_block_000",
+      "coordinates": {
+        "x1": 384.0,
+        "y1": 438.0,
+        "x2": 1180.0,
+        "y2": 563.0
+      },
+      "layout_tag": "headline",
+      "confidence": 0.6702588200569153,
+      "reading_order": 1,
+      "text": "Air and Oxygen"
+    },
+    {
+      "block_id": "20260317_78fef408-2204-4bff-a20e-e3c42fc275a0_5_block_001",
+      "coordinates": {
+        "x1": 1447.0,
+        "y1": 299.0,
+        "x2": 2205.0,
+        "y2": 677.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.8105170726776123,
+      "reading_order": 2,
+      "text": "4\n\nS\nSulfur\n32.066\n\nSe\nSelenium\n78.96\n\nAs\nArsenic\n4.92160\n\n51\nSb\nAntimony\n\nI\nIodine"
+    },
+    {
+      "block_id": "20260317_78fef408-2204-4bff-a20e-e3c42fc275a0_5_block_002",
+      "coordinates": {
+        "x1": 178.0,
+        "y1": 710.0,
+        "x2": 2020.0,
+        "y2": 873.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.2591281533241272,
+      "reading_order": 3,
+      "text": "Reference: Coursebook - IIT Foundation Chemistry Class 8; Chapter - Air and Oxygen; Page number - 4.1–4.21\n\nAssessment Test I Time: 30 min."
+    },
+    {
+      "block_id": "20260317_78fef408-2204-4bff-a20e-e3c42fc275a0_5_block_003",
+      "coordinates": {
+        "x1": 179.0,
+        "y1": 946.0,
+        "x2": 1689.0,
+        "y2": 1001.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.7717501521110535,
+      "reading_order": 4,
+      "text": "Directions for questions from 1 to 15: Select the correct answer from the given options."
+    },
+    {
+      "block_id": "20260317_78fef408-2204-4bff-a20e-e3c42fc275a0_5_block_004",
+      "coordinates": {
+        "x1": 235.0,
+        "y1": 1039.0,
+        "x2": 1693.0,
+        "y2": 1276.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9320698380470276,
+      "reading_order": 5,
+      "text": "1. In which of the following layers of atmosphere, the temperature increases\nwith the increase in altitude?\n(a) Troposphere (b) Stratosphere\n(c) Mesosphere (d) Thermosphere"
+    },
+    {
+      "block_id": "20260317_78fef408-2204-4bff-a20e-e3c42fc275a0_5_block_005",
+      "coordinates": {
+        "x1": 233.0,
+        "y1": 1335.0,
+        "x2": 1692.0,
+        "y2": 1508.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9395100474357605,
+      "reading_order": 6,
+      "text": "2. The height of the mercury column in barometer is 19 cm at a certain place.\nCalculate the pressure in Pascal in that place. (1 atm = 101.3 kilopascals)\n(a) 39,925 (b) 1,01,292 (c) 25,323 (d) 30,353"
+    },
+    {
+      "block_id": "20260317_78fef408-2204-4bff-a20e-e3c42fc275a0_5_block_006",
+      "coordinates": {
+        "x1": 233.0,
+        "y1": 1567.0,
+        "x2": 1696.0,
+        "y2": 1670.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.91496342420578,
+      "reading_order": 7,
+      "text": "3. Which of the following is the conclusion drawn from the experiment given below?"
+    },
+    {
+      "block_id": "20260317_78fef408-2204-4bff-a20e-e3c42fc275a0_5_block_007",
+      "coordinates": {
+        "x1": 558.0,
+        "y1": 1679.0,
+        "x2": 795.0,
+        "y2": 1996.0
+      },
+      "layout_tag": "image",
+      "confidence": 0.8302765488624573,
+      "reading_order": 8,
+      "text": "The image is a schematic diagram or line drawing illustrating a laboratory setup, specifically a water displacement experiment. It features a tall, vertical graduated cylinder standing inside a larger, wider cylindrical container (likely a beaker or a graduated cylinder with a wider base). Inside the wider container, there is a dark-colored object, resembling a candle or a wax cylinder, with a lit flame at the top. The diagram includes horizontal dashed lines at the bottom of the wider container to represent the water level. The drawing is monochromatic, utilizing black outlines and shading to depict the objects and their relative positions. There are no axes, numerical values, or legends present in the image."
+    },
+    {
+      "block_id": "20260317_78fef408-2204-4bff-a20e-e3c42fc275a0_5_block_009",
+      "coordinates": {
+        "x1": 843.0,
+        "y1": 1680.0,
+        "x2": 1316.0,
+        "y2": 1993.0
+      },
+      "layout_tag": "image",
+      "confidence": 0.6508278250694275,
+      "reading_order": 10,
+      "text": "The image is a schematic diagram illustrating the principle of buoyancy, specifically the concept of displacement. It features two vertically aligned cylindrical containers. The lower container is filled with a liquid (indicated by a shaded area) and contains a solid object (a dark vertical rectangle) partially submerged. The upper container is empty and taller than the lower one. A horizontal arrow points from the text \"Water level increases\" to the water surface inside the lower container. This arrow originates from the submerged portion of the solid object and points upward, indicating that the object displaces a volume of water equal to its own volume. The diagram visually demonstrates Archimedes' Principle: the upward buoyant force exerted on the object is equal to the weight of the fluid it displaces."
+    },
+    {
+      "block_id": "20260317_78fef408-2204-4bff-a20e-e3c42fc275a0_5_block_010",
+      "coordinates": {
+        "x1": 287.0,
+        "y1": 2030.0,
+        "x2": 1117.0,
+        "y2": 2264.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.39600634574890137,
+      "reading_order": 11,
+      "text": "(a) Nitrogen is the major component of air.\n(b) $\\mathrm{CO}_2$ is present in air.\n(c) $\\mathrm{O}_2$ is one of the components of air.\n(d) One-fifth of the volume of air is oxygen."
+    },
+    {
+      "block_id": "20260317_78fef408-2204-4bff-a20e-e3c42fc275a0_5_block_011",
+      "coordinates": {
+        "x1": 232.0,
+        "y1": 2325.0,
+        "x2": 1339.0,
+        "y2": 2508.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9275704026222229,
+      "reading_order": 12,
+      "text": "4. Which of the following processes does not consume $\\mathrm{O}_2$?\n(a) Photosynthesis (b) Respiration\n(c) Burning of fuel (d) Rusting"
+    },
+    {
+      "block_id": "20260317_78fef408-2204-4bff-a20e-e3c42fc275a0_5_block_012",
+      "coordinates": {
+        "x1": 231.0,
+        "y1": 2567.0,
+        "x2": 1401.0,
+        "y2": 2875.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9442367553710938,
+      "reading_order": 13,
+      "text": "5. Which of the following is an example of rapid combustion?\n(a) Burning of white phosphorus\n(b) Burning of petrol\n(c) Burning of crackers\n(d) Burning of sodium in moist air"
+    },
+    {
+      "block_id": "20260317_78fef408-2204-4bff-a20e-e3c42fc275a0_5_block_013",
+      "coordinates": {
+        "x1": 1791.0,
+        "y1": 979.0,
+        "x2": 2170.0,
+        "y2": 1028.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7135626673698425,
+      "reading_order": 14,
+      "text": "Space for rough work"
+    }
+  ]
+}

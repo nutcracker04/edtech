@@ -1,0 +1,177 @@
+{
+  "page_num": 9,
+  "image_width": 2398,
+  "image_height": 3003,
+  "created_at": "2026-03-17T19:54:23.576003+00:00",
+  "blocks": [
+    {
+      "block_id": "20260317_78fef408-2204-4bff-a20e-e3c42fc275a0_9_block_000",
+      "coordinates": {
+        "x1": 1760.0,
+        "y1": 188.0,
+        "x2": 2053.0,
+        "y2": 235.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.8305391073226929,
+      "reading_order": 1,
+      "text": "Assessment Test II"
+    },
+    {
+      "block_id": "20260317_78fef408-2204-4bff-a20e-e3c42fc275a0_9_block_001",
+      "coordinates": {
+        "x1": 2108.0,
+        "y1": 187.0,
+        "x2": 2193.0,
+        "y2": 233.0
+      },
+      "layout_tag": "page-number",
+      "confidence": 0.7472345232963562,
+      "reading_order": 2,
+      "text": "4.5"
+    },
+    {
+      "block_id": "20260317_78fef408-2204-4bff-a20e-e3c42fc275a0_9_block_002",
+      "coordinates": {
+        "x1": 291.0,
+        "y1": 288.0,
+        "x2": 1294.0,
+        "y2": 413.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7173733115196228,
+      "reading_order": 3,
+      "text": "(a) Electroplating (b) Galvanizing\n(c) Tinning (d) Alloying"
+    },
+    {
+      "block_id": "20260317_78fef408-2204-4bff-a20e-e3c42fc275a0_9_block_003",
+      "coordinates": {
+        "x1": 214.0,
+        "y1": 433.0,
+        "x2": 1502.0,
+        "y2": 488.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.518342137336731,
+      "reading_order": 4,
+      "text": "11. Assertion (A): Oxyacetylene flame is used for welding purposes."
+    },
+    {
+      "block_id": "20260317_78fef408-2204-4bff-a20e-e3c42fc275a0_9_block_004",
+      "coordinates": {
+        "x1": 213.0,
+        "y1": 444.0,
+        "x2": 1657.0,
+        "y2": 807.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6480366587638855,
+      "reading_order": 5,
+      "text": "11. Assertion (A): Oxyacetylene flame is used for welding purposes.\nReason (R): Combustion of acetylene is an example of rapid combustion.\n(a) Both A and R are true and R is the correct explanation of A.\n(b) Both A and R are true, but R is not the correct explanation of A.\n(c) A is true and R is false.\n(d) A is false and R is true."
+    },
+    {
+      "block_id": "20260317_78fef408-2204-4bff-a20e-e3c42fc275a0_9_block_005",
+      "coordinates": {
+        "x1": 214.0,
+        "y1": 832.0,
+        "x2": 1572.0,
+        "y2": 956.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.4330069422721863,
+      "reading_order": 6,
+      "text": "12. Assertion (A): When air is passed through lime water, it turns milky.\nReason (R): Constituents of a mixture retain their properties."
+    },
+    {
+      "block_id": "20260317_78fef408-2204-4bff-a20e-e3c42fc275a0_9_block_006",
+      "coordinates": {
+        "x1": 224.0,
+        "y1": 851.0,
+        "x2": 1565.0,
+        "y2": 1207.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5693356394767761,
+      "reading_order": 7,
+      "text": "12. Assertion (A): When air is passed through lime water, it turns milky.\nReason (R): Constituents of a mixture retain their properties.\n(a) Both A and R are true and R is the correct explanation of A.\n(b) Both A and R are true, but R is not the correct explanation of A.\n(c) A is true and R is false.\n(d) A is false and R is true."
+    },
+    {
+      "block_id": "20260317_78fef408-2204-4bff-a20e-e3c42fc275a0_9_block_007",
+      "coordinates": {
+        "x1": 211.0,
+        "y1": 1233.0,
+        "x2": 1700.0,
+        "y2": 1718.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.544804573059082,
+      "reading_order": 8,
+      "text": "13. Arrange the following pollutants in the order of their effects mentioned\nbelow.\n(A) Fly ash (B) CFCs\n(C) $\\text{SO}_2$ (D) Ozone\n(Acid rain, global warming, bronchitis and other respiratory disorders, and\nozone depletion)\n(a) DCAB (b) ACBD\n(c) CDAB (d) BCDA"
+    },
+    {
+      "block_id": "20260317_78fef408-2204-4bff-a20e-e3c42fc275a0_9_block_008",
+      "coordinates": {
+        "x1": 215.0,
+        "y1": 1741.0,
+        "x2": 1696.0,
+        "y2": 1991.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7734218835830688,
+      "reading_order": 9,
+      "text": "14. Arrange the following oxides of metals in the order of their description\ngiven below.\n(A) $\\mathrm{Al}_2\\mathrm{O}_3$ (B) CuO\n(C) CaO (D) $\\mathrm{Fe}_3\\mathrm{O}_4$"
+    },
+    {
+      "block_id": "20260317_78fef408-2204-4bff-a20e-e3c42fc275a0_9_block_009",
+      "coordinates": {
+        "x1": 296.0,
+        "y1": 2044.0,
+        "x2": 1359.0,
+        "y2": 2171.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.333244651556015,
+      "reading_order": 10,
+      "text": "(i) This oxide is black in colour.\n(ii) This oxide protects the metal from further oxidation."
+    },
+    {
+      "block_id": "20260317_78fef408-2204-4bff-a20e-e3c42fc275a0_9_block_010",
+      "coordinates": {
+        "x1": 291.0,
+        "y1": 2179.0,
+        "x2": 1697.0,
+        "y2": 2284.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7726765871047974,
+      "reading_order": 11,
+      "text": "(iii) This brown coloured powdery oxide is formed with a cracking noise\nwhen the metal is heated at high temperature."
+    },
+    {
+      "block_id": "20260317_78fef408-2204-4bff-a20e-e3c42fc275a0_9_block_011",
+      "coordinates": {
+        "x1": 287.0,
+        "y1": 2295.0,
+        "x2": 1623.0,
+        "y2": 2472.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.34936320781707764,
+      "reading_order": 12,
+      "text": "(iv) This white coloured oxide is formed on slight heating of the metal.\n(a) BADC (b) DCBA\n(c) ACBD (d) CDAB"
+    },
+    {
+      "block_id": "20260317_78fef408-2204-4bff-a20e-e3c42fc275a0_9_block_012",
+      "coordinates": {
+        "x1": 1789.0,
+        "y1": 312.0,
+        "x2": 2172.0,
+        "y2": 364.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.35162022709846497,
+      "reading_order": 13,
+      "text": "Space for rough work"
+    }
+  ]
+}

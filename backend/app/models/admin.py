@@ -10,7 +10,7 @@ This module defines Pydantic models for the admin panel API, including:
 Requirements: 1.2, 3.2, 5.1, 9.4
 """
 
-from pydantic import BaseModel, Field, field_validator
+from pydantic import BaseModel, Field, field_validator, model_validator
 from typing import Optional, List, Dict, Any
 from datetime import datetime
 from uuid import UUID
@@ -85,20 +85,18 @@ class PaginationParams(BaseModel):
 
 class QuestionUpdateRequest(BaseModel):
     """
-    Request model for updating a raw question.
-    
-    Allows updating:
-    - question_text: The question content
-    - options: List of answer options
-    - chapter_context: Chapter context for hierarchy mapping
-    - topic_context: Topic context for hierarchy mapping
-    - sub_topic_context: Sub-topic context
-    - page_number: Page number in the source PDF
-    
-    Requirements: 3.2, 3.3, 3.4
+    Request model for updating a raw question (full staging shape).
     """
+    question_number: Optional[str] = Field(None, min_length=1)
     question_text: Optional[str] = Field(None, min_length=1, description="Question text (non-empty)")
-    options: Optional[List[str]] = Field(None, min_items=2, description="List of options (at least 2)")
+    options: Optional[List[str]] = None
+    correct_answer: Optional[str] = None
+    answer_type: Optional[str] = None
+    marks: Optional[Decimal] = None
+    negative_marks: Optional[Decimal] = None
+    bloom_level: Optional[str] = None
+    raw_images: Optional[List[Dict[str, Any]]] = None
+    raw_tables: Optional[List[Dict[str, Any]]] = None
     chapter_context: Optional[str] = Field(None, description="Chapter context for hierarchy mapping")
     topic_context: Optional[str] = Field(None, description="Topic context for hierarchy mapping")
     sub_topic_context: Optional[str] = None
@@ -106,13 +104,59 @@ class QuestionUpdateRequest(BaseModel):
 
     @field_validator('options')
     @classmethod
-    def validate_options(cls, v: Optional[List[str]]) -> Optional[List[str]]:
-        if v is not None:
-            if len(v) < 2:
-                raise ValueError('options must have at least 2 items')
-            if any(not opt or not isinstance(opt, str) for opt in v):
-                raise ValueError('all options must be non-empty strings')
+    def validate_option_strings(cls, v: Optional[List[str]]) -> Optional[List[str]]:
+        if v is None:
+            return v
+        if any(not isinstance(opt, str) for opt in v):
+            raise ValueError('all options must be strings')
+        if any(opt.strip() == "" for opt in v):
+            raise ValueError('option text cannot be empty')
         return v
+
+    @model_validator(mode='after')
+    def options_count_for_answer_type(self) -> QuestionUpdateRequest:
+        if self.options is None:
+            return self
+        at = (self.answer_type or "mcq_single").strip().lower()
+        if at in ("integer", "numerical", "subjective"):
+            return self
+        if len(self.options) == 0:
+            raise ValueError("set answer_type to integer, numerical, or subjective when using no options")
+        if len(self.options) < 2:
+            raise ValueError("at least 2 options are required for non-integer questions")
+        return self
+
+
+class ManualRawQuestionItem(BaseModel):
+    """One raw question row for manual bulk import (matches raw_questions shape)."""
+
+    question_number: str = Field(..., min_length=1)
+    question_text: str = Field(..., min_length=1)
+    options: List[str] = Field(default_factory=list)
+    correct_answer: Optional[str] = None
+    answer_type: Optional[str] = None
+    marks: Optional[Decimal] = None
+    negative_marks: Optional[Decimal] = None
+    bloom_level: Optional[str] = None
+    page_number: Optional[int] = Field(default=None, ge=1)
+    chapter_context: Optional[str] = None
+    topic_context: Optional[str] = None
+    sub_topic_context: Optional[str] = None
+    raw_images: Optional[List[Dict[str, Any]]] = None
+    raw_tables: Optional[List[Dict[str, Any]]] = None
+
+
+class ManualImportRequest(BaseModel):
+    """Create a completed extraction job and bulk-insert raw_questions (no PDF pipeline)."""
+
+    book_id: UUID
+    job_title: Optional[str] = Field(None, description="Display name in job list")
+    questions: List[ManualRawQuestionItem] = Field(..., min_length=1, max_length=10000)
+
+
+class ManualImportResponse(BaseModel):
+    job_id: UUID
+    questions_created: int
 
 
 class FinalizeRequest(BaseModel):
@@ -122,6 +166,18 @@ class FinalizeRequest(BaseModel):
     Requirements: 5.1, 9.1
     """
     question_ids: List[UUID] = Field(..., min_items=1, description="List of raw question IDs to finalize")
+
+
+class BulkDeleteRequest(BaseModel):
+    """Bulk delete raw questions by id."""
+
+    question_ids: List[UUID] = Field(..., min_length=1)
+
+
+class ReviewStatusBatchRequest(BaseModel):
+    """Bulk reject or reinstate staging questions."""
+
+    question_ids: List[UUID] = Field(..., min_length=1)
 
 
 class BulkOperationResult(BaseModel):

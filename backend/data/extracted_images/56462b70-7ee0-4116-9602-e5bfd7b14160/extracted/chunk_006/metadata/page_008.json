@@ -1,0 +1,216 @@
+{
+  "page_num": 8,
+  "image_width": 2398,
+  "image_height": 3003,
+  "created_at": "2026-03-17T19:54:23.450709+00:00",
+  "blocks": [
+    {
+      "block_id": "20260317_78fef408-2204-4bff-a20e-e3c42fc275a0_8_block_000",
+      "coordinates": {
+        "x1": 203.0,
+        "y1": 187.0,
+        "x2": 288.0,
+        "y2": 232.0
+      },
+      "layout_tag": "page-number",
+      "confidence": 0.48945239186286926,
+      "reading_order": 1,
+      "text": "4.4"
+    },
+    {
+      "block_id": "20260317_78fef408-2204-4bff-a20e-e3c42fc275a0_8_block_001",
+      "coordinates": {
+        "x1": 209.0,
+        "y1": 184.0,
+        "x2": 749.0,
+        "y2": 239.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.601875364780426,
+      "reading_order": 2,
+      "text": "4.4 Chapter 4 Air and Oxygen"
+    },
+    {
+      "block_id": "20260317_78fef408-2204-4bff-a20e-e3c42fc275a0_8_block_002",
+      "coordinates": {
+        "x1": 1449.0,
+        "y1": 325.0,
+        "x2": 1691.0,
+        "y2": 372.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.7866488695144653,
+      "reading_order": 3,
+      "text": "Time: 30 min."
+    },
+    {
+      "block_id": "20260317_78fef408-2204-4bff-a20e-e3c42fc275a0_8_block_003",
+      "coordinates": {
+        "x1": 180.0,
+        "y1": 295.0,
+        "x2": 897.0,
+        "y2": 373.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.7994523048400879,
+      "reading_order": 4,
+      "text": "Assessment Test II"
+    },
+    {
+      "block_id": "20260317_78fef408-2204-4bff-a20e-e3c42fc275a0_8_block_004",
+      "coordinates": {
+        "x1": 175.0,
+        "y1": 450.0,
+        "x2": 1688.0,
+        "y2": 505.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.8064696192741394,
+      "reading_order": 5,
+      "text": "Directions for questions from 1 to 15: Select the correct answer from the given options."
+    },
+    {
+      "block_id": "20260317_78fef408-2204-4bff-a20e-e3c42fc275a0_8_block_005",
+      "coordinates": {
+        "x1": 231.0,
+        "y1": 542.0,
+        "x2": 1695.0,
+        "y2": 786.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9323682188987732,
+      "reading_order": 6,
+      "text": "1. Which of the following layers of the atmosphere exists in plasma state (ionic\nstate)?\n(a) Troposphere (b) Stratosphere\n(c) Mesosphere (d) Thermosphere"
+    },
+    {
+      "block_id": "20260317_78fef408-2204-4bff-a20e-e3c42fc275a0_8_block_006",
+      "coordinates": {
+        "x1": 230.0,
+        "y1": 809.0,
+        "x2": 1697.0,
+        "y2": 1052.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9366422295570374,
+      "reading_order": 7,
+      "text": "2. At certain altitude, the atmospheric pressure is 0.05 atm. What would be the\nlength of the mercury column in the barometer?\n(a) 3.8 cm (b) 7.6 cm\n(c) 1.9 cm (d) 2.5 cm"
+    },
+    {
+      "block_id": "20260317_78fef408-2204-4bff-a20e-e3c42fc275a0_8_block_007",
+      "coordinates": {
+        "x1": 232.0,
+        "y1": 1076.0,
+        "x2": 1695.0,
+        "y2": 1321.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9383062720298767,
+      "reading_order": 8,
+      "text": "3. The percentage of which of the following components of air always varies\nfrom one place to the other?\n(a) $\\mathrm{O}_2$ (b) $\\mathrm{N}_2$\n(c) Water vapour (d) $\\mathrm{CO}_2$"
+    },
+    {
+      "block_id": "20260317_78fef408-2204-4bff-a20e-e3c42fc275a0_8_block_008",
+      "coordinates": {
+        "x1": 233.0,
+        "y1": 1342.0,
+        "x2": 1348.0,
+        "y2": 1534.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9190266728401184,
+      "reading_order": 9,
+      "text": "4. Which of the following processes does not produce $\\mathrm{O}_2$?\n(a) Heating of red lead (b) Photosynthesis\n(c) Mixing of $\\mathrm{MnO}_2$ and $\\mathrm{H}_2\\mathrm{O}_2$ (d) Combustion"
+    },
+    {
+      "block_id": "20260317_78fef408-2204-4bff-a20e-e3c42fc275a0_8_block_009",
+      "coordinates": {
+        "x1": 233.0,
+        "y1": 1555.0,
+        "x2": 1393.0,
+        "y2": 1744.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9211198687553406,
+      "reading_order": 10,
+      "text": "5. Respiration is a ________.\n(a) spontaneous combustion (b) rapid combustion\n(c) slow combustion (d) explosion"
+    },
+    {
+      "block_id": "20260317_78fef408-2204-4bff-a20e-e3c42fc275a0_8_block_010",
+      "coordinates": {
+        "x1": 232.0,
+        "y1": 1767.0,
+        "x2": 1695.0,
+        "y2": 2012.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9409438967704773,
+      "reading_order": 11,
+      "text": "6. Which of the following is not the characteristic feature of the outermost zone\nof the flame of a candle?\n(a) This zone is non-luminous. (b) Carbon particles burn here.\n(c) It does not produce any soot. (d) It is the hottest zone."
+    },
+    {
+      "block_id": "20260317_78fef408-2204-4bff-a20e-e3c42fc275a0_8_block_011",
+      "coordinates": {
+        "x1": 233.0,
+        "y1": 2033.0,
+        "x2": 1622.0,
+        "y2": 2161.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9209423661231995,
+      "reading_order": 12,
+      "text": "7. Which of the following metals can protect itself from further oxidation?\n(a) Ca (b) Al (c) Cu (d) K"
+    },
+    {
+      "block_id": "20260317_78fef408-2204-4bff-a20e-e3c42fc275a0_8_block_012",
+      "coordinates": {
+        "x1": 230.0,
+        "y1": 2183.0,
+        "x2": 1693.0,
+        "y2": 2432.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9348010420799255,
+      "reading_order": 13,
+      "text": "8. Identify the products formed when ammonia is burnt in limited supply\nof $\\mathrm{O}_2$.\n(a) $\\mathrm{N}_2\\mathrm{O}$ and $\\mathrm{H}_2\\mathrm{O}$ (b) NO and $\\mathrm{H}_2\\mathrm{O}$\n(c) $\\mathrm{NO}_2$ and $\\mathrm{H}_2\\mathrm{O}$ (d) $\\mathrm{N}_2$ and $\\mathrm{H}_2\\mathrm{O}$"
+    },
+    {
+      "block_id": "20260317_78fef408-2204-4bff-a20e-e3c42fc275a0_8_block_013",
+      "coordinates": {
+        "x1": 233.0,
+        "y1": 2451.0,
+        "x2": 1522.0,
+        "y2": 2645.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.45735326409339905,
+      "reading_order": 14,
+      "text": "9. Identify the correct product.\n(a) $\\mathrm{FeS}_2 + \\mathrm{O}_2 \\rightarrow \\mathrm{FeO} + \\mathrm{SO}_2$ (b) $\\mathrm{FeS}_2 + \\mathrm{O}_2 \\rightarrow \\mathrm{FeO} + \\mathrm{S}$\n(c) $\\mathrm{FeS}_2 + \\mathrm{O}_2 \\rightarrow \\mathrm{Fe}_2\\mathrm{O}_3 + \\mathrm{S}$ (d) $\\mathrm{FeS}_2 + \\mathrm{O}_2 \\rightarrow \\mathrm{Fe}_2\\mathrm{O}_3 + \\mathrm{SO}_2$"
+    },
+    {
+      "block_id": "20260317_78fef408-2204-4bff-a20e-e3c42fc275a0_8_block_014",
+      "coordinates": {
+        "x1": 1790.0,
+        "y1": 311.0,
+        "x2": 2170.0,
+        "y2": 363.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.4284939169883728,
+      "reading_order": 15,
+      "text": "Space for rough work"
+    },
+    {
+      "block_id": "20260317_78fef408-2204-4bff-a20e-e3c42fc275a0_8_block_015",
+      "coordinates": {
+        "x1": 213.0,
+        "y1": 2664.0,
+        "x2": 1697.0,
+        "y2": 2822.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9288517832756042,
+      "reading_order": 16,
+      "text": "10. For manufacturing the containers for storing edible materials like oils, fruit juices, etc., which of the following methods can be adopted for prevention of corrosion of iron?"
+    }
+  ]
+}

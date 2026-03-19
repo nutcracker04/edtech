@@ -9,7 +9,9 @@ import { useNavigate } from 'react-router-dom';
 import { useExtractionManagement } from '@/contexts/ExtractionManagementContext';
 import { adminExtractionService } from '@/services/adminExtractionService';
 import { supabase } from '@/integrations/supabase/client';
-import { ArrowLeft, Trash2 } from 'lucide-react';
+import { Trash2, Upload } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import type { ExtractionJob } from '@/types/admin';
 
 export function ExtractionListView() {
@@ -76,13 +78,13 @@ export function ExtractionListView() {
   }, [updateJobInList, upsertJobInList, removeJobFromList]);
 
   const handleJobClick = (jobId: string) => {
-    navigate(`/admin/extractions/${jobId}`);
+    navigate(`/admin/questions/jobs/${jobId}`);
   };
 
   const handleDeleteJob = async (jobId: string, event: React.MouseEvent) => {
     event.stopPropagation(); // Prevent navigation when clicking delete
     
-    if (!confirm('Are you sure you want to delete this extraction job? This action cannot be undone.')) {
+    if (!confirm('Delete this import job and all its raw questions? This cannot be undone.')) {
       return;
     }
 
@@ -98,7 +100,7 @@ export function ExtractionListView() {
       setJobs(jobs);
     } catch (error) {
       console.error('Error deleting job:', error);
-      alert('Failed to delete extraction job');
+      alert('Failed to delete import job');
     } finally {
       setDeletingJobId(null);
     }
@@ -108,16 +110,12 @@ export function ExtractionListView() {
     setJobPagination({ ...state.jobPagination, page });
   };
 
-  const handleBackToAdmin = () => {
-    navigate('/admin');
-  };
-
   if (state.jobsLoading) {
     return (
-      <div className="flex items-center justify-center min-h-screen">
+      <div className="flex items-center justify-center min-h-[40vh]">
         <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
-          <p className="text-muted-foreground">Loading extraction jobs...</p>
+          <p className="text-muted-foreground">Loading import jobs...</p>
         </div>
       </div>
     );
@@ -125,7 +123,7 @@ export function ExtractionListView() {
 
   if (state.jobsError) {
     return (
-      <div className="flex items-center justify-center min-h-screen">
+      <div className="flex items-center justify-center min-h-[40vh]">
         <div className="text-center">
           <p className="text-destructive mb-4">Error: {state.jobsError.message}</p>
           <button
@@ -142,20 +140,35 @@ export function ExtractionListView() {
   return (
     <div className="container mx-auto py-8">
       <div className="mb-8">
-        <button
-          onClick={handleBackToAdmin}
-          className="flex items-center gap-2 text-muted-foreground hover:text-foreground mb-4 transition-colors"
-        >
-          <ArrowLeft className="h-4 w-4" />
-          Back to Admin Dashboard
-        </button>
-        <h1 className="text-3xl font-bold mb-2">Extraction Management</h1>
-        <p className="text-muted-foreground">Manage book extraction jobs and review extracted content</p>
+        <h1 className="text-3xl font-bold mb-2">All batches</h1>
+        <p className="text-muted-foreground max-w-2xl">
+          Every row is one import. Open it to review questions, edit fields, reject, reinstate, or approve into the
+          question bank. Need new data? Use <strong>Import batch</strong> in the bar above.
+        </p>
       </div>
 
+      <Card className="mb-8 border-primary/30 bg-primary/5">
+        <CardHeader className="pb-2">
+          <CardTitle className="text-base flex items-center gap-2">
+            <Upload className="h-5 w-5 text-primary" />
+            Dump questions from a book
+          </CardTitle>
+          <CardDescription>
+            JSON or guided form — creates a batch you can review on the next screen.
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          <Button onClick={() => navigate('/admin/questions/import')}>
+            <Upload className="h-4 w-4 mr-2" />
+            Go to import
+          </Button>
+        </CardContent>
+      </Card>
+
       {state.jobs.length === 0 ? (
-        <div className="text-center py-12">
-          <p className="text-muted-foreground">No extraction jobs found</p>
+        <div className="text-center py-12 rounded-lg border border-dashed">
+          <p className="text-muted-foreground mb-4">No batches yet.</p>
+          <Button onClick={() => navigate('/admin/questions/import')}>Import your first batch</Button>
         </div>
       ) : (
         <div className="space-y-4">

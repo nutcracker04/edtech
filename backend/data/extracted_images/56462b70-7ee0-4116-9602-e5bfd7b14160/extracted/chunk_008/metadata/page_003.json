@@ -1,0 +1,294 @@
+{
+  "page_num": 3,
+  "image_width": 2398,
+  "image_height": 3003,
+  "created_at": "2026-03-17T19:54:37.028129+00:00",
+  "blocks": [
+    {
+      "block_id": "20260317_96cdd42a-568b-49d1-8e0c-59656d8ce331_3_block_000",
+      "coordinates": {
+        "x1": 1761.0,
+        "y1": 188.0,
+        "x2": 2052.0,
+        "y2": 235.0
+      },
+      "layout_tag": "header",
+      "confidence": 0.8452467322349548,
+      "reading_order": 1,
+      "text": "Assessment Test II"
+    },
+    {
+      "block_id": "20260317_96cdd42a-568b-49d1-8e0c-59656d8ce331_3_block_001",
+      "coordinates": {
+        "x1": 2108.0,
+        "y1": 186.0,
+        "x2": 2192.0,
+        "y2": 234.0
+      },
+      "layout_tag": "page-number",
+      "confidence": 0.768473207950592,
+      "reading_order": 2,
+      "text": "5.7"
+    },
+    {
+      "block_id": "20260317_96cdd42a-568b-49d1-8e0c-59656d8ce331_3_block_002",
+      "coordinates": {
+        "x1": 214.0,
+        "y1": 291.0,
+        "x2": 1403.0,
+        "y2": 343.0
+      },
+      "layout_tag": "image-caption",
+      "confidence": 0.3613978922367096,
+      "reading_order": 3,
+      "text": "11. Match the statements of Column A with those of Column B."
+    },
+    {
+      "block_id": "20260317_96cdd42a-568b-49d1-8e0c-59656d8ce331_3_block_003",
+      "coordinates": {
+        "x1": 302.0,
+        "y1": 354.0,
+        "x2": 1440.0,
+        "y2": 885.0
+      },
+      "layout_tag": "table",
+      "confidence": 0.9259443879127502,
+      "reading_order": 4,
+      "text": "<table>\n<thead>\n<tr>\n<th>Column A<br/>(Reaction with Water<br/>or Steam)</th>\n<th>Column B<br/>(Characteristic Features)</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>(i) Potassium</td>\n<td>(A) Reacts only with boiling water</td>\n</tr>\n<tr>\n<td>(ii) Iron</td>\n<td>(B) Milky alkaline solution</td>\n</tr>\n<tr>\n<td>(iii) Calcium</td>\n<td>(C) Vigorous and exothermic</td>\n</tr>\n<tr>\n<td>(iv) Magnesium</td>\n<td>(D) Reversible when carried out in<br/>closed container</td>\n</tr>\n</tbody>\n</table>"
+    },
+    {
+      "block_id": "20260317_96cdd42a-568b-49d1-8e0c-59656d8ce331_3_block_004",
+      "coordinates": {
+        "x1": 290.0,
+        "y1": 913.0,
+        "x2": 1246.0,
+        "y2": 972.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5533477067947388,
+      "reading_order": 5,
+      "text": "(a) (i) $\\rightarrow$ (C); (ii) $\\rightarrow$ (B); (iii) $\\rightarrow$ (D); (iv) $\\rightarrow$ (A)"
+    },
+    {
+      "block_id": "20260317_96cdd42a-568b-49d1-8e0c-59656d8ce331_3_block_005",
+      "coordinates": {
+        "x1": 289.0,
+        "y1": 975.0,
+        "x2": 1247.0,
+        "y2": 1035.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5400071144104004,
+      "reading_order": 6,
+      "text": "(b) (i) $\\rightarrow$ (D); (ii) $\\rightarrow$ (B); (iii) $\\rightarrow$ (A); (iv) $\\rightarrow$ (C)"
+    },
+    {
+      "block_id": "20260317_96cdd42a-568b-49d1-8e0c-59656d8ce331_3_block_006",
+      "coordinates": {
+        "x1": 288.0,
+        "y1": 1039.0,
+        "x2": 1241.0,
+        "y2": 1099.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.522290825843811,
+      "reading_order": 7,
+      "text": "(c) (i) → (D); (ii) → (A); (iii) → (B); (iv) → (C)"
+    },
+    {
+      "block_id": "20260317_96cdd42a-568b-49d1-8e0c-59656d8ce331_3_block_007",
+      "coordinates": {
+        "x1": 289.0,
+        "y1": 1101.0,
+        "x2": 1246.0,
+        "y2": 1160.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.40303540229797363,
+      "reading_order": 8,
+      "text": "(d) (i) → (C); (ii) → (D); (iii) → (B); (iv) → (A)"
+    },
+    {
+      "block_id": "20260317_96cdd42a-568b-49d1-8e0c-59656d8ce331_3_block_008",
+      "coordinates": {
+        "x1": 213.0,
+        "y1": 1183.0,
+        "x2": 1698.0,
+        "y2": 1343.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7176108956336975,
+      "reading_order": 9,
+      "text": "12. When iron metal is taken in place of zinc for the laboratory preparation of hydrogen, the volume of hydrogen collected is found to be lower. Identify the reason."
+    },
+    {
+      "block_id": "20260317_96cdd42a-568b-49d1-8e0c-59656d8ce331_3_block_009",
+      "coordinates": {
+        "x1": 288.0,
+        "y1": 1360.0,
+        "x2": 1593.0,
+        "y2": 1418.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7504128813743591,
+      "reading_order": 10,
+      "text": "(a) Metal becomes passive due to the formation of protective coating."
+    },
+    {
+      "block_id": "20260317_96cdd42a-568b-49d1-8e0c-59656d8ce331_3_block_010",
+      "coordinates": {
+        "x1": 288.0,
+        "y1": 1424.0,
+        "x2": 1391.0,
+        "y2": 1479.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7497196197509766,
+      "reading_order": 11,
+      "text": "(b) Formation of insoluble sulphate stops further reaction."
+    },
+    {
+      "block_id": "20260317_96cdd42a-568b-49d1-8e0c-59656d8ce331_3_block_011",
+      "coordinates": {
+        "x1": 290.0,
+        "y1": 1486.0,
+        "x2": 998.0,
+        "y2": 1541.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7066239714622498,
+      "reading_order": 12,
+      "text": "(c) There are impurities in the metal."
+    },
+    {
+      "block_id": "20260317_96cdd42a-568b-49d1-8e0c-59656d8ce331_3_block_012",
+      "coordinates": {
+        "x1": 289.0,
+        "y1": 1548.0,
+        "x2": 982.0,
+        "y2": 1604.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7133418917655945,
+      "reading_order": 13,
+      "text": "(d) The reaction becomes reversible."
+    },
+    {
+      "block_id": "20260317_96cdd42a-568b-49d1-8e0c-59656d8ce331_3_block_013",
+      "coordinates": {
+        "x1": 215.0,
+        "y1": 1627.0,
+        "x2": 1693.0,
+        "y2": 1682.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5871754884719849,
+      "reading_order": 14,
+      "text": "13. Which of the following is not an application of anomalous expansion of water?"
+    },
+    {
+      "block_id": "20260317_96cdd42a-568b-49d1-8e0c-59656d8ce331_3_block_014",
+      "coordinates": {
+        "x1": 287.0,
+        "y1": 1697.0,
+        "x2": 1129.0,
+        "y2": 1753.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7622379064559937,
+      "reading_order": 15,
+      "text": "(a) Floating of human body in the Dead Sea"
+    },
+    {
+      "block_id": "20260317_96cdd42a-568b-49d1-8e0c-59656d8ce331_3_block_015",
+      "coordinates": {
+        "x1": 287.0,
+        "y1": 1761.0,
+        "x2": 1326.0,
+        "y2": 1817.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7449791431427002,
+      "reading_order": 16,
+      "text": "(b) Bursting of water bottle filled with water in freezer"
+    },
+    {
+      "block_id": "20260317_96cdd42a-568b-49d1-8e0c-59656d8ce331_3_block_016",
+      "coordinates": {
+        "x1": 288.0,
+        "y1": 1823.0,
+        "x2": 1411.0,
+        "y2": 1881.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.7215383052825928,
+      "reading_order": 17,
+      "text": "(c) Bursting of water pipes in winter season in cold regions"
+    },
+    {
+      "block_id": "20260317_96cdd42a-568b-49d1-8e0c-59656d8ce331_3_block_017",
+      "coordinates": {
+        "x1": 291.0,
+        "y1": 1886.0,
+        "x2": 1170.0,
+        "y2": 1943.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.723595142364502,
+      "reading_order": 18,
+      "text": "(d) Survival of aquatic animals in frozen lakes"
+    },
+    {
+      "block_id": "20260317_96cdd42a-568b-49d1-8e0c-59656d8ce331_3_block_018",
+      "coordinates": {
+        "x1": 178.0,
+        "y1": 1991.0,
+        "x2": 1692.0,
+        "y2": 2102.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.5738534927368164,
+      "reading_order": 19,
+      "text": "Directions for questions 14 and 15: Answer the following questions based on the sol-\nubility curves of 'X' and 'Y' given and select the correct answer from the given options."
+    },
+    {
+      "block_id": "20260317_96cdd42a-568b-49d1-8e0c-59656d8ce331_3_block_019",
+      "coordinates": {
+        "x1": 211.0,
+        "y1": 2137.0,
+        "x2": 1697.0,
+        "y2": 2244.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8223453760147095,
+      "reading_order": 20,
+      "text": "14. Saturated solutions of 'X' and 'Y', each dissolved in 100 mL water, are taken at 80°C and subjected to continuous cooling."
+    },
+    {
+      "block_id": "20260317_96cdd42a-568b-49d1-8e0c-59656d8ce331_3_block_020",
+      "coordinates": {
+        "x1": 577.0,
+        "y1": 2285.0,
+        "x2": 1295.0,
+        "y2": 2835.0
+      },
+      "layout_tag": "chart",
+      "confidence": 0.9193887710571289,
+      "reading_order": 21,
+      "text": "| Temperature (°C) | Solubility X (approx.) | Solubility Y (approx.) |\n| :--- | :--- | :--- |\n| 0 | ~31 | ~24 |\n| 15 | ~46 | ~39 |\n| 30 | ~58 | ~57 |\n| 45 | >90 (>Intersection Point)| < Intersection (~58-60 range visually estimated as lower than line A at x=45, but higher on the curve relative to Line B which is below it). Actually looking closely: At T~45 and Solbility>X(at that point), we are in region where both lines exist/intersected area or above? Let's look closer... The intersection of two curves happens between them roughly around temperature = approx mid value like near t=40 - let me recheck visual estimate for exact coordinates based only visible ticks..\n\nLet us find intersections more precisely by eye matching gridlines with axis labels if possible otherwise just approximate from trend shown clearly here per image constraints.\n\n**Refined Data Extraction:**\n\n*   At **T ≈ 0°C**: $Sol_X \\approx 31$, $Sol_Y \\approx 24$\n*   At approximately halfway up scale ($Temp$=mid): Lines cross each other somewhere close to temp $\\sim$$40^\\circ C$. Visually estimating their values there they appear equalized slightly under crossing so maybe solve via linear interpolation later not needed since question asks \"how does solubility change\" meaning trends over time rather absolute points unless asked specifically about equilibrium etc., thus focus remains qualitative description provided earlier plus general behavior seen across full span presented graphically.\n\nBased purely upon what can be read off without assuming unlabelled data beyond axes limits & clear labeling present within scope allowed:\n\n### Trend Analysis Summary Based On Visual Evidence Only Per Image Provided:\nBoth substances show positive correlation i.e increase along rising temperatures; however substance 'X', starting out having greater initial solubilities compared against material labeled ‘y’ shows faster rate growth towards upper limit while y starts slower then catches pace eventually surpassing its counterpart after some threshold reached during heating process depicted herein.\n\nThus final answer reflects these observations concisely stated directly derived solely through graphical evidence available."
+    },
+    {
+      "block_id": "20260317_96cdd42a-568b-49d1-8e0c-59656d8ce331_3_block_021",
+      "coordinates": {
+        "x1": 1790.0,
+        "y1": 311.0,
+        "x2": 2171.0,
+        "y2": 365.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.45140883326530457,
+      "reading_order": 22,
+      "text": "Space for rough work"
+    }
+  ]
+}

@@ -5,7 +5,7 @@
 
 // Enums
 export type ExtractionStage = 'queued' | 'validation' | 'upload' | 'extraction' | 'completed' | 'failed';
-export type ProcessingStatus = 'pending' | 'tagged' | 'error';
+export type ProcessingStatus = 'pending' | 'tagged' | 'error' | 'failed' | 'rejected';
 
 // Core Domain Interfaces
 export interface ExtractionJob {
@@ -13,6 +13,8 @@ export interface ExtractionJob {
   book_id: string | null;
   title?: string | null;  // Admin-entered name for display in listing
   source_pdf_filename: string;
+  source_pdf_path?: string | null;
+  extracted_path?: string | null;
   stage: ExtractionStage;
   progress: number;
   questions_extracted: number;
@@ -26,12 +28,17 @@ export interface RawQuestion {
   question_number: string;
   question_text: string;
   options: string[];
+  correct_answer?: string | null;
+  answer_type?: string | null;
+  marks?: string | number | null;
+  negative_marks?: string | number | null;
+  bloom_level?: string | null;
   page_number: number | null;
   chapter_context: string | null;
   topic_context: string | null;
   sub_topic_context: string | null;
-  raw_images: ImageData[] | null;
-  raw_tables: TableData[] | null;
+  raw_images: ImageData[] | unknown[] | null;
+  raw_tables: TableData[] | unknown[] | null;
   processing_status: ProcessingStatus;
   error_message: string | null;
   question_id: string | null;
@@ -131,8 +138,16 @@ export interface BulkOperationResult {
 
 // Request/Response Types
 export interface QuestionUpdateRequest {
+  question_number?: string;
   question_text?: string;
   options?: string[];
+  correct_answer?: string | null;
+  answer_type?: string | null;
+  marks?: number | null;
+  negative_marks?: number | null;
+  bloom_level?: string | null;
+  raw_images?: unknown[] | null;
+  raw_tables?: unknown[] | null;
   chapter_context?: string;
   topic_context?: string;
   sub_topic_context?: string;

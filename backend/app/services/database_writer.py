@@ -13,15 +13,12 @@ Responsibilities:
 """
 
 import logging
-from typing import Optional, TYPE_CHECKING
+from typing import Optional, Any
 from uuid import UUID
 from datetime import datetime, timezone
 
 from pydantic import BaseModel
 from supabase import Client
-
-if TYPE_CHECKING:
-    from app.services.pdf_extraction.models import TaggedQuestion
 
 logger = logging.getLogger(__name__)
 
@@ -326,7 +323,7 @@ class DatabaseWriter:
 
     def write_tagged_question(
         self,
-        question: 'TaggedQuestion',
+        question: Any,
         job_id: UUID,
         raw_question_id: Optional[UUID] = None
     ) -> QuestionWriteResult:

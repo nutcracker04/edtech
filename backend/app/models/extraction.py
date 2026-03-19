@@ -25,6 +25,29 @@ class ProcessingStatus(str, Enum):
     PENDING = "pending"
     TAGGED = "tagged"
     ERROR = "error"
+    FAILED = "failed"
+    REJECTED = "rejected"
+
+
+def normalize_raw_options_value(options: Any) -> List[str]:
+    """Coerce JSONB options (strings or {text:...} objects) to plain strings."""
+    if options is None:
+        return []
+    if not isinstance(options, list):
+        return []
+    out: List[str] = []
+    for o in options:
+        if isinstance(o, str):
+            out.append(o.strip())
+        elif isinstance(o, dict):
+            t = o.get("text")
+            if t is None:
+                t = o.get("label")
+            if t is not None:
+                out.append(str(t).strip())
+        else:
+            out.append(str(o).strip())
+    return out
 
 
 class ExtractionJob(BaseModel):
@@ -270,6 +293,11 @@ class RawQuestion(BaseModel):
     sub_topic_context: Optional[str] = None
     raw_images: Optional[List[Dict[str, Any]]] = None  # JSONB
     raw_tables: Optional[List[Dict[str, Any]]] = None  # JSONB
+    correct_answer: Optional[str] = None
+    answer_type: Optional[str] = None
+    marks: Optional[Decimal] = None
+    negative_marks: Optional[Decimal] = None
+    bloom_level: Optional[str] = None
     processing_status: ProcessingStatus = ProcessingStatus.PENDING
     error_message: Optional[str] = None
     question_id: Optional[UUID] = None  # Set after tagging
@@ -296,6 +324,11 @@ class RawQuestion(BaseModel):
             'sub_topic_context': self.sub_topic_context,
             'raw_images': self.raw_images,
             'raw_tables': self.raw_tables,
+            'correct_answer': self.correct_answer,
+            'answer_type': self.answer_type,
+            'marks': str(self.marks) if self.marks is not None else None,
+            'negative_marks': str(self.negative_marks) if self.negative_marks is not None else None,
+            'bloom_level': self.bloom_level,
             'processing_status': self.processing_status.value,
             'error_message': self.error_message,
             'question_id': str(self.question_id) if self.question_id else None,
@@ -313,9 +346,17 @@ class RawQuestion(BaseModel):
         if 'question_id' in data and data['question_id'] and isinstance(data['question_id'], str):
             data['question_id'] = UUID(data['question_id'])
         
+        if 'options' in data and data.get('options') is not None:
+            data['options'] = normalize_raw_options_value(data['options'])
+
         # Convert enum strings to enum objects
         if 'processing_status' in data and isinstance(data['processing_status'], str):
             data['processing_status'] = ProcessingStatus(data['processing_status'])
+
+        if data.get('marks') is not None and not isinstance(data['marks'], Decimal):
+            data['marks'] = Decimal(str(data['marks']))
+        if data.get('negative_marks') is not None and not isinstance(data['negative_marks'], Decimal):
+            data['negative_marks'] = Decimal(str(data['negative_marks']))
         
         # Convert ISO format strings back to datetime objects
         if 'created_at' in data and isinstance(data['created_at'], str):

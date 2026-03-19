@@ -1,0 +1,203 @@
+{
+  "page_num": 6,
+  "image_width": 2398,
+  "image_height": 3003,
+  "created_at": "2026-03-17T19:54:23.587465+00:00",
+  "blocks": [
+    {
+      "block_id": "20260317_78fef408-2204-4bff-a20e-e3c42fc275a0_6_block_000",
+      "coordinates": {
+        "x1": 197.0,
+        "y1": 183.0,
+        "x2": 750.0,
+        "y2": 242.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.7097041606903076,
+      "reading_order": 1,
+      "text": "4.2 Chapter 4 Air and Oxygen"
+    },
+    {
+      "block_id": "20260317_78fef408-2204-4bff-a20e-e3c42fc275a0_6_block_001",
+      "coordinates": {
+        "x1": 231.0,
+        "y1": 291.0,
+        "x2": 1499.0,
+        "y2": 474.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8798345327377319,
+      "reading_order": 2,
+      "text": "6. The innermost zone of a candle flame is ______.\n(a) the coldest zone (b) the hottest zone\n(c) the luminous zone (d) the non-luminous zone"
+    },
+    {
+      "block_id": "20260317_78fef408-2204-4bff-a20e-e3c42fc275a0_6_block_002",
+      "coordinates": {
+        "x1": 231.0,
+        "y1": 531.0,
+        "x2": 1693.0,
+        "y2": 654.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.887365996837616,
+      "reading_order": 3,
+      "text": "7. Which of the following metals can form a mixed oxide on reaction with $\\mathrm{O}_2$?\n(a) Al (b) Cu (c) Ag (d) Fe"
+    },
+    {
+      "block_id": "20260317_78fef408-2204-4bff-a20e-e3c42fc275a0_6_block_003",
+      "coordinates": {
+        "x1": 232.0,
+        "y1": 712.0,
+        "x2": 1700.0,
+        "y2": 955.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8512849807739258,
+      "reading_order": 4,
+      "text": "8. Identify the products formed when a mixture of $\\mathrm{NH}_3$ and $\\mathrm{O}_2$ in 4:5 ratio is\npassed over platinum gauze at $800^\\circ\\mathrm{C}$.\n(a) NO and $\\mathrm{H}_2\\mathrm{O}$ (b) $\\mathrm{N}_2$ and $\\mathrm{H}_2\\mathrm{O}$\n(c) $\\mathrm{NO}_2$ and $\\mathrm{H}_2$ (d) NO and $\\mathrm{H}_2$"
+    },
+    {
+      "block_id": "20260317_78fef408-2204-4bff-a20e-e3c42fc275a0_6_block_004",
+      "coordinates": {
+        "x1": 231.0,
+        "y1": 1009.0,
+        "x2": 1455.0,
+        "y2": 1196.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.35716861486434937,
+      "reading_order": 5,
+      "text": "9. Identify the correct product.\n(a) $\\mathrm{H}_2\\mathrm{S} + \\mathrm{O}_2 \\rightarrow \\mathrm{H}_2\\mathrm{O} + \\mathrm{SO}_2$ (b) $\\mathrm{H}_2\\mathrm{S} + \\mathrm{O}_2 \\rightarrow \\mathrm{S} + \\mathrm{H}_2\\mathrm{O}$\n(c) $\\mathrm{H}_2\\mathrm{S} + \\mathrm{O}_2 \\rightarrow \\mathrm{H}_2\\mathrm{SO}_4$ (d) $\\mathrm{H}_2\\mathrm{S} + \\mathrm{O}_2 \\rightarrow \\mathrm{SO}_2 + \\mathrm{H}_2$"
+    },
+    {
+      "block_id": "20260317_78fef408-2204-4bff-a20e-e3c42fc275a0_6_block_007",
+      "coordinates": {
+        "x1": 213.0,
+        "y1": 1249.0,
+        "x2": 1698.0,
+        "y2": 1491.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.9091240167617798,
+      "reading_order": 8,
+      "text": "10. For making surgical instruments, which of the following processes can be\nadopted for prevention of corrosion of iron?\n(a) Galvanization (b) Tinning\n(c) Electroplating (d) Alloying"
+    },
+    {
+      "block_id": "20260317_78fef408-2204-4bff-a20e-e3c42fc275a0_6_block_008",
+      "coordinates": {
+        "x1": 212.0,
+        "y1": 1546.0,
+        "x2": 1550.0,
+        "y2": 1915.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8535630106925964,
+      "reading_order": 9,
+      "text": "11. Assertion (A): Oxygen is used for the combustion of fuel.\nReason (R): Combustion is an exothermic reaction.\n(a) Both A and R are true and R is the correct explanation of A.\n(b) Both A and R are true, but R is not the correct explanation of A.\n(c) A is true and R is false.\n(d) A is false and R is true."
+    },
+    {
+      "block_id": "20260317_78fef408-2204-4bff-a20e-e3c42fc275a0_6_block_009",
+      "coordinates": {
+        "x1": 213.0,
+        "y1": 1975.0,
+        "x2": 1064.0,
+        "y2": 2025.0
+      },
+      "layout_tag": "section-title",
+      "confidence": 0.4424899220466614,
+      "reading_order": 10,
+      "text": "12. Assertion (A): Air supports combustion."
+    },
+    {
+      "block_id": "20260317_78fef408-2204-4bff-a20e-e3c42fc275a0_6_block_010",
+      "coordinates": {
+        "x1": 272.0,
+        "y1": 2021.0,
+        "x2": 1548.0,
+        "y2": 2335.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.31754085421562195,
+      "reading_order": 11,
+      "text": "**Reason (R):** Air is a mixture of different gases.\n(a) Both A and R are true and R is the correct explanation of A.\n(b) Both A and R are true, but R is not the correct explanation of A.\n(c) A is true and R is false.\n(d) A is false and R is true."
+    },
+    {
+      "block_id": "20260317_78fef408-2204-4bff-a20e-e3c42fc275a0_6_block_011",
+      "coordinates": {
+        "x1": 210.0,
+        "y1": 2404.0,
+        "x2": 1697.0,
+        "y2": 2510.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.6087220907211304,
+      "reading_order": 12,
+      "text": "13. Arrange the following measures/equipment for controlling pollution in the order of the pollutants mentioned below."
+    },
+    {
+      "block_id": "20260317_78fef408-2204-4bff-a20e-e3c42fc275a0_6_block_012",
+      "coordinates": {
+        "x1": 289.0,
+        "y1": 2521.0,
+        "x2": 961.0,
+        "y2": 2574.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.513511598110199,
+      "reading_order": 13,
+      "text": "(A) Usage of scrubber in industries"
+    },
+    {
+      "block_id": "20260317_78fef408-2204-4bff-a20e-e3c42fc275a0_6_block_013",
+      "coordinates": {
+        "x1": 290.0,
+        "y1": 2582.0,
+        "x2": 851.0,
+        "y2": 2636.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.637538492679596,
+      "reading_order": 14,
+      "text": "(B) Controlling deforestation"
+    },
+    {
+      "block_id": "20260317_78fef408-2204-4bff-a20e-e3c42fc275a0_6_block_014",
+      "coordinates": {
+        "x1": 291.0,
+        "y1": 2644.0,
+        "x2": 1694.0,
+        "y2": 2750.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.8365901112556458,
+      "reading_order": 15,
+      "text": "(C) Developing a suitable substituent for the refrigerant used in A/C, refrig-\nerator, etc."
+    },
+    {
+      "block_id": "20260317_78fef408-2204-4bff-a20e-e3c42fc275a0_6_block_015",
+      "coordinates": {
+        "x1": 1790.0,
+        "y1": 312.0,
+        "x2": 2171.0,
+        "y2": 364.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.42478910088539124,
+      "reading_order": 16,
+      "text": "Space for rough work"
+    },
+    {
+      "block_id": "20260317_78fef408-2204-4bff-a20e-e3c42fc275a0_6_block_016",
+      "coordinates": {
+        "x1": 291.0,
+        "y1": 2761.0,
+        "x2": 1263.0,
+        "y2": 2817.0
+      },
+      "layout_tag": "paragraph",
+      "confidence": 0.827431321144104,
+      "reading_order": 17,
+      "text": "(D) Usage of electrostatic precipitators in industries"
+    }
+  ]
+}
